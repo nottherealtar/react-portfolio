@@ -5,10 +5,6 @@ export default async function handler(req, res) {
 
     const { name, email, subject, message, token } = req.body;
 
-    // Optional: simple token check
-    if (token !== 'extra-hot-spicy-chicken-grass') {
-        return res.status(403).json({ error: 'Invalid token' });
-    }
 
     // Discord bot token and your Discord user ID from environment variables
     const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;

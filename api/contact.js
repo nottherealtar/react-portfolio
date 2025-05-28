@@ -20,20 +20,26 @@ export default async function handler(req, res) {
 
     // Compose the embed payload
     const embed = {
-        title: "New Portfolio Inquiry",
+        title: "New Inquiry",
         color: 0x4f46e5,
         fields: [
-            { name: "Name", value: name || "N/A", inline: false },
-            { name: "Email", value: email || "N/A", inline: false },
-            { name: "Subject", value: subject || "N/A", inline: false },
-            { name: "Message", value: message || "N/A", inline: false }
+            { name: "👤 Name", value: name || "N/A", inline: false },
+            { name: "✉️ Email", value: email || "N/A", inline: false },
+            { name: "📝 Subject", value: subject || "N/A", inline: false },
+            { name: "💬 Message", value: message || "N/A", inline: false }
         ],
+        footer: {
+            text: "TarsOnlineCafe Portfolio Contact",
+            icon_url: "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png"
+        },
         timestamp: new Date().toISOString()
     };
 
     // Send DM via Discord API
     try {
         // 1. Create DM channel
+        // This tells Discord to open (or get) a private DM channel between your bot and your user.
+        // The response contains the channel ID for your DM conversation.
         const dmRes = await fetch(`https://discord.com/api/v10/users/@me/channels`, {
             method: "POST",
             headers: {
@@ -49,6 +55,7 @@ export default async function handler(req, res) {
         const channelId = dmData.id;
 
         // 2. Send embed message
+        // Now that you have the DM channel ID, you can send a message to it.
         const msgRes = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages`, {
             method: "POST",
             headers: {

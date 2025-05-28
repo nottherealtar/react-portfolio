@@ -293,7 +293,7 @@ Specialties:
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Get In Touch</h2>
                 <div class="glass-card p-8 rounded-xl">
-                    <form>
+                    <form id="contact-form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="name" class="block mb-2">Name</label>
@@ -312,6 +312,7 @@ Specialties:
                             <label for="message" class="block mb-2">Message</label>
                             <textarea id="message" rows="5" class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
                         </div>
+                        <input type="hidden" id="zapier-token" name="zapier-token" value="tarsonlinecafe2024">
                         <button type="submit" class="w-full py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
                     </form>
                 </div>
@@ -461,6 +462,30 @@ Specialties:
 
         document.querySelectorAll('.project-card, .skill-chip').forEach(el => {
             observer.observe(el);
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const token = document.getElementById('zapier-token').value;
+
+            // Send to Vercel serverless function instead of Zapier directly
+            const response = await fetch('/api/contact', {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, subject, message, token })
+            });
+
+            if (response.ok) {
+                alert("Thank you for your message! I'll get back to you soon.");
+                document.getElementById('contact-form').reset();
+            } else {
+                alert("There was an error sending your message. Please try again later.");
+            }
         });
     </script>
 </body>

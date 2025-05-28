@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found | Joshua Coetzer</title>
+    <meta name="description" content="Page not found. Return to Joshua Coetzer's portfolio or blog.">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+        }
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .nav-link {
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(129,140,248,0.3);
+            color: #a5b4fc;
+            transition: background 0.2s;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: #3730a3;
+            color: #fff;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <nav class="w-full flex justify-center py-4 bg-transparent">
+        <div class="flex space-x-4">
+            <a href="/" class="nav-link">Portfolio</a>
+            <a href="/blog/blog.html" class="nav-link">Blog</a>
+        </div>
+    </nav>
+    <div class="min-h-screen flex flex-col items-center justify-center px-4">
+        <div class="max-w-xl w-full text-center glass-card p-10 rounded-2xl mt-16">
+            <h1 class="text-7xl font-bold mb-4 text-indigo-400">404</h1>
+            <h2 class="text-2xl mb-6">Page Not Found</h2>
+            <p class="mb-8 text-gray-300">Sorry, the page you are looking for does not exist or has been moved.</p>
+            <a href="/" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition text-white font-semibold mr-2">Go Home</a>
+            <a href="/blog/blog.html" class="px-6 py-3 border border-indigo-400 rounded-lg hover:bg-indigo-900 transition text-indigo-200 font-semibold">Visit Blog</a>
+        </div>
+    </div>
+    <script>
+        // Three.js Scene Setup (same as main)
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
+
+        const geometry = new THREE.IcosahedronGeometry(1, 0);
+        const material = new THREE.MeshPhongMaterial({ 
+            color: 0x4f46e5,
+            emissive: 0x4f46e5,
+            emissiveIntensity: 0.2,
+            shininess: 50,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const objects = [];
+        const objectCount = 10;
+        for (let i = 0; i < objectCount; i++) {
+            const mesh = new THREE.Mesh(geometry, material.clone());
+            mesh.position.x = (Math.random() - 0.5) * 20;
+            mesh.position.y = (Math.random() - 0.5) * 20;
+            mesh.position.z = (Math.random() - 0.5) * 20;
+            mesh.rotation.x = Math.random() * Math.PI;
+            mesh.rotation.y = Math.random() * Math.PI;
+            const scale = 0.5 + Math.random() * 1.5;
+            mesh.scale.set(scale, scale, scale);
+            objects.push({
+                mesh,
+                speed: {
+                    x: (Math.random() - 0.5) * 0.01,
+                    y: (Math.random() - 0.5) * 0.01,
+                    z: (Math.random() - 0.5) * 0.01
+                },
+                rotation: {
+                    x: (Math.random() - 0.5) * 0.02,
+                    y: (Math.random() - 0.5) * 0.02
+                }
+            });
+            scene.add(mesh);
+        }
+        camera.position.z = 15;
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false;
+        controls.enablePan = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        function animate() {
+            requestAnimationFrame(animate);
+            objects.forEach(obj => {
+                obj.mesh.position.x += obj.speed.x;
+                obj.mesh.position.y += obj.speed.y;
+                obj.mesh.position.z += obj.speed.z;
+                obj.mesh.rotation.x += obj.rotation.x;
+                obj.mesh.rotation.y += obj.rotation.y;
+                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
+                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
+                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
+            });
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>

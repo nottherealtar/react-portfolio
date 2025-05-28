@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Joshua Coetzer</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
+    <meta name="description" content="Tech blog by Joshua Coetzer. AI news, projects, and coding language guides.">
+    <meta name="keywords" content="Blog, AI, Coding, Flutter, Python, Javascript, C#, Projects, Joshua Coetzer">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .blog-title {
+            color: #a5b4fc;
+        }
+        .blog-category {
+            font-size: 0.85rem;
+            color: #818cf8;
+            background: rgba(49,46,129,0.2);
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .blog-summary {
+            color: #d1d5db;
+        }
+        .blog-date {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+        a:hover {
+            color: #818cf8;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-start pt-16 px-4">
+        <div class="max-w-3xl w-full">
+            <h1 class="text-4xl font-bold mb-8 text-center blog-title">Tech Blog</h1>
+            <div id="blog-list" class="space-y-8"></div>
+            <div class="mt-12 text-center">
+                <a href="/" class="text-indigo-300 hover:text-indigo-100 text-lg">&larr; Back to Portfolio</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('posts.json')
+            .then(res => res.json())
+            .then(posts => {
+                const container = document.getElementById('blog-list');
+                posts.forEach(post => {
+                    const el = document.createElement('div');
+                    el.className = "glass-card p-6 rounded-xl shadow-lg";
+                    el.innerHTML = `
+                        <div class="flex items-center mb-2">
+                            <span class="blog-category">${post.category}</span>
+                            <span class="blog-date">${new Date(post.date).toLocaleDateString()}</span>
+                        </div>
+                        <a href="${post.link}" class="block text-2xl font-semibold mb-2 blog-title">${post.title}</a>
+                        <div class="blog-summary mb-2">${post.summary}</div>
+                        <a href="${post.link}" class="text-indigo-400 hover:text-indigo-200 text-sm">Read More &rarr;</a>
+                    `;
+                    container.appendChild(el);
+                });
+            });
+    </script>
+</body>
+</html>

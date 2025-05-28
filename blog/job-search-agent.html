@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Dive: Job Search Agent AI Project | Joshua Coetzer Blog</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
+    <meta name="description" content="A detailed breakdown of the Job Search Agent AI project: architecture, code, and how it automates job hunting.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .blog-title {
+            color: #a5b4fc;
+        }
+        .blog-category {
+            font-size: 0.85rem;
+            color: #818cf8;
+            background: rgba(49,46,129,0.2);
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .blog-date {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+        a:hover {
+            color: #818cf8;
+        }
+        code, pre {
+            background: #1e293b;
+            color: #facc15;
+            padding: 0.1em 0.3em;
+            border-radius: 0.3em;
+            font-size: 1em;
+        }
+        pre {
+            display: block;
+            padding: 1em;
+            margin: 1em 0;
+            overflow-x: auto;
+        }
+        .pagination {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .pagination a {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .pagination a:hover {
+            color: #a5b4fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col items-center justify-start pt-16 px-4">
+        <div class="max-w-3xl w-full">
+            <div class="glass-card p-8 rounded-xl shadow-lg">
+                <div class="flex items-center mb-2">
+                    <span class="blog-category">AI News & Projects</span>
+                    <span class="blog-date">2024-06-10</span>
+                </div>
+                <h1 class="text-3xl font-bold mb-4 blog-title">Deep Dive: Job Search Agent AI Project</h1>
+                <div class="mb-6 text-gray-300">
+                    <p>
+                        <b>Job Search Agent</b> is an open-source AI-powered tool that automates the process of searching and applying for jobs. Let's break down its architecture, core logic, and see how you can use or extend it for your own job-hunting automation.
+                    </p>
+                    <h2 class="text-2xl font-semibold mt-8 mb-2 text-indigo-300">Project Overview</h2>
+                    <ul class="list-disc pl-6">
+                        <li>Automates job search and application using AI agents</li>
+                        <li>Uses <code>LangChain</code>, <code>OpenAI</code>, and <code>Streamlit</code> for the interface</li>
+                        <li>Supports resume parsing, job scraping, and personalized cover letter generation</li>
+                    </ul>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">1. Installation & Setup</h2>
+                    <p>Clone the repo and install dependencies:</p>
+                    <pre>git clone https://github.com/surapuramakhil-org/Job_search_agent.git
+cd Job_search_agent
+pip install -r requirements.txt</pre>
+                    <p>Set your OpenAI API key in your environment:</p>
+                    <pre>export OPENAI_API_KEY=your-key-here</pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">2. Core Architecture</h2>
+                    <p>The project is modular, with agents for scraping, parsing, and applying. The main entrypoint is <code>main.py</code>:</p>
+                    <pre>
+# main.py
+import streamlit as st
+from src.job_search_agent import JobSearchAgent
+
+def main():
+    st.title("Job Search Agent")
+    agent = JobSearchAgent()
+    # ...UI and logic...
+if __name__ == "__main__":
+    main()
+                    </pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">3. The JobSearchAgent Class</h2>
+                    <p>This class orchestrates the workflow: scraping jobs, parsing resumes, and applying.</p>
+                    <pre>
+# src/job_search_agent.py
+class JobSearchAgent:
+    def __init__(self):
+        # Initialize models, tools, etc.
+        pass
+
+    def search_jobs(self, query):
+        # Scrape jobs from sources
+        pass
+
+    def parse_resume(self, resume_path):
+        # Extract info from resume
+        pass
+
+    def generate_cover_letter(self, job, resume_info):
+        # Use LLM to generate cover letter
+        pass
+
+    def apply(self, job, cover_letter):
+        # Submit application
+        pass
+                    </pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">4. Scraping & Parsing</h2>
+                    <p>Job scraping is handled by <code>job_scraper.py</code>:</p>
+                    <pre>
+# src/job_scraper.py
+def scrape_jobs(query):
+    # Use requests/BeautifulSoup to scrape job boards
+    return jobs_list
+                    </pre>
+                    <p>Resume parsing uses <code>pdfminer</code> or similar libraries:</p>
+                    <pre>
+# src/resume_parser.py
+def parse_resume(resume_path):
+    # Extract text and info from PDF
+    return resume_info
+                    </pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">5. AI-Powered Cover Letter Generation</h2>
+                    <p>
+                        The agent uses <code>LangChain</code> and OpenAI's GPT models to generate tailored cover letters:
+                    </p>
+                    <pre>
+# src/cover_letter_generator.py
+from langchain.llms import OpenAI
+
+def generate_cover_letter(job, resume_info):
+    prompt = f"Write a cover letter for {job['title']} using my resume: {resume_info}"
+    llm = OpenAI()
+    return llm(prompt)
+                    </pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">6. Streamlit UI</h2>
+                    <p>
+                        The Streamlit app provides a simple interface for uploading your resume, entering job search queries, and tracking applications.
+                    </p>
+                    <pre>
+# main.py (UI snippet)
+st.file_uploader("Upload your resume")
+st.text_input("Job search query")
+if st.button("Search & Apply"):
+    # Run agent
+                    </pre>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">7. Extending the Project</h2>
+                    <ul class="list-disc pl-6">
+                        <li>Add more job boards by extending <code>job_scraper.py</code></li>
+                        <li>Improve resume parsing with NLP</li>
+                        <li>Integrate with LinkedIn or other APIs</li>
+                        <li>Enhance UI for better tracking</li>
+                    </ul>
+                    <h2 class="text-xl font-semibold mt-8 mb-2 text-indigo-200">Conclusion</h2>
+                    <p>
+                        <b>Job Search Agent</b> is a great foundation for automating job applications using AI. Check out the <a href="https://github.com/surapuramakhil-org/Job_search_agent" class="text-indigo-300 underline">GitHub repo</a> for more details and contribute!
+                    </p>
+                </div>
+                <div class="pagination">
+                    <a href="python-automation.html">&larr; Previous</a>
+                    <a href="index.html">All Posts</a>
+                    <a href="#">Next &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

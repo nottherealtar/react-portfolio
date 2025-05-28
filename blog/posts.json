@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Latest AI Breakthroughs in 2024",
+    "date": "2024-06-01",
+    "category": "AI News & Projects",
+    "summary": "A roundup of the most exciting AI advancements and projects in 2024.",
+    "link": "ai-breakthroughs-2024.html"
+  },
+  {
+    "title": "Getting Started with Flutter",
+    "date": "2024-05-20",
+    "category": "Coding Languages Guides",
+    "summary": "A beginner's guide to building apps with Flutter.",
+    "link": "flutter-getting-started.html"
+  },
+  {
+    "title": "Python for Automation: Practical Examples",
+    "date": "2024-05-10",
+    "category": "Coding Languages Guides",
+    "summary": "How to use Python for automating daily tasks.",
+    "link": "python-automation.html"
+  },
+  {
+    "title": "Deep Dive: Job Search Agent AI Project",
+    "date": "2024-06-10",
+    "category": "AI News & Projects",
+    "summary": "A detailed breakdown of the Job Search Agent AI project: architecture, code, and how it automates job hunting.",
+    "link": "job-search-agent.html"
+  }
+]

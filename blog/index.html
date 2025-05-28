@@ -42,18 +42,63 @@
         a:hover {
             color: #818cf8;
         }
+        .nav-link {
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(129,140,248,0.3);
+            color: #a5b4fc;
+            transition: background 0.2s;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: #3730a3;
+            color: #fff;
+        }
+        .footer-link:hover {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <div class="min-h-screen flex flex-col items-center justify-start pt-16 px-4">
+    <!-- Navigation Bar -->
+    <nav class="w-full flex justify-center py-4 bg-transparent">
+        <div class="flex space-x-4">
+            <a href="/" class="nav-link">Portfolio</a>
+            <a href="/blog/index.html" class="nav-link active">Blog</a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center pt-12 pb-8 px-4">
+        <div class="max-w-2xl w-full text-center glass-card p-8 rounded-2xl mb-10">
+            <h1 class="text-5xl font-bold mb-4 blog-title">Joshua's Tech Blog</h1>
+            <h2 class="text-2xl text-indigo-300 mb-6">AI News, Projects & Coding Language Guides</h2>
+            <p class="text-lg mb-6 text-gray-200">
+                Stay up to date with the latest in AI, discover new projects, and learn with in-depth guides on Python, Flutter, Javascript, C#, and more.
+            </p>
+            <a href="#blog-list" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition text-white font-semibold">Browse Articles</a>
+        </div>
+    </section>
+    <!-- Blog List -->
+    <div class="flex flex-col items-center justify-start px-4">
         <div class="max-w-3xl w-full">
-            <h1 class="text-4xl font-bold mb-8 text-center blog-title">Tech Blog</h1>
             <div id="blog-list" class="space-y-8"></div>
-            <div class="mt-12 text-center">
-                <a href="/" class="text-indigo-300 hover:text-indigo-100 text-lg">&larr; Back to Portfolio</a>
-            </div>
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-gray-400 mt-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/nottherealtar" class="footer-link hover:text-white">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" class="footer-link hover:text-white">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+            <p>© 2020 TarsOnlineCafe. All rights reserved.</p>
+        </div>
+    </footer>
     <script>
         fetch('posts.json')
             .then(res => res.json())

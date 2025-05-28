@@ -128,8 +128,9 @@
                     container.appendChild(el);
                 });
             });
-
-        // Three.js Scene Setup (copied from index.html)
+    </script>
+    <script>
+        // Three.js Scene Setup
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -160,13 +161,21 @@
 
         for (let i = 0; i < objectCount; i++) {
             const mesh = new THREE.Mesh(geometry, material.clone());
+            
+            // Random position
             mesh.position.x = (Math.random() - 0.5) * 20;
             mesh.position.y = (Math.random() - 0.5) * 20;
             mesh.position.z = (Math.random() - 0.5) * 20;
+            
+            // Random rotation
             mesh.rotation.x = Math.random() * Math.PI;
             mesh.rotation.y = Math.random() * Math.PI;
+            
+            // Random scale
             const scale = 0.5 + Math.random() * 1.5;
             mesh.scale.set(scale, scale, scale);
+            
+            // Store for animation
             objects.push({
                 mesh,
                 speed: {
@@ -179,39 +188,75 @@
                     y: (Math.random() - 0.5) * 0.02
                 }
             });
+            
             scene.add(mesh);
         }
 
+        // Camera position
         camera.position.z = 15;
 
+        // Add orbit controls
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.enableZoom = false;
         controls.enablePan = false;
         controls.autoRotate = true;
         controls.autoRotateSpeed = 0.5;
 
+        // Handle window resize
         window.addEventListener('resize', () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
+        // Animation loop
         function animate() {
             requestAnimationFrame(animate);
+            
+            // Animate objects
             objects.forEach(obj => {
                 obj.mesh.position.x += obj.speed.x;
                 obj.mesh.position.y += obj.speed.y;
                 obj.mesh.position.z += obj.speed.z;
+                
                 obj.mesh.rotation.x += obj.rotation.x;
                 obj.mesh.rotation.y += obj.rotation.y;
+                
+                // Bounce off imaginary walls
                 if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
                 if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
                 if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
             });
+            
             controls.update();
             renderer.render(scene, camera);
         }
+
         animate();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card, .skill-chip').forEach(el => {
+            observer.observe(el);
+        });
     </script>
 </body>
 </html>

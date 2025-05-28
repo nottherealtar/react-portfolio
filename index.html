@@ -472,18 +472,31 @@ Specialties:
             const message = document.getElementById('message').value;
             const token = document.getElementById('zapier-token').value;
 
-            // Send to Vercel serverless function instead of Zapier directly
-            const response = await fetch('/api/contact', {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ name, email, subject, message, token })
-            });
+            // Send to Vercel serverless function
+            try {
+                const response = await fetch('/api/contact', {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, email, subject, message, token })
+                });
 
-            if (response.ok) {
-                alert("Thank you for your message! I'll get back to you soon.");
-                document.getElementById('contact-form').reset();
-            } else {
-                alert("There was an error sending your message. Please try again later.");
+                if (response.ok) {
+                    alert("Thank you for your message! I'll get back to you soon.");
+                    document.getElementById('contact-form').reset();
+                } else {
+                    // Try to show error details if available
+                    let errorMsg = "There was an error sending your message. Please try again later.";
+                    try {
+                        const errorData = await response.json();
+                        if (errorData && errorData.error) {
+                            errorMsg += "\n" + errorData.error;
+                            if (errorData.details) errorMsg += "\n" + errorData.details;
+                        }
+                    } catch {}
+                    alert(errorMsg);
+                }
+            } catch (err) {
+                alert("There was a network error. Please try again later.");
             }
         });
     </script>

@@ -30,7 +30,7 @@ export default async function handler(req, res) {
         ],
         footer: {
             text: "TarsOnlineCafe Portfolio Contact",
-            icon_url: "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png"
+            icon_url: "https://media.discordapp.net/attachments/1170989523895865424/1170989562433126510/est_2020.png?ex=68380e03&is=6836bc83&hm=b1ba816d07092a6fd4f985e429036cd4fb63bc58322092544c221ba33fc4e49f&=&format=webp&quality=lossless"
         },
         timestamp: new Date().toISOString()
     };
@@ -38,8 +38,6 @@ export default async function handler(req, res) {
     // Send DM via Discord API
     try {
         // 1. Create DM channel
-        // This tells Discord to open (or get) a private DM channel between your bot and your user.
-        // The response contains the channel ID for your DM conversation.
         const dmRes = await fetch(`https://discord.com/api/v10/users/@me/channels`, {
             method: "POST",
             headers: {
@@ -49,13 +47,13 @@ export default async function handler(req, res) {
             body: JSON.stringify({ recipient_id: DISCORD_USER_ID })
         });
         if (!dmRes.ok) {
-            return res.status(502).json({ error: 'Failed to create DM channel' });
+            const errorText = await dmRes.text();
+            return res.status(502).json({ error: 'Failed to create DM channel', details: errorText });
         }
         const dmData = await dmRes.json();
         const channelId = dmData.id;
 
         // 2. Send embed message
-        // Now that you have the DM channel ID, you can send a message to it.
         const msgRes = await fetch(`https://discord.com/api/v10/channels/${channelId}/messages`, {
             method: "POST",
             headers: {
@@ -65,11 +63,12 @@ export default async function handler(req, res) {
             body: JSON.stringify({ embeds: [embed] })
         });
         if (!msgRes.ok) {
-            return res.status(502).json({ error: 'Failed to send DM' });
+            const errorText = await msgRes.text();
+            return res.status(502).json({ error: 'Failed to send DM', details: errorText });
         }
 
         return res.status(200).json({ success: true });
     } catch (err) {
-        return res.status(500).json({ error: 'Server error' });
+        return res.status(500).json({ error: 'Server error', details: err.message });
     }
 }

@@ -15,6 +15,14 @@
             background: rgba(15, 23, 42, 0.95);
             color: white;
         }
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
         .glass-card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -45,8 +53,11 @@
             border-radius: 0.3em;
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
 </head>
 <body>
+    <div id="canvas-container"></div>
     <div class="min-h-screen flex flex-col items-center justify-start pt-16 px-4">
         <div class="max-w-3xl w-full">
             <div class="glass-card p-8 rounded-xl shadow-lg">
@@ -72,5 +83,90 @@
             </div>
         </div>
     </div>
+    <script>
+        // Three.js Scene Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Add lights
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
+
+        // Add floating 3D objects
+        const geometry = new THREE.IcosahedronGeometry(1, 0);
+        const material = new THREE.MeshPhongMaterial({ 
+            color: 0x4f46e5,
+            emissive: 0x4f46e5,
+            emissiveIntensity: 0.2,
+            shininess: 50,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const objects = [];
+        const objectCount = 10;
+
+        for (let i = 0; i < objectCount; i++) {
+            const mesh = new THREE.Mesh(geometry, material.clone());
+            mesh.position.x = (Math.random() - 0.5) * 20;
+            mesh.position.y = (Math.random() - 0.5) * 20;
+            mesh.position.z = (Math.random() - 0.5) * 20;
+            mesh.rotation.x = Math.random() * Math.PI;
+            mesh.rotation.y = Math.random() * Math.PI;
+            const scale = 0.5 + Math.random() * 1.5;
+            mesh.scale.set(scale, scale, scale);
+            objects.push({
+                mesh,
+                speed: {
+                    x: (Math.random() - 0.5) * 0.01,
+                    y: (Math.random() - 0.5) * 0.01,
+                    z: (Math.random() - 0.5) * 0.01
+                },
+                rotation: {
+                    x: (Math.random() - 0.5) * 0.02,
+                    y: (Math.random() - 0.5) * 0.02
+                }
+            });
+            scene.add(mesh);
+        }
+
+        camera.position.z = 15;
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false;
+        controls.enablePan = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            objects.forEach(obj => {
+                obj.mesh.position.x += obj.speed.x;
+                obj.mesh.position.y += obj.speed.y;
+                obj.mesh.position.z += obj.speed.z;
+                obj.mesh.rotation.x += obj.rotation.x;
+                obj.mesh.rotation.y += obj.rotation.y;
+                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
+                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
+                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
+            });
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 </body>
 </html>

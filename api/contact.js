@@ -14,15 +14,21 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: 'Discord credentials not configured' });
     }
 
+    // Helper to truncate fields to Discord's max length
+    function truncate(str, max = 1024) {
+        if (!str) return "N/A";
+        return str.length > max ? str.slice(0, max - 3) + "..." : str;
+    }
+
     // Compose the embed payload
     const embed = {
         title: "New Inquiry",
         color: 0x4f46e5,
         fields: [
-            { name: "👤 Name", value: name || "N/A", inline: false },
-            { name: "✉️ Email", value: email || "N/A", inline: false },
-            { name: "📝 Subject", value: subject || "N/A", inline: false },
-            { name: "💬 Message", value: message || "N/A", inline: false }
+            { name: "👤 Name", value: truncate(name), inline: false },
+            { name: "✉️ Email", value: truncate(email), inline: false },
+            { name: "📝 Subject", value: truncate(subject), inline: false },
+            { name: "💬 Message", value: truncate(message), inline: false }
         ],
         footer: {
             text: "TarsOnlineCafe Portfolio Contact",

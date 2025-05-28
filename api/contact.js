@@ -66,6 +66,13 @@ export default async function handler(req, res) {
         });
         if (!msgRes.ok) {
             const errorText = await msgRes.text();
+            // Check for Discord error code 50007 (Cannot send messages to this user)
+            if (errorText.includes('"code": 50007')) {
+                return res.status(502).json({
+                    error: 'Failed to send DM',
+                    details: 'Discord error 50007: Cannot send messages to this user. Please ensure your privacy settings allow DMs from server members and that the bot shares a server with you.'
+                });
+            }
             return res.status(502).json({ error: 'Failed to send DM', details: errorText });
         }
 

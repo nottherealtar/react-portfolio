@@ -146,35 +146,22 @@ const setShaderMaterial = () => {
 }
 
 const setMap = () => {
-
   let   activeLatLon    = {};
   const dotSphereRadius = 20;
 
-  const readImageData = (imageData) => {
-
-    for(
-      let i = 0, lon = -180, lat = 90; 
-      i < imageData.length; 
-      i += 4, lon++
-    ) {
-
-      if(!activeLatLon[lat]) activeLatLon[lat] = [];
-
-      const red   = imageData[i];
-      const green = imageData[i + 1];
-      const blue  = imageData[i + 2];
-
-      if(red < 80 && green < 80 && blue < 80)
-        activeLatLon[lat].push(lon);
-
-      if(lon === 180) {
-        lon = -180;
-        lat--;
+  const readImageData = (imageData, width, height) => {
+    for(let y = 0, lat = 90; y < height; y++, lat--) {
+      for(let x = 0, lon = -180; x < width; x++, lon++) {
+        const i = (y * width + x) * 4;
+        if(!activeLatLon[lat]) activeLatLon[lat] = [];
+        const red   = imageData[i];
+        const green = imageData[i + 1];
+        const blue  = imageData[i + 2];
+        if(red < 80 && green < 80 && blue < 80)
+          activeLatLon[lat].push(lon);
       }
-
     }
-
-  }
+  };
 
   const visibilityForCoordinate = (lon, lat) => {
 
@@ -249,32 +236,19 @@ const setMap = () => {
 
   }
   
-  const image   = new Image;
+  const image   = new window.Image();
   image.onload  = () => {
-
     image.needsUpdate  = true;
-
     const imageCanvas  = document.createElement('canvas');
     imageCanvas.width  = image.width;
     imageCanvas.height = image.height;
-      
     const context = imageCanvas.getContext('2d');
     context.drawImage(image, 0, 0);
-      
-    const imageData = context.getImageData(
-      0, 
-      0, 
-      imageCanvas.width, 
-      imageCanvas.height
-    );
-    readImageData(imageData.data);
-
+    const imageData = context.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
+    readImageData(imageData.data, imageCanvas.width, imageCanvas.height);
     setDots();
-    
-  }
-
-  image.src = 'img/world_alpha_mini.jpg';
-
+  };
+  image.src = '/world_alpha_mini.jpg';
 }
 
 const resize = () => {

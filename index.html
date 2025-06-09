@@ -293,9 +293,7 @@ Specialties:
         <section class="py-20 px-6 flex justify-center">
           <div class="glass-card rounded-2xl shadow-xl flex flex-col items-center justify-center"
                style="width: 520px; height: 520px; position: relative; overflow: hidden;">
-            <div class="container" id="globe-container" style="width:100%;height:100%;position:relative;">
-              <canvas class="canvas" id="globe-canvas" style="width:100%;height:100%;display:block;"></canvas>
-            </div>
+            <div class="container" id="globe-container" style="width:100%;height:100%;position:relative;"></div>
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-indigo-200 text-lg font-semibold select-none pointer-events-none">
               Welcome to my World
             </div>
@@ -566,37 +564,32 @@ Specialties:
         renderer.setSize(width, height);
         globeDiv.appendChild(renderer.domElement);
 
-        // Fix: three-globe expects you to add the returned object to the scene as .object3d
-        const GlobeClass = window.Globe || (window.THREE && window.THREE.Globe);
-        if (!GlobeClass) return;
+        // Globe
+        const globe = new window.Globe()
+          .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+          .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+          .showAtmosphere(true)
+          .atmosphereColor('#4f46e5')
+          .atmosphereAltitude(0.18)
+          .pointOfView({ lat: -30, lng: 25, altitude: 2.2 }, 0)
+          .labelsData([
+            {
+              lat: -26.2,
+              lng: 28.0,
+              text: 'Johannesburg',
+              size: 1.2,
+              color: '#facc15'
+            }
+          ])
+          .labelLat('lat')
+          .labelLng('lng')
+          .labelText('text')
+          .labelSize('size')
+          .labelColor('color')
+          .labelDotRadius(0.7)
+          .labelResolution(2);
 
-        const globeObj = new GlobeClass()
-            .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
-            .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-            .backgroundColor('rgba(0,0,0,0)')
-            .showAtmosphere(true)
-            .atmosphereColor('#4f46e5')
-            .atmosphereAltitude(0.18)
-            .pointOfView({ lat: -26.2, lng: 28.0, altitude: 2.2 }, 0)
-            .labelsData([
-                {
-                    lat: -26.2,
-                    lng: 28.0,
-                    text: 'Johannesburg',
-                    size: 1.2,
-                    color: '#facc15'
-                }
-            ])
-            .labelLat('lat')
-            .labelLng('lng')
-            .labelText('text')
-            .labelSize('size')
-            .labelColor('color')
-            .labelDotRadius(0.7)
-            .labelResolution(2);
-
-        // Add the globe's object3d to the scene (this is required for three-globe >=2.x)
-        scene.add(globeObj.object3d || globeObj);
+        scene.add(globe);
 
         // Lighting
         scene.add(new THREE.AmbientLight(0xffffff, 1.2));
@@ -616,19 +609,19 @@ Specialties:
 
         // Animate
         function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+          controls.update();
+          renderer.render(scene, camera);
         }
         animate();
 
         // Responsive
         function resizeGlobe() {
-            width = globeDiv.offsetWidth;
-            height = globeDiv.offsetHeight;
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-            renderer.setSize(width, height);
+          width = globeDiv.offsetWidth;
+          height = globeDiv.offsetHeight;
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+          renderer.setSize(width, height);
         }
         window.addEventListener('resize', resizeGlobe);
     })();

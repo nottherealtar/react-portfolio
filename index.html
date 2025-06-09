@@ -114,12 +114,10 @@
         <!-- Hero Section -->
         <section class="min-h-screen flex items-center justify-center px-6">
             <div class="max-w-4xl mx-auto text-center glass-card p-8 rounded-2xl">
-                <div class="flex justify-center mb-6 relative">
-                    <div class="w-32 h-32 rounded-full bg-indigo-500 flex items-center justify-center text-4xl font-bold z-10">
+                <div class="flex justify-center mb-6">
+                    <div class="w-32 h-32 rounded-full bg-indigo-500 flex items-center justify-center text-4xl font-bold">
                         JC
                     </div>
-                    <!-- Globe container (absolute, behind avatar) -->
-                    <div id="globe-container" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:160px; height:160px; z-index:1; pointer-events:none;"></div>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 typewriter">Hi, I'm Josh</h1>
                 <h2 class="text-2xl md:text-3xl text-indigo-300 mb-6">Full Stack Developer & 3D Enthusiast</h2>
@@ -501,91 +499,6 @@ Specialties:
                 alert("There was a network error. Please try again later.");
             }
         });
-
-        // --- GitHub Themed Globe with Pin (Johannesburg, South Africa) ---
-    (function() {
-        // Only run if globe-container exists
-        const globeDiv = document.getElementById('globe-container');
-        if (!globeDiv) return;
-
-        // Setup renderer
-        const width = globeDiv.offsetWidth;
-        const height = globeDiv.offsetHeight;
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(width, height);
-        globeDiv.appendChild(renderer.domElement);
-
-        // Globe geometry/material (dark/monochrome, github style)
-        const geometry = new THREE.SphereGeometry(3.5, 48, 48);
-        const textureLoader = new THREE.TextureLoader();
-        // Use a dark/monochrome earth texture, fallback to a dark color if not available
-        const globeMaterial = new THREE.MeshPhongMaterial({
-            color: 0x23272e,
-            shininess: 20,
-            specular: 0x4f46e5,
-            emissive: 0x18181b,
-            map: textureLoader.load('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard-pro/assets/img/earth-dark.jpg', undefined, undefined, () => {}),
-        });
-        const globe = new THREE.Mesh(geometry, globeMaterial);
-        scene.add(globe);
-
-        // Add subtle glow (optional)
-        const glowMaterial = new THREE.MeshBasicMaterial({
-            color: 0x4f46e5,
-            transparent: true,
-            opacity: 0.08,
-            side: THREE.BackSide
-        });
-        const glow = new THREE.Mesh(new THREE.SphereGeometry(3.7, 48, 48), glowMaterial);
-        scene.add(glow);
-
-        // Pin for Johannesburg (approx lat: -26.2, lon: 28.0)
-        function latLonToVec3(lat, lon, radius) {
-            const phi = (90 - lat) * (Math.PI / 180);
-            const theta = (lon + 180) * (Math.PI / 180);
-            return new THREE.Vector3(
-                -radius * Math.sin(phi) * Math.cos(theta),
-                radius * Math.cos(phi),
-                radius * Math.sin(phi) * Math.sin(theta)
-            );
-        }
-        const pinGeometry = new THREE.ConeGeometry(0.13, 0.5, 16);
-        const pinMaterial = new THREE.MeshPhongMaterial({ color: 0xfacc15, emissive: 0x4f46e5, shininess: 80 });
-        const pin = new THREE.Mesh(pinGeometry, pinMaterial);
-        const pinPos = latLonToVec3(-26.2, 28.0, 3.5);
-        pin.position.copy(pinPos);
-        pin.lookAt(new THREE.Vector3(0,0,0));
-        pin.rotateX(Math.PI); // Point outwards
-        scene.add(pin);
-
-        // Lighting
-        scene.add(new THREE.AmbientLight(0x404040, 1.2));
-        const dirLight = new THREE.DirectionalLight(0xffffff, 0.7);
-        dirLight.position.set(5, 5, 5);
-        scene.add(dirLight);
-
-        // Camera
-        camera.position.set(0, 0, 8);
-
-        // Animation (slow rotation)
-        function animate() {
-            requestAnimationFrame(animate);
-            globe.rotation.y += 0.003;
-            glow.rotation.y += 0.003;
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        // Responsive
-        window.addEventListener('resize', () => {
-            const w = globeDiv.offsetWidth, h = globeDiv.offsetHeight;
-            camera.aspect = w / h;
-            camera.updateProjectionMatrix();
-            renderer.setSize(w, h);
-        });
-    })();
     </script>
     <!-- Vercel Speed Insights (official snippet) -->
     <script>

@@ -39,7 +39,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three-globe@2.30.7/dist/three-globe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -293,7 +293,9 @@ Specialties:
         <section class="py-20 px-6 flex justify-center">
           <div class="glass-card rounded-2xl shadow-xl flex flex-col items-center justify-center"
                style="width: 520px; height: 520px; position: relative; overflow: hidden;">
-            <div class="container" id="globe-container" style="width:100%;height:100%;position:relative;"></div>
+            <div class="container" style="width:100%;height:100%;position:relative;">
+              <canvas class="canvas" style="width:100%;height:100%;display:block;"></canvas>
+            </div>
             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-indigo-200 text-lg font-semibold select-none pointer-events-none">
               Welcome to my World
             </div>

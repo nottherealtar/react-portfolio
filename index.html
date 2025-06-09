@@ -291,14 +291,14 @@ Specialties:
         <!-- Space Globe Section -->
         <section class="py-20 px-6 flex justify-center">
             <div class="glass-card rounded-2xl shadow-xl flex flex-col items-center justify-center"
+                 id="space-globe-card"
                  style="width: 420px; height: 420px; position: relative; overflow: hidden;">
-                <!-- Starry background canvas -->
+                <!-- Starry background canvas (now fills container) -->
                 <canvas id="star-canvas"
-                        width="420" height="420"
                         style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1rem;z-index:1;pointer-events:none;"></canvas>
                 <!-- Globe container -->
                 <div id="space-globe-container"
-                     style="position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);width:260px;height:260px;z-index:2;"></div>
+                     style="position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);width:90%;height:90%;max-width:320px;max-height:320px;z-index:2;"></div>
                 <!-- Optional: Title or label -->
                 <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-indigo-200 text-lg font-semibold select-none pointer-events-none">
                     Explore the Space Globe
@@ -519,16 +519,21 @@ Specialties:
             }
         });
 
-        // --- Starry Canvas Background ---
+        // --- Responsive Starry Canvas Background ---
     (function() {
+        const card = document.getElementById('space-globe-card');
         const canvas = document.getElementById('star-canvas');
-        if (!canvas) return;
-        const ctx = canvas.getContext('2d');
-        const w = canvas.width, h = canvas.height;
-        // Draw stars
+        if (!canvas || !card) return;
+        function resizeCanvas() {
+            canvas.width = card.clientWidth;
+            canvas.height = card.clientHeight;
+            drawStars();
+        }
         function drawStars() {
+            const ctx = canvas.getContext('2d');
+            const w = canvas.width, h = canvas.height;
             ctx.clearRect(0, 0, w, h);
-            for (let i = 0; i < 120; i++) {
+            for (let i = 0; i < Math.floor((w * h) / 1200); i++) {
                 const x = Math.random() * w;
                 const y = Math.random() * h;
                 const r = Math.random() * 1.2 + 0.3;
@@ -543,33 +548,41 @@ Specialties:
                 ctx.restore();
             }
         }
-        drawStars();
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
     })();
 
-    // --- Space Globe (Three.js) ---
+    // --- Space Globe (Three.js) with visible countries, South Africa facing, eastward rotation ---
     (function() {
         const globeDiv = document.getElementById('space-globe-container');
         if (!globeDiv) return;
-        const width = globeDiv.offsetWidth;
-        const height = globeDiv.offsetHeight;
+        let width = globeDiv.offsetWidth;
+        let height = globeDiv.offsetHeight;
+
         // Scene
         const scene = new THREE.Scene();
         // Camera
         const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
         camera.position.set(0, 0, 7.5);
+
         // Renderer
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
         renderer.setSize(width, height);
         globeDiv.appendChild(renderer.domElement);
 
-        // Globe geometry/material (theme color)
+        // Globe geometry/material with visible countries (dark theme)
         const geometry = new THREE.SphereGeometry(3, 64, 64);
+        const textureLoader = new THREE.TextureLoader();
+        // Use a dark earth texture with visible countries (public domain, or your own)
+        // Example: https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard-pro/assets/img/earth-dark.jpg
+        // For better country outlines, you may want to use a different texture.
+        const earthTextureUrl = "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard-pro/assets/img/earth-dark.jpg";
         const material = new THREE.MeshPhongMaterial({
-            color: 0x23272e,
+            color: 0xffffff,
             shininess: 40,
             specular: 0x4f46e5,
             emissive: 0x18181b,
-            // Optionally add a subtle wireframe overlay for style
+            map: textureLoader.load(earthTextureUrl)
         });
         const globe = new THREE.Mesh(geometry, material);
         scene.add(globe);
@@ -593,27 +606,37 @@ Specialties:
         // OrbitControls (spin + slight zoom)
         const controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.enablePan = false;
-        controls.minDistance = 6.3; // ~15% zoom in
+        controls.minDistance = 6.3;
         controls.maxDistance = 8.5;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 0.7;
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.08;
+        controls.autoRotate = false; // We'll rotate manually for eastward spin
 
-        // Responsive
-        window.addEventListener('resize', () => {
-            const w = globeDiv.offsetWidth, h = globeDiv.offsetHeight;
-            camera.aspect = w / h;
-            camera.updateProjectionMatrix();
-            renderer.setSize(w, h);
-        });
+        // Start with South Africa facing the user (approx lat: -30, lon: 25)
+        // To face a longitude, rotate globe so that longitude is at center
+        // Longitude 0 faces user by default, so rotate Y by -lon in radians
+        const southAfricaLon = 25;
+        globe.rotation.y = -southAfricaLon * Math.PI / 180;
 
-        // Animate
+        // Animate eastward (left to right, positive y)
         function animate() {
             requestAnimationFrame(animate);
-            glow.rotation.y += 0.002;
+            globe.rotation.y += 0.005; // eastward, adjust speed as needed
+            glow.rotation.y += 0.005;
             controls.update();
             renderer.render(scene, camera);
         }
         animate();
+
+        // Responsive
+        function resizeGlobe() {
+            width = globeDiv.offsetWidth;
+            height = globeDiv.offsetHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        }
+        window.addEventListener('resize', resizeGlobe);
     })();
     </script>
     <!-- Vercel Speed Insights (official snippet) -->

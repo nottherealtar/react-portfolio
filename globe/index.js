@@ -1,6 +1,3 @@
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
 const vertex = `
   #ifdef GL_ES
   precision mediump float;
@@ -107,17 +104,16 @@ const setScene = () => {
 }
 
 const setControls = () => {
-
-  controls                 = new OrbitControls(camera, renderer.domElement);
-  controls.autoRotate      = true;
+  // Use global THREE.OrbitControls from CDN
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.autoRotate = true;
   controls.autoRotateSpeed = 1.2;
-  controls.enableDamping   = true;
-  controls.enableRotate    = true;
-  controls.enablePan       = false;
-  controls.enableZoom      = false;
-  controls.minPolarAngle   = (Math.PI / 2) - 0.5;
-  controls.maxPolarAngle   = (Math.PI / 2) + 0.5;
-
+  controls.enableDamping = true;
+  controls.enableRotate = true;
+  controls.enablePan = false;
+  controls.enableZoom = false;
+  controls.minPolarAngle = (Math.PI / 2) - 0.5;
+  controls.maxPolarAngle = (Math.PI / 2) + 0.5;
 };
 
 const setBaseSphere = () => {

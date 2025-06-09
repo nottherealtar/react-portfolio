@@ -336,12 +336,14 @@ const mouseup = () => {
 }
 
 const listenTo = () => {
-
-  window.addEventListener('resize',     resize.bind(this));
-  window.addEventListener('mousemove',  mousemove.bind(this));
-  window.addEventListener('mousedown',  mousedown.bind(this));
-  window.addEventListener('mouseup',    mouseup.bind(this));
-
+  // Attach events to the globe canvas only, not the whole window
+  if (canvas) {
+    canvas.addEventListener('mousemove', mousemove.bind(this));
+    canvas.addEventListener('mousedown', mousedown.bind(this));
+    canvas.addEventListener('mouseup', mouseup.bind(this));
+    canvas.addEventListener('mouseleave', mouseup.bind(this));
+  }
+  window.addEventListener('resize', resize.bind(this));
 }
 
 const render = () => {

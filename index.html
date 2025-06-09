@@ -571,8 +571,11 @@ Specialties:
         renderer.setSize(width, height);
         globeDiv.appendChild(renderer.domElement);
 
-        // Globe
-        const Globe = new window.Globe()
+        // Fix: Use window.THREE.Globe instead of window.Globe for three-globe >=2.x
+        const GlobeClass = window.Globe || (window.THREE && window.THREE.Globe);
+        if (!GlobeClass) return;
+
+        const globeObj = new GlobeClass()
             .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
             .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
             .backgroundColor('rgba(0,0,0,0)')
@@ -597,7 +600,7 @@ Specialties:
             .labelDotRadius(0.7)
             .labelResolution(2);
 
-        scene.add(Globe);
+        scene.add(globeObj);
 
         // Lighting
         scene.add(new THREE.AmbientLight(0xffffff, 1.2));

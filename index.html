@@ -571,7 +571,7 @@ Specialties:
         renderer.setSize(width, height);
         globeDiv.appendChild(renderer.domElement);
 
-        // Fix: Use window.THREE.Globe instead of window.Globe for three-globe >=2.x
+        // Fix: three-globe expects you to add the returned object to the scene as .object3d
         const GlobeClass = window.Globe || (window.THREE && window.THREE.Globe);
         if (!GlobeClass) return;
 
@@ -600,7 +600,8 @@ Specialties:
             .labelDotRadius(0.7)
             .labelResolution(2);
 
-        scene.add(globeObj);
+        // Add the globe's object3d to the scene (this is required for three-globe >=2.x)
+        scene.add(globeObj.object3d || globeObj);
 
         // Lighting
         scene.add(new THREE.AmbientLight(0xffffff, 1.2));

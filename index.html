@@ -46,6 +46,7 @@
             margin: 0;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
+            background: #2d221b; /* Coffee brown */
         }
         #canvas-container {
             position: fixed;
@@ -59,20 +60,24 @@
             position: relative;
             z-index: 1;
             min-height: 100vh;
-            background: rgba(15, 23, 42, 0.85);
-            color: white;
+            background: rgba(45, 34, 27, 0.85); /* Coffee brown overlay */
+            color: #f7efe2; /* Foam color */
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(60, 40, 25, 0.18); /* Lighter coffee */
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(247, 239, 226, 0.18); /* Foam border */
         }
         .skill-chip {
             transition: all 0.3s ease;
+            background: rgba(60, 40, 25, 0.25); /* Lighter coffee */
+            color: #f7efe2;
         }
         .skill-chip:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(60, 40, 25, 0.3);
+            background: #a1866f; /* Latte brown */
+            color: #fffbe9;
         }
         .project-card {
             transition: all 0.3s ease;
@@ -90,10 +95,11 @@
         }
         .terminal {
             font-family: 'Courier New', monospace;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(60, 40, 25, 0.7); /* Coffee terminal */
+            color: #f7efe2;
         }
         .typewriter {
-            border-right: 3px solid;
+            border-right: 3px solid #f7efe2;
             white-space: nowrap;
             overflow: hidden;
             animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
@@ -104,7 +110,69 @@
         }
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #4F46E5 }
+            50% { border-color: #f7efe2 }
+        }
+        /* Custom coffee theme classes */
+        .bg-coffee {
+            background: #2d221b;
+        }
+        .bg-foam {
+            background: #f7efe2;
+        }
+        .text-coffee {
+            color: #2d221b;
+        }
+        .text-foam {
+            color: #f7efe2;
+        }
+        .border-foam {
+            border-color: #f7efe2;
+        }
+        /* Button and link overrides */
+        .btn-coffee {
+            background: #a1866f;
+            color: #2d221b;
+        }
+        .btn-coffee:hover {
+            background: #f7efe2;
+            color: #2d221b;
+        }
+        a, .hover\:text-indigo-100:hover, .hover\:text-white:hover {
+            color: #f7efe2 !important;
+        }
+        .bg-indigo-600, .bg-indigo-700, .bg-indigo-900, .bg-indigo-300, .bg-indigo-400 {
+            background: #a1866f !important;
+        }
+        .border-indigo-400, .focus\:ring-indigo-500 {
+            border-color: #f7efe2 !important;
+            box-shadow: 0 0 0 2px #f7efe2 !important;
+        }
+        .text-indigo-300, .text-indigo-400, .text-indigo-100 {
+            color: #f7efe2 !important;
+        }
+        .bg-gradient-to-b {
+            background: linear-gradient(to bottom, #a1866f, #2d221b) !important;
+        }
+        /* Project tags */
+        .bg-indigo-900.rounded {
+            background: #a1866f !important;
+            color: #2d221b !important;
+        }
+        /* Footer */
+        footer {
+            background: #2d221b;
+            color: #a1866f;
+        }
+        /* Inputs */
+        input, textarea {
+            background: #a1866f !important;
+            color: #2d221b !important;
+            border: 1px solid #f7efe2 !important;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #f7efe2 !important;
+            box-shadow: 0 0 0 2px #f7efe2 !important;
         }
     </style>
 </head>

@@ -58,8 +58,11 @@
     for (let y = 0; y < img.height; y += 2) {
       for (let x = 0; x < img.width; x += 2) {
         const idx = (y * img.width + x) * 4;
-        const alpha = imgData[idx + 3];
-        if (alpha > 128) {
+        const r = imgData[idx];
+        const g = imgData[idx + 1];
+        const b = imgData[idx + 2];
+        // Only place dots on white (land) pixels
+        if (r > 200 && g > 200 && b > 200) {
           // Convert (x, y) to lat/lon
           const lon = (x / img.width) * 360 - 180;
           const lat = 90 - (y / img.height) * 180;

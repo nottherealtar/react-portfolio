@@ -46,7 +46,6 @@
             margin: 0;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
-            background: #3b2f23; /* deep coffee bean brown */
         }
         #canvas-container {
             position: fixed;
@@ -60,20 +59,20 @@
             position: relative;
             z-index: 1;
             min-height: 100vh;
-            background: rgba(59, 47, 35, 0.92); /* deep coffee overlay */
-            color: #f5eee6; /* light coffee cream */
+            background: rgba(15, 23, 42, 0.85);
+            color: white;
         }
         .glass-card {
-            background: rgba(111, 78, 55, 0.18); /* light coffee brown glass */
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(245, 238, 230, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         .skill-chip {
             transition: all 0.3s ease;
         }
         .skill-chip:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(59, 47, 35, 0.25);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
         }
         .project-card {
             transition: all 0.3s ease;
@@ -91,7 +90,7 @@
         }
         .terminal {
             font-family: 'Courier New', monospace;
-            background: rgba(60, 40, 20, 0.7); /* dark coffee terminal */
+            background: rgba(0, 0, 0, 0.7);
         }
         .typewriter {
             border-right: 3px solid;
@@ -105,27 +104,7 @@
         }
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #e6cbaa }
-        }
-        /* Coffee button styles */
-        .coffee-btn {
-            background: linear-gradient(90deg, #a9744f 0%, #e6cbaa 100%); /* coffee to foam */
-            color: #3b2f23;
-            border: none;
-            border-radius: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            box-shadow: 0 2px 8px 0 rgba(59,47,35,0.10);
-            transition: background 0.2s, color 0.2s;
-        }
-        .coffee-btn:hover {
-            background: linear-gradient(90deg, #e6cbaa 0%, #a9744f 100%);
-            color: #4b2e13;
-        }
-        /* Blog card backgrounds */
-        .blog-card {
-            background: linear-gradient(120deg, #5c4032 60%, #e6cbaa 100%);
-            color: #f5eee6;
+            50% { border-color: #4F46E5 }
         }
     </style>
 </head>
@@ -137,19 +116,19 @@
         <section class="min-h-screen flex items-center justify-center px-6">
             <div class="max-w-4xl mx-auto text-center glass-card p-8 rounded-2xl">
                 <div class="flex justify-center mb-6">
-                    <div class="w-32 h-32 rounded-full" style="background: linear-gradient(135deg, #4b2e13 60%, #e6cbaa 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: bold;">
+                    <div class="w-32 h-32 rounded-full bg-indigo-500 flex items-center justify-center text-4xl font-bold">
                         JC
                     </div>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-bold mb-4 typewriter">Hi, I'm Josh</h1>
-                <h2 class="text-2xl md:text-3xl" style="color: #e6cbaa;" class="mb-6">Full Stack Developer & 3D Enthusiast</h2>
+                <h2 class="text-2xl md:text-3xl text-indigo-300 mb-6">Full Stack Developer & 3D Enthusiast</h2>
                 <p class="text-lg mb-8">
                     I build Scalable Solutions with modern technologies and Innovative apps.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#projects" class="coffee-btn">View my Work</a>
-                    <a href="#contact" class="coffee-btn" style="background: #e6cbaa; color: #4b2e13;">Contact Me</a>
-                    <a href="/blog/blog.html" class="coffee-btn" style="background: #a9744f; color: #fff;">Blog</a>
+                    <a href="#projects" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">View my Work</a>
+                    <a href="#contact" class="px-6 py-3 border border-indigo-400 rounded-lg hover:bg-indigo-900 transition">Contact Me</a>
+                    <a href="/blog/blog.html" class="px-6 py-3 border border-indigo-400 rounded-lg hover:bg-indigo-900 transition">Blog</a>
                 </div>
             </div>
         </section>
@@ -201,7 +180,7 @@ Specialties:
         </section>
 
         <!-- Skills Section -->
-        <section class="py-20 px-6" style="background: linear-gradient(120deg, #4b2e13 60%, #e6cbaa 100%);">
+        <section class="py-20 px-6 bg-indigo-900 bg-opacity-50">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">My Skills</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -238,7 +217,7 @@ Specialties:
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6" style="background: #3b2f23;">
+        <section id="projects" class="py-20 px-6">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -312,7 +291,7 @@ Specialties:
 
         <!-- Space Globe Section -->
         <section class="flex justify-center my-12">
-          <div class="container glass-card rounded-2xl shadow-lg p-4 flex items-center justify-center" style="width: 340px; height: 340px; box-shadow: 0 2px 12px 0 rgba(59,47,35,0.10); background: linear-gradient(135deg, #4b2e13 60%, #e6cbaa 100%);">
+          <div class="container glass-card rounded-2xl shadow-lg p-4 flex items-center justify-center bg-gradient-to-b from-[#29404a] to-[#1a2a32]" style="width: 340px; height: 340px; box-shadow: 0 2px 12px 0 rgba(31,38,135,0.10);">
             <canvas class="canvas" width="320" height="320" style="border-radius: 50%; background: transparent; box-shadow: none;"></canvas>
           </div>
         </section>
@@ -322,7 +301,7 @@ Specialties:
         <script src="/globe/index.js"></script>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-6" style="background: #a9744f; background: linear-gradient(120deg, #a9744f 60%, #e6cbaa 100%);">
+        <section id="contact" class="py-20 px-6 bg-indigo-900 bg-opacity-50">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Get In Touch</h2>
                 <div class="glass-card p-8 rounded-xl">
@@ -353,7 +332,7 @@ Specialties:
         </section>
 
         <!-- Footer -->
-        <footer class="py-8 px-6 text-center" style="background: #3b2f23; color: #e6cbaa;">
+        <footer class="py-8 px-6 text-center text-gray-400">
             <div class="max-w-6xl mx-auto">
                 <div class="flex justify-center space-x-6 mb-6">
                     <a href="https://github.com/nottherealtar" class="hover:text-white">

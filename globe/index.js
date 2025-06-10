@@ -97,8 +97,7 @@ const setScene = () => {
   setBaseSphere();
   setShaderMaterial();
   setMap();
-  addJohannesburgPin();
-  animateCommitStreams();
+  addJohannesburgPinAndCommits(scene);
   resize();
   listenTo();
   render();
@@ -360,22 +359,25 @@ const render = () => {
 
 }
 
-// Add a pin at Johannesburg and animated commit streams to random countries
-const pinTexture = new THREE.TextureLoader().load('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/location-dot.svg');
-
-function addJohannesburgPin() {
+// Johannesburg pin and commit lines addition
+function addJohannesburgPinAndCommits(scene) {
+  // Pin at Johannesburg
+  const pinTexture = new THREE.TextureLoader().load('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/location-dot.svg');
   const pinMaterial = new THREE.SpriteMaterial({ map: pinTexture, color: 0xfacc15 });
   const pin = new THREE.Sprite(pinMaterial);
   // Johannesburg: lat -26.2, lon 28.0
-  const pos = calcPosFromLatLonRad(28.0, -26.2);
-  pin.position.copy(pos.multiplyScalar(1.09));
-  pin.scale.set(2, 2, 1); // Adjust size as needed
+  const r = 20 * 1.09; // slightly above globe surface
+  const phi = (90 + 26.2) * (Math.PI / 180);
+  const theta = (28.0 + 180) * (Math.PI / 180);
+  pin.position.set(
+    -(r * Math.sin(phi) * Math.cos(theta)),
+     r * Math.cos(phi),
+     r * Math.sin(phi) * Math.sin(theta)
+  );
+  pin.scale.set(2, 2, 1);
   scene.add(pin);
-}
 
-function animateCommitStreams() {
-  // Animate a stream from Johannesburg to random countries
-  const origin = calcPosFromLatLonRad(28.0, -26.2).multiplyScalar(1.09);
+  // Commit lines to random countries
   const destinations = [
     { lat: 51.5, lon: -0.1 },   // London
     { lat: 40.7, lon: -74.0 },  // New York
@@ -384,17 +386,19 @@ function animateCommitStreams() {
     { lat: 48.8, lon: 2.3 },    // Paris
   ];
   destinations.forEach(dest => {
-    const destPos = calcPosFromLatLonRad(dest.lon, dest.lat).multiplyScalar(1.09);
-    const curve = new THREE.QuadraticBezierCurve3(
-      origin,
-      new THREE.Vector3(0, 0, 0), // Control point for arc
-      destPos
+    const phi2 = (90 - dest.lat) * (Math.PI / 180);
+    const theta2 = (dest.lon + 180) * (Math.PI / 180);
+    const destPos = new THREE.Vector3(
+      -(r * Math.sin(phi2) * Math.cos(theta2)),
+       r * Math.cos(phi2),
+       r * Math.sin(phi2) * Math.sin(theta2)
     );
+    const control = new THREE.Vector3(0, 0, 0); // arc control point
+    const curve = new THREE.QuadraticBezierCurve3(pin.position, control, destPos);
     const points = curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
-    const material = new THREE.LineBasicMaterial({ color: 0x4f46e5, linewidth: 2 });
+    const material = new THREE.LineBasicMaterial({ color: 0x4f46e5 });
     const line = new THREE.Line(geometry, material);
     scene.add(line);
-    // Optionally, animate a moving dot along the line
   });
 }

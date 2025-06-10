@@ -1,392 +1,239 @@
-const vertex = `
-  #ifdef GL_ES
-  precision mediump float;
-  #endif
+// Space Globe: Custom Three.js Globe with Johannesburg Pin and Animated Commit Lines
+// Uses global THREE and OrbitControls (from CDN)
 
-  uniform float u_time;
-  uniform float u_maxExtrusion;
+(function () {
+  // --- DOM Setup ---
+  const container = document.querySelector('.container');
+  const canvas = container ? container.querySelector('.canvas') : null;
+  if (!canvas) return;
 
-  void main() {
+  // --- Scene Setup ---
+  const width = canvas.width;
+  const height = canvas.height;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+  camera.position.set(0, 0, 3.2);
 
-    vec3 newPosition = position;
-    if(u_maxExtrusion > 1.0) newPosition.xyz = newPosition.xyz * u_maxExtrusion + sin(u_time);
-    else newPosition.xyz = newPosition.xyz * u_maxExtrusion;
+  // Renderer
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  renderer.setClearColor(0x000000, 0); // transparent
+  renderer.setSize(width, height, false);
 
-    gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+  // Lighting
+  scene.add(new THREE.AmbientLight(0xffffff, 0.8));
+  const dirLight = new THREE.DirectionalLight(0xffffff, 0.7);
+  dirLight.position.set(5, 3, 5);
+  scene.add(dirLight);
 
-  }
-`;
-const fragment = `
-  #ifdef GL_ES
-  precision mediump float;
-  #endif
+  // --- Globe ---
+  const RADIUS = 1;
+  const globeGeometry = new THREE.SphereGeometry(RADIUS, 64, 64);
+  const globeMaterial = new THREE.MeshPhongMaterial({
+    color: 0x1e293b,
+    specular: 0x222222,
+    shininess: 18,
+    transparent: true,
+    opacity: 0.98,
+  });
+  const globeMesh = new THREE.Mesh(globeGeometry, globeMaterial);
+  scene.add(globeMesh);
 
-  uniform float u_time;
-
-  vec3 colorA = vec3(0.196, 0.631, 0.886);
-  vec3 colorB = vec3(0.192, 0.384, 0.498);
-
-  void main() {
-
-    vec3  color = vec3(0.0);
-    float pct   = abs(sin(u_time));
-          color = mix(colorA, colorB, pct);
-
-    gl_FragColor = vec4(color, 1.0);
-
-  }
-`;
-
-const container = document.querySelector('.container');
-const canvas    = document.querySelector('.canvas');
-
-let
-sizes,
-scene,
-camera,
-renderer,
-controls,
-raycaster,
-mouse,
-isIntersecting,
-twinkleTime,
-materials,
-material,
-baseMesh,
-minMouseDownFlag,
-mouseDown,
-grabbing;
-
-const setScene = () => {
-
-  sizes = {
-    width:  container.offsetWidth,
-    height: container.offsetHeight
+  // --- Dot World Map Overlay ---
+  const mapImg = new window.Image();
+  mapImg.src = '/world_alpha_mini.jpg';
+  mapImg.onload = function () {
+    // Draw dots on globe after image loads
+    drawWorldDots(mapImg);
   };
 
-  scene = new THREE.Scene();
+  function drawWorldDots(img) {
+    // Use a hidden canvas to read the map image
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = img.width;
+    tempCanvas.height = img.height;
+    const ctx = tempCanvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    const imgData = ctx.getImageData(0, 0, img.width, img.height).data;
+    const dotGroup = new THREE.Group();
+    for (let y = 0; y < img.height; y += 2) {
+      for (let x = 0; x < img.width; x += 2) {
+        const idx = (y * img.width + x) * 4;
+        const alpha = imgData[idx + 3];
+        if (alpha > 128) {
+          // Convert (x, y) to lat/lon
+          const lon = (x / img.width) * 360 - 180;
+          const lat = 90 - (y / img.height) * 180;
+          const pos = calcPosFromLatLonRad(lat, lon, RADIUS + 0.008);
+          const dotGeo = new THREE.SphereGeometry(0.008, 6, 6);
+          const dotMat = new THREE.MeshBasicMaterial({ color: 0x7dd3fc });
+          const dot = new THREE.Mesh(dotGeo, dotMat);
+          dot.position.set(pos.x, pos.y, pos.z);
+          dotGroup.add(dot);
+        }
+      }
+    }
+    scene.add(dotGroup);
+  }
 
-  camera = new THREE.PerspectiveCamera(
-    30, 
-    sizes.width / sizes.height, 
-    1, 
-    1000
-  );
-  camera.position.z = 100;
-  
-  renderer = new THREE.WebGLRenderer({
-    canvas:     canvas,
-    antialias:  false,
-    alpha:      true
-  });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  // --- Johannesburg Pin ---
+  function addJohannesburgPin() {
+    const lat = -26.2041;
+    const lon = 28.0473;
+    const pinHeight = 0.16;
+    const pinRadius = 0.018;
+    const pinColor = 0xfacc15;
+    // Pin body (cylinder)
+    const pinGeo = new THREE.CylinderGeometry(pinRadius, pinRadius * 0.6, pinHeight, 12);
+    const pinMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: 0xfacc15, shininess: 60 });
+    const pin = new THREE.Mesh(pinGeo, pinMat);
+    // Pin head (sphere)
+    const headGeo = new THREE.SphereGeometry(pinRadius * 1.2, 12, 12);
+    const headMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: 0xfacc15 });
+    const head = new THREE.Mesh(headGeo, headMat);
+    // Position pin
+    const base = calcPosFromLatLonRad(lat, lon, RADIUS + pinHeight / 2);
+    const tip = calcPosFromLatLonRad(lat, lon, RADIUS + pinHeight);
+    pin.position.set(base.x, base.y, base.z);
+    head.position.set(tip.x, tip.y, tip.z);
+    // Orient pin to globe normal
+    pin.lookAt(calcPosFromLatLonRad(lat, lon, RADIUS * 2));
+    head.lookAt(calcPosFromLatLonRad(lat, lon, RADIUS * 2));
+    scene.add(pin);
+    scene.add(head);
+  }
+  addJohannesburgPin();
 
-  const pointLight = new THREE.PointLight(0x081b26, 17, 200);
-  pointLight.position.set(-50, 0, 60);
-  scene.add(pointLight);
-  scene.add(new THREE.HemisphereLight(0xffffbb, 0x080820, 1.5));
+  // --- Animated Commit Lines ---
+  // Generate random destinations (lat/lon pairs)
+  const johannesburg = { lat: -26.2041, lon: 28.0473 };
+  const commitLines = [];
+  const NUM_LINES = 8;
+  for (let i = 0; i < NUM_LINES; i++) {
+    const dest = randomCountryLatLon();
+    const curve = createGlobeCurve(johannesburg, dest, RADIUS);
+    const line = createAnimatedLine(curve);
+    commitLines.push({ line, curve, progress: 0, speed: 0.012 + Math.random() * 0.012 });
+    scene.add(line);
+  }
 
-  raycaster         = new THREE.Raycaster();
-  mouse             = new THREE.Vector2();
-  isIntersecting    = false;
-  minMouseDownFlag  = false;
-  mouseDown         = false;
-  grabbing          = false;
-
-  setControls();
-  setBaseSphere();
-  setShaderMaterial();
-  setMap();
-  addJohannesburgPinAndCommits();
-  resize();
-  listenTo();
-  render();
-
-}
-
-const setControls = () => {
-  // Use global THREE.OrbitControls from CDN
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.autoRotate = true;
-  controls.autoRotateSpeed = 1.2;
-  controls.enableDamping = true;
-  controls.enableRotate = true;
+  // --- Orbit Controls ---
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enablePan = false;
   controls.enableZoom = false;
-  controls.minPolarAngle = (Math.PI / 2) - 0.5;
-  controls.maxPolarAngle = (Math.PI / 2) + 0.5;
-};
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.5;
 
-const setBaseSphere = () => {
-
-  const baseSphere   = new THREE.SphereGeometry(19.5, 35, 35);
-  const baseMaterial = new THREE.MeshStandardMaterial({
-    color:        0x0b2636, 
-    transparent:  true, 
-    opacity:      0.9
-  });
-  baseMesh = new THREE.Mesh(baseSphere, baseMaterial);
-  scene.add(baseMesh);
-
-}
-
-const setShaderMaterial = () => {
-
-  twinkleTime  = 0.03;
-  materials    = [];
-  material     = new THREE.ShaderMaterial({
-    side: THREE.DoubleSide,
-    uniforms: {
-      u_time:         { value: 1.0 },
-      u_maxExtrusion: { value: 1.0 }
-    },
-    vertexShader:   vertex,
-    fragmentShader: fragment,
-  });
-
-}
-
-const setMap = () => {
-  let   activeLatLon    = {};
-  const dotSphereRadius = 20;
-
-  const readImageData = (imageData, width, height) => {
-    for(let y = 0, lat = 90; y < height; y++, lat--) {
-      for(let x = 0, lon = -180; x < width; x++, lon++) {
-        const i = (y * width + x) * 4;
-        if(!activeLatLon[lat]) activeLatLon[lat] = [];
-        const red   = imageData[i];
-        const green = imageData[i + 1];
-        const blue  = imageData[i + 2];
-        if(red < 80 && green < 80 && blue < 80)
-          activeLatLon[lat].push(lon);
-      }
+  // --- Animation Loop ---
+  function animate() {
+    requestAnimationFrame(animate);
+    // Animate commit lines
+    for (const obj of commitLines) {
+      obj.progress += obj.speed;
+      if (obj.progress > 1) obj.progress = 0;
+      updateAnimatedLine(obj.line, obj.curve, obj.progress);
     }
-  };
+    controls.update();
+    renderer.render(scene, camera);
+  }
+  animate();
 
-  const visibilityForCoordinate = (lon, lat) => {
-
-    let visible = false;
-
-    if(!activeLatLon[lat].length) return visible;
-
-    const closest = activeLatLon[lat].reduce((prev, curr) => {
-      return (Math.abs(curr - lon) < Math.abs(prev - lon) ? curr : prev);
-    });
-
-    if(Math.abs(lon - closest) < 0.5) visible = true;
-
-    return visible;
-
+  // --- Utility Functions ---
+  function calcPosFromLatLonRad(lat, lon, radius) {
+    const phi = (90 - lat) * (Math.PI / 180);
+    const theta = (lon + 180) * (Math.PI / 180);
+    return {
+      x: -radius * Math.sin(phi) * Math.cos(theta),
+      y: radius * Math.cos(phi),
+      z: radius * Math.sin(phi) * Math.sin(theta),
+    };
   }
 
-  const calcPosFromLatLonRad = (lon, lat) => {
-  
-    var phi   = (90 - lat)  * (Math.PI / 180);
-    var theta = (lon + 180) * (Math.PI / 180);
-
-    const x = -(dotSphereRadius * Math.sin(phi) * Math.cos(theta));
-    const z = (dotSphereRadius * Math.sin(phi) * Math.sin(theta));
-    const y = (dotSphereRadius * Math.cos(phi));
-  
-    return new THREE.Vector3(x, y, z);
-
+  function randomCountryLatLon() {
+    // List of major country lat/lon (not exhaustive, but enough for demo)
+    const countries = [
+      { lat: 51.5074, lon: -0.1278 },   // London
+      { lat: 40.7128, lon: -74.0060 },  // New York
+      { lat: 35.6895, lon: 139.6917 },  // Tokyo
+      { lat: 48.8566, lon: 2.3522 },    // Paris
+      { lat: -33.8688, lon: 151.2093 }, // Sydney
+      { lat: 55.7558, lon: 37.6173 },   // Moscow
+      { lat: 19.4326, lon: -99.1332 },  // Mexico City
+      { lat: 39.9042, lon: 116.4074 },  // Beijing
+      { lat: 1.3521, lon: 103.8198 },   // Singapore
+      { lat: 52.52, lon: 13.405 },      // Berlin
+      { lat: 37.7749, lon: -122.4194 }, // San Francisco
+      { lat: -23.5505, lon: -46.6333 }, // São Paulo
+      { lat: 28.6139, lon: 77.2090 },   // New Delhi
+      { lat: 41.9028, lon: 12.4964 },   // Rome
+      { lat: 31.2304, lon: 121.4737 },  // Shanghai
+      { lat: 34.0522, lon: -118.2437 }, // Los Angeles
+      { lat: 43.6532, lon: -79.3832 },  // Toronto
+      { lat: 6.5244, lon: 3.3792 },     // Lagos
+      { lat: 59.3293, lon: 18.0686 },   // Stockholm
+      { lat: 13.7563, lon: 100.5018 },  // Bangkok
+    ];
+    return countries[Math.floor(Math.random() * countries.length)];
   }
 
-  const createMaterial = (timeValue) => {
-
-    const mat                 = material.clone();
-    mat.uniforms.u_time.value = timeValue * Math.sin(Math.random());
-    materials.push(mat);
-    return mat;
-
+  function createGlobeCurve(from, to, radius) {
+    // Create a curve that arcs above the globe
+    const start = calcPosFromLatLonRad(from.lat, from.lon, radius + 0.01);
+    const end = calcPosFromLatLonRad(to.lat, to.lon, radius + 0.01);
+    // Midpoint for arc
+    const mid = {
+      x: (start.x + end.x) / 2,
+      y: (start.y + end.y) / 2,
+      z: (start.z + end.z) / 2,
+    };
+    // Raise midpoint for arc height
+    const arcHeight = 0.32 + Math.random() * 0.18;
+    const midLen = Math.sqrt(mid.x * mid.x + mid.y * mid.y + mid.z * mid.z);
+    mid.x *= (1 + arcHeight / midLen);
+    mid.y *= (1 + arcHeight / midLen);
+    mid.z *= (1 + arcHeight / midLen);
+    // Create curve
+    return new THREE.CatmullRomCurve3([
+      new THREE.Vector3(start.x, start.y, start.z),
+      new THREE.Vector3(mid.x, mid.y, mid.z),
+      new THREE.Vector3(end.x, end.y, end.z),
+    ]);
   }
 
-  const setDots = () => {
-
-    const dotDensity  = 2.5;
-    let   vector      = new THREE.Vector3();
-
-    for (let lat = 90, i = 0; lat > -90; lat--, i++) {
-
-      const radius = 
-        Math.cos(Math.abs(lat) * (Math.PI / 180)) * dotSphereRadius;
-      const circumference = radius * Math.PI * 2;
-      const dotsForLat = circumference * dotDensity;
-
-      for (let x = 0; x < dotsForLat; x++) {
-
-        const long = -180 + x * 360 / dotsForLat;
-
-        if (!visibilityForCoordinate(long, lat)) continue;
-
-        vector = calcPosFromLatLonRad(long, lat);
-
-        const dotGeometry = new THREE.CircleGeometry(0.1, 5);
-        dotGeometry.lookAt(vector);
-        dotGeometry.translate(vector.x, vector.y, vector.z);
-
-        const m     = createMaterial(i);
-        const mesh  = new THREE.Mesh(dotGeometry, m);
-
-        scene.add(mesh);
-
-      }
-
-    }
-
-  }
-  
-  const image   = new window.Image();
-  image.onload  = () => {
-    image.needsUpdate  = true;
-    const imageCanvas  = document.createElement('canvas');
-    imageCanvas.width  = image.width;
-    imageCanvas.height = image.height;
-    const context = imageCanvas.getContext('2d');
-    context.drawImage(image, 0, 0);
-    const imageData = context.getImageData(0, 0, imageCanvas.width, imageCanvas.height);
-    readImageData(imageData.data, imageCanvas.width, imageCanvas.height);
-    setDots();
-  };
-  image.src = '/world_alpha_mini.jpg';
-}
-
-const resize = () => {
-
-  sizes = {
-    width:  container.offsetWidth,
-    height: container.offsetHeight
-  };
-
-  if(window.innerWidth > 700) camera.position.z = 100;
-  else camera.position.z = 140;
-
-  camera.aspect = sizes.width / sizes.height;
-  camera.updateProjectionMatrix();
-
-  renderer.setSize(sizes.width, sizes.height);
-
-}
-
-const mousemove = (event) => {
-
-  isIntersecting = false;
-
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-  raycaster.setFromCamera(mouse, camera);
-  
-  const intersects = raycaster.intersectObject(baseMesh);
-  if(intersects[0]) {
-    isIntersecting = true;
-    if(!grabbing) document.body.style.cursor = 'pointer';
-  }
-  else {
-    if(!grabbing) document.body.style.cursor = 'default';
-  }
-
-}
-
-const mousedown = () => {
-
-  if(!isIntersecting) return;
-
-  materials.forEach(el => {
-    gsap.to(
-      el.uniforms.u_maxExtrusion, 
-      {
-        value: 1.07
-      }
-    );
-  });
-
-  mouseDown         = true;
-  minMouseDownFlag  = false;
-
-  setTimeout(() => {
-    minMouseDownFlag = true;
-    if(!mouseDown) mouseup();
-  }, 500);
-
-  document.body.style.cursor  = 'grabbing';
-  grabbing                    = true;
-
-}
-
-const mouseup = () => {
-
-  mouseDown = false;
-  if(!minMouseDownFlag) return;
-
-  materials.forEach(el => {
-    gsap.to(
-      el.uniforms.u_maxExtrusion, 
-      {
-        value:    1.0, 
-        duration: 0.15
-      }
-    );
-  });
-
-  grabbing = false;
-  if(isIntersecting) document.body.style.cursor = 'pointer';
-  else document.body.style.cursor = 'default';
-
-}
-
-const listenTo = () => {
-  // Attach events to the globe canvas only, not the whole window
-  if (canvas) {
-    canvas.addEventListener('mousemove', mousemove.bind(this));
-    canvas.addEventListener('mousedown', mousedown.bind(this));
-    canvas.addEventListener('mouseup', mouseup.bind(this));
-    canvas.addEventListener('mouseleave', mouseup.bind(this));
-  }
-  window.addEventListener('resize', resize.bind(this));
-}
-
-const render = () => {
-
-  materials.forEach(el => {
-    el.uniforms.u_time.value += twinkleTime;
-  });
-
-  controls.update();
-  renderer.render(scene, camera);
-  requestAnimationFrame(render.bind(this))
-
-}
-
-// Johannesburg pin and commit lines addition
-function addJohannesburgPinAndCommits() {
-  // Pin at Johannesburg
-  const pinTexture = new THREE.TextureLoader().load('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/location-dot.svg');
-  const pinMaterial = new THREE.SpriteMaterial({ map: pinTexture, color: 0xfacc15 });
-  const pin = new THREE.Sprite(pinMaterial);
-  // Johannesburg: lat -26.2, lon 28.0
-  const pos = calcPosFromLatLonRad(28.0, -26.2).clone().multiplyScalar(1.09);
-  pin.position.copy(pos);
-  pin.scale.set(2, 2, 1);
-  scene.add(pin);
-
-  // Commit lines to random countries
-  const destinations = [
-    { lat: 51.5, lon: -0.1 },   // London
-    { lat: 40.7, lon: -74.0 },  // New York
-    { lat: 35.7, lon: 139.7 },  // Tokyo
-    { lat: -33.9, lon: 151.2 }, // Sydney
-    { lat: 48.8, lon: 2.3 },    // Paris
-  ];
-  destinations.forEach(dest => {
-    const destPos = calcPosFromLatLonRad(dest.lon, dest.lat).clone().multiplyScalar(1.09);
-    const control = pos.clone().lerp(destPos, 0.5).setLength(pos.length() * 1.3); // arc control point
-    const curve = new THREE.QuadraticBezierCurve3(pos, control, destPos);
-    const points = curve.getPoints(50);
+  function createAnimatedLine(curve) {
+    // Start with a short segment, will animate
+    const points = curve.getPoints(2);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
-    const material = new THREE.LineBasicMaterial({ color: 0x4f46e5 });
-    const line = new THREE.Line(geometry, material);
-    scene.add(line);
-  });
-}
+    const material = new THREE.LineBasicMaterial({
+      color: 0x38bdf8,
+      linewidth: 2,
+      transparent: true,
+      opacity: 0.85,
+    });
+    return new THREE.Line(geometry, material);
+  }
+
+  function updateAnimatedLine(line, curve, progress) {
+    // Animate the line drawing from 0 to 1 along the curve
+    const N = 32;
+    const pts = curve.getPoints(Math.floor(N * progress) + 2);
+    line.geometry.setFromPoints(pts);
+    // Animate opacity for trailing effect
+    line.material.opacity = 0.5 + 0.5 * Math.sin(progress * Math.PI);
+  }
+
+  // --- Responsive Resize ---
+  function handleResize() {
+    const w = container.offsetWidth;
+    const h = container.offsetHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h, false);
+  }
+  window.addEventListener('resize', handleResize);
+  handleResize();
+
+  // --- Interactivity: Only on Globe Canvas ---
+  // (OrbitControls already attached to renderer.domElement, which is the canvas)
+})();

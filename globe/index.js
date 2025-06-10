@@ -97,7 +97,7 @@ const setScene = () => {
   setBaseSphere();
   setShaderMaterial();
   setMap();
-  addJohannesburgPinAndCommits(scene);
+  addJohannesburgPinAndCommits();
   resize();
   listenTo();
   render();
@@ -360,20 +360,14 @@ const render = () => {
 }
 
 // Johannesburg pin and commit lines addition
-function addJohannesburgPinAndCommits(scene) {
+function addJohannesburgPinAndCommits() {
   // Pin at Johannesburg
   const pinTexture = new THREE.TextureLoader().load('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/location-dot.svg');
   const pinMaterial = new THREE.SpriteMaterial({ map: pinTexture, color: 0xfacc15 });
   const pin = new THREE.Sprite(pinMaterial);
   // Johannesburg: lat -26.2, lon 28.0
-  const r = 20 * 1.09; // slightly above globe surface
-  const phi = (90 + 26.2) * (Math.PI / 180);
-  const theta = (28.0 + 180) * (Math.PI / 180);
-  pin.position.set(
-    -(r * Math.sin(phi) * Math.cos(theta)),
-     r * Math.cos(phi),
-     r * Math.sin(phi) * Math.sin(theta)
-  );
+  const pos = calcPosFromLatLonRad(28.0, -26.2).clone().multiplyScalar(1.09);
+  pin.position.copy(pos);
   pin.scale.set(2, 2, 1);
   scene.add(pin);
 
@@ -386,15 +380,9 @@ function addJohannesburgPinAndCommits(scene) {
     { lat: 48.8, lon: 2.3 },    // Paris
   ];
   destinations.forEach(dest => {
-    const phi2 = (90 - dest.lat) * (Math.PI / 180);
-    const theta2 = (dest.lon + 180) * (Math.PI / 180);
-    const destPos = new THREE.Vector3(
-      -(r * Math.sin(phi2) * Math.cos(theta2)),
-       r * Math.cos(phi2),
-       r * Math.sin(phi2) * Math.sin(theta2)
-    );
-    const control = new THREE.Vector3(0, 0, 0); // arc control point
-    const curve = new THREE.QuadraticBezierCurve3(pin.position, control, destPos);
+    const destPos = calcPosFromLatLonRad(dest.lon, dest.lat).clone().multiplyScalar(1.09);
+    const control = pos.clone().lerp(destPos, 0.5).setLength(pos.length() * 1.3); // arc control point
+    const curve = new THREE.QuadraticBezierCurve3(pos, control, destPos);
     const points = curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
     const material = new THREE.LineBasicMaterial({ color: 0x4f46e5 });

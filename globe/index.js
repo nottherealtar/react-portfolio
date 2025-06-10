@@ -79,27 +79,35 @@
   function addJohannesburgPin() {
     const lat = -26.2041;
     const lon = 28.0473;
-    const pinHeight = 0.16;
-    const pinRadius = 0.018;
-    const pinColor = 0xfacc15;
+    const pinHeight = 0.22; // larger
+    const pinRadius = 0.032; // larger
+    const pinColor = 0xffd600; // bright yellow
     // Pin body (cylinder)
-    const pinGeo = new THREE.CylinderGeometry(pinRadius, pinRadius * 0.6, pinHeight, 12);
-    const pinMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: 0xfacc15, shininess: 60 });
+    const pinGeo = new THREE.CylinderGeometry(pinRadius * 0.7, pinRadius * 0.5, pinHeight, 24);
+    const pinMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: pinColor, shininess: 100 });
     const pin = new THREE.Mesh(pinGeo, pinMat);
     // Pin head (sphere)
-    const headGeo = new THREE.SphereGeometry(pinRadius * 1.2, 12, 12);
-    const headMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: 0xfacc15 });
+    const headGeo = new THREE.SphereGeometry(pinRadius * 1.5, 24, 24);
+    const headMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: pinColor, shininess: 100 });
     const head = new THREE.Mesh(headGeo, headMat);
+    // Add glow (sprite)
+    const spriteMap = new THREE.TextureLoader().load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/sprites/glow.png');
+    const spriteMat = new THREE.SpriteMaterial({ map: spriteMap, color: pinColor, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending });
+    const sprite = new THREE.Sprite(spriteMat);
+    sprite.scale.set(0.25, 0.25, 1);
     // Position pin
     const base = calcPosFromLatLonRad(lat, lon, RADIUS + pinHeight / 2);
     const tip = calcPosFromLatLonRad(lat, lon, RADIUS + pinHeight);
     pin.position.set(base.x, base.y, base.z);
     head.position.set(tip.x, tip.y, tip.z);
+    sprite.position.set(tip.x, tip.y, tip.z);
     // Orient pin to globe normal
     pin.lookAt(calcPosFromLatLonRad(lat, lon, RADIUS * 2));
     head.lookAt(calcPosFromLatLonRad(lat, lon, RADIUS * 2));
+    // Add to scene
     scene.add(pin);
     scene.add(head);
+    scene.add(sprite);
   }
   addJohannesburgPin();
 
@@ -114,6 +122,29 @@
     const line = createAnimatedLine(curve);
     commitLines.push({ line, curve, progress: 0, speed: 0.012 + Math.random() * 0.012 });
     scene.add(line);
+  }
+
+  function createAnimatedLine(curve) {
+    // Start with a short segment, will animate
+    const points = curve.getPoints(2);
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const material = new THREE.LineBasicMaterial({
+      color: 0x00fff7, // bright cyan
+      linewidth: 4, // thicker
+      transparent: true,
+      opacity: 0.95,
+    });
+    // Add glow effect using Line2 if available, fallback to LineBasicMaterial
+    return new THREE.Line(geometry, material);
+  }
+
+  function updateAnimatedLine(line, curve, progress) {
+    // Animate the line drawing from 0 to 1 along the curve
+    const N = 48;
+    const pts = curve.getPoints(Math.floor(N * progress) + 2);
+    line.geometry.setFromPoints(pts);
+    // Animate opacity for trailing effect
+    line.material.opacity = 0.7 + 0.3 * Math.sin(progress * Math.PI);
   }
 
   // --- Orbit Controls ---
@@ -199,28 +230,6 @@
       new THREE.Vector3(mid.x, mid.y, mid.z),
       new THREE.Vector3(end.x, end.y, end.z),
     ]);
-  }
-
-  function createAnimatedLine(curve) {
-    // Start with a short segment, will animate
-    const points = curve.getPoints(2);
-    const geometry = new THREE.BufferGeometry().setFromPoints(points);
-    const material = new THREE.LineBasicMaterial({
-      color: 0x38bdf8,
-      linewidth: 2,
-      transparent: true,
-      opacity: 0.85,
-    });
-    return new THREE.Line(geometry, material);
-  }
-
-  function updateAnimatedLine(line, curve, progress) {
-    // Animate the line drawing from 0 to 1 along the curve
-    const N = 32;
-    const pts = curve.getPoints(Math.floor(N * progress) + 2);
-    line.geometry.setFromPoints(pts);
-    // Animate opacity for trailing effect
-    line.material.opacity = 0.5 + 0.5 * Math.sin(progress * Math.PI);
   }
 
   // --- Responsive Resize ---

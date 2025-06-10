@@ -97,6 +97,8 @@ const setScene = () => {
   setBaseSphere();
   setShaderMaterial();
   setMap();
+  addJohannesburgPin();
+  animateCommitStreams();
   resize();
   listenTo();
   render();
@@ -358,4 +360,41 @@ const render = () => {
 
 }
 
-setScene();
+// Add a pin at Johannesburg and animated commit streams to random countries
+const pinTexture = new THREE.TextureLoader().load('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/svgs/solid/location-dot.svg');
+
+function addJohannesburgPin() {
+  const pinMaterial = new THREE.SpriteMaterial({ map: pinTexture, color: 0xfacc15 });
+  const pin = new THREE.Sprite(pinMaterial);
+  // Johannesburg: lat -26.2, lon 28.0
+  const pos = calcPosFromLatLonRad(28.0, -26.2);
+  pin.position.copy(pos.multiplyScalar(1.09));
+  pin.scale.set(2, 2, 1); // Adjust size as needed
+  scene.add(pin);
+}
+
+function animateCommitStreams() {
+  // Animate a stream from Johannesburg to random countries
+  const origin = calcPosFromLatLonRad(28.0, -26.2).multiplyScalar(1.09);
+  const destinations = [
+    { lat: 51.5, lon: -0.1 },   // London
+    { lat: 40.7, lon: -74.0 },  // New York
+    { lat: 35.7, lon: 139.7 },  // Tokyo
+    { lat: -33.9, lon: 151.2 }, // Sydney
+    { lat: 48.8, lon: 2.3 },    // Paris
+  ];
+  destinations.forEach(dest => {
+    const destPos = calcPosFromLatLonRad(dest.lon, dest.lat).multiplyScalar(1.09);
+    const curve = new THREE.QuadraticBezierCurve3(
+      origin,
+      new THREE.Vector3(0, 0, 0), // Control point for arc
+      destPos
+    );
+    const points = curve.getPoints(50);
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const material = new THREE.LineBasicMaterial({ color: 0x4f46e5, linewidth: 2 });
+    const line = new THREE.Line(geometry, material);
+    scene.add(line);
+    // Optionally, animate a moving dot along the line
+  });
+}

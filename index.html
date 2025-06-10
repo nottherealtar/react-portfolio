@@ -547,84 +547,84 @@ Specialties:
     })();
 
     // --- Space Globe (three-globe) with marker for Johannesburg ---
-    (function() {
-        const globeDiv = document.getElementById('space-globe-container');
-        if (!globeDiv) return;
-        let width = globeDiv.offsetWidth;
-        let height = globeDiv.offsetHeight;
+    // (function() {
+    //     const globeDiv = document.getElementById('space-globe-container');
+    //     if (!globeDiv) return;
+    //     let width = globeDiv.offsetWidth;
+    //     let height = globeDiv.offsetHeight;
 
-        // Scene
-        const scene = new THREE.Scene();
-        // Camera
-        const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-        camera.position.set(0, 0, 350);
+    //     // Scene
+    //     const scene = new THREE.Scene();
+    //     // Camera
+    //     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    //     camera.position.set(0, 0, 350);
 
-        // Renderer
-        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        renderer.setSize(width, height);
-        globeDiv.appendChild(renderer.domElement);
+    //     // Renderer
+    //     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    //     renderer.setSize(width, height);
+    //     globeDiv.appendChild(renderer.domElement);
 
-        // Globe
-        const globe = new window.Globe()
-          .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
-          .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-          .showAtmosphere(true)
-          .atmosphereColor('#4f46e5')
-          .atmosphereAltitude(0.18)
-          .pointOfView({ lat: -30, lng: 25, altitude: 2.2 }, 0)
-          .labelsData([
-            {
-              lat: -26.2,
-              lng: 28.0,
-              text: 'Johannesburg',
-              size: 1.2,
-              color: '#facc15'
-            }
-          ])
-          .labelLat('lat')
-          .labelLng('lng')
-          .labelText('text')
-          .labelSize('size')
-          .labelColor('color')
-          .labelDotRadius(0.7)
-          .labelResolution(2);
+    //     // Globe
+    //     const globe = new window.Globe()
+    //       .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+    //       .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
+    //       .showAtmosphere(true)
+    //       .atmosphereColor('#4f46e5')
+    //       .atmosphereAltitude(0.18)
+    //       .pointOfView({ lat: -30, lng: 25, altitude: 2.2 }, 0)
+    //       .labelsData([
+    //         {
+    //           lat: -26.2,
+    //           lng: 28.0,
+    //           text: 'Johannesburg',
+    //           size: 1.2,
+    //           color: '#facc15'
+    //         }
+    //       ])
+    //       .labelLat('lat')
+    //       .labelLng('lng')
+    //       .labelText('text')
+    //       .labelSize('size')
+    //       .labelColor('color')
+    //       .labelDotRadius(0.7)
+    //       .labelResolution(2);
 
-        scene.add(globe);
+    //     scene.add(globe);
 
-        // Lighting
-        scene.add(new THREE.AmbientLight(0xffffff, 1.2));
-        const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-        dirLight.position.set(200, 200, 400);
-        scene.add(dirLight);
+    //     // Lighting
+    //     scene.add(new THREE.AmbientLight(0xffffff, 1.2));
+    //     const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    //     dirLight.position.set(200, 200, 400);
+    //     scene.add(dirLight);
 
-        // Controls
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enablePan = false;
-        controls.minDistance = 220;
-        controls.maxDistance = 400;
-        controls.enableDamping = true;
-        controls.dampingFactor = 0.08;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 0.7;
+    //     // Controls
+    //     const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    //     controls.enablePan = false;
+    //     controls.minDistance = 220;
+    //     controls.maxDistance = 400;
+    //     controls.enableDamping = true;
+    //     controls.dampingFactor = 0.08;
+    //     controls.autoRotate = true;
+    //     controls.autoRotateSpeed = 0.7;
 
-        // Animate
-        function animate() {
-          requestAnimationFrame(animate);
-          controls.update();
-          renderer.render(scene, camera);
-        }
-        animate();
+    //     // Animate
+    //     function animate() {
+    //       requestAnimationFrame(animate);
+    //       controls.update();
+    //       renderer.render(scene, camera);
+    //     }
+    //     animate();
 
-        // Responsive
-        function resizeGlobe() {
-          width = globeDiv.offsetWidth;
-          height = globeDiv.offsetHeight;
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
-          renderer.setSize(width, height);
-        }
-        window.addEventListener('resize', resizeGlobe);
-    })();
+    //     // Responsive
+    //     function resizeGlobe() {
+    //       width = globeDiv.offsetWidth;
+    //       height = globeDiv.offsetHeight;
+    //       camera.aspect = width / height;
+    //       camera.updateProjectionMatrix();
+    //       renderer.setSize(width, height);
+    //     }
+    //     window.addEventListener('resize', resizeGlobe);
+    // })();
     </script>
     <!-- Vercel Speed Insights (official snippet) -->
     <script>

@@ -1,0 +1,260 @@
+/* Coffee-themed Contact Form Animations */
+
+/* Success Animation Container */
+.contact-success-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-success-animation.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Coffee Cup Container */
+.coffee-cup-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+/* Coffee Cup Base */
+.coffee-cup {
+    width: 80px;
+    height: 80px;
+    background: var(--theme-primary);
+    border-radius: 0 0 40px 40px;
+    position: relative;
+    margin: 20px auto;
+    border: 3px solid var(--theme-accent);
+    overflow: hidden;
+}
+
+/* Coffee Cup Handle */
+.coffee-cup::before {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 15px;
+    width: 20px;
+    height: 30px;
+    border: 3px solid var(--theme-accent);
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    background: transparent;
+}
+
+/* Coffee Liquid Fill Animation */
+.coffee-liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to top, 
+        var(--theme-secondary) 0%, 
+        var(--theme-secondary) 70%, 
+        var(--theme-accent) 100%);
+    border-radius: 0 0 37px 37px;
+    animation: fillCoffee 2s ease-out forwards;
+}
+
+@keyframes fillCoffee {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 85%;
+    }
+}
+
+/* Steam Animation */
+.steam-container {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.steam {
+    position: absolute;
+    width: 4px;
+    height: 30px;
+    background: var(--theme-accent);
+    border-radius: 2px;
+    animation: steamRise 3s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 1.5s;
+    mask: linear-gradient(to top, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(255, 255, 255, 0.4) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(to top, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(255, 255, 255, 0.4) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+}
+
+.steam:nth-child(1) {
+    left: 20px;
+    animation-delay: 1.5s;
+}
+
+.steam:nth-child(2) {
+    left: 28px;
+    animation-delay: 1.8s;
+}
+
+.steam:nth-child(3) {
+    left: 36px;
+    animation-delay: 2.1s;
+}
+
+@keyframes steamRise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(1.2);
+    }
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--theme-accent);
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInMessage 0.5s ease-out 2.5s forwards;
+}
+
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Overlay */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--theme-background);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.success-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Form Submission States */
+.contact-form-submitting {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.contact-form-submitting .submit-button {
+    background: var(--theme-secondary) !important;
+    cursor: not-allowed;
+}
+
+.contact-form-submitting .submit-button::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    border: 2px solid var(--theme-primary);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error Animation */
+.contact-error-animation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(220, 38, 38, 0.9);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+    max-width: 400px;
+}
+
+.contact-error-animation.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contact-error-animation .error-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.contact-error-animation .error-message {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coffee-cup-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .coffee-cup {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .success-message {
+        font-size: 16px;
+    }
+    
+    .contact-error-animation {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}
+
+/* Theme integration is handled automatically via CSS custom properties */

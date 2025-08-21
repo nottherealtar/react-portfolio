@@ -19,21 +19,86 @@
     <meta name="twitter:description" content="Explore Joshua Coetzer's work in full stack development, 3D projects, and more.">
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Joshua Coetzer",
-      "url": "https://www.tarsonlinecafe.work/",
-      "sameAs": [
-        "https://github.com/nottherealtar",
-        "https://www.linkedin.com/in/josh-coetzer-31a874239/"
-      ],
-      "jobTitle": "Full Stack Developer",
-      "worksFor": {
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Joshua Coetzer",
+        "url": "https://www.tarsonlinecafe.work/",
+        "image": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png",
+        "sameAs": [
+          "https://github.com/nottherealtar",
+          "https://www.linkedin.com/in/josh-coetzer-31a874239/"
+        ],
+        "jobTitle": "Full Stack Developer",
+        "description": "Full Stack Developer & 3D Enthusiast specializing in Python, React, and modern web technologies",
+        "knowsAbout": [
+          "Python",
+          "React",
+          "JavaScript",
+          "Three.js",
+          "Full Stack Development",
+          "Web Development",
+          "3D Programming",
+          "Automation"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "ZA",
+          "addressRegion": "Gauteng"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "TarsOnlineCafe",
+          "url": "https://www.tarsonlinecafe.work/"
+        }
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "TarsOnlineCafe"
+        "name": "TarsOnlineCafe",
+        "url": "https://www.tarsonlinecafe.work/",
+        "logo": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png",
+        "description": "Portfolio and development services by Joshua Coetzer",
+        "founder": {
+          "@type": "Person",
+          "name": "Joshua Coetzer"
+        },
+        "foundingDate": "2020",
+        "sameAs": [
+          "https://github.com/nottherealtar"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Joshua Coetzer Portfolio",
+        "url": "https://www.tarsonlinecafe.work/",
+        "description": "Portfolio website showcasing full stack development projects and skills",
+        "author": {
+          "@type": "Person",
+          "name": "Joshua Coetzer"
+        },
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.tarsonlinecafe.work/blog/blog.html?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.tarsonlinecafe.work/"
+          }
+        ]
       }
-    }
+    ]
     </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,6 +106,28 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Theme System -->
+    <link rel="stylesheet" href="/styles/themes.css">
+    <link rel="stylesheet" href="/styles/skills-enhancement.css">
+    <link rel="stylesheet" href="/styles/innovative-testimonials.css">
+    <link rel="stylesheet" href="/styles/contact-animations.css">
+    <link rel="stylesheet" href="/styles/coffee-button.css">
+    <link rel="stylesheet" href="/styles/lazy-loading.css">
+    <link rel="stylesheet" href="/styles/performance-fallbacks.css">
+    
+    <!-- Performance Monitoring and Error Handling (Load First) -->
+    <script src="/scripts/performance-monitor.js"></script>
+    <script src="/scripts/error-boundaries.js"></script>
+    
+    <!-- Component Scripts -->
+    <script src="/scripts/theme-controller.js"></script>
+    <script src="/scripts/skills-enhancement.js"></script>
+    <script src="/scripts/contact-animations.js"></script>
+    <script src="/scripts/coffee-button.js"></script>
+    <script src="/scripts/lazy-loading.js"></script>
+    <script src="/scripts/falling-leaves.js"></script>
+    <script src="/scripts/component-integration.js"></script>
     <style>
         body {
             margin: 0;
@@ -174,6 +261,11 @@
             border-color: #f7efe2 !important;
             box-shadow: 0 0 0 2px #f7efe2 !important;
         }
+        
+        /* Theme transition smoothing */
+        .theme-transitioning * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+        }
     </style>
 </head>
 <body>
@@ -251,35 +343,11 @@ Specialties:
         <section class="py-20 px-6 bg-indigo-900 bg-opacity-50">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">My Skills</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="skill-chip glass-card p-6 rounded-lg text-center">
-                        <div class="text-4xl mb-3 text-indigo-400">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <h3 class="font-semibold">Python</h3>
-                        <p class="text-sm opacity-80">Pandas, Flask</p>
+                <div class="skills-container">
+                    <div class="skills-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Skills will be dynamically generated by JavaScript -->
                     </div>
-                    <div class="skill-chip glass-card p-6 rounded-lg text-center">
-                        <div class="text-4xl mb-3 text-indigo-400">
-                            <i class="fab fa-react"></i>
-                        </div>
-                        <h3 class="font-semibold">React</h3>
-                        <p class="text-sm opacity-80">Next.js</p>
-                    </div>
-                    <div class="skill-chip glass-card p-6 rounded-lg text-center">
-                        <div class="text-4xl mb-3 text-indigo-400">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <h3 class="font-semibold">Three.js</h3>
-                        <p class="text-sm opacity-80">WebGL, 3D Modeling</p>
-                    </div>
-                    <div class="skill-chip glass-card p-6 rounded-lg text-center">
-                        <div class="text-4xl mb-3 text-indigo-400">
-                            <i class="fas fa-server"></i>
-                        </div>
-                        <h3 class="font-semibold">Backend</h3>
-                        <p class="text-sm opacity-80">Node, C#, NoSQL</p>
-                    </div>
+                    <!-- GitHub stats will be inserted here by JavaScript -->
                 </div>
             </div>
         </section>
@@ -395,6 +463,26 @@ Specialties:
                         <input type="hidden" id="zapier-token" name="zapier-token" value="extra-hot-spicy-chicken-grass">
                         <button type="submit" class="w-full py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
                     </form>
+                    
+                    <!-- Buy Me a Coffee Button -->
+                    <div class="mt-8 text-center">
+                        <p class="text-sm text-gray-400 mb-4">Enjoyed my work? Support me with a coffee!</p>
+                        <a href="https://buymeacoffee.com/nottherealtar" 
+                           class="coffee-button" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           aria-label="Support me by buying me a coffee">
+                            <svg class="coffee-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Coffee cup body -->
+                                <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                                <!-- Steam lines -->
+                                <path d="M6 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                                <path d="M9 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                                <path d="M12 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            </svg>
+                            <span class="coffee-button-text">Buy me a coffee</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -416,109 +504,8 @@ Specialties:
     </div>
 
     <script>
-        // Three.js Scene Setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-        // Add lights
-        const ambientLight = new THREE.AmbientLight(0x404040);
-        scene.add(ambientLight);
-
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(directionalLight);
-
-        // Add floating 3D objects
-        const geometry = new THREE.IcosahedronGeometry(1, 0);
-        const material = new THREE.MeshPhongMaterial({ 
-            color: 0x1a120b, // Darker coffee color
-            emissive: 0x1a120b,
-            emissiveIntensity: 0.18,
-            shininess: 30,
-            transparent: true,
-            opacity: 0.82
-        });
-
-        const objects = [];
-        const objectCount = 10;
-
-        for (let i = 0; i < objectCount; i++) {
-            const mesh = new THREE.Mesh(geometry, material.clone());
-            
-            // Random position
-            mesh.position.x = (Math.random() - 0.5) * 20;
-            mesh.position.y = (Math.random() - 0.5) * 20;
-            mesh.position.z = (Math.random() - 0.5) * 20;
-            
-            // Random rotation
-            mesh.rotation.x = Math.random() * Math.PI;
-            mesh.rotation.y = Math.random() * Math.PI;
-            
-            // Random scale
-            const scale = 0.5 + Math.random() * 1.5;
-            mesh.scale.set(scale, scale, scale);
-            
-            // Store for animation
-            objects.push({
-                mesh,
-                speed: {
-                    x: (Math.random() - 0.5) * 0.01,
-                    y: (Math.random() - 0.5) * 0.01,
-                    z: (Math.random() - 0.5) * 0.01
-                },
-                rotation: {
-                    x: (Math.random() - 0.5) * 0.02,
-                    y: (Math.random() - 0.5) * 0.02
-                }
-            });
-            
-            scene.add(mesh);
-        }
-
-        // Camera position
-        camera.position.z = 15;
-
-        // Add orbit controls
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableZoom = false;
-        controls.enablePan = false;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 0.5;
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            // Animate objects
-            objects.forEach(obj => {
-                obj.mesh.position.x += obj.speed.x;
-                obj.mesh.position.y += obj.speed.y;
-                obj.mesh.position.z += obj.speed.z;
-                
-                obj.mesh.rotation.x += obj.rotation.x;
-                obj.mesh.rotation.y += obj.rotation.y;
-                
-                // Bounce off imaginary walls
-                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
-                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
-                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
-            });
-            
-            controls.update();
-            renderer.render(scene, camera);
-        }
-
-        animate();
+        // Falling leaves animation is now handled by falling-leaves.js
+        // This script section is kept for any additional page-specific functionality
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -544,42 +531,7 @@ Specialties:
             observer.observe(el);
         });
 
-        // Contact form submission
-        document.getElementById('contact-form').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            const token = document.getElementById('zapier-token').value;
-
-            // Send to Vercel serverless function
-            try {
-                const response = await fetch('/api/contact', {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, email, subject, message, token })
-                });
-
-                if (response.ok) {
-                    alert("Thank you for your message! I'll get back to you soon.");
-                    document.getElementById('contact-form').reset();
-                } else {
-                    // Try to show error details if available
-                    let errorMsg = "There was an error sending your message. Please try again later.";
-                    try {
-                        const errorData = await response.json();
-                        if (errorData && errorData.error) {
-                            errorMsg += "\n" + errorData.error;
-                            if (errorData.details) errorMsg += "\n" + errorData.details;
-                        }
-                    } catch {}
-                    alert(errorMsg);
-                }
-            } catch (err) {
-                alert("There was a network error. Please try again later.");
-            }
-        });
+        // Contact form submission is now handled by contact-animations.js
 
         // --- Responsive Starry Canvas Background ---
     (function() {

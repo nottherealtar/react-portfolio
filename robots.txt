@@ -1,4 +1,26 @@
+# Robots.txt for tarsonlinecafe.work
+# Allow all web crawlers to access the site
+
 User-agent: *
 Allow: /
 
+# Disallow crawling of development/test files
+Disallow: /test-lazy-loading.html
+Disallow: /.kiro/
+Disallow: /.vscode/
+Disallow: /.git/
+
+# Disallow crawling of API endpoints to prevent unnecessary load
+Disallow: /api/
+
+# Allow crawling of important directories
+Allow: /blog/
+Allow: /styles/
+Allow: /scripts/
+Allow: /globe/
+
+# Crawl delay to be respectful to server resources
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://www.tarsonlinecafe.work/sitemap.xml

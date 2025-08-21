@@ -1,0 +1,248 @@
+/**
+ * Lazy Loading Styles with Coffee-themed Placeholders
+ * Provides smooth loading transitions and coffee-themed placeholders
+ */
+
+/* Lazy Image Container */
+.lazy-image-container {
+    position: relative;
+    overflow: hidden;
+    background: var(--coffee-card-bg, rgba(60, 40, 25, 0.18));
+    border-radius: 8px;
+}
+
+/* Lazy Image Styles */
+.lazy-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-image.lazy-loading {
+    opacity: 0;
+}
+
+.lazy-image.lazy-loaded {
+    opacity: 1;
+}
+
+.lazy-image.lazy-error {
+    opacity: 0.5;
+}
+
+/* Lazy Background Styles */
+.lazy-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-bg.lazy-loading {
+    opacity: 0.8;
+}
+
+.lazy-bg.lazy-loaded {
+    opacity: 1;
+}
+
+.lazy-bg.lazy-error {
+    opacity: 0.5;
+}
+
+/* Coffee-themed Placeholder */
+.lazy-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--coffee-card-bg, rgba(60, 40, 25, 0.18));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--coffee-border, rgba(247, 239, 226, 0.18));
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.coffee-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--coffee-text, #f7efe2);
+    text-align: center;
+    padding: 20px;
+}
+
+.coffee-cup {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    color: var(--coffee-accent, #a1866f);
+    animation: coffee-steam 2s ease-in-out infinite;
+}
+
+.coffee-cup svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.loading-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--coffee-text-secondary, #d4c4a8);
+    animation: coffee-pulse 1.5s ease-in-out infinite;
+}
+
+/* Error Placeholder */
+.coffee-error-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--coffee-error, #cd853f);
+    text-align: center;
+    padding: 20px;
+}
+
+.error-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+.error-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.error-text {
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes coffee-steam {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-4px) scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes coffee-pulse {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .coffee-cup {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 8px;
+    }
+    
+    .loading-text {
+        font-size: 12px;
+    }
+    
+    .coffee-placeholder {
+        padding: 15px;
+    }
+}
+
+/* Theme-specific Styles */
+[data-theme="light"] .lazy-placeholder {
+    background: rgba(60, 40, 25, 0.18);
+    border-color: rgba(247, 239, 226, 0.18);
+}
+
+[data-theme="light"] .coffee-placeholder {
+    color: #f7efe2;
+}
+
+[data-theme="light"] .coffee-cup {
+    color: #a1866f;
+}
+
+[data-theme="light"] .loading-text {
+    color: #d4c4a8;
+}
+
+[data-theme="dark"] .lazy-placeholder {
+    background: rgba(40, 30, 20, 0.25);
+    border-color: rgba(139, 115, 85, 0.25);
+}
+
+[data-theme="dark"] .coffee-placeholder {
+    color: #d4c4a8;
+}
+
+[data-theme="dark"] .coffee-cup {
+    color: #8b7355;
+}
+
+[data-theme="dark"] .loading-text {
+    color: #a1866f;
+}
+
+/* Performance Optimizations */
+.lazy-image-container,
+.lazy-bg {
+    will-change: opacity;
+}
+
+.coffee-cup {
+    will-change: transform, opacity;
+}
+
+.loading-text {
+    will-change: opacity;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .coffee-cup,
+    .loading-text {
+        animation: none;
+    }
+    
+    .lazy-image,
+    .lazy-bg,
+    .lazy-placeholder {
+        transition: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .lazy-placeholder {
+        border-width: 2px;
+        border-style: solid;
+    }
+    
+    .coffee-placeholder {
+        color: currentColor;
+    }
+    
+    .loading-text {
+        font-weight: 600;
+    }
+}

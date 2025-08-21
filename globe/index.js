@@ -38,13 +38,39 @@
   const globeMesh = new THREE.Mesh(globeGeometry, globeMaterial);
   scene.add(globeMesh);
 
-  // --- Dot World Map Overlay ---
+  // --- Dot World Map Overlay with Lazy Loading ---
   const mapImg = new window.Image();
-  mapImg.src = '/world_alpha_mini.jpg';
-  mapImg.onload = function () {
-    // Draw dots on globe after image loads
-    drawWorldDots(mapImg);
+  
+  // Create lazy loading for the world map image
+  const loadWorldMap = () => {
+    mapImg.src = '/world_alpha_mini.jpg';
+    mapImg.onload = function () {
+      // Draw dots on globe after image loads
+      drawWorldDots(mapImg);
+    };
+    mapImg.onerror = function () {
+      console.warn('Failed to load world map image, using fallback dots');
+      // Create fallback dots without map data
+      createFallbackDots();
+    };
   };
+
+  // Use intersection observer to load map when globe container is visible
+  if ('IntersectionObserver' in window) {
+    const globeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          loadWorldMap();
+          globeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    globeObserver.observe(container);
+  } else {
+    // Fallback for older browsers
+    loadWorldMap();
+  }
 
   function drawWorldDots(img) {
     // Use a hidden canvas to read the map image
@@ -75,6 +101,34 @@
         }
       }
     }
+    scene.add(dotGroup);
+  }
+
+  function createFallbackDots() {
+    // Create basic dots pattern when image fails to load
+    const dotGroup = new THREE.Group();
+    const majorCities = [
+      { lat: 51.5074, lon: -0.1278 },   // London
+      { lat: 40.7128, lon: -74.0060 },  // New York
+      { lat: 35.6895, lon: 139.6917 },  // Tokyo
+      { lat: 48.8566, lon: 2.3522 },    // Paris
+      { lat: -33.8688, lon: 151.2093 }, // Sydney
+      { lat: 55.7558, lon: 37.6173 },   // Moscow
+      { lat: 19.4326, lon: -99.1332 },  // Mexico City
+      { lat: 39.9042, lon: 116.4074 },  // Beijing
+      { lat: 1.3521, lon: 103.8198 },   // Singapore
+      { lat: 52.52, lon: 13.405 },      // Berlin
+    ];
+    
+    majorCities.forEach(city => {
+      const pos = calcPosFromLatLonRad(city.lat, city.lon, RADIUS + 0.008);
+      const dotGeo = new THREE.SphereGeometry(0.012, 8, 8);
+      const dotMat = new THREE.MeshBasicMaterial({ color: 0x7dd3fc });
+      const dot = new THREE.Mesh(dotGeo, dotMat);
+      dot.position.set(pos.x, pos.y, pos.z);
+      dotGroup.add(dot);
+    });
+    
     scene.add(dotGroup);
   }
 

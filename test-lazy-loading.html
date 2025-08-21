@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Test | Joshua Coetzer</title>
+    <link rel="stylesheet" href="/styles/lazy-loading.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #2d221b;
+            color: #f7efe2;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(60, 40, 25, 0.18);
+            border-radius: 12px;
+            border: 1px solid rgba(247, 239, 226, 0.18);
+        }
+        .test-image {
+            width: 300px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        .test-bg {
+            width: 300px;
+            height: 200px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .spacer {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #a1866f;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lazy Loading System Test</h1>
+    <p>This page tests the lazy loading system with coffee-themed placeholders.</p>
+    
+    <div class="test-section">
+        <h2>Test 1: Regular Image (loads immediately)</h2>
+        <img src="/67793100.png" alt="Favicon test" style="width: 100px; height: 100px;">
+    </div>
+    
+    <div class="spacer">Scroll down to see lazy loading in action...</div>
+    
+    <div class="test-section">
+        <h2>Test 2: Lazy Loaded Image</h2>
+        <div class="lazy-image-container test-image">
+            <div class="lazy-placeholder">
+                <div class="coffee-placeholder">
+                    <div class="coffee-cup">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                            <path d="M6 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M9 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M12 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                        </svg>
+                    </div>
+                    <div class="loading-text">Brewing...</div>
+                </div>
+            </div>
+            <img class="lazy-image" data-src="/world_alpha_mini.jpg" alt="World map test">
+        </div>
+    </div>
+    
+    <div class="spacer">More content...</div>
+    
+    <div class="test-section">
+        <h2>Test 3: Lazy Background Image</h2>
+        <div class="lazy-bg test-bg" data-bg="/67793100.png">
+            <div class="lazy-placeholder">
+                <div class="coffee-placeholder">
+                    <div class="coffee-cup">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                            <path d="M6 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M9 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M12 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                        </svg>
+                    </div>
+                    <div class="loading-text">Brewing...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="spacer">Test error handling...</div>
+    
+    <div class="test-section">
+        <h2>Test 4: Error Handling (broken image)</h2>
+        <div class="lazy-image-container test-image">
+            <div class="lazy-placeholder">
+                <div class="coffee-placeholder">
+                    <div class="coffee-cup">
+                        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                            <path d="M6 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M9 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                            <path d="M12 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
+                        </svg>
+                    </div>
+                    <div class="loading-text">Brewing...</div>
+                </div>
+            </div>
+            <img class="lazy-image" data-src="/nonexistent-image.jpg" alt="Broken image test">
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>JavaScript API Test</h2>
+        <button onclick="testAPI()" style="padding: 10px 20px; background: #a1866f; color: #2d221b; border: none; border-radius: 5px; cursor: pointer;">
+            Create Dynamic Lazy Image
+        </button>
+        <div id="dynamic-container" style="margin-top: 20px;"></div>
+    </div>
+    
+    <script src="/scripts/lazy-loading.js"></script>
+    <script>
+        function testAPI() {
+            const container = document.getElementById('dynamic-container');
+            const lazyImg = window.lazyLoader.createLazyImage('/world_alpha_mini.jpg', 'Dynamic test image', 'test-image');
+            container.appendChild(lazyImg);
+            window.lazyLoader.addLazyImage(lazyImg.querySelector('img'));
+        }
+    </script>
+</body>
+</html>

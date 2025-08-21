@@ -1,0 +1,1042 @@
+/* Skills Enhancement Styles */
+
+/* Coffee-themed color variables for skills */
+.skill-item {
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.skill-item.skill-animate-in {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px -5px rgba(60, 40, 25, 0.4);
+}
+
+/* Experience Badge Styling */
+.experience-badge {
+    background: rgba(161, 134, 111, 0.2) !important;
+    color: #f7efe2 !important;
+    border: 1px solid rgba(161, 134, 111, 0.3);
+}
+
+/* Progress Bar Styling */
+.progress-container {
+    position: relative;
+}
+
+.progress-background {
+    background: rgba(161, 134, 111, 0.2) !important;
+    box-shadow: inset 0 1px 3px rgba(45, 34, 27, 0.3);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #a1866f 0%, #f7efe2 50%, #a1866f 100%) !important;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(45, 34, 27, 0.3);
+}
+
+.progress-bar.progress-animate {
+    animation: progressShine 2s ease-in-out;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(247, 239, 226, 0.4), transparent);
+    animation: progressGlow 2s ease-in-out infinite;
+}
+
+/* Progress Bar Animations */
+@keyframes progressShine {
+    0% {
+        box-shadow: 0 1px 3px rgba(45, 34, 27, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 1px 8px rgba(161, 134, 111, 0.6), 0 0 15px rgba(247, 239, 226, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 1px 3px rgba(45, 34, 27, 0.3);
+    }
+}
+
+@keyframes progressGlow {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Skill Icon Enhancements */
+.skill-icon {
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1);
+    color: #a1866f !important;
+    text-shadow: 0 0 10px rgba(161, 134, 111, 0.5);
+}
+
+/* Enhanced Coffee-themed Tooltip Styling with Theme Support */
+.skill-tooltip {
+    background: var(--tooltip-bg, rgba(45, 34, 27, 0.92)) !important;
+    color: var(--tooltip-text, #f7efe2) !important;
+    border: 1px solid var(--tooltip-border, rgba(161, 134, 111, 0.4));
+    backdrop-filter: blur(15px) saturate(1.2);
+    -webkit-backdrop-filter: blur(15px) saturate(1.2);
+    box-shadow:
+        0 20px 40px var(--tooltip-shadow-primary, rgba(45, 34, 27, 0.6)),
+        0 8px 16px var(--tooltip-shadow-secondary, rgba(161, 134, 111, 0.2)),
+        inset 0 1px 0 var(--tooltip-highlight, rgba(247, 239, 226, 0.1));
+    font-size: 0.75rem;
+    line-height: 1.5;
+    max-width: 320px;
+    min-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.coffee-glass-tooltip {
+    background: var(--tooltip-gradient, linear-gradient(135deg,
+                rgba(45, 34, 27, 0.95) 0%,
+                rgba(60, 40, 25, 0.9) 50%,
+                rgba(45, 34, 27, 0.95) 100%)) !important;
+}
+
+/* Light Theme Tooltip Variables */
+[data-theme="light"] {
+    --tooltip-bg: rgba(45, 34, 27, 0.92);
+    --tooltip-text: #f7efe2;
+    --tooltip-border: rgba(161, 134, 111, 0.4);
+    --tooltip-shadow-primary: rgba(45, 34, 27, 0.6);
+    --tooltip-shadow-secondary: rgba(161, 134, 111, 0.2);
+    --tooltip-highlight: rgba(247, 239, 226, 0.1);
+    --tooltip-gradient: linear-gradient(135deg,
+            rgba(45, 34, 27, 0.95) 0%,
+            rgba(60, 40, 25, 0.9) 50%,
+            rgba(45, 34, 27, 0.95) 100%);
+    --tooltip-arrow-color: rgba(45, 34, 27, 0.92);
+    --coffee-accent-color: #a1866f;
+    --coffee-primary-text: #f7efe2;
+    --coffee-highlight-bg: rgba(161, 134, 111, 0.2);
+    --tech-tag-bg: rgba(161, 134, 111, 0.3);
+    --tech-tag-border: rgba(161, 134, 111, 0.4);
+    --steam-color-1: rgba(247, 239, 226, 0.3);
+    --steam-color-2: rgba(161, 134, 111, 0.2);
+}
+
+/* Dark Theme Tooltip Variables */
+[data-theme="dark"] {
+    --tooltip-bg: rgba(26, 26, 26, 0.95);
+    --tooltip-text: #d4c4a8;
+    --tooltip-border: rgba(139, 115, 85, 0.4);
+    --tooltip-shadow-primary: rgba(26, 26, 26, 0.8);
+    --tooltip-shadow-secondary: rgba(74, 55, 40, 0.3);
+    --tooltip-highlight: rgba(212, 196, 168, 0.1);
+    --tooltip-gradient: linear-gradient(135deg,
+            rgba(26, 26, 26, 0.95) 0%,
+            rgba(40, 30, 20, 0.9) 50%,
+            rgba(26, 26, 26, 0.95) 100%);
+    --tooltip-arrow-color: rgba(26, 26, 26, 0.95);
+    --coffee-accent-color: #8b7355;
+    --coffee-primary-text: #d4c4a8;
+    --coffee-highlight-bg: rgba(139, 115, 85, 0.25);
+    --tech-tag-bg: rgba(74, 55, 40, 0.4);
+    --tech-tag-border: rgba(139, 115, 85, 0.3);
+    --steam-color-1: rgba(212, 196, 168, 0.2);
+    --steam-color-2: rgba(139, 115, 85, 0.15);
+}
+
+/* Tooltip Arrow Styling */
+.tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--tooltip-arrow-color);
+    filter: drop-shadow(0 2px 4px var(--tooltip-shadow-primary));
+    transition: border-color 0.3s ease;
+}
+
+/* Tooltip Positioning Classes */
+.tooltip-top {
+    bottom: calc(100% + 12px);
+    top: auto;
+}
+
+.tooltip-bottom {
+    top: calc(100% + 12px);
+    bottom: auto;
+}
+
+.tooltip-bottom .tooltip-arrow {
+    top: -8px;
+    bottom: auto;
+    border-top: none;
+    border-bottom: 8px solid var(--tooltip-arrow-color);
+    transform: rotate(180deg);
+}
+
+/* Coffee-themed Text Colors */
+.coffee-text-primary {
+    color: var(--coffee-primary-text) !important;
+    text-shadow: 0 1px 2px var(--tooltip-shadow-primary);
+}
+
+.coffee-accent {
+    color: var(--coffee-accent-color) !important;
+}
+
+.coffee-highlight {
+    color: var(--coffee-primary-text) !important;
+    font-weight: 600;
+    background: var(--coffee-highlight-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.coffee-bullet {
+    color: var(--coffee-accent-color) !important;
+    font-weight: bold;
+}
+
+.coffee-icon {
+    color: var(--coffee-accent-color) !important;
+    text-shadow: 0 0 8px var(--coffee-accent-color);
+    transition: all 0.3s ease;
+}
+
+/* Technology Tags */
+.tech-tag {
+    background: var(--tech-tag-bg) !important;
+    color: var(--coffee-primary-text) !important;
+    border: 1px solid var(--tech-tag-border);
+    font-size: 0.65rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+    background: var(--coffee-accent-color) !important;
+    color: var(--tooltip-bg) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px var(--tooltip-shadow-primary);
+}
+
+/* Coffee Steam Animation Effect */
+.tooltip-steam-effect::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, var(--steam-color-1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: coffeesteam 2s ease-in-out infinite;
+}
+
+.tooltip-steam-effect::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, var(--steam-color-2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: coffeesteam 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes coffeesteam {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0) scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-5px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10px) scale(1.2);
+    }
+}
+
+/* Enhanced Tooltip Content Styling */
+.tooltip-content {
+    position: relative;
+    z-index: 1;
+}
+
+.skill-tooltip ul {
+    margin: 0;
+    padding: 0;
+}
+
+.skill-tooltip li {
+    margin: 0.25rem 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Tooltip Hover Effects */
+.skill-tooltip:hover {
+    box-shadow:
+        0 25px 50px var(--tooltip-shadow-primary),
+        0 12px 20px var(--tooltip-shadow-secondary),
+        inset 0 1px 0 var(--tooltip-highlight);
+    transform: translateY(-2px);
+}
+
+/* Smooth theme transitions for tooltips */
+.theme-transitioning .skill-tooltip,
+.theme-transitioning .tooltip-arrow,
+.theme-transitioning .coffee-text-primary,
+.theme-transitioning .coffee-accent,
+.theme-transitioning .coffee-highlight,
+.theme-transitioning .coffee-bullet,
+.theme-transitioning .coffee-icon,
+.theme-transitioning .tech-tag {
+    transition: all 0.3s ease !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-tooltip {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: calc(100vw - 20px) !important;
+        font-size: 0.7rem;
+        padding: 0.75rem !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .skill-item {
+        padding: 1rem;
+    }
+
+    .progress-container {
+        margin-bottom: 0.75rem;
+    }
+
+    .tech-tag {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+    }
+
+    /* Ensure tooltips don't go off-screen on mobile */
+    .tooltip-top {
+        bottom: calc(100% + 8px);
+    }
+
+    .tooltip-bottom {
+        top: calc(100% + 8px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-tooltip {
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: calc(100vw - 16px) !important;
+        font-size: 0.65rem;
+        padding: 0.5rem !important;
+    }
+
+    .coffee-highlight {
+        padding: 1px 4px;
+        font-size: 0.6rem;
+    }
+
+    .tooltip-steam-effect::before,
+    .tooltip-steam-effect::after {
+        display: none;
+        /* Hide steam effect on very small screens */
+    }
+}
+
+/* Coffee-themed hover effects */
+.skill-item:hover .progress-bar {
+    animation: progressPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes progressPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 1px 3px rgba(45, 34, 27, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 1px 8px rgba(161, 134, 111, 0.6), 0 0 15px rgba(247, 239, 226, 0.2);
+    }
+}
+
+/* Staggered animation for skill items */
+.skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Coffee-themed color classes */
+.bg-coffee-primary {
+    background-color: #2d221b;
+}
+
+.bg-coffee-secondary {
+    background-color: #a1866f;
+}
+
+.bg-coffee-accent {
+    background-color: #f7efe2;
+}
+
+.text-coffee-primary {
+    color: #2d221b;
+}
+
+.text-coffee-secondary {
+    color: #a1866f;
+}
+
+.text-coffee-accent {
+    color: #f7efe2;
+}
+
+/* Enhanced frameworks text */
+.frameworks {
+    color: rgba(247, 239, 226, 0.8);
+    font-weight: 500;
+}
+
+.skill-item:hover .frameworks {
+    color: #a1866f;
+}
+
+/* Progress text styling */
+.progress-text {
+    color: rgba(247, 239, 226, 0.9);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(45, 34, 27, 0.5);
+}
+
+/* GitHub Stats Styling */
+.github-stats-container {
+    margin-top: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+.github-stats-wrapper {
+    background: var(--github-stats-bg, rgba(60, 40, 25, 0.18)) !important;
+    border: 1px solid var(--github-stats-border, rgba(161, 134, 111, 0.2));
+    transition: all 0.3s ease;
+}
+
+.github-stats-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--github-stats-shadow, rgba(45, 34, 27, 0.3));
+}
+
+/* GitHub Stats Theme Variables */
+[data-theme="light"] {
+    --github-stats-bg: rgba(60, 40, 25, 0.18);
+    --github-stats-border: rgba(161, 134, 111, 0.2);
+    --github-stats-shadow: rgba(45, 34, 27, 0.3);
+    --github-loading-bg: rgba(161, 134, 111, 0.1);
+    --github-fallback-bg: rgba(161, 134, 111, 0.15);
+    --github-fallback-btn-bg: #a1866f;
+    --github-fallback-btn-text: #2d221b;
+    --github-fallback-btn-hover: #f7efe2;
+}
+
+[data-theme="dark"] {
+    --github-stats-bg: rgba(40, 30, 20, 0.25);
+    --github-stats-border: rgba(139, 115, 85, 0.3);
+    --github-stats-shadow: rgba(26, 26, 26, 0.4);
+    --github-loading-bg: rgba(139, 115, 85, 0.15);
+    --github-fallback-bg: rgba(74, 55, 40, 0.2);
+    --github-fallback-btn-bg: #8b7355;
+    --github-fallback-btn-text: #d4c4a8;
+    --github-fallback-btn-hover: #4a3728;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--coffee-accent-color, #a1866f);
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.github-loading {
+    background: var(--github-loading-bg);
+    border-radius: 0.5rem;
+    color: var(--coffee-primary-text, #f7efe2);
+}
+
+/* GitHub Stats Iframe Styling */
+.github-stats-iframe {
+    border: none;
+    background: transparent;
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.github-stats-content {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Fallback Styling */
+.github-fallback {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fallback-content {
+    background: var(--github-fallback-bg);
+    border: 1px solid var(--github-stats-border);
+    color: var(--coffee-primary-text, #f7efe2);
+}
+
+.github-fallback-btn {
+    background: var(--github-fallback-btn-bg) !important;
+    color: var(--github-fallback-btn-text) !important;
+    border: 1px solid var(--github-stats-border);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github-fallback-btn:hover {
+    background: var(--github-fallback-btn-hover) !important;
+    color: var(--github-fallback-btn-text) !important;
+    box-shadow: 0 4px 8px var(--github-stats-shadow);
+}
+
+/* Responsive GitHub Stats */
+@media (max-width: 768px) {
+    .github-stats-container {
+        margin-top: 1.5rem;
+    }
+
+    .github-stats-wrapper {
+        padding: 1rem;
+    }
+
+    .github-stats-iframe {
+        height: 180px;
+    }
+
+    .fallback-content {
+        padding: 1rem;
+    }
+
+    .github-fallback-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .github-stats-iframe {
+        height: 160px;
+    }
+
+    .github-stats-wrapper h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .loading-spinner {
+        width: 16px;
+        height: 16px;
+    }
+
+    .github-loading {
+        padding: 1.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+/* Animation for GitHub stats container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Coffee-themed hover effects for GitHub section */
+.github-stats-wrapper:hover .coffee-accent {
+    color: #f7efe2 !important;
+    text-shadow: 0 0 10px rgba(161, 134, 111, 0.6);
+}
+
+/* Smooth theme transitions for GitHub stats */
+.theme-transitioning .github-stats-wrapper,
+.theme-transitioning .github-loading,
+.theme-transitioning .fallback-content,
+.theme-transitioning .github-fallback-btn {
+    transition: all 0.3s ease !important;
+}
+
+/* Linked
+In Recommendations Carousel Styling */
+.linkedin-recommendations-container {
+    margin-top: 2rem;
+    animation: fadeInUp 0.6s ease-out;
+    animation-delay: 0.7s;
+    animation-fill-mode: both;
+}
+
+.recommendations-wrapper {
+    background: var(--recommendations-bg, rgba(60, 40, 25, 0.18)) !important;
+    border: 1px solid var(--recommendations-border, rgba(161, 134, 111, 0.2));
+    transition: all 0.3s ease;
+}
+
+.recommendations-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--recommendations-shadow, rgba(45, 34, 27, 0.3));
+}
+
+/* Recommendations Theme Variables */
+[data-theme="light"] {
+    --recommendations-bg: rgba(60, 40, 25, 0.18);
+    --recommendations-border: rgba(161, 134, 111, 0.2);
+    --recommendations-shadow: rgba(45, 34, 27, 0.3);
+    --recommendation-card-bg: rgba(60, 40, 25, 0.15);
+    --recommendation-card-border: rgba(161, 134, 111, 0.25);
+    --recommendation-text-primary: #f7efe2;
+    --recommendation-text-secondary: rgba(247, 239, 226, 0.8);
+    --linkedin-btn-bg: #0077b5;
+    --linkedin-btn-hover: #005885;
+    --carousel-btn-bg: rgba(161, 134, 111, 0.2);
+    --carousel-btn-hover: rgba(161, 134, 111, 0.4);
+    --carousel-btn-text: #f7efe2;
+    --indicator-inactive: rgba(161, 134, 111, 0.4);
+    --indicator-active: #a1866f;
+    --quote-icon-color: rgba(161, 134, 111, 0.3);
+}
+
+[data-theme="dark"] {
+    --recommendations-bg: rgba(40, 30, 20, 0.25);
+    --recommendations-border: rgba(139, 115, 85, 0.3);
+    --recommendations-shadow: rgba(26, 26, 26, 0.4);
+    --recommendation-card-bg: rgba(40, 30, 20, 0.2);
+    --recommendation-card-border: rgba(139, 115, 85, 0.3);
+    --recommendation-text-primary: #d4c4a8;
+    --recommendation-text-secondary: rgba(212, 196, 168, 0.8);
+    --linkedin-btn-bg: #0077b5;
+    --linkedin-btn-hover: #005885;
+    --carousel-btn-bg: rgba(139, 115, 85, 0.2);
+    --carousel-btn-hover: rgba(139, 115, 85, 0.4);
+    --carousel-btn-text: #d4c4a8;
+    --indicator-inactive: rgba(139, 115, 85, 0.4);
+    --indicator-active: #8b7355;
+    --quote-icon-color: rgba(139, 115, 85, 0.3);
+}
+
+/* Carousel Container */
+.recommendations-carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendations-carousel {
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.recommendations-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+/* Recommendation Card Styling */
+.recommendation-card {
+    flex: 0 0 100%;
+    padding: 0 0.5rem;
+}
+
+.recommendation-content {
+    background: var(--recommendation-card-bg) !important;
+    border: 1px solid var(--recommendation-card-border);
+    position: relative;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recommendation-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px var(--recommendations-shadow);
+}
+
+/* Quote Icon */
+.quote-icon {
+    color: var(--quote-icon-color) !important;
+    z-index: 0;
+}
+
+/* Recommendation Text */
+.recommendation-text {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+}
+
+.coffee-text-secondary {
+    color: var(--recommendation-text-secondary) !important;
+    line-height: 1.6;
+}
+
+/* Author Information */
+.author-info {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--recommendation-card-border);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.author-avatar img {
+    border: 2px solid var(--recommendations-border) !important;
+    transition: all 0.3s ease;
+}
+
+.author-avatar img:hover {
+    transform: scale(1.05);
+    border-color: var(--indicator-active) !important;
+}
+
+.coffee-border {
+    border-color: var(--recommendations-border) !important;
+}
+
+.coffee-text-primary {
+    color: var(--recommendation-text-primary) !important;
+    font-weight: 600;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+    background: var(--linkedin-btn-bg) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.linkedin-btn:hover {
+    background: var(--linkedin-btn-hover) !important;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 119, 181, 0.3);
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.carousel-btn {
+    background: var(--carousel-btn-bg) !important;
+    color: var(--carousel-btn-text) !important;
+    border: 1px solid var(--recommendations-border);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: var(--carousel-btn-hover) !important;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--recommendations-shadow);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--indicator-inactive) !important;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    transform: scale(1.2);
+}
+
+.indicator.indicator-active {
+    background: var(--indicator-active) !important;
+    transform: scale(1.3);
+    box-shadow: 0 0 8px var(--indicator-active);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .linkedin-recommendations-container {
+        margin-top: 1.5rem;
+    }
+
+    .recommendations-wrapper {
+        padding: 1rem;
+    }
+
+    .recommendations-wrapper h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    .recommendation-content {
+        padding: 1rem;
+        min-height: 180px;
+    }
+
+    .recommendation-text {
+        margin-bottom: 1rem;
+    }
+
+    .coffee-text-secondary {
+        font-size: 0.875rem;
+    }
+
+    .author-info {
+        padding-top: 0.75rem;
+        margin-top: 0.75rem;
+    }
+
+    .author-avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .author-details {
+        margin-left: 0.75rem;
+    }
+
+    .author-name {
+        font-size: 0.875rem;
+    }
+
+    .author-position,
+    .author-company {
+        font-size: 0.75rem;
+    }
+
+    .linkedin-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-controls {
+        margin-top: 1rem;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recommendation-content {
+        padding: 0.75rem;
+        min-height: 160px;
+    }
+
+    .coffee-text-secondary {
+        font-size: 0.8125rem;
+        line-height: 1.5;
+    }
+
+    .author-avatar img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .author-details {
+        margin-left: 0.5rem;
+    }
+
+    .author-name {
+        font-size: 0.8125rem;
+    }
+
+    .author-position,
+    .author-company {
+        font-size: 0.6875rem;
+    }
+
+    .linkedin-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .linkedin-btn i {
+        font-size: 0.75rem;
+    }
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .carousel-btn i {
+        font-size: 0.875rem;
+    }
+
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .quote-icon {
+        font-size: 1.5rem !important;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+}
+
+/* Smooth theme transitions for recommendations */
+.theme-transitioning .recommendations-wrapper,
+.theme-transitioning .recommendation-content,
+.theme-transitioning .coffee-text-primary,
+.theme-transitioning .coffee-text-secondary,
+.theme-transitioning .coffee-border,
+.theme-transitioning .carousel-btn,
+.theme-transitioning .indicator,
+.theme-transitioning .linkedin-btn {
+    transition: all 0.3s ease !important;
+}
+
+/* Enhanced hover effects for recommendations */
+.recommendation-content:hover .quote-icon {
+    color: var(--indicator-active) !important;
+    transform: scale(1.1);
+}
+
+.recommendation-content:hover .coffee-text-secondary {
+    color: var(--recommendation-text-primary) !important;
+}
+
+/* Auto-play pause indicator */
+.recommendations-carousel-container:hover .indicator.indicator-active {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Loading state for recommendations (if needed) */
+.recommendations-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--recommendation-text-secondary);
+}
+
+.recommendations-loading .loading-spinner {
+    margin-right: 0.75rem;
+}
+
+/* Empty state styling */
+.recommendations-empty {
+    text-align: center;
+    padding: 2rem;
+    color: var(--recommendation-text-secondary);
+    font-style: italic;
+}
+
+.recommendations-empty i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--quote-icon-color);
+}

@@ -1,0 +1,198 @@
+/* Buy Me a Coffee Button Styles */
+
+.coffee-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--theme-card-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--theme-card-border);
+  border-radius: 25px;
+  color: var(--theme-text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.coffee-button:hover {
+  transform: translateY(-2px);
+  background: var(--theme-secondary);
+  color: var(--theme-primary);
+  border-color: var(--theme-accent);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.coffee-button:active {
+  transform: translateY(0px);
+  transition: transform 0.1s ease;
+}
+
+.coffee-button:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 2px;
+}
+
+/* Coffee cup icon styling */
+.coffee-button .coffee-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.coffee-button:hover .coffee-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Steam animation on hover */
+.coffee-button::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 28px;
+  width: 2px;
+  height: 8px;
+  background: linear-gradient(to top, transparent, currentColor);
+  border-radius: 50%;
+  opacity: 0;
+  animation: coffeeButtonSteam 1.5s ease-in-out infinite;
+  transition: opacity 0.3s ease;
+}
+
+.coffee-button:hover::before {
+  opacity: 0.4;
+}
+
+@keyframes coffeeButtonSteam {
+  0%, 100% { 
+    opacity: 0; 
+    transform: translateY(0px) scale(1);
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: translateY(-3px) scale(1.1);
+  }
+}
+
+/* Subtle pulse animation */
+.coffee-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  background: var(--theme-accent);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.coffee-button:hover::after {
+  opacity: 0.1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .coffee-button {
+    padding: 10px 16px;
+    font-size: 13px;
+    gap: 6px;
+  }
+  
+  .coffee-button .coffee-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .coffee-button::before {
+    left: 24px;
+    width: 1.5px;
+    height: 6px;
+    top: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coffee-button {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+  
+  .coffee-button .coffee-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .coffee-button::before {
+    left: 22px;
+  }
+}
+
+/* Contact section integration styling */
+.contact-coffee-button {
+  margin-top: 24px;
+}
+
+/* Accessibility improvements */
+.coffee-button:focus {
+  outline: none;
+}
+
+.coffee-button[aria-pressed="true"] {
+  background: var(--theme-secondary);
+  color: var(--theme-primary);
+}
+
+/* Enhanced focus state */
+.coffee-button[data-focused="true"] {
+  box-shadow: 0 0 0 3px var(--theme-accent), 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Theme-aware link styling override */
+.coffee-button,
+.coffee-button:hover,
+.coffee-button:focus,
+.coffee-button:visited {
+  color: var(--theme-text) !important;
+  text-decoration: none !important;
+}
+
+.coffee-button:hover {
+  color: var(--theme-primary) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .coffee-button {
+    border-width: 3px;
+    font-weight: 600;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .coffee-button,
+  .coffee-button .coffee-icon,
+  .coffee-button::before,
+  .coffee-button::after {
+    transition: none;
+    animation: none;
+  }
+  
+  .coffee-button:hover {
+    transform: none;
+  }
+  
+  .coffee-button:hover .coffee-icon {
+    transform: none;
+  }
+}

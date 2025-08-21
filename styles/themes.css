@@ -1,0 +1,284 @@
+/* Theme System Foundation - CSS Custom Properties */
+
+:root {
+  /* Light Theme (Morning Coffee) - Default */
+  --theme-primary: #2d221b;
+  --theme-secondary: #a1866f;
+  --theme-accent: #f7efe2;
+  --theme-background: rgba(45, 34, 27, 0.85);
+  --theme-text: #f7efe2;
+  --theme-card-bg: rgba(60, 40, 25, 0.18);
+  --theme-card-border: rgba(247, 239, 226, 0.18);
+  --theme-skill-chip-bg: rgba(60, 40, 25, 0.25);
+  --theme-skill-chip-hover-bg: #a1866f;
+  --theme-skill-chip-hover-text: #fffbe9;
+  --theme-terminal-bg: rgba(60, 40, 25, 0.7);
+  --theme-input-bg: #a1866f;
+  --theme-input-text: #2d221b;
+  --theme-input-border: #f7efe2;
+  --theme-footer-bg: #2d221b;
+  --theme-footer-text: #a1866f;
+  
+  /* Animation colors for light theme */
+  --theme-leaf-color-1: #8b4513;
+  --theme-leaf-color-2: #a0522d;
+  --theme-leaf-color-3: #cd853f;
+  --theme-particle-opacity: 0.7;
+}
+
+/* Dark Theme (Evening Tea) */
+[data-theme="dark"] {
+  --theme-primary: #1a1a1a;
+  --theme-secondary: #4a3728;
+  --theme-accent: #8b7355;
+  --theme-background: rgba(26, 26, 26, 0.9);
+  --theme-text: #d4c4a8;
+  --theme-card-bg: rgba(40, 30, 20, 0.25);
+  --theme-card-border: rgba(139, 115, 85, 0.18);
+  --theme-skill-chip-bg: rgba(40, 30, 20, 0.35);
+  --theme-skill-chip-hover-bg: #6b5b47;
+  --theme-skill-chip-hover-text: #f0e6d2;
+  --theme-terminal-bg: rgba(40, 30, 20, 0.8);
+  --theme-input-bg: #4a3728;
+  --theme-input-text: #d4c4a8;
+  --theme-input-border: #8b7355;
+  --theme-footer-bg: #1a1a1a;
+  --theme-footer-text: #6b5b47;
+  
+  /* Animation colors for dark theme */
+  --theme-leaf-color-1: #2f1b14;
+  --theme-leaf-color-2: #3d2817;
+  --theme-leaf-color-3: #4a3728;
+  --theme-particle-opacity: 0.5;
+}
+
+/* Theme-aware styles using CSS custom properties */
+body {
+  background: var(--theme-primary);
+  color: var(--theme-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content {
+  background: var(--theme-background);
+  color: var(--theme-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.glass-card {
+  background: var(--theme-card-bg);
+  border: 1px solid var(--theme-card-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-chip {
+  background: var(--theme-skill-chip-bg);
+  color: var(--theme-text);
+  transition: all 0.3s ease;
+}
+
+.skill-chip:hover {
+  background: var(--theme-skill-chip-hover-bg);
+  color: var(--theme-skill-chip-hover-text);
+}
+
+.terminal {
+  background: var(--theme-terminal-bg);
+  color: var(--theme-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Input styling with theme variables */
+input, textarea {
+  background: var(--theme-input-bg) !important;
+  color: var(--theme-input-text) !important;
+  border: 1px solid var(--theme-input-border) !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--theme-input-border) !important;
+  box-shadow: 0 0 0 2px var(--theme-input-border) !important;
+}
+
+/* Footer theming */
+footer {
+  background: var(--theme-footer-bg);
+  color: var(--theme-footer-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button theming */
+.btn-coffee {
+  background: var(--theme-secondary);
+  color: var(--theme-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-coffee:hover {
+  background: var(--theme-accent);
+  color: var(--theme-primary);
+}
+
+/* Override existing color classes with theme variables */
+.bg-indigo-600, .bg-indigo-700, .bg-indigo-900, .bg-indigo-300, .bg-indigo-400 {
+  background: var(--theme-secondary) !important;
+  transition: background-color 0.3s ease;
+}
+
+.text-indigo-300, .text-indigo-400, .text-indigo-100 {
+  color: var(--theme-text) !important;
+  transition: color 0.3s ease;
+}
+
+.border-indigo-400, .focus\:ring-indigo-500 {
+  border-color: var(--theme-accent) !important;
+  box-shadow: 0 0 0 2px var(--theme-accent) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient override */
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, var(--theme-secondary), var(--theme-primary)) !important;
+  transition: background 0.3s ease;
+}
+
+/* Project tags */
+.bg-indigo-900.rounded {
+  background: var(--theme-secondary) !important;
+  color: var(--theme-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Link colors */
+a, .hover\:text-indigo-100:hover, .hover\:text-white:hover {
+  color: var(--theme-text) !important;
+  transition: color 0.3s ease;
+}
+
+/* Theme toggle button positioning and styling */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--theme-card-bg);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--theme-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border-color: var(--theme-accent);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--theme-accent);
+  outline-offset: 2px;
+}
+
+/* SVG icon styling within toggle button */
+.theme-toggle svg {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.theme-toggle:hover svg {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* Smooth transition animation for icon changes */
+.theme-toggle-transitioning {
+  animation: toggleBounce 0.3s ease-in-out;
+}
+
+@keyframes toggleBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(10deg); }
+  100% { transform: scale(1); }
+}
+
+/* Coffee steam animation for extra delight */
+.theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 12px;
+  background: linear-gradient(to top, transparent, var(--theme-text));
+  border-radius: 50%;
+  opacity: 0;
+  animation: steam 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.theme-toggle:hover::before {
+  opacity: 0.6;
+}
+
+@keyframes steam {
+  0%, 100% { 
+    opacity: 0; 
+    transform: translateX(-50%) translateY(0px) scale(1);
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: translateX(-50%) translateY(-5px) scale(1.2);
+  }
+}
+
+/* Responsive theme toggle */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 15px;
+    border-width: 1.5px;
+  }
+  
+  .theme-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .theme-toggle::before {
+    width: 2px;
+    height: 8px;
+    top: -6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+    top: 12px;
+    right: 12px;
+  }
+  
+  .theme-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+}

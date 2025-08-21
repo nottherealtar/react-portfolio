@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Monitoring Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .test-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .test-button:hover {
+            background: #2563eb;
+        }
+
+        .test-button.danger {
+            background: #ef4444;
+        }
+
+        .test-button.danger:hover {
+            background: #dc2626;
+        }
+
+        .test-results {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .status-good {
+            background: #10b981;
+        }
+
+        .status-warning {
+            background: #f59e0b;
+        }
+
+        .status-error {
+            background: #ef4444;
+        }
+
+        .performance-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Performance Monitoring & Error Handling Test Suite</h1>
+
+    <div class="test-section">
+        <h2>System Status</h2>
+        <div id="system-status">
+            <p><span class="status-indicator status-good"></span>Loading system status...</p>
+        </div>
+
+        <div class="performance-stats" id="performance-stats">
+            <!-- Performance stats will be populated here -->
+        </div>
+
+        <button class="test-button" onclick="updateSystemStatus()">Refresh Status</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Browser Compatibility Tests</h2>
+        <div id="compatibility-results" class="test-results">Running compatibility tests...</div>
+        <button class="test-button" onclick="runCompatibilityTests()">Run Compatibility Tests</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Performance Tests</h2>
+        <div id="performance-results" class="test-results">Click button to run performance tests...</div>
+        <button class="test-button" onclick="runPerformanceTests()">Run Performance Tests</button>
+        <button class="test-button" onclick="simulateHighLoad()">Simulate High Load</button>
+        <button class="test-button" onclick="testMemoryUsage()">Test Memory Usage</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Error Handling Tests</h2>
+        <div id="error-results" class="test-results">Click buttons to test error handling...</div>
+        <button class="test-button danger" onclick="triggerJavaScriptError()">Trigger JS Error</button>
+        <button class="test-button danger" onclick="triggerNetworkError()">Trigger Network Error</button>
+        <button class="test-button danger" onclick="triggerMemoryError()">Trigger Memory Error</button>
+        <button class="test-button" onclick="testErrorRecovery()">Test Error Recovery</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Component Tests</h2>
+        <div id="component-results" class="test-results">Click buttons to test components...</div>
+        <button class="test-button" onclick="testThemeController()">Test Theme Controller</button>
+        <button class="test-button" onclick="testFallingLeaves()">Test Falling Leaves</button>
+        <button class="test-button" onclick="testSkillsEnhancement()">Test Skills Enhancement</button>
+        <button class="test-button" onclick="testContactAnimations()">Test Contact Animations</button>
+    </div>
+
+    <div class="test-section">
+        <h2>Fallback Tests</h2>
+        <div id="fallback-results" class="test-results">Click buttons to test fallbacks...</div>
+        <button class="test-button" onclick="enableGracefulDegradation()">Enable Graceful Degradation</button>
+        <button class="test-button" onclick="enableLowPerformanceMode()">Enable Low Performance Mode</button>
+        <button class="test-button" onclick="enableEmergencyFallbacks()">Enable Emergency Fallbacks</button>
+        <button class="test-button" onclick="resetAllFallbacks()">Reset All Fallbacks</button>
+    </div>
+
+    <!-- Include the performance monitoring scripts -->
+    <script src="/scripts/performance-monitor.js"></script>
+    <script src="/scripts/error-boundaries.js"></script>
+
+    <script>
+        // Test suite implementation
+        let testResults = {
+            compatibility: [],
+            performance: [],
+            errors: [],
+            components: [],
+            fallbacks: []
+        };
+
+        // Initialize test suite
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateSystemStatus();
+                runCompatibilityTests();
+            }, 1000);
+        });
+
+        function updateSystemStatus() {
+            const statusDiv = document.getElementById('system-status');
+            const statsDiv = document.getElementById('performance-stats');
+
+            if (window.performanceMonitor) {
+                const report = window.performanceMonitor.getPerformanceReport();
+                const support = window.performanceMonitor.isSupported;
+
+                let statusHtml = '';
+                let statusClass = 'status-good';
+
+                if (report.errorCount > 5) {
+                    statusClass = 'status-error';
+                    statusHtml = `<span class="status-indicator ${statusClass}"></span>System has ${report.errorCount} errors`;
+                } else if (report.isLowPerformance) {
+                    statusClass = 'status-warning';
+                    statusHtml = `<span class="status-indicator ${statusClass}"></span>Low performance mode active`;
+                } else {
+                    statusHtml = `<span class="status-indicator ${statusClass}"></span>System running normally`;
+                }
+
+                statusDiv.innerHTML = statusHtml;
+
+                // Update performance stats
+                statsDiv.innerHTML = `
+                    <div class="stat-card">
+                        <div class="stat-value">${report.averageFPS.toFixed(1)}</div>
+                        <div class="stat-label">Average FPS</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${report.errorCount}</div>
+                        <div class="stat-label">Total Errors</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${(report.uptime / 1000).toFixed(1)}s</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${report.memoryUsage ? (report.memoryUsage.used / 1024 / 1024).toFixed(1) + 'MB' : 'N/A'}</div>
+                        <div class="stat-label">Memory Usage</div>
+                    </div>
+                `;
+            } else {
+                statusDiv.innerHTML = '<span class="status-indicator status-error"></span>Performance monitor not loaded';
+                statsDiv.innerHTML = '<div class="stat-card"><div class="stat-value">N/A</div><div class="stat-label">Performance monitor unavailable</div></div>';
+            }
+        }
+
+        function runCompatibilityTests() {
+            const resultsDiv = document.getElementById('compatibility-results');
+            let results = 'Browser Compatibility Test Results:\n\n';
+
+            if (window.performanceMonitor) {
+                const support = window.performanceMonitor.isSupported;
+
+                results += `✓ requestAnimationFrame: ${support.requestAnimationFrame ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ Canvas: ${support.canvas ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ localStorage: ${support.localStorage ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ IntersectionObserver: ${support.intersectionObserver ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ CSS Custom Properties: ${support.customProperties ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ WebGL: ${support.webgl ? 'Supported' : 'Not Supported'}\n`;
+                results += `✓ 3D Transforms: ${support.transforms3d ? 'Supported' : 'Not Supported'}\n\n`;
+
+                results += `Browser: ${navigator.userAgent}\n`;
+                results += `Viewport: ${window.innerWidth}x${window.innerHeight}\n`;
+                results += `Pixel Ratio: ${window.devicePixelRatio}\n`;
+
+                if (performance.memory) {
+                    results += `Memory Limit: ${(performance.memory.jsHeapSizeLimit / 1024 / 1024).toFixed(1)} MB\n`;
+                }
+            } else {
+                results += 'Performance monitor not available for compatibility testing.\n';
+            }
+
+            resultsDiv.textContent = results;
+        }
+
+        function runPerformanceTests() {
+            const resultsDiv = document.getElementById('performance-results');
+            let results = 'Performance Test Results:\n\n';
+
+            // Test animation performance
+            const startTime = performance.now();
+            let frameCount = 0;
+
+            function testFrame() {
+                frameCount++;
+                if (frameCount < 60) {
+                    requestAnimationFrame(testFrame);
+                } else {
+                    const endTime = performance.now();
+                    const totalTime = endTime - startTime;
+                    const avgFrameTime = totalTime / frameCount;
+                    const fps = 1000 / avgFrameTime;
+
+                    results += `Animation Performance Test:\n`;
+                    results += `- Total time: ${totalTime.toFixed(2)}ms\n`;
+                    results += `- Average frame time: ${avgFrameTime.toFixed(2)}ms\n`;
+                    results += `- Estimated FPS: ${fps.toFixed(1)}\n\n`;
+
+                    if (window.performanceMonitor) {
+                        const report = window.performanceMonitor.getPerformanceReport();
+                        results += `Current Performance Report:\n`;
+                        results += `- Average FPS: ${report.averageFPS.toFixed(1)}\n`;
+                        results += `- Error Count: ${report.errorCount}\n`;
+                        results += `- Low Performance Mode: ${report.isLowPerformance ? 'Yes' : 'No'}\n`;
+                        results += `- Fallbacks Enabled: ${report.fallbacksEnabled ? 'Yes' : 'No'}\n`;
+                    }
+
+                    resultsDiv.textContent = results;
+                }
+            }
+
+            requestAnimationFrame(testFrame);
+        }
+
+        function simulateHighLoad() {
+            const resultsDiv = document.getElementById('performance-results');
+            resultsDiv.textContent = 'Simulating high CPU load...\n';
+
+            // Create high CPU load
+            const startTime = performance.now();
+            let iterations = 0;
+
+            function heavyTask() {
+                const taskStart = performance.now();
+
+                // Simulate heavy computation
+                for (let i = 0; i < 1000000; i++) {
+                    Math.random() * Math.random();
+                }
+
+                iterations++;
+                const taskTime = performance.now() - taskStart;
+
+                if (performance.now() - startTime < 5000) { // Run for 5 seconds
+                    setTimeout(heavyTask, 1);
+                } else {
+                    resultsDiv.textContent += `High load simulation complete.\n`;
+                    resultsDiv.textContent += `Completed ${iterations} iterations.\n`;
+                    updateSystemStatus();
+                }
+            }
+
+            heavyTask();
+        }
+
+        function testMemoryUsage() {
+            const resultsDiv = document.getElementById('performance-results');
+            let results = 'Memory Usage Test:\n\n';
+
+            if (performance.memory) {
+                const before = {
+                    used: performance.memory.usedJSHeapSize,
+                    total: performance.memory.totalJSHeapSize,
+                    limit: performance.memory.jsHeapSizeLimit
+                };
+
+                // Create memory pressure
+                const largeArray = [];
+                for (let i = 0; i < 100000; i++) {
+                    largeArray.push(new Array(100).fill(Math.random()));
+                }
+
+                setTimeout(() => {
+                    const after = {
+                        used: performance.memory.usedJSHeapSize,
+                        total: performance.memory.totalJSHeapSize,
+                        limit: performance.memory.jsHeapSizeLimit
+                    };
+
+                    results += `Before Test:\n`;
+                    results += `- Used: ${(before.used / 1024 / 1024).toFixed(1)} MB\n`;
+                    results += `- Total: ${(before.total / 1024 / 1024).toFixed(1)} MB\n\n`;
+
+                    results += `After Test:\n`;
+                    results += `- Used: ${(after.used / 1024 / 1024).toFixed(1)} MB\n`;
+                    results += `- Total: ${(after.total / 1024 / 1024).toFixed(1)} MB\n\n`;
+
+                    results += `Memory Increase: ${((after.used - before.used) / 1024 / 1024).toFixed(1)} MB\n`;
+
+                    resultsDiv.textContent = results;
+
+                    // Clean up
+                    largeArray.length = 0;
+                }, 100);
+            } else {
+                results += 'Memory API not available in this browser.\n';
+                resultsDiv.textContent = results;
+            }
+        }
+
+        function triggerJavaScriptError() {
+            const resultsDiv = document.getElementById('error-results');
+            resultsDiv.textContent = 'Triggering JavaScript error...\n';
+
+            try {
+                // This will throw an error
+                nonExistentFunction();
+            } catch (error) {
+                resultsDiv.textContent += `Error caught: ${error.message}\n`;
+
+                if (window.performanceMonitor) {
+                    window.performanceMonitor.handleError('Test JavaScript Error', error);
+                    resultsDiv.textContent += 'Error reported to performance monitor.\n';
+                }
+            }
+
+            setTimeout(updateSystemStatus, 500);
+        }
+
+        function triggerNetworkError() {
+            const resultsDiv = document.getElementById('error-results');
+            resultsDiv.textContent = 'Triggering network error...\n';
+
+            fetch('/nonexistent-endpoint')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                })
+                .catch(error => {
+                    resultsDiv.textContent += `Network error: ${error.message}\n`;
+
+                    if (window.performanceMonitor) {
+                        window.performanceMonitor.handleError('Test Network Error', error);
+                        resultsDiv.textContent += 'Error reported to performance monitor.\n';
+                    }
+
+                    setTimeout(updateSystemStatus, 500);
+                });
+        }
+
+        function triggerMemoryError() {
+            const resultsDiv = document.getElementById('error-results');
+            resultsDiv.textContent = 'Triggering memory error...\n';
+
+            try {
+                // Try to create a very large array
+                const hugeArray = new Array(999999999).fill('memory test');
+            } catch (error) {
+                resultsDiv.textContent += `Memory error: ${error.message}\n`;
+
+                if (window.performanceMonitor) {
+                    window.performanceMonitor.handleError('Test Memory Error', error);
+                    resultsDiv.textContent += 'Error reported to performance monitor.\n';
+                }
+
+                setTimeout(updateSystemStatus, 500);
+            }
+        }
+
+        function testErrorRecovery() {
+            const resultsDiv = document.getElementById('error-results');
+            resultsDiv.textContent = 'Testing error recovery...\n';
+
+            if (window.errorBoundaryManager) {
+                const totalErrors = window.errorBoundaryManager.getTotalErrorCount();
+                resultsDiv.textContent += `Current total errors: ${totalErrors}\n`;
+
+                window.errorBoundaryManager.resetAllBoundaries();
+                resultsDiv.textContent += 'All error boundaries reset.\n';
+
+                setTimeout(() => {
+                    const newTotalErrors = window.errorBoundaryManager.getTotalErrorCount();
+                    resultsDiv.textContent += `Total errors after reset: ${newTotalErrors}\n`;
+                    updateSystemStatus();
+                }, 500);
+            } else {
+                resultsDiv.textContent += 'Error boundary manager not available.\n';
+            }
+        }
+
+        function testThemeController() {
+            const resultsDiv = document.getElementById('component-results');
+            resultsDiv.textContent = 'Testing theme controller...\n';
+
+            if (window.componentIntegration) {
+                window.componentIntegration.testThemeSwitch();
+                resultsDiv.textContent += 'Theme switch test initiated.\n';
+            } else {
+                resultsDiv.textContent += 'Component integration not available.\n';
+            }
+        }
+
+        function testFallingLeaves() {
+            const resultsDiv = document.getElementById('component-results');
+            resultsDiv.textContent = 'Testing falling leaves animation...\n';
+
+            if (window.componentIntegration) {
+                window.componentIntegration.testFallingLeaves();
+                resultsDiv.textContent += 'Falling leaves test initiated.\n';
+            } else {
+                resultsDiv.textContent += 'Component integration not available.\n';
+            }
+        }
+
+        function testSkillsEnhancement() {
+            const resultsDiv = document.getElementById('component-results');
+            resultsDiv.textContent = 'Testing skills enhancement...\n';
+
+            if (window.skillsEnhancement) {
+                resultsDiv.textContent += 'Skills enhancement component found.\n';
+                // Test tooltip functionality
+                const skillItems = document.querySelectorAll('.skill-item');
+                resultsDiv.textContent += `Found ${skillItems.length} skill items.\n`;
+            } else {
+                resultsDiv.textContent += 'Skills enhancement component not available.\n';
+            }
+        }
+
+        function testContactAnimations() {
+            const resultsDiv = document.getElementById('component-results');
+            resultsDiv.textContent = 'Testing contact animations...\n';
+
+            if (window.componentIntegration) {
+                window.componentIntegration.testContactAnimation();
+                resultsDiv.textContent += 'Contact animation test initiated.\n';
+            } else {
+                resultsDiv.textContent += 'Component integration not available.\n';
+            }
+        }
+
+        function enableGracefulDegradation() {
+            const resultsDiv = document.getElementById('fallback-results');
+            resultsDiv.textContent = 'Enabling graceful degradation...\n';
+
+            if (window.performanceMonitor) {
+                window.performanceMonitor.enableGracefulDegradation();
+                resultsDiv.textContent += 'Graceful degradation enabled.\n';
+                resultsDiv.textContent += 'Check the main page to see fallback styles.\n';
+            } else {
+                resultsDiv.textContent += 'Performance monitor not available.\n';
+            }
+        }
+
+        function enableLowPerformanceMode() {
+            const resultsDiv = document.getElementById('fallback-results');
+            resultsDiv.textContent = 'Enabling low performance mode...\n';
+
+            if (window.performanceMonitor) {
+                window.performanceMonitor.enablePerformanceFallbacks();
+                resultsDiv.textContent += 'Low performance mode enabled.\n';
+                resultsDiv.textContent += 'Animations should be simplified.\n';
+            } else {
+                resultsDiv.textContent += 'Performance monitor not available.\n';
+            }
+        }
+
+        function enableEmergencyFallbacks() {
+            const resultsDiv = document.getElementById('fallback-results');
+            resultsDiv.textContent = 'Enabling emergency fallbacks...\n';
+
+            if (window.performanceMonitor) {
+                window.performanceMonitor.enableEmergencyFallbacks();
+                resultsDiv.textContent += 'Emergency fallbacks enabled.\n';
+                resultsDiv.textContent += 'All animations should be disabled.\n';
+            } else {
+                resultsDiv.textContent += 'Performance monitor not available.\n';
+            }
+        }
+
+        function resetAllFallbacks() {
+            const resultsDiv = document.getElementById('fallback-results');
+            resultsDiv.textContent = 'Resetting all fallbacks...\n';
+
+            // Remove fallback classes
+            document.body.classList.remove('fallback-mode', 'low-performance', 'emergency-fallback');
+
+            if (window.errorBoundaryManager) {
+                window.errorBoundaryManager.resetAllBoundaries();
+            }
+
+            resultsDiv.textContent += 'All fallbacks reset.\n';
+            resultsDiv.textContent += 'Page should return to normal operation.\n';
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        }
+
+        // Auto-refresh system status every 5 seconds
+        setInterval(updateSystemStatus, 5000);
+    </script>
+</body>
+
+</html>

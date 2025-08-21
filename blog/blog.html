@@ -7,8 +7,53 @@
     <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
     <meta name="description" content="Tech blog by Joshua Coetzer. AI news, projects, and coding language guides.">
     <meta name="keywords" content="Blog, AI, Coding, Flutter, Python, Javascript, C#, Projects, Joshua Coetzer">
+    
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Joshua Coetzer Tech Blog",
+        "description": "Tech blog covering AI news, projects, and coding language guides",
+        "url": "https://www.tarsonlinecafe.work/blog/blog.html",
+        "author": {
+          "@type": "Person",
+          "name": "Joshua Coetzer",
+          "url": "https://www.tarsonlinecafe.work/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "TarsOnlineCafe",
+          "url": "https://www.tarsonlinecafe.work/",
+          "logo": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png"
+        },
+        "inLanguage": "en-US"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.tarsonlinecafe.work/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.tarsonlinecafe.work/blog/blog.html"
+          }
+        ]
+      }
+    ]
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/lazy-loading.css">
     <style>
         body {
             margin: 0;
@@ -131,6 +176,7 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script src="/scripts/lazy-loading.js"></script>
     <script>
         // Three.js Scene Setup
         const scene = new THREE.Scene();

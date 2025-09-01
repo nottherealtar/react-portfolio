@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runge-Kutta 4 Method Explorer | Joshua Coetzer Blog</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
+    <meta name="description" content="Interactive exploration of the Runge-Kutta 4 method for solving ordinary differential equations with theory, examples, and live calculator.">
+    <meta name="keywords" content="Runge-Kutta, RK4, Numerical Methods, Differential Equations, Mathematics, Programming, Joshua Coetzer">
+    
+    <!-- Structured Data for Article -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Runge-Kutta 4 Method Explorer",
+        "description": "Interactive exploration of the Runge-Kutta 4 method for solving ordinary differential equations with theory, examples, and live calculator.",
+        "url": "https://www.tarsonlinecafe.work/blog/runge-kutta-4-method.html",
+        "datePublished": "2024-12-01T00:00:00Z",
+        "dateModified": "2024-12-01T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Joshua Coetzer",
+          "url": "https://www.tarsonlinecafe.work/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "TarsOnlineCafe",
+          "url": "https://www.tarsonlinecafe.work/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.tarsonlinecafe.work/blog/runge-kutta-4-method.html"
+        },
+        "articleSection": "Mathematics & Programming",
+        "keywords": ["Runge-Kutta", "RK4", "Numerical Methods", "Differential Equations", "Mathematics", "Programming"],
+        "inLanguage": "en-US"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.tarsonlinecafe.work/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://www.tarsonlinecafe.work/blog/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Runge-Kutta 4 Method Explorer",
+            "item": "https://www.tarsonlinecafe.work/blog/runge-kutta-4-method.html"
+          }
+        ]
+      }
+    ]
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/lazy-loading.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: rgba(15, 23, 42, 0.95);
+            color: white;
+        }
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .blog-title {
+            color: #a5b4fc;
+        }
+        .blog-category {
+            font-size: 0.85rem;
+            color: #818cf8;
+            background: rgba(49,46,129,0.2);
+            border-radius: 0.5rem;
+            padding: 0.2rem 0.7rem;
+            margin-right: 0.5rem;
+        }
+        .blog-date {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+        a:hover {
+            color: #818cf8;
+        }
+        .nav-link {
+            padding: 0.5rem 1.25rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(129,140,248,0.3);
+            color: #a5b4fc;
+            transition: background 0.2s;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: #3730a3;
+            color: #fff;
+        }
+        .equation-container {
+            background-color: rgba(248, 250, 252, 0.1);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .katex { 
+            font-size: 1.1em; 
+            color: #e2e8f0;
+        }
+        .slider-value {
+            display: inline-block;
+            min-width: 30px;
+            text-align: center;
+            color: #a5b4fc;
+            font-weight: 500;
+        }
+        canvas {
+            max-width: 100%;
+        }
+        .rk4-input {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 0.375rem;
+        }
+        .rk4-input:focus {
+            outline: none;
+            border-color: #818cf8;
+            box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.2);
+        }
+        .rk4-button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 0.375rem;
+            transition: background-color 0.2s;
+        }
+        .rk4-button:hover {
+            background: #4338ca;
+        }
+        .results-table {
+            background: rgba(255,255,255,0.05);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .table-header {
+            background: rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .table-row:nth-child(even) {
+            background: rgba(255,255,255,0.02);
+        }
+        .table-row:nth-child(odd) {
+            background: rgba(255,255,255,0.05);
+        }
+        select {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 0.375rem;
+        }
+        select option {
+            background: #1e293b;
+            color: white;
+        }
+        textarea {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            border-radius: 0.375rem;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #818cf8;
+            box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.2);
+        }
+        .footer-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="w-full flex justify-center py-4 bg-transparent">
+        <div class="flex space-x-4">
+            <a href="/" class="nav-link">Portfolio</a>
+            <a href="/blog/blog.html" class="nav-link active">Blog</a>
+        </div>
+    </nav>
+
+    <div class="min-h-screen flex flex-col items-center justify-start pt-8 px-4">
+        <div class="max-w-7xl w-full">
+            <!-- Header -->
+            <header class="text-center mb-8">
+                <div class="glass-card p-6 rounded-xl shadow-lg mb-6">
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="blog-category">Mathematics & Programming</span>
+                        <span class="blog-date">2024-12-01</span>
+                    </div>
+                    <h1 class="text-4xl font-bold blog-title mb-2">Runge-Kutta 4 Method Explorer</h1>
+                    <p class="text-xl text-gray-300">Interactive Numerical Solution for Ordinary Differential Equations</p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column - Theory -->
+                <div class="lg:col-span-2 glass-card rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-semibold blog-title mb-4">Theory Behind RK4</h2>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">What is the Runge-Kutta 4 Method?</h3>
+                        <p class="text-gray-300 mb-4">
+                            The Runge-Kutta 4 (RK4) method is a widely used numerical technique for solving ordinary differential equations (ODEs). 
+                            It provides a balance between computational efficiency and accuracy, making it one of the most popular choices for numerical integration.
+                        </p>
+                        
+                        <div class="equation-container">
+                            <p class="text-gray-200 font-medium mb-2">General form of first-order ODE:</p>
+                            <p class="text-center">\[ \frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0 \]</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">RK4 Algorithm</h3>
+                        <p class="text-gray-300 mb-4">
+                            The RK4 method approximates the solution by calculating four intermediate slopes (k₁ to k₄) and combining them:
+                        </p>
+                        
+                        <div class="equation-container grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-gray-200 font-medium mb-2">Slope calculations:</p>
+                                <p>\[ k_1 = f(t_n, y_n) \]</p>
+                                <p>\[ k_2 = f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2}k_1\right) \]</p>
+                                <p>\[ k_3 = f\left(t_n + \frac{h}{2}, y_n + \frac{h}{2}k_2\right) \]</p>
+                                <p>\[ k_4 = f(t_n + h, y_n + h k_3) \]</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-200 font-medium mb-2">Next value:</p>
+                                <p>\[ y_{n+1} = y_n + \frac{h}{6}(k_1 + 2k_2 + 2k_3 + k_4) \]</p>
+                                <p class="mt-4 text-gray-200 font-medium mb-2">Where:</p>
+                                <p>\( h \) = step size</p>
+                                <p>\( t_{n+1} = t_n + h \)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">Visualization</h3>
+                        <div class="glass-card p-4 rounded-lg">
+                            <canvas id="rk4Chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">Why RK4?</h3>
+                        <p class="text-gray-300 mb-4">
+                            The RK4 method offers several advantages over simpler methods like Euler's method:
+                        </p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li><strong>Higher Accuracy:</strong> Fourth-order accuracy means errors decrease as h⁴</li>
+                            <li><strong>Stability:</strong> More stable than lower-order methods for larger step sizes</li>
+                            <li><strong>Versatility:</strong> Works well for a wide range of differential equations</li>
+                            <li><strong>Balance:</strong> Good compromise between computational cost and accuracy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column - Interactive Calculator -->
+                <div class="glass-card rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-semibold blog-title mb-4">RK4 Calculator</h2>
+                    
+                    <div class="mb-6">
+                        <label for="odeSelect" class="block text-gray-200 font-medium mb-2">Select ODE Example:</label>
+                        <select id="odeSelect" class="w-full px-4 py-2 rk4-input focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <option value="exponential">Exponential Growth: dy/dt = y</option>
+                            <option value="logistic">Logistic Growth: dy/dt = y(1 - y)</option>
+                            <option value="oscillator">Harmonic Oscillator: dy/dt = -x, dx/dt = y</option>
+                            <option value="custom">Custom ODE</option>
+                        </select>
+                    </div>
+
+                    <div id="customOdeContainer" class="hidden mb-6">
+                        <label for="customOde" class="block text-gray-200 font-medium mb-2">Custom ODE (JavaScript syntax):</label>
+                        <textarea id="customOde" class="w-full px-4 py-2 rk4-input focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="3">function(t, y) { return y; }</textarea>
+                        <p class="text-sm text-gray-400 mt-1">Use 't' for time and 'y' for the dependent variable.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label for="initialValue" class="block text-gray-200 font-medium mb-2">Initial Value (y₀):</label>
+                            <input type="number" id="initialValue" value="1" step="0.1" class="w-full px-4 py-2 rk4-input focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="stepSize" class="block text-gray-200 font-medium mb-2">Step Size (h):</label>
+                            <div class="flex items-center">
+                                <input type="range" id="stepSize" min="0.01" max="1" step="0.01" value="0.1" class="flex-1 mr-2">
+                                <span id="stepSizeValue" class="slider-value">0.1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label for="timeStart" class="block text-gray-200 font-medium mb-2">Start Time (t₀):</label>
+                            <input type="number" id="timeStart" value="0" step="0.1" class="w-full px-4 py-2 rk4-input focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label for="timeEnd" class="block text-gray-200 font-medium mb-2">End Time:</label>
+                            <input type="number" id="timeEnd" value="5" step="0.1" class="w-full px-4 py-2 rk4-input focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                    </div>
+
+                    <button id="calculateBtn" class="w-full rk4-button font-bold py-3 px-4 rounded-md transition duration-300 mb-6">
+                        Calculate RK4 Solution
+                    </button>
+
+                    <div>
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">Results</h3>
+                        <div class="results-table p-4 rounded-lg max-h-64 overflow-y-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="table-header">
+                                        <th class="text-left py-2 px-2">Step</th>
+                                        <th class="text-left py-2 px-2">Time (t)</th>
+                                        <th class="text-left py-2 px-2">y(t)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resultsTable">
+                                    <!-- Results will be inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="mt-8 glass-card rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-semibold blog-title mb-4">Applications and Extensions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">Real-World Applications</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Population dynamics modeling</li>
+                            <li>Chemical reaction kinetics</li>
+                            <li>Orbital mechanics and celestial body motion</li>
+                            <li>Electrical circuit analysis</li>
+                            <li>Fluid dynamics simulations</li>
+                            <li>Economic growth models</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-medium text-gray-200 mb-2">Advanced Topics</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Adaptive step size methods</li>
+                            <li>Higher-order Runge-Kutta methods</li>
+                            <li>Implicit Runge-Kutta methods</li>
+                            <li>Systems of differential equations</li>
+                            <li>Stiff differential equations</li>
+                            <li>Error estimation and control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Blog Link -->
+            <div class="mt-8 text-center">
+                <a href="blog.html" class="text-indigo-300 hover:text-indigo-100 text-lg">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 text-center text-gray-400 mt-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://github.com/nottherealtar" class="footer-link hover:text-white">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" class="footer-link hover:text-white">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+            <p>© 2020 TarsOnlineCafe. All rights reserved.</p>
+            <p class="text-sm mt-2">The RK4 method was developed by German mathematicians Carl Runge and Martin Kutta around 1900.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize MathJax
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+            
+            // Chart setup
+            const ctx = document.getElementById('rk4Chart').getContext('2d');
+            let rk4Chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'RK4 Solution',
+                            data: [],
+                            borderColor: 'rgb(129, 140, 248)',
+                            backgroundColor: 'rgba(129, 140, 248, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Exact Solution',
+                            data: [],
+                            borderColor: 'rgb(248, 113, 113)',
+                            backgroundColor: 'rgba(248, 113, 113, 0.1)',
+                            borderWidth: 2,
+                            borderDash: [5, 5],
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'RK4 Numerical Solution vs Exact Solution',
+                            font: {
+                                size: 16
+                            },
+                            color: '#e2e8f0'
+                        },
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#e2e8f0'
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Time (t)',
+                                color: '#e2e8f0'
+                            },
+                            ticks: {
+                                color: '#e2e8f0'
+                            },
+                            grid: {
+                                color: 'rgba(226, 232, 240, 0.1)'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'y(t)',
+                                color: '#e2e8f0'
+                            },
+                            ticks: {
+                                color: '#e2e8f0'
+                            },
+                            grid: {
+                                color: 'rgba(226, 232, 240, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // UI Event Listeners
+            document.getElementById('stepSize').addEventListener('input', function() {
+                document.getElementById('stepSizeValue').textContent = this.value;
+            });
+
+            document.getElementById('odeSelect').addEventListener('change', function() {
+                const customContainer = document.getElementById('customOdeContainer');
+                if (this.value === 'custom') {
+                    customContainer.classList.remove('hidden');
+                } else {
+                    customContainer.classList.add('hidden');
+                }
+            });
+
+            // RK4 Calculator
+            document.getElementById('calculateBtn').addEventListener('click', function() {
+                calculateRK4();
+            });
+
+            // Example ODEs
+            const exampleOdes = {
+                exponential: {
+                    func: (t, y) => y,
+                    exact: (t, y0) => y0 * Math.exp(t),
+                    initialValue: 1
+                },
+                logistic: {
+                    func: (t, y) => y * (1 - y),
+                    exact: (t, y0) => y0 / (y0 + (1 - y0) * Math.exp(-t)),
+                    initialValue: 0.5
+                },
+                oscillator: {
+                    func: (t, y) => {
+                        // For oscillator, y is actually [x, v]
+                        return [-y[1], y[0]]; // dx/dt = -v, dv/dt = x
+                    },
+                    exact: (t, y0) => {
+                        // y0 is [x0, v0]
+                        return [y0[0] * Math.cos(t) - y0[1] * Math.sin(t), 
+                                y0[0] * Math.sin(t) + y0[1] * Math.cos(t)];
+                    },
+                    initialValue: [1, 0],
+                    isSystem: true
+                }
+            };
+
+            function calculateRK4() {
+                const odeType = document.getElementById('odeSelect').value;
+                let odeFunc, exactFunc, isSystem = false;
+                let initialValue = parseFloat(document.getElementById('initialValue').value);
+                
+                if (odeType === 'custom') {
+                    try {
+                        odeFunc = eval(document.getElementById('customOde').value);
+                        exactFunc = null; // No exact solution for custom ODE
+                    } catch (e) {
+                        alert('Error in custom ODE: ' + e.message);
+                        return;
+                    }
+                } else {
+                    const example = exampleOdes[odeType];
+                    odeFunc = example.func;
+                    exactFunc = example.exact;
+                    isSystem = example.isSystem;
+                    
+                    if (isSystem && !Array.isArray(initialValue)) {
+                        initialValue = [initialValue, 0]; // Default for oscillator
+                    }
+                }
+                
+                const h = parseFloat(document.getElementById('stepSize').value);
+                const t0 = parseFloat(document.getElementById('timeStart').value);
+                const tEnd = parseFloat(document.getElementById('timeEnd').value);
+                
+                // Perform RK4 integration
+                const { tValues, yValues } = rk4(odeFunc, initialValue, t0, tEnd, h, isSystem);
+                
+                // Calculate exact solution if available
+                let exactValues = [];
+                if (exactFunc) {
+                    if (isSystem) {
+                        exactValues = tValues.map(t => exactFunc(t, initialValue)[0]); // Just plot x for oscillator
+                    } else {
+                        exactValues = tValues.map(t => exactFunc(t, initialValue));
+                    }
+                }
+                
+                // Update chart
+                updateChart(rk4Chart, tValues, isSystem ? yValues.map(y => y[0]) : yValues, exactValues);
+                
+                // Update results table
+                updateResultsTable(tValues, yValues, isSystem);
+            }
+            
+            function rk4(f, y0, t0, tEnd, h, isSystem = false) {
+                const tValues = [];
+                const yValues = [];
+                
+                let t = t0;
+                let y = isSystem ? [...y0] : y0; // Create a copy for systems
+                
+                tValues.push(t);
+                yValues.push(isSystem ? [...y] : y);
+                
+                while (t < tEnd) {
+                    if (isSystem) {
+                        // RK4 for systems of ODEs
+                        const k1 = f(t, y);
+                        const k2 = f(t + h/2, y.map((yi, i) => yi + h/2 * k1[i]));
+                        const k3 = f(t + h/2, y.map((yi, i) => yi + h/2 * k2[i]));
+                        const k4 = f(t + h, y.map((yi, i) => yi + h * k3[i]));
+                        
+                        for (let i = 0; i < y.length; i++) {
+                            y[i] += h/6 * (k1[i] + 2*k2[i] + 2*k3[i] + k4[i]);
+                        }
+                    } else {
+                        // RK4 for single ODE
+                        const k1 = f(t, y);
+                        const k2 = f(t + h/2, y + h/2 * k1);
+                        const k3 = f(t + h/2, y + h/2 * k2);
+                        const k4 = f(t + h, y + h * k3);
+                        
+                        y += h/6 * (k1 + 2*k2 + 2*k3 + k4);
+                    }
+                    
+                    t += h;
+                    tValues.push(t);
+                    yValues.push(isSystem ? [...y] : y);
+                }
+                
+                return { tValues, yValues };
+            }
+            
+            function updateChart(chart, tValues, yValues, exactValues = []) {
+                chart.data.labels = tValues;
+                chart.data.datasets[0].data = yValues;
+                
+                if (exactValues.length > 0) {
+                    chart.data.datasets[1].data = exactValues;
+                    chart.data.datasets[1].hidden = false;
+                } else {
+                    chart.data.datasets[1].hidden = true;
+                }
+                
+                chart.update();
+            }
+            
+            function updateResultsTable(tValues, yValues, isSystem) {
+                const tableBody = document.getElementById('resultsTable');
+                tableBody.innerHTML = '';
+                
+                // Limit to 100 rows for performance
+                const step = Math.max(1, Math.floor(tValues.length / 100));
+                
+                for (let i = 0; i < tValues.length; i += step) {
+                    const row = document.createElement('tr');
+                    row.className = 'table-row';
+                    
+                    const stepCell = document.createElement('td');
+                    stepCell.className = 'py-2 px-2';
+                    stepCell.textContent = i;
+                    
+                    const tCell = document.createElement('td');
+                    tCell.className = 'py-2 px-2';
+                    tCell.textContent = tValues[i].toFixed(4);
+                    
+                    const yCell = document.createElement('td');
+                    yCell.className = 'py-2 px-2';
+                    
+                    if (isSystem) {
+                        yCell.textContent = `[${yValues[i].map(y => y.toFixed(4)).join(', ')}]`;
+                    } else {
+                        yCell.textContent = yValues[i].toFixed(4);
+                    }
+                    
+                    row.appendChild(stepCell);
+                    row.appendChild(tCell);
+                    row.appendChild(yCell);
+                    tableBody.appendChild(row);
+                }
+            }
+            
+            // Initialize with default calculation
+            calculateRK4();
+        });
+
+        // Three.js Scene Setup (matching blog theme)
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Add lights
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(directionalLight);
+
+        // Add floating 3D objects
+        const geometry = new THREE.IcosahedronGeometry(1, 0);
+        const material = new THREE.MeshPhongMaterial({ 
+            color: 0x4f46e5,
+            emissive: 0x4f46e5,
+            emissiveIntensity: 0.2,
+            shininess: 50,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const objects = [];
+        const objectCount = 10;
+
+        for (let i = 0; i < objectCount; i++) {
+            const mesh = new THREE.Mesh(geometry, material.clone());
+            mesh.position.x = (Math.random() - 0.5) * 20;
+            mesh.position.y = (Math.random() - 0.5) * 20;
+            mesh.position.z = (Math.random() - 0.5) * 20;
+            mesh.rotation.x = Math.random() * Math.PI;
+            mesh.rotation.y = Math.random() * Math.PI;
+            const scale = 0.5 + Math.random() * 1.5;
+            mesh.scale.set(scale, scale, scale);
+            objects.push({
+                mesh,
+                speed: {
+                    x: (Math.random() - 0.5) * 0.01,
+                    y: (Math.random() - 0.5) * 0.01,
+                    z: (Math.random() - 0.5) * 0.01
+                },
+                rotation: {
+                    x: (Math.random() - 0.5) * 0.02,
+                    y: (Math.random() - 0.5) * 0.02
+                }
+            });
+            scene.add(mesh);
+        }
+
+        camera.position.z = 15;
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableZoom = false;
+        controls.enablePan = false;
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 0.5;
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            objects.forEach(obj => {
+                obj.mesh.position.x += obj.speed.x;
+                obj.mesh.position.y += obj.speed.y;
+                obj.mesh.position.z += obj.speed.z;
+                obj.mesh.rotation.x += obj.rotation.x;
+                obj.mesh.rotation.y += obj.rotation.y;
+                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
+                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
+                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
+            });
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+    <script src="/scripts/lazy-loading.js"></script>
+</body>
+</html>

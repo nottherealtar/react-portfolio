@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-22T22:25:06.018630+00:00",
+  "timestamp": "2026-02-22T22:29:07.828873+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 47,
   "blocked_domain_candidates": 3,
@@ -9,13 +9,13 @@
     {
       "title": "Samsung is adding Perplexity to Galaxy AI — Practical Automation Insight",
       "link": "auto/20260222-samsung-is-adding-perplexity-to-galaxy-ai-295a374b.html",
-      "score": 85.96,
+      "score": 85.9432,
       "source": "The Verge AI"
     }
   ],
   "skipped": [],
   "source_failures": [],
-  "dry_run": true,
+  "dry_run": false,
   "min_score": 34.0,
   "min_summary_length": 120,
   "min_description_length": 140,

@@ -240,28 +240,28 @@
   }
 
   function randomCountryLatLon() {
-    // List of major country lat/lon (not exhaustive, but enough for demo)
+    // Cloud data center regions — lines represent code deploying from JHB to global infra
     const countries = [
-      { lat: 51.5074, lon: -0.1278 },   // London
-      { lat: 40.7128, lon: -74.0060 },  // New York
-      { lat: 35.6895, lon: 139.6917 },  // Tokyo
-      { lat: 48.8566, lon: 2.3522 },    // Paris
-      { lat: -33.8688, lon: 151.2093 }, // Sydney
-      { lat: 55.7558, lon: 37.6173 },   // Moscow
-      { lat: 19.4326, lon: -99.1332 },  // Mexico City
-      { lat: 39.9042, lon: 116.4074 },  // Beijing
-      { lat: 1.3521, lon: 103.8198 },   // Singapore
-      { lat: 52.52, lon: 13.405 },      // Berlin
-      { lat: 37.7749, lon: -122.4194 }, // San Francisco
-      { lat: -23.5505, lon: -46.6333 }, // São Paulo
-      { lat: 28.6139, lon: 77.2090 },   // New Delhi
-      { lat: 41.9028, lon: 12.4964 },   // Rome
-      { lat: 31.2304, lon: 121.4737 },  // Shanghai
-      { lat: 34.0522, lon: -118.2437 }, // Los Angeles
-      { lat: 43.6532, lon: -79.3832 },  // Toronto
-      { lat: 6.5244, lon: 3.3792 },     // Lagos
-      { lat: 59.3293, lon: 18.0686 },   // Stockholm
-      { lat: 13.7563, lon: 100.5018 },  // Bangkok
+      { lat: 38.9072, lon: -77.0369 },  // Azure East US — Virginia
+      { lat: 41.8818, lon: -87.6298 },  // Azure North Central US — Illinois
+      { lat: 37.3382, lon: -121.8863 }, // Azure West US — San Jose
+      { lat: 45.5051, lon: -73.5540 },  // Azure Canada Central — Montreal
+      { lat: 53.3498, lon: -6.2603 },   // Azure North Europe — Dublin
+      { lat: 52.3676, lon: 4.9041 },    // Azure West Europe — Amsterdam
+      { lat: 51.5074, lon: -0.1278 },   // Azure UK South — London
+      { lat: 50.1109, lon: 8.6821 },    // Azure Germany West Central — Frankfurt
+      { lat: 48.8566, lon: 2.3522 },    // Azure France Central — Paris
+      { lat: 1.3521, lon: 103.8198 },   // Azure Southeast Asia — Singapore
+      { lat: 35.6762, lon: 139.6503 },  // Azure Japan East — Tokyo
+      { lat: -33.8688, lon: 151.2093 }, // Azure Australia East — Sydney
+      { lat: 18.9220, lon: 72.8347 },   // Azure India Central — Pune
+      { lat: 37.5665, lon: 126.9780 },  // Azure Korea Central — Seoul
+      { lat: 25.2048, lon: 55.2708 },   // Azure UAE North — Dubai
+      { lat: -23.5505, lon: -46.6333 }, // Azure Brazil South — São Paulo
+      { lat: 39.9042, lon: 116.4074 },  // Azure China North — Beijing
+      { lat: 31.2304, lon: 121.4737 },  // Azure China East — Shanghai
+      { lat: 43.6532, lon: -79.3832 },  // AWS Canada — Toronto area
+      { lat: 59.3293, lon: 18.0686 },   // AWS Stockholm (eu-north-1)
     ];
     return countries[Math.floor(Math.random() * countries.length)];
   }

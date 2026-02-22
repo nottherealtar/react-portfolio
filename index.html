@@ -763,7 +763,6 @@ Currently: Building bespoke automation solutions
                             <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" class="text-indigo-300 hover:text-indigo-100">
                                 <i class="fab fa-linkedin text-2xl"></i>
                             </a>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -1184,39 +1183,6 @@ Currently: Building bespoke automation solutions
 
           observer.observe(document.querySelector('.process-timeline'));
         })();
-
-        // --- Responsive Starry Canvas Background ---
-    (function() {
-        const card = document.getElementById('space-globe-card');
-        const canvas = document.getElementById('star-canvas');
-        if (!canvas || !card) return;
-        function resizeCanvas() {
-            canvas.width = card.clientWidth;
-            canvas.height = card.clientHeight;
-            drawStars();
-        }
-        function drawStars() {
-            const ctx = canvas.getContext('2d');
-            const w = canvas.width, h = canvas.height;
-            ctx.clearRect(0, 0, w, h);
-            for (let i = 0; i < Math.floor((w * h) / 1200); i++) {
-                const x = Math.random() * w;
-                const y = Math.random() * h;
-                const r = Math.random() * 1.2 + 0.3;
-                ctx.save();
-                ctx.globalAlpha = Math.random() * 0.5 + 0.5;
-                ctx.beginPath();
-                ctx.arc(x, y, r, 0, 2 * Math.PI);
-                ctx.fillStyle = "#e0e7ff";
-                ctx.shadowColor = "#818cf8";
-                ctx.shadowBlur = 6;
-                ctx.fill();
-                ctx.restore();
-            }
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-    })();
 
     </script>
     <!-- Vercel Speed Insights (official snippet) -->

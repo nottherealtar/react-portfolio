@@ -1061,27 +1061,27 @@ The globe will be re-added as an ambient background via `canvas-container` in Ta
     <!-- Primary case study cards -->
     <div class="case-grid">
 
-      <!-- Case Study 1 — placeholder, Josh to fill -->
+      <!-- Case Study 1: Solar Company -->
       <article class="case-card">
-        <div class="case-tag">Freshworks Integration</div>
-        <h3 class="case-outcome">Cut support ticket routing time by 80%</h3>
+        <div class="case-tag">Azure Infrastructure</div>
+        <h3 class="case-outcome">Built a complete commercial ecosystem for a solar energy company — from nothing.</h3>
         <p class="case-desc">
-          A field services company was manually triaging 200+ weekly tickets across three departments. Built a Freshservice automation layer that classifies, routes, and escalates tickets based on configurable business rules — no human triage required.
+          A growing solar company had no digital infrastructure for their commercial operations. Quotes, projects, contractor coordination, and reporting lived in scattered tools and people's heads. Designed and built a bespoke system integrated into Azure that covers the full commercial lifecycle — from lead to delivery — giving the business a single source of truth and the foundation to scale.
         </p>
         <div class="case-stack">
-          <span>Python</span><span>Freshservice API</span><span>Webhooks</span>
+          <span>Azure</span><span>Logic Apps</span><span>Python</span><span>API Integration</span>
         </div>
       </article>
 
-      <!-- Case Study 2 — placeholder, Josh to fill -->
+      <!-- Case Study 2: Insurance Company -->
       <article class="case-card">
-        <div class="case-tag">Azure Logic Apps</div>
-        <h3 class="case-outcome">Replaced a 3-person daily data sync with a single workflow</h3>
+        <div class="case-tag">Case Management Infrastructure</div>
+        <h3 class="case-outcome">Replaced Excel, emails, and OneDrive with a real case management system for an insurance company.</h3>
         <p class="case-desc">
-          A logistics business was spending 2+ hours per day manually exporting, transforming, and importing data between their CRM and operations platform. Designed and deployed an Azure Logic Apps pipeline that runs on a schedule, handling transformation and error alerting automatically.
+          An insurance company was running its entire operation through shared spreadsheets, email chains, and OneDrive folders. Cases were lost, processes were invisible, and growth was impossible. Designed and built a case management infrastructure that handles the full business workflow — intake, assignment, escalation, resolution, and reporting — in one place. The business now runs on the system.
         </p>
         <div class="case-stack">
-          <span>Azure Logic Apps</span><span>REST API</span><span>JSON Transform</span>
+          <span>Python</span><span>Custom Forms</span><span>Automation</span><span>API Integration</span>
         </div>
       </article>
 

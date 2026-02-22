@@ -3,9 +3,9 @@
 
 (function () {
   // --- DOM Setup ---
-  const container = document.querySelector('.container');
-  const canvas = container ? container.querySelector('.canvas') : null;
+  const canvas = document.querySelector('.canvas');
   if (!canvas) return;
+  const container = canvas.parentElement;
 
   // --- Scene Setup ---
   const width = canvas.width;
@@ -208,10 +208,11 @@
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
   controls.enablePan = false;
   controls.enableZoom = false;
+  controls.enableRotate = false; // ambient only — no user drag
   controls.enableDamping = true;
   controls.dampingFactor = 0.08;
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.5;
+  controls.autoRotateSpeed = 0.4;
 
   // --- Animation Loop ---
   function animate() {

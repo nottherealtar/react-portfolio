@@ -1,0 +1,63 @@
+{
+  "site_url": "https://www.tarsonlinecafe.work",
+  "default_category": "Automation Insights",
+  "allowed_domains": [
+    "azure.microsoft.com",
+    "github.blog",
+    "theverge.com",
+    "techcrunch.com"
+  ],
+  "quality_gate": {
+    "min_score": 34,
+    "min_summary_length": 120,
+    "min_description_length": 140,
+    "min_keyword_hits": 2
+  },
+  "keywords": {
+    "automation": 8,
+    "workflow": 7,
+    "integration": 8,
+    "api": 7,
+    "agent": 6,
+    "crm": 6,
+    "customer": 5,
+    "operations": 6,
+    "freshworks": 9,
+    "azure": 8,
+    "logic apps": 10,
+    "ai": 5,
+    "data": 4,
+    "security": 4,
+    "sre": 3
+  },
+  "sources": [
+    {
+      "name": "Microsoft Azure Blog",
+      "url": "https://azure.microsoft.com/en-us/blog/feed/",
+      "category": "Cloud Automation",
+      "weight": 3,
+      "default_language": "en"
+    },
+    {
+      "name": "GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "category": "Developer Platform",
+      "weight": 3,
+      "default_language": "en"
+    },
+    {
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "category": "AI & Industry",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "category": "Tech & Startups",
+      "weight": 2,
+      "default_language": "en"
+    }
+  ]
+}

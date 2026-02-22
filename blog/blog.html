@@ -4,307 +4,298 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Joshua Coetzer</title>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
-    <meta name="description" content="Tech blog by Joshua Coetzer. AI news, projects, and coding language guides.">
-    <meta name="keywords" content="Blog, AI, Coding, Flutter, Python, Javascript, C#, Projects, Joshua Coetzer">
-    
-    <!-- Structured Data for Blog -->
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": "Joshua Coetzer Tech Blog",
-        "description": "Tech blog covering AI news, projects, and coding language guides",
-        "url": "https://www.tarsonlinecafe.work/blog/blog.html",
-        "author": {
-          "@type": "Person",
-          "name": "Joshua Coetzer",
-          "url": "https://www.tarsonlinecafe.work/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "TarsOnlineCafe",
-          "url": "https://www.tarsonlinecafe.work/",
-          "logo": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png"
-        },
-        "inLanguage": "en-US"
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.tarsonlinecafe.work/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "https://www.tarsonlinecafe.work/blog/blog.html"
-          }
-        ]
-      }
-    ]
-    </script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="/67793100.png" type="image/png">
+    <meta name="description" content="Automation, integration, and AI implementation insights curated for real business outcomes.">
+    <meta name="keywords" content="automation blog, integration, AI workflows, API, Azure, Freshworks, operations">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/lazy-loading.css">
+    <link rel="stylesheet" href="/styles/themes.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+
     <style>
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: rgba(15, 23, 42, 0.95);
-            color: white;
+            background: #2d221b;
+            color: #f7efe2;
         }
-        #canvas-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+
+        .blog-page {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(201, 169, 110, 0.12), transparent 60%);
+            padding-top: 6.5rem;
+            padding-bottom: 4rem;
         }
-        .glass-card {
-            background: rgba(255,255,255,0.1);
+
+        .section-inner {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        .blog-hero {
+            background: rgba(45, 34, 27, 0.62);
+            border: 1px solid rgba(247, 239, 226, 0.12);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 22px;
+            padding: 2.4rem 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
         }
-        .blog-title {
-            color: #a5b4fc;
+
+        .hero-kicker {
+            color: #c9a96e;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.78rem;
+            margin-bottom: 0.75rem;
         }
-        .blog-category {
-            font-size: 0.85rem;
-            color: #818cf8;
-            background: rgba(49,46,129,0.2);
-            border-radius: 0.5rem;
-            padding: 0.2rem 0.7rem;
-            margin-right: 0.5rem;
+
+        .hero-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 0;
+            line-height: 1.15;
         }
-        .blog-summary {
-            color: #d1d5db;
+
+        .hero-subtitle {
+            color: #ede0cc;
+            margin-top: 1rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.65;
         }
-        .blog-date {
-            color: #a1a1aa;
-            font-size: 0.9rem;
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
         }
-        a:hover {
-            color: #818cf8;
+
+        .hero-btn {
+            border-radius: 999px;
+            padding: 0.55rem 1rem;
+            text-decoration: none;
+            font-size: 0.88rem;
+            border: 1px solid rgba(247, 239, 226, 0.3);
+            color: #f7efe2;
+            transition: all 0.2s ease;
         }
-        .nav-link {
-            padding: 0.5rem 1.25rem;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(129,140,248,0.3);
-            color: #a5b4fc;
-            transition: background 0.2s;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
+
+        .hero-btn.primary {
+            background: #c9a96e;
+            color: #1a1108;
+            border-color: #c9a96e;
         }
-        .nav-link:hover, .nav-link.active {
-            background: #3730a3;
-            color: #fff;
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            border-color: #c9a96e;
+            color: #c9a96e;
         }
-        .footer-link:hover {
-            color: #fff;
+
+        .hero-btn.primary:hover {
+            background: #f7efe2;
+            color: #1a1108;
+        }
+
+        .blog-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .blog-card {
+            background: rgba(45, 34, 27, 0.6);
+            border: 1px solid rgba(247, 239, 226, 0.12);
+            border-radius: 18px;
+            padding: 1.35rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(201, 169, 110, 0.6);
+        }
+
+        .post-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.55rem;
+            font-size: 0.78rem;
+        }
+
+        .post-pill {
+            border-radius: 999px;
+            padding: 0.2rem 0.58rem;
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            color: #c9a96e;
+            background: rgba(201, 169, 110, 0.12);
+        }
+
+        .post-date {
+            color: rgba(237, 224, 204, 0.8);
+        }
+
+        .post-title {
+            margin: 0;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            line-height: 1.25;
+        }
+
+        .post-title a {
+            color: #f7efe2;
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            color: #c9a96e;
+        }
+
+        .post-summary {
+            margin: 0.6rem 0 0.95rem;
+            color: #ede0cc;
+            line-height: 1.65;
+        }
+
+        .post-links {
+            display: flex;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .post-link {
+            color: #c9a96e;
+            text-decoration: none;
+            font-size: 0.86rem;
+        }
+
+        .post-link:hover {
+            color: #f7efe2;
+        }
+
+        .source-note {
+            color: rgba(247, 239, 226, 0.68);
+            font-size: 0.8rem;
+        }
+
+        .site-footer {
+            text-align: center;
+            margin-top: 2.2rem;
+            color: rgba(161, 134, 111, 0.75);
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
-    <div id="canvas-container"></div>
-    <!-- Navigation Bar -->
-    <nav class="w-full flex justify-center py-4 bg-transparent">
-        <div class="flex space-x-4">
-            <a href="/" class="nav-link">Portfolio</a>
-            <a href="/blog/blog.html" class="nav-link active">Blog</a>
-        </div>
+    <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+            <span class="nav-logo-icon">☕</span>
+            <span>TarsOnlineCafe</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="/">Portfolio</a></li>
+            <li><a href="/blog/blog.html" class="active">Blog</a></li>
+        </ul>
+
+        <a href="/#contact" class="nav-cta">Let's Talk →</a>
     </nav>
-    <!-- Hero Section -->
-    <section class="flex flex-col items-center justify-center pt-12 pb-8 px-4">
-        <div class="max-w-2xl w-full text-center glass-card p-8 rounded-2xl mb-10">
-            <h1 class="text-5xl font-bold mb-4 blog-title">📚</h1>
-            <h2 class="text-2xl text-indigo-300 mb-6">AI News, Projects & Coding Language Guides</h2>
-            <p class="text-lg mb-6 text-gray-200">
-                Read up about AI, discover new projects, and learn with in-depth guides on Python, Flutter, Javascript, C#, and more.
-            </p>
-            <a href="#blog-list" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition text-white font-semibold">Browse Articles</a>
+
+    <main class="blog-page">
+        <div class="section-inner">
+            <section class="blog-hero">
+                <div class="hero-kicker">Automation Journal</div>
+                <h1 class="hero-title">High-impact automation insights, published automatically.</h1>
+                <p class="hero-subtitle">
+                    Curated practical breakdowns on integration, AI, and operational systems — including fully automated insight posts with source attribution.
+                </p>
+                <div class="hero-actions">
+                    <a class="hero-btn primary" href="#blog-list">Browse Articles</a>
+                    <a class="hero-btn" href="/#contact">Start a Project</a>
+                </div>
+            </section>
+
+            <section id="blog-list" class="blog-list" aria-live="polite"></section>
+
+            <footer class="site-footer">
+                © 2020–2026 TarsOnlineCafe. Built on GitHub + Vercel.
+            </footer>
         </div>
-    </section>
-    <!-- Blog List -->
-    <div class="flex flex-col items-center justify-start px-4">
-        <div class="max-w-3xl w-full">
-            <div id="blog-list" class="space-y-8"></div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer class="py-8 px-6 text-center text-gray-400 mt-16">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="https://github.com/nottherealtar" class="footer-link hover:text-white">
-                    <i class="fab fa-github text-xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" class="footer-link hover:text-white">
-                    <i class="fab fa-linkedin text-xl"></i>
-                </a>
-            </div>
-            <p>© 2020 TarsOnlineCafe. All rights reserved.</p>
-        </div>
-    </footer>
+    </main>
+
     <script>
+        const formatDate = (value) => {
+            const parsed = new Date(value);
+            if (Number.isNaN(parsed.getTime())) return value;
+            return parsed.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+        };
+
+        const renderPostCard = (post) => {
+            const article = document.createElement('article');
+            article.className = 'blog-card';
+
+            const sourceMarkup = post.source_url
+                ? `<a class="post-link" href="${post.source_url}" target="_blank" rel="noopener noreferrer">Source ↗</a>`
+                : '';
+
+            const sourceNameMarkup = post.source_name
+                ? `<span class="source-note">${post.source_name}</span>`
+                : '';
+
+            const automatedPill = post.automated
+                ? `<span class="post-pill">Automated Insight</span>`
+                : '';
+
+            article.innerHTML = `
+                <div class="post-meta">
+                    <span class="post-pill">${post.category || 'Insights'}</span>
+                    ${automatedPill}
+                    <span class="post-date">${formatDate(post.date || '')}</span>
+                </div>
+                <h2 class="post-title"><a href="${post.link}">${post.title}</a></h2>
+                <p class="post-summary">${post.summary || ''}</p>
+                <div class="post-links">
+                    <a class="post-link" href="${post.link}">Read article →</a>
+                    ${sourceMarkup}
+                    ${sourceNameMarkup}
+                </div>
+            `;
+
+            return article;
+        };
+
         fetch('posts.json')
-            .then(res => res.json())
-            .then(posts => {
-                const container = document.getElementById('blog-list');
-                posts.forEach(post => {
-                    const el = document.createElement('div');
-                    el.className = "glass-card p-6 rounded-xl shadow-lg";
-                    el.innerHTML = `
-                        <div class="flex items-center mb-2">
-                            <span class="blog-category">${post.category}</span>
-                            <span class="blog-date">${new Date(post.date).toLocaleDateString()}</span>
-                        </div>
-                        <a href="${post.link}" class="block text-2xl font-semibold mb-2 blog-title">${post.title}</a>
-                        <div class="blog-summary mb-2">${post.summary}</div>
-                        <a href="${post.link}" class="text-indigo-400 hover:text-indigo-200 text-sm">Read More &rarr;</a>
-                    `;
-                    container.appendChild(el);
-                });
-            });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
-    <script src="/scripts/lazy-loading.js"></script>
-    <script>
-        // Three.js Scene Setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-        // Add lights
-        const ambientLight = new THREE.AmbientLight(0x404040);
-        scene.add(ambientLight);
-
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(directionalLight);
-
-        // Add floating 3D objects
-        const geometry = new THREE.IcosahedronGeometry(1, 0);
-        const material = new THREE.MeshPhongMaterial({ 
-            color: 0x4f46e5,
-            emissive: 0x4f46e5,
-            emissiveIntensity: 0.2,
-            shininess: 50,
-            transparent: true,
-            opacity: 0.8
-        });
-
-        const objects = [];
-        const objectCount = 10;
-
-        for (let i = 0; i < objectCount; i++) {
-            const mesh = new THREE.Mesh(geometry, material.clone());
-            
-            // Random position
-            mesh.position.x = (Math.random() - 0.5) * 20;
-            mesh.position.y = (Math.random() - 0.5) * 20;
-            mesh.position.z = (Math.random() - 0.5) * 20;
-            
-            // Random rotation
-            mesh.rotation.x = Math.random() * Math.PI;
-            mesh.rotation.y = Math.random() * Math.PI;
-            
-            // Random scale
-            const scale = 0.5 + Math.random() * 1.5;
-            mesh.scale.set(scale, scale, scale);
-            
-            // Store for animation
-            objects.push({
-                mesh,
-                speed: {
-                    x: (Math.random() - 0.5) * 0.01,
-                    y: (Math.random() - 0.5) * 0.01,
-                    z: (Math.random() - 0.5) * 0.01
-                },
-                rotation: {
-                    x: (Math.random() - 0.5) * 0.02,
-                    y: (Math.random() - 0.5) * 0.02
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Unable to load blog index');
                 }
-            });
-            
-            scene.add(mesh);
-        }
-
-        // Camera position
-        camera.position.z = 15;
-
-        // Add orbit controls
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableZoom = false;
-        controls.enablePan = false;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 0.5;
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            
-            // Animate objects
-            objects.forEach(obj => {
-                obj.mesh.position.x += obj.speed.x;
-                obj.mesh.position.y += obj.speed.y;
-                obj.mesh.position.z += obj.speed.z;
-                
-                obj.mesh.rotation.x += obj.rotation.x;
-                obj.mesh.rotation.y += obj.rotation.y;
-                
-                // Bounce off imaginary walls
-                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
-                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
-                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
-            });
-            
-            controls.update();
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Intersection Observer for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeIn');
+                return response.json();
+            })
+            .then((posts) => {
+                const listNode = document.getElementById('blog-list');
+                if (!Array.isArray(posts) || !posts.length) {
+                    listNode.innerHTML = '<article class="blog-card"><p class="post-summary">No posts available yet. Check back soon.</p></article>';
+                    return;
                 }
-            });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.project-card, .skill-chip').forEach(el => {
-            observer.observe(el);
-        });
+                posts
+                    .sort((a, b) => new Date(b.date) - new Date(a.date))
+                    .forEach((post) => listNode.appendChild(renderPostCard(post)));
+            })
+            .catch((error) => {
+                console.error(error);
+                const listNode = document.getElementById('blog-list');
+                listNode.innerHTML = '<article class="blog-card"><p class="post-summary">Blog feed unavailable right now. Please refresh shortly.</p></article>';
+            });
     </script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+name: Auto Blog Pipeline
+
+on:
+  schedule:
+    - cron: "17 5,17 * * *"
+  workflow_dispatch:
+    inputs:
+      max_posts:
+        description: "Max new posts to generate this run"
+        required: false
+        default: "1"
+      min_score:
+        description: "Minimum score required to publish"
+        required: false
+        default: "34"
+      min_summary_length:
+        description: "Minimum summary length"
+        required: false
+        default: "120"
+      dry_run:
+        description: "Run without writing post files/registries"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  auto-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run auto blog generator
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          MAX_POSTS="${{ github.event.inputs.max_posts }}"
+          MIN_SCORE="${{ github.event.inputs.min_score }}"
+          MIN_SUMMARY_LENGTH="${{ github.event.inputs.min_summary_length }}"
+          DRY_RUN="${{ github.event.inputs.dry_run }}"
+
+          if [ -z "${MAX_POSTS}" ]; then
+            MAX_POSTS="1"
+          fi
+
+          if [ -z "${MIN_SCORE}" ]; then
+            MIN_SCORE="34"
+          fi
+
+          if [ -z "${MIN_SUMMARY_LENGTH}" ]; then
+            MIN_SUMMARY_LENGTH="120"
+          fi
+
+          if [ "${DRY_RUN}" = "true" ]; then
+            python scripts/auto_blog_pipeline.py --max-posts "${MAX_POSTS}" --min-score "${MIN_SCORE}" --min-summary-length "${MIN_SUMMARY_LENGTH}" --dry-run
+          else
+            python scripts/auto_blog_pipeline.py --max-posts "${MAX_POSTS}" --min-score "${MIN_SCORE}" --min-summary-length "${MIN_SUMMARY_LENGTH}"
+          fi
+
+      - name: Build merged blog feed and sitemap
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: python scripts/build_blog_posts.py
+
+      - name: Commit and push changes
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add blog/automation blog/auto blog/posts.json sitemap.xml
+          git commit -m "chore(blog): automated post pipeline update"
+          git push

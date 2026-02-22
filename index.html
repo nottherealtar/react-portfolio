@@ -673,89 +673,81 @@ Currently: Building AI tools & 3D web experiences
           </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-inner glass-card rounded-xl overflow-hidden h-full">
-                            <div class="h-48 bg-indigo-900 flex items-center justify-center">
-                                <i class="fab fa-discord text-6xl text-indigo-300"></i>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2">Multifunctional Discord Bot Cogs</h3>
-                                <p class="text-gray-300 mb-4">A VPS-hosted RedBot instance extended with custom Python cogs — AI-powered commands, API integrations, and automation for Discord communities.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">Python</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">API's</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">Javascript</span>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="https://github.com/nottherealtar/TarsOnlineCogs" class="text-indigo-300 hover:text-indigo-100 text-sm">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <div class="project-inner glass-card rounded-xl overflow-hidden h-full">
-                            <div class="h-48 bg-indigo-900 flex items-center justify-center">
-                                <i class="fas fa-image text-6xl text-indigo-300"></i>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2">Tar-Copy</h3>
-                                <p class="text-gray-300 mb-4">A browser-based tool that transforms code snippets into shareable, styled images — perfect for social posts, docs, and presentations.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">HTML</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">Javascript</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">CSS</span>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="https://tar-copy.vercel.app/" class="text-indigo-300 hover:text-indigo-100 text-sm">Live Demo</a>
-                                    <a href="https://github.com/nottherealtar/tar.copy" class="text-indigo-300 hover:text-indigo-100 text-sm">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-inner glass-card rounded-xl overflow-hidden h-full">
-                            <div class="h-48 bg-indigo-900 flex items-center justify-center">
-                                <i class="fas fa-globe-americas text-6xl text-indigo-300"></i>
-                            </div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold mb-2">Interactive 3D Globe</h3>
-                                <p class="text-gray-300 mb-4">A GitHub-globe-inspired Three.js visualization rendering the Earth from latitude/longitude data — a reflection on global human connectivity.</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">Three.js</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">React.js</span>
-                                    <span class="text-xs px-2 py-1 bg-indigo-900 rounded">Javascript</span>
-                                </div>
-                                <div class="mt-4 flex space-x-3">
-                                    <a href="#" class="text-indigo-300 hover:text-indigo-100 text-sm">See Below</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Projects Section ends here -->
+        <!-- Case Studies Section -->
+        <section id="work" class="case-studies-section">
+          <div class="section-inner">
+            <h2 class="section-title">My Work</h2>
+            <p class="section-subtitle">
+              Real problems, real solutions. Details anonymized where necessary.
+            </p>
 
-        <!-- Space Globe Section -->
-        <section class="flex justify-center my-12">
-          <div class="container glass-card rounded-2xl shadow-lg p-4 flex items-center justify-center bg-gradient-to-b from-[#29404a] to-[#1a2a32]" style="width: 340px; height: 340px; box-shadow: 0 2px 12px 0 rgba(31,38,135,0.10);">
-            <canvas class="canvas" width="320" height="320" style="border-radius: 50%; background: transparent; box-shadow: none;"></canvas>
+            <!-- Primary case study cards -->
+            <div class="case-grid">
+
+              <!-- Case Study 1 -->
+              <article class="case-card">
+                <div class="case-tag">Freshworks Integration</div>
+                <h3 class="case-outcome">Cut support ticket routing time by 80%</h3>
+                <p class="case-desc">
+                  A field services company was manually triaging 200+ weekly tickets across three departments. Built a Freshservice automation layer that classifies, routes, and escalates tickets based on configurable business rules — no human triage required.
+                </p>
+                <div class="case-stack">
+                  <span>Python</span><span>Freshservice API</span><span>Webhooks</span>
+                </div>
+              </article>
+
+              <!-- Case Study 2 -->
+              <article class="case-card">
+                <div class="case-tag">Azure Logic Apps</div>
+                <h3 class="case-outcome">Replaced a 3-person daily data sync with a single workflow</h3>
+                <p class="case-desc">
+                  A logistics business was spending 2+ hours per day manually exporting, transforming, and importing data between their CRM and operations platform. Designed and deployed an Azure Logic Apps pipeline that runs on a schedule, handling transformation and error alerting automatically.
+                </p>
+                <div class="case-stack">
+                  <span>Azure Logic Apps</span><span>REST API</span><span>JSON Transform</span>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- "Also Built" secondary row -->
+            <div class="also-built">
+              <h4 class="also-built-label">Also built</h4>
+              <div class="also-grid">
+
+                <div class="also-card">
+                  <i class="fab fa-discord also-icon"></i>
+                  <div class="also-content">
+                    <div class="also-title">Discord Bot Cogs</div>
+                    <div class="also-desc">VPS-hosted RedBot with custom Python cogs — AI commands, API integrations, community automation.</div>
+                    <a href="https://github.com/nottherealtar/TarsOnlineCogs" target="_blank" rel="noopener noreferrer" class="also-link">GitHub →</a>
+                  </div>
+                </div>
+
+                <div class="also-card">
+                  <i class="fas fa-image also-icon"></i>
+                  <div class="also-content">
+                    <div class="also-title">Tar-Copy</div>
+                    <div class="also-desc">Turn code snippets into shareable, styled images — perfect for docs, social posts, and presentations.</div>
+                    <div class="also-links">
+                      <a href="https://tar-copy.vercel.app/" target="_blank" rel="noopener noreferrer" class="also-link">Live →</a>
+                      <a href="https://github.com/nottherealtar/tar.copy" target="_blank" rel="noopener noreferrer" class="also-link">GitHub →</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="also-card">
+                  <i class="fas fa-globe-americas also-icon"></i>
+                  <div class="also-content">
+                    <div class="also-title">Interactive 3D Globe</div>
+                    <div class="also-desc">GitHub-globe-inspired Three.js visualization — a reflection on global human connectivity.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
         </section>
-        <div class="flex justify-center mb-12 -mt-8">
-          <span class="text-xs text-gray-400">Interactive globe: drag to rotate</span>
-        </div>
-        <script src="/globe/index.js"></script>
 
         <!-- Contact Section -->
         <section id="contact" class="py-20 px-6 bg-indigo-900 bg-opacity-50">

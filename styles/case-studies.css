@@ -1,1 +1,185 @@
-/* Case studies section styles */
+/* Case Studies section styles */
+
+.case-studies-section {
+  padding: 6rem 1.5rem;
+  background: var(--dark-roast, #2d221b);
+  position: relative;
+}
+
+/* Primary case study grid — full width stacked cards */
+.case-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.case-card {
+  background: rgba(45, 34, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(247, 239, 226, 0.1);
+  border-radius: 18px;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card::before {
+  /* Subtle left accent bar */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--crema, #c9a96e), transparent);
+  border-radius: 18px 0 0 18px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.case-card:hover {
+  border-color: rgba(201, 169, 110, 0.2);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.case-card:hover::before {
+  opacity: 1;
+}
+
+.case-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  background: rgba(201, 169, 110, 0.15);
+  color: var(--crema, #c9a96e);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  border-radius: 9999px;
+  align-self: flex-start;
+}
+
+.case-outcome {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  color: var(--foam, #f7efe2);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.case-desc {
+  font-size: 0.95rem;
+  color: var(--steamed-milk, #ede0cc);
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.88;
+  max-width: 680px;
+}
+
+.case-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.case-stack span {
+  font-size: 0.72rem;
+  font-family: 'Courier New', monospace;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(247, 239, 226, 0.07);
+  color: var(--steamed-milk, #ede0cc);
+  border: 1px solid rgba(247, 239, 226, 0.12);
+}
+
+/* ── Also Built ──────────────────────────────────────── */
+.also-built {
+  border-top: 1px solid rgba(247, 239, 226, 0.08);
+  padding-top: 2.5rem;
+}
+
+.also-built-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--latte, #a1866f);
+  margin: 0 0 1.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.also-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .also-grid { grid-template-columns: 1fr; }
+  .case-card { padding: 1.75rem 1.5rem; }
+}
+
+.also-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: rgba(45, 34, 27, 0.4);
+  border: 1px solid rgba(247, 239, 226, 0.07);
+  border-radius: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.also-card:hover {
+  border-color: rgba(247, 239, 226, 0.15);
+}
+
+.also-icon {
+  font-size: 1.3rem;
+  color: var(--latte, #a1866f);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.also-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foam, #f7efe2);
+  margin-bottom: 0.4rem;
+}
+
+.also-desc {
+  font-size: 0.82rem;
+  color: var(--steamed-milk, #ede0cc);
+  line-height: 1.55;
+  opacity: 0.8;
+  margin-bottom: 0.6rem;
+}
+
+.also-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.also-link {
+  font-size: 0.8rem;
+  color: var(--crema, #c9a96e) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.also-link:hover {
+  color: var(--foam, #f7efe2) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-card, .also-card { transition: none; }
+}

@@ -1,1 +1,124 @@
 /* How I Work timeline styles */
+
+.process-section {
+  padding: 6rem 1.5rem;
+  background: #221810;
+}
+
+.process-inner {
+  max-width: 680px;
+}
+
+/* Timeline container */
+.process-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+}
+
+/* SVG pour line */
+.process-line {
+  position: absolute;
+  left: 27px;
+  top: 28px;
+  bottom: 28px;
+  width: 4px;
+  height: calc(100% - 56px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.process-line-path {
+  fill: none;
+  stroke: var(--crema, #c9a96e);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  /* Pour animation: starts empty, fills down on scroll trigger */
+  stroke-dasharray: 340;
+  stroke-dashoffset: 340;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.6;
+}
+
+.process-line.animate .process-line-path {
+  stroke-dashoffset: 0;
+}
+
+/* Each step */
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  padding: 0 0 3rem 0;
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.process-step.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.process-step:nth-child(2) { transition-delay: 0.3s; }
+.process-step:nth-child(3) { transition-delay: 0.6s; }
+.process-step:nth-child(4) { transition-delay: 0.9s; }
+
+/* Node circle */
+.process-node {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(45, 34, 27, 0.8);
+  border: 2px solid rgba(201, 169, 110, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.process-step.animate .process-node {
+  border-color: rgba(201, 169, 110, 0.8);
+  box-shadow: 0 0 16px rgba(201, 169, 110, 0.18);
+}
+
+.process-content {
+  padding-top: 0.75rem;
+}
+
+.process-step-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  color: var(--foam, #f7efe2);
+  margin: 0 0 0.6rem;
+}
+
+.process-step-desc {
+  font-size: 0.95rem;
+  color: var(--steamed-milk, #ede0cc);
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  .process-step { gap: 1.25rem; }
+  .process-node { width: 46px; height: 46px; font-size: 1.1rem; }
+  .process-line { left: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-step,
+  .process-line-path {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .process-line-path { stroke-dashoffset: 0; }
+}

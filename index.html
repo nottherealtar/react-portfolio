@@ -749,6 +749,62 @@ Currently: Building AI tools & 3D web experiences
           </div>
         </section>
 
+        <!-- How I Work Section -->
+        <section id="process" class="process-section">
+          <div class="section-inner process-inner">
+            <h2 class="section-title">How it works</h2>
+            <p class="section-subtitle">
+              A simple, transparent process — from first conversation to delivered solution.
+            </p>
+
+            <div class="process-timeline">
+              <!-- SVG pour line -->
+              <svg class="process-line" viewBox="0 0 4 340" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M 2 0 L 2 340" class="process-line-path"/>
+              </svg>
+
+              <!-- Step 1 -->
+              <div class="process-step" data-step="1">
+                <div class="process-node">
+                  <span aria-hidden="true">☕</span>
+                </div>
+                <div class="process-content">
+                  <h3 class="process-step-title">Discovery</h3>
+                  <p class="process-step-desc">
+                    We have a conversation about your problem — what it costs you today, what the ideal state looks like, and whether I'm the right fit. No commitment required.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="process-step" data-step="2">
+                <div class="process-node">
+                  <span aria-hidden="true">⚙️</span>
+                </div>
+                <div class="process-content">
+                  <h3 class="process-step-title">Build</h3>
+                  <p class="process-step-desc">
+                    I design, build, and test the solution with your input at each stage. Clean code, documented, and built to last beyond day one.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="process-step" data-step="3">
+                <div class="process-node">
+                  <span aria-hidden="true">🚀</span>
+                </div>
+                <div class="process-content">
+                  <h3 class="process-step-title">Deliver</h3>
+                  <p class="process-step-desc">
+                    Handed over with full documentation and a walkthrough session. Ongoing support and iterations available as your needs evolve.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="py-20 px-6 bg-indigo-900 bg-opacity-50">
             <div class="max-w-4xl mx-auto">
@@ -845,6 +901,25 @@ Currently: Building AI tools & 3D web experiences
         });
 
         // Contact form submission is now handled by contact-animations.js
+
+        // How I Work timeline animation
+        (function () {
+          const line = document.querySelector('.process-line');
+          const steps = document.querySelectorAll('.process-step');
+          if (!line || !steps.length) return;
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                line.classList.add('animate');
+                steps.forEach(step => step.classList.add('animate'));
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.2 });
+
+          observer.observe(document.querySelector('.process-timeline'));
+        })();
 
         // --- Responsive Starry Canvas Background ---
     (function() {

@@ -1,322 +1,119 @@
 /**
- * Coffee-themed Contact Form Animations
- * Handles success animations, form reset, and error handling
+ * Contact form — Web3Forms submission + animated feedback states
  */
+(function () {
+  const form      = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('cf-submit');
+  const successEl = document.getElementById('contact-success');
+  const resetBtn  = document.getElementById('cf-reset');
 
-class ContactAnimations {
-    constructor() {
-        this.form = document.getElementById('contact-form');
-        this.submitButton = null;
-        this.originalSubmitText = '';
-        this.animationTimeout = null;
-        
-        this.init();
-    }
+  if (!form || !submitBtn || !successEl) return;
 
-    init() {
-        if (!this.form) {
-            console.warn('Contact form not found');
-            return;
-        }
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        this.submitButton = this.form.querySelector('button[type="submit"]');
-        if (this.submitButton) {
-            this.originalSubmitText = this.submitButton.textContent;
-            this.submitButton.classList.add('submit-button');
-        }
+  // ── Validation ────────────────────────────────────────
+  function validateField(id, errorId, test, msg) {
+    const input = document.getElementById(id);
+    const error = document.getElementById(errorId);
+    if (!input || !error) return true;
+    const ok = test(input.value);
+    error.textContent = ok ? '' : msg;
+    input.classList.toggle('field-invalid', !ok);
+    return ok;
+  }
 
-        this.createAnimationElements();
-        this.bindEvents();
-    }
+  function validateAll() {
+    const n = validateField('cf-name',    'cf-name-error',    v => v.trim().length > 0,         'Name is required.');
+    const e = validateField('cf-email',   'cf-email-error',   v => EMAIL_RE.test(v.trim()),     'Enter a valid email address.');
+    const t = validateField('cf-type',    'cf-type-error',    v => v !== '',                    'Please select a project type.');
+    const m = validateField('cf-message', 'cf-message-error', v => v.trim().length > 10,        'Tell me a bit more (at least 10 characters).');
+    return n && e && t && m;
+  }
 
-    createAnimationElements() {
-        // Create success animation overlay
-        const overlay = document.createElement('div');
-        overlay.className = 'success-overlay';
-        overlay.id = 'success-overlay';
-        document.body.appendChild(overlay);
+  // Clear per-field error on input
+  ['cf-name','cf-email','cf-type','cf-message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', () => {
+      const errEl = document.getElementById(id + '-error');
+      if (errEl) errEl.textContent = '';
+      el.classList.remove('field-invalid');
+    });
+  });
 
-        // Create success animation container
-        const animationContainer = document.createElement('div');
-        animationContainer.className = 'contact-success-animation';
-        animationContainer.id = 'success-animation';
-        
-        animationContainer.innerHTML = `
-            <div class="coffee-cup-container">
-                <div class="coffee-cup">
-                    <div class="coffee-liquid"></div>
-                </div>
-                <div class="steam-container">
-                    <div class="steam"></div>
-                    <div class="steam"></div>
-                    <div class="steam"></div>
-                </div>
-            </div>
-            <div class="success-message">
-                Message sent successfully!<br>
-                <small>Thank you for reaching out!</small>
-            </div>
-        `;
-        
-        document.body.appendChild(animationContainer);
+  // ── Button states ─────────────────────────────────────
+  function setBtn(state) {
+    const states = {
+      default: { text: 'Send it ☕',   disabled: false, cls: '' },
+      loading: { text: 'Brewing…',     disabled: true,  cls: 'btn-loading' },
+      error:   { text: 'Try again',    disabled: false, cls: 'btn-error' },
+    };
+    const s = states[state] || states.default;
+    submitBtn.textContent = s.text;
+    submitBtn.disabled    = s.disabled;
+    submitBtn.className   = 'contact-submit ' + s.cls;
+  }
 
-        // Create error notification container
-        const errorContainer = document.createElement('div');
-        errorContainer.className = 'contact-error-animation';
-        errorContainer.id = 'error-animation';
-        document.body.appendChild(errorContainer);
-    }
+  // ── Show success state ────────────────────────────────
+  function showSuccess() {
+    form.style.opacity = '0';
+    form.style.transform = 'translateY(-8px)';
+    form.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+    setTimeout(() => {
+      form.hidden = true;
+      form.style.opacity = '';
+      form.style.transform = '';
+      successEl.hidden = false;
+      successEl.classList.add('success-visible');
+    }, 350);
+  }
 
-    bindEvents() {
-        // Override the existing form submission
-        this.form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            this.handleFormSubmission(e);
-        });
+  // ── Reset to form state ───────────────────────────────
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      successEl.hidden = true;
+      successEl.classList.remove('success-visible');
+      form.hidden = false;
+      form.reset();
+      setBtn('default');
+    });
+  }
 
-        // Close success animation on overlay click
-        const overlay = document.getElementById('success-overlay');
-        if (overlay) {
-            overlay.addEventListener('click', () => {
-                this.hideSuccessAnimation();
-            });
-        }
+  // ── Shake animation on error ──────────────────────────
+  function shakeBtn() {
+    submitBtn.classList.add('btn-shake');
+    submitBtn.addEventListener('animationend', () => {
+      submitBtn.classList.remove('btn-shake');
+    }, { once: true });
+  }
 
-        // Close error animation after timeout
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.contact-error-animation')) {
-                this.hideErrorAnimation();
-            }
-        });
-    }
+  // ── Submit ────────────────────────────────────────────
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!validateAll()) { shakeBtn(); return; }
 
-    async handleFormSubmission(e) {
-        try {
-            const formData = this.getFormData();
-            
-            if (!this.validateForm(formData)) {
-                return;
-            }
+    setBtn('loading');
 
-            this.showSubmittingState();
-
-            // Add timeout for fetch request
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-
-            try {
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData),
-                    signal: controller.signal
-                });
-
-                clearTimeout(timeoutId);
-
-                if (response.ok) {
-                    this.showSuccessAnimation();
-                } else {
-                    const errorData = await response.json().catch(() => ({}));
-                    this.showErrorAnimation(
-                        'Failed to send message',
-                        errorData.error || 'Please try again later.'
-                    );
-                }
-            } catch (error) {
-                clearTimeout(timeoutId);
-                
-                if (error.name === 'AbortError') {
-                    this.showErrorAnimation(
-                        'Request Timeout',
-                        'The request took too long. Please try again.'
-                    );
-                } else {
-                    this.showErrorAnimation(
-                        'Network Error',
-                        'Please check your connection and try again.'
-                    );
-                }
-                
-                // Report error to performance monitor
-                if (window.performanceMonitor) {
-                    window.performanceMonitor.handleError('Contact Form Submission Error', error);
-                }
-            } finally {
-                this.hideSubmittingState();
-            }
-        } catch (error) {
-            console.error('[ContactAnimations] Form submission error:', error);
-            if (window.performanceMonitor) {
-                window.performanceMonitor.handleError('Contact Form Error', error);
-            }
-            
-            // Fallback: basic success message
-            alert('Message sent successfully! (Fallback mode)');
-            this.form.reset();
-        }
-    }
-
-    getFormData() {
-        return {
-            name: document.getElementById('name')?.value || '',
-            email: document.getElementById('email')?.value || '',
-            subject: document.getElementById('subject')?.value || '',
-            message: document.getElementById('message')?.value || '',
-            token: document.getElementById('zapier-token')?.value || ''
-        };
-    }
-
-    validateForm(data) {
-        const errors = [];
-
-        if (!data.name.trim()) errors.push('Name is required');
-        if (!data.email.trim()) errors.push('Email is required');
-        if (!data.message.trim()) errors.push('Message is required');
-        
-        // Basic email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (data.email && !emailRegex.test(data.email)) {
-            errors.push('Please enter a valid email address');
-        }
-
-        if (errors.length > 0) {
-            this.showErrorAnimation('Validation Error', errors.join(', '));
-            return false;
-        }
-
-        return true;
-    }
-
-    showSubmittingState() {
-        this.form.classList.add('contact-form-submitting');
-        if (this.submitButton) {
-            this.submitButton.textContent = 'Sending...';
-        }
-    }
-
-    hideSubmittingState() {
-        this.form.classList.remove('contact-form-submitting');
-        if (this.submitButton) {
-            this.submitButton.textContent = this.originalSubmitText;
-        }
-    }
-
-    showSuccessAnimation() {
-        const overlay = document.getElementById('success-overlay');
-        const animation = document.getElementById('success-animation');
-        
-        if (overlay && animation) {
-            overlay.classList.add('active');
-            animation.classList.add('active');
-            
-            // Auto-hide after animation completes (4 seconds total)
-            this.animationTimeout = setTimeout(() => {
-                this.hideSuccessAnimation();
-                this.resetForm();
-            }, 4000);
-        }
-    }
-
-    hideSuccessAnimation() {
-        const overlay = document.getElementById('success-overlay');
-        const animation = document.getElementById('success-animation');
-        
-        if (overlay && animation) {
-            overlay.classList.remove('active');
-            animation.classList.remove('active');
-        }
-
-        if (this.animationTimeout) {
-            clearTimeout(this.animationTimeout);
-            this.animationTimeout = null;
-        }
-    }
-
-    showErrorAnimation(title, message) {
-        const errorContainer = document.getElementById('error-animation');
-        
-        if (errorContainer) {
-            errorContainer.innerHTML = `
-                <div class="error-title">${title}</div>
-                <div class="error-message">${message}</div>
-            `;
-            
-            errorContainer.classList.add('active');
-            
-            // Auto-hide after 5 seconds
-            setTimeout(() => {
-                this.hideErrorAnimation();
-            }, 5000);
-        }
-    }
-
-    hideErrorAnimation() {
-        const errorContainer = document.getElementById('error-animation');
-        if (errorContainer) {
-            errorContainer.classList.remove('active');
-        }
-    }
-
-    resetForm() {
-        if (this.form) {
-            this.form.reset();
-            
-            // Add a subtle animation to indicate form reset
-            this.form.style.opacity = '0.5';
-            setTimeout(() => {
-                this.form.style.opacity = '1';
-            }, 200);
-        }
-    }
-
-    // Public method to manually trigger success animation (for testing)
-    triggerSuccessAnimation() {
-        this.showSuccessAnimation();
-        setTimeout(() => {
-            this.resetForm();
-        }, 4000);
-    }
-
-    // Public method to manually trigger error animation (for testing)
-    triggerErrorAnimation(title = 'Test Error', message = 'This is a test error message') {
-        this.showErrorAnimation(title, message);
-    }
-}
-
-// Initialize when DOM is loaded with error handling
-document.addEventListener('DOMContentLoaded', () => {
     try {
-        const initContactAnimations = () => {
-            window.contactAnimations = new ContactAnimations();
-        };
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form),
+      });
 
-        // Wrap with error boundary if available
-        if (window.errorBoundaryManager) {
-            const wrappedInit = window.errorBoundaryManager.wrapComponent('contact', initContactAnimations);
-            wrappedInit();
+      if (res.ok) {
+        const json = await res.json();
+        if (json.success) {
+          showSuccess();
         } else {
-            initContactAnimations();
+          setBtn('error');
+          shakeBtn();
         }
-    } catch (error) {
-        console.error('[ContactAnimations] Initialization failed:', error);
-        if (window.performanceMonitor) {
-            window.performanceMonitor.handleError('Contact Animations Init Error', error);
-        }
-        
-        // Fallback: basic form handling
-        const form = document.getElementById('contact-form');
-        if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Message sent! (Fallback mode)');
-                form.reset();
-            });
-        }
+      } else {
+        setBtn('error');
+        shakeBtn();
+      }
+    } catch {
+      setBtn('error');
+      shakeBtn();
     }
-});
-
-// Export for potential module usage
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = ContactAnimations;
-}
+  });
+})();

@@ -964,54 +964,93 @@ Currently: Building AI tools & 3D web experiences
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-6 bg-indigo-900 bg-opacity-50">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Get In Touch</h2>
-                <div class="glass-card p-8 rounded-xl">
-                    <form id="contact-form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block mb-2">Name</label>
-                                <input type="text" id="name" class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                            </div>
-                            <div>
-                                <label for="email" class="block mb-2">Email</label>
-                                <input type="email" id="email" class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label for="subject" class="block mb-2">Subject</label>
-                            <input type="text" id="subject" class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block mb-2">Message</label>
-                            <textarea id="message" rows="5" class="w-full bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
-                        </div>
-                        <input type="hidden" id="zapier-token" name="zapier-token" value="extra-hot-spicy-chicken-grass">
-                        <button type="submit" class="w-full py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Send Message</button>
-                    </form>
-                    
-                    <!-- Buy Me a Coffee Button -->
-                    <div class="mt-8 text-center">
-                        <p class="text-sm text-gray-400 mb-4">Enjoyed my work? Support me with a coffee!</p>
-                        <a href="https://buymeacoffee.com/nottherealtar" 
-                           class="coffee-button" 
-                           target="_blank" 
-                           rel="noopener noreferrer"
-                           aria-label="Support me by buying me a coffee">
-                            <svg class="coffee-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Coffee cup body -->
-                                <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
-                                <!-- Steam lines -->
-                                <path d="M6 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
-                                <path d="M9 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
-                                <path d="M12 2c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1z"/>
-                            </svg>
-                            <span class="coffee-button-text">Buy me a coffee</span>
-                        </a>
-                    </div>
+        <section id="contact" class="contact-section">
+          <div class="section-inner contact-inner">
+            <h2 class="section-title">Let's work together</h2>
+            <p class="section-subtitle">
+              Tell me what you're trying to solve. I'll come back to you within 24 hours.
+            </p>
+
+            <div class="contact-card glass-card">
+
+              <!-- Form state -->
+              <form id="contact-form" class="contact-form" novalidate>
+                <input type="hidden" name="access_key" value="ccd49440-ad1f-4a6f-917a-703beeed33ff">
+                <input type="hidden" name="redirect" value="false">
+                <input type="hidden" name="subject" value="New project inquiry from TarsOnlineCafe">
+
+                <div class="contact-row">
+                  <div class="contact-field">
+                    <label for="cf-name">Name <span class="required" aria-hidden="true">*</span></label>
+                    <input type="text" id="cf-name" name="name" required autocomplete="name" placeholder="Your name">
+                    <span class="field-error" id="cf-name-error" role="alert"></span>
+                  </div>
+                  <div class="contact-field">
+                    <label for="cf-company">Company <span class="optional">(optional)</span></label>
+                    <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="Your company">
+                  </div>
                 </div>
+
+                <div class="contact-field">
+                  <label for="cf-email">Email <span class="required" aria-hidden="true">*</span></label>
+                  <input type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@company.com">
+                  <span class="field-error" id="cf-email-error" role="alert"></span>
+                </div>
+
+                <div class="contact-field">
+                  <label for="cf-type">Type of project <span class="required" aria-hidden="true">*</span></label>
+                  <select id="cf-type" name="project_type" required>
+                    <option value="" disabled selected>Select a category…</option>
+                    <option value="automation">Process Automation</option>
+                    <option value="azure">Azure Logic Apps</option>
+                    <option value="freshworks">Freshworks Integration</option>
+                    <option value="api">API / Systems Integration</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="field-error" id="cf-type-error" role="alert"></span>
+                </div>
+
+                <div class="contact-field">
+                  <label for="cf-message">Tell me about it <span class="required" aria-hidden="true">*</span></label>
+                  <textarea id="cf-message" name="message" rows="5" required placeholder="Describe the problem you're trying to solve…"></textarea>
+                  <span class="field-error" id="cf-message-error" role="alert"></span>
+                </div>
+
+                <button type="submit" id="cf-submit" class="contact-submit">
+                  Send it ☕
+                </button>
+              </form>
+
+              <!-- Success state (hidden until submission succeeds) -->
+              <div id="contact-success" class="contact-success" hidden aria-live="polite">
+                <div class="success-cup" aria-hidden="true">
+                  <span class="success-cup-icon">☕</span>
+                  <div class="success-steam">
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+                <h3 class="success-title">Got it!</h3>
+                <p class="success-msg">I'll be back within 24 hours.</p>
+                <button type="button" id="cf-reset" class="contact-reset">Send another message</button>
+              </div>
+
             </div>
+
+            <!-- Buy Me a Coffee -->
+            <div class="coffee-support">
+              <p class="coffee-support-text">Enjoyed my work? Support me with a coffee!</p>
+              <a href="https://buymeacoffee.com/nottherealtar"
+                 class="coffee-button"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Support me by buying me a coffee">
+                <svg class="coffee-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M18.5 7h-1V6c0-1.1-.9-2-2-2h-11c-1.1 0-2 .9-2 2v8c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-1h1c1.38 0 2.5-1.12 2.5-2.5S19.88 7 18.5 7zM16 14c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V6h10v8zm2.5-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5z"/>
+                </svg>
+                <span class="coffee-button-text">Buy me a coffee</span>
+              </a>
+            </div>
+          </div>
         </section>
 
         <!-- Footer -->

@@ -19,6 +19,16 @@
   --theme-footer-bg: #2d221b;
   --theme-footer-text: #a1866f;
   
+  /* Extended palette for overhaul */
+  --espresso:      #1a1108;
+  --dark-roast:    #2d221b;
+  --latte:         #a1866f;
+  --crema:         #c9a96e;
+  --foam:          #f7efe2;
+  --steamed-milk:  #ede0cc;
+  --glass-bg:      rgba(45, 34, 27, 0.55);
+  --glass-border:  rgba(247, 239, 226, 0.12);
+
   /* Animation colors for light theme */
   --theme-leaf-color-1: #8b4513;
   --theme-leaf-color-2: #a0522d;

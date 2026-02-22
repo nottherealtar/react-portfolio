@@ -1,1 +1,204 @@
 /* Sticky navigation styles */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.site-nav.scrolled {
+  background: rgba(26, 17, 8, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(247, 239, 226, 0.08);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  color: var(--foam) !important;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+.nav-logo-icon {
+  font-size: 1.3rem;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgba(247, 239, 226, 0.75) !important;
+  text-decoration: none !important;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--crema, #c9a96e);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--foam) !important;
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* CTA button */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--crema, #c9a96e);
+  color: var(--espresso, #1a1108) !important;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  background: var(--foam, #f7efe2);
+  color: var(--espresso, #1a1108) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(201, 169, 110, 0.3);
+}
+
+/* Hamburger (mobile) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--foam, #f7efe2);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile overlay menu */
+.nav-mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(26, 17, 8, 0.97);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.nav-mobile-overlay.open {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-mobile-overlay a {
+  color: var(--foam) !important;
+  text-decoration: none !important;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.nav-mobile-overlay a:hover {
+  color: var(--crema) !important;
+}
+
+.nav-mobile-cta {
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: var(--crema);
+  color: var(--espresso) !important;
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600;
+  font-size: 1rem !important;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav {
+    padding: 0 1rem;
+  }
+}

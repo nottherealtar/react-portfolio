@@ -169,7 +169,7 @@ a, .hover\:text-indigo-100:hover, .hover\:text-white:hover {
 /* Theme toggle button positioning and styling */
 .theme-toggle {
   position: fixed;
-  top: 20px;
+  top: 76px; /* below the 64px nav */
   right: 20px;
   z-index: 1000;
   width: 60px;

@@ -1,16 +1,16 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-24T06:12:25.815215+00:00",
+  "timestamp": "2026-02-24T18:09:47.361671+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 45,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox — Practical Automation Insight",
-      "link": "auto/20260224-a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amo-a54c079d.html",
-      "score": 76.6867,
-      "source": "TechCrunch"
+      "title": "Multi-agent workflows often fail. Here’s how to engineer ones that don’t. — Practical Automation Insight",
+      "link": "auto/20260224-multi-agent-workflows-often-fail-here-s-how-to-engineer-ones-d37e2018.html",
+      "score": 90.4592,
+      "source": "GitHub Blog"
     }
   ],
   "skipped": [],

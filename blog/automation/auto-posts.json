@@ -1,5 +1,16 @@
 [
   {
+    "title": "Multi-agent workflows often fail. Here’s how to engineer ones that don’t. — Practical Automation Insight",
+    "date": "2026-02-24",
+    "category": "Developer Platform",
+    "summary": "Most multi-agent workflow failures come down to missing structure, not model capability. Learn the three engineering patterns that make agent systems reliable.",
+    "link": "auto/20260224-multi-agent-workflows-often-fail-here-s-how-to-engineer-ones-d37e2018.html",
+    "source_url": "https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en"
+  },
+  {
     "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox — Practical Automation Insight",
     "date": "2026-02-24",
     "category": "Tech & Startups",

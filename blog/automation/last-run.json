@@ -1,15 +1,15 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-23T18:10:24.466720+00:00",
+  "timestamp": "2026-02-24T06:12:25.815215+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 45,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How AI agents could destroy the economy — Practical Automation Insight",
-      "link": "auto/20260223-how-ai-agents-could-destroy-the-economy-1fea5197.html",
-      "score": 77.1402,
+      "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox — Practical Automation Insight",
+      "link": "auto/20260224-a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amo-a54c079d.html",
+      "score": 76.6867,
       "source": "TechCrunch"
     }
   ],

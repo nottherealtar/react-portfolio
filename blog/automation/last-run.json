@@ -1,16 +1,16 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-24T18:09:47.361671+00:00",
+  "timestamp": "2026-02-25T06:15:07.442695+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 45,
+  "unseen_candidates": 46,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Multi-agent workflows often fail. Here’s how to engineer ones that don’t. — Practical Automation Insight",
-      "link": "auto/20260224-multi-agent-workflows-often-fail-here-s-how-to-engineer-ones-d37e2018.html",
-      "score": 90.4592,
-      "source": "GitHub Blog"
+      "title": "CarGurus data breach affects 12.5 million accounts — Practical Automation Insight",
+      "link": "auto/20260224-cargurus-data-breach-affects-12-5-million-accounts-3f145265.html",
+      "score": 78.8024,
+      "source": "TechCrunch"
     }
   ],
   "skipped": [],

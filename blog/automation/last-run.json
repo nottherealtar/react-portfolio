@@ -1,15 +1,15 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-26T06:10:46.398292+00:00",
+  "timestamp": "2026-02-26T18:04:27.235022+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 45,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Anthropic acquires computer-use AI startup Vercept after Meta poached one of its founders — Practical Automation Insight",
-      "link": "auto/20260225-anthropic-acquires-computer-use-ai-startup-vercept-after-met-b0107ba7.html",
-      "score": 76.4106,
+      "title": "Trace raises $3M to solve the AI agent adoption problem in enterprise — Practical Automation Insight",
+      "link": "auto/20260226-trace-raises-3m-to-solve-the-ai-agent-adoption-problem-in-en-1d970b47.html",
+      "score": 83.9814,
       "source": "TechCrunch"
     }
   ],

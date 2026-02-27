@@ -1,5 +1,16 @@
 [
   {
+    "title": "What’s new with GitHub Copilot coding agent — Practical Automation Insight",
+    "date": "2026-02-26",
+    "category": "Developer Platform",
+    "summary": "GitHub Copilot coding agent now includes a model picker, self-review, built-in security scanning, custom agents, and CLI handoff. Here's what's new and how to use it.",
+    "link": "auto/20260226-what-s-new-with-github-copilot-coding-agent-99139466.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en"
+  },
+  {
     "title": "Trace raises $3M to solve the AI agent adoption problem in enterprise — Practical Automation Insight",
     "date": "2026-02-26",
     "category": "Tech & Startups",

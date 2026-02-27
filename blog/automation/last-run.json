@@ -1,16 +1,16 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-26T18:04:27.235022+00:00",
+  "timestamp": "2026-02-27T06:05:48.038508+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 45,
-  "blocked_domain_candidates": 3,
+  "unseen_candidates": 44,
+  "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Trace raises $3M to solve the AI agent adoption problem in enterprise — Practical Automation Insight",
-      "link": "auto/20260226-trace-raises-3m-to-solve-the-ai-agent-adoption-problem-in-en-1d970b47.html",
-      "score": 83.9814,
-      "source": "TechCrunch"
+      "title": "What’s new with GitHub Copilot coding agent — Practical Automation Insight",
+      "link": "auto/20260226-what-s-new-with-github-copilot-coding-agent-99139466.html",
+      "score": 80.6718,
+      "source": "GitHub Blog"
     }
   ],
   "skipped": [],

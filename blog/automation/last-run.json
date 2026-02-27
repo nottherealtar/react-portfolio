@@ -1,16 +1,16 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-27T06:05:48.038508+00:00",
+  "timestamp": "2026-02-27T17:52:48.392928+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 44,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What’s new with GitHub Copilot coding agent — Practical Automation Insight",
-      "link": "auto/20260226-what-s-new-with-github-copilot-coding-agent-99139466.html",
-      "score": 80.6718,
-      "source": "GitHub Blog"
+      "title": "CISA replaces acting director after a bumbling year on the job — Practical Automation Insight",
+      "link": "auto/20260227-cisa-replaces-acting-director-after-a-bumbling-year-on-the-j-6d5d1418.html",
+      "score": 75.5176,
+      "source": "TechCrunch"
     }
   ],
   "skipped": [],

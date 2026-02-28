@@ -1,19 +1,17 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-28T05:48:35.869572+00:00",
+  "timestamp": "2026-02-28T17:33:56.708833+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 43,
+  "unseen_candidates": 42,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
-  "generated_posts": [
+  "generated_posts": [],
+  "skipped": [
     {
-      "title": "Anthropic vs. the Pentagon: What’s actually at stake? — Practical Automation Insight",
-      "link": "auto/20260227-anthropic-vs-the-pentagon-what-s-actually-at-stake-3ab42400.html",
-      "score": 73.3436,
-      "source": "TechCrunch"
+      "title": "Defense secretary Pete Hegseth designates Anthropic a supply chain risk",
+      "reason": "keyword-signal-too-low"
     }
   ],
-  "skipped": [],
   "source_failures": [],
   "dry_run": false,
   "min_score": 34.0,

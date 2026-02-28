@@ -1,15 +1,15 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-27T17:52:48.392928+00:00",
+  "timestamp": "2026-02-28T05:48:35.869572+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 44,
+  "unseen_candidates": 43,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "CISA replaces acting director after a bumbling year on the job — Practical Automation Insight",
-      "link": "auto/20260227-cisa-replaces-acting-director-after-a-bumbling-year-on-the-j-6d5d1418.html",
-      "score": 75.5176,
+      "title": "Anthropic vs. the Pentagon: What’s actually at stake? — Practical Automation Insight",
+      "link": "auto/20260227-anthropic-vs-the-pentagon-what-s-actually-at-stake-3ab42400.html",
+      "score": 73.3436,
       "source": "TechCrunch"
     }
   ],

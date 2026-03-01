@@ -1,14 +1,14 @@
 {
   "status": "ok",
-  "timestamp": "2026-02-28T17:33:56.708833+00:00",
+  "timestamp": "2026-03-01T06:02:57.189663+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 42,
-  "blocked_domain_candidates": 4,
+  "unseen_candidates": 43,
+  "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [],
   "skipped": [
     {
-      "title": "Defense secretary Pete Hegseth designates Anthropic a supply chain risk",
+      "title": "The trap Anthropic built for itself",
       "reason": "keyword-signal-too-low"
     }
   ],

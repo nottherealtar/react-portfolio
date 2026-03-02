@@ -1,17 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-03-02T06:05:57.344524+00:00",
+  "timestamp": "2026-03-02T17:58:07.375149+00:00",
   "fetched_candidates": 50,
   "unseen_candidates": 44,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
-  "generated_posts": [],
-  "skipped": [
+  "generated_posts": [
     {
-      "title": "A robot arm with puppy dog eyes is just one of Lenovo&#8217;s new desktop AI concepts",
-      "reason": "keyword-signal-too-low"
+      "title": "Hacktivists claim to have hacked Homeland Security to release ICE contract data — Practical Automation Insight",
+      "link": "auto/20260302-hacktivists-claim-to-have-hacked-homeland-security-to-releas-dc6966de.html",
+      "score": 79.5575,
+      "source": "TechCrunch"
     }
   ],
+  "skipped": [],
   "source_failures": [],
   "dry_run": false,
   "min_score": 34.0,

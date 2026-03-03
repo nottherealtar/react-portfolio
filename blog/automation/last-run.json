@@ -1,15 +1,15 @@
 {
   "status": "ok",
-  "timestamp": "2026-03-02T17:58:07.375149+00:00",
+  "timestamp": "2026-03-03T06:03:25.991013+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 44,
+  "unseen_candidates": 43,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Hacktivists claim to have hacked Homeland Security to release ICE contract data — Practical Automation Insight",
-      "link": "auto/20260302-hacktivists-claim-to-have-hacked-homeland-security-to-releas-dc6966de.html",
-      "score": 79.5575,
+      "title": "No one has a good plan for how AI companies should work with the government — Practical Automation Insight",
+      "link": "auto/20260302-no-one-has-a-good-plan-for-how-ai-companies-should-work-with-8ffee99e.html",
+      "score": 74.2322,
       "source": "TechCrunch"
     }
   ],

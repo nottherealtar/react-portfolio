@@ -1,6 +1,8 @@
 import argparse
 import hashlib
 import html
+import requests
+from bs4 import BeautifulSoup
 import json
 import re
 import sys
@@ -103,6 +105,61 @@ def parse_date(value: str | None) -> datetime:
         return datetime.now(timezone.utc)
 
 
+def extract_main_content_from_url(url: str) -> str:
+    """Fetches the article and extracts main readable content, including images."""
+    try:
+        resp = requests.get(url, timeout=10)
+        if resp.status_code != 200:
+            return ""
+        soup = BeautifulSoup(resp.text, "html.parser")
+        # Try common article containers
+        for selector in ["article", "main", "#content", ".post", ".entry-content"]:
+            node = soup.select_one(selector)
+            if node:
+                # Extract text and images
+                content_parts = []
+                for child in node.descendants:
+                    if child.name == "img" and child.get("src"):
+                        alt = child.get("alt", "")
+                        img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
+                        content_parts.append(img_html)
+                    elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
+                        text = child.get_text(strip=True)
+                        if text:
+                            content_parts.append(text)
+                # Join text and images in order
+                return "\n\n".join(content_parts)
+        # Fallback: get largest <div> by text length
+        divs = soup.find_all("div")
+        if divs:
+            largest = max(divs, key=lambda d: len(d.get_text(strip=True)), default=None)
+            if largest:
+                content_parts = []
+                for child in largest.descendants:
+                    if child.name == "img" and child.get("src"):
+                        alt = child.get("alt", "")
+                        img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
+                        content_parts.append(img_html)
+                    elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
+                        text = child.get_text(strip=True)
+                        if text:
+                            content_parts.append(text)
+                return "\n\n".join(content_parts)
+        # Fallback: whole page text and images
+        content_parts = []
+        for child in soup.descendants:
+            if child.name == "img" and child.get("src"):
+                alt = child.get("alt", "")
+                img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
+                content_parts.append(img_html)
+            elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
+                text = child.get_text(strip=True)
+                if text:
+                    content_parts.append(text)
+        return "\n\n".join(content_parts)
+    except Exception:
+        return ""
+
 def parse_feed(xml_blob: bytes, source: Dict[str, Any]) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     try:
@@ -117,6 +174,11 @@ def parse_feed(xml_blob: bytes, source: Dict[str, Any]) -> List[Dict[str, Any]]:
             title = (item.findtext("title") or "Untitled").strip()
             link = (item.findtext("link") or "").strip()
             description = item.findtext("description") or item.findtext("content:encoded", default="")
+            link = (item.findtext("link") or "").strip()
+            # Try to fetch full article content
+            full_content = extract_main_content_from_url(link) if link else ""
+            if full_content and len(full_content) > 200:
+                description = full_content
             pub_date = item.findtext("pubDate") or item.findtext("dc:date")
             if not link:
                 continue
@@ -147,6 +209,14 @@ def parse_feed(xml_blob: bytes, source: Dict[str, Any]) -> List[Dict[str, Any]]:
             link = (link_node.attrib.get("href") or "").strip()
         summary = entry.findtext("atom:summary", default="", namespaces=ns)
         content = entry.findtext("atom:content", default="", namespaces=ns)
+        link_node = entry.find("atom:link", ns)
+        link = ""
+        if link_node is not None:
+            link = (link_node.attrib.get("href") or "").strip()
+        # Try to fetch full article content
+        full_content = extract_main_content_from_url(link) if link else ""
+        if full_content and len(full_content) > 200:
+            summary = full_content
         published = entry.findtext("atom:published", default="", namespaces=ns) or entry.findtext("atom:updated", default="", namespaces=ns)
         if not link:
             continue

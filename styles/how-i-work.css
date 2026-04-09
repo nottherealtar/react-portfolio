@@ -1,7 +1,7 @@
 /* How I Work timeline styles */
 
 .process-section {
-  padding: 6rem 1.5rem;
+  padding: 6rem max(1.25rem, env(safe-area-inset-right, 0)) 6rem max(1.25rem, env(safe-area-inset-left, 0));
   background: #221810;
 }
 
@@ -108,9 +108,16 @@
 }
 
 @media (max-width: 480px) {
-  .process-step { gap: 1.25rem; }
+  .process-section { padding-top: 4rem; padding-bottom: 4rem; }
+  .process-step {
+    gap: 1rem;
+    padding-bottom: 2.25rem;
+  }
   .process-node { width: 46px; height: 46px; font-size: 1.1rem; }
   .process-line { left: 22px; }
+  .process-content { padding-top: 0.5rem; min-width: 0; }
+  .process-step-title { font-size: 1.15rem; }
+  .process-step-desc { font-size: 0.9rem; line-height: 1.65; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,7 +1,7 @@
 /* Services section styles */
 
 .services-section {
-  padding: 6rem 1.5rem;
+  padding: 6rem max(1.25rem, env(safe-area-inset-right, 0)) 6rem max(1.25rem, env(safe-area-inset-left, 0));
   background: #221810;
   position: relative;
 }
@@ -37,7 +37,18 @@
 }
 
 @media (max-width: 640px) {
+  .services-section { padding-top: 4rem; padding-bottom: 4rem; }
   .services-grid { grid-template-columns: 1fr; }
+  .service-card {
+    padding: 1.5rem 1.35rem 1.35rem;
+    border-radius: 16px;
+  }
+  .section-subtitle { margin-bottom: 2.5rem; font-size: 0.98rem; }
+}
+
+@media (max-width: 380px) {
+  .service-card { padding: 1.35rem 1.1rem 1.2rem; }
+  .service-title { font-size: 1.12rem; }
 }
 
 /* Individual card */

@@ -6,8 +6,13 @@
   left: 0;
   right: 0;
   z-index: 100;
-  padding: 0 2rem;
-  height: 64px;
+  padding-top: env(safe-area-inset-top, 0);
+  padding-right: max(2rem, env(safe-area-inset-right, 0));
+  padding-bottom: 0;
+  padding-left: max(2rem, env(safe-area-inset-left, 0));
+  min-height: calc(64px + env(safe-area-inset-top, 0));
+  height: auto;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -143,6 +148,7 @@
   position: fixed;
   inset: 0;
   z-index: 99;
+  padding: max(2rem, env(safe-area-inset-top, 0)) max(1.5rem, env(safe-area-inset-right, 0)) max(2rem, env(safe-area-inset-bottom, 0)) max(1.5rem, env(safe-area-inset-left, 0));
   background: rgba(26, 17, 8, 0.97);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -165,9 +171,10 @@
   color: var(--foam) !important;
   text-decoration: none !important;
   font-family: 'DM Serif Display', serif;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 7vw, 2rem);
   letter-spacing: 0.02em;
   transition: color 0.2s ease;
+  text-align: center;
 }
 
 .nav-mobile-overlay a:hover {
@@ -199,6 +206,15 @@
 
 @media (max-width: 480px) {
   .site-nav {
-    padding: 0 1rem;
+    padding-right: max(1rem, env(safe-area-inset-right, 0));
+    padding-left: max(1rem, env(safe-area-inset-left, 0));
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+    max-width: min(11rem, 52vw);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }

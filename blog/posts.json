@@ -14,6 +14,34 @@
     "search_plain": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Tech &amp; Startups ~2 min read 2026-04-18 TechCrunch Once close enough for an acquisition, Stripe and Airwallex are now going after each other Jack Zhang was 34 years old, three and a half years into running a startup, and sitting across from one of the most powerful investors in Silicon Valley. Michael Moritz of Sequoia had invited him to his home — a place with, Zhang recalls, a couple of floors and a view straight… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Jack Zhang was 34 years old, three and a half years into running a startup, and sitting across from one of the most powerful investors in Silicon Valley. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Treat platform shifts as engineering-wide: update templates, docs, and onboarding paths together. Primary source TechCrunch — original article ← Back to journal"
   },
   {
+    "title": "Zoom teams up with World to verify humans in meetings",
+    "date": "2026-04-17",
+    "category": "Tech & Startups",
+    "summary": "Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. The threat is real and growing fast. The most dramatic example came in…",
+    "link": "auto/20260417-zoom-teams-up-with-world-to-verify-humans-in-meetings-3759feb2.html",
+    "source_url": "https://techcrunch.com/2026/04/17/zoom-teams-up-with-world-to-verify-humans-in-meeting/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://secure.gravatar.com/avatar/723b22a81ff6a760c4520b963b43451e?s=150&d=blank&r=g",
+    "search_plain": "Zoom teams up with World to verify humans in meetings | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Tech &amp; Startups ~2 min read 2026-04-17 TechCrunch Zoom teams up with World to verify humans in meetings Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. The threat is real and growing fast. The most dramatic example came in… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. It reframes risk for teams that automate sensitive workflows and third-party data flows. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pair technical changes with access reviews, logging, and an explicit rollback path. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Primary source TechCrunch — original article ← Back to journal"
+  },
+  {
+    "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
+    "date": "2026-03-30",
+    "category": "Cloud Automation",
+    "summary": "Enterprise digital transformation is entering a new phase. The challenge is no longer just connecting systems. It is about making those systems intelligent, able to reason, respond, and act in real time across the business.",
+    "link": "auto/20260330-microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-3e560a77.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/03/Figure1.jpg",
+    "search_plain": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Cloud Automation ~2 min read 2026-03-30 Microsoft Azure Blog Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service Enterprise digital transformation is entering a new phase. The challenge is no longer just connecting systems. It is about making those systems intelligent, able to reason, respond, and act in real time across the business. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Enterprise digital transformation is entering a new phase. It reframes risk for teams that automate sensitive workflows and third-party data flows. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pair technical changes with access reviews, logging, and an explicit rollback path. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Primary source Microsoft Azure Blog — original article ← Back to journal"
+  },
+  {
     "title": "Hacked traffic cams and hijacked TVs: How cyber operations supported the war against Iran — Practical Automation Insight",
     "date": "2026-03-03",
     "category": "Tech & Startups",

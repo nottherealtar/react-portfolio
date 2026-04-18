@@ -1,5 +1,19 @@
 [
   {
+    "title": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other",
+    "date": "2026-04-18",
+    "category": "Tech & Startups",
+    "summary": "Jack Zhang was 34 years old, three and a half years into running a startup, and sitting across from one of the most powerful investors in Silicon Valley. Michael Moritz of Sequoia had invited him to his home — a place with, Zhang recalls, a couple of floors and a view straight…",
+    "link": "auto/20260418-once-close-enough-for-an-acquisition-stripe-and-airwallex-ar-33af0849.html",
+    "source_url": "https://techcrunch.com/2026/04/17/once-close-enough-for-an-acquisition-stripe-and-airwallex-are-now-going-after-each-other/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://techcrunch.com/wp-content/uploads/2025/01/Connie-Loizos-1.jpg?w=150",
+    "search_plain": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Tech &amp; Startups ~2 min read 2026-04-18 TechCrunch Once close enough for an acquisition, Stripe and Airwallex are now going after each other Jack Zhang was 34 years old, three and a half years into running a startup, and sitting across from one of the most powerful investors in Silicon Valley. Michael Moritz of Sequoia had invited him to his home — a place with, Zhang recalls, a couple of floors and a view straight… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Jack Zhang was 34 years old, three and a half years into running a startup, and sitting across from one of the most powerful investors in Silicon Valley. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Treat platform shifts as engineering-wide: update templates, docs, and onboarding paths together. Primary source TechCrunch — original article ← Back to journal"
+  },
+  {
     "title": "Hacked traffic cams and hijacked TVs: How cyber operations supported the war against Iran — Practical Automation Insight",
     "date": "2026-03-03",
     "category": "Tech & Startups",

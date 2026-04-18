@@ -29,6 +29,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/styles/themes.css">
     <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/showcase.css">
 
     <style>
         body {
@@ -164,22 +165,45 @@
         .blog-toolbar {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.85rem;
             margin-bottom: 1.25rem;
+            align-items: stretch;
         }
 
         @media (min-width: 640px) {
             .blog-toolbar {
                 flex-direction: row;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
+                gap: 1rem;
             }
         }
 
         .search-wrap {
-            flex: 1;
-            max-width: 420px;
             position: relative;
+            width: 100%;
+            max-width: min(100%, 280px);
+            flex: 0 1 auto;
+            transition:
+                max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s ease,
+                border-color 0.25s ease;
+        }
+
+        .search-wrap.is-expanded {
+            max-width: min(100%, 720px);
+            flex: 1 1 auto;
+        }
+
+        @media (min-width: 640px) {
+            .blog-toolbar .search-wrap.is-expanded {
+                max-width: min(100%, 640px);
+            }
+        }
+
+        .search-wrap:focus-within {
+            box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.35);
+            border-radius: 999px;
         }
 
         .search-wrap i {
@@ -189,11 +213,14 @@
             transform: translateY(-50%);
             color: rgba(201, 169, 110, 0.65);
             font-size: 0.85rem;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .search-input {
             width: 100%;
             box-sizing: border-box;
+            min-height: 44px;
             border-radius: 999px;
             border: 1px solid rgba(247, 239, 226, 0.18);
             background: rgba(26, 17, 8, 0.45);
@@ -201,6 +228,14 @@
             padding: 0.55rem 1rem 0.55rem 2.35rem;
             font-family: inherit;
             font-size: 0.88rem;
+            line-height: 1.45;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .search-wrap.is-expanded .search-input {
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+            font-size: 0.92rem;
         }
 
         .search-input::placeholder {
@@ -445,6 +480,20 @@
     </style>
 </head>
 <body>
+    <script>
+    (function () {
+      var root = document.documentElement;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        root.classList.add('reveal-complete');
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        root.classList.add('reveal-complete');
+        return;
+      }
+      root.classList.add('has-scroll-reveal');
+    })();
+    </script>
     <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
             <span class="nav-logo-icon">☕</span>
@@ -461,7 +510,7 @@
 
     <main class="blog-page">
         <div class="section-inner">
-            <section class="blog-hero">
+            <section class="blog-hero" data-reveal>
                 <div class="hero-grid">
                     <div>
                         <div class="hero-kicker">Automation journal</div>
@@ -482,11 +531,11 @@
                 </div>
             </section>
 
-            <div class="blog-toolbar">
-                <div class="search-wrap">
+            <div class="blog-toolbar" id="blog-toolbar">
+                <div class="search-wrap" id="blog-search-wrap">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                    <label for="blog-search" class="sr-only">Search posts</label>
-                    <input id="blog-search" class="search-input" type="search" placeholder="Search titles and summaries…" autocomplete="off" />
+                    <label for="blog-search" class="sr-only">Search posts by title, topics, source, or article text</label>
+                    <input id="blog-search" class="search-input" type="search" placeholder="Search posts…" autocomplete="off" spellcheck="false" />
                 </div>
                 <div class="filter-row" id="category-filters" aria-label="Filter by category"></div>
             </div>
@@ -499,15 +548,18 @@
         </div>
     </main>
 
+    <script defer src="/scripts/showcase-reveal.js"></script>
     <script>
         (() => {
             const listNode = document.getElementById('blog-list');
             const searchInput = document.getElementById('blog-search');
+            const searchWrap = document.getElementById('blog-search-wrap');
             const filterHost = document.getElementById('category-filters');
 
             let allPosts = [];
             let activeCategory = 'all';
             let searchQuery = '';
+            const searchHayCache = new WeakMap();
 
             const formatDate = (value) => {
                 const parsed = new Date(value);
@@ -515,7 +567,39 @@
                 return parsed.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
             };
 
-            const textIncludes = (hay, needle) => hay.toLowerCase().includes(needle.toLowerCase());
+            const buildSearchHay = (post) => {
+                if (searchHayCache.has(post)) return searchHayCache.get(post);
+                const parts = [
+                    post.title,
+                    post.summary,
+                    post.category,
+                    post.source_name,
+                    post.source_url,
+                    post.language,
+                    post.why_it_matters,
+                    post.search_plain,
+                    Array.isArray(post.takeaways) ? post.takeaways.join(' ') : post.takeaways,
+                    post.link,
+                ];
+                const hay = parts.filter(Boolean).join('\n').toLowerCase();
+                searchHayCache.set(post, hay);
+                return hay;
+            };
+
+            const matchesSearch = (post) => {
+                const raw = searchQuery.trim().toLowerCase();
+                if (!raw) return true;
+                const hay = buildSearchHay(post);
+                const words = raw.split(/\s+/).filter(Boolean);
+                return words.every((w) => hay.includes(w));
+            };
+
+            const updateSearchExpand = () => {
+                if (!searchWrap) return;
+                const has = searchInput.value.trim().length > 0;
+                const focused = document.activeElement === searchInput;
+                searchWrap.classList.toggle('is-expanded', has || focused);
+            };
 
             const showSkeleton = () => {
                 listNode.innerHTML = '';
@@ -559,13 +643,7 @@
 
             const matchesFilters = (post) => {
                 if (activeCategory !== 'all' && post.category !== activeCategory) return false;
-                if (!searchQuery.trim()) return true;
-                const q = searchQuery.trim();
-                return (
-                    textIncludes(post.title || '', q) ||
-                    textIncludes(post.summary || '', q) ||
-                    textIncludes(post.source_name || '', q)
-                );
+                return matchesSearch(post);
             };
 
             const appendHeroThumb = (container, post) => {
@@ -648,6 +726,7 @@
             const renderCard = (post, featured) => {
                 const article = document.createElement('article');
                 article.className = featured ? 'blog-card featured' : 'blog-card';
+                article.setAttribute('data-reveal', '');
 
                 if (featured) {
                     const body = document.createElement('div');
@@ -703,7 +782,15 @@
                 if (!filtered.length) {
                     const empty = document.createElement('p');
                     empty.className = 'empty-state';
-                    empty.textContent = 'No posts match that filter. Try another topic or clear the search.';
+                    const hasSearch = searchQuery.trim().length > 0;
+                    const hasCat = activeCategory !== 'all';
+                    if (hasSearch && hasCat) {
+                        empty.textContent = 'No posts match this topic and search. Try clearing the search or choosing All.';
+                    } else if (hasSearch) {
+                        empty.textContent = 'No posts match that search across titles, summaries, sources, and article text. Try different words.';
+                    } else {
+                        empty.textContent = 'No posts match that filter. Try another topic or clear the search.';
+                    }
                     listNode.appendChild(empty);
                     return;
                 }
@@ -711,11 +798,19 @@
                 filtered.forEach((post, index) => {
                     listNode.appendChild(renderCard(post, index === 0));
                 });
+                if (typeof window.refreshScrollReveal === 'function') {
+                    window.refreshScrollReveal();
+                }
             };
 
             searchInput.addEventListener('input', () => {
                 searchQuery = searchInput.value;
+                updateSearchExpand();
                 render();
+            });
+            searchInput.addEventListener('focus', updateSearchExpand);
+            searchInput.addEventListener('blur', () => {
+                window.setTimeout(updateSearchExpand, 0);
             });
 
             showSkeleton();

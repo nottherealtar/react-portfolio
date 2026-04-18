@@ -535,30 +535,69 @@
   }
 }
 
-/* ── Scroll reveal (one transition per element) ─────────── */
+/* ── Scroll reveal (progressive: visible until html.has-scroll-reveal) ─ */
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-[data-reveal].is-revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0) scale(1);
+  contain: layout style;
+  transition:
+    opacity 0.52s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.52s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+html.has-scroll-reveal [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0) scale(0.988);
+  will-change: opacity, transform;
+}
+
+html.has-scroll-reveal [data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+html.has-scroll-reveal [data-reveal].is-revealed.reveal-animated {
+  will-change: auto;
+}
+
+html.reveal-complete [data-reveal],
+html.reveal-complete [data-reveal]:not(.is-revealed) {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  will-change: auto !important;
+}
+
+/* Stagger: services, proof strip, also-built */
 .services-grid .service-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
 .services-grid .service-card[data-reveal]:nth-child(2) { transition-delay: 0.06s; }
 .services-grid .service-card[data-reveal]:nth-child(3) { transition-delay: 0.12s; }
 .services-grid .service-card[data-reveal]:nth-child(4) { transition-delay: 0.18s; }
 
+.proof-strip-list .proof-item[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.proof-strip-list .proof-item[data-reveal]:nth-child(2) { transition-delay: 0.05s; }
+.proof-strip-list .proof-item[data-reveal]:nth-child(3) { transition-delay: 0.1s; }
+.proof-strip-list .proof-item[data-reveal]:nth-child(4) { transition-delay: 0.15s; }
+
+.also-grid .also-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.also-grid .also-card[data-reveal]:nth-child(2) { transition-delay: 0.07s; }
+.also-grid .also-card[data-reveal]:nth-child(3) { transition-delay: 0.14s; }
+
+.case-grid .case-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.case-grid .case-card[data-reveal]:nth-child(2) { transition-delay: 0.1s; }
+
+.blog-list .blog-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.blog-list .blog-card[data-reveal]:nth-child(2) { transition-delay: 0.06s; }
+.blog-list .blog-card[data-reveal]:nth-child(3) { transition-delay: 0.12s; }
+.blog-list .blog-card[data-reveal]:nth-child(4) { transition-delay: 0.18s; }
+.blog-list .blog-card[data-reveal]:nth-child(n + 5) { transition-delay: 0.22s; }
+
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  html.has-scroll-reveal [data-reveal]:not(.is-revealed) {
     opacity: 1;
     transform: none;
     transition: none;
+    will-change: auto;
   }
   .about-social a:hover { transform: none; }
   .case-more summary::after { transition: none; }

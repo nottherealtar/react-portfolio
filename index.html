@@ -665,6 +665,20 @@
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to main content</a>
+    <script>
+    (function () {
+      var root = document.documentElement;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        root.classList.add('reveal-complete');
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        root.classList.add('reveal-complete');
+        return;
+      }
+      root.classList.add('has-scroll-reveal');
+    })();
+    </script>
     <!-- Sticky Navigation -->
     <nav class="site-nav" role="navigation" aria-label="Main navigation">
       <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
@@ -799,7 +813,7 @@ Focus:
 - Azure Logic Apps
 - Freshworks Integrations
 - API Integration
-Currently: Building bespoke automation solutions
+Currently:  Working at Wetility, building and improving business process and solutions.
                   </pre>
                 </div>
               </div>

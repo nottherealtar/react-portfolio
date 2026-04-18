@@ -43,6 +43,29 @@ def estimate_reading_minutes(post: Dict[str, Any]) -> int:
     return max(2, min(25, round(words / 130)))
 
 
+def html_to_search_plain(path: Path, max_chars: int = 12000) -> str:
+    """Strip HTML to plain text for client-side search (title/summary still indexed separately)."""
+    if not path.is_file():
+        return ""
+    raw = path.read_text(encoding="utf-8", errors="ignore")
+    raw = re.sub(r"<script[\s\S]*?</script>", " ", raw, flags=re.IGNORECASE)
+    raw = re.sub(r"<style[\s\S]*?</style>", " ", raw, flags=re.IGNORECASE)
+    raw = re.sub(r"<[^>]+>", " ", raw)
+    raw = re.sub(r"\s+", " ", raw).strip()
+    return raw[:max_chars] if raw else ""
+
+
+def attach_search_plain(posts: List[Dict[str, Any]]) -> None:
+    for post in posts:
+        link = post.get("link") or ""
+        if not link or link.startswith("http://") or link.startswith("https://"):
+            continue
+        rel = link.lstrip("/")
+        blob = html_to_search_plain(BLOG_DIR / rel)
+        if blob:
+            post["search_plain"] = blob
+
+
 def merge_posts(manual_posts: List[Dict[str, Any]], auto_posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     merged: Dict[str, Dict[str, Any]] = {}
 
@@ -61,6 +84,8 @@ def merge_posts(manual_posts: List[Dict[str, Any]], auto_posts: List[Dict[str, A
     combined = list(merged.values())
     for post in combined:
         post["reading_minutes"] = estimate_reading_minutes(post)
+
+    attach_search_plain(combined)
 
     combined.sort(
         key=lambda post: (

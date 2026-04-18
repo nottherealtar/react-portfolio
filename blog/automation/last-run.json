@@ -1,14 +1,21 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-18T20:45:46.025279+00:00",
+  "timestamp": "2026-04-18T23:33:52.990207+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 45,
-  "blocked_domain_candidates": 5,
-  "selected_candidates": 0,
-  "generated_posts": [],
+  "unseen_candidates": 47,
+  "blocked_domain_candidates": 3,
+  "selected_candidates": 1,
+  "generated_posts": [
+    {
+      "title": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other",
+      "link": "auto/20260418-once-close-enough-for-an-acquisition-stripe-and-airwallex-ar-33af0849.html",
+      "score": 121.7919,
+      "source": "TechCrunch"
+    }
+  ],
   "skipped": [],
   "source_failures": [],
-  "dry_run": true,
+  "dry_run": false,
   "min_score": 36.0,
   "min_summary_length": 130,
   "min_description_length": 220,
@@ -20,5 +27,5 @@
     "theverge.com",
     "techcrunch.com"
   ],
-  "max_posts": 0
+  "max_posts": 1
 }

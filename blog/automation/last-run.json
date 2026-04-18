@@ -1,15 +1,21 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-18T23:33:52.990207+00:00",
+  "timestamp": "2026-04-18T23:42:04.826421+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 47,
-  "blocked_domain_candidates": 3,
-  "selected_candidates": 1,
+  "unseen_candidates": 44,
+  "blocked_domain_candidates": 5,
+  "selected_candidates": 2,
   "generated_posts": [
     {
-      "title": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other",
-      "link": "auto/20260418-once-close-enough-for-an-acquisition-stripe-and-airwallex-ar-33af0849.html",
-      "score": 121.7919,
+      "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
+      "link": "auto/20260330-microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-3e560a77.html",
+      "score": 115.0,
+      "source": "Microsoft Azure Blog"
+    },
+    {
+      "title": "Zoom teams up with World to verify humans in meetings",
+      "link": "auto/20260417-zoom-teams-up-with-world-to-verify-humans-in-meetings-3759feb2.html",
+      "score": 105.2996,
       "source": "TechCrunch"
     }
   ],
@@ -27,5 +33,5 @@
     "theverge.com",
     "techcrunch.com"
   ],
-  "max_posts": 1
+  "max_posts": 2
 }

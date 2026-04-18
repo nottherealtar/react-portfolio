@@ -13,6 +13,32 @@
     "hero_image": "https://techcrunch.com/wp-content/uploads/2025/01/Connie-Loizos-1.jpg?w=150"
   },
   {
+    "title": "Zoom teams up with World to verify humans in meetings",
+    "date": "2026-04-17",
+    "category": "Tech & Startups",
+    "summary": "Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. The threat is real and growing fast. The most dramatic example came in…",
+    "link": "auto/20260417-zoom-teams-up-with-world-to-verify-humans-in-meetings-3759feb2.html",
+    "source_url": "https://techcrunch.com/2026/04/17/zoom-teams-up-with-world-to-verify-humans-in-meeting/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://secure.gravatar.com/avatar/723b22a81ff6a760c4520b963b43451e?s=150&d=blank&r=g"
+  },
+  {
+    "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
+    "date": "2026-03-30",
+    "category": "Cloud Automation",
+    "summary": "Enterprise digital transformation is entering a new phase. The challenge is no longer just connecting systems. It is about making those systems intelligent, able to reason, respond, and act in real time across the business.",
+    "link": "auto/20260330-microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-3e560a77.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-integration-platform-as-a-service/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/03/Figure1.jpg"
+  },
+  {
     "title": "Hacked traffic cams and hijacked TVs: How cyber operations supported the war against Iran — Practical Automation Insight",
     "date": "2026-03-03",
     "category": "Tech & Startups",

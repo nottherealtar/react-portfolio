@@ -1,5 +1,9 @@
 name: Auto Blog Pipeline
 
+concurrency:
+  group: auto-blog-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   schedule:
     - cron: "17 5,17 * * *"
@@ -12,11 +16,11 @@ on:
       min_score:
         description: "Minimum score required to publish"
         required: false
-        default: "34"
+        default: "36"
       min_summary_length:
         description: "Minimum summary length"
         required: false
-        default: "120"
+        default: "130"
       dry_run:
         description: "Run without writing post files/registries"
         required: false
@@ -28,6 +32,7 @@ permissions:
 jobs:
   auto-blog:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -37,6 +42,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Install blog pipeline dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r scripts/requirements-blog.txt
 
       - name: Run auto blog generator
         shell: bash
@@ -53,11 +61,11 @@ jobs:
           fi
 
           if [ -z "${MIN_SCORE}" ]; then
-            MIN_SCORE="34"
+            MIN_SCORE="36"
           fi
 
           if [ -z "${MIN_SUMMARY_LENGTH}" ]; then
-            MIN_SUMMARY_LENGTH="120"
+            MIN_SUMMARY_LENGTH="130"
           fi
 
           if [ "${DRY_RUN}" = "true" ]; then

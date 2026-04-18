@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List
 import xml.etree.ElementTree as ET
@@ -30,6 +31,18 @@ def normalize_date(value: str) -> str:
     return value[:10]
 
 
+def estimate_reading_minutes(post: Dict[str, Any]) -> int:
+    if post.get("reading_minutes") is not None:
+        try:
+            return max(2, min(45, int(post["reading_minutes"])))
+        except (TypeError, ValueError):
+            pass
+    blob = f"{post.get('title', '')} {post.get('summary', '')}"
+    words = len(re.findall(r"\w+", blob))
+    # Listing cards only have title + summary; use a slightly faster pace and a sensible floor.
+    return max(2, min(25, round(words / 130)))
+
+
 def merge_posts(manual_posts: List[Dict[str, Any]], auto_posts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     merged: Dict[str, Dict[str, Any]] = {}
 
@@ -46,6 +59,9 @@ def merge_posts(manual_posts: List[Dict[str, Any]], auto_posts: List[Dict[str, A
             merged[link] = post
 
     combined = list(merged.values())
+    for post in combined:
+        post["reading_minutes"] = estimate_reading_minutes(post)
+
     combined.sort(
         key=lambda post: (
             normalize_date(post.get("date", "")),

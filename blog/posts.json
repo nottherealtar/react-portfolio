@@ -8,7 +8,8 @@
     "source_url": "https://techcrunch.com/2026/03/03/hacked-traffic-cams-and-hijacked-tvs-how-cyber-operations-supported-the-war-against-iran/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "No one has a good plan for how AI companies should work with the government — Practical Automation Insight",
@@ -19,7 +20,8 @@
     "source_url": "https://techcrunch.com/2026/03/02/openai-anthropic-department-of-defense-war-hegseth-ai-companies-work-with-us-government/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Hacktivists claim to have hacked Homeland Security to release ICE contract data — Practical Automation Insight",
@@ -30,7 +32,8 @@
     "source_url": "https://techcrunch.com/2026/03/02/hacktivists-claim-to-have-hacked-homeland-security-to-release-ice-contract-data/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "CISA replaces acting director after a bumbling year on the job — Practical Automation Insight",
@@ -41,7 +44,8 @@
     "source_url": "https://techcrunch.com/2026/02/27/cisa-replaces-acting-director-gottumukkala-after-a-bumbling-year-on-the-job/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Anthropic vs. the Pentagon: What’s actually at stake? — Practical Automation Insight",
@@ -52,7 +56,8 @@
     "source_url": "https://techcrunch.com/2026/02/27/anthropic-vs-the-pentagon-whats-actually-at-stake/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "What’s new with GitHub Copilot coding agent — Practical Automation Insight",
@@ -63,7 +68,8 @@
     "source_url": "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/",
     "source_name": "GitHub Blog",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Trace raises $3M to solve the AI agent adoption problem in enterprise — Practical Automation Insight",
@@ -74,7 +80,8 @@
     "source_url": "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Gemini is getting its first agentic capabilities — Practical Automation Insight",
@@ -85,7 +92,8 @@
     "source_url": "https://www.theverge.com/tech/884210/google-gemini-samsung-s26-pixel-10-uber",
     "source_name": "The Verge AI",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Anthropic acquires computer-use AI startup Vercept after Meta poached one of its founders — Practical Automation Insight",
@@ -96,7 +104,8 @@
     "source_url": "https://techcrunch.com/2026/02/25/anthropic-acquires-vercept-ai-startup-agents-computer-use-founders-investors/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Multi-agent workflows often fail. Here’s how to engineer ones that don’t. — Practical Automation Insight",
@@ -107,7 +116,8 @@
     "source_url": "https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/",
     "source_name": "GitHub Blog",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "CarGurus data breach affects 12.5 million accounts — Practical Automation Insight",
@@ -118,7 +128,8 @@
     "source_url": "https://techcrunch.com/2026/02/24/cargurus-data-breach-affects-12-5-million-accounts/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "A Meta AI security researcher said an OpenClaw agent ran amok on her inbox — Practical Automation Insight",
@@ -129,7 +140,8 @@
     "source_url": "https://techcrunch.com/2026/02/23/a-meta-ai-security-researcher-said-an-openclaw-agent-ran-amok-on-her-inbox/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "How AI agents could destroy the economy — Practical Automation Insight",
@@ -140,7 +152,8 @@
     "source_url": "https://techcrunch.com/2026/02/23/how-ai-agents-could-destroy-the-economy/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Samsung is adding Perplexity to Galaxy AI — Practical Automation Insight",
@@ -151,7 +164,8 @@
     "source_url": "https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai",
     "source_name": "The Verge AI",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "China’s brain-computer interface industry is racing ahead — Practical Automation Insight",
@@ -162,41 +176,47 @@
     "source_url": "https://techcrunch.com/2026/02/22/chinas-brain-computer-interface-industry-is-racing-ahead/",
     "source_name": "TechCrunch",
     "automated": true,
-    "language": "en"
+    "language": "en",
+    "reading_minutes": 2
   },
   {
     "title": "Runge-Kutta 4 Method Explorer",
     "date": "2024-12-01",
     "category": "Mathematics & Programming",
     "summary": "Interactive exploration of the Runge-Kutta 4 method for solving ordinary differential equations with theory, examples, and live calculator.",
-    "link": "runge-kutta-4-method.html"
+    "link": "runge-kutta-4-method.html",
+    "reading_minutes": 2
   },
   {
     "title": "Deep Dive: Job Search Agent AI Project",
     "date": "2024-06-10",
     "category": "AI News & Projects",
     "summary": "A detailed breakdown of the Job Search Agent AI project: architecture, code, and how it automates job hunting.",
-    "link": "job-search-agent.html"
+    "link": "job-search-agent.html",
+    "reading_minutes": 2
   },
   {
     "title": "Latest AI Breakthroughs in 2024",
     "date": "2024-06-01",
     "category": "AI News & Projects",
     "summary": "A roundup of the most exciting AI advancements and projects in 2024.",
-    "link": "ai-breakthroughs-2024.html"
+    "link": "ai-breakthroughs-2024.html",
+    "reading_minutes": 2
   },
   {
     "title": "Getting Started with Flutter",
     "date": "2024-05-20",
     "category": "Coding Languages Guides",
     "summary": "A beginner's guide to building apps with Flutter.",
-    "link": "flutter-getting-started.html"
+    "link": "flutter-getting-started.html",
+    "reading_minutes": 2
   },
   {
     "title": "Python for Automation: Practical Examples",
     "date": "2024-05-10",
     "category": "Coding Languages Guides",
     "summary": "How to use Python for automating daily tasks.",
-    "link": "python-automation.html"
+    "link": "python-automation.html",
+    "reading_minutes": 2
   }
 ]

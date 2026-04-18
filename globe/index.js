@@ -2,8 +2,16 @@
 // Uses global THREE and OrbitControls (from CDN)
 
 (function () {
-  // --- DOM Setup ---
   const canvas = document.querySelector('.canvas');
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (canvas) {
+      canvas.hidden = true;
+      canvas.setAttribute('aria-hidden', 'true');
+    }
+    return;
+  }
+
+  // --- DOM Setup ---
   if (!canvas) return;
   const container = canvas.parentElement;
 
@@ -148,7 +156,9 @@
     const headMat = new THREE.MeshPhongMaterial({ color: pinColor, emissive: pinColor, shininess: 100 });
     const head = new THREE.Mesh(headGeo, headMat);
     // Add glow (sprite)
-    const spriteMap = new THREE.TextureLoader().load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/sprites/glow.png');
+    const spriteMap = new THREE.TextureLoader().load(
+      'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/textures/sprites/glow.png'
+    );
     const spriteMat = new THREE.SpriteMaterial({ map: spriteMap, color: pinColor, transparent: true, opacity: 0.5, blending: THREE.AdditiveBlending });
     const sprite = new THREE.Sprite(spriteMat);
     sprite.scale.set(0.25, 0.25, 1);

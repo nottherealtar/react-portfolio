@@ -3,143 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found | Joshua Coetzer</title>
-    <meta name="description" content="Page not found. Return to Joshua Coetzer's portfolio or blog.">
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png" type="image/png">
+    <title>404 — Page not found | Joshua Coetzer</title>
+    <meta name="description" content="That page does not exist. Head back to the portfolio or blog.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.tarsonlinecafe.work/404.html">
+    <link rel="icon" href="/67793100.png" type="image/png">
+    <meta name="theme-color" content="#2d221b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/lazy-loading.css">
+    <link rel="stylesheet" href="/styles/themes.css">
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: rgba(15, 23, 42, 0.95);
-            color: white;
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, sans-serif;
+            background:
+                radial-gradient(900px 480px at 12% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                radial-gradient(700px 400px at 88% 8%, rgba(161, 134, 111, 0.12), transparent 50%),
+                var(--dark-roast, #2d221b);
+            color: var(--foam, #f7efe2);
         }
-        #canvas-container {
+        .error-wrap {
+            min-height: calc(100vh - 5rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 1.25rem 3rem;
+        }
+        .error-card {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            padding: 2.75rem 2.25rem;
+            border-radius: 24px;
+            background: rgba(45, 34, 27, 0.55);
+            border: 1px solid rgba(247, 239, 226, 0.12);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+        }
+        .error-code {
+            font-family: "DM Serif Display", Georgia, serif;
+            font-size: clamp(4rem, 14vw, 6.5rem);
+            line-height: 1;
+            margin: 0 0 0.5rem;
+            color: var(--crema, #c9a96e);
+            letter-spacing: -0.04em;
+        }
+        .error-title {
+            font-family: "DM Serif Display", Georgia, serif;
+            font-size: 1.65rem;
+            margin: 0 0 1rem;
+            color: var(--foam, #f7efe2);
+        }
+        .error-body {
+            color: rgba(237, 224, 204, 0.88);
+            line-height: 1.65;
+            margin: 0 0 2rem;
+            font-size: 1rem;
+        }
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: var(--crema, #c9a96e);
+            color: var(--espresso, #1a1108) !important;
+            text-decoration: none !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(201, 169, 110, 0.35);
+        }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            border: 1.5px solid rgba(247, 239, 226, 0.35);
+            color: var(--foam, #f7efe2) !important;
+            text-decoration: none !important;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .btn-secondary:hover {
+            border-color: var(--crema, #c9a96e);
+            background: rgba(201, 169, 110, 0.1);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .btn-primary:hover { transform: none; box-shadow: none; }
+        }
+        .simple-header {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            right: 0;
+            z-index: 100;
+            height: 64px;
+            padding: 0 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            background: rgba(26, 17, 8, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(247, 239, 226, 0.08);
         }
-        .glass-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+        .simple-header a.brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: "DM Serif Display", Georgia, serif;
+            font-size: 1.1rem;
+            color: var(--foam, #f7efe2) !important;
+            text-decoration: none !important;
         }
-        .nav-link {
-            padding: 0.5rem 1.25rem;
-            border-radius: 0.5rem;
-            border: 1px solid rgba(129,140,248,0.3);
-            color: #a5b4fc;
-            transition: background 0.2s;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
+        .simple-header .links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
-        .nav-link:hover, .nav-link.active {
-            background: #3730a3;
-            color: #fff;
+        .simple-header .links a {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: rgba(247, 239, 226, 0.8) !important;
+            text-decoration: none !important;
+        }
+        .simple-header .links a:hover {
+            color: var(--crema, #c9a96e) !important;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
 </head>
 <body>
-    <div id="canvas-container"></div>
-    <nav class="w-full flex justify-center py-4 bg-transparent">
-        <div class="flex space-x-4">
-            <a href="/" class="nav-link">Portfolio</a>
-            <a href="/blog/blog.html" class="nav-link">Blog</a>
-        </div>
-    </nav>
-    <div class="min-h-screen flex flex-col items-center justify-center px-4">
-        <div class="max-w-xl w-full text-center glass-card p-10 rounded-2xl mt-16">
-            <h1 class="text-7xl font-bold mb-4 text-indigo-400">404</h1>
-            <h2 class="text-2xl mb-6">Page Not Found</h2>
-            <p class="mb-8 text-gray-300">Sorry, the page you are looking for does not exist or has been moved.</p>
-            <a href="/" class="px-6 py-3 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition text-white font-semibold mr-2">Go Home</a>
-            <a href="/blog/blog.html" class="px-6 py-3 border border-indigo-400 rounded-lg hover:bg-indigo-900 transition text-indigo-200 font-semibold">Visit Blog</a>
+    <header class="simple-header" role="banner">
+      <a href="/" class="brand" aria-label="TarsOnlineCafe home"><span aria-hidden="true">☕</span> TarsOnlineCafe</a>
+      <nav class="links" aria-label="Site">
+        <a href="/#services">Services</a>
+        <a href="/#work">Work</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="error-wrap">
+        <div class="error-card">
+            <p class="error-code">404</p>
+            <h1 class="error-title">This page is not on the menu</h1>
+            <p class="error-body">
+              The link may be outdated or the URL was mistyped. You can return to the portfolio home or open the blog.
+            </p>
+            <div class="error-actions">
+                <a href="/" class="btn-primary">Back to portfolio</a>
+                <a href="/blog/blog.html" class="btn-secondary">Visit blog</a>
+            </div>
         </div>
     </div>
-    <script>
-        // Three.js Scene Setup (same as main)
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-        const ambientLight = new THREE.AmbientLight(0x404040);
-        scene.add(ambientLight);
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(directionalLight);
-
-        const geometry = new THREE.IcosahedronGeometry(1, 0);
-        const material = new THREE.MeshPhongMaterial({ 
-            color: 0x4f46e5,
-            emissive: 0x4f46e5,
-            emissiveIntensity: 0.2,
-            shininess: 50,
-            transparent: true,
-            opacity: 0.8
-        });
-
-        const objects = [];
-        const objectCount = 10;
-        for (let i = 0; i < objectCount; i++) {
-            const mesh = new THREE.Mesh(geometry, material.clone());
-            mesh.position.x = (Math.random() - 0.5) * 20;
-            mesh.position.y = (Math.random() - 0.5) * 20;
-            mesh.position.z = (Math.random() - 0.5) * 20;
-            mesh.rotation.x = Math.random() * Math.PI;
-            mesh.rotation.y = Math.random() * Math.PI;
-            const scale = 0.5 + Math.random() * 1.5;
-            mesh.scale.set(scale, scale, scale);
-            objects.push({
-                mesh,
-                speed: {
-                    x: (Math.random() - 0.5) * 0.01,
-                    y: (Math.random() - 0.5) * 0.01,
-                    z: (Math.random() - 0.5) * 0.01
-                },
-                rotation: {
-                    x: (Math.random() - 0.5) * 0.02,
-                    y: (Math.random() - 0.5) * 0.02
-                }
-            });
-            scene.add(mesh);
-        }
-        camera.position.z = 15;
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.enableZoom = false;
-        controls.enablePan = false;
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 0.5;
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-        function animate() {
-            requestAnimationFrame(animate);
-            objects.forEach(obj => {
-                obj.mesh.position.x += obj.speed.x;
-                obj.mesh.position.y += obj.speed.y;
-                obj.mesh.position.z += obj.speed.z;
-                obj.mesh.rotation.x += obj.rotation.x;
-                obj.mesh.rotation.y += obj.rotation.y;
-                if (Math.abs(obj.mesh.position.x) > 15) obj.speed.x *= -1;
-                if (Math.abs(obj.mesh.position.y) > 15) obj.speed.y *= -1;
-                if (Math.abs(obj.mesh.position.z) > 15) obj.speed.z *= -1;
-            });
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
-    <script src="/scripts/lazy-loading.js"></script>
+    <script defer src="/scripts/lazy-loading.js"></script>
 </body>
 </html>

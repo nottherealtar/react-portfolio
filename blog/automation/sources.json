@@ -8,10 +8,12 @@
     "techcrunch.com"
   ],
   "quality_gate": {
-    "min_score": 34,
-    "min_summary_length": 120,
-    "min_description_length": 140,
-    "min_keyword_hits": 2
+    "min_score": 36,
+    "min_summary_length": 130,
+    "min_description_length": 220,
+    "min_keyword_hits": 2,
+    "fetch_full_article_when_rss_chars_below": 900,
+    "max_article_images": 6
   },
   "keywords": {
     "automation": 8,

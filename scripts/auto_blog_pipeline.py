@@ -1,25 +1,52 @@
 import argparse
 import hashlib
 import html
-import requests
-from bs4 import BeautifulSoup
 import json
 import re
 import sys
 import time
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from typing import Any, Dict, List
-import xml.etree.ElementTree as ET
+from typing import Any, Dict, List, Tuple
+from xml.etree.ElementTree import Element
+
+import requests
+from bs4 import BeautifulSoup, Tag
 
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "blog"
 AUTOMATION_DIR = BLOG_DIR / "automation"
 AUTO_DIR = BLOG_DIR / "auto"
+
+RSS_CONTENT_ENCODED = "{http://purl.org/rss/1.0/modules/content/}encoded"
+ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
+
+SESSION = requests.Session()
+SESSION.headers.update(
+    {
+        "User-Agent": "TarsOnlineCafeAutoBlog/2.0 (+https://www.tarsonlinecafe.work)",
+        "Accept": "application/rss+xml, application/atom+xml, text/xml, application/xml, text/html;q=0.9",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+)
+
+BOILERPLATE_START = re.compile(
+    r"^\s*(subscribe|sign up|newsletter|e-?mail updates|cookie|cookies|gdpr|advertisement|"
+    r"sponsored|more stories|related articles|read more|follow us|share this|posted in|"
+    r"filed under|tags:|image credit|photograph:|editor.?s note|disclaimer)\b",
+    re.IGNORECASE,
+)
+
+BOILERPLATE_SUBSTRING = re.compile(
+    r"(click here to|manage your preferences|terms of (use|service)|privacy policy|"
+    r"all rights reserved\.?\s*$|^\s*advertisement\s*$)",
+    re.IGNORECASE,
+)
 
 
 def load_json(path: Path, default: Any) -> Any:
@@ -56,13 +83,14 @@ def is_domain_allowed(url: str, allowed_domains: List[str]) -> bool:
 
 
 def keyword_hit_count(text_blob: str, keyword_weights: Dict[str, int]) -> int:
-    return sum(1 for keyword in keyword_weights if keyword.lower() in text_blob)
+    lowered = text_blob.lower()
+    return sum(1 for keyword in keyword_weights if keyword.lower() in lowered)
 
 
 def safe_request(url: str, timeout: int = 20, retries: int = 3) -> bytes:
     headers = {
-        "User-Agent": "TarsOnlineCafeAutoBlog/1.0 (+https://www.tarsonlinecafe.work)",
-        "Accept": "application/rss+xml, application/atom+xml, text/xml, application/xml, text/html"
+        "User-Agent": "TarsOnlineCafeAutoBlog/2.0 (+https://www.tarsonlinecafe.work)",
+        "Accept": "application/rss+xml, application/atom+xml, text/xml, application/xml, text/html",
     }
     error: Exception | None = None
     for attempt in range(retries):
@@ -81,6 +109,208 @@ def strip_html(raw_text: str) -> str:
     text = html.unescape(text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def article_page_host(page_url: str) -> str:
+    host = urllib.parse.urlparse(page_url).hostname or ""
+    return normalize_domain(host)
+
+
+# Hosts commonly used for ads, trackers, or beacons — editorial CDNs are allowed by default.
+_IMAGE_HOST_BLOCKLIST = frozenset(
+    {
+        "doubleclick.net",
+        "googlesyndication.com",
+        "googleadservices.com",
+        "google-analytics.com",
+        "googletagmanager.com",
+        "adnxs.com",
+        "amazon-adsystem.com",
+        "taboola.com",
+        "outbrain.com",
+        "scorecardresearch.com",
+        "pubmatic.com",
+        "criteo.com",
+        "rubiconproject.com",
+        "adform.net",
+        "casalemedia.com",
+        "adsafeprotected.com",
+        "moatads.com",
+        "adsrvr.org",
+        "sitescout.com",
+        "zemanta.com",
+        "seedtag.com",
+        "mediago.io",
+        "2mdn.net",
+        "quantserve.com",
+        "quantcast.com",
+        "adsystem.com",
+        "adsymptotic.com",
+        "intentiq.com",
+        "liveramp.com",
+        "demdex.net",
+        "omtrdc.net",
+        "everesttech.net",
+        "rlcdn.com",
+        "liadm.com",
+        "ads-twitter.com",
+        "analytics.twitter.com",
+    }
+)
+
+
+def is_image_host_blocklisted(host: str) -> bool:
+    h = normalize_domain(host)
+    if not h:
+        return True
+    if h == "localhost" or h.endswith(".local") or h.endswith(".localhost"):
+        return True
+    if re.fullmatch(r"(\d{1,3}\.){3}\d{1,3}", h):
+        return True
+    for blocked in _IMAGE_HOST_BLOCKLIST:
+        if h == blocked or h.endswith(f".{blocked}"):
+            return True
+    return False
+
+
+def is_image_host_allowed_autonomous(img_host: str, _article_host: str) -> bool:
+    """
+    Fully autonomous image policy: URLs are already limited to <img>/<picture> inside the
+    de-noised article container. Allow any https host except known ad/tracker domains.
+    """
+    h = normalize_domain(img_host)
+    if not h:
+        return False
+    return not is_image_host_blocklisted(h)
+
+
+def _first_url_from_srcset(srcset: str) -> str:
+    if not srcset or not srcset.strip():
+        return ""
+    first = srcset.split(",")[0].strip()
+    return first.split()[0].strip() if first else ""
+
+
+def safe_https_image_url(raw: str, base_url: str) -> str:
+    """Resolve relative URLs and return a canonical https URL, or empty string if unsafe."""
+    if not raw:
+        return ""
+    raw = raw.strip()
+    if raw.lower().startswith("javascript:") or raw.lower().startswith("data:") or raw.lower().startswith("vbscript:"):
+        return ""
+    if "\n" in raw or "\r" in raw or "\0" in raw:
+        return ""
+    joined = urllib.parse.urljoin(base_url, raw)
+    if joined.startswith("//"):
+        joined = f"https:{joined}"
+    parsed = urllib.parse.urlparse(joined)
+    if parsed.scheme.lower() != "https":
+        return ""
+    if not parsed.netloc:
+        return ""
+    return urllib.parse.urlunparse(parsed)
+
+
+def extract_https_images_from_soup(
+    container: Tag,
+    page_url: str,
+    article_host: str,
+    max_images: int,
+) -> List[Dict[str, str]]:
+    """Collect deduplicated https image URLs with alt text from article markup."""
+    seen: set[str] = set()
+    out: List[Dict[str, str]] = []
+
+    def consider(raw_src: str, alt: str) -> None:
+        if len(out) >= max_images:
+            return
+        url = safe_https_image_url(raw_src, page_url)
+        if not url:
+            return
+        parsed = urllib.parse.urlparse(url)
+        if not is_image_host_allowed_autonomous(parsed.hostname or "", article_host):
+            return
+        if url in seen:
+            return
+        low = url.lower()
+        if any(x in low for x in ("/tracker", "pixel", "1x1", "spacer.gif", "blank.gif")):
+            return
+        seen.add(url)
+        clean_alt = re.sub(r"\s+", " ", (alt or "").strip())[:220]
+        out.append({"url": url, "alt": clean_alt or "Illustration from the linked source article"})
+
+    for img in container.find_all("img", limit=80):
+        if not isinstance(img, Tag):
+            continue
+        if img.find_parent(["aside", "nav", "footer", "header"]):
+            continue
+        w_attr = str(img.get("width") or "").strip()
+        h_attr = str(img.get("height") or "").strip()
+        if w_attr == "1" and h_attr == "1":
+            continue
+        src = str(img.get("src") or "").strip()
+        srcset_first = _first_url_from_srcset(str(img.get("srcset") or ""))
+        for candidate in (src, srcset_first):
+            if candidate:
+                consider(candidate, str(img.get("alt") or ""))
+                if len(out) >= max_images:
+                    break
+
+    for pic in container.find_all("picture", limit=25):
+        if pic.find_parent(["aside", "nav", "footer", "header"]):
+            continue
+        for src_el in pic.find_all("source", limit=6):
+            if not isinstance(src_el, Tag):
+                continue
+            u = _first_url_from_srcset(str(src_el.get("srcset") or ""))
+            if u:
+                consider(u, "")
+            if len(out) >= max_images:
+                break
+
+    return out
+
+
+def extract_https_images_from_html(
+    html_text: str,
+    page_url: str,
+    article_host: str,
+    max_images: int,
+) -> List[Dict[str, str]]:
+    if not html_text or len(html_text) < 12:
+        return []
+    soup = BeautifulSoup(html_text, "html.parser")
+    container = (
+        soup.select_one("article")
+        or soup.select_one("main")
+        or soup.select_one('[role="main"]')
+        or soup.select_one(".post__content, .post-content, .entry-content, .article-body, #content")
+    )
+    if container is None:
+        container = soup.body or soup
+    if not isinstance(container, Tag):
+        return []
+    _decompose_noise(container)
+    return extract_https_images_from_soup(container, page_url, article_host, max_images)
+
+
+def clean_body_text(text: str, max_chars: int = 12000) -> str:
+    """Normalize whitespace and drop obvious boilerplate lines."""
+    text = re.sub(r"\s+", " ", text or "").strip()
+    if not text:
+        return ""
+    segments: List[str] = []
+    for chunk in re.split(r"\s{2,}", text):
+        chunk = chunk.strip()
+        if len(chunk) < 28:
+            continue
+        if BOILERPLATE_START.search(chunk) or BOILERPLATE_SUBSTRING.search(chunk):
+            continue
+        segments.append(chunk)
+    merged = " ".join(segments).strip()
+    if len(merged) > max_chars:
+        merged = merged[: max_chars - 1].rsplit(" ", 1)[0] + "…"
+    return merged
 
 
 def parse_date(value: str | None) -> datetime:
@@ -105,131 +335,225 @@ def parse_date(value: str | None) -> datetime:
         return datetime.now(timezone.utc)
 
 
-def extract_main_content_from_url(url: str) -> str:
-    """Fetches the article and extracts main readable content, including images."""
-    try:
-        resp = requests.get(url, timeout=10)
-        if resp.status_code != 200:
-            return ""
-        soup = BeautifulSoup(resp.text, "html.parser")
-        # Try common article containers
-        for selector in ["article", "main", "#content", ".post", ".entry-content"]:
-            node = soup.select_one(selector)
-            if node:
-                # Extract text and images
-                content_parts = []
-                for child in node.descendants:
-                    if child.name == "img" and child.get("src"):
-                        alt = child.get("alt", "")
-                        img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
-                        content_parts.append(img_html)
-                    elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
-                        text = child.get_text(strip=True)
-                        if text:
-                            content_parts.append(text)
-                # Join text and images in order
-                return "\n\n".join(content_parts)
-        # Fallback: get largest <div> by text length
-        divs = soup.find_all("div")
-        if divs:
-            largest = max(divs, key=lambda d: len(d.get_text(strip=True)), default=None)
-            if largest:
-                content_parts = []
-                for child in largest.descendants:
-                    if child.name == "img" and child.get("src"):
-                        alt = child.get("alt", "")
-                        img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
-                        content_parts.append(img_html)
-                    elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
-                        text = child.get_text(strip=True)
-                        if text:
-                            content_parts.append(text)
-                return "\n\n".join(content_parts)
-        # Fallback: whole page text and images
-        content_parts = []
-        for child in soup.descendants:
-            if child.name == "img" and child.get("src"):
-                alt = child.get("alt", "")
-                img_html = f'<img src="{child["src"]}" alt="{alt}">'  # Add alt text
-                content_parts.append(img_html)
-            elif child.name in ["p", "h1", "h2", "h3", "h4", "h5", "h6"]:
-                text = child.get_text(strip=True)
-                if text:
-                    content_parts.append(text)
-        return "\n\n".join(content_parts)
-    except Exception:
-        return ""
+def _decompose_noise(root: Tag) -> None:
+    for sel in (
+        "script",
+        "style",
+        "noscript",
+        "svg",
+        "form",
+        "iframe",
+        "nav",
+        "footer",
+        "header",
+        "aside",
+        "[role='navigation']",
+        "[aria-modal='true']",
+    ):
+        for node in root.select(sel):
+            node.decompose()
 
-def parse_feed(xml_blob: bytes, source: Dict[str, Any]) -> List[Dict[str, Any]]:
+
+def extract_article_text_from_html(html_text: str) -> str:
+    """Structured plain text from article HTML (RSS content:encoded or fetched page)."""
+    if not html_text or len(html_text) < 12:
+        return ""
+    soup = BeautifulSoup(html_text, "html.parser")
+    container = (
+        soup.select_one("article")
+        or soup.select_one("main")
+        or soup.select_one('[role="main"]')
+        or soup.select_one(".post__content, .post-content, .entry-content, .article-body, #content")
+    )
+    if container is None:
+        container = soup.body or soup
+    if not isinstance(container, Tag):
+        return ""
+    _decompose_noise(container)
+    blocks: List[str] = []
+    for el in container.find_all(["p", "h2", "h3", "blockquote", "li"], limit=120):
+        if not isinstance(el, Tag):
+            continue
+        if el.find_parent(["aside", "nav", "footer", "header"]):
+            continue
+        text = el.get_text(" ", strip=True)
+        if len(text) < 36:
+            continue
+        if BOILERPLATE_START.match(text) or BOILERPLATE_SUBSTRING.search(text):
+            continue
+        blocks.append(text)
+    if not blocks:
+        return clean_body_text(strip_html(html_text))
+    return clean_body_text("\n\n".join(blocks))
+
+
+def fetch_article_plain_and_images(
+    url: str,
+    article_host: str,
+    max_images: int,
+    timeout: Tuple[float, float] = (6.0, 14.0),
+) -> Tuple[str, List[Dict[str, str]]]:
+    """Single HTTP fetch: readable plain text plus allowlisted https images."""
+    try:
+        resp = SESSION.get(url, timeout=timeout)
+        if resp.status_code != 200 or not resp.text:
+            return "", []
+        soup = BeautifulSoup(resp.text, "html.parser")
+        container = (
+            soup.select_one("article")
+            or soup.select_one("main")
+            or soup.select_one('[role="main"]')
+            or soup.select_one(".post__content, .post-content, .entry-content, .article-body, #content, .post")
+        )
+        if container is None:
+            divs = [d for d in soup.find_all("div") if isinstance(d, Tag)]
+            if divs:
+                container = max(divs, key=lambda d: len(d.get_text(" ", strip=True)), default=None)
+        if container is None or not isinstance(container, Tag):
+            container = soup.body or soup
+        if not isinstance(container, Tag):
+            return "", []
+        _decompose_noise(container)
+        imgs = extract_https_images_from_soup(container, url, article_host, max_images)
+        parts: List[str] = []
+        for el in container.find_all(["p", "h2", "h3", "blockquote", "li"], limit=100):
+            if not isinstance(el, Tag):
+                continue
+            if el.find_parent(["aside", "nav", "footer", "header"]):
+                continue
+            text = el.get_text(" ", strip=True)
+            if len(text) < 40:
+                continue
+            if BOILERPLATE_START.match(text) or BOILERPLATE_SUBSTRING.search(text):
+                continue
+            parts.append(text)
+        plain = clean_body_text("\n\n".join(parts)) if parts else clean_body_text(container.get_text(" ", strip=True))
+        return plain, imgs
+    except Exception:  # noqa: BLE001
+        return "", []
+
+
+def _rss_item_raw_html(item: Element) -> str:
+    enc = item.find(RSS_CONTENT_ENCODED)
+    if enc is not None and (enc.text or "").strip():
+        return (enc.text or "").strip()
+    desc = item.findtext("description") or ""
+    return desc.strip()
+
+
+def _atom_entry_raw_html(entry: Element) -> str:
+    content_el = entry.find("atom:content", ATOM_NS)
+    if content_el is not None and (content_el.text or "").strip():
+        return (content_el.text or "").strip()
+    summary = entry.findtext("atom:summary", default="", namespaces=ATOM_NS) or ""
+    return summary.strip()
+
+
+def merge_image_lists(max_total: int, rss: List[Dict[str, str]], fetched: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    seen: set[str] = set()
+    merged: List[Dict[str, str]] = []
+    for lst in (rss, fetched):
+        for item in lst:
+            u = item.get("url") or ""
+            if not u or u in seen:
+                continue
+            seen.add(u)
+            merged.append({"url": u, "alt": item.get("alt") or "Illustration from the linked source article"})
+            if len(merged) >= max_total:
+                return merged
+    return merged
+
+
+def parse_feed(
+    xml_blob: bytes,
+    source: Dict[str, Any],
+    fetch_full_article_when_below: int,
+    max_article_images: int,
+) -> List[Dict[str, Any]]:
     results: List[Dict[str, Any]] = []
     try:
         root = ET.fromstring(xml_blob)
     except ET.ParseError as exc:
         raise RuntimeError(f"Unable to parse XML for source {source['name']}: {exc}")
 
-    # RSS
     items = root.findall("./channel/item")
     if items:
         for item in items:
             title = (item.findtext("title") or "Untitled").strip()
             link = (item.findtext("link") or "").strip()
-            description = item.findtext("description") or item.findtext("content:encoded", default="")
-            link = (item.findtext("link") or "").strip()
-            # Try to fetch full article content
-            full_content = extract_main_content_from_url(link) if link else ""
-            if full_content and len(full_content) > 200:
-                description = full_content
-            pub_date = item.findtext("pubDate") or item.findtext("dc:date")
             if not link:
                 continue
+            raw_html = _rss_item_raw_html(item)
+            rss_plain = clean_body_text(extract_article_text_from_html(raw_html) or strip_html(raw_html))
+            article_host = article_page_host(link)
+            rss_images = extract_https_images_from_html(raw_html, link, article_host, max_article_images)
+            description = rss_plain
+            fetch_images: List[Dict[str, str]] = []
+            if len(rss_plain) < fetch_full_article_when_below:
+                fetched_text, fetch_images = fetch_article_plain_and_images(link, article_host, max_article_images)
+                if fetched_text and len(fetched_text) > len(description):
+                    description = fetched_text
+            images = merge_image_lists(max_article_images, rss_images, fetch_images or [])
+            pub_date = item.findtext("pubDate") or item.findtext("{http://purl.org/dc/elements/1.1/}date")
             results.append(
                 {
                     "title": title,
                     "link": link,
-                    "description": strip_html(description or ""),
+                    "description": description,
+                    "images": images,
                     "published_at": parse_date(pub_date),
                     "source_name": source["name"],
                     "source_weight": int(source.get("weight", 1)),
                     "category": source.get("category"),
-                    "language": source.get("default_language", "en")
+                    "language": source.get("default_language", "en"),
                 }
             )
         return results
 
-    # Atom
-    ns = {
-        "atom": "http://www.w3.org/2005/Atom"
-    }
-    entries = root.findall("atom:entry", ns)
+    entries = root.findall("atom:entry", ATOM_NS)
     for entry in entries:
-        title = (entry.findtext("atom:title", default="Untitled", namespaces=ns) or "Untitled").strip()
-        link_node = entry.find("atom:link", ns)
+        title = (entry.findtext("atom:title", default="Untitled", namespaces=ATOM_NS) or "Untitled").strip()
+        link_nodes = entry.findall("atom:link", ATOM_NS)
         link = ""
-        if link_node is not None:
-            link = (link_node.attrib.get("href") or "").strip()
-        summary = entry.findtext("atom:summary", default="", namespaces=ns)
-        content = entry.findtext("atom:content", default="", namespaces=ns)
-        link_node = entry.find("atom:link", ns)
-        link = ""
-        if link_node is not None:
-            link = (link_node.attrib.get("href") or "").strip()
-        # Try to fetch full article content
-        full_content = extract_main_content_from_url(link) if link else ""
-        if full_content and len(full_content) > 200:
-            summary = full_content
-        published = entry.findtext("atom:published", default="", namespaces=ns) or entry.findtext("atom:updated", default="", namespaces=ns)
+        for ln in link_nodes:
+            rel = (ln.attrib.get("rel") or "alternate").strip()
+            href = (ln.attrib.get("href") or "").strip()
+            if href and rel in ("alternate", "http://www.iana.org/assignments/relation/alternate"):
+                link = href
+                break
+        if not link:
+            for ln in link_nodes:
+                href = (ln.attrib.get("href") or "").strip()
+                if href:
+                    link = href
+                    break
         if not link:
             continue
+        raw_html = _atom_entry_raw_html(entry)
+        rss_plain = clean_body_text(extract_article_text_from_html(raw_html) or strip_html(raw_html))
+        article_host = article_page_host(link)
+        rss_images = extract_https_images_from_html(raw_html, link, article_host, max_article_images)
+        description = rss_plain
+        fetch_images = []
+        if len(rss_plain) < fetch_full_article_when_below:
+            fetched_text, fetch_images = fetch_article_plain_and_images(link, article_host, max_article_images)
+            if fetched_text and len(fetched_text) > len(description):
+                description = fetched_text
+        images = merge_image_lists(max_article_images, rss_images, fetch_images)
+        published = entry.findtext("atom:published", default="", namespaces=ATOM_NS) or entry.findtext(
+            "atom:updated", default="", namespaces=ATOM_NS
+        )
         results.append(
             {
                 "title": title,
                 "link": link,
-                "description": strip_html(summary or content or ""),
+                "description": description,
+                "images": images,
                 "published_at": parse_date(published),
                 "source_name": source["name"],
                 "source_weight": int(source.get("weight", 1)),
                 "category": source.get("category"),
-                "language": source.get("default_language", "en")
+                "language": source.get("default_language", "en"),
             }
         )
     return results
@@ -239,7 +563,7 @@ def score_item(item: Dict[str, Any], keyword_weights: Dict[str, int], now: datet
     text_blob = f"{item['title']} {item['description']}".lower()
 
     age_hours = max(0.0, (now - item["published_at"]).total_seconds() / 3600)
-    freshness = max(0.0, 45.0 - (age_hours / 4.0))
+    freshness = max(0.0, 48.0 - (age_hours / 3.5))
 
     relevance = 0.0
     for keyword, weight in keyword_weights.items():
@@ -248,10 +572,16 @@ def score_item(item: Dict[str, Any], keyword_weights: Dict[str, int], now: datet
 
     quality = 0.0
     content_len = len(item["description"])
-    if content_len >= 80:
-        quality += 6.0
-    if content_len >= 160:
+    if content_len >= 120:
+        quality += 7.0
+    if content_len >= 320:
+        quality += 5.0
+    if content_len >= 900:
         quality += 4.0
+
+    word_count = len(re.findall(r"\w+", item["description"]))
+    if word_count >= 180:
+        quality += 3.0
 
     source_weight = float(item.get("source_weight", 1)) * 6.0
     return round(freshness + relevance + quality + source_weight, 4)
@@ -259,7 +589,9 @@ def score_item(item: Dict[str, Any], keyword_weights: Dict[str, int], now: datet
 
 def detect_language(text: str, fallback: str = "en") -> str:
     lowered = text.lower()
-    if any(token in lowered for token in [" el ", " la ", " de ", " y ", " para "]) and any(token in lowered for token in [" que ", " una ", " con "]):
+    if any(token in lowered for token in [" el ", " la ", " de ", " y ", " para "]) and any(
+        token in lowered for token in [" que ", " una ", " con "]
+    ):
         return "es"
     if any(token in lowered for token in [" le ", " la ", " de ", " et ", " pour "]) and " une " in lowered:
         return "fr"
@@ -279,13 +611,13 @@ def translate_to_english(text: str, source_lang: str) -> str:
                 "sl": source_lang,
                 "tl": "en",
                 "dt": "t",
-                "q": text
+                "q": text[:4800],
             }
         )
         url = f"https://translate.googleapis.com/translate_a/single?{query}"
         raw = safe_request(url, timeout=15, retries=2)
         payload = json.loads(raw.decode("utf-8"))
-        translated_chunks = []
+        translated_chunks: List[str] = []
         for part in payload[0]:
             translated_chunks.append(part[0])
         translated = "".join(translated_chunks).strip()
@@ -312,13 +644,17 @@ def sentence_split(text: str) -> List[str]:
     return [part.strip() for part in parts if part.strip()]
 
 
-def make_summary(text: str, max_chars: int = 240) -> str:
-    sentences = sentence_split(text)
+def make_summary(text: str, max_chars: int = 280) -> str:
+    base = clean_body_text(text, max_chars=6000)
+    sentences = sentence_split(base)
     if not sentences:
-        return "A new development with implications for automation, integration, and digital operations."
-    summary = " ".join(sentences[:2]).strip()
+        return "A timely signal for teams tightening integrations, automation guardrails, and operational workflows."
+    summary = " ".join(sentences[:3]).strip()
     if len(summary) > max_chars:
-        summary = summary[: max_chars - 1].rstrip() + "…"
+        summary = summary[: max_chars - 1].rstrip()
+        if " " in summary:
+            summary = summary.rsplit(" ", 1)[0]
+        summary += "…"
     return summary
 
 
@@ -326,133 +662,277 @@ def make_takeaways(title: str, body: str) -> List[str]:
     text = f"{title} {body}".lower()
     takeaways: List[str] = []
 
-    if "api" in text or "integration" in text:
-        takeaways.append("Map this update to your integration contracts and monitor for schema or endpoint changes.")
-    if "security" in text or "compliance" in text:
-        takeaways.append("Review access policies and audit controls before rolling this pattern into production workflows.")
-    if "agent" in text or "ai" in text:
-        takeaways.append("Use this as a candidate for a narrow pilot that can prove measurable business impact quickly.")
-    if "cloud" in text or "azure" in text:
-        takeaways.append("Assess where this capability can replace manual operational runbooks in your current stack.")
+    if "api" in text or "integration" in text or "sdk" in text:
+        takeaways.append("Inventory dependent integrations and add regression checks before you widen rollout.")
+    if "security" in text or "compliance" in text or "breach" in text or "vulnerability" in text:
+        takeaways.append("Pair technical changes with access reviews, logging, and an explicit rollback path.")
+    if "agent" in text or " copilot" in text or "llm" in text or " ai " in text:
+        takeaways.append("Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains.")
+    if "cloud" in text or "azure" in text or "aws" in text:
+        takeaways.append("Map spend, quotas, and identity boundaries so new services do not sprawl unmanaged.")
+    if "github" in text or "devops" in text or "ci" in text or "cd" in text:
+        takeaways.append("Treat platform shifts as engineering-wide: update templates, docs, and onboarding paths together.")
 
     if not takeaways:
         takeaways = [
-            "Evaluate relevance against your highest-friction manual process first.",
-            "Translate findings into one practical workflow experiment with a clear KPI."
+            "Start from the highest-friction manual process this story touches.",
+            "Ship one measurable workflow experiment rather than a broad mandate.",
         ]
 
     return takeaways[:3]
+
+
+def make_why_it_matters(title: str, summary: str, body: str) -> str:
+    blob = f"{title} {summary} {body}".lower()
+    sentences = sentence_split(clean_body_text(body, max_chars=4000) or summary)
+    lead = sentences[0] if sentences else summary
+    angles: List[str] = []
+    if any(k in blob for k in ("security", "breach", "hack", "ransom", "cisa", "vulnerability")):
+        angles.append("It reframes risk for teams that automate sensitive workflows and third-party data flows.")
+    if any(k in blob for k in ("agent", " copilot", "llm", "model", "inference")):
+        angles.append("It is a useful datapoint for how AI-assisted engineering and operations are converging in production.")
+    if any(k in blob for k in ("integration", "api", "platform", "workflow")):
+        angles.append("It highlights where brittle integrations become operational debt as vendors iterate quickly.")
+    if not angles:
+        angles.append("It helps prioritize where automation budgets should focus next quarter.")
+    return f"{lead} {angles[0]}".strip()
+
+
+def estimate_reading_minutes(*text_parts: str) -> int:
+    blob = " ".join(t for t in text_parts if t)
+    words = len(re.findall(r"\w+", blob))
+    return max(2, min(35, round(words / 220)))
 
 
 def escape_html(text: str) -> str:
     return html.escape(text, quote=True)
 
 
+def build_images_section(images: List[Dict[str, Any]]) -> str:
+    if not images:
+        return ""
+    figures: List[str] = [
+        '        <h2>Images from the source</h2>',
+        '        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>',
+        '        <div class="figure-grid" role="group" aria-label="Images from the source article">',
+    ]
+    for im in images:
+        url = escape_html(str(im.get("url") or ""))
+        alt = escape_html(str(im.get("alt") or "Article illustration"))
+        figures.append(
+            f'          <figure class="src-fig">'
+            f'<img src="{url}" alt="{alt}" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>'
+        )
+    figures.append("        </div>")
+    return "\n".join(figures)
+
+
 def render_post_html(metadata: Dict[str, Any]) -> str:
     takeaways_html = "\n".join(f"          <li>{escape_html(item)}</li>" for item in metadata["takeaways"])
+    read_min = int(metadata.get("reading_minutes") or 1)
+    category = escape_html(metadata.get("category") or "Automation Insights")
+    images_html = build_images_section(list(metadata.get("images") or []))
     return f"""<!DOCTYPE html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"UTF-8\">
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape_html(metadata['title'])} | TarsOnlineCafe</title>
-  <meta name=\"description\" content=\"{escape_html(metadata['summary'])}\">
-  <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
-  <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
-  <link href=\"https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap\" rel=\"stylesheet\">
-  <link rel=\"stylesheet\" href=\"/styles/themes.css\">
+  <meta name="description" content="{escape_html(metadata['summary'])}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
   <style>
     body {{
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #2d221b;
-      color: #f7efe2;
-      line-height: 1.7;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }}
+    .page-bg {{
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: 5.5rem 1rem 4rem;
     }}
     .wrap {{
-      max-width: 860px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 1.25rem 4rem;
     }}
-    .card {{
-      background: rgba(45, 34, 27, 0.65);
-      border: 1px solid rgba(247, 239, 226, 0.15);
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(10px);
+    .article-shell {{
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }}
+    .eyebrow {{
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
     }}
     .meta {{
-      color: #c9a96e;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
       display: flex;
-      gap: 0.75rem;
       flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }}
+    .pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
     }}
     h1 {{
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
       margin: 0 0 1rem;
-      line-height: 1.2;
+      color: var(--foam, #f7efe2);
+    }}
+    .lede {{
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
     }}
     h2 {{
-      margin-top: 2rem;
-      color: #c9a96e;
-      font-size: 1.2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
     }}
     p {{
       margin: 0 0 1rem;
-      color: #ede0cc;
+      color: rgba(237, 224, 204, 0.95);
     }}
-    a {{
-      color: #c9a96e;
+    ul {{
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
     }}
     li {{
-      margin-bottom: 0.6rem;
-      color: #ede0cc;
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }}
+    a {{
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }}
+    .source-row {{
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
     }}
     .back {{
-      display: inline-block;
-      margin-top: 1.25rem;
-      color: #f7efe2;
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
       text-decoration: none;
-      border: 1px solid rgba(247, 239, 226, 0.25);
+      border: 1px solid rgba(247, 239, 226, 0.28);
       border-radius: 999px;
-      padding: 0.45rem 0.95rem;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
     }}
     .back:hover {{
-      border-color: #c9a96e;
-      color: #c9a96e;
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }}
+    .img-disclaimer {{
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }}
+    .figure-grid {{
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }}
+    .src-fig {{
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }}
+    .src-fig img {{
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
     }}
   </style>
 </head>
 <body>
-  <main class=\"wrap\">
-    <article class=\"card\">
-      <div class=\"meta\">
-        <span>Automated Insight</span>
-        <span>{escape_html(metadata['date'])}</span>
-        <span>{escape_html(metadata['source_name'])}</span>
-      </div>
-      <h1>{escape_html(metadata['title'])}</h1>
-      <p>{escape_html(metadata['summary'])}</p>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+  </nav>
 
-      <h2>Why this matters</h2>
-      <p>{escape_html(metadata['why_it_matters'])}</p>
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">{category}</span>
+          <span class="pill">~{read_min} min read</span>
+          <span>{escape_html(metadata['date'])}</span>
+          <span>{escape_html(metadata['source_name'])}</span>
+        </div>
+        <h1>{escape_html(metadata['title'])}</h1>
+        <p class="lede">{escape_html(metadata['summary'])}</p>
 
-      <h2>Operational takeaways</h2>
-      <ul>
+{images_html}
+
+        <h2>Why this matters</h2>
+        <p>{escape_html(metadata['why_it_matters'])}</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
 {takeaways_html}
-      </ul>
+        </ul>
 
-      <h2>Source</h2>
-      <p>
-        Original article: <a href=\"{escape_html(metadata['source_url'])}\" target=\"_blank\" rel=\"noopener noreferrer\">{escape_html(metadata['source_name'])}</a>
-      </p>
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="{escape_html(metadata['source_url'])}" target="_blank" rel="noopener noreferrer">{escape_html(metadata['source_name'])} — original article</a>
+        </div>
 
-      <a class=\"back\" href=\"/blog/blog.html\">← Back to blog</a>
-    </article>
-  </main>
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
 </body>
 </html>
 """
@@ -463,7 +943,7 @@ def main() -> int:
     parser.add_argument("--max-posts", type=int, default=1)
     parser.add_argument("--min-score", type=float, default=34.0)
     parser.add_argument("--min-summary-length", type=int, default=120)
-    parser.add_argument("--min-description-length", type=int, default=140)
+    parser.add_argument("--min-description-length", type=int, default=200)
     parser.add_argument("--min-keyword-hits", type=int, default=2)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
@@ -482,13 +962,15 @@ def main() -> int:
     published_signatures = set(state.get("published_signatures", []))
     now = datetime.now(timezone.utc)
     keyword_weights = config.get("keywords", {})
-    allowed_domains = [normalize_domain(domain) for domain in config.get("allowed_domains", []) if normalize_domain(domain)]
+    allowed_domains = [normalize_domain(d) for d in config.get("allowed_domains", []) if normalize_domain(d)]
 
     quality_gate = config.get("quality_gate", {})
     min_score = float(quality_gate.get("min_score", args.min_score))
     min_summary_length = int(quality_gate.get("min_summary_length", args.min_summary_length))
     min_description_length = int(quality_gate.get("min_description_length", args.min_description_length))
     min_keyword_hits = int(quality_gate.get("min_keyword_hits", args.min_keyword_hits))
+    fetch_full_when_below = int(quality_gate.get("fetch_full_article_when_rss_chars_below", 900))
+    max_article_images = int(quality_gate.get("max_article_images", 6))
 
     fetched = 0
     candidates: List[Dict[str, Any]] = []
@@ -500,7 +982,7 @@ def main() -> int:
                 source_failures.append({"source": source.get("name", "unknown"), "error": "blocked-source-domain"})
                 continue
             xml_blob = safe_request(source["url"])
-            entries = parse_feed(xml_blob, source)
+            entries = parse_feed(xml_blob, source, fetch_full_when_below, max_article_images)
             fetched += len(entries)
             candidates.extend(entries)
         except Exception as exc:  # noqa: BLE001
@@ -524,9 +1006,9 @@ def main() -> int:
             item["score"],
             item["published_at"].timestamp(),
             item["source_weight"],
-            item["title"].lower()
+            item["title"].lower(),
         ),
-        reverse=True
+        reverse=True,
     )
 
     selected = [item for item in unseen_candidates if item["score"] >= min_score][: args.max_posts]
@@ -541,18 +1023,17 @@ def main() -> int:
         scored_blob = f"{item['title']} {translated_description}".lower()
 
         summary = make_summary(translated_description)
-        why_it_matters = (
-            "This signal can inform practical automation decisions, especially where teams need tighter workflows, "
-            "cleaner integrations, and less manual operational overhead."
-        )
-
+        why_it_matters = make_why_it_matters(item["title"], summary, translated_description)
         slug = make_slug(item["title"], item["published_at"], item["link"])
         file_name = f"{slug}.html"
         file_path = AUTO_DIR / file_name
 
-        post_title = f"{item['title']} — Practical Automation Insight"
+        post_title = item["title"].strip()
         takeaways = make_takeaways(item["title"], translated_description)
         post_date = item["published_at"].strftime("%Y-%m-%d")
+        reading_minutes = estimate_reading_minutes(post_title, summary, why_it_matters, " ".join(takeaways))
+        images = list(item.get("images") or [])
+        hero_image = images[0]["url"] if images else ""
 
         metadata = {
             "title": post_title,
@@ -567,7 +1048,9 @@ def main() -> int:
             "score": item["score"],
             "signature": item["signature"],
             "why_it_matters": why_it_matters,
-            "takeaways": takeaways
+            "takeaways": takeaways,
+            "reading_minutes": reading_minutes,
+            "images": images,
         }
 
         if len(summary) < min_summary_length:
@@ -584,19 +1067,21 @@ def main() -> int:
 
         if not args.dry_run:
             file_path.write_text(render_post_html(metadata), encoding="utf-8")
-            auto_posts.append(
-                {
-                    "title": metadata["title"],
-                    "date": metadata["date"],
-                    "category": metadata["category"],
-                    "summary": metadata["summary"],
-                    "link": metadata["link"],
-                    "source_url": metadata["source_url"],
-                    "source_name": metadata["source_name"],
-                    "automated": True,
-                    "language": "en"
-                }
-            )
+            entry: Dict[str, Any] = {
+                "title": metadata["title"],
+                "date": metadata["date"],
+                "category": metadata["category"],
+                "summary": metadata["summary"],
+                "link": metadata["link"],
+                "source_url": metadata["source_url"],
+                "source_name": metadata["source_name"],
+                "automated": True,
+                "language": "en",
+                "reading_minutes": reading_minutes,
+            }
+            if hero_image:
+                entry["hero_image"] = hero_image
+            auto_posts.append(entry)
             published_signatures.add(item["signature"])
 
         generated.append(
@@ -604,12 +1089,11 @@ def main() -> int:
                 "title": metadata["title"],
                 "link": metadata["link"],
                 "score": metadata["score"],
-                "source": metadata["source_name"]
+                "source": metadata["source_name"],
             }
         )
 
     if not args.dry_run:
-        # Dedupe by link and keep most recent by date
         dedup: Dict[str, Dict[str, Any]] = {}
         for post in auto_posts:
             existing = dedup.get(post["link"])
@@ -636,8 +1120,9 @@ def main() -> int:
         "min_summary_length": min_summary_length,
         "min_description_length": min_description_length,
         "min_keyword_hits": min_keyword_hits,
+        "fetch_full_article_when_rss_chars_below": fetch_full_when_below,
         "allowed_domains": allowed_domains,
-        "max_posts": args.max_posts
+        "max_posts": args.max_posts,
     }
 
     write_json(report_path, report)

@@ -521,6 +521,24 @@
   margin-bottom: 0.75rem;
 }
 
+.contact-hcaptcha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.contact-captcha-label {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--steamed-milk, #ede0cc);
+  font-weight: 500;
+}
+
+.contact-hcaptcha .h-captcha {
+  margin-top: 0.15rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .contact-submit.btn-loading { animation: none; }
   .success-steam span         { animation: none; opacity: 0.5; }

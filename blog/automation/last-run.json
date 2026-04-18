@@ -1,30 +1,24 @@
 {
   "status": "ok",
-  "timestamp": "2026-03-03T17:58:44.031771+00:00",
+  "timestamp": "2026-04-18T20:45:46.025279+00:00",
   "fetched_candidates": 50,
-  "unseen_candidates": 43,
-  "blocked_domain_candidates": 4,
-  "selected_candidates": 1,
-  "generated_posts": [
-    {
-      "title": "Hacked traffic cams and hijacked TVs: How cyber operations supported the war against Iran — Practical Automation Insight",
-      "link": "auto/20260303-hacked-traffic-cams-and-hijacked-tvs-how-cyber-operations-su-355beb8b.html",
-      "score": 77.9135,
-      "source": "TechCrunch"
-    }
-  ],
+  "unseen_candidates": 45,
+  "blocked_domain_candidates": 5,
+  "selected_candidates": 0,
+  "generated_posts": [],
   "skipped": [],
   "source_failures": [],
-  "dry_run": false,
-  "min_score": 34.0,
-  "min_summary_length": 120,
-  "min_description_length": 140,
+  "dry_run": true,
+  "min_score": 36.0,
+  "min_summary_length": 130,
+  "min_description_length": 220,
   "min_keyword_hits": 2,
+  "fetch_full_article_when_rss_chars_below": 900,
   "allowed_domains": [
     "azure.microsoft.com",
     "github.blog",
     "theverge.com",
     "techcrunch.com"
   ],
-  "max_posts": 1
+  "max_posts": 0
 }

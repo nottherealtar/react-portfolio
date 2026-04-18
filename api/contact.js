@@ -32,7 +32,7 @@ export default async function handler(req, res) {
         ],
         footer: {
             text: "TarsOnlineCafe Portfolio Contact",
-            icon_url: "https://media.discordapp.net/attachments/1170989523895865424/1170989562433126510/est_2020.png?ex=68380e03&is=6836bc83&hm=b1ba816d07092a6fd4f985e429036cd4fb63bc58322092544c221ba33fc4e49f&=&format=webp&quality=lossless"
+            icon_url: "https://www.tarsonlinecafe.work/67793100.png"
         },
         timestamp: new Date().toISOString()
     };

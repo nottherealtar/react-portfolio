@@ -14,6 +14,14 @@
 
     const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    function resetHcaptcha() {
+      try {
+        if (typeof hcaptcha !== 'undefined' && typeof hcaptcha.reset === 'function') {
+          hcaptcha.reset();
+        }
+      } catch (_) { /* noop */ }
+    }
+
   // ── Validation ────────────────────────────────────────
     function validateField(id, errorId, test, msg) {
       const input = document.getElementById(id);
@@ -84,6 +92,7 @@
         successEl.classList.remove('success-visible');
         form.hidden = false;
         form.reset();
+        resetHcaptcha();
         setGlobalError('');
         setBtn('default');
       });
@@ -101,7 +110,16 @@
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       setGlobalError('');
+      const captchaErr = document.getElementById('cf-captcha-error');
+      if (captchaErr) captchaErr.textContent = '';
       if (!validateAll()) { shakeBtn(); return; }
+
+      const hcaptchaField = form.querySelector('textarea[name="h-captcha-response"]');
+      if (hcaptchaField && !hcaptchaField.value.trim()) {
+        if (captchaErr) captchaErr.textContent = 'Please complete the verification.';
+        shakeBtn();
+        return;
+      }
 
       const emailInput = document.getElementById('cf-email');
       const replyToInput = document.getElementById('cf-replyto');
@@ -126,11 +144,13 @@
           showSuccess();
         } else {
           setBtn('error');
+          resetHcaptcha();
           setGlobalError(json.message || 'Submission failed. Please check your Web3Forms settings and try again.');
           shakeBtn();
         }
       } catch {
         setBtn('error');
+        resetHcaptcha();
         setGlobalError('Network error while sending. Please try again.');
         shakeBtn();
       }

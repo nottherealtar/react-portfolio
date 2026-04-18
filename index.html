@@ -6,19 +6,25 @@
     <title>Joshua Coetzer | Business Automation & Integration Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="/67793100.png" type="image/png">
+    <link rel="canonical" href="https://www.tarsonlinecafe.work/">
     <!-- SEO Configuration-->
     <meta name="description" content="Joshua Coetzer builds bespoke automation and integration solutions — Azure Logic Apps, Freshworks integrations, process automation, and API connectivity for businesses ready to stop doing things manually.">
     <meta name="keywords" content="Joshua Coetzer, Business Automation, Process Automation, Azure Logic Apps, Freshworks Integration, Freshdesk, Freshservice, API Integration, Python Automation, Bespoke Software, South Africa, Johannesburg">
+    <meta name="author" content="Joshua Coetzer">
+    <meta name="theme-color" content="#2d221b">
     <meta property="og:title" content="Joshua Coetzer | Business Automation & Integration Specialist">
     <meta property="og:description" content="Bespoke automation and integration solutions — Azure Logic Apps, Freshworks, API connectivity, and process automation for businesses in South Africa and beyond.">
     <meta property="og:url" content="https://www.tarsonlinecafe.work/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png">
+    <meta property="og:image" content="https://www.tarsonlinecafe.work/67793100.png">
+    <meta property="og:image:alt" content="TarsOnlineCafe — Joshua Coetzer">
+    <meta property="og:locale" content="en_ZA">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Joshua Coetzer | Business Automation & Integration Specialist">
     <meta name="twitter:description" content="Bespoke automation and integration solutions — Azure Logic Apps, Freshworks, API connectivity, and process automation for businesses ready to scale.">
+    <meta name="twitter:image" content="https://www.tarsonlinecafe.work/67793100.png">
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     [
@@ -27,7 +33,7 @@
         "@type": "Person",
         "name": "Joshua Coetzer",
         "url": "https://www.tarsonlinecafe.work/",
-        "image": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png",
+        "image": "https://www.tarsonlinecafe.work/67793100.png",
         "sameAs": [
           "https://github.com/nottherealtar",
           "https://www.linkedin.com/in/josh-coetzer-31a874239/"
@@ -64,7 +70,7 @@
         "@type": "Organization",
         "name": "TarsOnlineCafe",
         "url": "https://www.tarsonlinecafe.work/",
-        "logo": "https://cdn.discordapp.com/attachments/1170989523895865424/1170989562433126510/est_2020.png",
+        "logo": "https://www.tarsonlinecafe.work/67793100.png",
         "description": "Bespoke automation and integration services by Joshua Coetzer — Azure Logic Apps, Freshworks, Python automation, and API connectivity for businesses.",
         "founder": {
           "@type": "Person",
@@ -80,7 +86,7 @@
         "@type": "WebSite",
         "name": "Joshua Coetzer Portfolio",
         "url": "https://www.tarsonlinecafe.work/",
-        "description": "Portfolio website showcasing full stack development projects and skills",
+        "description": "Portfolio and services for bespoke business automation, integrations, and API connectivity — Azure Logic Apps, Freshworks, and Python.",
         "author": {
           "@type": "Person",
           "name": "Joshua Coetzer"
@@ -107,11 +113,14 @@
     ]
     </script>
     
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://web3forms.com">
+    <link rel="dns-prefetch" href="https://hcaptcha.com">
+    <link rel="dns-prefetch" href="https://newassets.hcaptcha.com">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Theme System -->
     <link rel="stylesheet" href="/styles/themes.css">
@@ -123,22 +132,34 @@
     <link rel="stylesheet" href="/styles/coffee-button.css">
     <link rel="stylesheet" href="/styles/lazy-loading.css">
     <link rel="stylesheet" href="/styles/performance-fallbacks.css">
+    <link rel="stylesheet" href="/styles/showcase.css">
     
     <!-- Performance Monitoring and Error Handling (Load First) -->
     <script src="/scripts/performance-monitor.js"></script>
     <script src="/scripts/error-boundaries.js"></script>
     
-    <!-- Component Scripts -->
-    <script src="/scripts/contact-animations.js"></script>
-    <script src="/scripts/coffee-button.js"></script>
-    <script src="/scripts/lazy-loading.js"></script>
-    <script src="/scripts/falling-leaves.js"></script>
-    <script src="/scripts/component-integration.js"></script>
     <style>
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0.75rem;
+            z-index: 10000;
+            padding: 0.5rem 1rem;
+            background: var(--crema, #c9a96e);
+            color: var(--espresso, #1a1108);
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            left: 0.75rem;
+            outline: 2px solid var(--foam, #f7efe2);
+            outline-offset: 2px;
+        }
         body {
             margin: 0;
             overflow-x: hidden;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
             background: #2d221b; /* Coffee brown */
         }
         #canvas-container {
@@ -643,14 +664,16 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <!-- Sticky Navigation -->
     <nav class="site-nav" role="navigation" aria-label="Main navigation">
-      <a href="#" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
         <span class="nav-logo-icon">☕</span>
         <span>TarsOnlineCafe</span>
       </a>
 
       <ul class="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
         <li><a href="#services" data-section="services">Services</a></li>
         <li><a href="#work" data-section="work">Work</a></li>
         <li><a href="#process" data-section="process">Process</a></li>
@@ -668,6 +691,7 @@
 
     <!-- Mobile overlay menu -->
     <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
@@ -677,7 +701,7 @@
 
     <div id="canvas-container"></div>
     
-    <div class="content">
+    <main id="main" class="content">
         <!-- Hero Section -->
         <section id="hero" class="hero-section">
           <canvas class="canvas hero-globe-canvas" aria-hidden="true"></canvas>
@@ -689,6 +713,7 @@
           </div>
 
           <div class="hero-card glass-card">
+            <p class="hero-kicker">Joshua Coetzer · Johannesburg · Automation &amp; integration</p>
             <div class="hero-badge" aria-hidden="true">JC</div>
 
             <h1 class="hero-headline">
@@ -714,22 +739,58 @@
           </div>
         </section>
 
-        <script src="/globe/index.js"></script>
+        <section class="proof-strip" aria-labelledby="proof-strip-title">
+          <div class="section-inner proof-strip-inner">
+            <p class="proof-strip-eyebrow">Working together</p>
+            <h2 id="proof-strip-title" class="proof-strip-title">What you can count on</h2>
+            <p class="proof-strip-lead">
+              I ship integrations and automation the same way I&apos;d run them in production: clear ownership, observable behavior, and room to evolve when your process changes.
+            </p>
+            <ul class="proof-strip-list" role="list">
+              <li class="proof-item" data-reveal>
+                <div class="proof-item-icon" aria-hidden="true"><i class="fas fa-route"></i></div>
+                <p class="proof-item-title">End-to-end ownership</p>
+                <p class="proof-item-desc">From discovery to handover — design, build, document, and walk your team through it.</p>
+              </li>
+              <li class="proof-item" data-reveal>
+                <div class="proof-item-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
+                <p class="proof-item-title">Production-minded</p>
+                <p class="proof-item-desc">Error paths, retries, and alerts so failures surface instead of silently piling up.</p>
+              </li>
+              <li class="proof-item" data-reveal>
+                <div class="proof-item-icon" aria-hidden="true"><i class="fas fa-comments"></i></div>
+                <p class="proof-item-title">Plain-language clarity</p>
+                <p class="proof-item-desc">Technical depth when you need it — without losing the business thread.</p>
+              </li>
+              <li class="proof-item" data-reveal>
+                <div class="proof-item-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+                <p class="proof-item-title">Systems that compound</p>
+                <p class="proof-item-desc">Work designed to connect: APIs, workflows, and data that stay maintainable.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <!-- About Section -->
-        <section id="about" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="terminal p-6 rounded-lg mb-8">
-                            <div class="flex mb-4">
-                                <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                            </div>
-                            <pre class="text-green-400">$ cat about_josh.txt</pre>
-                            <pre class="text-gray-300">
+        <section id="about" class="showcase-about">
+          <div class="section-inner">
+            <header class="showcase-about-header" data-reveal>
+              <p class="section-eyebrow">About</p>
+              <h2 class="section-title">The person behind the integrations</h2>
+              <p class="showcase-about-lead">
+                I&apos;m Joshua — I build the glue between your CRM, service desk, operations tools, and cloud so your team spends time on decisions, not copy-paste.
+              </p>
+            </header>
+
+            <div class="showcase-about-grid">
+              <div class="about-terminal-frame" data-reveal>
+                <div class="terminal p-6 rounded-lg">
+                  <div class="flex mb-4">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                  </div>
+                  <pre class="text-green-400">$ cat about_josh.txt</pre>
+                  <pre class="text-gray-300">
 Name: Joshua Coetzer
 Location: Johannesburg, South Africa
 Experience: 5+ years
@@ -739,42 +800,50 @@ Focus:
 - Freshworks Integrations
 - API Integration
 Currently: Building bespoke automation solutions
-                            </pre>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
-                        <p class="mb-6">
-                            I've spent years building the systems that businesses didn't know they needed — and couldn't operate without once they had them. From replacing manual Excel-and-email workflows with real infrastructure, to designing full commercial ecosystems on Azure from scratch, my work lives at the intersection of technical depth and practical business impact.
-                        </p>
-                        <p class="mb-6">
-                            When I'm not solving business problems, you'll find me with my wife, tending to my garden, or exploring what's next in the world of automation and AI.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/nottherealtar" class="text-indigo-300 hover:text-indigo-100">
-                                <i class="fab fa-github text-2xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" class="text-indigo-300 hover:text-indigo-100">
-                                <i class="fab fa-linkedin text-2xl"></i>
-                            </a>
-                        </div>
-                    </div>
+                  </pre>
                 </div>
+              </div>
+
+              <div class="about-story" data-reveal>
+                <h3>How I work with teams</h3>
+                <p>
+                  I&apos;ve spent years building systems businesses didn&apos;t know they needed — and couldn&apos;t operate without once they had them. From replacing Excel-and-email workflows with real infrastructure to designing commercial ecosystems on Azure from scratch, the through-line is always the same: fewer manual handoffs, clearer data, and workflows your ops team can trust.
+                </p>
+                <p>
+                  Away from the keyboard: time with my wife, the garden, and keeping up with where automation and AI are headed — so recommendations stay grounded in what&apos;s actually shippable.
+                </p>
+                <ul class="about-pill-row" aria-label="What you can expect">
+                  <li><span class="about-pill">Documented handovers</span></li>
+                  <li><span class="about-pill">Measurable outcomes</span></li>
+                  <li><span class="about-pill">Honest scoping</span></li>
+                </ul>
+                <div class="about-social">
+                  <a href="https://github.com/nottherealtar" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="services-section">
           <div class="section-inner">
-            <h2 class="section-title">What I build for you</h2>
-            <p class="section-subtitle">
-              Bespoke solutions that connect your tools, eliminate manual work, and let your team focus on what actually matters.
-            </p>
+            <div data-reveal>
+              <h2 class="section-title">What I build for you</h2>
+              <p class="section-subtitle">
+                Bespoke solutions that connect your tools, eliminate manual work, and let your team focus on what actually matters.
+              </p>
+            </div>
 
             <div class="services-grid">
 
               <!-- Card 1: Process Automation -->
-              <div class="service-card" tabindex="0">
+              <div class="service-card" tabindex="0" data-reveal>
                 <div class="service-stain" aria-hidden="true"></div>
                 <div class="service-icon-wrap">
                   <i class="fas fa-cogs service-icon" aria-hidden="true"></i>
@@ -792,7 +861,7 @@ Currently: Building bespoke automation solutions
               </div>
 
               <!-- Card 2: Azure Logic Apps -->
-              <div class="service-card" tabindex="0">
+              <div class="service-card" tabindex="0" data-reveal>
                 <div class="service-stain" aria-hidden="true"></div>
                 <div class="service-icon-wrap">
                   <i class="fas fa-cloud service-icon" aria-hidden="true"></i>
@@ -810,7 +879,7 @@ Currently: Building bespoke automation solutions
               </div>
 
               <!-- Card 3: Freshworks Integrations -->
-              <div class="service-card" tabindex="0">
+              <div class="service-card" tabindex="0" data-reveal>
                 <div class="service-stain" aria-hidden="true"></div>
                 <div class="service-icon-wrap">
                   <i class="fas fa-headset service-icon" aria-hidden="true"></i>
@@ -828,7 +897,7 @@ Currently: Building bespoke automation solutions
               </div>
 
               <!-- Card 4: API & Custom Forms -->
-              <div class="service-card" tabindex="0">
+              <div class="service-card" tabindex="0" data-reveal>
                 <div class="service-stain" aria-hidden="true"></div>
                 <div class="service-icon-wrap">
                   <i class="fas fa-plug service-icon" aria-hidden="true"></i>
@@ -852,33 +921,86 @@ Currently: Building bespoke automation solutions
         <!-- Case Studies Section -->
         <section id="work" class="case-studies-section">
           <div class="section-inner">
-            <h2 class="section-title">My Work</h2>
-            <p class="section-subtitle">
-              Real problems, real solutions. Details anonymized where necessary.
-            </p>
+            <div data-reveal>
+              <h2 class="section-title">My Work</h2>
+              <p class="section-subtitle">
+                Real problems, real solutions — plus one shipped product you can install today.
+              </p>
+            </div>
+
+            <article class="signature-spotlight" data-reveal aria-labelledby="signature-spotlight-title">
+              <div class="signature-spotlight-inner">
+                <div class="signature-spotlight-main">
+                  <div class="signature-spotlight-kicker">
+                    <span class="signature-badge">Signature project</span>
+                    <span class="signature-meta"><i class="fab fa-windows" aria-hidden="true"></i> Desktop · MIT</span>
+                  </div>
+                  <h3 id="signature-spotlight-title" class="signature-spotlight-title">TerrificOCR</h3>
+                  <p class="signature-spotlight-tagline">
+                    Fast, accurate, and polished OCR for PDFs — batch or single-file, live preview, and exports your team can actually use.
+                  </p>
+                  <ul class="signature-spotlight-highlights">
+                    <li>Drag-and-drop queue with real-time progress</li>
+                    <li>Multi-language OCR (English, Chinese, French, German, Japanese, Korean)</li>
+                    <li>Export to TXT, Markdown, JSON, or searchable PDF</li>
+                    <li>Standalone Windows build: Electron + embedded Python + Tesseract — no extra installs</li>
+                  </ul>
+                  <div class="signature-spotlight-stack" aria-label="Technologies">
+                    <span>Electron</span><span>React</span><span>Vite</span><span>Tesseract 5.5</span><span>PyMuPDF</span><span>Python</span>
+                  </div>
+                  <div class="signature-spotlight-actions">
+                    <a href="https://github.com/nottherealtar/TerrificOCR" class="signature-btn signature-btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    <a href="https://github.com/nottherealtar/TerrificOCR/releases" class="signature-btn signature-btn-secondary" target="_blank" rel="noopener noreferrer">Download releases</a>
+                  </div>
+                </div>
+                <aside class="signature-spotlight-aside" aria-label="Product snapshot">
+                  <div class="signature-aside-card">
+                    <div class="signature-aside-icon" aria-hidden="true"><i class="fas fa-file-pdf"></i></div>
+                    <p class="signature-aside-label">What it proves</p>
+                    <p class="signature-aside-text">
+                      End-to-end product thinking: installer pipeline, bundled runtimes, GitHub Actions, and a UI people enjoy opening — not just scripts on a server.
+                    </p>
+                  </div>
+                </aside>
+              </div>
+            </article>
+
+            <p class="signature-spotlight-footnote" data-reveal>Open source — see README for build and contribution guides.</p>
 
             <!-- Primary case study cards -->
             <div class="case-grid">
 
               <!-- Case Study 1 -->
-              <article class="case-card">
+              <article class="case-card" data-reveal>
                 <div class="case-tag">Freshworks Integration</div>
-                <h3 class="case-outcome">Seamless Ecosystems with non-native integrations</h3>
-                <p class="case-desc">
-                  A field services company was manually triaging 100+ weekly cases across departments. Built a Freshsales-driven 360° customer view that unifies FSM and other business apps through integrations, API pipelines, and Azure integration — with automated classification, routing, and escalation based on configurable business rules.
+                <h3 class="case-outcome">Seamless ecosystems through non-native integrations</h3>
+                <p class="case-lede">
+                  A field services company was manually triaging 100+ weekly cases across departments. I built a Freshsales-driven 360° customer view that unifies FSM and other apps — so the right team sees the right context without re-keying.
                 </p>
+                <details class="case-more">
+                  <summary>Technical depth</summary>
+                  <p class="case-more-body">
+                    API pipelines into Azure, automated classification and routing, escalation rules driven by your business logic — all tuned so operations could trust the workflow instead of fighting it.
+                  </p>
+                </details>
                 <div class="case-stack">
                   <span>Python</span><span>Freshsales API</span><span>Webhooks</span>
                 </div>
               </article>
 
               <!-- Case Study 2 -->
-              <article class="case-card">
+              <article class="case-card" data-reveal>
                 <div class="case-tag">Azure Logic Apps</div>
-                <h3 class="case-outcome">Replaced a 3-person daily data sync with a single workflow</h3>
-                <p class="case-desc">
-                  A logistics business was spending 2+ hours per day manually exporting, transforming, and importing data between their CRM and operations platform. Designed and deployed an Azure Logic Apps pipeline that runs on a schedule, handling transformation and error alerting automatically.
+                <h3 class="case-outcome">Replaced a 3-person daily data sync with one workflow</h3>
+                <p class="case-lede">
+                  A logistics team spent 2+ hours every day exporting, transforming, and importing data between CRM and operations. I designed a scheduled Azure Logic Apps pipeline so the sync runs reliably without babysitting spreadsheets.
                 </p>
+                <details class="case-more">
+                  <summary>Technical depth</summary>
+                  <p class="case-more-body">
+                    REST connectors, JSON transforms, and alerting on failure paths — so issues surface early and the team knows where to look when something drifts.
+                  </p>
+                </details>
                 <div class="case-stack">
                   <span>Azure Logic Apps</span><span>REST API</span><span>JSON Transform</span>
                 </div>
@@ -891,7 +1013,7 @@ Currently: Building bespoke automation solutions
               <h4 class="also-built-label">Also built</h4>
               <div class="also-grid">
 
-                <div class="also-card">
+                <div class="also-card" data-reveal>
                   <i class="fab fa-discord also-icon"></i>
                   <div class="also-content">
                     <div class="also-title">Discord Bot Cogs</div>
@@ -900,7 +1022,7 @@ Currently: Building bespoke automation solutions
                   </div>
                 </div>
 
-                <div class="also-card">
+                <div class="also-card" data-reveal>
                   <i class="fas fa-image also-icon"></i>
                   <div class="also-content">
                     <div class="also-title">Tar-Copy</div>
@@ -912,7 +1034,7 @@ Currently: Building bespoke automation solutions
                   </div>
                 </div>
 
-                <div class="also-card">
+                <div class="also-card" data-reveal>
                   <i class="fas fa-globe-americas also-icon"></i>
                   <div class="also-content">
                     <div class="also-title">Interactive 3D Globe</div>
@@ -928,10 +1050,12 @@ Currently: Building bespoke automation solutions
         <!-- How I Work Section -->
         <section id="process" class="process-section">
           <div class="section-inner process-inner">
-            <h2 class="section-title">How it works</h2>
-            <p class="section-subtitle">
-              A simple, transparent process — from first conversation to delivered solution.
-            </p>
+            <div data-reveal>
+              <h2 class="section-title">How it works</h2>
+              <p class="section-subtitle">
+                A simple, transparent process — from first conversation to delivered solution.
+              </p>
+            </div>
 
             <div class="process-timeline">
               <!-- SVG pour line -->
@@ -984,10 +1108,12 @@ Currently: Building bespoke automation solutions
         <!-- Testimonials Section -->
         <section id="testimonials" class="testimonials-section">
           <div class="section-inner">
-            <h2 class="section-title">What people say</h2>
+            <div data-reveal>
+              <h2 class="section-title">What people say</h2>
+            </div>
 
             <div class="testimonial-cards">
-              <blockquote class="testimonial-card">
+              <blockquote class="testimonial-card" data-reveal>
                 <div class="testimonial-quote-mark" aria-hidden="true">"</div>
                 <p class="testimonial-text">
                   Josh was a great asset to the team, knowledgeable and hardworking — always eager to assist teammates and customers with a smile. Great to have been able to work with you.
@@ -1024,10 +1150,12 @@ Currently: Building bespoke automation solutions
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
           <div class="section-inner contact-inner">
-            <h2 class="section-title">Let's work together</h2>
-            <p class="section-subtitle">
-              Tell me what you're trying to solve. I'll come back to you within 24 hours.
-            </p>
+            <div data-reveal>
+              <h2 class="section-title">Let's work together</h2>
+              <p class="section-subtitle">
+                Tell me what you're trying to solve. I'll come back to you within 24 hours.
+              </p>
+            </div>
 
             <div class="contact-card glass-card">
 
@@ -1075,6 +1203,23 @@ Currently: Building bespoke automation solutions
                   <label for="cf-message">Tell me about it <span class="required" aria-hidden="true">*</span></label>
                   <textarea id="cf-message" name="message" rows="5" required placeholder="Describe the problem you're trying to solve…"></textarea>
                   <span class="field-error" id="cf-message-error" role="alert"></span>
+                </div>
+
+                <!-- Web3Forms hCaptcha: https://docs.web3forms.com/getting-started/customizations/spam-protection/hcaptcha -->
+                <div class="contact-field contact-hcaptcha">
+                  <p id="cf-captcha-label" class="contact-captcha-label">
+                    Verification <span class="required" aria-hidden="true">*</span>
+                  </p>
+                  <div
+                    class="h-captcha"
+                    data-captcha="true"
+                    data-theme="dark"
+                    data-size="normal"
+                    role="group"
+                    aria-labelledby="cf-captcha-label"
+                    aria-describedby="cf-captcha-error"
+                  ></div>
+                  <span class="field-error" id="cf-captcha-error" role="alert"></span>
                 </div>
 
                 <button type="submit" id="cf-submit" class="contact-submit">
@@ -1129,23 +1274,25 @@ Currently: Building bespoke automation solutions
               </a>
               <a href="/blog/blog.html" aria-label="Blog">Blog</a>
             </div>
-            <p class="footer-copy">© 2020–2025 TarsOnlineCafe. All rights reserved.</p>
+            <p class="footer-copy">© 2020–2026 TarsOnlineCafe. All rights reserved.</p>
           </div>
         </footer>
-    </div>
+    </main>
 
     <script>
         // Falling leaves animation is now handled by falling-leaves.js
         // This script section is kept for any additional page-specific functionality
 
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for anchor links (respect reduced motion)
+        const smoothScroll = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const id = this.getAttribute('href');
+                if (!id || id === '#') return;
+                const target = document.querySelector(id);
+                if (!target) return;
                 e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: smoothScroll ? 'smooth' : 'auto' });
             });
         });
 
@@ -1195,6 +1342,16 @@ Currently: Building bespoke automation solutions
       window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
-    <script src="/scripts/nav.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    <script defer src="/globe/index.js"></script>
+    <script defer src="/scripts/falling-leaves.js"></script>
+    <script defer src="/scripts/lazy-loading.js"></script>
+    <script defer src="/scripts/coffee-button.js"></script>
+    <script defer src="https://web3forms.com/client/script.js"></script>
+    <script defer src="/scripts/contact-animations.js"></script>
+    <script defer src="/scripts/component-integration.js"></script>
+    <script defer src="/scripts/showcase-reveal.js"></script>
+    <script defer src="/scripts/nav.js"></script>
 </body>
 </html>

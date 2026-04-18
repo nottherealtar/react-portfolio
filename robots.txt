@@ -6,6 +6,8 @@ Allow: /
 
 # Disallow crawling of development/test files
 Disallow: /test-lazy-loading.html
+Disallow: /test-integration.html
+Disallow: /test-performance-monitoring.html
 Disallow: /.kiro/
 Disallow: /.vscode/
 Disallow: /.git/

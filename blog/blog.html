@@ -6,101 +6,245 @@
     <title>Blog | Joshua Coetzer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="icon" href="/67793100.png" type="image/png">
+    <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/blog.html">
     <meta name="description" content="Automation, integration, and AI implementation insights curated for real business outcomes.">
     <meta name="keywords" content="automation blog, integration, AI workflows, API, Azure, Freshworks, operations">
+    <meta name="author" content="Joshua Coetzer">
+    <meta name="theme-color" content="#2d221b">
+    <meta property="og:title" content="Blog | Joshua Coetzer">
+    <meta property="og:description" content="Automation, integration, and AI implementation insights for real business outcomes.">
+    <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.tarsonlinecafe.work/67793100.png">
+    <meta property="og:image:alt" content="TarsOnlineCafe — Joshua Coetzer">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Joshua Coetzer">
+    <meta name="twitter:description" content="Automation, integration, and AI implementation insights for real business outcomes.">
+    <meta name="twitter:image" content="https://www.tarsonlinecafe.work/67793100.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/styles/themes.css">
     <link rel="stylesheet" href="/styles/nav.css">
 
     <style>
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: #2d221b;
-            color: #f7efe2;
+            font-family: Inter, system-ui, sans-serif;
+            background: var(--dark-roast, #2d221b);
+            color: var(--foam, #f7efe2);
         }
 
         .blog-page {
             min-height: 100vh;
-            background: radial-gradient(circle at top, rgba(201, 169, 110, 0.12), transparent 60%);
-            padding-top: 6.5rem;
+            background:
+                radial-gradient(900px 420px at 12% -8%, rgba(201, 169, 110, 0.2), transparent 55%),
+                radial-gradient(700px 360px at 88% 5%, rgba(161, 134, 111, 0.12), transparent 52%),
+                var(--dark-roast, #2d221b);
+            padding-top: 5.75rem;
             padding-bottom: 4rem;
         }
 
         .section-inner {
-            max-width: 980px;
+            max-width: 1080px;
             margin: 0 auto;
             padding: 0 1.25rem;
         }
 
         .blog-hero {
-            background: rgba(45, 34, 27, 0.62);
+            position: relative;
+            overflow: hidden;
+            background: rgba(45, 34, 27, 0.55);
             border: 1px solid rgba(247, 239, 226, 0.12);
-            backdrop-filter: blur(10px);
-            border-radius: 22px;
-            padding: 2.4rem 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
+            backdrop-filter: blur(14px);
+            border-radius: 26px;
+            padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 1.75rem;
+        }
+
+        .blog-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, transparent 40%, rgba(201, 169, 110, 0.06) 100%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1.35fr 1fr;
+            }
         }
 
         .hero-kicker {
-            color: #c9a96e;
+            color: var(--crema, #c9a96e);
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-size: 0.78rem;
-            margin-bottom: 0.75rem;
+            letter-spacing: 0.12em;
+            font-size: 0.72rem;
+            font-weight: 600;
+            margin-bottom: 0.65rem;
         }
 
         .hero-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-family: "DM Serif Display", Georgia, serif;
+            font-size: clamp(2rem, 4.2vw, 3.15rem);
             margin: 0;
-            line-height: 1.15;
+            line-height: 1.12;
         }
 
         .hero-subtitle {
-            color: #ede0cc;
+            color: rgba(237, 224, 204, 0.92);
             margin-top: 1rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 0;
             line-height: 1.65;
+            max-width: 36rem;
         }
 
         .hero-actions {
             display: flex;
-            justify-content: center;
-            gap: 0.8rem;
             flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1.35rem;
         }
 
         .hero-btn {
             border-radius: 999px;
-            padding: 0.55rem 1rem;
+            padding: 0.55rem 1.1rem;
             text-decoration: none;
-            font-size: 0.88rem;
-            border: 1px solid rgba(247, 239, 226, 0.3);
-            color: #f7efe2;
-            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid rgba(247, 239, 226, 0.28);
+            color: var(--foam, #f7efe2);
+            transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
 
         .hero-btn.primary {
-            background: #c9a96e;
-            color: #1a1108;
-            border-color: #c9a96e;
+            background: var(--crema, #c9a96e);
+            color: var(--espresso, #1a1108);
+            border-color: var(--crema, #c9a96e);
         }
 
         .hero-btn:hover {
             transform: translateY(-2px);
-            border-color: #c9a96e;
-            color: #c9a96e;
+            border-color: var(--crema, #c9a96e);
+            color: var(--crema, #c9a96e);
         }
 
         .hero-btn.primary:hover {
-            background: #f7efe2;
-            color: #1a1108;
+            background: var(--foam, #f7efe2);
+            color: var(--espresso, #1a1108);
+        }
+
+        .hero-aside {
+            border-radius: 18px;
+            border: 1px solid rgba(247, 239, 226, 0.1);
+            background: rgba(26, 17, 8, 0.35);
+            padding: 1.1rem 1.2rem;
+            font-size: 0.82rem;
+            color: rgba(237, 224, 204, 0.88);
+            line-height: 1.55;
+        }
+
+        .hero-aside strong {
+            color: var(--crema, #c9a96e);
+            font-weight: 600;
+        }
+
+        .blog-toolbar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (min-width: 640px) {
+            .blog-toolbar {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .search-wrap {
+            flex: 1;
+            max-width: 420px;
+            position: relative;
+        }
+
+        .search-wrap i {
+            position: absolute;
+            left: 0.95rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(201, 169, 110, 0.65);
+            font-size: 0.85rem;
+        }
+
+        .search-input {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 999px;
+            border: 1px solid rgba(247, 239, 226, 0.18);
+            background: rgba(26, 17, 8, 0.45);
+            color: var(--foam, #f7efe2);
+            padding: 0.55rem 1rem 0.55rem 2.35rem;
+            font-family: inherit;
+            font-size: 0.88rem;
+        }
+
+        .search-input::placeholder {
+            color: rgba(247, 239, 226, 0.45);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: rgba(201, 169, 110, 0.55);
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            align-items: center;
+        }
+
+        .filter-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(201, 169, 110, 0.85);
+            font-weight: 600;
+            margin-right: 0.25rem;
+        }
+
+        .chip {
+            cursor: pointer;
+            border-radius: 999px;
+            padding: 0.28rem 0.75rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            border: 1px solid rgba(247, 239, 226, 0.16);
+            background: transparent;
+            color: rgba(237, 224, 204, 0.88);
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .chip:hover,
+        .chip.is-active {
+            border-color: rgba(201, 169, 110, 0.55);
+            color: var(--crema, #c9a96e);
+            background: rgba(201, 169, 110, 0.1);
         }
 
         .blog-list {
@@ -109,87 +253,192 @@
             gap: 1rem;
         }
 
+        @media (min-width: 768px) {
+            .blog-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
         .blog-card {
-            background: rgba(45, 34, 27, 0.6);
-            border: 1px solid rgba(247, 239, 226, 0.12);
-            border-radius: 18px;
-            padding: 1.35rem;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+            background: rgba(45, 34, 27, 0.58);
+            border: 1px solid rgba(247, 239, 226, 0.11);
+            border-radius: 20px;
+            padding: 1.25rem 1.35rem;
+            transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
         }
 
         .blog-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(201, 169, 110, 0.6);
+            transform: translateY(-4px);
+            border-color: rgba(201, 169, 110, 0.45);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+        }
+
+        .blog-card.featured {
+            grid-column: 1 / -1;
+            padding: clamp(1.35rem, 3vw, 1.75rem);
+            border-color: rgba(201, 169, 110, 0.28);
+            background: linear-gradient(135deg, rgba(45, 34, 27, 0.75), rgba(26, 17, 8, 0.55));
+        }
+
+        @media (min-width: 768px) {
+            .blog-card.featured {
+                display: grid;
+                grid-template-columns: 1.2fr 0.85fr;
+                gap: 1.25rem 1.75rem;
+                align-items: start;
+            }
+        }
+
+        .featured-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .featured-aside {
+            font-size: 0.86rem;
+            line-height: 1.55;
+            color: rgba(237, 224, 204, 0.88);
+            border-radius: 14px;
+            border: 1px solid rgba(247, 239, 226, 0.08);
+            padding: 1rem 1.1rem;
+            background: rgba(26, 17, 8, 0.35);
         }
 
         .post-meta {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.45rem 0.65rem;
             margin-bottom: 0.55rem;
-            font-size: 0.78rem;
+            font-size: 0.74rem;
         }
 
         .post-pill {
             border-radius: 999px;
-            padding: 0.2rem 0.58rem;
-            border: 1px solid rgba(201, 169, 110, 0.35);
-            color: #c9a96e;
-            background: rgba(201, 169, 110, 0.12);
+            padding: 0.18rem 0.55rem;
+            border: 1px solid rgba(201, 169, 110, 0.38);
+            color: var(--crema, #c9a96e);
+            background: rgba(201, 169, 110, 0.1);
+            font-weight: 500;
+        }
+
+        .post-pill.muted {
+            border-color: rgba(247, 239, 226, 0.15);
+            color: rgba(237, 224, 204, 0.75);
+            background: rgba(247, 239, 226, 0.04);
         }
 
         .post-date {
-            color: rgba(237, 224, 204, 0.8);
+            color: rgba(237, 224, 204, 0.72);
+        }
+
+        .post-read {
+            color: rgba(201, 169, 110, 0.85);
+            font-weight: 500;
         }
 
         .post-title {
             margin: 0;
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            line-height: 1.25;
+            font-family: "DM Serif Display", Georgia, serif;
+            font-size: 1.35rem;
+            line-height: 1.22;
+        }
+
+        .blog-card.featured .post-title {
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
         }
 
         .post-title a {
-            color: #f7efe2;
+            color: var(--foam, #f7efe2);
             text-decoration: none;
         }
 
         .post-title a:hover {
-            color: #c9a96e;
+            color: var(--crema, #c9a96e);
+        }
+
+        .post-thumb {
+            margin: 0 0 0.75rem;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(247, 239, 226, 0.1);
+            background: rgba(26, 17, 8, 0.4);
+        }
+
+        .post-thumb img {
+            display: block;
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-card.featured .post-thumb img {
+            max-height: 240px;
         }
 
         .post-summary {
-            margin: 0.6rem 0 0.95rem;
-            color: #ede0cc;
-            line-height: 1.65;
+            margin: 0.55rem 0 0.85rem;
+            color: rgba(237, 224, 204, 0.92);
+            line-height: 1.62;
+            flex: 1;
         }
 
         .post-links {
             display: flex;
-            gap: 0.85rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
             align-items: center;
+            margin-top: auto;
         }
 
         .post-link {
-            color: #c9a96e;
+            color: var(--crema, #c9a96e);
             text-decoration: none;
-            font-size: 0.86rem;
+            font-size: 0.84rem;
+            font-weight: 500;
         }
 
         .post-link:hover {
-            color: #f7efe2;
+            color: var(--foam, #f7efe2);
         }
 
         .source-note {
-            color: rgba(247, 239, 226, 0.68);
-            font-size: 0.8rem;
+            color: rgba(247, 239, 226, 0.55);
+            font-size: 0.78rem;
+        }
+
+        .skeleton-card {
+            border-radius: 20px;
+            height: 200px;
+            background: linear-gradient(
+                110deg,
+                rgba(45, 34, 27, 0.4) 0%,
+                rgba(201, 169, 110, 0.12) 45%,
+                rgba(45, 34, 27, 0.4) 90%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.2s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 2rem 1rem;
+            color: rgba(237, 224, 204, 0.8);
         }
 
         .site-footer {
             text-align: center;
-            margin-top: 2.2rem;
+            margin-top: 2.5rem;
             color: rgba(161, 134, 111, 0.75);
             font-size: 0.8rem;
         }
@@ -213,16 +462,34 @@
     <main class="blog-page">
         <div class="section-inner">
             <section class="blog-hero">
-                <div class="hero-kicker">Automation Journal</div>
-                <h1 class="hero-title">High-impact automation insights, published automatically.</h1>
-                <p class="hero-subtitle">
-                    Curated practical breakdowns on integration, AI, and operational systems — including fully automated insight posts with source attribution.
-                </p>
-                <div class="hero-actions">
-                    <a class="hero-btn primary" href="#blog-list">Browse Articles</a>
-                    <a class="hero-btn" href="/#contact">Start a Project</a>
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-kicker">Automation journal</div>
+                        <h1 class="hero-title">Curated signals on automation, AI, and integration.</h1>
+                        <p class="hero-subtitle">
+                            Long-form guides sit next to short <strong>automation briefs</strong> generated from trusted RSS sources,
+                            scored for relevance, and always linked to the primary reporting.
+                        </p>
+                        <div class="hero-actions">
+                            <a class="hero-btn primary" href="#blog-list">Browse the feed</a>
+                            <a class="hero-btn" href="/#contact">Work together</a>
+                        </div>
+                    </div>
+                    <aside class="hero-aside" aria-label="How this feed works">
+                        <strong>Quality bar.</strong> Each brief pulls structured text from the feed (or the article when the excerpt is thin),
+                        filters boilerplate, enforces keyword and length gates, then merges here with your manual posts.
+                    </aside>
                 </div>
             </section>
+
+            <div class="blog-toolbar">
+                <div class="search-wrap">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <label for="blog-search" class="sr-only">Search posts</label>
+                    <input id="blog-search" class="search-input" type="search" placeholder="Search titles and summaries…" autocomplete="off" />
+                </div>
+                <div class="filter-row" id="category-filters" aria-label="Filter by category"></div>
+            </div>
 
             <section id="blog-list" class="blog-list" aria-live="polite"></section>
 
@@ -233,69 +500,252 @@
     </main>
 
     <script>
-        const formatDate = (value) => {
-            const parsed = new Date(value);
-            if (Number.isNaN(parsed.getTime())) return value;
-            return parsed.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
-        };
+        (() => {
+            const listNode = document.getElementById('blog-list');
+            const searchInput = document.getElementById('blog-search');
+            const filterHost = document.getElementById('category-filters');
 
-        const renderPostCard = (post) => {
-            const article = document.createElement('article');
-            article.className = 'blog-card';
+            let allPosts = [];
+            let activeCategory = 'all';
+            let searchQuery = '';
 
-            const sourceMarkup = post.source_url
-                ? `<a class="post-link" href="${post.source_url}" target="_blank" rel="noopener noreferrer">Source ↗</a>`
-                : '';
+            const formatDate = (value) => {
+                const parsed = new Date(value);
+                if (Number.isNaN(parsed.getTime())) return value;
+                return parsed.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+            };
 
-            const sourceNameMarkup = post.source_name
-                ? `<span class="source-note">${post.source_name}</span>`
-                : '';
+            const textIncludes = (hay, needle) => hay.toLowerCase().includes(needle.toLowerCase());
 
-            const automatedPill = post.automated
-                ? `<span class="post-pill">Automated Insight</span>`
-                : '';
-
-            article.innerHTML = `
-                <div class="post-meta">
-                    <span class="post-pill">${post.category || 'Insights'}</span>
-                    ${automatedPill}
-                    <span class="post-date">${formatDate(post.date || '')}</span>
-                </div>
-                <h2 class="post-title"><a href="${post.link}">${post.title}</a></h2>
-                <p class="post-summary">${post.summary || ''}</p>
-                <div class="post-links">
-                    <a class="post-link" href="${post.link}">Read article →</a>
-                    ${sourceMarkup}
-                    ${sourceNameMarkup}
-                </div>
-            `;
-
-            return article;
-        };
-
-        fetch('posts.json')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Unable to load blog index');
+            const showSkeleton = () => {
+                listNode.innerHTML = '';
+                for (let i = 0; i < 4; i += 1) {
+                    const sk = document.createElement('div');
+                    sk.className = 'skeleton-card';
+                    listNode.appendChild(sk);
                 }
-                return response.json();
-            })
-            .then((posts) => {
-                const listNode = document.getElementById('blog-list');
-                if (!Array.isArray(posts) || !posts.length) {
-                    listNode.innerHTML = '<article class="blog-card"><p class="post-summary">No posts available yet. Check back soon.</p></article>';
+            };
+
+            const buildCategoryFilters = (posts) => {
+                filterHost.innerHTML = '';
+                const label = document.createElement('span');
+                label.className = 'filter-label';
+                label.textContent = 'Topics';
+                filterHost.appendChild(label);
+
+                const categories = Array.from(
+                    new Set(posts.map((p) => p.category).filter(Boolean))
+                ).sort((a, b) => a.localeCompare(b));
+
+                const mkChip = (value, caption) => {
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'chip';
+                    btn.dataset.category = value;
+                    btn.textContent = caption;
+                    btn.addEventListener('click', () => {
+                        activeCategory = value;
+                        filterHost.querySelectorAll('.chip').forEach((c) => c.classList.toggle('is-active', c.dataset.category === value));
+                        render();
+                    });
+                    return btn;
+                };
+
+                const allBtn = mkChip('all', 'All');
+                allBtn.classList.add('is-active');
+                filterHost.appendChild(allBtn);
+                categories.forEach((cat) => filterHost.appendChild(mkChip(cat, cat)));
+            };
+
+            const matchesFilters = (post) => {
+                if (activeCategory !== 'all' && post.category !== activeCategory) return false;
+                if (!searchQuery.trim()) return true;
+                const q = searchQuery.trim();
+                return (
+                    textIncludes(post.title || '', q) ||
+                    textIncludes(post.summary || '', q) ||
+                    textIncludes(post.source_name || '', q)
+                );
+            };
+
+            const appendHeroThumb = (container, post) => {
+                const url = post.hero_image;
+                if (!url || typeof url !== 'string' || !url.startsWith('https://')) return;
+                const wrap = document.createElement('div');
+                wrap.className = 'post-thumb';
+                const im = document.createElement('img');
+                im.src = url;
+                im.alt = (post.title || 'Post').slice(0, 120);
+                im.loading = 'lazy';
+                im.decoding = 'async';
+                im.setAttribute('referrerpolicy', 'no-referrer');
+                wrap.appendChild(im);
+                container.appendChild(wrap);
+            };
+
+            const appendMeta = (container, post) => {
+                const row = document.createElement('div');
+                row.className = 'post-meta';
+
+                const cat = document.createElement('span');
+                cat.className = 'post-pill';
+                cat.textContent = post.category || 'Insights';
+                row.appendChild(cat);
+
+                if (post.automated) {
+                    const autoPill = document.createElement('span');
+                    autoPill.className = 'post-pill muted';
+                    autoPill.textContent = 'Automation brief';
+                    row.appendChild(autoPill);
+                }
+
+                const date = document.createElement('span');
+                date.className = 'post-date';
+                date.textContent = formatDate(post.date || '');
+                row.appendChild(date);
+
+                const mins = post.reading_minutes;
+                if (mins != null) {
+                    const rm = document.createElement('span');
+                    rm.className = 'post-read';
+                    rm.textContent = `~${mins} min read`;
+                    row.appendChild(rm);
+                }
+
+                container.appendChild(row);
+            };
+
+            const appendLinks = (container, post) => {
+                const links = document.createElement('div');
+                links.className = 'post-links';
+
+                const read = document.createElement('a');
+                read.className = 'post-link';
+                read.href = post.link;
+                read.textContent = 'Read article →';
+                links.appendChild(read);
+
+                if (post.source_url) {
+                    const src = document.createElement('a');
+                    src.className = 'post-link';
+                    src.href = post.source_url;
+                    src.target = '_blank';
+                    src.rel = 'noopener noreferrer';
+                    src.textContent = 'Source ↗';
+                    links.appendChild(src);
+                }
+
+                if (post.source_name) {
+                    const note = document.createElement('span');
+                    note.className = 'source-note';
+                    note.textContent = post.source_name;
+                    links.appendChild(note);
+                }
+
+                container.appendChild(links);
+            };
+
+            const renderCard = (post, featured) => {
+                const article = document.createElement('article');
+                article.className = featured ? 'blog-card featured' : 'blog-card';
+
+                if (featured) {
+                    const body = document.createElement('div');
+                    body.className = 'featured-body';
+                    appendHeroThumb(body, post);
+                    appendMeta(body, post);
+                    const h2 = document.createElement('h2');
+                    h2.className = 'post-title';
+                    const la = document.createElement('a');
+                    la.href = post.link;
+                    la.textContent = post.title || '';
+                    h2.appendChild(la);
+                    body.appendChild(h2);
+                    const p = document.createElement('p');
+                    p.className = 'post-summary';
+                    p.textContent = post.summary || '';
+                    body.appendChild(p);
+                    appendLinks(body, post);
+                    article.appendChild(body);
+
+                    const aside = document.createElement('div');
+                    aside.className = 'featured-aside';
+                    aside.textContent = post.automated
+                        ? 'This entry is an automation brief: distilled from the linked source with editorial framing, not a verbatim republish.'
+                        : 'Hand-written article from the archive — same layout, consistent reading experience.';
+                    article.appendChild(aside);
+                } else {
+                    appendHeroThumb(article, post);
+                    appendMeta(article, post);
+                    const h2 = document.createElement('h2');
+                    h2.className = 'post-title';
+                    const la = document.createElement('a');
+                    la.href = post.link;
+                    la.textContent = post.title || '';
+                    h2.appendChild(la);
+                    article.appendChild(h2);
+                    const p = document.createElement('p');
+                    p.className = 'post-summary';
+                    p.textContent = post.summary || '';
+                    article.appendChild(p);
+                    appendLinks(article, post);
+                }
+
+                return article;
+            };
+
+            const render = () => {
+                const sorted = [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+                const filtered = sorted.filter(matchesFilters);
+
+                listNode.innerHTML = '';
+
+                if (!filtered.length) {
+                    const empty = document.createElement('p');
+                    empty.className = 'empty-state';
+                    empty.textContent = 'No posts match that filter. Try another topic or clear the search.';
+                    listNode.appendChild(empty);
                     return;
                 }
 
-                posts
-                    .sort((a, b) => new Date(b.date) - new Date(a.date))
-                    .forEach((post) => listNode.appendChild(renderPostCard(post)));
-            })
-            .catch((error) => {
-                console.error(error);
-                const listNode = document.getElementById('blog-list');
-                listNode.innerHTML = '<article class="blog-card"><p class="post-summary">Blog feed unavailable right now. Please refresh shortly.</p></article>';
+                filtered.forEach((post, index) => {
+                    listNode.appendChild(renderCard(post, index === 0));
+                });
+            };
+
+            searchInput.addEventListener('input', () => {
+                searchQuery = searchInput.value;
+                render();
             });
+
+            showSkeleton();
+
+            fetch('posts.json')
+                .then((response) => {
+                    if (!response.ok) throw new Error('Unable to load blog index');
+                    return response.json();
+                })
+                .then((posts) => {
+                    if (!Array.isArray(posts) || !posts.length) {
+                        listNode.innerHTML = '';
+                        const empty = document.createElement('p');
+                        empty.className = 'empty-state';
+                        empty.textContent = 'No posts available yet. Check back soon.';
+                        listNode.appendChild(empty);
+                        return;
+                    }
+                    allPosts = posts;
+                    buildCategoryFilters(posts);
+                    render();
+                })
+                .catch(() => {
+                    listNode.innerHTML = '';
+                    const empty = document.createElement('p');
+                    empty.className = 'empty-state';
+                    empty.textContent = 'Blog feed unavailable right now. Please refresh shortly.';
+                    listNode.appendChild(empty);
+                });
+        })();
     </script>
 </body>
 </html>

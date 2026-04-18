@@ -17,9 +17,10 @@
 
   // Hamburger toggle
   if (hamburger && overlay) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = hamburger.classList.toggle('open');
-      if (isOpen) {
+    function setMenuOpen(open) {
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) {
         overlay.style.display = 'flex';
         requestAnimationFrame(() => overlay.classList.add('open'));
         document.body.style.overflow = 'hidden';
@@ -30,17 +31,16 @@
           if (!overlay.classList.contains('open')) overlay.style.display = 'none';
         }, { once: true });
       }
+    }
+
+    hamburger.addEventListener('click', () => {
+      setMenuOpen(!hamburger.classList.contains('open'));
     });
 
     // Close overlay on any link click
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-        overlay.addEventListener('transitionend', () => {
-          if (!overlay.classList.contains('open')) overlay.style.display = 'none';
-        }, { once: true });
+        setMenuOpen(false);
       });
     });
   }

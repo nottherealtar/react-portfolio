@@ -294,6 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Wait a bit for theme controller to initialize
     setTimeout(() => {
         try {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                return;
+            }
             // Check if canvas is supported
             if (!window.performanceMonitor || window.performanceMonitor.isFeatureSupported('canvas')) {
                 const initFallingLeaves = () => {

@@ -3,6 +3,9 @@
  * Ensures all components work together and respond to theme changes
  */
 
+const __PORTFOLIO_DEBUG__ =
+  typeof location !== 'undefined' && /(?:^|[?&])debug=1(?:&|$)/.test(location.search);
+
 class ComponentIntegration {
     constructor() {
         this.components = new Map();
@@ -32,7 +35,7 @@ class ComponentIntegration {
             this.verifyIntegration();
             this.isInitialized = true;
             
-            console.log('✅ Component integration complete');
+            if (__PORTFOLIO_DEBUG__) console.log('Component integration complete');
         }, 200);
     }
 
@@ -64,12 +67,12 @@ class ComponentIntegration {
             this.components.set('coffeeButton', coffeeButton);
         }
 
-        console.log(`📦 Registered ${this.components.size} components`);
+        if (__PORTFOLIO_DEBUG__) console.log('Registered components:', this.components.size);
     }
 
     setupThemeIntegration() {
         if (!this.themeController) {
-            console.warn('⚠️ Theme controller not found');
+            if (__PORTFOLIO_DEBUG__) console.warn('Theme controller not found');
             return;
         }
 
@@ -85,7 +88,7 @@ class ComponentIntegration {
     }
 
     handleThemeChange(theme, themeData) {
-        console.log(`🎨 Applying theme: ${theme}`);
+        if (__PORTFOLIO_DEBUG__) console.log('Applying theme:', theme);
 
         // Update falling leaves animation
         const fallingLeaves = this.components.get('fallingLeavesAnimation');
@@ -270,9 +273,9 @@ class ComponentIntegration {
         }
 
         if (issues.length > 0) {
-            console.warn('⚠️ Integration issues found:', issues);
-        } else {
-            console.log('✅ All components integrated successfully');
+            if (__PORTFOLIO_DEBUG__) console.warn('Integration issues:', issues);
+        } else if (__PORTFOLIO_DEBUG__) {
+            console.log('All components integrated');
         }
 
         return issues.length === 0;
@@ -281,11 +284,11 @@ class ComponentIntegration {
     // Public methods for testing
     testThemeSwitch() {
         if (!this.themeController) {
-            console.error('Theme controller not available');
+            if (__PORTFOLIO_DEBUG__) console.error('Theme controller not available');
             return;
         }
 
-        console.log('🧪 Testing theme switch...');
+        if (__PORTFOLIO_DEBUG__) console.log('Testing theme switch…');
         const currentTheme = this.themeController.currentTheme;
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         
@@ -293,32 +296,32 @@ class ComponentIntegration {
         
         setTimeout(() => {
             this.themeController.setTheme(currentTheme);
-            console.log('✅ Theme switch test complete');
+            if (__PORTFOLIO_DEBUG__) console.log('Theme switch test complete');
         }, 2000);
     }
 
     testContactAnimation() {
         const contactAnimations = this.components.get('contactAnimations');
         if (!contactAnimations) {
-            console.error('Contact animations not available');
+            if (__PORTFOLIO_DEBUG__) console.error('Contact animations not available');
             return;
         }
 
-        console.log('🧪 Testing contact animation...');
+        if (__PORTFOLIO_DEBUG__) console.log('Testing contact animation…');
         contactAnimations.triggerSuccessAnimation();
-        console.log('✅ Contact animation test complete');
+        if (__PORTFOLIO_DEBUG__) console.log('Contact animation test complete');
     }
 
     testFallingLeaves() {
         const fallingLeaves = this.components.get('fallingLeavesAnimation');
         if (!fallingLeaves) {
-            console.error('Falling leaves animation not available');
+            if (__PORTFOLIO_DEBUG__) console.error('Falling leaves animation not available');
             return;
         }
 
-        console.log('🧪 Testing falling leaves...');
+        if (__PORTFOLIO_DEBUG__) console.log('Testing falling leaves…');
         fallingLeaves.restart();
-        console.log('✅ Falling leaves test complete');
+        if (__PORTFOLIO_DEBUG__) console.log('Falling leaves test complete');
     }
 
     // Get component status
@@ -345,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 const integrationTime = performance.now() - integrationStart;
                 if (integrationTime > 1000) { // More than 1 second
-                    console.warn('[ComponentIntegration] Slow integration detected:', integrationTime + 'ms');
+                    if (__PORTFOLIO_DEBUG__) console.warn('Slow component integration:', integrationTime + 'ms');
                     if (window.performanceMonitor) {
                         window.performanceMonitor.handleError('Slow Component Integration', 
                             new Error(`Integration took ${integrationTime}ms`));

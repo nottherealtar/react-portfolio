@@ -644,6 +644,167 @@ def sentence_split(text: str) -> List[str]:
     return [part.strip() for part in parts if part.strip()]
 
 
+def _leading_tokens_match(a: str, b: str, n_words: int = 12, min_equal: int = 6) -> bool:
+    """True when opening tokens of a and b largely match (catches lede repeated under a new heading)."""
+    aw = re.findall(r"\w+", (a or "").lower())[:n_words]
+    bw = re.findall(r"\w+", (b or "").lower())[:n_words]
+    if not aw or not bw:
+        return False
+    n = min(len(aw), len(bw), n_words)
+    if n < 4:
+        return False
+    equal = sum(1 for i in range(n) if aw[i] == bw[i])
+    return equal >= min_equal or equal >= max(5, int(0.62 * n))
+
+
+def _high_word_overlap(sentence: str, reference: str, threshold: float = 0.56) -> bool:
+    sw = set(re.findall(r"\w+", sentence.lower()))
+    rw = set(re.findall(r"\w+", reference.lower()))
+    if len(sw) < 8:
+        return False
+    return len(sw & rw) / len(sw) >= threshold
+
+
+def _truncate_sentence(s: str, max_len: int = 175) -> str:
+    s = (s or "").strip()
+    if len(s) <= max_len:
+        return s
+    cut = s[: max_len - 1]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut + "…"
+
+
+def _clip_paragraph(text: str, max_chars: int = 620) -> str:
+    text = text.strip()
+    if len(text) <= max_chars:
+        return text
+    cut = text[: max_chars - 1].rsplit(" ", 1)[0]
+    return cut + "…"
+
+
+def _pick_supplementary_context(sentences: List[str], summary: str, max_chars: int = 380) -> str:
+    """Pull one later sentence so 'Why this matters' does not repeat the lede/summary."""
+    if not sentences:
+        return ""
+    picked: List[str] = []
+    for idx, sent in enumerate(sentences):
+        if idx == 0:
+            continue
+        s = sent.strip()
+        if len(s) < 42:
+            continue
+        if _leading_tokens_match(s, summary):
+            continue
+        if _high_word_overlap(s, summary):
+            continue
+        picked.append(s)
+        if len(picked) >= 1:
+            break
+    text = " ".join(picked).strip()
+    if len(text) > max_chars:
+        text = text[: max_chars - 1].rsplit(" ", 1)[0] + "…"
+    return text
+
+
+def _collect_why_angles(blob: str) -> List[str]:
+    """Short interpretive sentences; blob must already be lowercased."""
+    angles: List[str] = []
+    if re.search(
+        r"\b(security|breach|ransomware|ransom|hacked|hacking|hack|vulnerability|exploit|malware|cisa)\b",
+        blob,
+    ):
+        angles.append(
+            "It reframes risk for teams that automate sensitive workflows and rely on third-party data flows."
+        )
+    if re.search(
+        r"\b(payment|payments|paytech|fintech|acquisition|acquires|acquired|merger|stripe|banking|wallet|processor)\b",
+        blob,
+    ):
+        angles.append(
+            "It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams."
+        )
+    if re.search(
+        r"\b(llm|chatgpt|openai|anthropic|gemini|copilot|machine learning|inference|foundational model)\b",
+        blob,
+    ):
+        angles.append(
+            "It is a useful datapoint for how AI-assisted engineering and operations are converging in production."
+        )
+    if re.search(
+        r"\b(api|sdk|graphql|microservice|kubernetes|k8s|observability|workflow automation|integrations?)\b",
+        blob,
+    ):
+        angles.append("It highlights where brittle integrations become operational debt as vendors iterate quickly.")
+    if re.search(r"\b(regulation|regulator|lawsuit|antitrust|policy|congress|senate)\b", blob):
+        angles.append(
+            "It matters for compliance and go-to-market planning when the rules of the road for tech are still unsettled."
+        )
+    if not angles:
+        angles.append("It helps prioritize where automation budgets and vendor reviews should focus next quarter.")
+    return angles
+
+
+def _extract_takeaway_sentences(body: str, summary: str, max_items: int = 3) -> List[str]:
+    sentences = sentence_split(clean_body_text(body, max_chars=5500) or "")
+    out: List[str] = []
+    for s in sentences[1:18]:
+        s = s.strip()
+        if len(s) < 48:
+            continue
+        if _leading_tokens_match(s, summary, n_words=10, min_equal=5):
+            continue
+        if _high_word_overlap(s, summary, threshold=0.52):
+            continue
+        out.append(_truncate_sentence(s, 178))
+        if len(out) >= max_items:
+            break
+    return out
+
+
+def _heuristic_takeaways(lowered: str) -> List[str]:
+    takeaways: List[str] = []
+    if re.search(r"\b(api|sdk|graphql)\b", lowered) or re.search(r"\bintegrations?\b", lowered):
+        takeaways.append("Inventory dependent integrations and add regression checks before you widen rollout.")
+    if re.search(
+        r"\b(security|compliance|breach|vulnerability|sso|oauth|zero trust)\b",
+        lowered,
+    ):
+        takeaways.append("Pair technical changes with access reviews, logging, and an explicit rollback path.")
+    if re.search(
+        r"\b(llm|chatgpt|anthropic|openai|gemini|copilot|\bai agents?\b|agentic)\b",
+        lowered,
+    ):
+        takeaways.append(
+            "Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains."
+        )
+    if re.search(r"\b(cloud|azure|aws|gcp|kubernetes|k8s)\b", lowered):
+        takeaways.append("Map spend, quotas, and identity boundaries so new services do not sprawl unmanaged.")
+    if re.search(r"\b(github|gitlab|devops|jenkins|terraform)\b", lowered) or re.search(
+        r"\b(ci|cd)\s+(pipeline|system|workflow|runs?|jobs?)\b",
+        lowered,
+    ):
+        takeaways.append(
+            "Treat platform shifts as engineering-wide: update templates, docs, and onboarding paths together."
+        )
+    if re.search(
+        r"\b(payment|payments|fraud|checkout|pricing|vendor|procurement|sla|contract)\b",
+        lowered,
+    ):
+        takeaways.append(
+            "Revisit commercial terms, SLAs, and failover paths when strategic rivals reshuffle partnerships."
+        )
+    return takeaways
+
+
+def _bullets_similar(a: str, b: str) -> bool:
+    aw = set(re.findall(r"\w+", a.lower()))
+    bw = set(re.findall(r"\w+", b.lower()))
+    if len(aw) < 6 or len(bw) < 6:
+        return False
+    return len(aw & bw) / min(len(aw), len(bw)) > 0.74
+
+
 def make_summary(text: str, max_chars: int = 280) -> str:
     base = clean_body_text(text, max_chars=6000)
     sentences = sentence_split(base)
@@ -658,44 +819,66 @@ def make_summary(text: str, max_chars: int = 280) -> str:
     return summary
 
 
-def make_takeaways(title: str, body: str) -> List[str]:
-    text = f"{title} {body}".lower()
-    takeaways: List[str] = []
-
-    if "api" in text or "integration" in text or "sdk" in text:
-        takeaways.append("Inventory dependent integrations and add regression checks before you widen rollout.")
-    if "security" in text or "compliance" in text or "breach" in text or "vulnerability" in text:
-        takeaways.append("Pair technical changes with access reviews, logging, and an explicit rollback path.")
-    if "agent" in text or " copilot" in text or "llm" in text or " ai " in text:
-        takeaways.append("Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains.")
-    if "cloud" in text or "azure" in text or "aws" in text:
-        takeaways.append("Map spend, quotas, and identity boundaries so new services do not sprawl unmanaged.")
-    if "github" in text or "devops" in text or "ci" in text or "cd" in text:
-        takeaways.append("Treat platform shifts as engineering-wide: update templates, docs, and onboarding paths together.")
-
-    if not takeaways:
-        takeaways = [
+def make_takeaways(title: str, body: str, summary: str, why_for_dedupe: str = "") -> List[str]:
+    """Blend extractive lines from the piece with a few tight, regex-gated heuristics."""
+    lowered = f"{title} {body}".lower()
+    why_l = (why_for_dedupe or "").lower()
+    extracted = _extract_takeaway_sentences(body, summary)
+    heuristics = _heuristic_takeaways(lowered)
+    merged: List[str] = []
+    for item in extracted + heuristics:
+        item = item.strip()
+        if not item:
+            continue
+        if why_l and (item.lower() in why_l or _high_word_overlap(item, why_for_dedupe, 0.48)):
+            continue
+        if any(_bullets_similar(item, existing) for existing in merged):
+            continue
+        merged.append(item)
+        if len(merged) >= 3:
+            break
+    if len(merged) < 2:
+        for filler in (
             "Start from the highest-friction manual process this story touches.",
             "Ship one measurable workflow experiment rather than a broad mandate.",
-        ]
-
-    return takeaways[:3]
+        ):
+            if not any(_bullets_similar(filler, existing) for existing in merged):
+                merged.append(filler)
+            if len(merged) >= 2:
+                break
+    return merged[:3]
 
 
 def make_why_it_matters(title: str, summary: str, body: str) -> str:
     blob = f"{title} {summary} {body}".lower()
-    sentences = sentence_split(clean_body_text(body, max_chars=4000) or summary)
-    lead = sentences[0] if sentences else summary
-    angles: List[str] = []
-    if any(k in blob for k in ("security", "breach", "hack", "ransom", "cisa", "vulnerability")):
-        angles.append("It reframes risk for teams that automate sensitive workflows and third-party data flows.")
-    if any(k in blob for k in ("agent", " copilot", "llm", "model", "inference")):
-        angles.append("It is a useful datapoint for how AI-assisted engineering and operations are converging in production.")
-    if any(k in blob for k in ("integration", "api", "platform", "workflow")):
-        angles.append("It highlights where brittle integrations become operational debt as vendors iterate quickly.")
-    if not angles:
-        angles.append("It helps prioritize where automation budgets should focus next quarter.")
-    return f"{lead} {angles[0]}".strip()
+    cleaned = clean_body_text(body, max_chars=4000) or summary
+    sentences = sentence_split(cleaned)
+    supplementary = _pick_supplementary_context(sentences, summary)
+    angles = _collect_why_angles(blob)
+    primary = angles[0]
+    secondary = angles[1] if len(angles) > 1 else ""
+
+    if supplementary:
+        parts = [supplementary, primary]
+        if secondary and len(supplementary) + len(primary) < 300:
+            parts.append(secondary)
+        return _clip_paragraph(" ".join(parts).strip())
+
+    if sentences:
+        lead = sentences[0].strip()
+        if not _leading_tokens_match(lead, summary) and not _high_word_overlap(lead, summary):
+            parts = [_truncate_sentence(lead, 300), primary]
+            if secondary:
+                parts.append(secondary)
+            return _clip_paragraph(" ".join(parts).strip())
+
+    hook = (
+        "It fills in incentives, timelines, and second-order effects that rarely survive the jump from headline to roadmap."
+    )
+    parts = [hook, primary]
+    if secondary:
+        parts.append(secondary)
+    return _clip_paragraph(" ".join(parts).strip())
 
 
 def estimate_reading_minutes(*text_parts: str) -> int:
@@ -1029,7 +1212,9 @@ def main() -> int:
         file_path = AUTO_DIR / file_name
 
         post_title = item["title"].strip()
-        takeaways = make_takeaways(item["title"], translated_description)
+        takeaways = make_takeaways(
+            item["title"], translated_description, summary, why_it_matters
+        )
         post_date = item["published_at"].strftime("%Y-%m-%d")
         reading_minutes = estimate_reading_minutes(post_title, summary, why_it_matters, " ".join(takeaways))
         images = list(item.get("images") or [])

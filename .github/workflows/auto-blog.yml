@@ -43,13 +43,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r scripts/requirements-blog.txt
+
       - name: Run auto blog generator
         shell: bash
         run: |
           set -euo pipefail
-
-          python -m pip install --upgrade pip
-          python -m pip install -r scripts/requirements-blog.txt
 
           MAX_POSTS="${{ github.event.inputs.max_posts }}"
           MIN_SCORE="${{ github.event.inputs.min_score }}"

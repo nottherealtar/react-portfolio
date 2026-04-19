@@ -36,7 +36,7 @@ These metrics are **repository-local**: they describe the merged blog index, aut
 
 ## Features
 
-- **Modern 3D Background:** Interactive Three.js 3D scene on every page.
+- **Interactive 3D globe:** The main portfolio page (`index.html`) loads Three.js via `/globe/index.js`. The blog index, 404 page, and generated auto posts do not; some manual posts include their own separate Three.js hero scenes.
 - **Responsive Design:** Built with Tailwind CSS for mobile and desktop.
 - **About, Skills, Projects:** Showcases background, technical skills, and featured projects.
 - **Blog:** Tech blog with AI news, coding guides, and project deep-dives.

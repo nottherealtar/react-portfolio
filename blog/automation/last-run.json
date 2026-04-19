@@ -1,22 +1,21 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-18T23:42:04.826421+00:00",
+  "timestamp": "2026-04-19T00:24:19.665932+00:00",
+  "extractive_engine": {
+    "enabled": true,
+    "embedding_model_configured": true
+  },
   "fetched_candidates": 50,
-  "unseen_candidates": 44,
+  "unseen_candidates": 42,
   "blocked_domain_candidates": 5,
-  "selected_candidates": 2,
+  "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
-      "link": "auto/20260330-microsoft-named-a-leader-in-2026-gartner-magic-quadrant-for-3e560a77.html",
-      "score": 115.0,
-      "source": "Microsoft Azure Blog"
-    },
-    {
-      "title": "Zoom teams up with World to verify humans in meetings",
-      "link": "auto/20260417-zoom-teams-up-with-world-to-verify-humans-in-meetings-3759feb2.html",
-      "score": 105.2996,
-      "source": "TechCrunch"
+      "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+      "link": "auto/20260414-hack-the-ai-agent-build-agentic-ai-security-skills-with-the-ed860607.html",
+      "score": 104.8269,
+      "source": "GitHub Blog",
+      "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
@@ -33,5 +32,5 @@
     "theverge.com",
     "techcrunch.com"
   ],
-  "max_posts": 2
+  "max_posts": 1
 }

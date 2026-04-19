@@ -28,6 +28,19 @@
     "search_plain": "Zoom teams up with World to verify humans in meetings | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Tech &amp; Startups ~2 min read 2026-04-17 TechCrunch Zoom teams up with World to verify humans in meetings Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. The threat is real and growing fast. The most dramatic example came in… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. It reframes risk for teams that automate sensitive workflows and third-party data flows. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pair technical changes with access reviews, logging, and an explicit rollback path. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Primary source TechCrunch — original article ← Back to journal"
   },
   {
+    "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
+    "date": "2026-04-14",
+    "category": "Developer Platform",
+    "summary": "Now, with Season 4, we are tackling the security challenges of AI systems that can act autonomously. Meet ProdBot: your deliberately vulnerable AI assistant Season 4 puts you inside ProdBot , your productivity bot, a deliberately vulnerable agentic coding assistant for your…",
+    "link": "auto/20260414-hack-the-ai-agent-build-agentic-ai-security-skills-with-the-ed860607.html",
+    "source_url": "https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Developer Platform ~2 min read 2026-04-14 GitHub Blog Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game Now, with Season 4, we are tackling the security challenges of AI systems that can act autonomously. Meet ProdBot: your deliberately vulnerable AI assistant Season 4 puts you inside ProdBot , your productivity bot, a deliberately vulnerable agentic coding assistant for your… Why this matters And Cisco’s State of AI Security 2026 report highlighted that while 83% of organizations planned to deploy agentic AI capabilities, only 29% felt ready to do so securely. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways When I created the first season in March 2023, the goal was straightforward: make security training that developers would enjoy. Why agentic AI security matters right now The timing is not a coincidence. Five levels, five upgrades, five vulnerabilities Each level of the game mirrors a stage in how real AI-powered tools evolve. Primary source GitHub Blog — original article ← Back to journal"
+  },
+  {
     "title": "Microsoft named a Leader in 2026 Gartner® Magic Quadrant™ for Integration Platform as a Service",
     "date": "2026-03-30",
     "category": "Cloud Automation",

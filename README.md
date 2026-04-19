@@ -2,6 +2,14 @@
 
 This is the source code for [Joshua Coetzer's portfolio website](https://www.tarsonlinecafe.work/).
 
+## Analytics
+
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-total.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-automated.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-manual.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-feeds.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-auto-html.json)
+
 ## Features
 
 - **Modern 3D Background:** Interactive Three.js 3D scene on every page.
@@ -61,7 +69,7 @@ The blog supports fully automated insight publishing with zero paid services.
 	- `python scripts/auto_blog_pipeline.py --max-posts 1 --dry-run`
 - Live generation:
 	- `python scripts/auto_blog_pipeline.py --max-posts 1`
-- Rebuild public feed + sitemap:
+- Rebuild public feed + sitemap + README analytics payloads:
 	- `python scripts/build_blog_posts.py`
 
 ### Operational files
@@ -69,6 +77,7 @@ The blog supports fully automated insight publishing with zero paid services.
 - Runtime report: `blog/automation/last-run.json`
 - Deduplication state: `blog/automation/state.json`
 - Generated post index: `blog/automation/auto-posts.json`
+- README analytics endpoints: `blog/automation/readme-analytics-*.json`
 
 ### Safety policy
 

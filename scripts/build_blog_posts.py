@@ -25,6 +25,41 @@ def write_json(path: Path, payload: Any) -> None:
         handle.write("\n")
 
 
+def _shields_endpoint(label: str, message: str, color: str = "informational") -> Dict[str, Any]:
+    return {
+        "schemaVersion": 1,
+        "label": label,
+        "message": str(message),
+        "color": color,
+    }
+
+
+def write_readme_analytics_shields(
+    merged_posts: List[Dict[str, Any]],
+    manual_posts: List[Dict[str, Any]],
+    auto_posts: List[Dict[str, Any]],
+) -> None:
+    """Shields.io custom endpoint JSON (https://shields.io/documentation/endpoint) for README badges."""
+    total = len(merged_posts)
+    automated = sum(1 for p in merged_posts if p.get("automated") is True)
+    manual = total - automated
+    sources_cfg = load_json(AUTOMATION_DIR / "sources.json", {})
+    feed_sources = len((sources_cfg.get("sources") or []))
+
+    auto_dir = BLOG_DIR / "auto"
+    auto_html = len(list(auto_dir.glob("*.html"))) if auto_dir.is_dir() else 0
+
+    write_json(AUTOMATION_DIR / "readme-analytics-total.json", _shields_endpoint("blog merged", total, "blue"))
+    write_json(AUTOMATION_DIR / "readme-analytics-automated.json", _shields_endpoint("blog automated", automated, "success"))
+    write_json(AUTOMATION_DIR / "readme-analytics-manual.json", _shields_endpoint("blog manual", manual, "informational"))
+    write_json(AUTOMATION_DIR / "readme-analytics-feeds.json", _shields_endpoint("RSS sources", feed_sources, "lightgrey"))
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-auto-html.json",
+        _shields_endpoint("blog/auto html", auto_html, "yellow"),
+    )
+
+
+
 def normalize_date(value: str) -> str:
     if not value:
         return "1970-01-01"
@@ -147,6 +182,7 @@ def main() -> int:
 
     write_json(BLOG_DIR / "posts.json", merged_posts)
     update_sitemap(merged_posts)
+    write_readme_analytics_shields(merged_posts, manual_posts, auto_posts)
 
     print(f"Merged {len(manual_posts)} manual + {len(auto_posts)} automated posts => {len(merged_posts)} published entries")
     return 0

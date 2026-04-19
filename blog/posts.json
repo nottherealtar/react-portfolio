@@ -1,5 +1,18 @@
 [
   {
+    "title": "Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "Three weeks ago I got tired of pasting API keys into .env files every time I spun up a new AI agent. Secrets managers like Vault and 1Password store secrets well but don't model agents , approvals , or agent-initiated tool requests . Every agent starts with zero access .",
+    "link": "auto/20260419-stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-gov-bef78f7f.html",
+    "source_url": "https://dev.to/cracadumi1/stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-governance-layer-in-3-weeks-233k",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-19 DEV Community Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks Three weeks ago I got tired of pasting API keys into .env files every time I spun up a new AI agent. Secrets managers like Vault and 1Password store secrets well but don&#x27;t model agents , approvals , or agent-initiated tool requests . Every agent starts with zero access . Why this matters It&#x27;s called AgentKey , and it launched today. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways GitHub, Linear, Stripe, Notion, Slack, Vercel — each agent ended up with god-mode credentials to half my stack, with no approval flow, no audit trail, no revocation story. If it needs something it doesn&#x27;t have: A human approves once in a dashboard. Agent API keys are SHA-256 hashed at rest. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0",
     "date": "2026-04-19",
     "category": "Coding & Community",

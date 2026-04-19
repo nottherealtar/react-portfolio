@@ -1,5 +1,17 @@
 [
   {
+    "title": "Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "Three weeks ago I got tired of pasting API keys into .env files every time I spun up a new AI agent. Secrets managers like Vault and 1Password store secrets well but don't model agents , approvals , or agent-initiated tool requests . Every agent starts with zero access .",
+    "link": "auto/20260419-stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-gov-bef78f7f.html",
+    "source_url": "https://dev.to/cracadumi1/stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-governance-layer-in-3-weeks-233k",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0",
     "date": "2026-04-19",
     "category": "Coding & Community",

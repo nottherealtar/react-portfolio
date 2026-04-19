@@ -1,26 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-19T01:50:14.341738+00:00",
+  "timestamp": "2026-04-19T06:53:29.337917+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 597,
-  "blocked_domain_candidates": 4,
-  "selected_candidates": 2,
+  "unseen_candidates": 598,
+  "blocked_domain_candidates": 3,
+  "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0",
-      "link": "auto/20260419-pricing-an-mcp-server-in-2026-why-we-charge-19-mo-when-the-m-61340b04.html",
-      "score": 116.8617,
-      "source": "DEV Community",
-      "text_engine": "embedding-mmr"
-    },
-    {
-      "title": "A Cross-OS Port Finder in Rust — One CLI, Three Completely Different Data Formats",
-      "link": "auto/20260419-a-cross-os-port-finder-in-rust-one-cli-three-completely-diff-936f907c.html",
-      "score": 116.7172,
+      "title": "Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks",
+      "link": "auto/20260419-stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-gov-bef78f7f.html",
+      "score": 129.9205,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
@@ -57,5 +50,5 @@
     "unrealengine.com",
     "vg247.com"
   ],
-  "max_posts": 2
+  "max_posts": 1
 }

@@ -1,25 +1,30 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-19T00:37:59.450151+00:00",
+  "timestamp": "2026-04-19T01:21:08.079056+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 50,
-  "unseen_candidates": 41,
-  "blocked_domain_candidates": 5,
+  "fetched_candidates": 607,
+  "unseen_candidates": 598,
+  "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Bringing more transparency to GitHub’s status page",
-      "link": "auto/20260417-bringing-more-transparency-to-github-s-status-page-b7a88493.html",
-      "score": 101.6762,
-      "source": "GitHub Blog",
+      "title": "What Egosoft's three decades of making space sims tells us about serving 'niche' audiences",
+      "link": "auto/20260417-what-egosoft-s-three-decades-of-making-space-sims-tells-us-a-6a88e02a.html",
+      "score": 134.7686,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
-  "source_failures": [],
+  "source_failures": [
+    {
+      "source": "Unreal Engine",
+      "error": "Unable to parse XML for source Unreal Engine: junk after document element: line 1, column 757"
+    }
+  ],
   "dry_run": false,
   "min_score": 36.0,
   "min_summary_length": 130,
@@ -27,10 +32,23 @@
   "min_keyword_hits": 2,
   "fetch_full_article_when_rss_chars_below": 900,
   "allowed_domains": [
+    "arstechnica.com",
     "azure.microsoft.com",
+    "blog.jetbrains.com",
+    "code.visualstudio.com",
+    "dev.to",
     "github.blog",
+    "stackoverflow.blog",
+    "store.steampowered.com",
+    "techcrunch.com",
     "theverge.com",
-    "techcrunch.com"
+    "eurogamer.net",
+    "gamedeveloper.com",
+    "gamespot.com",
+    "pcgamer.com",
+    "rockpapershotgun.com",
+    "unrealengine.com",
+    "vg247.com"
   ],
   "max_posts": 1
 }

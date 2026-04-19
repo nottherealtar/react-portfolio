@@ -444,34 +444,111 @@
           scroll-margin-top: 6rem;
         }
 
-        .hero-recruiter {
-          margin: 0;
-          margin-top: 0.35rem;
+        .hero-recruiter-card {
+          width: 100%;
           max-width: 520px;
-          font-size: 0.88rem;
-          line-height: 1.55;
-          color: rgba(237, 224, 204, 0.75);
+          margin-top: 0.5rem;
+          padding: 1.1rem 1.25rem 1.15rem;
+          border-radius: 18px;
+          text-align: center;
+          background: linear-gradient(
+            165deg,
+            rgba(26, 17, 8, 0.45) 0%,
+            rgba(45, 34, 27, 0.38) 100%
+          );
+          border: 1px solid rgba(201, 169, 110, 0.22);
+          box-shadow:
+            0 1px 0 rgba(247, 239, 226, 0.06) inset,
+            0 12px 32px rgba(0, 0, 0, 0.22);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          animation: heroFadeUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
         }
 
-        .hero-recruiter-label {
-          display: block;
-          font-size: 0.7rem;
-          letter-spacing: 0.11em;
+        .hero-recruiter-eyebrow {
+          margin: 0 0 0.75rem;
+          font-size: 0.68rem;
+          font-weight: 600;
+          letter-spacing: 0.14em;
           text-transform: uppercase;
-          color: rgba(201, 169, 110, 0.88);
-          margin-bottom: 0.4rem;
+          color: rgba(201, 169, 110, 0.95);
         }
 
-        .hero-recruiter a {
-          color: var(--crema, #c9a96e);
-          text-decoration: underline;
-          text-decoration-color: rgba(201, 169, 110, 0.45);
-          text-underline-offset: 2px;
+        .hero-recruiter-eyebrow::after {
+          content: "";
+          display: block;
+          width: 2.25rem;
+          height: 2px;
+          margin: 0.55rem auto 0;
+          border-radius: 2px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(201, 169, 110, 0.65),
+            transparent
+          );
         }
 
-        .hero-recruiter a:hover {
-          color: var(--foam, #f7efe2);
-          text-decoration-color: var(--crema, #c9a96e);
+        .hero-recruiter-pills {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 0.45rem 0.5rem;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .hero-recruiter-pills li {
+          margin: 0;
+          padding: 0;
+        }
+
+        .hero-recruiter-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.45rem 0.95rem;
+          border-radius: 9999px;
+          font-size: 0.82rem;
+          font-weight: 600;
+          color: var(--foam, #f7efe2) !important;
+          text-decoration: none !important;
+          background: rgba(201, 169, 110, 0.12);
+          border: 1px solid rgba(201, 169, 110, 0.28);
+          transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+        }
+
+        .hero-recruiter-pill i {
+          font-size: 0.95rem;
+          opacity: 0.9;
+        }
+
+        .hero-recruiter-pill:hover {
+          background: rgba(201, 169, 110, 0.22);
+          border-color: rgba(201, 169, 110, 0.5);
+          transform: translateY(-1px);
+          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-recruiter-pill:focus-visible {
+          outline: 2px solid var(--crema, #c9a96e);
+          outline-offset: 2px;
+        }
+
+        .hero-recruiter-hint {
+          margin: 0.85rem 0 0;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          color: rgba(237, 224, 204, 0.68);
+          max-width: 26rem;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .hero-btn-primary {
@@ -518,11 +595,20 @@
         @media (max-width: 640px) {
           .hero-card { padding: 2rem 1.5rem; gap: 1.25rem; }
           .hero-headline { font-size: 2rem; }
+          .hero-recruiter-card {
+            padding: 1rem 1rem 1.05rem;
+            border-radius: 16px;
+          }
+          .hero-recruiter-pill {
+            font-size: 0.78rem;
+            padding: 0.4rem 0.8rem;
+          }
         }
 
         @media (prefers-reduced-motion: reduce) {
           .hero-grain, .steam-wisp,
-          .hero-card, .hero-chip { animation: none; }
+          .hero-card, .hero-chip,
+          .hero-recruiter-card { animation: none; }
         }
 
         /* ── Testimonials ─────────────────────────────────────── */
@@ -787,16 +873,29 @@
               <a href="#contact" class="hero-btn-secondary">Start a Project →</a>
             </div>
 
-            <p id="hiring" class="hero-recruiter" tabindex="-1">
-              <span class="hero-recruiter-label">For recruiters</span>
-              Quick links:
-              <a href="https://github.com/nottherealtar" rel="noopener noreferrer">GitHub</a>
-              <span aria-hidden="true"> · </span>
-              <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" rel="noopener noreferrer">LinkedIn</a>
-              <span aria-hidden="true"> · </span>
-              <a href="/blog/blog.html">Blog</a>
-              — integrations, APIs, Azure &amp; Python, with a production-first mindset.
-            </p>
+            <aside id="hiring" class="hero-recruiter-card" aria-labelledby="hiring-title" tabindex="-1">
+              <p id="hiring-title" class="hero-recruiter-eyebrow">For recruiters</p>
+              <ul class="hero-recruiter-pills">
+                <li>
+                  <a class="hero-recruiter-pill" href="https://github.com/nottherealtar" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                  </a>
+                </li>
+                <li>
+                  <a class="hero-recruiter-pill" href="https://www.linkedin.com/in/josh-coetzer-31a874239/" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a class="hero-recruiter-pill" href="/blog/blog.html">
+                    <i class="fas fa-pen-nib" aria-hidden="true"></i> Blog
+                  </a>
+                </li>
+              </ul>
+              <p class="hero-recruiter-hint">
+                Integrations, APIs, Azure &amp; Python — shipped with a production-first mindset.
+              </p>
+            </aside>
           </div>
         </section>
 

@@ -26,6 +26,13 @@ AUTOMATION_DIR = BLOG_DIR / "automation"
 AUTO_DIR = BLOG_DIR / "auto"
 
 RSS_CONTENT_ENCODED = "{http://purl.org/rss/1.0/modules/content/}encoded"
+RSS1_NS = "http://purl.org/rss/1.0/"
+RSS1_ITEM = f"{{{RSS1_NS}}}item"
+RSS1_TITLE = f"{{{RSS1_NS}}}title"
+RSS1_LINK = f"{{{RSS1_NS}}}link"
+RSS1_PUBDATE = f"{{{RSS1_NS}}}pubDate"
+RDF_ABOUT = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}about"
+DC_DATE = "{http://purl.org/dc/elements/1.1/}date"
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 
 SESSION = requests.Session()
@@ -497,6 +504,43 @@ def parse_feed(
                     description = fetched_text
             images = merge_image_lists(max_article_images, rss_images, fetch_images or [])
             pub_date = item.findtext("pubDate") or item.findtext("{http://purl.org/dc/elements/1.1/}date")
+            results.append(
+                {
+                    "title": title,
+                    "link": link,
+                    "description": description,
+                    "images": images,
+                    "published_at": parse_date(pub_date),
+                    "source_name": source["name"],
+                    "source_weight": int(source.get("weight", 1)),
+                    "category": source.get("category"),
+                    "language": source.get("default_language", "en"),
+                }
+            )
+        return results
+
+    # RSS 1.0 / RDF (e.g. Steam News hub)
+    items_rss1 = root.findall(f".//{RSS1_ITEM}")
+    if items_rss1:
+        for item in items_rss1:
+            title = (item.findtext(RSS1_TITLE) or "Untitled").strip()
+            link = (item.findtext(RSS1_LINK) or "").strip()
+            if not link:
+                link = (item.attrib.get(RDF_ABOUT) or "").strip()
+            if not link:
+                continue
+            raw_html = _rss_item_raw_html(item)
+            rss_plain = clean_body_text(extract_article_text_from_html(raw_html) or strip_html(raw_html))
+            article_host = article_page_host(link)
+            rss_images = extract_https_images_from_html(raw_html, link, article_host, max_article_images)
+            description = rss_plain
+            fetch_images: List[Dict[str, str]] = []
+            if len(rss_plain) < fetch_full_article_when_below:
+                fetched_text, fetch_images = fetch_article_plain_and_images(link, article_host, max_article_images)
+                if fetched_text and len(fetched_text) > len(description):
+                    description = fetched_text
+            images = merge_image_lists(max_article_images, rss_images, fetch_images or [])
+            pub_date = item.findtext(RSS1_PUBDATE) or item.findtext(DC_DATE) or ""
             results.append(
                 {
                     "title": title,

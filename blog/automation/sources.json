@@ -2,10 +2,23 @@
   "site_url": "https://www.tarsonlinecafe.work",
   "default_category": "Automation Insights",
   "allowed_domains": [
+    "arstechnica.com",
     "azure.microsoft.com",
+    "blog.jetbrains.com",
+    "code.visualstudio.com",
+    "dev.to",
     "github.blog",
+    "stackoverflow.blog",
+    "store.steampowered.com",
+    "techcrunch.com",
     "theverge.com",
-    "techcrunch.com"
+    "www.eurogamer.net",
+    "www.gamedeveloper.com",
+    "www.gamespot.com",
+    "www.pcgamer.com",
+    "www.rockpapershotgun.com",
+    "www.unrealengine.com",
+    "www.vg247.com"
   ],
   "extractive_engine": {
     "enabled": true,
@@ -41,7 +54,42 @@
     "ai": 5,
     "data": 4,
     "security": 4,
-    "sre": 3
+    "sre": 3,
+    "typescript": 6,
+    "javascript": 5,
+    "python": 5,
+    "rust": 5,
+    "golang": 5,
+    "docker": 6,
+    "kubernetes": 6,
+    "graphql": 5,
+    "postgres": 4,
+    "redis": 4,
+    "observability": 5,
+    "refactoring": 4,
+    "compiler": 4,
+    "debugger": 3,
+    "vscode": 5,
+    "devops": 6,
+    "steam": 7,
+    "gameplay": 6,
+    "trailer": 5,
+    "release": 4,
+    "remake": 6,
+    "sequel": 5,
+    "indie": 5,
+    "multiplayer": 5,
+    "open world": 6,
+    "patch": 3,
+    "console": 5,
+    "nintendo": 5,
+    "xbox": 5,
+    "playstation": 5,
+    "vr": 4,
+    "esports": 5,
+    "steam deck": 7,
+    "unreal engine": 6,
+    "game developer": 5
   },
   "sources": [
     {
@@ -56,6 +104,97 @@
       "url": "https://github.blog/feed/",
       "category": "Developer Platform",
       "weight": 3,
+      "default_language": "en"
+    },
+    {
+      "name": "Stack Overflow Blog",
+      "url": "https://stackoverflow.blog/feed/",
+      "category": "Coding & Careers",
+      "weight": 3,
+      "default_language": "en"
+    },
+    {
+      "name": "DEV Community",
+      "url": "https://dev.to/feed",
+      "category": "Coding & Community",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "JetBrains Blog",
+      "url": "https://blog.jetbrains.com/feed/",
+      "category": "Developer Tools",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Visual Studio Code",
+      "url": "https://code.visualstudio.com/feed.xml",
+      "category": "Developer Tools",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Steam News",
+      "url": "https://store.steampowered.com/feeds/news.xml",
+      "category": "Gaming & Releases",
+      "weight": 3,
+      "default_language": "en"
+    },
+    {
+      "name": "PC Gamer",
+      "url": "https://www.pcgamer.com/rss/",
+      "category": "Gaming & Industry",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Rock Paper Shotgun",
+      "url": "https://www.rockpapershotgun.com/feed/",
+      "category": "Gaming & PC",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Ars Technica Gaming",
+      "url": "https://arstechnica.com/gaming/feed/",
+      "category": "Gaming & Tech",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "GameSpot",
+      "url": "https://www.gamespot.com/feeds/game-news/",
+      "category": "Gaming News",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Eurogamer",
+      "url": "https://www.eurogamer.net/feed",
+      "category": "Gaming News",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "VG247",
+      "url": "https://www.vg247.com/feed/",
+      "category": "Gaming News",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Game Developer",
+      "url": "https://www.gamedeveloper.com/rss.xml",
+      "category": "Game Development",
+      "weight": 2,
+      "default_language": "en"
+    },
+    {
+      "name": "Unreal Engine",
+      "url": "https://www.unrealengine.com/en-US/blog/rss",
+      "category": "Game Tech",
+      "weight": 1,
       "default_language": "en"
     },
     {

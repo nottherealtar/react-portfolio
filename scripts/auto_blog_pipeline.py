@@ -17,6 +17,8 @@ from xml.etree.ElementTree import Element
 import requests
 from bs4 import BeautifulSoup, Tag
 
+import blog_extractive_engine
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "blog"
@@ -819,11 +821,20 @@ def make_summary(text: str, max_chars: int = 280) -> str:
     return summary
 
 
-def make_takeaways(title: str, body: str, summary: str, why_for_dedupe: str = "") -> List[str]:
+def make_takeaways(
+    title: str,
+    body: str,
+    summary: str,
+    why_for_dedupe: str = "",
+    ml_bullets: List[str] | None = None,
+) -> List[str]:
     """Blend extractive lines from the piece with a few tight, regex-gated heuristics."""
     lowered = f"{title} {body}".lower()
     why_l = (why_for_dedupe or "").lower()
-    extracted = _extract_takeaway_sentences(body, summary)
+    if ml_bullets is not None:
+        extracted = [_truncate_sentence(b.strip(), 178) for b in ml_bullets if b and b.strip()]
+    else:
+        extracted = _extract_takeaway_sentences(body, summary)
     heuristics = _heuristic_takeaways(lowered)
     merged: List[str] = []
     for item in extracted + heuristics:
@@ -849,11 +860,19 @@ def make_takeaways(title: str, body: str, summary: str, why_for_dedupe: str = ""
     return merged[:3]
 
 
-def make_why_it_matters(title: str, summary: str, body: str) -> str:
+def make_why_it_matters(
+    title: str,
+    summary: str,
+    body: str,
+    context_sentence: str | None = None,
+) -> str:
     blob = f"{title} {summary} {body}".lower()
     cleaned = clean_body_text(body, max_chars=4000) or summary
     sentences = sentence_split(cleaned)
-    supplementary = _pick_supplementary_context(sentences, summary)
+    ctx = (context_sentence or "").strip()
+    if ctx and (_leading_tokens_match(ctx, summary) or _high_word_overlap(ctx, summary)):
+        ctx = ""
+    supplementary = ctx or _pick_supplementary_context(sentences, summary)
     angles = _collect_why_angles(blob)
     primary = angles[0]
     secondary = angles[1] if len(angles) > 1 else ""
@@ -1154,6 +1173,8 @@ def main() -> int:
     min_keyword_hits = int(quality_gate.get("min_keyword_hits", args.min_keyword_hits))
     fetch_full_when_below = int(quality_gate.get("fetch_full_article_when_rss_chars_below", 900))
     max_article_images = int(quality_gate.get("max_article_images", 6))
+    extractive_cfg = config.get("extractive_engine") or {}
+    extractive_on = bool(extractive_cfg.get("enabled"))
 
     fetched = 0
     candidates: List[Dict[str, Any]] = []
@@ -1200,20 +1221,42 @@ def main() -> int:
     skipped = []
 
     for item in selected:
+        ml_pack: Dict[str, Any] | None = None
         raw_description = item["description"] or ""
         detected_language = detect_language(f"{item['title']} {raw_description}", fallback=item.get("language", "en"))
         translated_description = translate_to_english(raw_description, detected_language)
         scored_blob = f"{item['title']} {translated_description}".lower()
 
-        summary = make_summary(translated_description)
-        why_it_matters = make_why_it_matters(item["title"], summary, translated_description)
+        cleaned_body = clean_body_text(translated_description, max_chars=6000)
+        if extractive_on:
+            ml_pack = blog_extractive_engine.compose_post_fields(
+                item["title"].strip(),
+                cleaned_body,
+                extractive_cfg,
+            )
+        if ml_pack and len(ml_pack.get("summary") or "") >= min_summary_length:
+            summary = str(ml_pack["summary"])
+            ml_ctx = (ml_pack.get("context_sentence") or "").strip() or None
+            ml_take: List[str] | None = list(ml_pack.get("takeaway_sentences") or [])
+        else:
+            summary = make_summary(translated_description)
+            ml_ctx = None
+            ml_take = None
+
+        why_it_matters = make_why_it_matters(
+            item["title"], summary, translated_description, context_sentence=ml_ctx
+        )
         slug = make_slug(item["title"], item["published_at"], item["link"])
         file_name = f"{slug}.html"
         file_path = AUTO_DIR / file_name
 
         post_title = item["title"].strip()
         takeaways = make_takeaways(
-            item["title"], translated_description, summary, why_it_matters
+            item["title"],
+            translated_description,
+            summary,
+            why_it_matters,
+            ml_bullets=ml_take,
         )
         post_date = item["published_at"].strftime("%Y-%m-%d")
         reading_minutes = estimate_reading_minutes(post_title, summary, why_it_matters, " ".join(takeaways))
@@ -1269,14 +1312,15 @@ def main() -> int:
             auto_posts.append(entry)
             published_signatures.add(item["signature"])
 
-        generated.append(
-            {
-                "title": metadata["title"],
-                "link": metadata["link"],
-                "score": metadata["score"],
-                "source": metadata["source_name"],
-            }
-        )
+        gen_entry: Dict[str, Any] = {
+            "title": metadata["title"],
+            "link": metadata["link"],
+            "score": metadata["score"],
+            "source": metadata["source_name"],
+        }
+        if ml_pack is not None:
+            gen_entry["text_engine"] = ml_pack.get("engine")
+        generated.append(gen_entry)
 
     if not args.dry_run:
         dedup: Dict[str, Dict[str, Any]] = {}
@@ -1293,6 +1337,10 @@ def main() -> int:
     report = {
         "status": "ok",
         "timestamp": now.isoformat(),
+        "extractive_engine": {
+            "enabled": extractive_on,
+            "embedding_model_configured": bool((extractive_cfg.get("embedding_model") or "").strip()),
+        },
         "fetched_candidates": fetched,
         "unseen_candidates": len(unseen_candidates),
         "blocked_domain_candidates": blocked_domain_count,

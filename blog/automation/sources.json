@@ -7,6 +7,17 @@
     "theverge.com",
     "techcrunch.com"
   ],
+  "extractive_engine": {
+    "enabled": true,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "summary_sentences": 3,
+    "takeaway_count": 3,
+    "mmr_lambda": 0.64,
+    "title_query_weight": 0.14,
+    "min_words_per_sentence": 5,
+    "max_doc_sentences": 42,
+    "summary_max_chars": 280
+  },
   "quality_gate": {
     "min_score": 36,
     "min_summary_length": 130,

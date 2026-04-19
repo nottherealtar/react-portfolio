@@ -33,6 +33,9 @@ jobs:
   auto-blog:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      TOKENIZERS_PARALLELISM: "false"
+      HF_HUB_DISABLE_PROGRESS_BARS: "1"
 
     steps:
       - name: Checkout
@@ -43,10 +46,47 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
+      - name: Cache pip and Hugging Face hub
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/huggingface
+          key: blog-ml-${{ runner.os }}-py311-${{ hashFiles('scripts/requirements-blog.txt', 'scripts/requirements-blog-embeddings.txt', 'blog/automation/sources.json') }}
+          restore-keys: |
+            blog-ml-${{ runner.os }}-py311-
+
+      - name: Detect embedding dependencies
+        id: emb
+        shell: bash
         run: |
+          set -euo pipefail
+          python <<'PY' > emb_flag.txt
+          import json
+          from pathlib import Path
+          p = Path("blog/automation/sources.json")
+          use = False
+          if p.is_file():
+              cfg = json.loads(p.read_text(encoding="utf-8"))
+              ex = cfg.get("extractive_engine") or {}
+              m = (ex.get("embedding_model") or "").strip()
+              use = bool(m) and bool(ex.get("enabled"))
+          print("true" if use else "false", end="")
+          PY
+          echo "use_embeddings=$(cat emb_flag.txt)" >> "${GITHUB_OUTPUT}"
+
+      - name: Install Python dependencies (base)
+        run: |
+          set -euo pipefail
           python -m pip install --upgrade pip
           python -m pip install -r scripts/requirements-blog.txt
+
+      - name: Install PyTorch (CPU) and sentence-transformers
+        if: steps.emb.outputs.use_embeddings == 'true'
+        run: |
+          set -euo pipefail
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r scripts/requirements-blog-embeddings.txt
 
       - name: Run auto blog generator
         shell: bash

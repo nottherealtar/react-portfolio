@@ -1,0 +1,3 @@
+# Install after CPU PyTorch (see .github/workflows/auto-blog.yml).
+# sentence-transformers pulls transformers, huggingface-hub, etc.
+sentence-transformers==3.3.1

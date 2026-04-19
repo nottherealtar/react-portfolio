@@ -43,6 +43,13 @@
         setMenuOpen(false);
       });
     });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && hamburger.classList.contains('open')) {
+        setMenuOpen(false);
+        hamburger.focus();
+      }
+    });
   }
 
   // Active link tracking via IntersectionObserver

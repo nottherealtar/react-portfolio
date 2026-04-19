@@ -988,7 +988,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>{escape_html(metadata['title'])} | TarsOnlineCafe</title>
   <meta name="description" content="{escape_html(metadata['summary'])}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1009,7 +1009,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       min-height: 100vh;
       background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
                   radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
-      padding: 5.5rem 1rem 4rem;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
     }}
     .wrap {{
       max-width: 720px;
@@ -1151,7 +1151,18 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       <li><a href="/blog/blog.html" class="active">Blog</a></li>
     </ul>
     <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
 
   <div class="page-bg">
     <main class="wrap">
@@ -1185,6 +1196,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       </article>
     </main>
   </div>
+  <script defer src="/scripts/nav.js"></script>
 </body>
 </html>
 """

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Blog | Joshua Coetzer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,8 +45,8 @@
                 radial-gradient(900px 420px at 12% -8%, rgba(201, 169, 110, 0.2), transparent 55%),
                 radial-gradient(700px 360px at 88% 5%, rgba(161, 134, 111, 0.12), transparent 52%),
                 var(--dark-roast, #2d221b);
-            padding-top: 5.75rem;
-            padding-bottom: 4rem;
+            padding-top: calc(5.75rem + env(safe-area-inset-top, 0px));
+            padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
         }
 
         .section-inner {
@@ -506,7 +506,19 @@
         </ul>
 
         <a href="/#contact" class="nav-cta">Let's Talk →</a>
+
+        <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <a href="/">Portfolio</a>
+        <a href="/blog/blog.html">Blog</a>
+        <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+    </div>
 
     <main class="blog-page">
         <div class="section-inner">
@@ -842,5 +854,6 @@
                 });
         })();
     </script>
+    <script defer src="/scripts/nav.js"></script>
 </body>
 </html>

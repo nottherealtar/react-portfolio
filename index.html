@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Joshua Coetzer | Business Automation & Integration Specialist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +144,11 @@
             left: -9999px;
             top: 0.75rem;
             z-index: 10000;
+            min-height: 44px;
             padding: 0.5rem 1rem;
+            display: inline-flex;
+            align-items: center;
+            box-sizing: border-box;
             background: var(--crema, #c9a96e);
             color: var(--espresso, #1a1108);
             font-weight: 600;
@@ -152,7 +156,8 @@
             text-decoration: none;
         }
         .skip-link:focus {
-            left: 0.75rem;
+            left: max(0.75rem, env(safe-area-inset-left, 0px));
+            top: max(0.75rem, env(safe-area-inset-top, 0px));
             outline: 2px solid var(--foam, #f7efe2);
             outline-offset: 2px;
         }
@@ -306,7 +311,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 5rem 1.5rem 3rem;
+          padding: calc(5rem + env(safe-area-inset-top, 0px)) 1.5rem 3rem;
           overflow: hidden;
         }
 
@@ -508,8 +513,10 @@
         .hero-recruiter-pill {
           display: inline-flex;
           align-items: center;
+          justify-content: center;
           gap: 0.4rem;
-          padding: 0.45rem 0.95rem;
+          min-height: 44px;
+          padding: 0.45rem 1rem;
           border-radius: 9999px;
           font-size: 0.82rem;
           font-weight: 600;

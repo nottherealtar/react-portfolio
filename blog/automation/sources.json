@@ -16,7 +16,7 @@
     "title_query_weight": 0.14,
     "min_words_per_sentence": 5,
     "max_doc_sentences": 42,
-    "summary_max_chars": 280
+    "summary_max_chars": 360
   },
   "quality_gate": {
     "min_score": 36,

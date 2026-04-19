@@ -754,6 +754,8 @@ def _extract_takeaway_sentences(body: str, summary: str, max_items: int = 3) -> 
         s = s.strip()
         if len(s) < 48:
             continue
+        if blog_extractive_engine.is_poor_extractive_sentence(s):
+            continue
         if _leading_tokens_match(s, summary, n_words=10, min_equal=5):
             continue
         if _high_word_overlap(s, summary, threshold=0.52):
@@ -832,7 +834,11 @@ def make_takeaways(
     lowered = f"{title} {body}".lower()
     why_l = (why_for_dedupe or "").lower()
     if ml_bullets is not None:
-        extracted = [_truncate_sentence(b.strip(), 178) for b in ml_bullets if b and b.strip()]
+        extracted = [
+            _truncate_sentence(b.strip(), 178)
+            for b in ml_bullets
+            if b and b.strip() and not blog_extractive_engine.is_poor_extractive_sentence(b)
+        ]
     else:
         extracted = _extract_takeaway_sentences(body, summary)
     heuristics = _heuristic_takeaways(lowered)

@@ -48,6 +48,105 @@ def sentence_split(text: str) -> List[str]:
     return [p.strip() for p in parts if p.strip()]
 
 
+# HTML→plain text often concatenates subheads without punctuation ("…now The timing…").
+# Case-sensitive "The"/"Why" so we never split on ordinary "the …".
+_GLUE_BEFORE_THE = re.compile(
+    r"(?<=[a-z0-9\)'\"»])\s+"
+    r"(?=The\s+(?:timing|goal|status|report|answer|truth|reason|difference|problem|"
+    r"way|next|first|only|result|rest|whole|point|catch|twist|reality|big|other|"
+    r"Cisco|GitHub|season)\b)"
+)
+_GLUE_BEFORE_WHY_HOW = re.compile(
+    r"(?<=[a-z0-9\)'\"»])\s+"
+    r"(?=Why\s+(?:agentic|this|we|the|your|it|security|are|is|does|do|should|can|will|matters)\b)"
+)
+
+
+def _split_glued_clauses(s: str) -> List[str]:
+    """Break run-on lines where a new clause starts with The… / Why… mid-string."""
+    s = (s or "").strip()
+    if not s:
+        return []
+    work = [s]
+    for rx in (_GLUE_BEFORE_THE, _GLUE_BEFORE_WHY_HOW):
+        nxt: List[str] = []
+        for chunk in work:
+            nxt.extend(p.strip() for p in rx.split(chunk) if p.strip())
+        work = nxt
+    return work
+
+
+def _explode_sentences(raw: List[str]) -> List[str]:
+    out: List[str] = []
+    for line in raw:
+        for piece in _split_glued_clauses(line):
+            out.extend(sentence_split(piece))
+    deduped: List[str] = []
+    seen = set()
+    for s in out:
+        k = s.strip().lower()
+        if k and k not in seen:
+            seen.add(k)
+            deduped.append(s.strip())
+    return deduped
+
+
+def _heading_or_deck_like(s: str) -> bool:
+    """Section titles / decks often lack a period and read as a headline."""
+    t = (s or "").strip()
+    if len(t) < 10:
+        return True
+    if re.search(r"[.!?]\s*[\"'\"]\s*$", t) or t.endswith((".", "?", "!")):
+        return False
+    words = re.findall(r"[A-Za-z]+", t)
+    if len(words) < 4:
+        return True
+    caps = sum(1 for w in words if w[:1].isupper())
+    if caps / max(len(words), 1) >= 0.58 and len(t) < 160:
+        return True
+    if re.match(
+        r"^(?:why|how|what|when|where|which)\s+.{12,}$",
+        t,
+        re.I,
+    ) and "." not in t and "?" not in t and len(t) < 140:
+        return True
+    return False
+
+
+def _fragment_tail(s: str) -> bool:
+    """Trailing glue like '… for your' with no clause after it."""
+    t = (s or "").rstrip()
+    if re.search(r"[.!?][\"'\"]?\s*$", t):
+        return False
+    tail = t.split()[-3:] if t.split() else []
+    tail_l = " ".join(x.lower() for x in tail)
+    if re.search(r"\b(for your|to your|in your|with the|into the)\s*$", tail_l):
+        return True
+    return bool(re.search(r"\b(a|an|the|your|their|this|that)\s*$", tail_l))
+
+
+def _smart_truncate_paragraph(text: str, max_chars: int) -> str:
+    """Prefer ending on a full sentence; avoid chopping mid-clause when possible."""
+    text = text.strip()
+    if len(text) <= max_chars:
+        return text
+    window = text[:max_chars]
+    best = -1
+    for punct in ".?!":
+        idx = window.rfind(punct)
+        if idx > int(max_chars * 0.42):
+            best = max(best, idx)
+    if best >= 0:
+        return text[: best + 1].strip()
+    cut = text[: max_chars - 1].rsplit(" ", 1)[0]
+    return cut + "…"
+
+
+def is_poor_extractive_sentence(s: str) -> bool:
+    """True for glued headings, decks, or dangling tails — drop from bullets and similar."""
+    return _heading_or_deck_like(s) or _fragment_tail(s)
+
+
 def _tfidf_vectors(sentences: Sequence[str]) -> Tuple[List[Dict[str, float]], Dict[str, float]]:
     """Per-sentence L2-normalized TF–IDF sparse vectors and raw IDF weights."""
     n = len(sentences)
@@ -182,11 +281,15 @@ def _mmr_pick(
 def _truncate_join(sentences: List[str], indices: List[int], max_chars: int) -> str:
     ordered = sorted(set(indices))
     parts = [sentences[i] for i in ordered if 0 <= i < len(sentences)]
-    text = " ".join(parts).strip()
-    if len(text) <= max_chars:
-        return text
-    cut = text[: max_chars - 1].rsplit(" ", 1)[0]
-    return cut + "…"
+    while len(parts) > 1:
+        text = " ".join(parts).strip()
+        text = _smart_truncate_paragraph(text, max_chars)
+        if not _fragment_tail(text):
+            return text
+        parts = parts[:-1]
+    if not parts:
+        return ""
+    return _smart_truncate_paragraph(parts[0].strip(), max_chars)
 
 
 def _get_sentence_transformer(model_name: str) -> Any:
@@ -273,10 +376,16 @@ def _run_mmr_stages(
     )
     take_idx = sorted(set(take_idx))
     takeaway_sentences = [sentences[i] for i in take_idx if 0 <= i < n]
+    takeaway_sentences = [s.strip() for s in takeaway_sentences if s.strip() and not is_poor_extractive_sentence(s)]
+
+    cs = context_sentence.strip()
+    if cs and is_poor_extractive_sentence(cs):
+        cs = ""
+    context_sentence = cs
 
     return {
         "summary": summary_text,
-        "context_sentence": context_sentence.strip(),
+        "context_sentence": context_sentence,
         "takeaway_sentences": takeaway_sentences,
         "engine": engine,
         "sentence_count": n,
@@ -303,7 +412,7 @@ def compose_post_fields(title: str, cleaned_body: str, settings: Dict[str, Any] 
     max_chars = int(cfg.get("summary_max_chars", 280))
     embedding_model = (cfg.get("embedding_model") or "").strip()
 
-    raw_sents = sentence_split(cleaned_body)
+    raw_sents = _explode_sentences(sentence_split(cleaned_body))
     sentences: List[str] = []
     for s in raw_sents[:max_sents]:
         if len(re.findall(r"\w+", s)) >= min_words:
@@ -314,7 +423,7 @@ def compose_post_fields(title: str, cleaned_body: str, settings: Dict[str, Any] 
     if len(sentences) < 2:
         fallback = " ".join(raw_sents[:3]).strip() if raw_sents else ""
         return {
-            "summary": fallback[:max_chars] if fallback else "",
+            "summary": _smart_truncate_paragraph(fallback, max_chars) if fallback else "",
             "context_sentence": "",
             "takeaway_sentences": [],
             "engine": "extractive-fallback",

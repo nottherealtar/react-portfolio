@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-19T06:53:29.337917+00:00",
+  "timestamp": "2026-04-19T17:53:00.832764+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Stop hardcoding API keys in your AI agents — how I built a governance layer in 3 weeks",
-      "link": "auto/20260419-stop-hardcoding-api-keys-in-your-ai-agents-how-i-built-a-gov-bef78f7f.html",
-      "score": 129.9205,
+      "title": "Building a Smart Stadium AI Assistant using Google Cloud (Without Overengineering)",
+      "link": "auto/20260419-building-a-smart-stadium-ai-assistant-using-google-cloud-wit-f90c512f.html",
+      "score": 118.8661,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

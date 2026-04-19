@@ -26,6 +26,20 @@
     "search_plain": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-19 DEV Community Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0 This pricing landscape exists because: Most MCP servers are wrappers. Why we charge $19/mo when the market average is free 1. We pay $14/mo to deliver real-time pricing across 500+ tokens with 1-second update intervals. Why this matters &quot;Look, I shipped an MCP server&quot; is the goal, not &quot;this generates $400 MRR.&quot; It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. Operational takeaways The handful that charge run from $19/mo (us) to $149/mo (enterprise). There&#x27;s almost nothing in the $5-15/mo &quot;casual paid&quot; tier. When you ship a free MCP server, &quot;good enough&quot; is the bar. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Building a Smart Stadium AI Assistant using Google Cloud (Without Overengineering)",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "Long queues at registration or food stalls Confusion in finding exits Crowd congestion near gates No real-time visibility of what’s happening Can we solve this using AI and cloud?",
+    "link": "auto/20260419-building-a-smart-stadium-ai-assistant-using-google-cloud-wit-f90c512f.html",
+    "source_url": "https://dev.to/mohammed_ansari_d2425db08/building-a-smart-stadium-ai-assistant-using-google-cloud-without-overengineering-4mnj",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbge9am1dio2e7zuqmoos.JPG",
+    "search_plain": "Building a Smart Stadium AI Assistant using Google Cloud (Without Overengineering) | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-19 DEV Community Building a Smart Stadium AI Assistant using Google Cloud (Without Overengineering) Long queues at registration or food stalls Confusion in finding exits Crowd congestion near gates No real-time visibility of what’s happening Can we solve this using AI and cloud? Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Recently, I worked on a challenge where the goal was to improve the physical event experience in a large venue or a stadium. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways I designed a structured stadium layout with: 4 Gates (North, South, East, West) Parking Area First Aid Center Merchandise Store Food Stalls (outside stadium area) Fan Booth Cab… It has low crowd (12%).” current crowd data zone positions user intent Even though this is a demo, I added: Input validation Rate limiting Secure headers Easy deployment Scales… You don’t always need complex AI models System design matters more than tools Simplicity + clarity = better results Don’t overengineer just to “look advanced” ;) Add real… Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "A Cross-OS Port Finder in Rust — One CLI, Three Completely Different Data Formats",
     "date": "2026-04-19",
     "category": "Coding & Community",

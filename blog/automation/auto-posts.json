@@ -24,6 +24,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Building a Smart Stadium AI Assistant using Google Cloud (Without Overengineering)",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "Long queues at registration or food stalls Confusion in finding exits Crowd congestion near gates No real-time visibility of what’s happening Can we solve this using AI and cloud?",
+    "link": "auto/20260419-building-a-smart-stadium-ai-assistant-using-google-cloud-wit-f90c512f.html",
+    "source_url": "https://dev.to/mohammed_ansari_d2425db08/building-a-smart-stadium-ai-assistant-using-google-cloud-without-overengineering-4mnj",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbge9am1dio2e7zuqmoos.JPG"
+  },
+  {
     "title": "A Cross-OS Port Finder in Rust — One CLI, Three Completely Different Data Formats",
     "date": "2026-04-19",
     "category": "Coding & Community",

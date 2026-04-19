@@ -1,5 +1,30 @@
 [
   {
+    "title": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "This pricing landscape exists because: Most MCP servers are wrappers. Why we charge $19/mo when the market average is free 1. We pay $14/mo to deliver real-time pricing across 500+ tokens with 1-second update intervals.",
+    "link": "auto/20260419-pricing-an-mcp-server-in-2026-why-we-charge-19-mo-when-the-m-61340b04.html",
+    "source_url": "https://dev.to/whoffagents/pricing-an-mcp-server-in-2026-why-we-charge-19mo-when-the-market-average-is-0-nig",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
+    "title": "A Cross-OS Port Finder in Rust — One CLI, Three Completely Different Data Formats",
+    "date": "2026-04-19",
+    "category": "Coding & Community",
+    "summary": "A tiny Rust CLI that answers \"who is holding port 3000?\" on macOS, Linux and Windows with the same flags and the same output shape — and optionally kills the offender. Each OS exposes \"who is listening on this socket\" in a genuinely different shape — not just different flags, but different data formats .",
+    "link": "auto/20260419-a-cross-os-port-finder-in-rust-one-cli-three-completely-diff-936f907c.html",
+    "source_url": "https://dev.to/sendotltd/a-cross-os-port-finder-in-rust-one-cli-three-completely-different-data-formats-18i5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3eiik62ylnzpvk8k61cr.png"
+  },
+  {
     "title": "Once close enough for an acquisition, Stripe and Airwallex are now going after each other",
     "date": "2026-04-18",
     "category": "Tech & Startups",

@@ -1,20 +1,27 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-19T01:21:08.079056+00:00",
+  "timestamp": "2026-04-19T01:50:14.341738+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 598,
+  "unseen_candidates": 597,
   "blocked_domain_candidates": 4,
-  "selected_candidates": 1,
+  "selected_candidates": 2,
   "generated_posts": [
     {
-      "title": "What Egosoft's three decades of making space sims tells us about serving 'niche' audiences",
-      "link": "auto/20260417-what-egosoft-s-three-decades-of-making-space-sims-tells-us-a-6a88e02a.html",
-      "score": 134.7686,
-      "source": "Game Developer",
+      "title": "Pricing an MCP Server in 2026: Why We Charge $19/mo When the Market Average is $0",
+      "link": "auto/20260419-pricing-an-mcp-server-in-2026-why-we-charge-19-mo-when-the-m-61340b04.html",
+      "score": 116.8617,
+      "source": "DEV Community",
+      "text_engine": "embedding-mmr"
+    },
+    {
+      "title": "A Cross-OS Port Finder in Rust — One CLI, Three Completely Different Data Formats",
+      "link": "auto/20260419-a-cross-os-port-finder-in-rust-one-cli-three-completely-diff-936f907c.html",
+      "score": 116.7172,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],
@@ -50,5 +57,5 @@
     "unrealengine.com",
     "vg247.com"
   ],
-  "max_posts": 1
+  "max_posts": 2
 }

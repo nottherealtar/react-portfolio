@@ -440,6 +440,40 @@
           margin-top: 0.5rem;
         }
 
+        #hiring {
+          scroll-margin-top: 6rem;
+        }
+
+        .hero-recruiter {
+          margin: 0;
+          margin-top: 0.35rem;
+          max-width: 520px;
+          font-size: 0.88rem;
+          line-height: 1.55;
+          color: rgba(237, 224, 204, 0.75);
+        }
+
+        .hero-recruiter-label {
+          display: block;
+          font-size: 0.7rem;
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
+          color: rgba(201, 169, 110, 0.88);
+          margin-bottom: 0.4rem;
+        }
+
+        .hero-recruiter a {
+          color: var(--crema, #c9a96e);
+          text-decoration: underline;
+          text-decoration-color: rgba(201, 169, 110, 0.45);
+          text-underline-offset: 2px;
+        }
+
+        .hero-recruiter a:hover {
+          color: var(--foam, #f7efe2);
+          text-decoration-color: var(--crema, #c9a96e);
+        }
+
         .hero-btn-primary {
           padding: 0.75rem 1.75rem;
           background: var(--crema, #c9a96e);
@@ -688,6 +722,7 @@
 
       <ul class="nav-links">
         <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#hiring">Recruiters</a></li>
         <li><a href="#services" data-section="services">Services</a></li>
         <li><a href="#work" data-section="work">Work</a></li>
         <li><a href="#process" data-section="process">Process</a></li>
@@ -706,6 +741,7 @@
     <!-- Mobile overlay menu -->
     <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
       <a href="#about">About</a>
+      <a href="#hiring">Recruiters</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
@@ -750,6 +786,17 @@
               <a href="#work" class="hero-btn-primary">See My Work</a>
               <a href="#contact" class="hero-btn-secondary">Start a Project →</a>
             </div>
+
+            <p id="hiring" class="hero-recruiter" tabindex="-1">
+              <span class="hero-recruiter-label">For recruiters</span>
+              Quick links:
+              <a href="https://github.com/nottherealtar" rel="noopener noreferrer">GitHub</a>
+              <span aria-hidden="true"> · </span>
+              <a href="https://www.linkedin.com/in/josh-coetzer-31a874239/" rel="noopener noreferrer">LinkedIn</a>
+              <span aria-hidden="true"> · </span>
+              <a href="/blog/blog.html">Blog</a>
+              — integrations, APIs, Azure &amp; Python, with a production-first mindset.
+            </p>
           </div>
         </section>
 

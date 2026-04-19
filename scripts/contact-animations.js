@@ -121,21 +121,30 @@
         return;
       }
 
-      const emailInput = document.getElementById('cf-email');
-      const replyToInput = document.getElementById('cf-replyto');
-      if (emailInput && replyToInput) {
-        replyToInput.value = emailInput.value.trim();
-      }
-
       setBtn('loading');
 
+      const name = document.getElementById('cf-name')?.value?.trim() ?? '';
+      const email = document.getElementById('cf-email')?.value?.trim() ?? '';
+      const company = document.getElementById('cf-company')?.value?.trim() ?? '';
+      const project_type = document.getElementById('cf-type')?.value ?? '';
+      const message = document.getElementById('cf-message')?.value?.trim() ?? '';
+      const hCaptchaResponse = hcaptchaField?.value?.trim() ?? '';
+
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch('/api/submit-contact', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
+            'Content-Type': 'application/json',
           },
-          body: new FormData(form),
+          body: JSON.stringify({
+            name,
+            email,
+            company,
+            project_type,
+            message,
+            hCaptchaResponse,
+          }),
         });
 
         const json = await res.json().catch(() => ({}));
@@ -145,7 +154,9 @@
         } else {
           setBtn('error');
           resetHcaptcha();
-          setGlobalError(json.message || 'Submission failed. Please check your Web3Forms settings and try again.');
+          setGlobalError(
+            json.message || 'Submission failed. Please try again in a few minutes.'
+          );
           shakeBtn();
         }
       } catch {

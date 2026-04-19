@@ -4,11 +4,35 @@ This is the source code for [Joshua Coetzer's portfolio website](https://www.tar
 
 ## Analytics
 
+These metrics are **repository-local**: they describe the merged blog index, automation artifacts, and the last recorded pipeline run. They contain **no secrets**, no API keys, and no per-visitor tracking. Values refresh when `python scripts/build_blog_posts.py` runs (for example after the scheduled auto-blog workflow).
+
+**Badges** (each reads a small JSON file in [blog/automation/](blog/automation/) in the Shields [endpoint badge](https://shields.io/documentation/endpoint) format):
+
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-total.json)
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-automated.json)
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-manual.json)
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-feeds.json)
 ![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-auto-html.json)
+
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-latest-post.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-sitemap.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-pipeline.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-extractive.json)
+![](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fnottherealtar%2Freact-portfolio%2Fmain%2Fblog%2Fautomation%2Freadme-analytics-reading-min.json)
+
+**Structured snapshot** (same rebuild step; useful for humans or scripts that want one JSON document): [blog/automation/readme-analytics-public.json](blog/automation/readme-analytics-public.json). Pipeline section is **aggregated only** (for example `source_issue_count` without error text) so feed or parser details are not copied into this file.
+
+| File | What it reflects |
+|------|------------------|
+| `readme-analytics-total.json` | Distinct posts in the merged `posts.json` list |
+| `readme-analytics-manual.json` / `automated.json` | Split by `automated` flag |
+| `readme-analytics-feeds.json` | Rows in `sources.json` → `sources` |
+| `readme-analytics-auto-html.json` | `blog/auto/*.html` files on disk |
+| `readme-analytics-latest-post.json` | Newest `date` among merged posts |
+| `readme-analytics-sitemap.json` | Blog post `<loc>` entries in `sitemap.xml` (excluding the blog index URL) |
+| `readme-analytics-pipeline.json` | Last line in `last-run.json`: date, status, fetch volume |
+| `readme-analytics-extractive.json` | Summarized extractive/embedding flags from that run |
+| `readme-analytics-reading-min.json` | Sum of estimated reading minutes from listing metadata (not full article word count) |
 
 ## Features
 
@@ -77,7 +101,7 @@ The blog supports fully automated insight publishing with zero paid services.
 - Runtime report: `blog/automation/last-run.json`
 - Deduplication state: `blog/automation/state.json`
 - Generated post index: `blog/automation/auto-posts.json`
-- README analytics endpoints: `blog/automation/readme-analytics-*.json`
+- README analytics: `blog/automation/readme-analytics-*.json` and `blog/automation/readme-analytics-public.json`
 
 ### Safety policy
 

@@ -11,7 +11,8 @@ export default async function handler(req, res) {
     const DISCORD_USER_ID = process.env.DISCORD_USER_ID;
 
     if (!DISCORD_BOT_TOKEN || !DISCORD_USER_ID) {
-        return res.status(500).json({ error: 'Discord credentials not configured' });
+        console.error('contact: Discord env not configured');
+        return res.status(503).json({ error: 'Service unavailable.' });
     }
 
     // Helper to truncate fields to Discord's max length
@@ -49,8 +50,8 @@ export default async function handler(req, res) {
             body: JSON.stringify({ recipient_id: DISCORD_USER_ID })
         });
         if (!dmRes.ok) {
-            const errorText = await dmRes.text();
-            return res.status(502).json({ error: 'Failed to create DM channel', details: errorText });
+            console.error('contact: Discord create DM failed', dmRes.status);
+            return res.status(502).json({ error: 'Failed to create DM channel' });
         }
         const dmData = await dmRes.json();
         const channelId = dmData.id;
@@ -66,18 +67,20 @@ export default async function handler(req, res) {
         });
         if (!msgRes.ok) {
             const errorText = await msgRes.text();
+            console.error('contact: Discord send message failed', msgRes.status);
             // Check for Discord error code 50007 (Cannot send messages to this user)
             if (errorText.includes('"code": 50007')) {
                 return res.status(502).json({
                     error: 'Failed to send DM',
-                    details: 'Discord error 50007: Cannot send messages to this user. Please ensure your privacy settings allow DMs from server members and that the bot shares a server with you.'
+                    details: 'Cannot send messages to this user. Check Discord privacy settings and that the bot shares a server with you.',
                 });
             }
-            return res.status(502).json({ error: 'Failed to send DM', details: errorText });
+            return res.status(502).json({ error: 'Failed to send DM' });
         }
 
         return res.status(200).json({ success: true });
     } catch (err) {
-        return res.status(500).json({ error: 'Server error', details: err.message });
+        console.error('contact: handler error', err);
+        return res.status(500).json({ error: 'Server error' });
     }
 }

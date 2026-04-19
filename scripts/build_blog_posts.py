@@ -34,6 +34,78 @@ def _shields_endpoint(label: str, message: str, color: str = "informational") ->
     }
 
 
+def _latest_post_date(posts: List[Dict[str, Any]]) -> str:
+    dates = [normalize_date(p.get("date", "") or "") for p in posts if p.get("date")]
+    return max(dates) if dates else "—"
+
+
+def _count_sitemap_blog_post_urls() -> int:
+    """Blog post <loc> entries in sitemap (excludes the blog index page)."""
+    if not SITE_MAP_PATH.is_file():
+        return 0
+    try:
+        tree = ET.parse(SITE_MAP_PATH)
+    except ET.ParseError:
+        return 0
+    root = tree.getroot()
+    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    hub = f"{SITE_URL}/blog/blog.html"
+    n = 0
+    for url_el in root.findall(f"{ns}url"):
+        loc_el = url_el.find(f"{ns}loc")
+        if loc_el is None or not loc_el.text:
+            continue
+        loc = loc_el.text.strip()
+        if loc.startswith(f"{SITE_URL}/blog/") and loc != hub:
+            n += 1
+    return n
+
+
+def _safe_last_run_summary() -> Dict[str, Any]:
+    """Aggregate pipeline stats only (no error bodies, no feed URLs)."""
+    raw = load_json(AUTOMATION_DIR / "last-run.json", None)
+    if not isinstance(raw, dict):
+        return {}
+    out: Dict[str, Any] = {
+        "status": raw.get("status"),
+        "timestamp_utc": raw.get("timestamp"),
+        "candidates_fetched": raw.get("fetched_candidates"),
+        "candidates_unseen": raw.get("unseen_candidates"),
+        "candidates_selected": raw.get("selected_candidates"),
+        "posts_generated": len(raw.get("generated_posts") or []),
+        "source_issue_count": len(raw.get("source_failures") or []),
+    }
+    ee = raw.get("extractive_engine")
+    if isinstance(ee, dict):
+        out["extractive_engine"] = {
+            "enabled": ee.get("enabled"),
+            "embedding_model_configured": ee.get("embedding_model_configured"),
+        }
+    return {k: v for k, v in out.items() if v is not None}
+
+
+def _extractive_badge_message(last_run: Dict[str, Any]) -> str:
+    ee = last_run.get("extractive_engine")
+    if not isinstance(ee, dict):
+        return "n/a"
+    if not ee.get("enabled"):
+        return "off"
+    if ee.get("embedding_model_configured"):
+        return "on + embed"
+    return "on"
+
+
+def _pipeline_badge_message(last_run: Dict[str, Any]) -> str:
+    if not last_run.get("timestamp_utc") and last_run.get("status") is None:
+        return "no runs yet"
+    ts = str(last_run.get("timestamp_utc") or "")[:10]
+    st = last_run.get("status") or "?"
+    fetched = last_run.get("candidates_fetched")
+    if isinstance(fetched, int):
+        return f"{ts} · {st} · {fetched} fetched"
+    return f"{ts} · {st}"
+
+
 def write_readme_analytics_shields(
     merged_posts: List[Dict[str, Any]],
     manual_posts: List[Dict[str, Any]],
@@ -57,6 +129,78 @@ def write_readme_analytics_shields(
         AUTOMATION_DIR / "readme-analytics-auto-html.json",
         _shields_endpoint("blog/auto html", auto_html, "yellow"),
     )
+
+    latest = _latest_post_date(merged_posts)
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-latest-post.json",
+        _shields_endpoint("latest post", latest, "blue"),
+    )
+
+    sitemap_blog = _count_sitemap_blog_post_urls()
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-sitemap.json",
+        _shields_endpoint("sitemap blog URLs", sitemap_blog, "informational"),
+    )
+
+    last_run = _safe_last_run_summary()
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-pipeline.json",
+        _shields_endpoint("last auto-blog", _pipeline_badge_message(last_run), "lightgrey"),
+    )
+    ee_msg = _extractive_badge_message(last_run)
+    ee_color = "lightgrey" if ee_msg == "n/a" else "success"
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-extractive.json",
+        _shields_endpoint("extractive engine", ee_msg, ee_color),
+    )
+
+    total_read = sum(estimate_reading_minutes(p) for p in merged_posts)
+    write_json(
+        AUTOMATION_DIR / "readme-analytics-reading-min.json",
+        _shields_endpoint("est. read min (listing)", total_read, "informational"),
+    )
+
+    write_readme_analytics_public(
+        merged_posts=merged_posts,
+        manual_count=manual,
+        automated_count=automated,
+        feed_sources=feed_sources,
+        auto_html=auto_html,
+        sitemap_blog_urls=sitemap_blog,
+        latest_post_date=latest,
+        last_run=last_run,
+    )
+
+
+def write_readme_analytics_public(
+    merged_posts: List[Dict[str, Any]],
+    manual_count: int,
+    automated_count: int,
+    feed_sources: int,
+    auto_html: int,
+    sitemap_blog_urls: int,
+    latest_post_date: str,
+    last_run: Dict[str, Any],
+) -> None:
+    """Single JSON snapshot for README deep-link; counts and dates only — no secrets or error strings."""
+    payload: Dict[str, Any] = {
+        "schema_version": 1,
+        "about": "Written by scripts/build_blog_posts.py. Safe to publish: aggregate blog and pipeline metrics only.",
+        "blog": {
+            "merged_post_cards": len(merged_posts),
+            "manual_posts": manual_count,
+            "automated_posts": automated_count,
+            "latest_post_date": latest_post_date,
+            "estimated_total_reading_minutes_listing": sum(
+                estimate_reading_minutes(p) for p in merged_posts
+            ),
+        },
+        "sources": {"rss_feed_entries_configured": feed_sources},
+        "artifacts": {"blog_auto_html_files_on_disk": auto_html},
+        "sitemap": {"blog_post_loc_entries": sitemap_blog_urls},
+        "last_pipeline": last_run if last_run else None,
+    }
+    write_json(AUTOMATION_DIR / "readme-analytics-public.json", payload)
 
 
 

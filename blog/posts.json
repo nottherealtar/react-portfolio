@@ -28,6 +28,20 @@
     "search_plain": "Zoom teams up with World to verify humans in meetings | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Tech &amp; Startups ~2 min read 2026-04-17 TechCrunch Zoom teams up with World to verify humans in meetings Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. The threat is real and growing fast. The most dramatic example came in… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Meeting platform Zoom has announced a partnership with World, Sam Altman’s human ID verification company, to ensure that the people attending meetings are actually human and not AI-generated imposters. It reframes risk for teams that automate sensitive workflows and third-party data flows. Operational takeaways Inventory dependent integrations and add regression checks before you widen rollout. Pair technical changes with access reviews, logging, and an explicit rollback path. Pilot with a bounded workflow, human review, and metrics that prove latency and quality gains. Primary source TechCrunch — original article ← Back to journal"
   },
   {
+    "title": "Bringing more transparency to GitHub’s status page",
+    "date": "2026-04-17",
+    "category": "Developer Platform",
+    "summary": "Guided by transparency, accuracy, and timeliness, we’re rolling out three changes to how we communicate service health—outlined below. A new “Degraded Performance” state for more accurate incident classification Per-service uptime metrics published for each service More granular insights on service disruptions, starting with a dedicated “Copilot AI Model…",
+    "link": "auto/20260417-bringing-more-transparency-to-github-s-status-page-b7a88493.html",
+    "source_url": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/04/image-6.png?resize=2084%2C1756",
+    "search_plain": "Bringing more transparency to GitHub’s status page | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Automation brief Developer Platform ~2 min read 2026-04-17 GitHub Blog Bringing more transparency to GitHub’s status page Guided by transparency, accuracy, and timeliness, we’re rolling out three changes to how we communicate service health—outlined below. A new “Degraded Performance” state for more accurate incident classification Per-service uptime metrics published for each service More granular insights on service disruptions, starting with a dedicated “Copilot AI Model… Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Going forward, incidents related to model availability will be reported under the new “Copilot AI Model Providers” component instead of the broader “Copilot” component. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways We’ll continue to share details, such as which models are affected, through public incident updates. The Degraded Performance state, per-service uptime percentages , and dedicated Copilot AI Model Providers component are designed to give you the context and details you need to… We know GitHub is critical infrastructure for your teams, and we are committed to ensuring our platform is available when and where you need it; and communicating effectively… Primary source GitHub Blog — original article ← Back to journal"
+  },
+  {
     "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
     "date": "2026-04-14",
     "category": "Developer Platform",

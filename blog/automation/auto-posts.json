@@ -26,6 +26,19 @@
     "hero_image": "https://secure.gravatar.com/avatar/723b22a81ff6a760c4520b963b43451e?s=150&d=blank&r=g"
   },
   {
+    "title": "Bringing more transparency to GitHub’s status page",
+    "date": "2026-04-17",
+    "category": "Developer Platform",
+    "summary": "Guided by transparency, accuracy, and timeliness, we’re rolling out three changes to how we communicate service health—outlined below. A new “Degraded Performance” state for more accurate incident classification Per-service uptime metrics published for each service More granular insights on service disruptions, starting with a dedicated “Copilot AI Model…",
+    "link": "auto/20260417-bringing-more-transparency-to-github-s-status-page-b7a88493.html",
+    "source_url": "https://github.blog/news-insights/company-news/bringing-more-transparency-to-githubs-status-page/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/04/image-6.png?resize=2084%2C1756"
+  },
+  {
     "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
     "date": "2026-04-14",
     "category": "Developer Platform",

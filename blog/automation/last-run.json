@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-19T00:24:19.665932+00:00",
+  "timestamp": "2026-04-19T00:37:59.450151+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 50,
-  "unseen_candidates": 42,
+  "unseen_candidates": 41,
   "blocked_domain_candidates": 5,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game",
-      "link": "auto/20260414-hack-the-ai-agent-build-agentic-ai-security-skills-with-the-ed860607.html",
-      "score": 104.8269,
+      "title": "Bringing more transparency to GitHub’s status page",
+      "link": "auto/20260417-bringing-more-transparency-to-github-s-status-page-b7a88493.html",
+      "score": 101.6762,
       "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }

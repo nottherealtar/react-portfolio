@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-20T07:24:23.835940+00:00",
+  "timestamp": "2026-04-20T18:12:49.165647+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Steam week in review: Pragmata and Windrose face off, with sad sci-fi dads proving no match for tree-chopping pirates",
-      "link": "auto/20260420-steam-week-in-review-pragmata-and-windrose-face-off-with-sad-e5e67b8c.html",
-      "score": 121.0654,
-      "source": "PC Gamer",
+      "title": "strings Command in CTF: Hidden Data Guide",
+      "link": "auto/20260420-strings-command-in-ctf-hidden-data-guide-bc3afb59.html",
+      "score": 122.9474,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

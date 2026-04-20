@@ -1,5 +1,17 @@
 [
   {
+    "title": "strings Command in CTF: Hidden Data Guide",
+    "date": "2026-04-20",
+    "category": "Coding & Community",
+    "summary": "My First (Wrong) Approach — And Why I Chose It When I opened evidence.pcap in Wireshark, my gut reaction was to look at DNS traffic. I found a few packets with short string payloads and tried to read them as ASCII flags. This gives you an instant breakdown of what protocols are present in the capture without requiring you to guess.",
+    "link": "auto/20260420-strings-command-in-ctf-hidden-data-guide-bc3afb59.html",
+    "source_url": "https://dev.to/rudycandy/strings-command-in-ctf-hidden-data-guide-4n9g",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Steam week in review: Pragmata and Windrose face off, with sad sci-fi dads proving no match for tree-chopping pirates",
     "date": "2026-04-20",
     "category": "Gaming & Industry",

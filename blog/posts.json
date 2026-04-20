@@ -1,5 +1,18 @@
 [
   {
+    "title": "strings Command in CTF: Hidden Data Guide",
+    "date": "2026-04-20",
+    "category": "Coding & Community",
+    "summary": "My First (Wrong) Approach — And Why I Chose It When I opened evidence.pcap in Wireshark, my gut reaction was to look at DNS traffic. I found a few packets with short string payloads and tried to read them as ASCII flags. This gives you an instant breakdown of what protocols are present in the capture without requiring you to guess.",
+    "link": "auto/20260420-strings-command-in-ctf-hidden-data-guide-bc3afb59.html",
+    "source_url": "https://dev.to/rudycandy/strings-command-in-ctf-hidden-data-guide-4n9g",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "strings Command in CTF: Hidden Data Guide | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-20 DEV Community strings Command in CTF: Hidden Data Guide My First (Wrong) Approach — And Why I Chose It When I opened evidence.pcap in Wireshark, my gut reaction was to look at DNS traffic. I found a few packets with short string payloads and tried to read them as ASCII flags. This gives you an instant breakdown of what protocols are present in the capture without requiring you to guess. Why this matters Looking at the Follow TCP Stream output on one of them: Seven short strings. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Category: Forensics | Difficulty: Easy | Competition: picoCTF The picoCTF Ph4nt0m 1ntrud3r challenge drops you into a classic network forensics scenario: you receive a PCAP… The Rabbit Hole: Manual Packet Inspection After the DNS and HTTP dead ends, I started scrolling through packets manually, reading payloads one by one. That trailing equals sign is the unmistakable fingerprint of Base64 padding — it appears when the input length isn&#x27;t a multiple of three bytes. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Steam week in review: Pragmata and Windrose face off, with sad sci-fi dads proving no match for tree-chopping pirates",
     "date": "2026-04-20",
     "category": "Gaming & Industry",

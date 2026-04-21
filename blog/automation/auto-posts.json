@@ -12,6 +12,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "Create a new contact in your address book from the Command Line",
+    "date": "2026-04-21",
+    "category": "Coding & Community",
+    "summary": "Works with Google Contacts, Outlook People, and Exchange. The nylas contacts create command adds a new contact to your connected address book. Reach for nylas contacts create for CRM automation, contact lookups in scripts, or AI agent workflows.",
+    "link": "auto/20260421-create-a-new-contact-in-your-address-book-from-the-command-l-54ceafd8.html",
+    "source_url": "https://dev.to/qasim157/create-a-new-contact-in-your-address-book-from-the-command-line-2c08",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "strings Command in CTF: Hidden Data Guide",
     "date": "2026-04-20",
     "category": "Coding & Community",

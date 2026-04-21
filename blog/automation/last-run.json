@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-21T07:05:14.589761+00:00",
+  "timestamp": "2026-04-21T18:12:19.939372+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 599,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant",
-      "link": "auto/20260421-navismart-how-i-built-a-crowd-aware-stadium-navigation-assis-687b223f.html",
-      "score": 128.945,
+      "title": "Create a new contact in your address book from the Command Line",
+      "link": "auto/20260421-create-a-new-contact-in-your-address-book-from-the-command-l-54ceafd8.html",
+      "score": 118.7691,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

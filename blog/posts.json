@@ -13,6 +13,19 @@
     "search_plain": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-21 DEV Community 🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant The system should address challenges such as crowd movement, waiting times, and real-time coordination.&quot; My answer was NaviSmart — a crowd-aware, AI-powered stadium navigation assistant that lives in your browser and speaks plain English. Why this matters 🗺️ Interactive Venue Map The top 60% of the screen is a live Google Map centered on the venue, showing 6 key locations as custom markers: LocationEmojiCrowd LevelRegistration Desk📋🟡 MediumMain Gate🚪🔴 HighFood Court🍔🔴 HighFirst Aid🏥🟢 LowWorkshop Hall A🎓🟢 LowExit🚶🟡 Medium When a route is computed, a blue Polyline is drawn dynamically on the map tracing the exact walking path. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways What I wanted to build was something fundamentally different: A conversational interface layered on top of a live interactive map, where attendees type naturally — &quot;Guide me… It gives us useJsApiLoader, GoogleMap, Marker, and Polyline components as proper React primitives — no DOM manipulation, no lifecycle hacks. The Directions API computes real walking routes between GPS coordinates. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Create a new contact in your address book from the Command Line",
+    "date": "2026-04-21",
+    "category": "Coding & Community",
+    "summary": "Works with Google Contacts, Outlook People, and Exchange. The nylas contacts create command adds a new contact to your connected address book. Reach for nylas contacts create for CRM automation, contact lookups in scripts, or AI agent workflows.",
+    "link": "auto/20260421-create-a-new-contact-in-your-address-book-from-the-command-l-54ceafd8.html",
+    "source_url": "https://dev.to/qasim157/create-a-new-contact-in-your-address-book-from-the-command-line-2c08",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Create a new contact in your address book from the Command Line | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-21 DEV Community Create a new contact in your address book from the Command Line Works with Google Contacts, Outlook People, and Exchange. The nylas contacts create command adds a new contact to your connected address book. Reach for nylas contacts create for CRM automation, contact lookups in scripts, or AI agent workflows. Why this matters nylas contacts groups list — List contact groups and labels nylas contacts list — List all contacts from your address book nylas contacts search — Search contacts by name, email, or company Full docs: nylas contacts create reference — all flags, advanced examples, and troubleshooting. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Google Contacts uses its own People API, Outlook uses Microsoft Graph, and Exchange uses EWS. All commands: Nylas CLI Command Reference Get started: brew install nylas/nylas-cli/nylas — other install methods Inventory dependent integrations and add regression checks before you widen rollout. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "strings Command in CTF: Hidden Data Guide",
     "date": "2026-04-20",
     "category": "Coding & Community",

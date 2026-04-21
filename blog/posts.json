@@ -1,5 +1,18 @@
 [
   {
+    "title": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant",
+    "date": "2026-04-21",
+    "category": "Coding & Community",
+    "summary": "The system should address challenges such as crowd movement, waiting times, and real-time coordination.\" My answer was NaviSmart — a crowd-aware, AI-powered stadium navigation assistant that lives in your browser and speaks plain English.",
+    "link": "auto/20260421-navismart-how-i-built-a-crowd-aware-stadium-navigation-assis-687b223f.html",
+    "source_url": "https://dev.to/ajx1tech/navismart-how-i-built-a-crowd-aware-stadium-navigation-assistant-8fp",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-21 DEV Community 🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant The system should address challenges such as crowd movement, waiting times, and real-time coordination.&quot; My answer was NaviSmart — a crowd-aware, AI-powered stadium navigation assistant that lives in your browser and speaks plain English. Why this matters 🗺️ Interactive Venue Map The top 60% of the screen is a live Google Map centered on the venue, showing 6 key locations as custom markers: LocationEmojiCrowd LevelRegistration Desk📋🟡 MediumMain Gate🚪🔴 HighFood Court🍔🔴 HighFirst Aid🏥🟢 LowWorkshop Hall A🎓🟢 LowExit🚶🟡 Medium When a route is computed, a blue Polyline is drawn dynamically on the map tracing the exact walking path. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways What I wanted to build was something fundamentally different: A conversational interface layered on top of a live interactive map, where attendees type naturally — &quot;Guide me… It gives us useJsApiLoader, GoogleMap, Marker, and Polyline components as proper React primitives — no DOM manipulation, no lifecycle hacks. The Directions API computes real walking routes between GPS coordinates. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "strings Command in CTF: Hidden Data Guide",
     "date": "2026-04-20",
     "category": "Coding & Community",

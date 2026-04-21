@@ -1,5 +1,17 @@
 [
   {
+    "title": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant",
+    "date": "2026-04-21",
+    "category": "Coding & Community",
+    "summary": "The system should address challenges such as crowd movement, waiting times, and real-time coordination.\" My answer was NaviSmart — a crowd-aware, AI-powered stadium navigation assistant that lives in your browser and speaks plain English.",
+    "link": "auto/20260421-navismart-how-i-built-a-crowd-aware-stadium-navigation-assis-687b223f.html",
+    "source_url": "https://dev.to/ajx1tech/navismart-how-i-built-a-crowd-aware-stadium-navigation-assistant-8fp",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "strings Command in CTF: Hidden Data Guide",
     "date": "2026-04-20",
     "category": "Coding & Community",

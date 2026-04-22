@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh2ysb9vnfq5g9xd2a2it.png"
   },
   {
+    "title": "AI Weekly: Opus 4.7, Kimi K2.6, and a $25B Amazon Deal, April 16–22, 2026",
+    "date": "2026-04-22",
+    "category": "Coding & Community",
+    "summary": "Three stories defined the past week: Anthropic shipped Claude Opus 4.7, Moonshot open-sourced Kimi K2.6 with 300-agent swarms, and Amazon committed another $25 billion to Anthropic alongside a $100 billion AWS spend.",
+    "link": "auto/20260422-ai-weekly-opus-4-7-kimi-k2-6-and-a-25b-amazon-deal-april-16-9c0b6b68.html",
+    "source_url": "https://dev.to/alexmercedcoder/ai-weekly-opus-47-kimi-k26-and-a-25b-amazon-deal-april-16-22-2026-1k7p",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant",
     "date": "2026-04-21",
     "category": "Coding & Community",

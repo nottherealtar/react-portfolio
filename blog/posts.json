@@ -14,6 +14,19 @@
     "search_plain": "Beyond the Model: Why Document Intelligence Is the Next AI Infrastructure Layer | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-22 DEV Community Beyond the Model: Why Document Intelligence Is the Next AI Infrastructure Layer It shows up in production, usually later than expected, and it&#x27;s one of the most consistent reasons why capable AI systems underperform relative to their potential. What Data Readiness Actually Requires When you take document parsing seriously as an infrastructure problem, the requirements become clear: Format fidelity. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters * Most teams aren&#x27;t choosing a document parsing library in isolation. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways A simple RAG pipeline can tolerate imperfect parsing. A missed table, a garbled header as the answer quality degrades, but the system doesn&#x27;t fail hard. Document infrastructure needs to meet them where they are. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "AI Weekly: Opus 4.7, Kimi K2.6, and a $25B Amazon Deal, April 16–22, 2026",
+    "date": "2026-04-22",
+    "category": "Coding & Community",
+    "summary": "Three stories defined the past week: Anthropic shipped Claude Opus 4.7, Moonshot open-sourced Kimi K2.6 with 300-agent swarms, and Amazon committed another $25 billion to Anthropic alongside a $100 billion AWS spend.",
+    "link": "auto/20260422-ai-weekly-opus-4-7-kimi-k2-6-and-a-25b-amazon-deal-april-16-9c0b6b68.html",
+    "source_url": "https://dev.to/alexmercedcoder/ai-weekly-opus-47-kimi-k26-and-a-25b-amazon-deal-april-16-22-2026-1k7p",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "AI Weekly: Opus 4.7, Kimi K2.6, and a $25B Amazon Deal, April 16–22, 2026 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-22 DEV Community AI Weekly: Opus 4.7, Kimi K2.6, and a $25B Amazon Deal, April 16–22, 2026 Three stories defined the past week: Anthropic shipped Claude Opus 4.7, Moonshot open-sourced Kimi K2.6 with 300-agent swarms, and Amazon committed another $25 billion to Anthropic alongside a $100 billion AWS spend. Why this matters AI Models: Kimi K2.6 Opens the Door to 12-Hour Agent Runs Moonshot AI released Kimi K2.6 on April 20 as an open-source agentic model built for long-horizon coding. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways AI Coding Tools: Opus 4.7 Ships With a 1M Context Window Anthropic released Claude Opus 4.7 on April 16 , a new flagship model focused on agentic coding and long-horizon work. K2.6 is available immediately on Kimi.com, the developer API, Kimi Code CLI, Ollama, and Hugging Face. The structure mirrors the $50 billion Amazon-OpenAI deal from February . Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "🏟️ NaviSmart: How I Built a Crowd-Aware Stadium Navigation Assistant",
     "date": "2026-04-21",
     "category": "Coding & Community",

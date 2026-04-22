@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-21T18:12:19.939372+00:00",
+  "timestamp": "2026-04-22T07:04:50.386308+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Create a new contact in your address book from the Command Line",
-      "link": "auto/20260421-create-a-new-contact-in-your-address-book-from-the-command-l-54ceafd8.html",
-      "score": 118.7691,
+      "title": "Beyond the Model: Why Document Intelligence Is the Next AI Infrastructure Layer",
+      "link": "auto/20260422-beyond-the-model-why-document-intelligence-is-the-next-ai-in-73d3534c.html",
+      "score": 127.9293,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

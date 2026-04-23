@@ -1,5 +1,18 @@
 [
   {
+    "title": "Why I Chose n8n Over Zapier for Production Lead Automation (₹0 vs $828+/Year)",
+    "date": "2026-04-23",
+    "category": "Coding & Community",
+    "summary": "Zapier would charge $828+/year (and scale exponentially) Code flexibility was the dealbreaker: one JavaScript node vs 6-7 separate Zapier steps for the same validation logic I needed to build a lead automation system handling real revenue with near-zero failure tolerance. That's 1,400 tasks per month in Zapier's pricing model.",
+    "link": "auto/20260423-why-i-chose-n8n-over-zapier-for-production-lead-automation-0-a4c61d83.html",
+    "source_url": "https://dev.to/amansuryavanshi-ai/why-i-chose-n8n-over-zapier-for-production-lead-automation-0-vs-828year-3p33",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fertonmyyubmks44nf4o6.jpg"
+  },
+  {
     "title": "Microsoft Discovery: Advancing agentic R&D at scale",
     "date": "2026-04-22",
     "category": "Cloud Automation",

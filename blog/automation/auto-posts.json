@@ -1,5 +1,18 @@
 [
   {
+    "title": "Microsoft Discovery: Advancing agentic R&D at scale",
+    "date": "2026-04-22",
+    "category": "Cloud Automation",
+    "summary": "As R&D grows more complex, tooling must evolve to help close the distance between what researchers and engineers want to pursue and what they can practically deliver.",
+    "link": "auto/20260422-microsoft-discovery-advancing-agentic-r-d-at-scale-45b0dbde.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-discovery-advancing-agentic-rd-at-scale/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/04/Picture1.webp"
+  },
+  {
     "title": "Beyond the Model: Why Document Intelligence Is the Next AI Infrastructure Layer",
     "date": "2026-04-22",
     "category": "Coding & Community",

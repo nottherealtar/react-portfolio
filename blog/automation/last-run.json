@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-22T18:12:52.967964+00:00",
+  "timestamp": "2026-04-23T07:08:26.722885+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 600,
-  "blocked_domain_candidates": 3,
+  "unseen_candidates": 602,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "AI Weekly: Opus 4.7, Kimi K2.6, and a $25B Amazon Deal, April 16–22, 2026",
-      "link": "auto/20260422-ai-weekly-opus-4-7-kimi-k2-6-and-a-25b-amazon-deal-april-16-9c0b6b68.html",
-      "score": 140.9555,
-      "source": "DEV Community",
+      "title": "Microsoft Discovery: Advancing agentic R&D at scale",
+      "link": "auto/20260422-microsoft-discovery-advancing-agentic-r-d-at-scale-45b0dbde.html",
+      "score": 135.6741,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

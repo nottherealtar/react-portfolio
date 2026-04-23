@@ -1,5 +1,19 @@
 [
   {
+    "title": "Microsoft Discovery: Advancing agentic R&D at scale",
+    "date": "2026-04-22",
+    "category": "Cloud Automation",
+    "summary": "As R&D grows more complex, tooling must evolve to help close the distance between what researchers and engineers want to pursue and what they can practically deliver.",
+    "link": "auto/20260422-microsoft-discovery-advancing-agentic-r-d-at-scale-45b0dbde.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-discovery-advancing-agentic-rd-at-scale/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/04/Picture1.webp",
+    "search_plain": "Microsoft Discovery: Advancing agentic R&amp;D at scale | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Cloud Automation ~2 min read 2026-04-22 Microsoft Azure Blog Microsoft Discovery: Advancing agentic R&amp;D at scale As R&amp;D grows more complex, tooling must evolve to help close the distance between what researchers and engineers want to pursue and what they can practically deliver. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters At the heart of Microsoft Discovery is the Discovery Engine that mimics the scientific method where specialized agents reason over large amounts of knowledge, generate hypotheses, and validate them in a complex tree across a vast search space. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways This next phase reflects what we’ve learned as we continue to broaden access to enterprise-grade, agentic AI capabilities for R&amp;D. Microsoft Discovery is an extensible platform that brings together agentic orchestration, advanced reasoning, a graph-based knowledge foundation, and high-performance computing. It helps drive the three principles outlined in Figure 1 for effective agentic discovery—enabling agent empowerment, discovery loop automation, and quality at scale. Primary source Microsoft Azure Blog — original article ← Back to journal"
+  },
+  {
     "title": "Beyond the Model: Why Document Intelligence Is the Next AI Infrastructure Layer",
     "date": "2026-04-22",
     "category": "Coding & Community",

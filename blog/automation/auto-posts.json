@@ -13,6 +13,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fertonmyyubmks44nf4o6.jpg"
   },
   {
+    "title": "AI in DevOps: Why Adoption Lags in CI/CD (and What Comes Next)",
+    "date": "2026-04-23",
+    "category": "Developer Tools",
+    "summary": "Developers rely on it to generate code, refactor existing logic, and explore unfamiliar APIs. They all sit in parts of the workflow where feedback is immediate, mistakes are easy to detect, and decisions can be reversed with minimal cost. Generally speaking, AI is expanding more quickly in development workflows and more cautiously inside CI/CD pipelines.",
+    "link": "auto/20260423-ai-in-devops-why-adoption-lags-in-ci-cd-and-what-comes-next-594ce844.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/04/ai-in-devops/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/04/which-of-these-ai-tools-do-you-use.png"
+  },
+  {
     "title": "Microsoft Discovery: Advancing agentic R&D at scale",
     "date": "2026-04-22",
     "category": "Cloud Automation",

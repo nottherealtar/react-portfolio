@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-23T18:15:53.950961+00:00",
+  "timestamp": "2026-04-24T07:11:51.188385+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 601,
-  "blocked_domain_candidates": 2,
+  "unseen_candidates": 600,
+  "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Why I Chose n8n Over Zapier for Production Lead Automation (₹0 vs $828+/Year)",
-      "link": "auto/20260423-why-i-chose-n8n-over-zapier-for-production-lead-automation-0-a4c61d83.html",
-      "score": 150.9619,
-      "source": "DEV Community",
+      "title": "AI in DevOps: Why Adoption Lags in CI/CD (and What Comes Next)",
+      "link": "auto/20260423-ai-in-devops-why-adoption-lags-in-ci-cd-and-what-comes-next-594ce844.html",
+      "score": 140.655,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

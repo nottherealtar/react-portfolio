@@ -13,6 +13,20 @@
     "search_plain": "Vercel vs Netlify vs Railway: VPS Hosting Reality | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-25 DEV Community Vercel vs Netlify vs Railway: VPS Hosting Reality If you’re googling vercel vs netlify vs railway , you’re probably not just picking a UI—you’re picking a hosting model that affects cost, latency, observability, and how quickly you’ll hit a wall and need a VPS. Railway is closer to a developer-friendly container PaaS: deploy services (web + workers + databases) with less ceremony than managing a full VPS. Why this matters Vercel : incredibly convenient, but pricing can jump with traffic, serverless execution, and bandwidth. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways 4) Performance, networking, and operational control Your app is mostly frontend + API routes/functions. If you want a framework-agnostic JAMstack workflow and strong static hosting ergonomics, Netlify remains a solid default. And if you’re already thinking in VPS_HOSTING terms—predictable monthly cost, full control, and easy portability—start containerizing early (even if you deploy on Railway first). Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "How is your IAM? | Google Cloud edition",
+    "date": "2026-04-25",
+    "category": "Coding & Community",
+    "summary": "This is a submission for the Google Cloud NEXT Writing Challenge What is this piece about: IAM is evolving from access control into a trust grid for humans, workloads, service accounts, and agents, and Google Cloud NEXT '26 makes this very clear, but how is your IAM?",
+    "link": "auto/20260425-how-is-your-iam-google-cloud-edition-8f9e77ae.html",
+    "source_url": "https://dev.to/idncod/how-is-your-iam-google-cloud-edition-1jbh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcw1w0fkyak9wpsylyff3.gif",
+    "search_plain": "How is your IAM? | Google Cloud edition | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-25 DEV Community How is your IAM? | Google Cloud edition This is a submission for the Google Cloud NEXT Writing Challenge What is this piece about: IAM is evolving from access control into a trust grid for humans, workloads, service accounts, and agents, and Google Cloud NEXT &#x27;26 makes this very clear, but how is your IAM? Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Because in Google Cloud, IAM is not one lock on one door. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways It is a policy system spread across organizations, folders, projects, workloads, service accounts, APIs, logs, secrets, pipelines, and now agents. Through Gemini Enterprise Agent Platform, Agent Identity, Agent Gateway, Agent Observability, Agentic Defense, and Agentic Data Cloud, Google was naming the shape of the next… Cloud IAM has to ask a larger and more uncomfortable question. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Why I Chose n8n Over Zapier for Production Lead Automation (₹0 vs $828+/Year)",
     "date": "2026-04-23",
     "category": "Coding & Community",

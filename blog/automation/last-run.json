@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-25T06:45:59.234322+00:00",
+  "timestamp": "2026-04-25T17:56:11.736189+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Vercel vs Netlify vs Railway: VPS Hosting Reality",
-      "link": "auto/20260425-vercel-vs-netlify-vs-railway-vps-hosting-reality-37d77599.html",
-      "score": 129.9563,
+      "title": "How is your IAM? | Google Cloud edition",
+      "link": "auto/20260425-how-is-your-iam-google-cloud-edition-8f9e77ae.html",
+      "score": 148.9111,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

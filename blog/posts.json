@@ -1,5 +1,19 @@
 [
   {
+    "title": "Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering",
+    "date": "2026-04-26",
+    "category": "Coding & Community",
+    "summary": "However, during the early and unstructured DevOps phase, developers were often expected to handle additional tasks; comparable to asking a pilot to refuel the aircraft, repair the engine during flight and manage baggage operations on the ground.",
+    "link": "auto/20260426-quantifying-the-transition-from-unstructured-devops-to-produ-8eb062d7.html",
+    "source_url": "https://dev.to/rakshath/quantifying-the-transition-from-unstructured-devops-to-product-led-platform-engineering-357a",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbhg46redqtuzyb585d5f.png",
+    "search_plain": "Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-26 DEV Community Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering However, during the early and unstructured DevOps phase, developers were often expected to handle additional tasks; comparable to asking a pilot to refuel the aircraft, repair the engine during flight and manage baggage operations on the ground. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters However, in the rush to automate, many organizations fell into the trap of Unstructured DevOps. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways To better understand the impact of unstructured DevOps, consider the example of a commercial airline pilot. The goal is to build an Internal Developer Platform (IDP) that provides “Golden Paths”, pre-architected, secure and supported routes to production which can be directly used by… When developers use the platform, essential features such as security, scalability and monitoring are automatically built in. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Vercel vs Netlify vs Railway: VPS Hosting Reality",
     "date": "2026-04-25",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering",
+    "date": "2026-04-26",
+    "category": "Coding & Community",
+    "summary": "However, during the early and unstructured DevOps phase, developers were often expected to handle additional tasks; comparable to asking a pilot to refuel the aircraft, repair the engine during flight and manage baggage operations on the ground.",
+    "link": "auto/20260426-quantifying-the-transition-from-unstructured-devops-to-produ-8eb062d7.html",
+    "source_url": "https://dev.to/rakshath/quantifying-the-transition-from-unstructured-devops-to-product-led-platform-engineering-357a",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbhg46redqtuzyb585d5f.png"
+  },
+  {
     "title": "Vercel vs Netlify vs Railway: VPS Hosting Reality",
     "date": "2026-04-25",
     "category": "Coding & Community",

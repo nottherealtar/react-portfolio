@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-26T07:05:28.133863+00:00",
+  "timestamp": "2026-04-26T17:57:38.044100+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
-  "unseen_candidates": 601,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "After over 3 years of running like dogwater on Steam Deck, one of my favorite RPGs has finally earned its Verified badge",
-      "link": "auto/20260424-after-over-3-years-of-running-like-dogwater-on-steam-deck-on-61620e91.html",
-      "score": 116.012,
-      "source": "PC Gamer",
+      "title": "Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering",
+      "link": "auto/20260426-quantifying-the-transition-from-unstructured-devops-to-produ-8eb062d7.html",
+      "score": 163.9119,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

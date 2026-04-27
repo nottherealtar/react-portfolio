@@ -1,5 +1,18 @@
 [
   {
+    "title": "Welcome to the “find out” stage of AI",
+    "date": "2026-04-27",
+    "category": "Coding & Careers",
+    "summary": "” Every company was running AI experiments all the time. I started saying that we’re in the “find out” stage of AI, meaning we’re past the experimental phase of AI and entering into one where they need to work and provide real value. Lots of folks are trying to build agentic trust with visibility and data.",
+    "link": "auto/20260427-welcome-to-the-find-out-stage-of-ai-ae23b801.html",
+    "source_url": "https://stackoverflow.blog/2026/04/27/welcome-to-the-find-out-stage-of-ai/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Welcome to the “find out” stage of AI | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Careers ~2 min read 2026-04-27 Stack Overflow Blog Welcome to the “find out” stage of AI ” Every company was running AI experiments all the time. I started saying that we’re in the “find out” stage of AI, meaning we’re past the experimental phase of AI and entering into one where they need to work and provide real value. Lots of folks are trying to build agentic trust with visibility and data. Why this matters In the early days of AI, much of the chatter I heard was about all the cool new things AI could do. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways HumanX validated that notion, with almost everybody who gave comments referring to “an inflection point”, “a second phase of AI”, and “the conversation shifting.” Here’s a few… It forces a more careful, purposeful approach to how we build and deploy these systems.” For a couple of years, AI has been a story of better and better models trained on more… That included tying agentic actions to a human user, just-in-time and ephemeral auth controls, and zero-trust permissioning systems. Primary source Stack Overflow Blog — original article ← Back to journal"
+  },
+  {
     "title": "Key Principles of SaaS Performance Optimization for Speed, Scalability, and Reliability",
     "date": "2026-04-27",
     "category": "Coding & Community",

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-26T17:57:38.044100+00:00",
+  "timestamp": "2026-04-27T07:42:07.761129+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Quantifying the Transition From Unstructured DevOps to Product-led Platform Engineering",
-      "link": "auto/20260426-quantifying-the-transition-from-unstructured-devops-to-produ-8eb062d7.html",
-      "score": 163.9119,
+      "title": "Key Principles of SaaS Performance Optimization for Speed, Scalability, and Reliability",
+      "link": "auto/20260427-key-principles-of-saas-performance-optimization-for-speed-sc-a22b839c.html",
+      "score": 136.9422,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -1,5 +1,18 @@
 [
   {
+    "title": "1,294 commits in 61 days. I cannot read code.",
+    "date": "2026-04-28",
+    "category": "Coding & Community",
+    "summary": "It is a desktop application where AI workers walk between four desks executing developer tickets. I do not write commits. I take a screenshot, drop it into PM Claude, describe what I see, and an investigation prompt comes out the other side.",
+    "link": "auto/20260428-1-294-commits-in-61-days-i-cannot-read-code-ba6c74f6.html",
+    "source_url": "https://dev.to/soliddark/1294-commits-in-61-days-i-cannot-read-code-1cd3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "1,294 commits in 61 days. I cannot read code. | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-28 DEV Community 1,294 commits in 61 days. I cannot read code. It is a desktop application where AI workers walk between four desks executing developer tickets. I do not write commits. I take a screenshot, drop it into PM Claude, describe what I see, and an investigation prompt comes out the other side. Why this matters If you can read code, you can audit a diff before you commit. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways PM Claude asks clarifying questions, pushes back when my request is wrong, and writes structured prompts to send to the implementation agents. I read its summaries, not its code. Aggregated stats across the Gate repo and the soliddark.net homepage repo, March 3 to April 27, 2026: 1,294 commits across the two repos 1,143 commits to Gate alone, all… Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Welcome to the “find out” stage of AI",
     "date": "2026-04-27",
     "category": "Coding & Careers",

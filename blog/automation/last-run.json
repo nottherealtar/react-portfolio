@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-27T18:19:24.479562+00:00",
+  "timestamp": "2026-04-28T07:40:35.682860+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
-  "unseen_candidates": 601,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 600,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Welcome to the “find out” stage of AI",
-      "link": "auto/20260427-welcome-to-the-find-out-stage-of-ai-ae23b801.html",
-      "score": 141.7462,
-      "source": "Stack Overflow Blog",
+      "title": "1,294 commits in 61 days. I cannot read code.",
+      "link": "auto/20260428-1-294-commits-in-61-days-i-cannot-read-code-ba6c74f6.html",
+      "score": 131.8933,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,18 @@
 [
   {
+    "title": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854)",
+    "date": "2026-04-28",
+    "category": "Coding & Community",
+    "summary": "The other was a critical remote code execution vulnerability in the git push pipeline. Five days earlier, GitHub's merge queue silently reverted 2,092 pull requests. Public disclosure held until April 28 to let GitHub Enterprise Server customers patch.",
+    "link": "auto/20260428-github-let-a-git-push-hijack-its-servers-rce-cve-2026-3854-cf669f73.html",
+    "source_url": "https://dev.to/monkfromearth/github-let-a-git-push-hijack-its-servers-rce-cve-2026-3854-bl8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854) | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-28 DEV Community GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854) The other was a critical remote code execution vulnerability in the git push pipeline. Five days earlier, GitHub&#x27;s merge queue silently reverted 2,092 pull requests. Public disclosure held until April 28 to let GitHub Enterprise Server customers patch. Why this matters What is CVE-2026-3854 and how did a git push hijack GitHub&#x27;s servers? It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Wiz turned a git push into remote code execution on GitHub. 1 2 The exploit needed a standard git client and one command. 2 What happened to GitHub&#x27;s merge queue on April 23? Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "1,294 commits in 61 days. I cannot read code.",
     "date": "2026-04-28",
     "category": "Coding & Community",

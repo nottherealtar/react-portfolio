@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-04-28T07:40:35.682860+00:00",
+  "timestamp": "2026-04-28T18:50:50.558207+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
-  "unseen_candidates": 600,
-  "blocked_domain_candidates": 2,
+  "unseen_candidates": 601,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "1,294 commits in 61 days. I cannot read code.",
-      "link": "auto/20260428-1-294-commits-in-61-days-i-cannot-read-code-ba6c74f6.html",
-      "score": 131.8933,
+      "title": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854)",
+      "link": "auto/20260428-github-let-a-git-push-hijack-its-servers-rce-cve-2026-3854-cf669f73.html",
+      "score": 142.9275,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

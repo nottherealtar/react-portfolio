@@ -24,6 +24,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "An update on GitHub availability",
+    "date": "2026-04-28",
+    "category": "Developer Platform",
+    "summary": "We started executing our plan to increase GitHub’s capacity by 10X in October 2025 with a goal of substantially improving reliability and failover. For the last three months, we’ve been investing heavily in response to this trend both within git system and in the pull request experience.",
+    "link": "auto/20260428-an-update-on-github-availability-876bd474.html",
+    "source_url": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/04/record-accelleration-1920x1080-2.png?resize=1920%2C1080"
+  },
+  {
     "title": "1,294 commits in 61 days. I cannot read code.",
     "date": "2026-04-28",
     "category": "Coding & Community",

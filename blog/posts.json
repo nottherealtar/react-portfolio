@@ -26,6 +26,20 @@
     "search_plain": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854) | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-28 DEV Community GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854) The other was a critical remote code execution vulnerability in the git push pipeline. Five days earlier, GitHub&#x27;s merge queue silently reverted 2,092 pull requests. Public disclosure held until April 28 to let GitHub Enterprise Server customers patch. Why this matters What is CVE-2026-3854 and how did a git push hijack GitHub&#x27;s servers? It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Wiz turned a git push into remote code execution on GitHub. 1 2 The exploit needed a standard git client and one command. 2 What happened to GitHub&#x27;s merge queue on April 23? Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "An update on GitHub availability",
+    "date": "2026-04-28",
+    "category": "Developer Platform",
+    "summary": "We started executing our plan to increase GitHub’s capacity by 10X in October 2025 with a goal of substantially improving reliability and failover. For the last three months, we’ve been investing heavily in response to this trend both within git system and in the pull request experience.",
+    "link": "auto/20260428-an-update-on-github-availability-876bd474.html",
+    "source_url": "https://github.blog/news-insights/company-news/an-update-on-github-availability/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/04/record-accelleration-1920x1080-2.png?resize=1920%2C1080",
+    "search_plain": "An update on GitHub availability | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Platform ~2 min read 2026-04-28 GitHub Blog An update on GitHub availability We started executing our plan to increase GitHub’s capacity by 10X in October 2025 with a goal of substantially improving reliability and failover. For the last three months, we’ve been investing heavily in response to this trend both within git system and in the pull request experience. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters I wanted to give an update on GitHub’s availability in light of two recent incidents . It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Next we focused on isolating critical services like git and GitHub Actions from other workloads and minimizing the blast radius by minimizing single points of failure. In affected cases, changes from previously merged pull requests and prior commits were inadvertently reverted by subsequent merges. On April 27, an incident affected our Elasticsearch subsystem, which powers several search-backed experiences across GitHub, including parts of pull requests, issues, and… Primary source GitHub Blog — original article ← Back to journal"
+  },
+  {
     "title": "1,294 commits in 61 days. I cannot read code.",
     "date": "2026-04-28",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "When Your AI Agent Crashes at 2 AM, Google Just Gave You a Way to Fix It",
+    "date": "2026-04-29",
+    "category": "Coding & Community",
+    "summary": "AI agents don’t just fail like traditional software. Just a broken agent, confused logs, and you staring at your screen wondering what on earth it was thinking. It's \"managing the reasoning, the tool calls, and all the places in the whole system where something can go wrong.",
+    "link": "auto/20260429-when-your-ai-agent-crashes-at-2-am-google-just-gave-you-a-wa-cfdf3acf.html",
+    "source_url": "https://dev.to/hemapriya_kanagala/when-your-ai-agent-crashes-at-2-am-google-just-gave-you-a-way-to-fix-it-3da5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "When Your AI Agent Crashes at 2 AM, Google Just Gave You a Way to Fix It | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-29 DEV Community When Your AI Agent Crashes at 2 AM, Google Just Gave You a Way to Fix It AI agents don’t just fail like traditional software. Just a broken agent, confused logs, and you staring at your screen wondering what on earth it was thinking. It&#x27;s &quot;managing the reasoning, the tool calls, and all the places in the whole system where something can go wrong. Why this matters Your AI agent just crashed in production. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways This is a submission for the Google Cloud NEXT Writing Challenge TL;DR AI agents don’t just fail like traditional software. Together, they make debugging AI agents in production faster, clearer, and far less painful. It’s understanding why the agent failed. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854)",
     "date": "2026-04-28",
     "category": "Coding & Community",

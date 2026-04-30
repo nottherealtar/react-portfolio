@@ -13,6 +13,20 @@
     "search_plain": "When Your AI Agent Crashes at 2 AM, Google Just Gave You a Way to Fix It | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-04-29 DEV Community When Your AI Agent Crashes at 2 AM, Google Just Gave You a Way to Fix It AI agents don’t just fail like traditional software. Just a broken agent, confused logs, and you staring at your screen wondering what on earth it was thinking. It&#x27;s &quot;managing the reasoning, the tool calls, and all the places in the whole system where something can go wrong. Why this matters Your AI agent just crashed in production. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways This is a submission for the Google Cloud NEXT Writing Challenge TL;DR AI agents don’t just fail like traditional software. Together, they make debugging AI agents in production faster, clearer, and far less painful. It’s understanding why the agent failed. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "The secret to Overwatch's revitalization? Over-communicating.",
+    "date": "2026-04-29",
+    "category": "Game Development",
+    "summary": "For Keller and the rest of the developers, it came down to another seemingly simple idea: over-communication with its player base. Blizzard has been open about how important player feedback has been to developing Overwatch , especially as it was working on revitalizing it.",
+    "link": "auto/20260429-the-secret-to-overwatch-s-revitalization-over-communicating-b1c707a6.html",
+    "source_url": "https://www.gamedeveloper.com/production/the-secret-to-overwatch-s-revitalization-over-communicating-",
+    "source_name": "Game Developer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blta48d21e15c0f95b8/69af375de74ba50008b30e82/GDC-white-a7871e2b774f7ecda4ee930bd43649c8.png?width=1280&auto=webp&quality=80&disable=upscale",
+    "search_plain": "The secret to Overwatch&#x27;s revitalization? Over-communicating. | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Game Development ~2 min read 2026-04-29 Game Developer The secret to Overwatch&#x27;s revitalization? Over-communicating. For Keller and the rest of the developers, it came down to another seemingly simple idea: over-communication with its player base. Blizzard has been open about how important player feedback has been to developing Overwatch , especially as it was working on revitalizing it. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters However, what Blizzard improved—and continues to do—is increase communication with the players. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways Keller admitted that it did lead them astray a bit, since players were clamoring for a PvE mode that ended up dragging down development. &quot;At their core, these players want to know that a game is in good hands, that the company standing behind it has their interests in mind as they&#x27;re continuously developing the… That includes traditional communication like patch notes, but the team also crafted long essays and explanations for upcoming changes and inside looks into decision-making… Primary source Game Developer — original article ← Back to journal"
+  },
+  {
     "title": "GitHub Let a Git Push Hijack Its Servers (RCE CVE-2026-3854)",
     "date": "2026-04-28",
     "category": "Coding & Community",

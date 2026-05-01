@@ -1,5 +1,17 @@
 [
   {
+    "title": "How We Integrated Claude Code into Our Development Workflow",
+    "date": "2026-05-01",
+    "category": "Coding & Community",
+    "summary": "After 14 months of iterative testing across 3 distinct engineering teams, we measured a 62% reduction in code review cycle time, 41% drop in post-release production bugs, and $127k annual infrastructure savings by integrating Claude Code into our core development workflow—all while maintaining 100% compliance with our internal security and audit…",
+    "link": "auto/20260501-how-we-integrated-claude-code-into-our-development-workflow-edab49a6.html",
+    "source_url": "https://dev.to/johalputt/how-we-integrated-claude-code-into-our-development-workflow-2046",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "8 Open-Source Tools That Save Solo Developers Hours Every Week",
     "date": "2026-05-01",
     "category": "Coding & Community",

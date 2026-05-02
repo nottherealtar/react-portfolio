@@ -13,6 +13,20 @@
     "search_plain": "How We Integrated Claude Code into Our Development Workflow | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-01 DEV Community How We Integrated Claude Code into Our Development Workflow After 14 months of iterative testing across 3 distinct engineering teams, we measured a 62% reduction in code review cycle time, 41% drop in post-release production bugs, and $127k annual infrastructure savings by integrating Claude Code into our core development workflow—all while maintaining 100% compliance with our internal security and audit… Why this matters 82% of respondents said Claude Code reduced their workload, 73% said it helped them catch bugs earlier, and 64% said they would not want to go back to a workflow without AI review. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. Operational takeaways (May 2026) (106 points) Uber Torches 2026 AI Budget on Claude Code in Four Months (101 points) whohas – Command-line utility for cross-distro, cross-repository package search… Metrics were collected via GitHub Actions workflow logs, Datadog APM for production latency, and Jira for ticket cycle time. When we first rolled out Claude Code with default prompts, we got 40% more false positives because the tool flagged valid patterns as issues. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Faster Rust Testing at Scale: cargo-nextest in Practice",
+    "date": "2026-05-01",
+    "category": "Developer Tools",
+    "summary": "cargo-nextest is widely used across the Rust ecosystem as a next-generation test runner. It is built to make Rust test execution faster, more observable, and more reliable, especially for larger codebases, CI pipelines, and projects with complex integration tests.",
+    "link": "auto/20260501-faster-rust-testing-at-scale-cargo-nextest-in-practice-819485aa.html",
+    "source_url": "https://blog.jetbrains.com/rust/2026/05/01/faster-rust-tests-with-cargo-nextest/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/04/1553275010805-1.jpeg",
+    "search_plain": "Faster Rust Testing at Scale: cargo-nextest in Practice | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-01 JetBrains Blog Faster Rust Testing at Scale: cargo-nextest in Practice cargo-nextest is widely used across the Rust ecosystem as a next-generation test runner. It is built to make Rust test execution faster, more observable, and more reliable, especially for larger codebases, CI pipelines, and projects with complex integration tests. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters RustRover 2026.1 introduced native cargo-nextest support, so developers can now run and monitor nextest sessions directly from the IDE, with progress reporting and structured results in the Test tool window. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways As I was developing it, I fell in love with Rust and decided to go deeper into it.” “I learned Rust to kind of work on this thing. That combination is what makes cargo-nextest useful across both open source and large industry codebases. In those cases, the main problems are not only “how fast can I run tests?” but also: cargo-nextest is built for that kind of environment. Primary source JetBrains Blog — original article ← Back to journal"
+  },
+  {
     "title": "8 Open-Source Tools That Save Solo Developers Hours Every Week",
     "date": "2026-05-01",
     "category": "Coding & Community",

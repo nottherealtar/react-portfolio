@@ -12,6 +12,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Faster Rust Testing at Scale: cargo-nextest in Practice",
+    "date": "2026-05-01",
+    "category": "Developer Tools",
+    "summary": "cargo-nextest is widely used across the Rust ecosystem as a next-generation test runner. It is built to make Rust test execution faster, more observable, and more reliable, especially for larger codebases, CI pipelines, and projects with complex integration tests.",
+    "link": "auto/20260501-faster-rust-testing-at-scale-cargo-nextest-in-practice-819485aa.html",
+    "source_url": "https://blog.jetbrains.com/rust/2026/05/01/faster-rust-tests-with-cargo-nextest/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/04/1553275010805-1.jpeg"
+  },
+  {
     "title": "8 Open-Source Tools That Save Solo Developers Hours Every Week",
     "date": "2026-05-01",
     "category": "Coding & Community",

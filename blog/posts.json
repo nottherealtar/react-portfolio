@@ -1,5 +1,19 @@
 [
   {
+    "title": "Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business",
+    "date": "2026-05-02",
+    "category": "Coding & Community",
+    "summary": "Over decades, organizations build robust platforms that support critical operations — but eventually, the weight of legacy coupling begins to hinder growth. Every change required fighting the abstraction rather than solving the business problem. It was engineering ambition outrunning business reality.",
+    "link": "auto/20260502-incremental-modernization-architecture-splitting-monoliths-i-1bb3009c.html",
+    "source_url": "https://dev.to/sauloos/incremental-modernization-architecture-splitting-monoliths-into-microservices-without-breaking-the-2hkk",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh59q1q8sx5p75884aitc.png",
+    "search_plain": "Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-02 DEV Community Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business Over decades, organizations build robust platforms that support critical operations — but eventually, the weight of legacy coupling begins to hinder growth. Every change required fighting the abstraction rather than solving the business problem. It was engineering ambition outrunning business reality. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Because of an approach that put architectural purity ahead of continuous value delivery. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Successful modernization is less about &quot;new tech&quot; and more about managing the transition of complexity. The constraint was that we could never stop the business while doing it. The rest kept the platform running and delivering features. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "How We Integrated Claude Code into Our Development Workflow",
     "date": "2026-05-01",
     "category": "Coding & Community",

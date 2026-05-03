@@ -13,6 +13,18 @@
     "hero_image": "https://cdn.mos.cms.futurecdn.net/wwHuy8RyrjLvYgmstp9zvA.jpg"
   },
   {
+    "title": "We Cut 40% of Our Security Incidents Using Trivy 0.50 and Falco 0.40",
+    "date": "2026-05-03",
+    "category": "Coding & Community",
+    "summary": "In Q3 2024, our 12-person platform engineering team reduced confirmed security incidents by 41.7% (from 72 to 42 per quarter) after rolling out Trivy 0.50 for pre-deployment scanning and Falco 0.40 for runtime detection across 142 production microservices. Short code snippet: Export SPDX 3.0 SBOM with Trivy 0.50: Tip 2: Use Falco 0.",
+    "link": "auto/20260503-we-cut-40-of-our-security-incidents-using-trivy-0-50-and-fal-ada12f94.html",
+    "source_url": "https://dev.to/johalputt/we-cut-40-of-our-security-incidents-using-trivy-050-and-falco-040-50hg",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business",
     "date": "2026-05-02",
     "category": "Coding & Community",

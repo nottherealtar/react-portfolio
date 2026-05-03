@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-03T07:26:36.950820+00:00",
+  "timestamp": "2026-05-03T18:02:24.032135+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 599,
+  "unseen_candidates": 598,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
-      "link": "auto/20260503-you-re-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-06dbff8e.html",
-      "score": 120.5354,
-      "source": "PC Gamer",
+      "title": "We Cut 40% of Our Security Incidents Using Trivy 0.50 and Falco 0.40",
+      "link": "auto/20260503-we-cut-40-of-our-security-incidents-using-trivy-0-50-and-fal-ada12f94.html",
+      "score": 130.7507,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

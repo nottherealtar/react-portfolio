@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-02T18:01:44.688715+00:00",
+  "timestamp": "2026-05-03T07:26:36.950820+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business",
-      "link": "auto/20260502-incremental-modernization-architecture-splitting-monoliths-i-1bb3009c.html",
-      "score": 130.7545,
-      "source": "DEV Community",
+      "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
+      "link": "auto/20260503-you-re-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-06dbff8e.html",
+      "score": 120.5354,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

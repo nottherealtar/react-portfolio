@@ -1,5 +1,18 @@
 [
   {
+    "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
+    "date": "2026-05-03",
+    "category": "Gaming & Industry",
+    "summary": "What I did remember was that the buoyancy puzzle in Route Kanal used to be harder, and Ocelot's helpfully documented that here to prove those of us who remember this bit being a right bastard aren't crazy.",
+    "link": "auto/20260503-you-re-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-06dbff8e.html",
+    "source_url": "https://www.pcgamer.com/games/fps/youre-not-crazy-that-one-sewer-puzzle-in-half-life-2-really-did-used-to-be-harder/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/wwHuy8RyrjLvYgmstp9zvA.jpg"
+  },
+  {
     "title": "Incremental Modernization Architecture: Splitting Monoliths into Microservices Without Breaking the Business",
     "date": "2026-05-02",
     "category": "Coding & Community",

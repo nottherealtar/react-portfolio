@@ -14,6 +14,20 @@
     "search_plain": "This is How I Automated My GitHub PRs with AI Agents &amp; Agentic Workflows! | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-04 DEV Community This is How I Automated My GitHub PRs with AI Agents &amp; Agentic Workflows! The goal is to give reviewers the context they usually have to gather manually: who owns the service, whether it is deployed, whether basic repository standards are in place, and whether the change looks safe to merge. When you Automate GitHub PRs with AI and catalog data, reviewers get a structured starting point within seconds. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters What it means to automate GitHub PRs To Automate GitHub PRs, I am talking about a workflow where opening a pull request triggers an automated review pipeline. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways When a PR opens, it can sync metadata from GitHub, pull operational and ownership context from an internal developer platform, send that context to an LLM, and return a… It also covers what this kind of workflow should evaluate, why a middleware service is needed, and what mistakes to avoid. Why teams want to automate GitHub PRs Most pull request delays are not caused by code syntax alone. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "PyTorch vs. TensorFlow: Choosing the Right Framework in 2026",
+    "date": "2026-05-04",
+    "category": "Developer Tools",
+    "summary": "PyTorch dominates research and experimentation, while TensorFlow leads in production deployment at scale. TensorFlow: Strengths and weaknesses TensorFlow’s production ecosystem provides you with a comprehensive infrastructure for deploying models at scale.",
+    "link": "auto/20260504-pytorch-vs-tensorflow-choosing-the-right-framework-in-2026-c7c0ee3d.html",
+    "source_url": "https://blog.jetbrains.com/pycharm/2026/05/pytorch-vs-tensorflow-choosing-framework-2026/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/PC-social-BlogFeatured-1280x720-1.png",
+    "search_plain": "PyTorch vs. TensorFlow: Choosing the Right Framework in 2026 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-04 JetBrains Blog PyTorch vs. TensorFlow: Choosing the Right Framework in 2026 PyTorch dominates research and experimentation, while TensorFlow leads in production deployment at scale. TensorFlow: Strengths and weaknesses TensorFlow’s production ecosystem provides you with a comprehensive infrastructure for deploying models at scale. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters PyTorch and TensorFlow took different approaches from day one. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Choosing between PyTorch and TensorFlow isn’t about finding the “better” framework – it’s about finding the right fit for your project. However, this research-first design means production deployment tools remain less mature than TensorFlow’s enterprise infrastructure. Dynamic graphs enable natural debugging: Set breakpoints in training loops, inspect tensor values mid-execution, and modify architectures on the fly using tools you already know. Primary source JetBrains Blog — original article ← Back to journal"
+  },
+  {
     "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
     "date": "2026-05-03",
     "category": "Gaming & Industry",

@@ -13,6 +13,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwvqhl5hyevf5osns56c6.png"
   },
   {
+    "title": "PyTorch vs. TensorFlow: Choosing the Right Framework in 2026",
+    "date": "2026-05-04",
+    "category": "Developer Tools",
+    "summary": "PyTorch dominates research and experimentation, while TensorFlow leads in production deployment at scale. TensorFlow: Strengths and weaknesses TensorFlow’s production ecosystem provides you with a comprehensive infrastructure for deploying models at scale.",
+    "link": "auto/20260504-pytorch-vs-tensorflow-choosing-the-right-framework-in-2026-c7c0ee3d.html",
+    "source_url": "https://blog.jetbrains.com/pycharm/2026/05/pytorch-vs-tensorflow-choosing-framework-2026/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/PC-social-BlogFeatured-1280x720-1.png"
+  },
+  {
     "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
     "date": "2026-05-03",
     "category": "Gaming & Industry",

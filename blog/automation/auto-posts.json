@@ -1,5 +1,18 @@
 [
   {
+    "title": "This is How I Automated My GitHub PRs with AI Agents & Agentic Workflows!",
+    "date": "2026-05-04",
+    "category": "Coding & Community",
+    "summary": "The goal is to give reviewers the context they usually have to gather manually: who owns the service, whether it is deployed, whether basic repository standards are in place, and whether the change looks safe to merge. When you Automate GitHub PRs with AI and catalog data, reviewers get a structured starting point within seconds.",
+    "link": "auto/20260504-this-is-how-i-automated-my-github-prs-with-ai-agents-agentic-eab153fd.html",
+    "source_url": "https://dev.to/pavanbelagatti/this-is-how-i-automated-my-github-prs-with-ai-agents-agentic-workflows-11c6",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwvqhl5hyevf5osns56c6.png"
+  },
+  {
     "title": "You're not crazy, that one sewer puzzle in Half-Life 2 really did used to be harder",
     "date": "2026-05-03",
     "category": "Gaming & Industry",

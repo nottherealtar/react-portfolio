@@ -13,6 +13,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fah33jq0o3rmvcjqb4sp1.png"
   },
   {
+    "title": "US government warns of severe CopyFail bug affecting major versions of Linux",
+    "date": "2026-05-04",
+    "category": "Tech & Startups",
+    "summary": "government says the bug, dubbed “CopyFail,” is now being exploited in the wild , meaning it’s being actively used in malicious hacking campaigns. But the patches have yet to fully trickle down to the many Linux distributions that rely on the vulnerable kernel, leaving any system running an affected Linux version at risk of compromise.",
+    "link": "auto/20260504-us-government-warns-of-severe-copyfail-bug-affecting-major-v-acce8722.html",
+    "source_url": "https://techcrunch.com/2026/05/04/u-s-government-warns-of-severe-copyfail-bug-affecting-major-versions-of-linux/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://techcrunch.com/wp-content/uploads/2024/10/whittaker_headshot_disrupt2024.jpg?w=150"
+  },
+  {
     "title": "This is How I Automated My GitHub PRs with AI Agents & Agentic Workflows!",
     "date": "2026-05-04",
     "category": "Coding & Community",

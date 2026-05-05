@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-05T07:27:33.014486+00:00",
+  "timestamp": "2026-05-05T18:45:51.034041+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 598,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
-      "link": "auto/20260505-i-asked-chatgpt-for-free-status-page-tools-it-didn-t-mention-1f6ca57b.html",
-      "score": 141.7653,
-      "source": "DEV Community",
+      "title": "US government warns of severe CopyFail bug affecting major versions of Linux",
+      "link": "auto/20260504-us-government-warns-of-severe-copyfail-bug-affecting-major-v-acce8722.html",
+      "score": 122.1699,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

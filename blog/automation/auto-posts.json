@@ -1,5 +1,18 @@
 [
   {
+    "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
+    "date": "2026-05-05",
+    "category": "Coding & Community",
+    "summary": "Three weeks into launch I have 3 users, 2 Google clicks, and zero mentions when you ask ChatGPT or Gemini for \"free status page alternatives.\" This is what I shipped, and where I'm still wrong. The pitch on the landing page is one line: \"Skip the YAML, the GitHub Actions, and the $29/month bill.\" Type a name.",
+    "link": "auto/20260505-i-asked-chatgpt-for-free-status-page-tools-it-didn-t-mention-1f6ca57b.html",
+    "source_url": "https://dev.to/edifierxuhao/i-asked-chatgpt-for-free-status-page-tools-it-didnt-mention-mine-heres-the-nextjs-supabase-15ei",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fah33jq0o3rmvcjqb4sp1.png"
+  },
+  {
     "title": "This is How I Automated My GitHub PRs with AI Agents & Agentic Workflows!",
     "date": "2026-05-04",
     "category": "Coding & Community",

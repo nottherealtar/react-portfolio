@@ -1,5 +1,19 @@
 [
   {
+    "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
+    "date": "2026-05-05",
+    "category": "Coding & Community",
+    "summary": "Three weeks into launch I have 3 users, 2 Google clicks, and zero mentions when you ask ChatGPT or Gemini for \"free status page alternatives.\" This is what I shipped, and where I'm still wrong. The pitch on the landing page is one line: \"Skip the YAML, the GitHub Actions, and the $29/month bill.\" Type a name.",
+    "link": "auto/20260505-i-asked-chatgpt-for-free-status-page-tools-it-didn-t-mention-1f6ca57b.html",
+    "source_url": "https://dev.to/edifierxuhao/i-asked-chatgpt-for-free-status-page-tools-it-didnt-mention-mine-heres-the-nextjs-supabase-15ei",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fah33jq0o3rmvcjqb4sp1.png",
+    "search_plain": "I asked ChatGPT for free status page tools. It didn&#x27;t mention mine. Here&#x27;s the Next.js + Supabase build behind that zero. | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-05 DEV Community I asked ChatGPT for free status page tools. It didn&#x27;t mention mine. Here&#x27;s the Next.js + Supabase build behind that zero. Three weeks into launch I have 3 users, 2 Google clicks, and zero mentions when you ask ChatGPT or Gemini for &quot;free status page alternatives.&quot; This is what I shipped, and where I&#x27;m still wrong. The pitch on the landing page is one line: &quot;Skip the YAML, the GitHub Actions, and the $29/month bill.&quot; Type a name. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Supabase for Auth, Postgres, and RLS The part that cost me a month was a default I never thought to question. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. Operational takeaways Twenty-four hours after I swapped Supabase Auth&#x27;s default SMTP for Resend, my first real user signed up. The trade-off buys 60-second onboarding: no built-in HTTP checks, no alerting rules engine, no integrations tab. It is rate-limited to 3-4 messages per hour on the free tier, and the From address is on a shared Supabase domain. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "This is How I Automated My GitHub PRs with AI Agents & Agentic Workflows!",
     "date": "2026-05-04",
     "category": "Coding & Community",

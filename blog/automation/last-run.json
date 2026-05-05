@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-04T18:55:00.398655+00:00",
+  "timestamp": "2026-05-05T07:27:33.014486+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
   "unseen_candidates": 598,
-  "blocked_domain_candidates": 2,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "PyTorch vs. TensorFlow: Choosing the Right Framework in 2026",
-      "link": "auto/20260504-pytorch-vs-tensorflow-choosing-the-right-framework-in-2026-c7c0ee3d.html",
-      "score": 131.4873,
-      "source": "JetBrains Blog",
+      "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
+      "link": "auto/20260505-i-asked-chatgpt-for-free-status-page-tools-it-didn-t-mention-1f6ca57b.html",
+      "score": 141.7653,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

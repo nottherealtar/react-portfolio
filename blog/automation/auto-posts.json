@@ -1,5 +1,18 @@
 [
   {
+    "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
+    "date": "2026-05-06",
+    "category": "Coding & Community",
+    "summary": "Every new class of incidents requires a new runbook. Engineers know which instances are idle. This is the Closed-Loop Remediation Stack.",
+    "link": "auto/20260506-closed-loop-cloud-remediation-how-autonomous-policies-replac-94a0276a.html",
+    "source_url": "https://dev.to/muskan_8abedcc7e12/closed-loop-cloud-remediation-how-autonomous-policies-replace-on-call-runbooks-5188",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F60g7yziknepu85vv1sfc.webp"
+  },
+  {
     "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
     "date": "2026-05-05",
     "category": "Coding & Community",

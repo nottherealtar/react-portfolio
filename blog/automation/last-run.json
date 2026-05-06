@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-05T18:45:51.034041+00:00",
+  "timestamp": "2026-05-06T07:43:42.661792+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 601,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 600,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "US government warns of severe CopyFail bug affecting major versions of Linux",
-      "link": "auto/20260504-us-government-warns-of-severe-copyfail-bug-affecting-major-v-acce8722.html",
-      "score": 122.1699,
-      "source": "TechCrunch",
+      "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
+      "link": "auto/20260506-closed-loop-cloud-remediation-how-autonomous-policies-replac-94a0276a.html",
+      "score": 132.9014,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

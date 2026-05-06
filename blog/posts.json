@@ -14,6 +14,19 @@
     "search_plain": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-06 DEV Community Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks Every new class of incidents requires a new runbook. Engineers know which instances are idle. This is the Closed-Loop Remediation Stack. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Every new runbook requires engineers to read it, remember it, and execute it correctly under pressure. It highlights where brittle integrations become operational debt as vendors iterate quickly. It matters for compliance and go-to-market planning when the rules of the road for tech are still unsettled. Operational takeaways The engineer opens a runbook, follows a checklist, fixes the problem, and closes the ticket. The average remediation event in a runbook-driven operation takes 47 minutes from alert to resolution, according to PagerDuty&#x27;s 2023 State of Digital Operations report. Every new service you add creates a new class of incidents. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Chatbots Are Dead. Long Live Agents: My Take on the Last 10 Days in Tech",
+    "date": "2026-05-06",
+    "category": "Coding & Community",
+    "summary": "The game now is designing agentic systems that can plan, act, and be governed safely in production. This isn’t the “let’s experiment with a chatbot” phase anymore—it’s “how do we run thousands of agents safely and cheaply?",
+    "link": "auto/20260506-chatbots-are-dead-long-live-agents-my-take-on-the-last-10-da-6e8e09e9.html",
+    "source_url": "https://dev.to/keerthana_696356/chatbots-are-dead-long-live-agents-my-take-on-the-last-10-days-in-tech-4ln8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Chatbots Are Dead. Long Live Agents: My Take on the Last 10 Days in Tech | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-06 DEV Community Chatbots Are Dead. Long Live Agents: My Take on the Last 10 Days in Tech The game now is designing agentic systems that can plan, act, and be governed safely in production. This isn’t the “let’s experiment with a chatbot” phase anymore—it’s “how do we run thousands of agents safely and cheaply? Why this matters Policy engines that intercept every agent action before it executes (like a kernel for AI agents). It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Now GPT‑5.5 and Google’s Remy are showing something different: agentic workflows that plan, call tools, and iterate until a goal is done. An agent plans for you. The next layer of chaos is physical AI—agents that don’t just touch APIs and databases, but robotics, factories, and hardware. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "I asked ChatGPT for free status page tools. It didn't mention mine. Here's the Next.js + Supabase build behind that zero.",
     "date": "2026-05-05",
     "category": "Coding & Community",

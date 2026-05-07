@@ -1,5 +1,17 @@
 [
   {
+    "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
+    "date": "2026-05-07",
+    "category": "Coding & Community",
+    "summary": "If you've spent any time searching for an open-source CRM , you've probably hit the same wall most teams hit: the popular options are either bloated, expensive at scale, locked behind paid editions, or built on aging PHP stacks that are painful to extend. Horilla CRM is a free and open-source CRM built with Django 6 , designed for self-hosting.",
+    "link": "auto/20260507-horilla-crm-a-free-open-source-django-crm-for-modern-busines-ae57f8e5.html",
+    "source_url": "https://dev.to/horilla_support_8e7ce9908/horilla-crm-a-free-open-source-django-crm-for-modern-businesses-in-2026-gnd",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
     "date": "2026-05-06",
     "category": "Coding & Community",

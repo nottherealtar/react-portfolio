@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-06T18:57:54.100059+00:00",
+  "timestamp": "2026-05-07T07:52:08.157252+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 600,
-  "blocked_domain_candidates": 2,
+  "unseen_candidates": 601,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Chatbots Are Dead. Long Live Agents: My Take on the Last 10 Days in Tech",
-      "link": "auto/20260506-chatbots-are-dead-long-live-agents-my-take-on-the-last-10-da-6e8e09e9.html",
-      "score": 139.8365,
+      "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
+      "link": "auto/20260507-horilla-crm-a-free-open-source-django-crm-for-modern-busines-ae57f8e5.html",
+      "score": 136.9091,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
+    "date": "2026-05-07",
+    "category": "Coding & Community",
+    "summary": "If you've spent any time searching for an open-source CRM , you've probably hit the same wall most teams hit: the popular options are either bloated, expensive at scale, locked behind paid editions, or built on aging PHP stacks that are painful to extend. Horilla CRM is a free and open-source CRM built with Django 6 , designed for self-hosting.",
+    "link": "auto/20260507-horilla-crm-a-free-open-source-django-crm-for-modern-busines-ae57f8e5.html",
+    "source_url": "https://dev.to/horilla_support_8e7ce9908/horilla-crm-a-free-open-source-django-crm-for-modern-businesses-in-2026-gnd",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Horilla CRM: A Free &amp; Open-Source Django CRM for Modern Businesses in 2026 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-07 DEV Community Horilla CRM: A Free &amp; Open-Source Django CRM for Modern Businesses in 2026 If you&#x27;ve spent any time searching for an open-source CRM , you&#x27;ve probably hit the same wall most teams hit: the popular options are either bloated, expensive at scale, locked behind paid editions, or built on aging PHP stacks that are painful to extend. Horilla CRM is a free and open-source CRM built with Django 6 , designed for self-hosting. Why this matters If you&#x27;ve been looking for a free, self-hosted, open-source Django CRM that doesn&#x27;t feel like 2012, give Horilla CRM a serious look: GitHub : https://github.com/horilla/horilla-crm Live Demo : https://crm.demo.horilla.com/ Star it, fork it, file an issue, or send a PR. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways In this post, I want to introduce you to Horilla CRM — a free, self-hosted, open-source CRM built with Django 6 and Python 3.13. Horilla is a strong choice if you&#x27;re: A small or mid-size business that wants to own its customer data An agency that needs multi-tenant isolation between clients A team that… If you want a CRM you can actually own and extend, it&#x27;s worth… Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
     "date": "2026-05-06",
     "category": "Coding & Community",

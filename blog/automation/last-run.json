@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-07T07:52:08.157252+00:00",
+  "timestamp": "2026-05-07T18:58:22.290137+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 609,
-  "unseen_candidates": 601,
+  "fetched_candidates": 610,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
-      "link": "auto/20260507-horilla-crm-a-free-open-source-django-crm-for-modern-busines-ae57f8e5.html",
-      "score": 136.9091,
+      "title": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown",
+      "link": "auto/20260507-i-shipped-a-20-feature-devops-tool-solo-in-60-days-using-cla-972c574f.html",
+      "score": 152.9613,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

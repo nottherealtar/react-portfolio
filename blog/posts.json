@@ -1,5 +1,18 @@
 [
   {
+    "title": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown",
+    "date": "2026-05-07",
+    "category": "Coding & Community",
+    "summary": "TL;DR — I built Maintenant , a 20-feature monitoring tool (Docker + Kubernetes + endpoints + certs + alerts + status page + MCP server), solo, in two months, with Claude Code. This is where most \"I built X with AI\" posts derail. Which wouldn't have been possible if I were discovering Claude Code at the same time as I was building Maintenant.",
+    "link": "auto/20260507-i-shipped-a-20-feature-devops-tool-solo-in-60-days-using-cla-972c574f.html",
+    "source_url": "https://dev.to/benjy33000/i-shipped-a-20-feature-devops-tool-solo-in-60-days-using-claude-code-the-unfiltered-breakdown-3mb3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-07 DEV Community I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown TL;DR — I built Maintenant , a 20-feature monitoring tool (Docker + Kubernetes + endpoints + certs + alerts + status page + MCP server), solo, in two months, with Claude Code. This is where most &quot;I built X with AI&quot; posts derail. Which wouldn&#x27;t have been possible if I were discovering Claude Code at the same time as I was building Maintenant. Why this matters So two months, two and a half months of serious work to arrive at what I just described — twenty features, dual-licensing, marketing site, documentation, MCP server. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. Operational takeaways AGPL-3.0 open-core, Pro tier at €29/month, real users in production. You drop it into a container and it auto-discovers your Docker, Swarm and Kubernetes workloads, watches your HTTP and TCP endpoints, your cron jobs through heartbeats, your TLS… And I built all of it by working with Claude Code in a continuous loop. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
     "date": "2026-05-07",
     "category": "Coding & Community",

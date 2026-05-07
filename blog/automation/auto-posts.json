@@ -1,5 +1,17 @@
 [
   {
+    "title": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown",
+    "date": "2026-05-07",
+    "category": "Coding & Community",
+    "summary": "TL;DR — I built Maintenant , a 20-feature monitoring tool (Docker + Kubernetes + endpoints + certs + alerts + status page + MCP server), solo, in two months, with Claude Code. This is where most \"I built X with AI\" posts derail. Which wouldn't have been possible if I were discovering Claude Code at the same time as I was building Maintenant.",
+    "link": "auto/20260507-i-shipped-a-20-feature-devops-tool-solo-in-60-days-using-cla-972c574f.html",
+    "source_url": "https://dev.to/benjy33000/i-shipped-a-20-feature-devops-tool-solo-in-60-days-using-claude-code-the-unfiltered-breakdown-3mb3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Horilla CRM: A Free & Open-Source Django CRM for Modern Businesses in 2026",
     "date": "2026-05-07",
     "category": "Coding & Community",

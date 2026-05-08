@@ -1,5 +1,19 @@
 [
   {
+    "title": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface",
+    "date": "2026-05-08",
+    "category": "Coding & Community",
+    "summary": "Clean management UI, multiple storage backends, ShareX integration, and a built-in MCP interface so your AI tools can actually talk to your image host. Here's why I picked it anyway: Backend : Go's concurrency model is a natural fit for I/O-heavy workloads like an image host. This is what a self-hosted image host looks like in the AI era.",
+    "link": "auto/20260508-i-built-a-self-hosted-image-hosting-platform-in-go-and-gave-0051076a.html",
+    "source_url": "https://dev.to/atbeta/i-built-a-self-hosted-image-hosting-platform-in-go-and-gave-it-an-mcp-interface-4hgl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxp38fjappad25lkm08ul.png",
+    "search_plain": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-08 DEV Community I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface Clean management UI, multiple storage backends, ShareX integration, and a built-in MCP interface so your AI tools can actually talk to your image host. Here&#x27;s why I picked it anyway: Backend : Go&#x27;s concurrency model is a natural fit for I/O-heavy workloads like an image host. This is what a self-hosted image host looks like in the AI era. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters I spent real time searching for a self-hosted image host that didn&#x27;t feel like a relic from 2010 — something with a modern UI, multi-user support, and ideally an API that AI tools could actually use. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Most self-hosted options are either abandoned GitHub repos, PHP-era projects with no maintenance, or solutions so over-engineered they defeat the purpose of &quot;simple.&quot; Data… Once configured, you can manage your image host from any MCP-compatible AI tool — Claude Desktop, Cursor, whatever you&#x27;re using. &quot;Upload all my screenshots from today to PicFast and give me the links in Markdown.&quot; &quot;Upload all my screenshots from today to PicFast and give me the links in Markdown.&quot; The AI… Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Improving token efficiency in GitHub Agentic Workflows",
     "date": "2026-05-07",
     "category": "Developer Platform",

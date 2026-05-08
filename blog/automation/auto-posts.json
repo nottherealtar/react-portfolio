@@ -1,5 +1,18 @@
 [
   {
+    "title": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface",
+    "date": "2026-05-08",
+    "category": "Coding & Community",
+    "summary": "Clean management UI, multiple storage backends, ShareX integration, and a built-in MCP interface so your AI tools can actually talk to your image host. Here's why I picked it anyway: Backend : Go's concurrency model is a natural fit for I/O-heavy workloads like an image host. This is what a self-hosted image host looks like in the AI era.",
+    "link": "auto/20260508-i-built-a-self-hosted-image-hosting-platform-in-go-and-gave-0051076a.html",
+    "source_url": "https://dev.to/atbeta/i-built-a-self-hosted-image-hosting-platform-in-go-and-gave-it-an-mcp-interface-4hgl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxp38fjappad25lkm08ul.png"
+  },
+  {
     "title": "Improving token efficiency in GitHub Agentic Workflows",
     "date": "2026-05-07",
     "category": "Developer Platform",

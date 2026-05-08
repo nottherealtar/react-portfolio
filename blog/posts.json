@@ -1,5 +1,19 @@
 [
   {
+    "title": "Improving token efficiency in GitHub Agentic Workflows",
+    "date": "2026-05-07",
+    "category": "Developer Platform",
+    "summary": "Because we maintain and use GitHub Agentic Workflows in our own GitHub repositories, we worry about token efficiency as much as our users. With token data in hand, we built two daily optimization workflows. This change did more than reduce the overhead of unused tools because an MCP tool call is a reasoning step in addition to data retrieval.",
+    "link": "auto/20260507-improving-token-efficiency-in-github-agentic-workflows-2b3dd723.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/05/graph.png?resize=1024%2C504",
+    "search_plain": "Improving token efficiency in GitHub Agentic Workflows | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Platform ~2 min read 2026-05-07 GitHub Blog Improving token efficiency in GitHub Agentic Workflows Because we maintain and use GitHub Agentic Workflows in our own GitHub repositories, we worry about token efficiency as much as our users. With token data in hand, we built two daily optimization workflows. This change did more than reduce the overhead of unused tools because an MCP tool call is a reasoning step in addition to data retrieval. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters We rely on hundreds of agentic workflows in our repos for maintenance and CI. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Work done during a developer session can be hard to predict, but agentic workflows’ work is fully specified in YAML and repeats every execution. When an Auditor flags a workflow, a Daily Token Optimizer looks at the workflow’s source and recent logs to create a GitHub issue with describing concrete inefficiencies and… Because LLM APIs are stateless, agent runtimes typically include the MCP tool function names and JSON schemas with each request. Primary source GitHub Blog — original article ← Back to journal"
+  },
+  {
     "title": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown",
     "date": "2026-05-07",
     "category": "Coding & Community",

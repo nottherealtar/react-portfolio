@@ -1,5 +1,18 @@
 [
   {
+    "title": "Improving token efficiency in GitHub Agentic Workflows",
+    "date": "2026-05-07",
+    "category": "Developer Platform",
+    "summary": "Because we maintain and use GitHub Agentic Workflows in our own GitHub repositories, we worry about token efficiency as much as our users. With token data in hand, we built two daily optimization workflows. This change did more than reduce the overhead of unused tools because an MCP tool call is a reasoning step in addition to data retrieval.",
+    "link": "auto/20260507-improving-token-efficiency-in-github-agentic-workflows-2b3dd723.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/05/graph.png?resize=1024%2C504"
+  },
+  {
     "title": "I shipped a 20-feature DevOps tool solo in 60 days using Claude Code — the unfiltered breakdown",
     "date": "2026-05-07",
     "category": "Coding & Community",

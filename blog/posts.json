@@ -54,6 +54,20 @@
     "search_plain": "Horilla CRM: A Free &amp; Open-Source Django CRM for Modern Businesses in 2026 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-07 DEV Community Horilla CRM: A Free &amp; Open-Source Django CRM for Modern Businesses in 2026 If you&#x27;ve spent any time searching for an open-source CRM , you&#x27;ve probably hit the same wall most teams hit: the popular options are either bloated, expensive at scale, locked behind paid editions, or built on aging PHP stacks that are painful to extend. Horilla CRM is a free and open-source CRM built with Django 6 , designed for self-hosting. Why this matters If you&#x27;ve been looking for a free, self-hosted, open-source Django CRM that doesn&#x27;t feel like 2012, give Horilla CRM a serious look: GitHub : https://github.com/horilla/horilla-crm Live Demo : https://crm.demo.horilla.com/ Star it, fork it, file an issue, or send a PR. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways In this post, I want to introduce you to Horilla CRM — a free, self-hosted, open-source CRM built with Django 6 and Python 3.13. Horilla is a strong choice if you&#x27;re: A small or mid-size business that wants to own its customer data An agency that needs multi-tenant isolation between clients A team that… If you want a CRM you can actually own and extend, it&#x27;s worth… Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future",
+    "date": "2026-05-06",
+    "category": "Cloud Automation",
+    "summary": "Across industries, customers are turning to Azure to run critical workloads and advance their AI strategies, driving a new wave of innovation across Europe.",
+    "link": "auto/20260506-scaling-cloud-and-ai-microsoft-azure-s-commitment-to-europe-9a0d5e3c.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/scaling-cloud-and-ai-microsoft-azures-commitment-to-europes-digital-future/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/DJI_0544-1-1024x683.jpg",
+    "search_plain": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Cloud Automation ~2 min read 2026-05-06 Microsoft Azure Blog Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future Across industries, customers are turning to Azure to run critical workloads and advance their AI strategies, driving a new wave of innovation across Europe. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Southern Europe: Accelerating digital transformation with local Azure regions Southern Europe is seeing its own rapid growth in cloud adoption as organizations modernize IT estates, expand digital services, and bring AI workloads closer to users. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways Meeting Europe’s cloud and AI demand To support customers running everything from core business systems to advanced analytics and AI-powered applications, we are significantly… In countries such as Spain and Italy , Azure infrastructure supports cloud and AI workloads with low latency while meeting national and European Union-level regulatory… Further south, in Greece , Microsoft is expanding access to trusted cloud and AI infrastructure—supporting both public sector transformation and enterprise innovation. Primary source Microsoft Azure Blog — original article ← Back to journal"
+  },
+  {
     "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
     "date": "2026-05-06",
     "category": "Coding & Community",

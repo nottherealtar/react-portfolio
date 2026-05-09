@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-08T18:44:39.339251+00:00",
+  "timestamp": "2026-05-09T07:20:55.069065+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface",
-      "link": "auto/20260508-i-built-a-self-hosted-image-hosting-platform-in-go-and-gave-0051076a.html",
-      "score": 135.8882,
-      "source": "DEV Community",
+      "title": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future",
+      "link": "auto/20260506-scaling-cloud-and-ai-microsoft-azure-s-commitment-to-europe-9a0d5e3c.html",
+      "score": 124.329,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

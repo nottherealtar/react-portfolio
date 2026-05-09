@@ -50,6 +50,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future",
+    "date": "2026-05-06",
+    "category": "Cloud Automation",
+    "summary": "Across industries, customers are turning to Azure to run critical workloads and advance their AI strategies, driving a new wave of innovation across Europe.",
+    "link": "auto/20260506-scaling-cloud-and-ai-microsoft-azure-s-commitment-to-europe-9a0d5e3c.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/scaling-cloud-and-ai-microsoft-azures-commitment-to-europes-digital-future/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/DJI_0544-1-1024x683.jpg"
+  },
+  {
     "title": "Closed-Loop Cloud Remediation: How Autonomous Policies Replace On-Call Runbooks",
     "date": "2026-05-06",
     "category": "Coding & Community",

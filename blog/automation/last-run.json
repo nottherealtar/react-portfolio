@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-09T07:20:55.069065+00:00",
+  "timestamp": "2026-05-09T18:04:00.881300+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 604,
+  "unseen_candidates": 603,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Scaling cloud and AI: Microsoft Azure’s commitment to Europe’s digital future",
-      "link": "auto/20260506-scaling-cloud-and-ai-microsoft-azure-s-commitment-to-europe-9a0d5e3c.html",
-      "score": 124.329,
-      "source": "Microsoft Azure Blog",
+      "title": "No Dumb Questions: What is an MCP server and why do I care?",
+      "link": "auto/20260508-no-dumb-questions-what-is-an-mcp-server-and-why-do-i-care-72421d03.html",
+      "score": 119.5523,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

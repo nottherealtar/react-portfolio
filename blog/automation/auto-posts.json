@@ -1,5 +1,17 @@
 [
   {
+    "title": "No Dumb Questions: What is an MCP server and why do I care?",
+    "date": "2026-05-08",
+    "category": "Coding & Careers",
+    "summary": "I think the first question I definitely need to ask is what is an MCP server? So now we're connecting them to these agents or these AI tools, but any real connection between two products or two platforms was with an API—which is also an acronym that stands for Application Programming Interface.",
+    "link": "auto/20260508-no-dumb-questions-what-is-an-mcp-server-and-why-do-i-care-72421d03.html",
+    "source_url": "https://stackoverflow.blog/2026/05/08/no-dumb-questions-mcp/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface",
     "date": "2026-05-08",
     "category": "Coding & Community",

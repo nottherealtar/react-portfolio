@@ -1,5 +1,18 @@
 [
   {
+    "title": "No Dumb Questions: What is an MCP server and why do I care?",
+    "date": "2026-05-08",
+    "category": "Coding & Careers",
+    "summary": "I think the first question I definitely need to ask is what is an MCP server? So now we're connecting them to these agents or these AI tools, but any real connection between two products or two platforms was with an API—which is also an acronym that stands for Application Programming Interface.",
+    "link": "auto/20260508-no-dumb-questions-what-is-an-mcp-server-and-why-do-i-care-72421d03.html",
+    "source_url": "https://stackoverflow.blog/2026/05/08/no-dumb-questions-mcp/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "No Dumb Questions: What is an MCP server and why do I care? | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Careers ~2 min read 2026-05-08 Stack Overflow Blog No Dumb Questions: What is an MCP server and why do I care? I think the first question I definitely need to ask is what is an MCP server? So now we&#x27;re connecting them to these agents or these AI tools, but any real connection between two products or two platforms was with an API—which is also an acronym that stands for Application Programming Interface. Why this matters So, think of it as a standardized bridge that connects new cutting-edge AI functionality to all the other stuff—all the other tools that exist in the software world. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways I think a lot of people in the market—even those who use these tools—are asking, “What is this new thing and is it going to stick around forever?” MCP is just an acronym that… And by standardizing with a protocol, we can more efficiently build connectors to and from these new AI systems. They all have an application programming interface that allows a person to interact with that system&#x27;s data through a programming language. Primary source Stack Overflow Blog — original article ← Back to journal"
+  },
+  {
     "title": "I Built a Self-Hosted Image Hosting Platform in Go — and Gave It an MCP Interface",
     "date": "2026-05-08",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Copilot Studio Architecture Explained",
+    "date": "2026-05-10",
+    "category": "Coding & Community",
+    "summary": "Teams, Web Chat, Custom Apps, Mobile Entry points where users interact with copilots. Enables business users and makers to design conversational flows without deep coding. Connectors & Actions Power Automate, APIs, Data Connectors Connects copilots to external systems and workflows.",
+    "link": "auto/20260510-copilot-studio-architecture-explained-98e69410.html",
+    "source_url": "https://dev.to/seenakhan/copilot-studio-architecture-explained-1gi9",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8dbpvguogquwqy8s9mtg.png"
+  },
+  {
     "title": "No Dumb Questions: What is an MCP server and why do I care?",
     "date": "2026-05-08",
     "category": "Coding & Careers",

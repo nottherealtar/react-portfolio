@@ -14,6 +14,20 @@
     "search_plain": "Copilot Studio Architecture Explained | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-10 DEV Community Copilot Studio Architecture Explained Teams, Web Chat, Custom Apps, Mobile Entry points where users interact with copilots. Enables business users and makers to design conversational flows without deep coding. Connectors &amp; Actions Power Automate, APIs, Data Connectors Connects copilots to external systems and workflows. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters These are the front‑end channels that deliver conversational experiences. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Orchestration &amp; Logic Engine The backbone that coordinates flows, actions, and agent logic across the system. Business Systems CRM, ERP, HR — enterprise workflows and data sources. Copilot Studio’s layered architecture makes it: Extensible for developers via APIs and connectors. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "An unofficial PC port of The Legend of Zelda: Twilight Princess just released",
+    "date": "2026-05-10",
+    "category": "Gaming & Industry",
+    "summary": "Recompiled unofficial ports of games like Banjo-Kazooie , Super Mario 64 , and the Jak & Daxter trilogy are the talk of the town, and yesterday a beloved Zelda game got the native port treatment: Twilight Princess.",
+    "link": "auto/20260510-an-unofficial-pc-port-of-the-legend-of-zelda-twilight-prince-c3c0e359.html",
+    "source_url": "https://www.pcgamer.com/games/action/an-unofficial-pc-port-of-the-legend-of-zelda-twilight-princess-just-released/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/6offQUY4CXebir2TC27dMd.jpg",
+    "search_plain": "An unofficial PC port of The Legend of Zelda: Twilight Princess just released | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Gaming &amp; Industry ~2 min read 2026-05-10 PC Gamer An unofficial PC port of The Legend of Zelda: Twilight Princess just released Recompiled unofficial ports of games like Banjo-Kazooie , Super Mario 64 , and the Jak &amp; Daxter trilogy are the talk of the town, and yesterday a beloved Zelda game got the native port treatment: Twilight Princess. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters If you&#x27;ve been keeping up with the retro console gaming scene, you know that it&#x27;s a great time to play some golden oldies on your PC—and I&#x27;m not talking about emulation. It helps prioritize where automation budgets and vendor reviews should focus next quarter. Operational takeaways This might sound familiar if you caught the showcase for Twilight Princess: Courage Reborn we shared recently , but this is actually a different project called Dusk . &quot;Years and years of effort have been poured into the decompilation by contributors all over the world, resulting in the largest decompilation project ever completed.&quot; I&#x27;m going… 2026 games : All the upcoming games Best PC games : Our all-time favorites Free PC games : Freebie fest Best FPS games : Finest gunplay Best RPGs : Grand adventures Best co-op… Primary source PC Gamer — original article ← Back to journal"
+  },
+  {
     "title": "No Dumb Questions: What is an MCP server and why do I care?",
     "date": "2026-05-08",
     "category": "Coding & Careers",

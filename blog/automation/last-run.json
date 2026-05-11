@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-11T08:35:49.588859+00:00",
+  "timestamp": "2026-05-11T19:07:54.172884+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Perl 🐪 Weekly #772 - PTS 2025",
-      "link": "auto/20260511-perl-weekly-772-pts-2025-6a10c6a9.html",
-      "score": 142.8502,
-      "source": "DEV Community",
+      "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
+      "link": "auto/20260511-when-the-sensor-starts-thinking-snortml-agentic-ai-and-the-e-1626685d.html",
+      "score": 131.2286,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

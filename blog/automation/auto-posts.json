@@ -1,5 +1,18 @@
 [
   {
+    "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
+    "date": "2026-05-11",
+    "category": "Coding & Careers",
+    "summary": "Signatures encode specific, verifiable knowledge about what an attack looks like at the wire level, and the low false positive rate is a direct product of that specificity. The SnortML inspector picks that up, runs it through the classifier, and returns a float representing the probability that the content contains an exploit attempt.",
+    "link": "auto/20260511-when-the-sensor-starts-thinking-snortml-agentic-ai-and-the-e-1626685d.html",
+    "source_url": "https://stackoverflow.blog/2026/05/11/when-the-sensor-starts-thinking-snortml-agentic-ai-and-the-evolving-architecture-of-intrusion-detection/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/b690314d3ecc30f3ca60e427448ea47896de5403-480x636.jpg?auto=format"
+  },
+  {
     "title": "Perl 🐪 Weekly #772 - PTS 2025",
     "date": "2026-05-11",
     "category": "Coding & Community",

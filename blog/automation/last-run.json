@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-10T18:04:43.958544+00:00",
+  "timestamp": "2026-05-11T08:35:49.588859+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 602,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "An unofficial PC port of The Legend of Zelda: Twilight Princess just released",
-      "link": "auto/20260510-an-unofficial-pc-port-of-the-legend-of-zelda-twilight-prince-c3c0e359.html",
-      "score": 117.4952,
-      "source": "PC Gamer",
+      "title": "Perl 🐪 Weekly #772 - PTS 2025",
+      "link": "auto/20260511-perl-weekly-772-pts-2025-6a10c6a9.html",
+      "score": 142.8502,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

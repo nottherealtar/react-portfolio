@@ -1,5 +1,17 @@
 [
   {
+    "title": "Perl 🐪 Weekly #772 - PTS 2025",
+    "date": "2026-05-11",
+    "category": "Coding & Community",
+    "summary": "Originally published at Perl Weekly 772 The Perl Toolchain Summit 2026 held in Vienna from 23rd - 26th April. Please watch the recent page on MetaCPAN for such cool modules. A brief report from the Perl Steering Council has provided us with an update about their most recent triage session.",
+    "link": "auto/20260511-perl-weekly-772-pts-2025-6a10c6a9.html",
+    "source_url": "https://dev.to/szabgab/perl-weekly-772-pts-2025-lnh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Copilot Studio Architecture Explained",
     "date": "2026-05-10",
     "category": "Coding & Community",

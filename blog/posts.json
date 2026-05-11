@@ -1,5 +1,18 @@
 [
   {
+    "title": "Perl 🐪 Weekly #772 - PTS 2025",
+    "date": "2026-05-11",
+    "category": "Coding & Community",
+    "summary": "Originally published at Perl Weekly 772 The Perl Toolchain Summit 2026 held in Vienna from 23rd - 26th April. Please watch the recent page on MetaCPAN for such cool modules. A brief report from the Perl Steering Council has provided us with an update about their most recent triage session.",
+    "link": "auto/20260511-perl-weekly-772-pts-2025-6a10c6a9.html",
+    "source_url": "https://dev.to/szabgab/perl-weekly-772-pts-2025-lnh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Perl 🐪 Weekly #772 - PTS 2025 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-11 DEV Community Perl 🐪 Weekly #772 - PTS 2025 Originally published at Perl Weekly 772 The Perl Toolchain Summit 2026 held in Vienna from 23rd - 26th April. Please watch the recent page on MetaCPAN for such cool modules. A brief report from the Perl Steering Council has provided us with an update about their most recent triage session. Why this matters Timothy Legge describes a contemporary way of achieving security in the Perl ecosystem with the implementation of Sigstore to sign CPAN Releases. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways I am looking for an update on my personal favourite project MetaCPAN led by Olaf Alders . He could have easily used R rather than creating equivalent function in Perl. Welcome to a new week with a couple of fun tasks &quot;Equal List&quot; and &quot;List Division&quot;. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Copilot Studio Architecture Explained",
     "date": "2026-05-10",
     "category": "Coding & Community",

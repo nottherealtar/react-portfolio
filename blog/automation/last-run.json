@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-11T19:07:54.172884+00:00",
+  "timestamp": "2026-05-12T08:04:03.222787+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 601,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
-      "link": "auto/20260511-when-the-sensor-starts-thinking-snortml-agentic-ai-and-the-e-1626685d.html",
-      "score": 131.2286,
-      "source": "Stack Overflow Blog",
+      "title": "CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026?",
+      "link": "auto/20260512-crewai-vs-langgraph-which-llm-agent-framework-should-you-use-b17afd6b.html",
+      "score": 127.8559,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

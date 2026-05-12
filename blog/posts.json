@@ -1,5 +1,18 @@
 [
   {
+    "title": "CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026?",
+    "date": "2026-05-12",
+    "category": "Coding & Community",
+    "summary": "It is designed for long-running, stateful agents with persistence, durable execution, fault tolerance, streaming, interrupts, time travel, memory, and subgraphs.",
+    "link": "auto/20260512-crewai-vs-langgraph-which-llm-agent-framework-should-you-use-b17afd6b.html",
+    "source_url": "https://dev.to/suifeng023/crewai-vs-langgraph-which-llm-agent-framework-should-you-use-in-2026-3h4n",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026? | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-12 DEV Community CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026? It is designed for long-running, stateful agents with persistence, durable execution, fault tolerance, streaming, interrupts, time travel, memory, and subgraphs. Why this matters Use CrewAI if you want a higher-level framework for building teams of role-based agents, assigning tasks, and shipping automations quickly. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Two frameworks come up constantly in that conversation: CrewAI and LangGraph . LangGraph is optimized for explicit, durable control over complex stateful workflows. It gives you concepts like agents, crews, tasks, processes, flows, memory, knowledge, guardrails, callbacks, and human-in-the-loop triggers in a developer-friendly package. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
     "date": "2026-05-11",
     "category": "Coding & Careers",

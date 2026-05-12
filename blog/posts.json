@@ -1,5 +1,19 @@
 [
   {
+    "title": "Video codecs are a nightmare for game developers, but there's no solution in sight",
+    "date": "2026-05-12",
+    "category": "Game Development",
+    "summary": "Others may end up requiring videos to be presented in multiple formats, which can mean having to individually organize and validate hundreds of files multiple times. \"That made things terribly huge and unoptimized and kind of doubled the size of the game for just those five seconds, but it worked and shipped.",
+    "link": "auto/20260512-video-codecs-are-a-nightmare-for-game-developers-but-there-s-aaadf05c.html",
+    "source_url": "https://www.gamedeveloper.com/programming/video-codecs-are-a-nightmare-for-game-developers-but-there-s-no-solution-in-sight",
+    "source_name": "Game Developer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt347a0e7bce060c71/682356963510b060418447c4/pic.jpg?width=100&auto=webp&quality=80&disable=upscale",
+    "search_plain": "Video codecs are a nightmare for game developers, but there&#x27;s no solution in sight | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Game Development ~2 min read 2026-05-12 Game Developer Video codecs are a nightmare for game developers, but there&#x27;s no solution in sight Others may end up requiring videos to be presented in multiple formats, which can mean having to individually organize and validate hundreds of files multiple times. &quot;That made things terribly huge and unoptimized and kind of doubled the size of the game for just those five seconds, but it worked and shipped. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters As such, figuring out which video codec to use for a game is reliant on a myriad of factors. It helps prioritize where automation budgets and vendor reviews should focus next quarter. Operational takeaways Developers sometimes take extraordinary measures to make videos play in video games. &quot;You very quickly realize there isn&#x27;t a one-size-fits-all solution.&quot; Sam Barlow, CEO of Her Story and Immortality maker Half Mermaid , has struggled with video codecs firsthand… In-game this meant three movies&#x27; worth of post-processes, having color and sound delivered, tracking the right file version, and then putting that through the codecs. Primary source Game Developer — original article ← Back to journal"
+  },
+  {
     "title": "CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026?",
     "date": "2026-05-12",
     "category": "Coding & Community",

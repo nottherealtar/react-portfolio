@@ -1,5 +1,18 @@
 [
   {
+    "title": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm",
+    "date": "2026-05-13",
+    "category": "Coding & Community",
+    "summary": "Malicious versions were published for 42 @tanstack/* packages, and installing those versions triggered a credential stealer. In other words, untrusted fork PR code ran within the base repository's cache scope. That explains how the TanStack release pipeline was abused.",
+    "link": "auto/20260513-tanstack-was-not-the-whole-story-mini-shai-hulud-was-an-npm-983e3cfc.html",
+    "source_url": "https://dev.to/trknhr/tanstack-was-not-the-whole-story-mini-shai-hulud-was-an-npmpypi-supply-chain-worm-pok",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-13 DEV Community TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm Malicious versions were published for 42 @tanstack/* packages, and installing those versions triggered a credential stealer. In other words, untrusted fork PR code ran within the base repository&#x27;s cache scope. That explains how the TanStack release pipeline was abused. Why this matters According to the TanStack GitHub Advisory, malicious versions were published to the npm registry for 42 @tanstack/* packages, totaling 84 versions, between 2026-05-11 19:20 and 19:26 UTC. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways The important point is that this was not just &quot;a dependency package was compromised.&quot; It was closer to a worm that used developer machines and CI/CD environments as stepping… In the TanStack case, a malicious script executed from the fork PR poisoned the pnpm store. Later, a release workflow triggered by a push to main restored the same cache. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Video codecs are a nightmare for game developers, but there's no solution in sight",
     "date": "2026-05-12",
     "category": "Game Development",

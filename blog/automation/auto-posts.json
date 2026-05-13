@@ -1,5 +1,17 @@
 [
   {
+    "title": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm",
+    "date": "2026-05-13",
+    "category": "Coding & Community",
+    "summary": "Malicious versions were published for 42 @tanstack/* packages, and installing those versions triggered a credential stealer. In other words, untrusted fork PR code ran within the base repository's cache scope. That explains how the TanStack release pipeline was abused.",
+    "link": "auto/20260513-tanstack-was-not-the-whole-story-mini-shai-hulud-was-an-npm-983e3cfc.html",
+    "source_url": "https://dev.to/trknhr/tanstack-was-not-the-whole-story-mini-shai-hulud-was-an-npmpypi-supply-chain-worm-pok",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Video codecs are a nightmare for game developers, but there's no solution in sight",
     "date": "2026-05-12",
     "category": "Game Development",

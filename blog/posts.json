@@ -13,6 +13,19 @@
     "search_plain": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-13 DEV Community TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm Malicious versions were published for 42 @tanstack/* packages, and installing those versions triggered a credential stealer. In other words, untrusted fork PR code ran within the base repository&#x27;s cache scope. That explains how the TanStack release pipeline was abused. Why this matters According to the TanStack GitHub Advisory, malicious versions were published to the npm registry for 42 @tanstack/* packages, totaling 84 versions, between 2026-05-11 19:20 and 19:26 UTC. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways The important point is that this was not just &quot;a dependency package was compromised.&quot; It was closer to a worm that used developer machines and CI/CD environments as stepping… In the TanStack case, a malicious script executed from the fork PR poisoned the pnpm store. Later, a release workflow triggered by a push to main restored the same cache. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Data Analytics with Python as a Beginner",
+    "date": "2026-05-13",
+    "category": "Coding & Community",
+    "summary": "For example, instead of writing hundreds of lines of code to analyze data, a user can simply import a library like Pandas or NumPy and perform advanced operations in just a few commands. This simplicity is one reason why Python has become a gateway into the world of data science and analytics for many beginners. Python, however, focuses on readability.",
+    "link": "auto/20260513-data-analytics-with-python-as-a-beginner-d28ec6bd.html",
+    "source_url": "https://dev.to/ericmwaimiri/data-analytics-with-python-as-a-beginner-1hp2",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Data Analytics with Python as a Beginner | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-13 DEV Community Data Analytics with Python as a Beginner For example, instead of writing hundreds of lines of code to analyze data, a user can simply import a library like Pandas or NumPy and perform advanced operations in just a few commands. This simplicity is one reason why Python has become a gateway into the world of data science and analytics for many beginners. Python, however, focuses on readability. Why this matters This simplicity makes Python ideal for students and people transitioning into analytics from non-technical backgrounds. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways This is where Python becomes important. Python is often described as a “Swiss army knife” for data analytics because it can handle many different tasks in one environment. One major reason for Python’s popularity is its beginner-friendly syntax. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Video codecs are a nightmare for game developers, but there's no solution in sight",
     "date": "2026-05-12",
     "category": "Game Development",

@@ -12,6 +12,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "Data Analytics with Python as a Beginner",
+    "date": "2026-05-13",
+    "category": "Coding & Community",
+    "summary": "For example, instead of writing hundreds of lines of code to analyze data, a user can simply import a library like Pandas or NumPy and perform advanced operations in just a few commands. This simplicity is one reason why Python has become a gateway into the world of data science and analytics for many beginners. Python, however, focuses on readability.",
+    "link": "auto/20260513-data-analytics-with-python-as-a-beginner-d28ec6bd.html",
+    "source_url": "https://dev.to/ericmwaimiri/data-analytics-with-python-as-a-beginner-1hp2",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Video codecs are a nightmare for game developers, but there's no solution in sight",
     "date": "2026-05-12",
     "category": "Game Development",

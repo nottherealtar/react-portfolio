@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-13T08:11:49.638694+00:00",
+  "timestamp": "2026-05-13T19:06:24.439702+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 610,
-  "unseen_candidates": 600,
+  "fetched_candidates": 600,
+  "unseen_candidates": 590,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm",
-      "link": "auto/20260513-tanstack-was-not-the-whole-story-mini-shai-hulud-was-an-npm-983e3cfc.html",
-      "score": 155.9879,
+      "title": "Data Analytics with Python as a Beginner",
+      "link": "auto/20260513-data-analytics-with-python-as-a-beginner-d28ec6bd.html",
+      "score": 137.9488,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

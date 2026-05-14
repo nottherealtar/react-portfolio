@@ -1,5 +1,17 @@
 [
   {
+    "title": "How To Build An AI Agent In 2026: Tools, Architecture, RAG, MCP, And Real-World Use Cases",
+    "date": "2026-05-14",
+    "category": "Coding & Community",
+    "summary": "For developers, that means agents can generate tests, inspect repos, update files, summarize logs, and trigger workflows. The real product advantage now is workflow intelligence. Best Tools To Build AI Agents In 2026 OpenAI Agents SDK: good for agents, tools, handoffs, and tracing.",
+    "link": "auto/20260514-how-to-build-an-ai-agent-in-2026-tools-architecture-rag-mcp-dccaffa7.html",
+    "source_url": "https://dev.to/dhruvjoshi9/how-to-build-an-ai-agent-in-2026-tools-architecture-rag-mcp-and-real-world-use-cases-6b5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "TanStack Was Not the Whole Story: Mini Shai-Hulud Was an npm/PyPI Supply-Chain Worm",
     "date": "2026-05-13",
     "category": "Coding & Community",

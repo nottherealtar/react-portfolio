@@ -1,5 +1,18 @@
 [
   {
+    "title": "Microsoft starts canceling Claude Code licenses",
+    "date": "2026-05-14",
+    "category": "AI & Industry",
+    "summary": "I’m told that Microsoft’s Experiences + Devices team, which includes the engineers responsible for Windows, Microsoft 365, Outlook, Microsoft Teams, and Surface, is winding down its usage of Claude Code by the end of June.",
+    "link": "auto/20260514-microsoft-starts-canceling-claude-code-licenses-76e5a237.html",
+    "source_url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+    "source_name": "The Verge AI",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25832912/STK095_MICROSOFT_2_CVirginia_A.jpg?quality=90&strip=all&crop=0,0,100,100"
+  },
+  {
     "title": "How To Build An AI Agent In 2026: Tools, Architecture, RAG, MCP, And Real-World Use Cases",
     "date": "2026-05-14",
     "category": "Coding & Community",

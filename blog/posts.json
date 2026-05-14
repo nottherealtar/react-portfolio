@@ -1,5 +1,19 @@
 [
   {
+    "title": "Microsoft starts canceling Claude Code licenses",
+    "date": "2026-05-14",
+    "category": "AI & Industry",
+    "summary": "I’m told that Microsoft’s Experiences + Devices team, which includes the engineers responsible for Windows, Microsoft 365, Outlook, Microsoft Teams, and Surface, is winding down its usage of Claude Code by the end of June.",
+    "link": "auto/20260514-microsoft-starts-canceling-claude-code-licenses-76e5a237.html",
+    "source_url": "https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad",
+    "source_name": "The Verge AI",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25832912/STK095_MICROSOFT_2_CVirginia_A.jpg?quality=90&strip=all&crop=0,0,100,100",
+    "search_plain": "Microsoft starts canceling Claude Code licenses | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief AI &amp; Industry ~2 min read 2026-05-14 The Verge AI Microsoft starts canceling Claude Code licenses I’m told that Microsoft’s Experiences + Devices team, which includes the engineers responsible for Windows, Microsoft 365, Outlook, Microsoft Teams, and Surface, is winding down its usage of Claude Code by the end of June. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters I understand that Microsoft is planning to remove most of its Claude Code licenses and push many of its developers to use Copilot CLI instead. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Perhaps a little too popular, as Microsoft is now preparing to walk back its Claude Code push. “Claude Code was an important part of that learning… at the same time, Copilot CLI has given us something especially important: a product we can help shape directly with GitHub… Pair technical changes with access reviews, logging, and an explicit rollback path. Primary source The Verge AI — original article ← Back to journal"
+  },
+  {
     "title": "How To Build An AI Agent In 2026: Tools, Architecture, RAG, MCP, And Real-World Use Cases",
     "date": "2026-05-14",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Production-Ready FPolicy Event Pipeline Across 17 UCs — FSx for ONTAP S3 Access Points, Phase 11",
+    "date": "2026-05-15",
+    "category": "Coding & Community",
+    "summary": "Phase 11 is the production-integration phase: the Phase 10 FPolicy event-ingestion pipeline is now connected to all 17 use-case (UC) templates, with operational guardrails for persistence, deduplication, observability, and future migration to native S3 Access Point (S3AP) notifications. Repository : github.",
+    "link": "auto/20260515-production-ready-fpolicy-event-pipeline-across-17-ucs-fsx-fo-5df6089a.html",
+    "source_url": "https://dev.to/aws-builders/production-ready-fpolicy-event-pipeline-across-17-ucs-fsx-for-ontap-s3-access-points-phase-11-57p8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa9yl9vseneg6whek4o4s.png"
+  },
+  {
     "title": "Microsoft starts canceling Claude Code licenses",
     "date": "2026-05-14",
     "category": "AI & Industry",

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-15T08:16:07.804237+00:00",
+  "timestamp": "2026-05-15T18:52:18.841404+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 601,
-  "unseen_candidates": 591,
+  "fetched_candidates": 602,
+  "unseen_candidates": 595,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Production-Ready FPolicy Event Pipeline Across 17 UCs — FSx for ONTAP S3 Access Points, Phase 11",
-      "link": "auto/20260515-production-ready-fpolicy-event-pipeline-across-17-ucs-fsx-fo-5df6089a.html",
-      "score": 132.8895,
+      "title": "COBOL Modernization Tools Compared: IBM ADDI, CAST, Blu Age, and CoreStory",
+      "link": "auto/20260515-cobol-modernization-tools-compared-ibm-addi-cast-blu-age-and-6151294e.html",
+      "score": 144.9116,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

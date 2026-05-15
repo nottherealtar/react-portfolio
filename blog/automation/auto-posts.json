@@ -13,6 +13,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa9yl9vseneg6whek4o4s.png"
   },
   {
+    "title": "COBOL Modernization Tools Compared: IBM ADDI, CAST, Blu Age, and CoreStory",
+    "date": "2026-05-15",
+    "category": "Coding & Community",
+    "summary": "We walk through the four phases of a COBOL modernization program and map each major tool to the phase it actually serves, including CoreStory, which operates in the business rule extraction phase that most programs underestimate.",
+    "link": "auto/20260515-cobol-modernization-tools-compared-ibm-addi-cast-blu-age-and-6151294e.html",
+    "source_url": "https://dev.to/corestory/cobol-modernization-tools-compared-ibm-addi-cast-blu-age-and-corestory-27i9",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fikkwxh872gfa1bi4tzbl.png"
+  },
+  {
     "title": "Microsoft starts canceling Claude Code licenses",
     "date": "2026-05-14",
     "category": "AI & Industry",

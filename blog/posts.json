@@ -121,6 +121,20 @@
     "search_plain": "CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026? | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-12 DEV Community CrewAI vs LangGraph: Which LLM Agent Framework Should You Use in 2026? It is designed for long-running, stateful agents with persistence, durable execution, fault tolerance, streaming, interrupts, time travel, memory, and subgraphs. Why this matters Use CrewAI if you want a higher-level framework for building teams of role-based agents, assigning tasks, and shipping automations quickly. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Two frameworks come up constantly in that conversation: CrewAI and LangGraph . LangGraph is optimized for explicit, durable control over complex stateful workflows. It gives you concepts like agents, crews, tasks, processes, flows, memory, knowledge, guardrails, callbacks, and human-in-the-loop triggers in a developer-friendly package. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026",
+    "date": "2026-05-12",
+    "category": "Cloud Automation",
+    "summary": "AI is reshaping how enterprises operate, make decisions, and innovate at scale Together, Microsoft and SAP are helping enterprises transform operations, decision-making, and innovation at scale on Azure.",
+    "link": "auto/20260512-advancing-enterprise-ai-new-sap-on-azure-announcements-from-67d54d46.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/2-1024x575.webp",
+    "search_plain": "Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Cloud Automation ~2 min read 2026-05-12 Microsoft Azure Blog Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026 AI is reshaping how enterprises operate, make decisions, and innovate at scale Together, Microsoft and SAP are helping enterprises transform operations, decision-making, and innovation at scale on Azure. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Interactive: Explore how Microsoft and SAP AI capabilities can work together to connect business context, productivity tools and enterprise workflows. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways This creates a new model for the enterprise: Employees are supported by AI that understands their work in context. Putting enterprise AI into production A central theme at SAP Sapphire 2026 is making AI real—moving from experimentation to production-ready, business-driven outcomes. Inventory dependent integrations and add regression checks before you widen rollout. Primary source Microsoft Azure Blog — original article ← Back to journal"
+  },
+  {
     "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
     "date": "2026-05-11",
     "category": "Coding & Careers",

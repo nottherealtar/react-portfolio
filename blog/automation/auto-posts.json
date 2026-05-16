@@ -112,6 +112,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Advancing enterprise AI: New SAP on Azure announcements from SAP Sapphire 2026",
+    "date": "2026-05-12",
+    "category": "Cloud Automation",
+    "summary": "AI is reshaping how enterprises operate, make decisions, and innovate at scale Together, Microsoft and SAP are helping enterprises transform operations, decision-making, and innovation at scale on Azure.",
+    "link": "auto/20260512-advancing-enterprise-ai-new-sap-on-azure-announcements-from-67d54d46.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/advancing-enterprise-ai-new-sap-on-azure-announcements-from-sap-sapphire-2026/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/2-1024x575.webp"
+  },
+  {
     "title": "When the Sensor Starts Thinking: SnortML, Agentic AI, and the Evolving Architecture of Intrusion Detection",
     "date": "2026-05-11",
     "category": "Coding & Careers",

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-15T18:52:18.841404+00:00",
+  "timestamp": "2026-05-16T07:25:53.559979+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "COBOL Modernization Tools Compared: IBM ADDI, CAST, Blu Age, and CoreStory",
-      "link": "auto/20260515-cobol-modernization-tools-compared-ibm-addi-cast-blu-age-and-6151294e.html",
-      "score": 144.9116,
+      "title": "From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me",
+      "link": "auto/20260516-from-cto-to-freelancer-what-12-years-in-technical-leadership-eef64e16.html",
+      "score": 130.8786,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

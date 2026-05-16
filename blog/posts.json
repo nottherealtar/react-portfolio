@@ -1,5 +1,18 @@
 [
   {
+    "title": "From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me",
+    "date": "2026-05-16",
+    "category": "Coding & Community",
+    "summary": "About work, about clients, about what I'm actually good at — and what I'm not. What I Thought Would Be Hard (And What Actually Was) When you spend 12 years making technical decisions for a company, you forget what it's like to not have a team. The first time a project ends and the next one isn't immediately lined up, you feel it.",
+    "link": "auto/20260516-from-cto-to-freelancer-what-12-years-in-technical-leadership-eef64e16.html",
+    "source_url": "https://dev.to/iurii_rogulia/from-cto-to-freelancer-what-12-years-in-technical-leadership-taught-me-32ed",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-16 DEV Community From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me About work, about clients, about what I&#x27;m actually good at — and what I&#x27;m not. What I Thought Would Be Hard (And What Actually Was) When you spend 12 years making technical decisions for a company, you forget what it&#x27;s like to not have a team. The first time a project ends and the next one isn&#x27;t immediately lined up, you feel it. Why this matters It teaches you to think like the person who has to live with the consequences of the technical decisions. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways Not manage the people who build things. You&#x27;re coordinating, unblocking, deciding. How 12 Years of CTO Work Changed How I Freelance Here&#x27;s what I didn&#x27;t fully appreciate until I was on the other side: being a CTO doesn&#x27;t teach you to be a better developer. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Production-Ready FPolicy Event Pipeline Across 17 UCs — FSx for ONTAP S3 Access Points, Phase 11",
     "date": "2026-05-15",
     "category": "Coding & Community",

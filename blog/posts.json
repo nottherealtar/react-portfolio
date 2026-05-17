@@ -1,5 +1,18 @@
 [
   {
+    "title": "Azertio: API and Database Testing Without the Glue Code",
+    "date": "2026-05-17",
+    "category": "Coding & Community",
+    "summary": "Azertio's premise is simple: the most common test steps should already exist as reusable, versioned plugins, and you should not need to write any Java to use them. That's it — no pom.xml , no step definition classes, no build tool.",
+    "link": "auto/20260517-azertio-api-and-database-testing-without-the-glue-code-caf4eef5.html",
+    "source_url": "https://dev.to/luiinge/azertio-api-and-database-testing-without-the-glue-code-1ibl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Azertio: API and Database Testing Without the Glue Code | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-17 DEV Community Azertio: API and Database Testing Without the Glue Code Azertio&#x27;s premise is simple: the most common test steps should already exist as reusable, versioned plugins, and you should not need to write any Java to use them. That&#x27;s it — no pom.xml , no step definition classes, no build tool. Why this matters Azertio is a new open-source testing tool that takes a different approach: instead of writing glue code, you declare plugins. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways But underneath there are dozens of step definition classes, ScenarioContext maps to pass state between steps, @Before hooks to wire up the HTTP client, and a pom.xml that has… And this infrastructure is per-project: if three teams test REST APIs, each team writes their own iMakeGetRequest and statusCodeIs methods. Architecture: Plugins All the Way Down Every capability in Azertio is a plugin — including the Gherkin parser, the REST steps, and the database steps. Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me",
     "date": "2026-05-16",
     "category": "Coding & Community",

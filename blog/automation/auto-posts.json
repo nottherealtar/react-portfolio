@@ -1,5 +1,17 @@
 [
   {
+    "title": "Azertio: API and Database Testing Without the Glue Code",
+    "date": "2026-05-17",
+    "category": "Coding & Community",
+    "summary": "Azertio's premise is simple: the most common test steps should already exist as reusable, versioned plugins, and you should not need to write any Java to use them. That's it — no pom.xml , no step definition classes, no build tool.",
+    "link": "auto/20260517-azertio-api-and-database-testing-without-the-glue-code-caf4eef5.html",
+    "source_url": "https://dev.to/luiinge/azertio-api-and-database-testing-without-the-glue-code-1ibl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "From CTO to Freelancer: What 12 Years in Technical Leadership Taught Me",
     "date": "2026-05-16",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Agent Development Kit for Google Apps Script",
+    "date": "2026-05-18",
+    "category": "Coding & Community",
+    "summary": "Google's Agent Development Kit (ADK) revolutionizes autonomous AI agents, yet its standard Node.js-based asynchronous ReAct architecture is fundamentally incompatible with the restrictive, synchronous, and time-bound execution environment of Google Apps Script (GAS).",
+    "link": "auto/20260518-agent-development-kit-for-google-apps-script-89201bfc.html",
+    "source_url": "https://dev.to/gde/agent-development-kit-for-google-apps-script-38ho",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fntqmqtqeyu44k43v504o.jpg"
+  },
+  {
     "title": "Azertio: API and Database Testing Without the Glue Code",
     "date": "2026-05-17",
     "category": "Coding & Community",

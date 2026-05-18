@@ -1,5 +1,19 @@
 [
   {
+    "title": "Agent Development Kit for Google Apps Script",
+    "date": "2026-05-18",
+    "category": "Coding & Community",
+    "summary": "Google's Agent Development Kit (ADK) revolutionizes autonomous AI agents, yet its standard Node.js-based asynchronous ReAct architecture is fundamentally incompatible with the restrictive, synchronous, and time-bound execution environment of Google Apps Script (GAS).",
+    "link": "auto/20260518-agent-development-kit-for-google-apps-script-89201bfc.html",
+    "source_url": "https://dev.to/gde/agent-development-kit-for-google-apps-script-38ho",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fntqmqtqeyu44k43v504o.jpg",
+    "search_plain": "Agent Development Kit for Google Apps Script | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-18 DEV Community Agent Development Kit for Google Apps Script Google&#x27;s Agent Development Kit (ADK) revolutionizes autonomous AI agents, yet its standard Node.js-based asynchronous ReAct architecture is fundamentally incompatible with the restrictive, synchronous, and time-bound execution environment of Google Apps Script (GAS). Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters https://github.com/tanaikech/adk-gas The Significance &amp; Future of GASADK in Google Workspace To appreciate the paradigm shift GASADK brings to Google Workspace, one must first examine the deep architectural chasm between standard Node.js agent frameworks and the hostile execution environment of Google Apps Script. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Because GAS acts as the native connective tissue of Google Workspace—seamlessly orchestrating Gmail, Sheets, Docs, and Drive—bringing the paradigm of the TypeScript ADK… While the @google/adk LlmAgent utilizes a recursive, step-by-step execution model where tool discovery, LLM interaction, and execution happen in a continuous feedback loop, the… Over the course of exploring advanced Generative AI capabilities, standardizing tool-use via the Model Context Protocol (MCP), facilitating distributed problem-solving through… Primary source DEV Community — original article ← Back to journal"
+  },
+  {
     "title": "Azertio: API and Database Testing Without the Glue Code",
     "date": "2026-05-17",
     "category": "Coding & Community",

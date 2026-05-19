@@ -14,6 +14,20 @@
     "search_plain": "The Best Next.js SaaS Starter Kits with a Built-in CMS (2026) | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Community ~2 min read 2026-05-18 DEV Community The Best Next.js SaaS Starter Kits with a Built-in CMS (2026) This is the dirty secret of Next.js SaaS boilerplates. Pick a starter kit where the CMS is already built in. There are three tiers of CMS capability in this market, and the difference between them is what a non-developer can actually do on day one. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters This is what most people picture when they say &quot;CMS.&quot; Tier 2 — Integrated headless CMS. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. Operational takeaways Catastrophic for anyone else on the team — a non-technical co-founder, a marketing hire, a freelance copywriter — who needs to update content without going through a pull… I looked at the Next.js SaaS starter kit market and asked one question: who can actually run the marketing site without touching code? A real CMS UI (typically Sanity Studio or similar) is wired into the kit. Primary source DEV Community — original article ← Back to journal"
   },
   {
+    "title": "Sony retreats from PC gaming, robbing us of maybe 4 games",
+    "date": "2026-05-18",
+    "category": "Gaming & Industry",
+    "summary": "We've yet to hear Sony's rationalization for the decision, nor its public confirmation (PC Gamer has reached out), but it's the sort of action that explains itself. But as I gaze at the future of PlayStation studios, I wonder what we're really missing out on.",
+    "link": "auto/20260518-sony-retreats-from-pc-gaming-robbing-us-of-maybe-4-games-3047a1f2.html",
+    "source_url": "https://www.pcgamer.com/gaming-industry/sony-retreats-from-pc-gaming-robbing-us-of-maybe-4-games/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/x2oByPnixgYrQZoZXo3JjU.jpg",
+    "search_plain": "Sony retreats from PC gaming, robbing us of maybe 4 games | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Gaming &amp; Industry ~2 min read 2026-05-18 PC Gamer Sony retreats from PC gaming, robbing us of maybe 4 games We&#x27;ve yet to hear Sony&#x27;s rationalization for the decision, nor its public confirmation (PC Gamer has reached out), but it&#x27;s the sort of action that explains itself. But as I gaze at the future of PlayStation studios, I wonder what we&#x27;re really missing out on. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Much like Xbox&#x27;s renewed interest in its own box, Sony is responding to a waning interest in consoles by reinforcing its &quot;narrative singleplayer games&quot; as system sellers once again. It helps prioritize where automation budgets and vendor reviews should focus next quarter. Operational takeaways The prevailing joke about the PS5 is that it has no games, and nearly six years into its run, that&#x27;s barely a joke anymore. It&#x27;s not a new observation, but that is likely a big factor in Sony&#x27;s PC skittishness: If Valve is on its way to taking the &quot;PC console&quot; mainstream, best to treat them like a… If we still lived in world where PlayStation exclusivity meant missing out on Killzone 2, Demon&#x27;s Souls, Flower, Infamous, Wipeout HD Fury, Ratchet &amp; Clank Future: A Crack In… Primary source PC Gamer — original article ← Back to journal"
+  },
+  {
     "title": "Agent Development Kit for Google Apps Script",
     "date": "2026-05-18",
     "category": "Coding & Community",

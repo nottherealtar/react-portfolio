@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-18T19:01:57.745269+00:00",
+  "timestamp": "2026-05-19T08:37:54.343775+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Best Next.js SaaS Starter Kits with a Built-in CMS (2026)",
-      "link": "auto/20260518-the-best-next-js-saas-starter-kits-with-a-built-in-cms-2026-a22627c1.html",
-      "score": 142.8733,
-      "source": "DEV Community",
+      "title": "Sony retreats from PC gaming, robbing us of maybe 4 games",
+      "link": "auto/20260518-sony-retreats-from-pc-gaming-robbing-us-of-maybe-4-games-3047a1f2.html",
+      "score": 132.2458,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

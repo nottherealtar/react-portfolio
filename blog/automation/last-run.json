@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-19T08:37:54.343775+00:00",
+  "timestamp": "2026-05-19T19:16:47.175781+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 602,
-  "unseen_candidates": 593,
+  "unseen_candidates": 592,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Sony retreats from PC gaming, robbing us of maybe 4 games",
-      "link": "auto/20260518-sony-retreats-from-pc-gaming-robbing-us-of-maybe-4-games-3047a1f2.html",
-      "score": 132.2458,
-      "source": "PC Gamer",
+      "title": "LLM Evaluation and AI Observability for Agent Monitoring",
+      "link": "auto/20260519-llm-evaluation-and-ai-observability-for-agent-monitoring-3e63033f.html",
+      "score": 152.2863,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

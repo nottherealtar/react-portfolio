@@ -1,5 +1,18 @@
 [
   {
+    "title": "LLM Evaluation and AI Observability for Agent Monitoring",
+    "date": "2026-05-19",
+    "category": "Developer Tools",
+    "summary": "As we move towards these complex, real-world applications of agents, an ever-stronger spotlight is being shone both on how we observe AI agents and how we evaluate the LLMs they’re built upon. Hence, LLM evaluation metrics for assessing the performance of an LLM are indispensable in modern AI systems.",
+    "link": "auto/20260519-llm-evaluation-and-ai-observability-for-agent-monitoring-3e63033f.html",
+    "source_url": "https://blog.jetbrains.com/pycharm/2026/05/llm-evaluation-and-ai-observability-for-agent-monitoring/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/PC-social-BlogFeatured-1280x720-1-4.png"
+  },
+  {
     "title": "The Best Next.js SaaS Starter Kits with a Built-in CMS (2026)",
     "date": "2026-05-18",
     "category": "Coding & Community",

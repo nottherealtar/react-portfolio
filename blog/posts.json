@@ -1,5 +1,19 @@
 [
   {
+    "title": "LLM Evaluation and AI Observability for Agent Monitoring",
+    "date": "2026-05-19",
+    "category": "Developer Tools",
+    "summary": "As we move towards these complex, real-world applications of agents, an ever-stronger spotlight is being shone both on how we observe AI agents and how we evaluate the LLMs they’re built upon. Hence, LLM evaluation metrics for assessing the performance of an LLM are indispensable in modern AI systems.",
+    "link": "auto/20260519-llm-evaluation-and-ai-observability-for-agent-monitoring-3e63033f.html",
+    "source_url": "https://blog.jetbrains.com/pycharm/2026/05/llm-evaluation-and-ai-observability-for-agent-monitoring/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/PC-social-BlogFeatured-1280x720-1-4.png",
+    "search_plain": "LLM Evaluation and AI Observability for Agent Monitoring | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-19 JetBrains Blog LLM Evaluation and AI Observability for Agent Monitoring As we move towards these complex, real-world applications of agents, an ever-stronger spotlight is being shone both on how we observe AI agents and how we evaluate the LLMs they’re built upon. Hence, LLM evaluation metrics for assessing the performance of an LLM are indispensable in modern AI systems. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters Core LLM evaluation metrics for modern AI systems As LLMs are now applied to a wide range of use cases, it is important that their evaluation covers both the tasks they may perform and their potential risks. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. Operational takeaways In this blog post, we’ll explore how to evaluate agents using advanced metrics and observability tools. Faithfulness hallucination detection: Ensures the faithfulness of LLMs to provide context or user instructions. Inventory dependent integrations and add regression checks before you widen rollout. Primary source JetBrains Blog — original article ← Back to journal"
+  },
+  {
     "title": "The Best Next.js SaaS Starter Kits with a Built-in CMS (2026)",
     "date": "2026-05-18",
     "category": "Coding & Community",

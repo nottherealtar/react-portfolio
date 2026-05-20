@@ -1,5 +1,19 @@
 [
   {
+    "title": "Visual Studio Code 1.121",
+    "date": "2026-05-20",
+    "category": "Developer Tools",
+    "summary": "We continue improvement to the Agents window, which is the agent-driven companion window brought as a preview to VS Code Stable in our last release. Learn more about remote agent sessions in our documentation.",
+    "link": "auto/20260520-visual-studio-code-1-121-f944a62c.html",
+    "source_url": "https://code.visualstudio.com/updates/v1_121",
+    "source_name": "Visual Studio Code",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://code.visualstudio.com/assets/updates/1_121/remote-tab.webp",
+    "search_plain": "Visual Studio Code 1.121 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-20 Visual Studio Code Visual Studio Code 1.121 We continue improvement to the Agents window, which is the agent-driven companion window brought as a preview to VS Code Stable in our last release. Learn more about remote agent sessions in our documentation. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters This release adds built-in Mermaid and HTML previews, streamlines terminal tool behavior for agents, and lets you run agent sessions on remote machines. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways To learn more about how it works and what you can do with it, visit the Agents window documentation . Whether you&#x27;d like to ideate on new scenarios that take advantage of running agents across projects, or share feedback on how your existing extension behaves in the Agents… This feature is similar to, but not the same as, VS Code&#x27;s remote development extensions. Primary source Visual Studio Code — original article ← Back to journal"
+  },
+  {
     "title": "LLM Evaluation and AI Observability for Agent Monitoring",
     "date": "2026-05-19",
     "category": "Developer Tools",

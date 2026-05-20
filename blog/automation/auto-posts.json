@@ -13,6 +13,19 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/PC-social-BlogFeatured-1280x720-1-4.png"
   },
   {
+    "title": "Azure Files Entra-Only identities: Advancing cloud-native identity and security",
+    "date": "2026-05-19",
+    "category": "Cloud Automation",
+    "summary": "With native Microsoft Entra ID authentication , organizations can now grant secure, identity-based access to SMB file shares using cloud-only identities. Entra-Only identities elevate Azure Files with a highly integrated, modern identity experience—delivering a leading, best-in-class standard for secure, seamless and comprehensive cloud native access.",
+    "link": "auto/20260519-azure-files-entra-only-identities-advancing-cloud-native-ide-bbc84c23.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/azure-files-entra-only-identities-advancing-cloud-native-identity-and-security/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/04c67504-d63d-40ec-96bb-9ae3deb6ba63-1024x712.webp"
+  },
+  {
     "title": "The Best Next.js SaaS Starter Kits with a Built-in CMS (2026)",
     "date": "2026-05-18",
     "category": "Coding & Community",

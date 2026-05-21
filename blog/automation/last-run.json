@@ -1,25 +1,37 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-20T19:33:30.952353+00:00",
+  "timestamp": "2026-05-21T08:42:19.604538+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 602,
-  "unseen_candidates": 592,
-  "blocked_domain_candidates": 1,
+  "fetched_candidates": 302,
+  "unseen_candidates": 292,
+  "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Visual Studio Code 1.121",
-      "link": "auto/20260520-visual-studio-code-1-121-f944a62c.html",
-      "score": 137.269,
-      "source": "Visual Studio Code",
+      "title": "Azure IaaS: Deploy high-performance workloads with a system-level approach",
+      "link": "auto/20260520-azure-iaas-deploy-high-performance-workloads-with-a-system-l-4909ab18.html",
+      "score": 142.227,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
+    {
+      "source": "Rock Paper Shotgun",
+      "error": "Unable to parse XML for source Rock Paper Shotgun: not well-formed (invalid token): line 1, column 0"
+    },
+    {
+      "source": "Eurogamer",
+      "error": "Unable to parse XML for source Eurogamer: not well-formed (invalid token): line 1, column 0"
+    },
+    {
+      "source": "VG247",
+      "error": "Unable to parse XML for source VG247: not well-formed (invalid token): line 1, column 0"
+    },
     {
       "source": "Unreal Engine",
       "error": "Unable to parse XML for source Unreal Engine: junk after document element: line 1, column 757"

@@ -14,6 +14,19 @@
     "search_plain": "Visual Studio Code 1.121 | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-20 Visual Studio Code Visual Studio Code 1.121 We continue improvement to the Agents window, which is the agent-driven companion window brought as a preview to VS Code Stable in our last release. Learn more about remote agent sessions in our documentation. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters This release adds built-in Mermaid and HTML previews, streamlines terminal tool behavior for agents, and lets you run agent sessions on remote machines. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways To learn more about how it works and what you can do with it, visit the Agents window documentation . Whether you&#x27;d like to ideate on new scenarios that take advantage of running agents across projects, or share feedback on how your existing extension behaves in the Agents… This feature is similar to, but not the same as, VS Code&#x27;s remote development extensions. Primary source Visual Studio Code — original article ← Back to journal"
   },
   {
+    "title": "Azure IaaS: Deploy high-performance workloads with a system-level approach",
+    "date": "2026-05-20",
+    "category": "Cloud Automation",
+    "summary": "This is why performance in the cloud has evolved from a resource-level concern to a system-level challenge. And it’s why Azure approaches performance differently, engineering it into the platform so customers can achieve consistent, scalable outcomes without manually tuning every layer.",
+    "link": "auto/20260520-azure-iaas-deploy-high-performance-workloads-with-a-system-l-4909ab18.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Azure IaaS: Deploy high-performance workloads with a system-level approach | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Cloud Automation ~2 min read 2026-05-20 Microsoft Azure Blog Azure IaaS: Deploy high-performance workloads with a system-level approach This is why performance in the cloud has evolved from a resource-level concern to a system-level challenge. And it’s why Azure approaches performance differently, engineering it into the platform so customers can achieve consistent, scalable outcomes without manually tuning every layer. Why this matters Many organizations still approach performance by provisioning more resources—larger virtual machines (VMs), faster disks, or higher network bandwidth. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Azure IaaS brings these dimensions together, aligning compute, storage, and networking capabilities to the needs of specific workloads. This helps organizations to process more data and train models faster without unnecessary infrastructure overhead. But compute scaling alone is not enough; stateful services must scale with the same level of performance. Primary source Microsoft Azure Blog — original article ← Back to journal"
+  },
+  {
     "title": "LLM Evaluation and AI Observability for Agent Monitoring",
     "date": "2026-05-19",
     "category": "Developer Tools",

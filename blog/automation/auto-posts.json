@@ -13,6 +13,18 @@
     "hero_image": "https://code.visualstudio.com/assets/updates/1_121/remote-tab.webp"
   },
   {
+    "title": "Azure IaaS: Deploy high-performance workloads with a system-level approach",
+    "date": "2026-05-20",
+    "category": "Cloud Automation",
+    "summary": "This is why performance in the cloud has evolved from a resource-level concern to a system-level challenge. And it’s why Azure approaches performance differently, engineering it into the platform so customers can achieve consistent, scalable outcomes without manually tuning every layer.",
+    "link": "auto/20260520-azure-iaas-deploy-high-performance-workloads-with-a-system-l-4909ab18.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/azure-iaas-deploy-high-performance-workloads-with-a-system-level-approach/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "LLM Evaluation and AI Observability for Agent Monitoring",
     "date": "2026-05-19",
     "category": "Developer Tools",

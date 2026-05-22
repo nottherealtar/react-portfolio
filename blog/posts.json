@@ -1,5 +1,19 @@
 [
   {
+    "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
+    "date": "2026-05-21",
+    "category": "Developer Tools",
+    "summary": "At KotlinConf’26, the JetBrains team and industry partners shared how Kotlin continues to evolve for developers at every scale. The keynote highlighted advances in language design, tooling, AI-driven workflows, and multiplatform development – all aimed at improving the Kotlin development experience for building modern applications everywhere.",
+    "link": "auto/20260521-kotlinconf-26-keynote-highlights-advances-in-language-design-e376527d.html",
+    "source_url": "https://blog.jetbrains.com/kotlin/2026/05/kotlinconf26-keynote-highlights/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/Value-classes.png",
+    "search_plain": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-21 JetBrains Blog KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development At KotlinConf’26, the JetBrains team and industry partners shared how Kotlin continues to evolve for developers at every scale. The keynote highlighted advances in language design, tooling, AI-driven workflows, and multiplatform development – all aimed at improving the Kotlin development experience for building modern applications everywhere. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters The keynote also focused on the next generation of AI tools for Kotlin development. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways As AI continues to reshape how software gets built, Kotlin’s growing real-world impact reflects the importance of languages and tools that help teams manage complexity, express… Available through a single command, Kotlin Toolchain brings together everything from creating, building, running, and testing applications to formatting code, generating… As part of Kotlin Foundation’s efforts, JetBrains and Meta have started the process of standardizing ktfmt and making it a core part of Kotlin. Primary source JetBrains Blog — original article ← Back to journal"
+  },
+  {
     "title": "Visual Studio Code 1.121",
     "date": "2026-05-20",
     "category": "Developer Tools",

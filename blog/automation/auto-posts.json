@@ -1,5 +1,18 @@
 [
   {
+    "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
+    "date": "2026-05-21",
+    "category": "Developer Tools",
+    "summary": "At KotlinConf’26, the JetBrains team and industry partners shared how Kotlin continues to evolve for developers at every scale. The keynote highlighted advances in language design, tooling, AI-driven workflows, and multiplatform development – all aimed at improving the Kotlin development experience for building modern applications everywhere.",
+    "link": "auto/20260521-kotlinconf-26-keynote-highlights-advances-in-language-design-e376527d.html",
+    "source_url": "https://blog.jetbrains.com/kotlin/2026/05/kotlinconf26-keynote-highlights/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/Value-classes.png"
+  },
+  {
     "title": "Visual Studio Code 1.121",
     "date": "2026-05-20",
     "category": "Developer Tools",

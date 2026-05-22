@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-21T08:42:19.604538+00:00",
+  "timestamp": "2026-05-22T08:31:19.488914+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 302,
-  "unseen_candidates": 292,
+  "fetched_candidates": 403,
+  "unseen_candidates": 392,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Azure IaaS: Deploy high-performance workloads with a system-level approach",
-      "link": "auto/20260520-azure-iaas-deploy-high-performance-workloads-with-a-system-l-4909ab18.html",
-      "score": 142.227,
-      "source": "Microsoft Azure Blog",
+      "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
+      "link": "auto/20260521-kotlinconf-26-keynote-highlights-advances-in-language-design-e376527d.html",
+      "score": 137.6589,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],
@@ -27,10 +27,6 @@
     {
       "source": "Eurogamer",
       "error": "Unable to parse XML for source Eurogamer: not well-formed (invalid token): line 1, column 0"
-    },
-    {
-      "source": "VG247",
-      "error": "Unable to parse XML for source VG247: not well-formed (invalid token): line 1, column 0"
     },
     {
       "source": "Unreal Engine",

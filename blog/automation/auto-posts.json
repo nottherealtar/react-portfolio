@@ -13,6 +13,18 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/Value-classes.png"
   },
   {
+    "title": "Coding agents are giving everyone decision fatigue",
+    "date": "2026-05-21",
+    "category": "Coding & Careers",
+    "summary": "There’s no doubt that coding agents have changed how software gets built. That led to some lousy measures of productivity : hours spent, lines of code written, commits per day.",
+    "link": "auto/20260521-coding-agents-are-giving-everyone-decision-fatigue-c62db179.html",
+    "source_url": "https://stackoverflow.blog/2026/05/21/coding-agents-are-giving-everyone-decision-fatigue/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Visual Studio Code 1.121",
     "date": "2026-05-20",
     "category": "Developer Tools",

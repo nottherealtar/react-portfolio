@@ -1,29 +1,25 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-22T08:31:19.488914+00:00",
+  "timestamp": "2026-05-22T19:03:19.869300+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 403,
-  "unseen_candidates": 392,
-  "blocked_domain_candidates": 0,
+  "fetched_candidates": 503,
+  "unseen_candidates": 492,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
-      "link": "auto/20260521-kotlinconf-26-keynote-highlights-advances-in-language-design-e376527d.html",
-      "score": 137.6589,
-      "source": "JetBrains Blog",
+      "title": "Coding agents are giving everyone decision fatigue",
+      "link": "auto/20260521-coding-agents-are-giving-everyone-decision-fatigue-c62db179.html",
+      "score": 132.791,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
-    {
-      "source": "Rock Paper Shotgun",
-      "error": "Unable to parse XML for source Rock Paper Shotgun: not well-formed (invalid token): line 1, column 0"
-    },
     {
       "source": "Eurogamer",
       "error": "Unable to parse XML for source Eurogamer: not well-formed (invalid token): line 1, column 0"

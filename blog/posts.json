@@ -14,6 +14,19 @@
     "search_plain": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Developer Tools ~2 min read 2026-05-21 JetBrains Blog KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development At KotlinConf’26, the JetBrains team and industry partners shared how Kotlin continues to evolve for developers at every scale. The keynote highlighted advances in language design, tooling, AI-driven workflows, and multiplatform development – all aimed at improving the Kotlin development experience for building modern applications everywhere. Images from the source HTTPS thumbnails linked for context; rights remain with the original publisher. Why this matters The keynote also focused on the next generation of AI tools for Kotlin development. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways As AI continues to reshape how software gets built, Kotlin’s growing real-world impact reflects the importance of languages and tools that help teams manage complexity, express… Available through a single command, Kotlin Toolchain brings together everything from creating, building, running, and testing applications to formatting code, generating… As part of Kotlin Foundation’s efforts, JetBrains and Meta have started the process of standardizing ktfmt and making it a core part of Kotlin. Primary source JetBrains Blog — original article ← Back to journal"
   },
   {
+    "title": "Coding agents are giving everyone decision fatigue",
+    "date": "2026-05-21",
+    "category": "Coding & Careers",
+    "summary": "There’s no doubt that coding agents have changed how software gets built. That led to some lousy measures of productivity : hours spent, lines of code written, commits per day.",
+    "link": "auto/20260521-coding-agents-are-giving-everyone-decision-fatigue-c62db179.html",
+    "source_url": "https://stackoverflow.blog/2026/05/21/coding-agents-are-giving-everyone-decision-fatigue/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Coding agents are giving everyone decision fatigue | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Careers ~2 min read 2026-05-21 Stack Overflow Blog Coding agents are giving everyone decision fatigue There’s no doubt that coding agents have changed how software gets built. That led to some lousy measures of productivity : hours spent, lines of code written, commits per day. Why this matters Now that AI writes the code, there’s more time for the other work of an engineer. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. Operational takeaways Not only are agentic coders bragging about their lines of code stats, but organizations have bragged about their percentage of new code written by AI . Besides this being a wasteful measure, Arora gave an example of why it’s bad for a software org: “We had a software engineer producing 7X the code than anybody on her team. If we’re shifting the majority of software work from coding to making decisions, everyone is going to feel the strain of decision fatigue . Primary source Stack Overflow Blog — original article ← Back to journal"
+  },
+  {
     "title": "Visual Studio Code 1.121",
     "date": "2026-05-20",
     "category": "Developer Tools",

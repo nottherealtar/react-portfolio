@@ -956,6 +956,69 @@ def estimate_reading_minutes(*text_parts: str) -> int:
     return max(2, min(35, round(words / 220)))
 
 
+def truncate_meta_description(text: str, max_len: int = 158) -> str:
+    """Search snippets: concise, word-boundary safe."""
+    t = re.sub(r"\s+", " ", (text or "").strip())
+    if len(t) <= max_len:
+        return t
+    cut = t[: max_len - 1]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut + "…"
+
+
+def build_readable_body_paragraphs(
+    article: str,
+    summary: str,
+    max_paragraphs: int = 8,
+    sentences_per_chunk: int = 3,
+    max_chars_per_paragraph: int = 540,
+) -> List[str]:
+    """
+    Turn fetched article plain text into readable paragraphs for the HTML body.
+    De-duplicates against the lede/summary so the page is not one repeated blurb.
+    """
+    base = clean_body_text(article, max_chars=14000)
+    sentences = sentence_split(base)
+    if not sentences:
+        return []
+    summary_l = (summary or "").strip()
+
+    filtered: List[str] = []
+    for s in sentences:
+        s = s.strip()
+        if len(s) < 44:
+            continue
+        if summary_l and (
+            _high_word_overlap(s, summary_l, threshold=0.42)
+            or _leading_tokens_match(s, summary_l, n_words=10, min_equal=5)
+        ):
+            continue
+        filtered.append(s)
+
+    if len(filtered) < 5:
+        filtered = [s.strip() for s in sentences if len(s.strip()) >= 44]
+
+    paragraphs: List[str] = []
+    buf: List[str] = []
+    for s in filtered:
+        buf.append(s)
+        if len(buf) >= sentences_per_chunk:
+            para = " ".join(buf).strip()
+            para = _clip_paragraph(para, max_chars_per_paragraph)
+            if para:
+                paragraphs.append(para)
+            buf = []
+            if len(paragraphs) >= max_paragraphs:
+                break
+    if buf and len(paragraphs) < max_paragraphs:
+        para = " ".join(buf).strip()
+        para = _clip_paragraph(para, max_chars_per_paragraph)
+        if para:
+            paragraphs.append(para)
+    return paragraphs[:max_paragraphs]
+
+
 def escape_html(text: str) -> str:
     return html.escape(text, quote=True)
 
@@ -979,18 +1042,79 @@ def build_images_section(images: List[Dict[str, Any]]) -> str:
     return "\n".join(figures)
 
 
+def _json_ld_script(payload: Dict[str, Any]) -> str:
+    raw = json.dumps(payload, ensure_ascii=False)
+    safe = raw.replace("</script", r"<\/script")
+    return f"  <script type=\"application/ld+json\">\n{safe}\n  </script>"
+
+
 def render_post_html(metadata: Dict[str, Any]) -> str:
     takeaways_html = "\n".join(f"          <li>{escape_html(item)}</li>" for item in metadata["takeaways"])
     read_min = int(metadata.get("reading_minutes") or 1)
     category = escape_html(metadata.get("category") or "Automation Insights")
     images_html = build_images_section(list(metadata.get("images") or []))
+    meta_desc = escape_html(metadata.get("meta_description") or metadata["summary"])
+    canonical_raw = (metadata.get("canonical_url") or "").strip()
+    canonical = escape_html(canonical_raw)
+    og_title = escape_html(metadata["title"])
+    og_image_raw = (metadata.get("og_image") or "").strip()
+    twitter_card = "summary_large_image" if og_image_raw else "summary"
+    og_image_tag = ""
+    if og_image_raw:
+        og_escaped = escape_html(og_image_raw)
+        og_image_tag = (
+            f'\n  <meta property="og:image" content="{og_escaped}">\n'
+            f'  <meta property="og:image:alt" content="{og_title}">\n'
+            f'  <meta name="twitter:image" content="{og_escaped}">'
+        )
+    body_paragraphs: List[str] = list(metadata.get("body_paragraphs") or [])
+    body_section = ""
+    if body_paragraphs:
+        paras = "\n".join(f"        <p>{escape_html(p)}</p>" for p in body_paragraphs)
+        body_section = f"""        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+{paras}
+
+"""
+    json_ld: Dict[str, Any] = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": metadata["title"],
+        "description": metadata.get("meta_description") or metadata["summary"],
+        "datePublished": f"{metadata['date']}T12:00:00.000Z",
+        "inLanguage": metadata.get("language") or "en",
+        "author": {"@type": "Organization", "name": "TarsOnlineCafe"},
+        "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_raw} if canonical_raw else None,
+    }
+    source_url = (metadata.get("source_url") or "").strip()
+    if source_url:
+        json_ld["isBasedOn"] = source_url
+    wc = int(metadata.get("word_count") or 0)
+    if wc > 0:
+        json_ld["wordCount"] = wc
+    if og_image_raw:
+        json_ld["image"] = og_image_raw
+    json_ld = {k: v for k, v in json_ld.items() if v is not None}
+    ld_block = _json_ld_script(json_ld)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>{escape_html(metadata['title'])} | TarsOnlineCafe</title>
-  <meta name="description" content="{escape_html(metadata['summary'])}">
+  <meta name="description" content="{meta_desc}">
+  <link rel="canonical" href="{canonical}">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{og_title}">
+  <meta property="og:description" content="{meta_desc}">
+  <meta property="og:url" content="{canonical}">
+  <meta name="twitter:card" content="{twitter_card}">
+  <meta name="twitter:title" content="{og_title}">
+  <meta name="twitter:description" content="{meta_desc}">{og_image_tag}
+{ld_block}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -1062,6 +1186,12 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       font-size: 1.05rem;
       color: var(--steamed-milk, #ede0cc);
       margin: 0 0 1.75rem;
+    }}
+    .section-intro {{
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
     }}
     h2 {{
       font-size: 0.82rem;
@@ -1177,7 +1307,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
         <h1>{escape_html(metadata['title'])}</h1>
         <p class="lede">{escape_html(metadata['summary'])}</p>
 
-{images_html}
+{body_section}{images_html}
 
         <h2>Why this matters</h2>
         <p>{escape_html(metadata['why_it_matters'])}</p>
@@ -1237,6 +1367,7 @@ def main() -> int:
     max_article_images = int(quality_gate.get("max_article_images", 6))
     extractive_cfg = config.get("extractive_engine") or {}
     extractive_on = bool(extractive_cfg.get("enabled"))
+    site_url = str(config.get("site_url", "https://www.tarsonlinecafe.work")).rstrip("/")
 
     fetched = 0
     candidates: List[Dict[str, Any]] = []
@@ -1321,16 +1452,27 @@ def main() -> int:
             ml_bullets=ml_take,
         )
         post_date = item["published_at"].strftime("%Y-%m-%d")
-        reading_minutes = estimate_reading_minutes(post_title, summary, why_it_matters, " ".join(takeaways))
+        body_paragraphs = build_readable_body_paragraphs(translated_description, summary)
+        meta_description = truncate_meta_description(summary)
         images = list(item.get("images") or [])
         hero_image = images[0]["url"] if images else ""
+        reading_minutes = estimate_reading_minutes(
+            post_title,
+            summary,
+            why_it_matters,
+            " ".join(takeaways),
+            " ".join(body_paragraphs),
+        )
+        rel_link = f"auto/{file_name}"
+        canonical_url = f"{site_url}/blog/{rel_link}"
+        word_count = len(re.findall(r"\w+", translated_description))
 
         metadata = {
             "title": post_title,
             "date": post_date,
             "category": item.get("category") or config.get("default_category", "Automation Insights"),
             "summary": summary,
-            "link": f"auto/{file_name}",
+            "link": rel_link,
             "source_url": item["link"],
             "source_name": item["source_name"],
             "automated": True,
@@ -1341,6 +1483,11 @@ def main() -> int:
             "takeaways": takeaways,
             "reading_minutes": reading_minutes,
             "images": images,
+            "meta_description": meta_description,
+            "canonical_url": canonical_url,
+            "body_paragraphs": body_paragraphs,
+            "og_image": hero_image,
+            "word_count": word_count,
         }
 
         if len(summary) < min_summary_length:

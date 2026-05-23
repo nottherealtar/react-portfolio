@@ -1,5 +1,17 @@
 [
   {
+    "title": "Dispatches from O'Reilly: The accidental orchestrator",
+    "date": "2026-05-22",
+    "category": "Coding & Careers",
+    "summary": "I’ve talked to senior engineers who struggle with the shift to agentic tools, and intermediate developers who take to it naturally. Working effectively with AI agents actually raises the bar for what developers need to know. I wrote about that experience gap in an earlier O’Reilly Radar piece called “ The Cognitive Shortcut Paradox .",
+    "link": "auto/20260522-dispatches-from-o-reilly-the-accidental-orchestrator-42bf8796.html",
+    "source_url": "https://stackoverflow.blog/2026/05/22/dispatches-from-o-reilly-the-accidental-orchestrator/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
     "date": "2026-05-21",
     "category": "Developer Tools",

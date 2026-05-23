@@ -1,5 +1,18 @@
 [
   {
+    "title": "Dispatches from O'Reilly: The accidental orchestrator",
+    "date": "2026-05-22",
+    "category": "Coding & Careers",
+    "summary": "I’ve talked to senior engineers who struggle with the shift to agentic tools, and intermediate developers who take to it naturally. Working effectively with AI agents actually raises the bar for what developers need to know. I wrote about that experience gap in an earlier O’Reilly Radar piece called “ The Cognitive Shortcut Paradox .",
+    "link": "auto/20260522-dispatches-from-o-reilly-the-accidental-orchestrator-42bf8796.html",
+    "source_url": "https://stackoverflow.blog/2026/05/22/dispatches-from-o-reilly-the-accidental-orchestrator/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "search_plain": "Dispatches from O&#x27;Reilly: The accidental orchestrator | TarsOnlineCafe ☕ TarsOnlineCafe Portfolio Blog Let's Talk → Portfolio Blog Let's Talk → Automation brief Coding &amp; Careers ~2 min read 2026-05-22 Stack Overflow Blog Dispatches from O&#x27;Reilly: The accidental orchestrator I’ve talked to senior engineers who struggle with the shift to agentic tools, and intermediate developers who take to it naturally. Working effectively with AI agents actually raises the bar for what developers need to know. I wrote about that experience gap in an earlier O’Reilly Radar piece called “ The Cognitive Shortcut Paradox . Why this matters The idea that AI tools work best when experienced developers are driving them matched everything I’d observed. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly. Operational takeaways I’d been observing developers at work using AI with various levels of success, and I realized we need to start thinking about this as its own discipline. Osmani’s framing is that AI agents handle implementation but the human owns the architecture, reviews every diff, and tests relentlessly . And it’s not just junior developers who are having trouble with agentic engineering. Primary source Stack Overflow Blog — original article ← Back to journal"
+  },
+  {
     "title": "KotlinConf’26 Keynote Highlights: Advances in Language Design, Tooling, AI-Driven Workflows, and Multiplatform Development",
     "date": "2026-05-21",
     "category": "Developer Tools",

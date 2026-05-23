@@ -1041,6 +1041,7 @@ def build_images_section(images: List[Dict[str, Any]]) -> str:
     figures.append("        </div>")
     return "\n".join(figures)
 
+
 def _json_ld_script(payload: Dict[str, Any]) -> str:
     raw = json.dumps(payload, ensure_ascii=False)
     safe = raw.replace("</script", r"<\/script")
@@ -1085,9 +1086,13 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
         "author": {"@type": "Organization", "name": "TarsOnlineCafe"},
         "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"},
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_raw} if canonical_raw else None,
-        "isBasedOn": metadata.get("source_url"),
-        "wordCount": int(metadata.get("word_count") or 0),
     }
+    source_url = (metadata.get("source_url") or "").strip()
+    if source_url:
+        json_ld["isBasedOn"] = source_url
+    wc = int(metadata.get("word_count") or 0)
+    if wc > 0:
+        json_ld["wordCount"] = wc
     if og_image_raw:
         json_ld["image"] = og_image_raw
     json_ld = {k: v for k, v in json_ld.items() if v is not None}

@@ -1,5 +1,18 @@
 [
   {
+    "title": "GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row",
+    "date": "2026-05-22",
+    "category": "Developer Platform",
+    "summary": "Against that backdrop, we’re pleased to announce that Gartner has positioned GitHub as a Leader in the 2026 Magic Quadrant™ for Enterprise AI Coding Agents for the third consecutive year .",
+    "link": "auto/20260522-github-recognized-as-a-leader-in-the-gartner-magic-quadrant-9a04bf76.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/05/Figure1-2.png?resize=926%2C1024"
+  },
+  {
     "title": "Dispatches from O'Reilly: The accidental orchestrator",
     "date": "2026-05-22",
     "category": "Coding & Careers",

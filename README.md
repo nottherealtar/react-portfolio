@@ -83,7 +83,7 @@ The blog supports fully automated insight publishing with zero paid services.
 
 1. GitHub Actions runs `.github/workflows/auto-blog.yml` on schedule.
 2. `scripts/auto_blog_pipeline.py` fetches allowlisted feeds from `blog/automation/sources.json`.
-3. Entries are scored (freshness + relevance + source weight), transformed, and published into `blog/auto/*.html`.
+3. Entries are scored (freshness + relevance + source weight), transformed, and published into `blog/auto/*.html`. Each page includes a short lede, a multi-paragraph digest from the fetched article (excerpted for reading on-site), framing and takeaways, and automated SEO metadata (meta description, canonical URL, Open Graph and Twitter cards, JSON-LD `BlogPosting`).
 4. `scripts/build_blog_posts.py` merges `blog/posts.manual.json` + `blog/automation/auto-posts.json` into `blog/posts.json` and updates `sitemap.xml`.
 5. Vercel deploys updates automatically from GitHub.
 

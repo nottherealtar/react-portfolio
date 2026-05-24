@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-23T18:10:34.599999+00:00",
+  "timestamp": "2026-05-24T08:00:14.817058+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 303,
-  "unseen_candidates": 290,
+  "fetched_candidates": 403,
+  "unseen_candidates": 389,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row",
-      "link": "auto/20260522-github-recognized-as-a-leader-in-the-gartner-magic-quadrant-9a04bf76.html",
-      "score": 122.5703,
-      "source": "GitHub Blog",
+      "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
+      "link": "auto/20260524-from-prompts-to-action-what-gemini-3-5-flash-and-the-agentic-68f8b639.html",
+      "score": 120.8727,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],
@@ -27,10 +27,6 @@
     {
       "source": "Eurogamer",
       "error": "Unable to parse XML for source Eurogamer: not well-formed (invalid token): line 1, column 0"
-    },
-    {
-      "source": "VG247",
-      "error": "Unable to parse XML for source VG247: not well-formed (invalid token): line 1, column 0"
     },
     {
       "source": "Unreal Engine",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
+    "date": "2026-05-24",
+    "category": "Coding & Community",
+    "summary": "But after sitting with the full set of announcements — Gemini 3.5 Flash, Managed Agents, Antigravity 2.0, WebMCP — I think it's actually a precise description of where we are right now as developers. That trade-off shaped how we architected agentic systems — you'd use Flash for quick tool calls and route harder reasoning to Pro. Gemini 3.",
+    "link": "auto/20260524-from-prompts-to-action-what-gemini-3-5-flash-and-the-agentic-68f8b639.html",
+    "source_url": "https://dev.to/harshabm_e558522b28f940/from-prompts-to-action-what-gemini-35-flash-and-the-agentic-stack-mean-for-developers-i49",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row",
     "date": "2026-05-22",
     "category": "Developer Platform",

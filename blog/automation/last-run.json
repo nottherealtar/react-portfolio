@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-24T08:00:14.817058+00:00",
+  "timestamp": "2026-05-24T18:11:11.684204+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 403,
-  "unseen_candidates": 389,
+  "fetched_candidates": 503,
+  "unseen_candidates": 489,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
-      "link": "auto/20260524-from-prompts-to-action-what-gemini-3-5-flash-and-the-agentic-68f8b639.html",
-      "score": 120.8727,
+      "title": "Distributed Tracing for LLM Agents: When MCP Makes Tool Calls Observable",
+      "link": "auto/20260524-distributed-tracing-for-llm-agents-when-mcp-makes-tool-calls-a8c1033a.html",
+      "score": 121.903,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
@@ -23,10 +23,6 @@
     {
       "source": "Rock Paper Shotgun",
       "error": "Unable to parse XML for source Rock Paper Shotgun: not well-formed (invalid token): line 1, column 0"
-    },
-    {
-      "source": "Eurogamer",
-      "error": "Unable to parse XML for source Eurogamer: not well-formed (invalid token): line 1, column 0"
     },
     {
       "source": "Unreal Engine",

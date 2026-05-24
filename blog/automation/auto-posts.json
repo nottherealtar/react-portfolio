@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Distributed Tracing for LLM Agents: When MCP Makes Tool Calls Observable",
+    "date": "2026-05-24",
+    "category": "Coding & Community",
+    "summary": "In practice, many incidents live in the action layer : a downstream API that time out, a tool that returns a business error inside a successful RPC, a subprocess the host spawned but never joined to the same trace.",
+    "link": "auto/20260524-distributed-tracing-for-llm-agents-when-mcp-makes-tool-calls-a8c1033a.html",
+    "source_url": "https://dev.to/ekb-dev/distributed-tracing-for-llm-agents-when-mcp-makes-tool-calls-observable-54gb",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row",
     "date": "2026-05-22",
     "category": "Developer Platform",

@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Epic reveals first Unreal Engine 6 game, and it's not Fortnite",
+    "date": "2026-05-24",
+    "category": "Gaming & Industry",
+    "summary": "Unreal Engine 6 has been announced with Rocket League. The Unreal Engine 5 era has been a mixed bag: Epic has achieved new heights of adoption and ubiquity, and the engine itself has proven capable of supporting gorgeous unions of art direction and photorealism like Star Wars Jedi: Survivor and Avowed.",
+    "link": "auto/20260524-epic-reveals-first-unreal-engine-6-game-and-it-s-not-fortnit-d2612c4b.html",
+    "source_url": "https://www.pcgamer.com/gaming-industry/epic-reveals-first-unreal-engine-6-game-and-its-not-fortnite/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/6offQUY4CXebir2TC27dMd.jpg"
+  },
+  {
     "title": "Distributed Tracing for LLM Agents: When MCP Makes Tool Calls Observable",
     "date": "2026-05-24",
     "category": "Coding & Community",

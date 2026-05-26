@@ -12,6 +12,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "LLM Security Vulnerabilities Engineers Need to Know in 2026",
+    "date": "2026-05-26",
+    "category": "Coding & Community",
+    "summary": "Why LLM security needs a different threat model Large language models are moving from experiments into production workflows: support agents, internal copilots, security assistants, code review tools, data analysis bots, and customer-facing automation. Prompt injection is especially risky when the LLM can read untrusted content and then take actions based on that content.",
+    "link": "auto/20260526-llm-security-vulnerabilities-engineers-need-to-know-in-2026-e1ba2b8d.html",
+    "source_url": "https://dev.to/opsbuzzdev/llm-security-vulnerabilities-engineers-need-to-know-in-2026-4cd8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
     "date": "2026-05-24",
     "category": "Coding & Community",

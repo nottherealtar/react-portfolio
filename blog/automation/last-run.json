@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-25T18:52:59.588615+00:00",
+  "timestamp": "2026-05-26T08:42:56.593788+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 303,
-  "unseen_candidates": 289,
+  "unseen_candidates": 288,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Epic reveals first Unreal Engine 6 game, and it's not Fortnite",
-      "link": "auto/20260524-epic-reveals-first-unreal-engine-6-game-and-it-s-not-fortnit-d2612c4b.html",
-      "score": 128.8421,
-      "source": "PC Gamer",
+      "title": "Why Java + Spring Boot is Still the King of Enterprise Backend (2026)",
+      "link": "auto/20260526-why-java-spring-boot-is-still-the-king-of-enterprise-backend-0112c62d.html",
+      "score": 119.9283,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

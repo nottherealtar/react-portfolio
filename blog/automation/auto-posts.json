@@ -1,5 +1,17 @@
 [
   {
+    "title": "Why Java + Spring Boot is Still the King of Enterprise Backend (2026)",
+    "date": "2026-05-26",
+    "category": "Coding & Community",
+    "summary": "When we built the ArogyaPlus HMIS platform at SnowCare Health Tech, Spring Boot's transaction management and audit trail features saved weeks of implementation time. At Orglance Technologies , we've built and placed dedicated Java/Spring Boot engineering teams with clients across the US, UK, and Japan.",
+    "link": "auto/20260526-why-java-spring-boot-is-still-the-king-of-enterprise-backend-0112c62d.html",
+    "source_url": "https://dev.to/hgvanpariya/why-java-spring-boot-is-still-the-king-of-enterprise-backend-2026-4h8h",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
     "date": "2026-05-24",
     "category": "Coding & Community",

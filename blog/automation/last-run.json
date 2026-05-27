@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-26T19:27:46.825218+00:00",
+  "timestamp": "2026-05-27T08:47:49.203973+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "LLM Security Vulnerabilities Engineers Need to Know in 2026",
-      "link": "auto/20260526-llm-security-vulnerabilities-engineers-need-to-know-in-2026-e1ba2b8d.html",
-      "score": 151.8991,
-      "source": "DEV Community",
+      "title": "How Four Teams Stopped Postponing the Refactoring They Knew They Needed",
+      "link": "auto/20260526-how-four-teams-stopped-postponing-the-refactoring-they-knew-e6c5a503.html",
+      "score": 122.8687,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

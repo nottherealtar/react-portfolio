@@ -24,6 +24,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "How Four Teams Stopped Postponing the Refactoring They Knew They Needed",
+    "date": "2026-05-26",
+    "category": "Developer Tools",
+    "summary": "In a 2022 CMU/SEI survey , 71% of 107 senior industry practitioners reported that they wanted to undertake large-scale refactoring but couldn’t – primarily because of the anticipated cost and competing feature priorities. The architectural pain of deferring an improvement is also real, but it shows up later, spread across dozens of small slowdowns that never individually force a response.",
+    "link": "auto/20260526-how-four-teams-stopped-postponing-the-refactoring-they-knew-e6c5a503.html",
+    "source_url": "https://blog.jetbrains.com/ai/2026/05/how-four-teams-stopped-postponing-the-refactoring-they-knew-they-needed/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/05/wiz-logo.webp"
+  },
+  {
     "title": "From Prompts to Action: What Gemini 3.5 Flash and the Agentic Stack Mean for Developers",
     "date": "2026-05-24",
     "category": "Coding & Community",

@@ -13,6 +13,18 @@
     "hero_image": "https://techcrunch.com/wp-content/uploads/2026/05/vertu-alphafold.jpg"
   },
   {
+    "title": "The Attack Vectors Nobody Tells You About: Hardening LLM Apps Against Prompt Injection",
+    "date": "2026-05-28",
+    "category": "Coding & Community",
+    "summary": "Every time a new capability appeared, somebody on the call nodded approvingly because another annoying piece of work had just disappeared. Once language becomes part of infrastructure, prompt injection stops being a novelty problem and starts looking more like an architectural one. This creates one of the stranger properties of LLM applications: data and instructions occupy nearly identical forms.",
+    "link": "auto/20260528-the-attack-vectors-nobody-tells-you-about-hardening-llm-apps-339b60bc.html",
+    "source_url": "https://dev.to/numbpill3d/the-attack-vectors-nobody-tells-you-about-hardening-llm-apps-against-prompt-injection-34ok",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "The Witcher 3: Wild Hunt is getting a new expansion 12 years after launch",
     "date": "2026-05-27",
     "category": "Game Development",

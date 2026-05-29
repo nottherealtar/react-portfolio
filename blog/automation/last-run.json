@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-29T08:51:17.383598+00:00",
+  "timestamp": "2026-05-29T19:40:32.519307+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 603,
-  "unseen_candidates": 589,
+  "fetched_candidates": 604,
+  "unseen_candidates": 591,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "5 Claude AI Pro Features Developers Are Obsessed With in 2026",
-      "link": "auto/20260529-5-claude-ai-pro-features-developers-are-obsessed-with-in-202-cdede7c2.html",
-      "score": 132.9317,
+      "title": "How AI Is Reshaping Software Development and the Tech Industry in 2026",
+      "link": "auto/20260529-how-ai-is-reshaping-software-development-and-the-tech-indust-8895d825.html",
+      "score": 136.9841,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

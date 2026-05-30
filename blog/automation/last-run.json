@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-30T07:50:31.870268+00:00",
+  "timestamp": "2026-05-30T18:15:12.757022+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 604,
-  "unseen_candidates": 591,
+  "unseen_candidates": 590,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "007 First Light review",
-      "link": "auto/20260529-007-first-light-review-4b70f832.html",
-      "score": 127.4481,
-      "source": "PC Gamer",
+      "title": "AppView 1.0.0 Released: Instrument and Secure Your LLM Deployments",
+      "link": "auto/20260530-appview-1-0-0-released-instrument-and-secure-your-llm-deploy-a968d695.html",
+      "score": 131.9566,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

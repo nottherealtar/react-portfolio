@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-29T19:40:32.519307+00:00",
+  "timestamp": "2026-05-30T07:50:31.870268+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How AI Is Reshaping Software Development and the Tech Industry in 2026",
-      "link": "auto/20260529-how-ai-is-reshaping-software-development-and-the-tech-indust-8895d825.html",
-      "score": 136.9841,
-      "source": "DEV Community",
+      "title": "007 First Light review",
+      "link": "auto/20260529-007-first-light-review-4b70f832.html",
+      "score": 127.4481,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

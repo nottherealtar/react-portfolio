@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-31T08:22:19.062654+00:00",
+  "timestamp": "2026-05-31T18:16:27.787429+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "🤖 The Second Brain 🧠 Playbook 📚 (2026 Edition)",
-      "link": "auto/20260531-the-second-brain-playbook-2026-edition-71fea9f4.html",
-      "score": 129.8706,
+      "title": "Hermes Agent: How Nous Research Built an AI That Actually Learns from Its Own",
+      "link": "auto/20260531-hermes-agent-how-nous-research-built-an-ai-that-actually-lea-f0f954d3.html",
+      "score": 137.9849,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -12,6 +12,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "Hermes Agent: How Nous Research Built an AI That Actually Learns from Its Own",
+    "date": "2026-05-31",
+    "category": "Coding & Community",
+    "summary": "Instead, we'll dive directly into the hermes-agent codebase and perform a file-by-file audit of the architecture to understand how these learning systems work under the hood, how memory is implemented, and how Hermes attempts to solve one of the biggest limitations of modern AI agents.",
+    "link": "auto/20260531-hermes-agent-how-nous-research-built-an-ai-that-actually-lea-f0f954d3.html",
+    "source_url": "https://dev.to/ajaymourya/hermes-agent-how-nous-research-built-an-ai-that-actually-learns-from-its-own-36ih",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "AppView 1.0.0 Released: Instrument and Secure Your LLM Deployments",
     "date": "2026-05-30",
     "category": "Coding & Community",

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-30T18:15:12.757022+00:00",
+  "timestamp": "2026-05-31T08:22:19.062654+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "AppView 1.0.0 Released: Instrument and Secure Your LLM Deployments",
-      "link": "auto/20260530-appview-1-0-0-released-instrument-and-secure-your-llm-deploy-a968d695.html",
-      "score": 131.9566,
+      "title": "🤖 The Second Brain 🧠 Playbook 📚 (2026 Edition)",
+      "link": "auto/20260531-the-second-brain-playbook-2026-edition-71fea9f4.html",
+      "score": 129.8706,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

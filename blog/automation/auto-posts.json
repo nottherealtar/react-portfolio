@@ -1,5 +1,17 @@
 [
   {
+    "title": "🤖 The Second Brain 🧠 Playbook 📚 (2026 Edition)",
+    "date": "2026-05-31",
+    "category": "Coding & Community",
+    "summary": "🧠 Why \"Second Brain\" Is More Than a Trend 🗂️ The Two Foundational Frameworks 2.1 📁 PARA — How to organize 2.2 🔄 CODE — How to process 🚀 The 2026 Shift: From PKM to AI-Native Workflow ⚙️ Tools in Practice — Notion, Obsidian, NotebookLM 5.1 📋 Notion — The All-in-One Workspace 5.2 🔒 Obsidian — The Local-First Knowledge Vault 5.3 🔬 NotebookLM — The Grounded Research Assistant 5.4 🔗 The Combined Stack 5.",
+    "link": "auto/20260531-the-second-brain-playbook-2026-edition-71fea9f4.html",
+    "source_url": "https://dev.to/truongpx396/the-second-brain-playbook-2026-edition-33",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "AppView 1.0.0 Released: Instrument and Secure Your LLM Deployments",
     "date": "2026-05-30",
     "category": "Coding & Community",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "The AI Code Protection Landscape: 13 Products Compared",
+    "date": "2026-06-01",
+    "category": "Coding & Community",
+    "summary": "Examples: GCP DLP, Lakera Guard, Skyflow, Cypher AI, Code Integrity. They are bought by security teams and imposed on developers — often visible to the dev only as \"the thing that occasionally blocks my prompt.\" Adoption is enforced top-down. When a CISO tool is exposed too directly to developers without sandboxing, it gets disabled or bypassed.",
+    "link": "auto/20260601-the-ai-code-protection-landscape-13-products-compared-cb732f5e.html",
+    "source_url": "https://dev.to/genevieve_breton_cb795f52/the-ai-code-protection-landscape-13-products-compared-4pg8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "🤖 The Second Brain 🧠 Playbook 📚 (2026 Edition)",
     "date": "2026-05-31",
     "category": "Coding & Community",

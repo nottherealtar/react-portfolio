@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-05-31T18:16:27.787429+00:00",
+  "timestamp": "2026-06-01T10:31:06.386474+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 604,
   "unseen_candidates": 590,
-  "blocked_domain_candidates": 0,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Hermes Agent: How Nous Research Built an AI That Actually Learns from Its Own",
-      "link": "auto/20260531-hermes-agent-how-nous-research-built-an-ai-that-actually-lea-f0f954d3.html",
-      "score": 137.9849,
+      "title": "The AI Code Protection Landscape: 13 Products Compared",
+      "link": "auto/20260601-the-ai-code-protection-landscape-13-products-compared-cb732f5e.html",
+      "score": 150.8773,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

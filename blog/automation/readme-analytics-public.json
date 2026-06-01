@@ -2,24 +2,24 @@
   "schema_version": 1,
   "about": "Written by scripts/build_blog_posts.py. Safe to publish: aggregate blog and pipeline metrics only.",
   "blog": {
-    "merged_post_cards": 113,
+    "merged_post_cards": 114,
     "manual_posts": 5,
-    "automated_posts": 108,
+    "automated_posts": 109,
     "latest_post_date": "2026-06-01",
-    "estimated_total_reading_minutes_listing": 239
+    "estimated_total_reading_minutes_listing": 242
   },
   "sources": {
     "rss_feed_entries_configured": 17
   },
   "artifacts": {
-    "blog_auto_html_files_on_disk": 108
+    "blog_auto_html_files_on_disk": 109
   },
   "sitemap": {
-    "blog_post_loc_entries": 113
+    "blog_post_loc_entries": 114
   },
   "last_pipeline": {
     "status": "ok",
-    "timestamp_utc": "2026-06-01T10:31:06.386474+00:00",
+    "timestamp_utc": "2026-06-01T21:04:04.038775+00:00",
     "candidates_fetched": 604,
     "candidates_unseen": 590,
     "candidates_selected": 1,

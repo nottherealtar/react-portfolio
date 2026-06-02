@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-01T21:04:04.038775+00:00",
+  "timestamp": "2026-06-02T09:17:44.855388+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Token Bill Is Coming. Nobody's Ready for It.",
-      "link": "auto/20260601-the-token-bill-is-coming-nobody-s-ready-for-it-9b8a9b72.html",
-      "score": 133.9332,
+      "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
+      "link": "auto/20260602-inside-modern-ci-cd-pipelines-how-automation-is-redefining-d-4d24db20.html",
+      "score": 137.9441,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

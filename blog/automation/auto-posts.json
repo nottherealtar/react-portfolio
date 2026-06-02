@@ -1,5 +1,17 @@
 [
   {
+    "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
+    "date": "2026-06-02",
+    "category": "Coding & Community",
+    "summary": "The Core Shifts in Modern CI/CD Architecture To understand how automation is redefining DevOps, we must examine the architectural layers of contemporary pipelines. Secrets Detection : Automated pre-commit hooks and pipeline stages scan code changes to prevent developers from accidentally pushing API keys or credentials. Elite pipelines automate progressive delivery through canary deployments and feature flags.",
+    "link": "auto/20260602-inside-modern-ci-cd-pipelines-how-automation-is-redefining-d-4d24db20.html",
+    "source_url": "https://dev.to/eva_clari_289d85ecc68da48/inside-modern-cicd-pipelines-how-automation-is-redefining-devops-2h5m",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "The Token Bill Is Coming. Nobody's Ready for It.",
     "date": "2026-06-01",
     "category": "Coding & Community",

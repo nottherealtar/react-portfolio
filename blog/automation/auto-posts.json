@@ -12,6 +12,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "GitHub Copilot app: The agent-native desktop experience",
+    "date": "2026-06-02",
+    "category": "Developer Platform",
+    "summary": "Across GitHub, developers are using agents to move from prompt to plan, from issue to pull request, from review feedback to merged code. Copilot app: A control center for agent-native development You start the day with three pieces of work already in motion. A canvas might show a plan, pull request, browser session, terminal, deployment, dashboard, or workflow state.",
+    "link": "auto/20260602-github-copilot-app-the-agent-native-desktop-experience-85f2e70c.html",
+    "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/06/CCRPlatform_BlogImage_01.jpg?resize=1024%2C637"
+  },
+  {
     "title": "The Token Bill Is Coming. Nobody's Ready for It.",
     "date": "2026-06-01",
     "category": "Coding & Community",

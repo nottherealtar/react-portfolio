@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-02T09:17:44.855388+00:00",
+  "timestamp": "2026-06-02T20:17:54.057756+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 604,
-  "unseen_candidates": 590,
+  "unseen_candidates": 591,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
-      "link": "auto/20260602-inside-modern-ci-cd-pipelines-how-automation-is-redefining-d-4d24db20.html",
-      "score": 137.9441,
-      "source": "DEV Community",
+      "title": "GitHub Copilot app: The agent-native desktop experience",
+      "link": "auto/20260602-github-copilot-app-the-agent-native-desktop-experience-85f2e70c.html",
+      "score": 158.2007,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building a Real-Time WebSocket-Based Chat Server with Rust and WASM",
+    "date": "2026-06-03",
+    "category": "Coding & Community",
+    "summary": "Goals: Real-time messaging with low latency Safe, fast backend implemented in Rust Frontend capable of connecting via WebSocket and rendering messages efficiently Basic authentication, message persistence, and reconnection handling Testing strategies for end-to-end and unit tests Real-time messaging with low latency Safe, fast backend implemented in Rust Frontend capable of connecting via WebSocket and rendering…",
+    "link": "auto/20260603-building-a-real-time-websocket-based-chat-server-with-rust-a-54aacb45.html",
+    "source_url": "https://dev.to/therizwansaleem/building-a-real-time-websocket-based-chat-server-with-rust-and-wasm-44d3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
     "date": "2026-06-02",
     "category": "Coding & Community",

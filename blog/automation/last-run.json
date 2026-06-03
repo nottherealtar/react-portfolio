@@ -1,25 +1,33 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-02T20:17:54.057756+00:00",
+  "timestamp": "2026-06-03T10:04:16.620522+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 604,
-  "unseen_candidates": 591,
+  "fetched_candidates": 572,
+  "unseen_candidates": 558,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "GitHub Copilot app: The agent-native desktop experience",
-      "link": "auto/20260602-github-copilot-app-the-agent-native-desktop-experience-85f2e70c.html",
-      "score": 158.2007,
-      "source": "GitHub Blog",
+      "title": "Building a Real-Time WebSocket-Based Chat Server with Rust and WASM",
+      "link": "auto/20260603-building-a-real-time-websocket-based-chat-server-with-rust-a-54aacb45.html",
+      "score": 130.8857,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
+    {
+      "source": "JetBrains Blog",
+      "error": "Request failed for https://blog.jetbrains.com/feed/: HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "Ars Technica Gaming",
+      "error": "Request failed for https://arstechnica.com/gaming/feed/: HTTP Error 403: Forbidden"
+    },
     {
       "source": "Unreal Engine",
       "error": "Unable to parse XML for source Unreal Engine: junk after document element: line 1, column 757"

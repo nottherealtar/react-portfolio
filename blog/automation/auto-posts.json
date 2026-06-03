@@ -1,5 +1,17 @@
 [
   {
+    "title": "The new Power Platform Pro-Code Era: Code Apps vs Power Pages SPA",
+    "date": "2026-06-03",
+    "category": "Coding & Community",
+    "summary": "That era is not over — canvas apps and model-driven apps are still excellent tools — but something has shifted , and it is worth naming clearly. This is where the Power Platform has always been something more interesting than its \"low code\" label suggests.",
+    "link": "auto/20260603-the-new-power-platform-pro-code-era-code-apps-vs-power-pages-8f7ebdd9.html",
+    "source_url": "https://dev.to/_neronotte/the-new-power-platform-pro-code-era-code-apps-vs-power-pages-spa-4d37",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Building a Real-Time WebSocket-Based Chat Server with Rust and WASM",
     "date": "2026-06-03",
     "category": "Coding & Community",

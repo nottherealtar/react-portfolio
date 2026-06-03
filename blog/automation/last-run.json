@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-03T10:04:16.620522+00:00",
+  "timestamp": "2026-06-03T20:26:48.143566+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Building a Real-Time WebSocket-Based Chat Server with Rust and WASM",
-      "link": "auto/20260603-building-a-real-time-websocket-based-chat-server-with-rust-a-54aacb45.html",
-      "score": 130.8857,
+      "title": "The new Power Platform Pro-Code Era: Code Apps vs Power Pages SPA",
+      "link": "auto/20260603-the-new-power-platform-pro-code-era-code-apps-vs-power-pages-8f7ebdd9.html",
+      "score": 157.9708,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases | TarsOnlineCafe</title>
+  <meta name="description" content="It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems,…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases">
+  <meta property="og:description" content="It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems,…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases">
+  <meta name="twitter:description" content="It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems,…">
+  <meta property="og:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/GIFofFabricIQcontextlayers-ezgif.com-video-to-gif-converter.gif">
+  <meta property="og:image:alt" content="Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases">
+  <meta name="twitter:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/GIFofFabricIQcontextlayers-ezgif.com-video-to-gif-converter.gif">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases", "description": "It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems,…", "datePublished": "2026-06-02T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/", "wordCount": 1810, "image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/GIFofFabricIQcontextlayers-ezgif.com-video-to-gif-converter.gif"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-06-02</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases</h1>
+        <p class="lede">It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems, in which each new agent builds on shared organizational context. This vision is already driving strong momentum among the millions of developers building on Fabric and Microsoft Databases.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>AI is driving a fundamental shift in how work gets done and how applications are built. As the 2026 Microsoft Work Trend Index Report highlights, a growing share of workers are moving beyond asking questions to handing off entire tasks and orchestrating multi-agent systems. The challenge is no longer model capability, but consistent, shared data context across the business.</p>
+        <p>Developers and business users know what they want to automate, and today’s models can deliver. Every new agent starts from zero, relearning how the business works, where data lives, and what rules to follow. Without a consistent foundation, agents can’t coordinate or scale.</p>
+        <p>That’s the challenge we are solving with Microsoft Fabric . These include Rayfin, a new software development kit (SDK) and command-line interface (CLI) designed to make Fabric a production-ready application backend, and Azure HorizonDB, a new PostgreSQL database designed for AI‑powered applications, now in public preview. Introducing Rayfin: From prompt to production backend Coding agents are accelerating app development.</p>
+        <p>Moving those applications from prototype to production, however, remains a challenge. Agent-created or not, every production-ready application still relies on a backend to manage data, enforce identity and permissions, coordinate state, and operate reliably over time. Existing software-service platforms were either not designed for agents or do not fully meet enterprise requirements for deployment, security, and governance.</p>
+        <p>It lets developers and coding agents describe what to build and get an enterprise-grade application backend directly into the application code, including a database, authentication, and more. Rayfin then deploys directly to Microsoft Fabric, giving every application enterprise-grade security and scale from day one. With Rayfin, developers work through familiar GitHub‑based workflows to define data models, backend logic, and access policies entirely in code, giving teams and agents a consistent, programmable interface for building…</p>
+        <p>Watch Rayfin in action: Because Rayfin can be deployed directly on Fabric, application data lands directly in OneLake, where it is immediately available to the full Fabric data stack, unified with analytics, operational and real-time data, and AI engines by default. This enables developers to build their enterprise apps on trusted business logic, integrate with semantic models, and embed rich data visuals. We’re excited to partner with Replit, a leading AI coding platform, to help customers build enterprise-grade apps in the…</p>
+        <p>Rayfin unlocks a new development model for our users. Together, we’re giving developers something they’ve never had before: a path from idea to enterprise-grade production that’s measured in hours, not months. —Amjad Masad, Chief Executive Officer (CEO) of Replit Rayfin unlocks a new development model for our users.</p>
+        <p>Together, we’re giving developers something they’ve never had before: a path from idea to enterprise-grade production that’s measured in hours, not months. —Amjad Masad, Chief Executive Officer (CEO) of Replit Learn more about Rayfin by watching the Microsoft Build session “ BRK225 – Data, apps, and agents: the future of app dev with Microsoft Fabric ” on Wednesday, June 3, 2026, at 1:30 PM PT. Microsoft Databases, designed for AI applications For decades, databases have been the backbone of enterprise applications.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/GIFofFabricIQcontextlayers-ezgif.com-video-to-gif-converter.gif" alt="Fabric IQ layered architecture showing Unified Data as the foundation, Business Intelligence (semantic models) above it, and Operational Intelligence (ontologies) on top." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/OntologiesBuild2026MP4V3.gif" alt="GIF of entities, relationships, properties, actions and business objectives all being created based on products, inventory, stores, shipments, buyers, and suppliers" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>These include Rayfin, a new software development kit (SDK) and command-line interface (CLI) designed to make Fabric a production-ready application backend, and Azure HorizonDB, a new PostgreSQL database designed for AI‑powered applications, now in public preview. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Rayfin then deploys directly to Microsoft Fabric, giving every application enterprise-grade security and scale from day one.</li>
+          <li>We’re excited to partner with Replit, a leading AI coding platform, to help customers build enterprise-grade apps in the interface they know and love while keeping app, data,…</li>
+          <li>As applications become more intelligent and agent‑powered, we are evolving Microsoft Databases into the foundation optimized for real‑time, AI‑ready, and operationally rich…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

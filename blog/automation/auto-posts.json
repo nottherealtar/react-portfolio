@@ -37,6 +37,19 @@
     "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Screenshot-2026-06-01-163310.webp"
   },
   {
+    "title": "Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases",
+    "date": "2026-06-02",
+    "category": "Cloud Automation",
+    "summary": "It provides a unified data and AI platform that empowers you to bring together data and move from isolated AI experiments to production-ready agent systems, in which each new agent builds on shared organizational context. This vision is already driving strong momentum among the millions of developers building on Fabric and Microsoft Databases.",
+    "link": "auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-build-2026-building-agentic-apps-with-microsoft-fabric-and-microsoft-databases/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/GIFofFabricIQcontextlayers-ezgif.com-video-to-gif-converter.gif"
+  },
+  {
     "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
     "date": "2026-06-02",
     "category": "Coding & Community",

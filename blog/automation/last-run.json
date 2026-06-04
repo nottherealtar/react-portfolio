@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-04T08:59:27.092595+00:00",
+  "timestamp": "2026-06-04T19:30:55.160331+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 604,
-  "unseen_candidates": 591,
-  "blocked_domain_candidates": 3,
+  "unseen_candidates": 589,
+  "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads",
-      "link": "auto/20260602-new-azure-cobalt-200-vms-deliver-50-performance-improvement-16fafdc5.html",
-      "score": 148.4319,
+      "title": "Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases",
+      "link": "auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html",
+      "score": 142.5623,
       "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }

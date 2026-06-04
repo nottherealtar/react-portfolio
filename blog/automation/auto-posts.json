@@ -24,6 +24,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads",
+    "date": "2026-06-02",
+    "category": "Cloud Automation",
+    "summary": "Building on the success of Cobalt 100 VMs Microsoft Azure Cobalt 100, our first custom-built processor for cloud-native workloads is now deployed in 32 Azure datacenter regions around the world, with cloud analytics leaders like Databricks and Snowflake adopting Cobalt 100 to optimize their cloud footprint, while customers like Amadeus, OneTrust, Siemens, Sprinklr, and Temenos have achieved significant real-world…",
+    "link": "auto/20260602-new-azure-cobalt-200-vms-deliver-50-performance-improvement-16fafdc5.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/new-azure-cobalt-200-vms-deliver-50-performance-improvement-fully-optimized-for-modern-agentic-ai-workloads/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Screenshot-2026-06-01-163310.webp"
+  },
+  {
     "title": "Inside Modern CI/CD Pipelines: How Automation Is Redefining DevOps",
     "date": "2026-06-02",
     "category": "Coding & Community",

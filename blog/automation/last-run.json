@@ -1,33 +1,25 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-03T20:26:48.143566+00:00",
+  "timestamp": "2026-06-04T08:59:27.092595+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 572,
-  "unseen_candidates": 558,
-  "blocked_domain_candidates": 1,
+  "fetched_candidates": 604,
+  "unseen_candidates": 591,
+  "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The new Power Platform Pro-Code Era: Code Apps vs Power Pages SPA",
-      "link": "auto/20260603-the-new-power-platform-pro-code-era-code-apps-vs-power-pages-8f7ebdd9.html",
-      "score": 157.9708,
-      "source": "DEV Community",
+      "title": "New Azure Cobalt 200 VMs deliver 50% performance improvement, fully optimized for modern agentic AI workloads",
+      "link": "auto/20260602-new-azure-cobalt-200-vms-deliver-50-performance-improvement-16fafdc5.html",
+      "score": 148.4319,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
-    {
-      "source": "JetBrains Blog",
-      "error": "Request failed for https://blog.jetbrains.com/feed/: HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "Ars Technica Gaming",
-      "error": "Request failed for https://arstechnica.com/gaming/feed/: HTTP Error 403: Forbidden"
-    },
     {
       "source": "Unreal Engine",
       "error": "Unable to parse XML for source Unreal Engine: junk after document element: line 1, column 757"

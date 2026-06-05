@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-05T08:52:11.071701+00:00",
+  "timestamp": "2026-06-05T19:06:54.231452+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Why TPUs Aren't Popular (Even Though They're Cheaper Per Token)",
-      "link": "auto/20260605-why-tpus-aren-t-popular-even-though-they-re-cheaper-per-toke-0fc2d019.html",
-      "score": 124.9221,
-      "source": "DEV Community",
+      "title": "Microsoft and Valve sued, PlayStation's first party downturn, and could a UK social media ban impact games? - Patch Notes #55",
+      "link": "auto/20260605-microsoft-and-valve-sued-playstation-s-first-party-downturn-870dbe8a.html",
+      "score": 129.3957,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],

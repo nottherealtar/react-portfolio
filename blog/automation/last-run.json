@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-04T19:30:55.160331+00:00",
+  "timestamp": "2026-06-05T08:52:11.071701+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 604,
+  "fetched_candidates": 605,
   "unseen_candidates": 589,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Microsoft Build 2026: Building agentic apps with Microsoft Fabric and Microsoft Databases",
-      "link": "auto/20260602-microsoft-build-2026-building-agentic-apps-with-microsoft-fa-d9cb1dfc.html",
-      "score": 142.5623,
-      "source": "Microsoft Azure Blog",
+      "title": "Why TPUs Aren't Popular (Even Though They're Cheaper Per Token)",
+      "link": "auto/20260605-why-tpus-aren-t-popular-even-though-they-re-cheaper-per-toke-0fc2d019.html",
+      "score": 124.9221,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

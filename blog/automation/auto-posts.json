@@ -1,5 +1,17 @@
 [
   {
+    "title": "Why TPUs Aren't Popular (Even Though They're Cheaper Per Token)",
+    "date": "2026-06-05",
+    "category": "Coding & Community",
+    "summary": "The one architectural fact that explains everything: static shapes NVIDIA GPUs are SIMT (Single Instruction, Multiple Threads) processors. A systolic array hits peak utilization only when the shape of the data flowing through it is fixed at compile time . You throw a 100-token prompt or a 50,000-token prompt at the same forward and it just works, \"good enough\" fast, with no compile step in your face.",
+    "link": "auto/20260605-why-tpus-aren-t-popular-even-though-they-re-cheaper-per-toke-0fc2d019.html",
+    "source_url": "https://dev.to/toyama0919/why-tpus-arent-popular-even-though-theyre-cheaper-per-token-188g",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The new Power Platform Pro-Code Era: Code Apps vs Power Pages SPA",
     "date": "2026-06-03",
     "category": "Coding & Community",

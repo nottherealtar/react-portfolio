@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-05T19:06:54.231452+00:00",
+  "timestamp": "2026-06-06T08:02:05.197192+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 605,
-  "unseen_candidates": 589,
+  "unseen_candidates": 588,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Microsoft and Valve sued, PlayStation's first party downturn, and could a UK social media ban impact games? - Patch Notes #55",
-      "link": "auto/20260605-microsoft-and-valve-sued-playstation-s-first-party-downturn-870dbe8a.html",
-      "score": 129.3957,
-      "source": "Game Developer",
+      "title": "Day of the Devs 2026 - everything announced in the big Summer Game Fest indie showcase",
+      "link": "auto/20260606-day-of-the-devs-2026-everything-announced-in-the-big-summer-7ab9f701.html",
+      "score": 149.732,
+      "source": "Eurogamer",
       "text_engine": "embedding-mmr"
     }
   ],

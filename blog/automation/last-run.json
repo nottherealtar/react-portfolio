@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-06T08:02:05.197192+00:00",
+  "timestamp": "2026-06-06T18:20:24.494322+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 605,
-  "unseen_candidates": 588,
+  "unseen_candidates": 587,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Day of the Devs 2026 - everything announced in the big Summer Game Fest indie showcase",
-      "link": "auto/20260606-day-of-the-devs-2026-everything-announced-in-the-big-summer-7ab9f701.html",
-      "score": 149.732,
-      "source": "Eurogamer",
+      "title": "Poker Game Development -Technical Architecture",
+      "link": "auto/20260606-poker-game-development-technical-architecture-cc5caf57.html",
+      "score": 142.9512,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

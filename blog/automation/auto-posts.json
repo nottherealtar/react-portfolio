@@ -1,5 +1,17 @@
 [
   {
+    "title": "Poker Game Development -Technical Architecture",
+    "date": "2026-06-06",
+    "category": "Coding & Community",
+    "summary": "Developing a poker application requires a rigorous architecture that balances real-time low-latency gameplay with strict cryptographic security and regulatory compliance. Signal Server (WebSockets): Handles the persistent connection for real-time events. RNG Service: A dedicated, isolated service for card shuffling and dealing.",
+    "link": "auto/20260606-poker-game-development-technical-architecture-cc5caf57.html",
+    "source_url": "https://dev.to/stojankojo/poker-game-development-technical-architecture-7kc",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Day of the Devs 2026 - everything announced in the big Summer Game Fest indie showcase",
     "date": "2026-06-06",
     "category": "Gaming News",

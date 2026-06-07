@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>What is the most efficient way to evaluate poker hands at scale? | TarsOnlineCafe</title>
+  <meta name="description" content="The most efficient way to evaluate poker hands at scale is not to write logic that checks for straights and flushes at runtime. The goal is to reduce hand…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260607-what-is-the-most-efficient-way-to-evaluate-poker-hands-at-sc-75a2b971.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="What is the most efficient way to evaluate poker hands at scale?">
+  <meta property="og:description" content="The most efficient way to evaluate poker hands at scale is not to write logic that checks for straights and flushes at runtime. The goal is to reduce hand…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260607-what-is-the-most-efficient-way-to-evaluate-poker-hands-at-sc-75a2b971.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="What is the most efficient way to evaluate poker hands at scale?">
+  <meta name="twitter:description" content="The most efficient way to evaluate poker hands at scale is not to write logic that checks for straights and flushes at runtime. The goal is to reduce hand…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What is the most efficient way to evaluate poker hands at scale?", "description": "The most efficient way to evaluate poker hands at scale is not to write logic that checks for straights and flushes at runtime. The goal is to reduce hand…", "datePublished": "2026-06-07T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260607-what-is-the-most-efficient-way-to-evaluate-poker-hands-at-sc-75a2b971.html"}, "isBasedOn": "https://dev.to/stojankojo/what-is-the-most-efficient-way-to-evaluate-poker-hands-at-scale-4dpn", "wordCount": 1309}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-06-07</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>What is the most efficient way to evaluate poker hands at scale?</h1>
+        <p class="lede">The most efficient way to evaluate poker hands at scale is not to write logic that checks for straights and flushes at runtime. The goal is to reduce hand evaluation to a single CPU instruction or a few array lookups, achieving nanosecond-level latency. Pre-computation : Before the server starts, generate a massive array where every possible 5-card (or 7-card) combination maps to a unique integer &quot;strength&quot; value.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Instead, the industry standard for high-frequency trading (HFT) and real-money poker is pre-computed Lookup Tables (LUTs) combined with bitwise operations and SIMD (Single Instruction, Multiple Data) vectorization. This allows the engine to evaluate millions of hands per second for Monte Carlo simulations, AI training, or real-time fairness checks. The Core Architecture: Lookup Tables (LUTs) The fundamental insight is that there are a finite number of 5-card combinations from a 52-card deck: $\binom{52}{5} = 2,598,960$.</p>
+        <p>For 7-card games (Hold&#x27;em/Omaha), it&#x27;s $\binom{52}{7} = 133,784,560$. If each entry is a 4-byte integer, this is ~10 MB. Fits in RAM, but may spill out of cache on large servers.</p>
+        <p>They generate all $\binom{7}{5} = 21$ combinations, look them up, and pick the best. The Bitwise Implementation (The &quot;Cactus Kev&quot; / &quot;TwoPlusTwo&quot; Method) The most famous high-performance implementation is the Cactus Kev algorithm (popularized by poker-eval in C/C++). It maps cards to prime numbers or bitmasks to perform arithmetic operations that instantly detect flushes and straights.</p>
+        <p>Suits : 4 bits (1 for Spade, 2 for Heart, etc.). No Loops : The logic uses bitwise shifts and masks, which are single-cycle CPU instructions. Cache Friendly : The lookup table is small enough to stay in the CPU&#x27;s L1/L2 cache.</p>
+        <p>Branch Prediction : The if statements are highly predictable (most hands are high-card, few are straights), minimizing pipeline stalls. Scaling to Millions of Hands: SIMD &amp; Vectorization For Monte Carlo simulations (e.g., &quot;What is my equity if I run this hand 100,000 times?&quot;), single-threaded evaluation is too slow. You must use SIMD (AVX2, AVX-512 on x86; NEON on ARM).</p>
+        <p>Load 8 or 16 hands into a single 256-bit or 512-bit register. Perform the bitwise operations (flush check, straight check) on all 8/16 hands simultaneously . Use lookup tables that are vectorized (or use shuffle instructions to map multiple keys to multiple values).</p>
+        <p>Library Example: HandEvaluator in Rust/C++ with AVX2 This can achieve 100M+ hands per second per core on modern CPUs. Architecture for Production Systems In a distributed architecture, do not embed the heavy evaluation logic in the main game loop if you need to run simulations. Offload it to a dedicated Evaluator Service .</p>
+        <p>Language : C++ or Rust for the evaluator core (maximum performance). Interface : EvaluateHandsRequest : { hand_1: [c1, c2...], hand_2: [...] } EvaluateHandsResponse : { score_1: 1234, score_2: 5678 } EvaluateHandsRequest : { hand_1: [c1, c2...], hand_2: [...] } EvaluateHandsResponse : { score_1: 1234, score_2: 5678 } Scaling : Run the service as a stateless pod in Kubernetes. Use Horizontal Pod Autoscaling (HPA) based on CPU utilization.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Load 8 or 16 hands into a single 256-bit or 512-bit register. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>This allows the engine to evaluate millions of hands per second for Monte Carlo simulations, AI training, or real-time fairness checks.</li>
+          <li>The Core Architecture: Lookup Tables (LUTs) The fundamental insight is that there are a finite number of 5-card combinations from a 52-card deck: $\binom{52}{5} = 2,598,960$.</li>
+          <li>The Bitwise Implementation (The &quot;Cactus Kev&quot; / &quot;TwoPlusTwo&quot; Method) The most famous high-performance implementation is the Cactus Kev algorithm (popularized by poker-eval in…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/stojankojo/what-is-the-most-efficient-way-to-evaluate-poker-hands-at-scale-4dpn" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

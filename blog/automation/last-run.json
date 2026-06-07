@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-06T18:20:24.494322+00:00",
+  "timestamp": "2026-06-07T08:29:44.762152+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Poker Game Development -Technical Architecture",
-      "link": "auto/20260606-poker-game-development-technical-architecture-cc5caf57.html",
-      "score": 142.9512,
+      "title": "What is the most efficient way to evaluate poker hands at scale?",
+      "link": "auto/20260607-what-is-the-most-efficient-way-to-evaluate-poker-hands-at-sc-75a2b971.html",
+      "score": 132.9611,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

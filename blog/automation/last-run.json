@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-08T09:54:23.194787+00:00",
+  "timestamp": "2026-06-08T19:34:48.177297+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "From Chatbots to Personal AI Agents: The Infrastructure Developers Actually Need",
-      "link": "auto/20260608-from-chatbots-to-personal-ai-agents-the-infrastructure-devel-76fc5434.html",
-      "score": 138.8159,
+      "title": "AWS Certified Generative AI Developer Professional AIP-C01: Study Reference",
+      "link": "auto/20260608-aws-certified-generative-ai-developer-professional-aip-c01-s-82a06a90.html",
+      "score": 141.9492,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

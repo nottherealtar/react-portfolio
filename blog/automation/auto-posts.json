@@ -1,5 +1,17 @@
 [
   {
+    "title": "From Chatbots to Personal AI Agents: The Infrastructure Developers Actually Need",
+    "date": "2026-06-08",
+    "category": "Coding & Community",
+    "summary": "The moment you want to try another model, reduce cost, add fallback, improve latency, or support different task types, your simple agent starts turning into a messy collection of provider-specific logic. That is when you realize something important: A real AI agent should not be locked to one LLM provider.",
+    "link": "auto/20260608-from-chatbots-to-personal-ai-agents-the-infrastructure-devel-76fc5434.html",
+    "source_url": "https://dev.to/mundo_ghose_bb3af8bcb2bc3/from-chatbots-to-personal-ai-agents-the-infrastructure-developers-actually-need-452l",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Xbox Games Showcase 2026 live coverage: Every reveal as it happens",
     "date": "2026-06-07",
     "category": "Gaming & Industry",

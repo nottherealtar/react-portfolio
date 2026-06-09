@@ -1,5 +1,17 @@
 [
   {
+    "title": "DevOps Pipeline: Stages, Tools, and CI/CD Explained",
+    "date": "2026-06-09",
+    "category": "Coding & Community",
+    "summary": "You commit code, the system takes over, and the pipeline carries that commit through build, test, and deployment automatically. What makes it hard is the integration — wiring the right tools together at each stage, setting up the triggers correctly, and making sure failures surface fast enough that the developer who caused them hasn't already moved on to something else.",
+    "link": "auto/20260609-devops-pipeline-stages-tools-and-ci-cd-explained-542a9fa7.html",
+    "source_url": "https://dev.to/ilyas_elaissi/devops-pipeline-stages-tools-and-cicd-explained-3fpm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "From Chatbots to Personal AI Agents: The Infrastructure Developers Actually Need",
     "date": "2026-06-08",
     "category": "Coding & Community",

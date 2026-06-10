@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-09T19:29:36.351117+00:00",
+  "timestamp": "2026-06-10T09:00:43.082044+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "DevOps Pipeline: Stages, Tools, and CI/CD Explained",
-      "link": "auto/20260609-devops-pipeline-stages-tools-and-ci-cd-explained-542a9fa7.html",
-      "score": 153.9345,
+      "title": "Gemini 3.5 Flash vs Claude Haiku 4.5 vs MAI-Code-1-Flash for Coding",
+      "link": "auto/20260610-gemini-3-5-flash-vs-claude-haiku-4-5-vs-mai-code-1-flash-for-a88c10d6.html",
+      "score": 141.8804,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

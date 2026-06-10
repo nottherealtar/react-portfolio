@@ -1,5 +1,17 @@
 [
   {
+    "title": "Gemini 3.5 Flash vs Claude Haiku 4.5 vs MAI-Code-1-Flash for Coding",
+    "date": "2026-06-10",
+    "category": "Coding & Community",
+    "summary": "Haiku wins on output cost at $5/M tokens and structured output reliability. MAI-Code-1-Flash beats both on SWE-Bench Pro by 16 points at 51.2%, but you can only use it inside GitHub Copilot. Gemini 3.5 Flash dominates the agentic benchmarks.",
+    "link": "auto/20260610-gemini-3-5-flash-vs-claude-haiku-4-5-vs-mai-code-1-flash-for-a88c10d6.html",
+    "source_url": "https://dev.to/dmaxdev/gemini-35-flash-vs-claude-haiku-45-vs-mai-code-1-flash-for-coding-2mmk",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "DevOps Pipeline: Stages, Tools, and CI/CD Explained",
     "date": "2026-06-09",
     "category": "Coding & Community",

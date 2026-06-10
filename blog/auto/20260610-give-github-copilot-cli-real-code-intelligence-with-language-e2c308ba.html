@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Give GitHub Copilot CLI real code intelligence with language servers | TarsOnlineCafe</title>
+  <meta name="description" content="The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260610-give-github-copilot-cli-real-code-intelligence-with-language-e2c308ba.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Give GitHub Copilot CLI real code intelligence with language servers">
+  <meta property="og:description" content="The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260610-give-github-copilot-cli-real-code-intelligence-with-language-e2c308ba.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Give GitHub Copilot CLI real code intelligence with language servers">
+  <meta name="twitter:description" content="The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Give GitHub Copilot CLI real code intelligence with language servers", "description": "The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and…", "datePublished": "2026-06-10T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260610-give-github-copilot-cli-real-code-intelligence-with-language-e2c308ba.html"}, "isBasedOn": "https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/", "wordCount": 836}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-06-10</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Give GitHub Copilot CLI real code intelligence with language servers</h1>
+        <p class="lede">The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and binary extraction. The skill includes a reference file ( references/lsp-servers.md ) with curated data for 14 languages: install commands per operating system, binary names, and ready-to-use config snippets.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Ever watched GitHub Copilot CLI extract a JAR file to a temporary directory, grep through .class files, and piece together an API signature from raw bytecode? The agent is resourceful, but without a language server, that’s the best it can do. The Language Server Protocol (LSP) is the standard that powers go to definition, find references, and type resolution in editors like VS Code.</p>
+        <p>In this post, you’ll learn how the skill works under the hood, see the configuration format it generates, and get set up for any of the 14 languages it supports today. For a Java project, that might look like: For Python, the agent might cat files inside site-packages . These text-based approaches work for simple cases, but they’re doing pattern-matching over raw text rather than true semantic analysis, so they miss generics, overloads, and transitive types, and can’t see compiled bytecode at all.</p>
+        <p>That’s exactly the gap a language server close. When the agent sends a textDocument/definition request for a symbol, the language server returns the exact source location, fully resolved type, and signature. When triggered, the skill executes a seven-step workflow: The agent uses ask_user with a set of choices to determine which language the user needs LSP support for.</p>
+        <p>The agent runs uname -s (or checks $env:OS / %OS% on Windows) to determine the target platform. For example, brew install jdtls on macOS versus downloading from eclipse.org on Linux. The agent asks whether the config should be: User-level : ~/.copilot/lsp-config.json —applies to all repositories Repository-level : lsp.json at the repository root or .github/lsp.json —scoped to a single project Repository-level configuration takes precedence when both exist.</p>
+        <p>The agent runs the appropriate install command. The format uses a lspServers object where each key is a server identifier: command must be on $PATH or an absolute path args typically includes &quot;--stdio&quot; for standard I/O transport (some servers like jdtls handle this internally) fileExtensions maps each extension (with leading dot) to a language identifier Existing entries in the config file are preserved — the agent merges, never overwrites The agent runs which &lt;binary&gt; (or where.exe on Windows) to confirm the server is accessible,…</p>
+        <p>Once an LSP server is configured, the CLI agent can: Resolve types across dependencies — no more grepping through JAR files or node_modules Jump to definitions in third-party libraries, even when source isn’t checked into the repository Find all references to a symbol across the project Read hover documentation for any function, class, or type This means the agent spends less time on tool calls and produces more accurate code on the first pass. For you, that’s less time waiting while the agent decompiles a JAR file or greps through…</p>
+        <p>Extract the ZIP to ~/.copilot/skills/ by running: Restart GitHub Copilot CLI : if Copilot CLI is already running, type /exit first. Then relaunch copilot so it picks up the new skill. Verify : after the skill installs and configures the LSP server, restart Copilot CLI one more time ( /exit , then relaunch), run /lsp to check the server status, and try go-to-definition on a symbol from one of your dependencies.</p>
+        <p>The skill is part of the Awesome Copilot project. It’s open source, so contributions and feedback are welcome!</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>The LSP Setup skill automates the installation and configuration of LSP servers for Copilot CLI, so the agent gets precise, structured answers about your code instead of relying on text search heuristics. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The agent is resourceful, but without a language server, that’s the best it can do.</li>
+          <li>The format uses a lspServers object where each key is a server identifier: command must be on $PATH or an absolute path args typically includes &quot;--stdio&quot; for standard I/O…</li>
+          <li>Download the skill : visit the Awesome Copilot LSP Setup skill page and click the Download button to get a ZIP file.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

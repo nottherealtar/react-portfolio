@@ -1,5 +1,17 @@
 [
   {
+    "title": "Give GitHub Copilot CLI real code intelligence with language servers",
+    "date": "2026-06-10",
+    "category": "Developer Platform",
+    "summary": "The problem: heuristic code understanding Without an LSP server, the agent in GitHub Copilot CLI reverse-engineers API information through text search and binary extraction. The skill includes a reference file ( references/lsp-servers.md ) with curated data for 14 languages: install commands per operating system, binary names, and ready-to-use config snippets.",
+    "link": "auto/20260610-give-github-copilot-cli-real-code-intelligence-with-language-e2c308ba.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Gemini 3.5 Flash vs Claude Haiku 4.5 vs MAI-Code-1-Flash for Coding",
     "date": "2026-06-10",
     "category": "Coding & Community",

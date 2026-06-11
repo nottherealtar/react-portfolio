@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-10T19:44:27.956998+00:00",
+  "timestamp": "2026-06-11T09:19:49.831744+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 587,
+  "unseen_candidates": 586,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Give GitHub Copilot CLI real code intelligence with language servers",
-      "link": "auto/20260610-give-github-copilot-cli-real-code-intelligence-with-language-e2c308ba.html",
-      "score": 131.9311,
-      "source": "GitHub Blog",
+      "title": "18 embargoes from Summer Game Fest just lifted, so let's rank everything I saw in LA",
+      "link": "auto/20260610-18-embargoes-from-summer-game-fest-just-lifted-so-let-s-rank-9ae40049.html",
+      "score": 127.1276,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Agentjacking: AI Coding Agents Tricked Into Running Malicious Code via Sentry Injection",
+    "date": "2026-06-12",
+    "category": "Coding & Community",
+    "summary": "Security researchers at Tenet Security have disclosed a critical architectural vulnerability in how AI coding agents process external data, enabling attackers to achieve arbitrary code execution on developer machines through poisoned error reports.",
+    "link": "auto/20260612-agentjacking-ai-coding-agents-tricked-into-running-malicious-2e0b8f7b.html",
+    "source_url": "https://dev.to/etairos/agentjacking-ai-coding-agents-tricked-into-running-malicious-code-via-sentry-injection-f7c",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Best Python AI Frameworks in 2026",
     "date": "2026-06-11",
     "category": "Developer Tools",

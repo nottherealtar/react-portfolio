@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-12T19:21:24.180852+00:00",
+  "timestamp": "2026-06-13T08:31:10.611795+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 587,
+  "unseen_candidates": 589,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Agentjacking: AI Coding Agents Tricked Into Running Malicious Code via Sentry Injection",
-      "link": "auto/20260612-agentjacking-ai-coding-agents-tricked-into-running-malicious-2e0b8f7b.html",
-      "score": 138.9036,
-      "source": "DEV Community",
+      "title": "Best Summer Game Fest 2026 Games You Might Have Missed",
+      "link": "auto/20260611-best-summer-game-fest-2026-games-you-might-have-missed-b3781d0b.html",
+      "score": 124.6259,
+      "source": "GameSpot",
       "text_engine": "embedding-mmr"
     }
   ],

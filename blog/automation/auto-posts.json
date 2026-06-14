@@ -1,5 +1,17 @@
 [
   {
+    "title": "Kimi K2.7-Code: Open-Weight 1T Model That Beats Claude Opus on Tool Use",
+    "date": "2026-06-14",
+    "category": "Coding & Community",
+    "summary": "The cross-model comparison tells a more nuanced story: | MCPMark Verified | 81.1% | 76.4% | 92.9% | | Kimi Code Bench v2 | 62.0 | 67.4 | 69.0 | | Program Bench (vs K2.6) | +11.0% | — | — | | MLS Bench Lite (vs K2.6) | +31.5% | — | — | The pattern: K2.7-Code has a specific edge in MCP tool-use tasks, where it beats Claude Opus 4.8 by 4.7 points. | GPT-5.5 | $11.00 | $44.00 | 92.9% | | Claude Opus 4.8 | $5.00 | $25.",
+    "link": "auto/20260614-kimi-k2-7-code-open-weight-1t-model-that-beats-claude-opus-o-fa816fbe.html",
+    "source_url": "https://dev.to/akaranjkar08/kimi-k27-code-open-weight-1t-model-that-beats-claude-opus-on-tool-use-25pl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "A little known rendering technique that can create low-cost, photo-real graphics may be about to have its big moment in game development",
     "date": "2026-06-13",
     "category": "Gaming & Industry",

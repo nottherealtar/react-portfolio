@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-14T08:48:16.698834+00:00",
+  "timestamp": "2026-06-14T18:43:54.354620+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 587,
+  "unseen_candidates": 586,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A little known rendering technique that can create low-cost, photo-real graphics may be about to have its big moment in game development",
-      "link": "auto/20260613-a-little-known-rendering-technique-that-can-create-low-cost-440df698.html",
-      "score": 125.3415,
-      "source": "PC Gamer",
+      "title": "Kimi K2.7-Code: Open-Weight 1T Model That Beats Claude Opus on Tool Use",
+      "link": "auto/20260614-kimi-k2-7-code-open-weight-1t-model-that-beats-claude-opus-o-fa816fbe.html",
+      "score": 125.8546,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

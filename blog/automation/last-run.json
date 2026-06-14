@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-13T18:43:17.768890+00:00",
+  "timestamp": "2026-06-14T08:48:16.698834+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 588,
+  "unseen_candidates": 587,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "\"There's nothing worse than an AI-generated pitch\": Bloober, Jagex, 11 bit and indie devs on the bruising hurdle of funding a videogame prototype",
-      "link": "auto/20260613-there-s-nothing-worse-than-an-ai-generated-pitch-bloober-jag-d4fa43f0.html",
-      "score": 136.7938,
-      "source": "Rock Paper Shotgun",
+      "title": "A little known rendering technique that can create low-cost, photo-real graphics may be about to have its big moment in game development",
+      "link": "auto/20260613-a-little-known-rendering-technique-that-can-create-low-cost-440df698.html",
+      "score": 125.3415,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

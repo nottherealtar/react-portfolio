@@ -1,5 +1,18 @@
 [
   {
+    "title": "A little known rendering technique that can create low-cost, photo-real graphics may be about to have its big moment in game development",
+    "date": "2026-06-13",
+    "category": "Gaming & Industry",
+    "summary": "That said, over the last few months, a tech delivering low-cost, photorealistic graphics has become something of a singular obsession of mine: Gaussian splatting. By way of a brief recap, Schindelar describes Gaussian Splatting as \"a modern capture-and-rendering method that turns photos or video into a real-time 3D representation.\" It's very similar to photogrammetry but is arguably much less resource-intensive.",
+    "link": "auto/20260613-a-little-known-rendering-technique-that-can-create-low-cost-440df698.html",
+    "source_url": "https://www.pcgamer.com/hardware/a-little-known-rendering-technique-that-can-create-low-cost-photo-real-graphics-may-be-about-to-have-its-big-moment-in-game-development/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/FCY2H7dJDhLCTnx8QrcDmg.jpg"
+  },
+  {
     "title": "\"There's nothing worse than an AI-generated pitch\": Bloober, Jagex, 11 bit and indie devs on the bruising hurdle of funding a videogame prototype",
     "date": "2026-06-13",
     "category": "Gaming & PC",

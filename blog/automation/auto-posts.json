@@ -1,5 +1,17 @@
 [
   {
+    "title": "Are AI Apps Safe? What Developers Should Build Into AI Systems Before Production",
+    "date": "2026-06-15",
+    "category": "Coding & Community",
+    "summary": "AI safety is becoming a software architecture problem. The AI app produces code, queries, or actions that no one verifies. Why AI Apps Break Old Security Assumptions Traditional applications usually have predictable paths.",
+    "link": "auto/20260615-are-ai-apps-safe-what-developers-should-build-into-ai-system-97efdb63.html",
+    "source_url": "https://dev.to/alexcybersmith/are-ai-apps-safe-what-developers-should-build-into-ai-systems-before-production-1654",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Kimi K2.7-Code: Open-Weight 1T Model That Beats Claude Opus on Tool Use",
     "date": "2026-06-14",
     "category": "Coding & Community",

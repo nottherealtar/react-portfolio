@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-14T18:43:54.354620+00:00",
+  "timestamp": "2026-06-15T11:22:28.442937+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Kimi K2.7-Code: Open-Weight 1T Model That Beats Claude Opus on Tool Use",
-      "link": "auto/20260614-kimi-k2-7-code-open-weight-1t-model-that-beats-claude-opus-o-fa816fbe.html",
-      "score": 125.8546,
+      "title": "Are AI Apps Safe? What Developers Should Build Into AI Systems Before Production",
+      "link": "auto/20260615-are-ai-apps-safe-what-developers-should-build-into-ai-system-97efdb63.html",
+      "score": 137.8527,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

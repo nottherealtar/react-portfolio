@@ -1,4 +1,4 @@
-/* Showcase upgrades — motion earns its place: one scroll reveal, purposeful structure */
+/* Showcase upgrades - motion earns its place: one scroll reveal, purposeful structure */
 
 /* ── Hero kicker ───────────────────────────────────────── */
 .hero-kicker {
@@ -298,7 +298,188 @@
   padding-top: 0.75rem;
 }
 
-/* ── Signature project spotlight (TerrificOCR) ──────────── */
+/* ── Featured work header ─────────────────────────────────── */
+.work-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.work-header .section-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--crema, #c9a96e);
+  margin: 0 0 0.65rem;
+}
+
+.work-subtitle {
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+/* ── Featured project (live client site) ─────────────────── */
+.featured-project {
+  margin-bottom: 0;
+}
+
+.signature-badge--live {
+  background: rgba(72, 160, 110, 0.18);
+  color: #8fd4a8;
+  border-color: rgba(72, 160, 110, 0.35);
+}
+
+.featured-project-url {
+  margin: -0.35rem 0 1rem;
+}
+
+.featured-project-url a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--crema, #c9a96e) !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+}
+
+.featured-project-url a:hover {
+  color: var(--foam, #f7efe2) !important;
+}
+
+.featured-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.35rem;
+  max-width: 28rem;
+}
+
+@media (max-width: 520px) {
+  .featured-metrics {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+}
+
+.featured-metric {
+  padding: 0.85rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(26, 17, 8, 0.45);
+  border: 1px solid rgba(247, 239, 226, 0.08);
+  text-align: center;
+}
+
+.featured-metric-value {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: var(--foam, #f7efe2);
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+
+.featured-metric-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(237, 224, 204, 0.62);
+}
+
+.signature-btn-primary i {
+  margin-left: 0.45rem;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.featured-browser {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(247, 239, 226, 0.12);
+  background: rgba(18, 12, 8, 0.75);
+  margin-bottom: 1rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.featured-browser-chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(30, 22, 16, 0.95);
+  border-bottom: 1px solid rgba(247, 239, 226, 0.08);
+}
+
+.featured-browser-chrome span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgba(161, 134, 111, 0.45);
+}
+
+.featured-browser-chrome span:first-child { background: rgba(220, 90, 80, 0.65); }
+.featured-browser-chrome span:nth-child(2) { background: rgba(220, 170, 60, 0.65); }
+.featured-browser-chrome span:nth-child(3) { background: rgba(80, 180, 100, 0.65); }
+
+.featured-browser-url {
+  flex: 1;
+  margin-left: 0.5rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.68rem;
+  color: rgba(237, 224, 204, 0.55);
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.featured-browser-preview {
+  padding: 2rem 1.35rem 1.75rem;
+  text-align: center;
+  background: linear-gradient(165deg, rgba(35, 28, 22, 0.95), rgba(22, 16, 12, 0.98));
+}
+
+.featured-browser-brand {
+  margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--foam, #f7efe2);
+  text-transform: lowercase;
+}
+
+.featured-browser-brand span {
+  color: var(--crema, #c9a96e);
+  text-transform: uppercase;
+}
+
+.featured-browser-tagline {
+  margin: 0 0 1.15rem;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(237, 224, 204, 0.65);
+  max-width: 16rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featured-browser-cta {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  background: var(--crema, #c9a96e);
+  color: var(--espresso, #1a1108);
+}
+
+.featured-aside-card {
+  min-height: auto;
+}
+
+/* ── Signature project spotlight ──────────── */
 .signature-spotlight {
   margin: 0 auto 1.25rem;
   max-width: 1100px;
@@ -568,16 +749,21 @@ html.reveal-complete [data-reveal]:not(.is-revealed) {
   will-change: auto !important;
 }
 
-/* Stagger: services, proof strip, also-built */
-.services-grid .service-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
-.services-grid .service-card[data-reveal]:nth-child(2) { transition-delay: 0.06s; }
-.services-grid .service-card[data-reveal]:nth-child(3) { transition-delay: 0.12s; }
-.services-grid .service-card[data-reveal]:nth-child(4) { transition-delay: 0.18s; }
+/* Stagger: deliver list, proof strip */
+.deliver-list .deliver-item[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.deliver-list .deliver-item[data-reveal]:nth-child(2) { transition-delay: 0.08s; }
+.deliver-list .deliver-item[data-reveal]:nth-child(3) { transition-delay: 0.16s; }
 
 .proof-strip-list .proof-item[data-reveal]:nth-child(1) { transition-delay: 0s; }
 .proof-strip-list .proof-item[data-reveal]:nth-child(2) { transition-delay: 0.05s; }
 .proof-strip-list .proof-item[data-reveal]:nth-child(3) { transition-delay: 0.1s; }
 .proof-strip-list .proof-item[data-reveal]:nth-child(4) { transition-delay: 0.15s; }
+
+/* Legacy stagger hooks */
+.services-grid .service-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
+.services-grid .service-card[data-reveal]:nth-child(2) { transition-delay: 0.06s; }
+.services-grid .service-card[data-reveal]:nth-child(3) { transition-delay: 0.12s; }
+.services-grid .service-card[data-reveal]:nth-child(4) { transition-delay: 0.18s; }
 
 .also-grid .also-card[data-reveal]:nth-child(1) { transition-delay: 0s; }
 .also-grid .also-card[data-reveal]:nth-child(2) { transition-delay: 0.07s; }

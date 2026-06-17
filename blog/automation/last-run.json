@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-17T10:02:11.546330+00:00",
+  "timestamp": "2026-06-17T19:29:56.219307+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 606,
-  "unseen_candidates": 590,
+  "fetched_candidates": 607,
+  "unseen_candidates": 591,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Why We Put AI Agents in a Group Chat？",
-      "link": "auto/20260617-why-we-put-ai-agents-in-a-group-chat-3a0ed30d.html",
-      "score": 127.9944,
-      "source": "DEV Community",
+      "title": "JetBrains Marketplace Ecosystem Security Update: Addressing Malicious Third-Party AI Plugins",
+      "link": "auto/20260617-jetbrains-marketplace-ecosystem-security-update-addressing-m-77c97215.html",
+      "score": 140.0566,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "JetBrains Marketplace Ecosystem Security Update: Addressing Malicious Third-Party AI Plugins",
+    "date": "2026-06-17",
+    "category": "Developer Tools",
+    "summary": "By aggressively seeking out and dismantling malicious plugin behavior, our aim is to get ahead of threat actors to ensure our community can keep their source code and local environments secure. To that end, today JetBrains is disclosing an AI API keys theft campaign involving 15 third-party plugins that were published on JetBrains Marketplace.",
+    "link": "auto/20260617-jetbrains-marketplace-ecosystem-security-update-addressing-m-77c97215.html",
+    "source_url": "https://blog.jetbrains.com/platform/2026/06/marketplace-ecosystem-security-update-malicious-ai-plugins/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Kafka Streams 101: A Developer’s Guide to Real-Time Application Logic",
     "date": "2026-06-16",
     "category": "Coding & Community",

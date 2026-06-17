@@ -1,5 +1,17 @@
 [
   {
+    "title": "Why We Put AI Agents in a Group Chat？",
+    "date": "2026-06-17",
+    "category": "Coding & Community",
+    "summary": "You have a handful of agents, each one reasonably capable at its specific task, but they cannot talk to each other. This article is about a different approach we took, one that treats instant messaging protocols not as a UI layer bolted on top of agent infrastructure, but as the foundational fabric for agent distribution, orchestration, and permission management.",
+    "link": "auto/20260617-why-we-put-ai-agents-in-a-group-chat-3a0ed30d.html",
+    "source_url": "https://dev.to/mininglamp/why-we-put-ai-agents-in-a-group-chat-a1d",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Kafka Streams 101: A Developer’s Guide to Real-Time Application Logic",
     "date": "2026-06-16",
     "category": "Coding & Community",

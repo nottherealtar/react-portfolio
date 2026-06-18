@@ -24,6 +24,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Modernize your data with Azure Storage: Plan and migrate with confidence",
+    "date": "2026-06-16",
+    "category": "Cloud Automation",
+    "summary": "Azure Copilot Migration Agent : AI-powered extension for Azure Migrate, streamlining storage migration decisions (preview). Azure Storage migration planning: Build your data migration strategy Before organizations select a migration tool, they need to understand what they are moving, how systems are connected, which workloads carry the most risk, and what the destination architecture needs to support.",
+    "link": "auto/20260616-modernize-your-data-with-azure-storage-plan-and-migrate-with-24cda093.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/modernize-your-data-with-azure-storage-plan-and-migrate-with-confidence/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98638-1.jpeg"
+  },
+  {
     "title": "Kafka Streams 101: A Developer’s Guide to Real-Time Application Logic",
     "date": "2026-06-16",
     "category": "Coding & Community",

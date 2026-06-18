@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-18T09:43:39.293305+00:00",
+  "timestamp": "2026-06-18T19:35:51.536342+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 607,
-  "unseen_candidates": 590,
+  "fetched_candidates": 609,
+  "unseen_candidates": 591,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Modernize your data with Azure Storage: Plan and migrate with confidence",
-      "link": "auto/20260616-modernize-your-data-with-azure-storage-plan-and-migrate-with-24cda093.html",
-      "score": 128.0778,
-      "source": "Microsoft Azure Blog",
+      "title": "Why Every Developer Will Eventually Manage AI Agents",
+      "link": "auto/20260618-why-every-developer-will-eventually-manage-ai-agents-832a9add.html",
+      "score": 167.8046,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

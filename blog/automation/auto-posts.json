@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Qodana Is a Finalist in the 2026 CODiE Awards for Best DevOps Tool",
+    "date": "2026-06-18",
+    "category": "Developer Tools",
+    "summary": "Qodana For DevOps: Automated Code Quality and Security, at Scale Modern DevOps teams move fast – but speed without consistency, security, and visibility creates risk. JetBrains Qodana helps DevOps teams build and ship higher-quality, more secure software by making code quality and security checks automatic, consistent, and easy to act on across the entire delivery pipeline.",
+    "link": "auto/20260618-qodana-is-a-finalist-in-the-2026-codie-awards-for-best-devop-14afa3cd.html",
+    "source_url": "https://blog.jetbrains.com/qodana/2026/06/qodana-is-a-finalist-in-the-2026-codie-awards-for-best-devops-tool/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/06/QD-social-BlogFeatured-1280x720-1-2.png"
+  },
+  {
     "title": "Why We Put AI Agents in a Group Chat？",
     "date": "2026-06-17",
     "category": "Coding & Community",

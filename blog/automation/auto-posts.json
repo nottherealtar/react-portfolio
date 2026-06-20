@@ -1,5 +1,17 @@
 [
   {
+    "title": "Series Week 23/52 : OCI DR Environments: The Managed Service Blindspot",
+    "date": "2026-06-20",
+    "category": "Coding & Community",
+    "summary": "While Oracle Cloud Infrastructure (OCI) Full Stack DR does an incredible job of orchestrating infrastructure failover, it creates a massive operational gap for application deployment.",
+    "link": "auto/20260620-series-week-23-52-oci-dr-environments-the-managed-service-bl-d953cc96.html",
+    "source_url": "https://dev.to/nabhaas/series-week-2352-oci-dr-environments-the-managed-service-blindspot-3210",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Best Synthetic Monitoring Tools in 2026: Honest Comparison",
     "date": "2026-06-19",
     "category": "Coding & Community",

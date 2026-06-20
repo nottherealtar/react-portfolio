@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "How I Built a Real-Time Bounty Marketplace with Supabase and 14-Layer Security at the Edge",
+    "date": "2026-06-20",
+    "category": "Coding & Community",
+    "summary": "The result is BountyClaimer — a real-time marketplace running on Supabase + Vercel with a security system baked into Edge middleware and scattered across every layer of the stack.",
+    "link": "auto/20260620-how-i-built-a-real-time-bounty-marketplace-with-supabase-and-b506e00d.html",
+    "source_url": "https://dev.to/kevan_baptiste/how-i-built-a-real-time-bounty-marketplace-with-supabase-and-14-layer-security-at-the-edge-1i58",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Best Synthetic Monitoring Tools in 2026: Honest Comparison",
     "date": "2026-06-19",
     "category": "Coding & Community",

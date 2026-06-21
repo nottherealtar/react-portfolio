@@ -1,5 +1,17 @@
 [
   {
+    "title": "Agentjacking: How Fake Sentry Errors Hijack Claude Code and Cursor (2026)",
+    "date": "2026-06-21",
+    "category": "Coding & Community",
+    "summary": "On June 12, 2026, Tenet Security researchers Ron Bobrov, Barak Sternberg, and Nevo Poran disclosed agentjacking: a novel attack class that exploits AI coding agents through manipulated Sentry error reports. It isn't a vulnerability in Claude Code or Cursor or Codex individually.",
+    "link": "auto/20260621-agentjacking-how-fake-sentry-errors-hijack-claude-code-and-c-89cee57f.html",
+    "source_url": "https://dev.to/akaranjkar08/agentjacking-how-fake-sentry-errors-hijack-claude-code-and-cursor-2026-5827",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Series Week 23/52 : OCI DR Environments: The Managed Service Blindspot",
     "date": "2026-06-20",
     "category": "Coding & Community",

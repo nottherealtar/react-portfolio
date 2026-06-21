@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-21T09:01:49.126210+00:00",
+  "timestamp": "2026-06-21T18:48:37.567625+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 592,
+  "unseen_candidates": 591,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "5 promising games recently cancelled by Microsoft",
-      "link": "auto/20260620-5-promising-games-recently-cancelled-by-microsoft-8bbb35f4.html",
-      "score": 122.1928,
-      "source": "PC Gamer",
+      "title": "Agentjacking: How Fake Sentry Errors Hijack Claude Code and Cursor (2026)",
+      "link": "auto/20260621-agentjacking-how-fake-sentry-errors-hijack-claude-code-and-c-89cee57f.html",
+      "score": 135.8576,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

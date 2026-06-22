@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sanity vs Strapi in 2026: an honest side-by-side comparison | TarsOnlineCafe</title>
+  <meta name="description" content="Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260622-sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-317d12bc.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Sanity vs Strapi in 2026: an honest side-by-side comparison">
+  <meta property="og:description" content="Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260622-sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-317d12bc.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sanity vs Strapi in 2026: an honest side-by-side comparison">
+  <meta name="twitter:description" content="Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Sanity vs Strapi in 2026: an honest side-by-side comparison", "description": "Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely…", "datePublished": "2026-06-22T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260622-sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-317d12bc.html"}, "isBasedOn": "https://dev.to/nayankyada/sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-3nii", "wordCount": 921}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-06-22</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Sanity vs Strapi in 2026: an honest side-by-side comparison</h1>
+        <p class="lede">Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely depends on which constraint matters more. Your documents live in Sanity&#x27;s Content Lake, queries run over GROQ via a CDN-backed API, and the editing UI (Sanity Studio) is a React app you embed in your own repo or host on sanity.io.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I&#x27;ve shipped production projects on both, and in 2026 the two platforms have diverged further rather than converged. You get real-time collaboration, a managed asset pipeline with on-the-fly image transforms, and zero infrastructure to run. Strapi is an open-source headless CMS you self-host.</p>
+        <p>Content sits in a SQL database you control (PostgreSQL in production, SQLite for local dev). The admin UI is built into the server process. The company monetises through Strapi Cloud (managed hosting) and an enterprise licence, but the core is MIT-licensed and you can run it anywhere.</p>
+        <p>These are genuinely different bets, not just feature-list variations. You write schema in TypeScript, wire in custom input components, build structure views, and embed live preview via the Presentation plugin. Editors get real-time presence indicators, document history, and hotspot cropping in the browser.</p>
+        <p>The learning curve for non-technical editors is low — it feels closer to Notion than a traditional CMS admin. It works well for straightforward field-and-collection models, but customising the UI means writing custom admin plugins in React against an internal API that has historically changed between major versions. In 2026 Strapi 5 stabilised a lot of that, but the plugin authoring experience is still more friction than writing a Sanity custom input.</p>
+        <p>For agencies handing off to marketing teams, Sanity Studio wins on first-day UX. For internal teams who want a predictable CRUD admin without custom code, Strapi&#x27;s auto-generated forms are fine. It lets you shape the response on the query side — dereference references, project only the fields you need, filter on deeply nested conditions — without round-trips.</p>
+        <p>Once you&#x27;re used to it, going back to REST feels like writing SQL with no JOIN syntax. Strapi gives you REST endpoints auto-generated per content type, with a populate query param for relations, and an optional GraphQL plugin. The REST API is approachable for simple models.</p>
+        <p>For deeply nested or cross-referenced content it becomes verbose, and populate=deep on large models is a known performance problem that teams work around with custom controllers. If your Next.js app has complex content graphs, GROQ&#x27;s projection model will save you a lot of over-fetching. If your content model is flat collections with simple relations, Strapi&#x27;s REST is perfectly adequate.</p>
+        <p>Sanity&#x27;s asset pipeline transforms images at the CDN edge. You append ?w=800&amp;fm=webp&amp;auto=format to any image URL and the CDN handles encoding, caching, and serving from the correct edge node. Paired with next/image and a custom Sanity loader, you get WebP/AVIF, responsive sizes, and LQIP blur hashes without running any image processing yourself.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Editor UX: Sanity Studio vs Strapi admin Sanity Studio is configurable at the code level. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Sanity is a hosted content platform.</li>
+          <li>If your Next.js app has complex content graphs, GROQ&#x27;s projection model will save you a lot of over-fetching.</li>
+          <li>Strapi&#x27;s self-hosted path gives you complete data sovereignty.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/nayankyada/sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-3nii" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

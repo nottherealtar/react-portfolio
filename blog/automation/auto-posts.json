@@ -1,5 +1,17 @@
 [
   {
+    "title": "Sanity vs Strapi in 2026: an honest side-by-side comparison",
+    "date": "2026-06-22",
+    "category": "Coding & Community",
+    "summary": "Sanity vs Strapi comes up on almost every project where a client wants either full data ownership or a managed content lake — and the right answer genuinely depends on which constraint matters more. Your documents live in Sanity's Content Lake, queries run over GROQ via a CDN-backed API, and the editing UI (Sanity Studio) is a React app you embed in your own repo or host on sanity.io.",
+    "link": "auto/20260622-sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-317d12bc.html",
+    "source_url": "https://dev.to/nayankyada/sanity-vs-strapi-in-2026-an-honest-side-by-side-comparison-3nii",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Agentjacking: How Fake Sentry Errors Hijack Claude Code and Cursor (2026)",
     "date": "2026-06-21",
     "category": "Coding & Community",

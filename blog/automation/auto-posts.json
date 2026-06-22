@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "\"We don't lock our hardware down\" - Valve takes a swing at consoles while explaining why it doesn't subsidise the price of Steam Machine",
+    "date": "2026-06-22",
+    "category": "Gaming News",
+    "summary": "For as long as there have been consoles, the Sonys, Microsofts, and Nintendos of the world have offered them at prices that don't make much money. \"We don't want that for PC hardware, and we don't think you should want it either.",
+    "link": "auto/20260622-we-don-t-lock-our-hardware-down-valve-takes-a-swing-at-conso-5c77744f.html",
+    "source_url": "https://www.eurogamer.net/valve-steam-machine-subsidise-price-console-helix",
+    "source_name": "Eurogamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://assetsio.gnwcdn.com/steam-deck-console.jpg?width=690&quality=85&format=jpg&auto=webp"
+  },
+  {
     "title": "Agentjacking: How Fake Sentry Errors Hijack Claude Code and Cursor (2026)",
     "date": "2026-06-21",
     "category": "Coding & Community",

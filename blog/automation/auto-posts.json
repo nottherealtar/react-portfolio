@@ -1,5 +1,17 @@
 [
   {
+    "title": "Give AI agents smooth access to 30+ PDF tools with MCP integration",
+    "date": "2026-06-23",
+    "category": "Coding & Community",
+    "summary": "Harnessing the MCP Server for PDF Tools Integration: smooth AI document automation Traditional PDF automation with AI agents has been a tangle of repeated REST calls, polling, file transfers, and re-authentication.",
+    "link": "auto/20260623-give-ai-agents-smooth-access-to-30-pdf-tools-with-mcp-integr-5ede7477.html",
+    "source_url": "https://dev.to/davekurian/give-ai-agents-smooth-access-to-30-pdf-tools-with-mcp-integration-46mn",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Sanity vs Strapi in 2026: an honest side-by-side comparison",
     "date": "2026-06-22",
     "category": "Coding & Community",

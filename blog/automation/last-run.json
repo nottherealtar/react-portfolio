@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-23T19:18:43.013218+00:00",
+  "timestamp": "2026-06-24T08:32:52.131827+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Frontend Engineer Will Not Be Replaced by AI",
-      "link": "auto/20260623-the-frontend-engineer-will-not-be-replaced-by-ai-7af953a3.html",
-      "score": 134.8778,
-      "source": "DEV Community",
+      "title": "YouTrack Helpdesk Now Includes Customer Groups",
+      "link": "auto/20260624-youtrack-helpdesk-now-includes-customer-groups-febd616a.html",
+      "score": 140.9812,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

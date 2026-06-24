@@ -1,5 +1,18 @@
 [
   {
+    "title": "YouTrack Helpdesk Now Includes Customer Groups",
+    "date": "2026-06-24",
+    "category": "Developer Tools",
+    "summary": "This gives B2B support teams a way to tailor processes, access, and service levels to each customer. This helps teams organize requests from calls, chats, or other internal channels by department, office, or internal customer group, while still keeping each ticket linked to the right reporter.",
+    "link": "auto/20260624-youtrack-helpdesk-now-includes-customer-groups-febd616a.html",
+    "source_url": "https://blog.jetbrains.com/youtrack/2026/06/youtrack-helpdesk-now-includes-customer-groups/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/06/Blog-Featured-1280x720-1.png"
+  },
+  {
     "title": "The Frontend Engineer Will Not Be Replaced by AI",
     "date": "2026-06-23",
     "category": "Coding & Community",

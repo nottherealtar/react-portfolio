@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-24T08:32:52.131827+00:00",
+  "timestamp": "2026-06-24T19:01:00.016641+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 610,
+  "fetched_candidates": 611,
   "unseen_candidates": 594,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "YouTrack Helpdesk Now Includes Customer Groups",
-      "link": "auto/20260624-youtrack-helpdesk-now-includes-customer-groups-febd616a.html",
-      "score": 140.9812,
-      "source": "JetBrains Blog",
+      "title": "How an AI Terminal Assistant Became My Team's Most Productive Engineer - Opencode + Claude + MCP",
+      "link": "auto/20260624-how-an-ai-terminal-assistant-became-my-team-s-most-productiv-3b5f3a83.html",
+      "score": 146.8614,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-24T19:01:00.016641+00:00",
+  "timestamp": "2026-06-25T08:30:55.075136+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 611,
-  "unseen_candidates": 594,
-  "blocked_domain_candidates": 4,
+  "unseen_candidates": 595,
+  "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How an AI Terminal Assistant Became My Team's Most Productive Engineer - Opencode + Claude + MCP",
-      "link": "auto/20260624-how-an-ai-terminal-assistant-became-my-team-s-most-productiv-3b5f3a83.html",
-      "score": 146.8614,
+      "title": "A local model opened 41 of our pull requests in five weeks. The model is the least interesting part.",
+      "link": "auto/20260625-a-local-model-opened-41-of-our-pull-requests-in-five-weeks-t-ffeef5cb.html",
+      "score": 138.9097,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -1,5 +1,17 @@
 [
   {
+    "title": "A local model opened 41 of our pull requests in five weeks. The model is the least interesting part.",
+    "date": "2026-06-25",
+    "category": "Coding & Community",
+    "summary": "A confidently-wrong change to the wrong package never reaches a PR. This is the single most common failure mode of LLM-written tests, and it is now a gate, not a hope. A separate reviewer model on separate hardware, so the thing judging the work is not the thing that produced it.",
+    "link": "auto/20260625-a-local-model-opened-41-of-our-pull-requests-in-five-weeks-t-ffeef5cb.html",
+    "source_url": "https://dev.to/defilan/a-local-model-opened-41-of-our-pull-requests-in-five-weeks-the-model-is-the-least-interesting-part-cc4",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "YouTrack Helpdesk Now Includes Customer Groups",
     "date": "2026-06-24",
     "category": "Developer Tools",

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-25T08:30:55.075136+00:00",
+  "timestamp": "2026-06-25T19:16:42.577436+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 611,
-  "unseen_candidates": 595,
+  "unseen_candidates": 598,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A local model opened 41 of our pull requests in five weeks. The model is the least interesting part.",
-      "link": "auto/20260625-a-local-model-opened-41-of-our-pull-requests-in-five-weeks-t-ffeef5cb.html",
-      "score": 138.9097,
+      "title": "Southwest Airlines Embraces Cloud and AI Architecture. Are They Setting a New Standard for the Industry?",
+      "link": "auto/20260625-southwest-airlines-embraces-cloud-and-ai-architecture-are-th-82922ebf.html",
+      "score": 151.8564,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

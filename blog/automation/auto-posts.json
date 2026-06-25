@@ -1,5 +1,18 @@
 [
   {
+    "title": "Southwest Airlines Embraces Cloud and AI Architecture. Are They Setting a New Standard for the Industry?",
+    "date": "2026-06-25",
+    "category": "Coding & Community",
+    "summary": "Through this collaboration, Southwest plans to move away from a predominantly on-premises infrastructure toward a cloud-based, AI and agent-enabled architecture on AWS by 2028 . That alone makes airline modernization one of the hardest engineering problems in enterprise software. It forces engineers to understand the system more deeply instead of blindly delegating reasoning to AI.",
+    "link": "auto/20260625-southwest-airlines-embraces-cloud-and-ai-architecture-are-th-82922ebf.html",
+    "source_url": "https://dev.to/georgekobaidze/southwest-airlines-embraces-cloud-and-ai-architecture-are-they-setting-a-new-standard-for-the-3m04",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbynmn7subjbagi3lsg43.jpg"
+  },
+  {
     "title": "A local model opened 41 of our pull requests in five weeks. The model is the least interesting part.",
     "date": "2026-06-25",
     "category": "Coding & Community",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Mastering DevOps Fundamentals: A Practical Guide",
+    "date": "2026-06-26",
+    "category": "Coding & Community",
+    "summary": "I've seen too many organizations spend fortunes on tools, proclaiming they're \"doing DevOps\" because they bought a CI/CD platform or deployed Kubernetes, only to find their release cycles are still glacial, incidents are frequent, and teams are burnt out. The advanced tooling amplified their lack of basic operational discipline, turning minor issues into major outages.",
+    "link": "auto/20260626-mastering-devops-fundamentals-a-practical-guide-05f9ecb6.html",
+    "source_url": "https://dev.to/devopsstart/mastering-devops-fundamentals-a-practical-guide-1kfn",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Southwest Airlines Embraces Cloud and AI Architecture. Are They Setting a New Standard for the Industry?",
     "date": "2026-06-25",
     "category": "Coding & Community",

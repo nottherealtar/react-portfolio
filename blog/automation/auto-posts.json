@@ -1,5 +1,17 @@
 [
   {
+    "title": "System Design for Working Engineers, Not Interview Prep",
+    "date": "2026-06-26",
+    "category": "Coding & Community",
+    "summary": "You don't get clean requirements, you don't design from scratch, and nobody asks you to handle a billion requests per second on day one. Understand your functional and non-functional requirements. But you don't need Kafka, distributed tracing, auto-scaling, or any complex distributed computing to begin with.",
+    "link": "auto/20260626-system-design-for-working-engineers-not-interview-prep-aea81588.html",
+    "source_url": "https://dev.to/malaymehta/system-design-for-working-engineers-not-interview-prep-43nf",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Mastering DevOps Fundamentals: A Practical Guide",
     "date": "2026-06-26",
     "category": "Coding & Community",

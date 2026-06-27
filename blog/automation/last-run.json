@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-27T08:05:45.353178+00:00",
+  "timestamp": "2026-06-27T18:17:24.455250+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Airflow vs n8n vs Temporal for API workflow orchestration",
-      "link": "auto/20260627-airflow-vs-n8n-vs-temporal-for-api-workflow-orchestration-8f0507e6.html",
-      "score": 130.9747,
-      "source": "DEV Community",
+      "title": "I picked out 31 must-play games going for $5 or less in the Steam Summer Sale",
+      "link": "auto/20260626-i-picked-out-31-must-play-games-going-for-5-or-less-in-the-s-4419b1f8.html",
+      "score": 118.8873,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Airflow vs n8n vs Temporal for API workflow orchestration",
+    "date": "2026-06-27",
+    "category": "Coding & Community",
+    "summary": "It's what you use when you need industrial-strength workflow orchestration and you're comfortable writing Python code to define your pipelines. Let me show you a real API workflow in Airflow. With n8n, you define workflows as a series of connected nodes.",
+    "link": "auto/20260627-airflow-vs-n8n-vs-temporal-for-api-workflow-orchestration-8f0507e6.html",
+    "source_url": "https://dev.to/chasebot/airflow-vs-n8n-vs-temporal-for-api-workflow-orchestration-19j",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "System Design for Working Engineers, Not Interview Prep",
     "date": "2026-06-26",
     "category": "Coding & Community",

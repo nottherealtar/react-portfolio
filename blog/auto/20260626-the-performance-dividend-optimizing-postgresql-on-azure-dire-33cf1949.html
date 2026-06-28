@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code | TarsOnlineCafe</title>
+  <meta name="description" content="The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260626-the-performance-dividend-optimizing-postgresql-on-azure-dire-33cf1949.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code">
+  <meta property="og:description" content="The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260626-the-performance-dividend-optimizing-postgresql-on-azure-dire-33cf1949.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code">
+  <meta name="twitter:description" content="The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers…">
+  <meta property="og:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif">
+  <meta property="og:image:alt" content="The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code">
+  <meta name="twitter:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code", "description": "The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers…", "datePublished": "2026-06-26T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260626-the-performance-dividend-optimizing-postgresql-on-azure-dire-33cf1949.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/the-performance-dividend-optimizing-postgresql-on-azure-directly-in-visual-studio-code/", "wordCount": 1052, "image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-06-26</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code</h1>
+        <p class="lede">The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers and DBAs can analyze query plans, understand potential bottlenecks, and explore optimization options without leaving VS Code. This does not replace deep PostgreSQL expertise, but it helps teams move faster and make better decisions earlier in the development cycle.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Poor database performance is never just a database problem. In enterprise teams, it shows up as missed service-level agreements (SLAs), delayed releases, frustrated development teams, and rising operational risk. The performance problem compounds further in business impact, often resulting in frustrated customers, retention and conversion risk, and lost revenue.</p>
+        <p>I have seen this repeatedly while working with enterprises building and running large‑scale data platforms, both as a customer and partner, and now with Microsoft. When teams are forced to jump between SQL editors, monitoring dashboards, cloud portals, and documentation just to diagnose a slow query, the real cost is not just technical. It’s also time, trust, and momentum lost across the business.</p>
+        <p>A more integrated way to run PostgreSQL on Azure This is why I am optimistic about where PostgreSQL on Azure stands today. Microsoft’s investment in open source and PostgreSQL has matured significantly over the last several years. Azure Database for PostgreSQL has evolved into a fully managed, fully open-source enterprise-ready platform, Azure HorizonDB has entered the conversation as the next-gen Postgres on Azure delivering 3x faster performance than self-managed Postgres, and Microsoft is extending that value directly into the…</p>
+        <p>The PostgreSQL extension for Visual Studio Code is a clear example of that progress, especially with its new performance‑enhancing capabilities. Performance work often breaks down because insights live in one place, actions live in another, and context is lost in between. Microsoft’s direction with the PostgreSQL extension for VS Code focuses on closing those gaps by bringing development, diagnostics, and tuning into a single workflow.</p>
+        <p>The extension is designed to help teams manage PostgreSQL across the full lifecycle, from authoring queries and exploring schemas to monitoring server health and optimizing performance. For organizations standardizing PostgreSQL on Azure, this creates a more coherent operating model that reduces friction between developers, DBAs, and platform teams. Seeing performance clearly with the Server Metrics Dashboard One of the most impactful additions is the server metrics dashboard .</p>
+        <p>For DBAs and platform engineers, this dashboard brings key performance signals such as CPU, memory, storage, and connections directly into VS Code. Instead of switching contexts to investigate an issue, teams can view metrics where they already work. Because the dashboard is integrated with Azure, it provides Azure‑specific telemetry and historical insights that help teams understand trends, not just snapshots.</p>
+        <p>When performance issues arise, the time from detection to investigation is significantly reduced. These recommendations can include suggestions around configuration, indexing, and resource optimization based on Azure telemetry. For enterprise teams, this shortens the feedback loop.</p>
+        <p>Instead of manually correlating metrics with best practices, teams receive contextual recommendations aligned to their actual workloads. This improves operational confidence and helps standardize tuning practices across environments. Faster diagnosis with Query Plan visualization and AI assistance Performance tuning often comes down to understanding query behavior.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif" alt="Scrolling through high C P U no index dashboard." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-migration-free-services-2.jpg" alt="Abstract 3D cubes and spheres floating on a blue grid background with a curved turquoise line." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>These capabilities are especially valuable for enterprise environments where not every developer is a PostgreSQL specialist, yet performance expectations remain high. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>When teams are forced to jump between SQL editors, monitoring dashboards, cloud portals, and documentation just to diagnose a slow query, the real cost is not just technical.</li>
+          <li>The PostgreSQL extension for Visual Studio Code is a clear example of that progress, especially with its new performance‑enhancing capabilities.</li>
+          <li>For organizations standardizing PostgreSQL on Azure, this creates a more coherent operating model that reduces friction between developers, DBAs, and platform teams.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/the-performance-dividend-optimizing-postgresql-on-azure-directly-in-visual-studio-code/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

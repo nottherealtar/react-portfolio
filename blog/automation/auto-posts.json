@@ -24,6 +24,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code",
+    "date": "2026-06-26",
+    "category": "Cloud Automation",
+    "summary": "The PostgreSQL extension surfaces Azure Advisor recommendations directly in the editor, connecting performance insights with concrete guidance. Developers and DBAs can analyze query plans, understand potential bottlenecks, and explore optimization options without leaving VS Code. This does not replace deep PostgreSQL expertise, but it helps teams move faster and make better decisions earlier in the development cycle.",
+    "link": "auto/20260626-the-performance-dividend-optimizing-postgresql-on-azure-dire-33cf1949.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/the-performance-dividend-optimizing-postgresql-on-azure-directly-in-visual-studio-code/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/metrics-dashboard-1.gif"
+  },
+  {
     "title": "System Design for Working Engineers, Not Interview Prep",
     "date": "2026-06-26",
     "category": "Coding & Community",

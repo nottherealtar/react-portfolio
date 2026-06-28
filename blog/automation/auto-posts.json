@@ -1,5 +1,17 @@
 [
   {
+    "title": "How We Build Client-Safe Publishing Workflows",
+    "date": "2026-06-28",
+    "category": "Coding & Community",
+    "summary": "For client work, publishing is only the last step. That sounds basic, but it prevents a common automation mistake: treating every platform, client, and content type as if it carries the same risk. That is cleaner than routing DEV posts through a general scheduling tool.",
+    "link": "auto/20260628-how-we-build-client-safe-publishing-workflows-55fee4f5.html",
+    "source_url": "https://dev.to/thedoctorau/how-we-build-client-safe-publishing-workflows-2i82",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Airflow vs n8n vs Temporal for API workflow orchestration",
     "date": "2026-06-27",
     "category": "Coding & Community",

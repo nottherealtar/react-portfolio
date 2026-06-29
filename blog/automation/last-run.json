@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-16T10:20:24.018937+00:00",
+  "timestamp": "2026-06-28T18:17:22.339127+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 606,
-  "unseen_candidates": 585,
-  "blocked_domain_candidates": 4,
+  "fetched_candidates": 612,
+  "unseen_candidates": 599,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Kafka Streams 101: A Developer’s Guide to Real-Time Application Logic",
-      "link": "auto/20260616-kafka-streams-101-a-developer-s-guide-to-real-time-applicati-e37c0a35.html",
-      "score": 134.9361,
-      "source": "DEV Community",
+      "title": "The performance dividend: Optimizing PostgreSQL on Azure directly in Visual Studio Code",
+      "link": "auto/20260626-the-performance-dividend-optimizing-postgresql-on-azure-dire-33cf1949.html",
+      "score": 129.9173,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

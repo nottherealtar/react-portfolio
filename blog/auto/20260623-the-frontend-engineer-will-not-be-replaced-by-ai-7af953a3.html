@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Frontend Engineer Will Not Be Replaced by AI | TarsOnlineCafe</title>
+  <meta name="description" content="I sat back, exhaled, and realized something I&#x27;ve never forgotten: the code I write has weight. It&#x27;s not just syntax. Part I: The Fear, The Headlines, and…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260623-the-frontend-engineer-will-not-be-replaced-by-ai-7af953a3.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Frontend Engineer Will Not Be Replaced by AI">
+  <meta property="og:description" content="I sat back, exhaled, and realized something I&#x27;ve never forgotten: the code I write has weight. It&#x27;s not just syntax. Part I: The Fear, The Headlines, and…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260623-the-frontend-engineer-will-not-be-replaced-by-ai-7af953a3.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Frontend Engineer Will Not Be Replaced by AI">
+  <meta name="twitter:description" content="I sat back, exhaled, and realized something I&#x27;ve never forgotten: the code I write has weight. It&#x27;s not just syntax. Part I: The Fear, The Headlines, and…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Frontend Engineer Will Not Be Replaced by AI", "description": "I sat back, exhaled, and realized something I've never forgotten: the code I write has weight. It's not just syntax. Part I: The Fear, The Headlines, and…", "datePublished": "2026-06-23T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260623-the-frontend-engineer-will-not-be-replaced-by-ai-7af953a3.html"}, "isBasedOn": "https://dev.to/ogeobubu/the-frontend-engineer-will-not-be-replaced-by-ai-3k2l", "wordCount": 2088}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--dark-roast, #2d221b);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
+                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-06-23</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>The Frontend Engineer Will Not Be Replaced by AI</h1>
+        <p class="lede">I sat back, exhaled, and realized something I&#x27;ve never forgotten: the code I write has weight. It&#x27;s not just syntax. Part I: The Fear, The Headlines, and The Misunderstanding Walk into any tech X (formerly Twitter) space, open any LinkedIn feed, scroll through any YouTube comment section, and you&#x27;ll find the same narrative: &quot;Cursor wrote this entire app.&quot; &quot;V0 generates production-ready UI in seconds.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I was staring at a terminal, sweat beading on my forehead, waiting for a deployment to finish. Three forms, a validation step, and a confirmation screen. And in the morning, thousands of people would wake up, open this app, and try to feed their families.</p>
+        <p>If the coupon didn&#x27;t apply correctly, someone would overpay. Someone might not be able to afford what they needed that week. It&#x27;s the difference between someone eating dinner and someone going hungry.</p>
+        <p>Between a business staying open and closing. Between a delivery arriving on time or a child missing their school lunch. Five years later, I&#x27;ve shipped hundreds of features.</p>
+        <p>But that 2 AM deployment, that moment of realizing my code mattered, is the fire that&#x27;s kept me going. And now I&#x27;m watching the news tell an entire generation of aspiring engineers, &quot;AI is coming for your job. When I first saw an AI generate a functional React component from a sentence, my stomach dropped.</p>
+        <p>I&#x27;d spent years learning to write that exact thing. It doesn&#x27;t know why the button is orange instead of blue. It doesn&#x27;t know that the loading state needs to appear for exactly 300 milliseconds, not 200, not 400, because user testing showed that 300ms is the sweet spot between perceived speed and perceived effort.</p>
+        <p>It doesn&#x27;t know that the disabled submit button should show a tooltip explaining why it&#x27;s disabled. It doesn&#x27;t know that the error message should say, &quot;This email is already registered. Let us help you reset it&quot; instead of &quot;Error: duplicate entry.&quot; AI doesn&#x27;t know these things because these things are not in the training data.</p>
+        <p>They&#x27;re in the conversations with product managers and customer support agents and actual human beings who use what you build. Part II: What Five Years of Shipping Actually Taught Me I&#x27;ve spent over five years building full-stack applications. I&#x27;ve built e-commerce platforms that connect thousands of vendors with hundreds of thousands of customers.</p>
+        <p>I&#x27;ve built real-time logistics systems that track deliveries down to the exact GPS coordinate. I&#x27;ve built promotional campaign engines that reward customers for predictions and referrals. I&#x27;ve built admin dashboards that give businesses superpowers, the ability to see, understand, and act on their operations in ways they never could before.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>When I first saw an AI generate a functional React component from a sentence, my stomach dropped. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>But this was a grocery platform.</li>
+          <li>But that 2 AM deployment, that moment of realizing my code mattered, is the fire that&#x27;s kept me going.</li>
+          <li>And now I&#x27;m watching the news tell an entire generation of aspiring engineers, &quot;AI is coming for your job.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/ogeobubu/the-frontend-engineer-will-not-be-replaced-by-ai-3k2l" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

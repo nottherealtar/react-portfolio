@@ -1,13 +1,12 @@
 /* Services section - outcome-focused deliver layout */
 
 .services-section {
-  padding: 6rem 1.5rem;
-  background: #221810;
+  background: rgba(34, 24, 16, 0.42);
   position: relative;
 }
 
 .section-inner {
-  max-width: 1100px;
+  max-width: var(--content-max, 72rem);
   margin: 0 auto;
 }
 
@@ -51,14 +50,14 @@
 .deliver-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr);
-  gap: 3rem 4rem;
+  gap: var(--section-gap, clamp(2rem, 4vw, 4rem));
   align-items: start;
 }
 
 @media (max-width: 860px) {
   .deliver-layout {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: clamp(1.75rem, 4vw, 2.25rem);
   }
 }
 
@@ -151,8 +150,8 @@
 /* Legacy service cards - kept for other pages that may reference them */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 @media (max-width: 640px) {

@@ -1,8 +1,7 @@
 /* How I Work timeline styles */
 
 .process-section {
-  padding: 6rem 1.5rem;
-  background: #221810;
+  background: rgba(34, 24, 16, 0.42);
 }
 
 .process-inner {

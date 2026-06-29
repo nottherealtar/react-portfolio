@@ -124,6 +124,8 @@
     
     <!-- Theme System -->
     <link rel="stylesheet" href="/styles/themes.css">
+    <link rel="stylesheet" href="/styles/site-atmosphere.css">
+    <link rel="stylesheet" href="/styles/spacing.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/services.css">
     <link rel="stylesheet" href="/styles/case-studies.css">
@@ -165,21 +167,13 @@
             margin: 0;
             overflow-x: hidden;
             font-family: 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
-            background: #2d221b; /* Coffee brown */
-        }
-        #canvas-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            background: #1a1108;
         }
         .content {
             position: relative;
             z-index: 1;
             min-height: 100vh;
-            background: rgba(45, 34, 27, 0.85); /* Coffee brown overlay */
+            background: transparent;
             color: #f7efe2; /* Foam color */
         }
         .glass-card {
@@ -311,7 +305,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: calc(5rem + env(safe-area-inset-top, 0px)) 1.5rem 3rem;
+          padding:
+            calc(5rem + env(safe-area-inset-top, 0px))
+            clamp(1.25rem, 4vw, 2.5rem)
+            clamp(2.5rem, 5vw, 3rem);
           overflow: hidden;
         }
 
@@ -326,51 +323,63 @@
           z-index: 0;
         }
 
-        /* Steam wisps */
+        /* Steam wisps — soft blurred puffs at hero base */
         .hero-steam {
           position: absolute;
           bottom: 0;
           left: 0;
           right: 0;
-          height: 280px;
+          height: min(42vh, 320px);
           pointer-events: none;
           z-index: 0;
+          overflow: hidden;
+          mask-image: linear-gradient(to top, black 0%, black 35%, transparent 100%);
+          -webkit-mask-image: linear-gradient(to top, black 0%, black 35%, transparent 100%);
         }
 
         .steam-wisp {
           position: absolute;
-          bottom: 0;
-          width: 3px;
+          bottom: -10%;
+          width: clamp(72px, 14vw, 120px);
+          height: clamp(72px, 14vw, 120px);
           border-radius: 50%;
-          background: linear-gradient(to top, rgba(201,169,110,0.18), transparent);
-          animation: heroSteam 5s ease-in-out infinite;
+          background: radial-gradient(
+            circle at 40% 60%,
+            rgba(247, 239, 226, 0.14) 0%,
+            rgba(201, 169, 110, 0.08) 42%,
+            transparent 72%
+          );
+          filter: blur(18px);
+          opacity: 0;
+          animation: heroSteam 14s ease-in-out infinite;
         }
 
-        .steam-wisp--1 { left: 15%; height: 200px; animation-delay: 0s; }
-        .steam-wisp--2 { left: 50%; height: 260px; animation-delay: 1.8s; width: 2px; }
-        .steam-wisp--3 { right: 18%; height: 180px; animation-delay: 3.4s; }
+        .steam-wisp--1 { left: 12%; animation-delay: 0s; }
+        .steam-wisp--2 { left: 46%; animation-delay: 4.5s; width: clamp(56px, 10vw, 96px); height: clamp(56px, 10vw, 96px); }
+        .steam-wisp--3 { right: 14%; animation-delay: 9s; }
 
         @keyframes heroSteam {
-          0%   { opacity: 0;   transform: translateY(0)   scaleX(1);   }
-          20%  { opacity: 0.7; }
-          80%  { opacity: 0.3; }
-          100% { opacity: 0;   transform: translateY(-180px) scaleX(1.8); }
+          0%   { opacity: 0;   transform: translateY(0) scale(0.85); }
+          18%  { opacity: 0.55; }
+          55%  { opacity: 0.35; transform: translateY(-120px) scale(1.15); }
+          100% { opacity: 0;   transform: translateY(-220px) scale(1.45); }
         }
 
         /* Frosted glass card */
         .hero-card {
           position: relative;
           z-index: 1;
-          max-width: 720px;
+          max-width: min(720px, 100%);
           width: 100%;
-          padding: 3rem 3.5rem;
+          padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 3.5rem);
           border-radius: 24px;
           text-align: center;
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 1.5rem;
+          gap: clamp(1.15rem, 2.5vw, 1.5rem);
           animation: heroFadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+          box-sizing: border-box;
         }
 
         @keyframes heroFadeUp {
@@ -620,22 +629,21 @@
 
         /* ── Testimonials ─────────────────────────────────────── */
         .testimonials-section {
-          padding: 6rem 1.5rem;
-          background: var(--dark-roast, #2d221b);
+          background: rgba(45, 34, 27, 0.38);
         }
 
         .testimonial-cards {
-          max-width: 1200px;
+          max-width: var(--content-max, 72rem);
           margin: 0 auto;
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: clamp(1rem, 2.5vw, 1.5rem);
         }
 
         @media (max-width: 1100px) {
           .testimonial-cards {
             grid-template-columns: 1fr;
-            max-width: 720px;
+            max-width: var(--prose-max, 42rem);
           }
         }
 
@@ -646,7 +654,7 @@
           -webkit-backdrop-filter: blur(12px);
           border: 1px solid rgba(247, 239, 226, 0.1);
           border-radius: 20px;
-          padding: 3rem 3rem 2rem;
+          padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2rem);
           margin: 0;
         }
 
@@ -751,7 +759,7 @@
         /* ── Footer ──────────────────────────────────────────── */
         .site-footer {
           background: var(--espresso, #1a1108);
-          padding: 2.5rem 1.5rem;
+          padding: clamp(2rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 2.5rem);
           text-align: center;
           border-top: 1px solid rgba(247, 239, 226, 0.06);
         }
@@ -853,6 +861,12 @@
       <a href="#contact" class="nav-mobile-cta">Let's Talk →</a>
     </div>
 
+    <div class="site-atmosphere" aria-hidden="true">
+      <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+      <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+      <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+      <div class="site-atmosphere__grain"></div>
+    </div>
     <div id="canvas-container"></div>
     
     <main id="main" class="content">
@@ -1480,7 +1494,7 @@ Currently:  Working at Wetility, building and improving business process and sol
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
     <script defer src="/globe/index.js"></script>
-    <script defer src="/scripts/falling-leaves.js"></script>
+    <script defer src="/scripts/site-atmosphere.js"></script>
     <script defer src="/scripts/lazy-loading.js"></script>
     <script defer src="/scripts/coffee-button.js"></script>
     <script defer src="https://web3forms.com/client/script.js"></script>

@@ -1,8 +1,7 @@
 /* Case Studies section styles */
 
 .case-studies-section {
-  padding: 6rem 1.5rem;
-  background: var(--dark-roast, #2d221b);
+  background: rgba(45, 34, 27, 0.38);
   position: relative;
 }
 
@@ -20,7 +19,7 @@
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(247, 239, 226, 0.1);
   border-radius: 22px;
-  padding: 2.35rem 2.6rem;
+  padding: clamp(1.5rem, 3.5vw, 2.35rem) clamp(1.35rem, 3.5vw, 2.6rem);
   display: flex;
   flex-direction: column;
   gap: 1.1rem;

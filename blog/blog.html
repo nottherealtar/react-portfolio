@@ -28,6 +28,8 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/styles/themes.css">
+    <link rel="stylesheet" href="/styles/site-atmosphere.css">
+    <link rel="stylesheet" href="/styles/spacing.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/showcase.css">
 
@@ -35,24 +37,21 @@
         body {
             margin: 0;
             font-family: Inter, system-ui, sans-serif;
-            background: var(--dark-roast, #2d221b);
+            background: var(--espresso, #1a1108);
             color: var(--foam, #f7efe2);
         }
 
         .blog-page {
             min-height: 100vh;
-            background:
-                radial-gradient(900px 420px at 12% -8%, rgba(201, 169, 110, 0.2), transparent 55%),
-                radial-gradient(700px 360px at 88% 5%, rgba(161, 134, 111, 0.12), transparent 52%),
-                var(--dark-roast, #2d221b);
             padding-top: calc(5.75rem + env(safe-area-inset-top, 0px));
             padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
+            padding-inline: 0;
         }
 
         .section-inner {
-            max-width: 1080px;
+            max-width: var(--content-max, 72rem);
             margin: 0 auto;
-            padding: 0 1.25rem;
+            padding-inline: var(--section-padding-x, clamp(1.25rem, 4vw, 2.5rem));
         }
 
         .blog-hero {
@@ -480,6 +479,13 @@
     </style>
 </head>
 <body>
+    <div class="site-atmosphere" aria-hidden="true">
+        <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+        <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+        <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+        <div class="site-atmosphere__grain"></div>
+    </div>
+    <div id="canvas-container"></div>
     <script>
     (function () {
       var root = document.documentElement;
@@ -854,6 +860,7 @@
                 });
         })();
     </script>
+    <script defer src="/scripts/site-atmosphere.js"></script>
     <script defer src="/scripts/nav.js"></script>
 </body>
 </html>

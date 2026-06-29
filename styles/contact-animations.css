@@ -261,8 +261,7 @@
 
 /* ── Contact section layout ───────────────────────────── */
 .contact-section {
-  padding: 6rem 1.5rem;
-  background: #221810;
+  background: rgba(34, 24, 16, 0.45);
 }
 
 .contact-inner {
@@ -285,8 +284,8 @@
 
 .contact-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2vw, 1.25rem);
 }
 
 @media (max-width: 560px) {

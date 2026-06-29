@@ -1,0 +1,63 @@
+/* Fluid spacing — content rhythm across viewports */
+
+:root {
+  --content-max: 72rem;
+  --prose-max: 42rem;
+  --section-padding-x: clamp(1.25rem, 4vw, 2.5rem);
+  --section-padding-y: clamp(3.5rem, 7vw, 6rem);
+  --section-gap: clamp(2rem, 4vw, 4rem);
+  --stack-gap: clamp(1rem, 2.5vw, 1.5rem);
+  --readable-line: 1.65;
+}
+
+.section-inner {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+  box-sizing: border-box;
+}
+
+/* Prevent grid/flex children from forcing horizontal overflow */
+.section-inner,
+.showcase-about-grid,
+.deliver-layout,
+.signature-spotlight-inner,
+.proof-strip-list,
+.services-grid,
+.contact-row {
+  min-width: 0;
+}
+
+.section-inner > * {
+  min-width: 0;
+}
+
+.prose-readable {
+  max-width: var(--prose-max);
+  line-height: var(--readable-line);
+}
+
+/* Shared section vertical rhythm — horizontal padding lives on .section-inner */
+.showcase-about,
+.services-section,
+.case-studies-section,
+.process-section,
+.contact-section,
+.testimonials-section,
+.proof-strip {
+  padding-block: var(--section-padding-y);
+  padding-inline: 0;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-gap: 1.75rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --content-max: 76rem;
+  }
+}

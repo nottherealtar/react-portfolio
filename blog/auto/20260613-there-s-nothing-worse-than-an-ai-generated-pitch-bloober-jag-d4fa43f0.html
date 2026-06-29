@@ -24,20 +24,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
   <link rel="stylesheet" href="/styles/nav.css">
   <style>
     body {
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
-      background: var(--dark-roast, #2d221b);
+      background: var(--espresso, #1a1108);
       color: var(--foam, #f7efe2);
       line-height: 1.65;
       min-height: 100vh;
     }
     .page-bg {
       min-height: 100vh;
-      background: radial-gradient(1200px 500px at 10% -10%, rgba(201, 169, 110, 0.18), transparent 55%),
-                  radial-gradient(900px 400px at 90% 0%, rgba(161, 134, 111, 0.12), transparent 50%);
       padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
     }
     .wrap {
@@ -176,6 +175,13 @@
   </style>
 </head>
 <body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
   <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
     <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
       <span class="nav-logo-icon">☕</span>
@@ -249,6 +255,7 @@
       </article>
     </main>
   </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
   <script defer src="/scripts/nav.js"></script>
 </body>
 </html>

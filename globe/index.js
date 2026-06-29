@@ -37,9 +37,9 @@
   const RADIUS = 1;
   const globeGeometry = new THREE.SphereGeometry(RADIUS, 64, 64);
   const globeMaterial = new THREE.MeshPhongMaterial({
-    color: 0x1e293b,
-    specular: 0x222222,
-    shininess: 18,
+    color: 0x2d221b,
+    specular: 0xc9a96e,
+    shininess: 22,
     transparent: true,
     opacity: 0.98,
   });

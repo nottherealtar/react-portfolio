@@ -1,0 +1,131 @@
+/* Site-wide "roasting atmosphere" — portfolio + blog */
+
+body {
+  background: var(--espresso, #1a1108);
+}
+
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 12% -8%, rgba(201, 169, 110, 0.16), transparent 55%),
+    radial-gradient(700px 360px at 88% 15%, rgba(161, 134, 111, 0.1), transparent 52%),
+    radial-gradient(600px 300px at 50% 100%, rgba(201, 169, 110, 0.08), transparent 60%),
+    linear-gradient(180deg, #1a1108 0%, #2d221b 45%, #1a1108 100%);
+}
+
+.site-atmosphere__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  will-change: transform;
+}
+
+.site-atmosphere__glow--1 {
+  width: min(55vw, 520px);
+  height: min(55vw, 520px);
+  top: -12%;
+  left: 8%;
+  background: rgba(201, 169, 110, 0.14);
+  animation: atmosphereDrift1 82s ease-in-out infinite alternate;
+}
+
+.site-atmosphere__glow--2 {
+  width: min(45vw, 440px);
+  height: min(45vw, 440px);
+  top: 35%;
+  right: -6%;
+  background: rgba(161, 134, 111, 0.1);
+  animation: atmosphereDrift2 96s ease-in-out infinite alternate;
+}
+
+.site-atmosphere__glow--3 {
+  width: min(50vw, 480px);
+  height: min(50vw, 480px);
+  bottom: -18%;
+  left: 38%;
+  background: rgba(201, 169, 110, 0.07);
+  animation: atmosphereDrift3 74s ease-in-out infinite alternate;
+}
+
+.site-atmosphere__grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+@keyframes atmosphereDrift1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(4%, 6%) scale(1.08); }
+}
+
+@keyframes atmosphereDrift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-5%, 4%) scale(1.06); }
+}
+
+@keyframes atmosphereDrift3 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(3%, -5%) scale(1.05); }
+}
+
+#canvas-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+#site-atmosphere-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+  mix-blend-mode: soft-light;
+}
+
+.content,
+.blog-page,
+.page-bg {
+  background: transparent !important;
+}
+
+.site-section-glass {
+  background: rgba(45, 34, 27, 0.48);
+  backdrop-filter: blur(8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-atmosphere__glow {
+    animation: none !important;
+  }
+
+  #site-atmosphere-canvas,
+  .hero-steam {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-atmosphere__glow--3 {
+    display: none;
+  }
+
+  .site-atmosphere {
+    background:
+      radial-gradient(700px 360px at 15% -5%, rgba(201, 169, 110, 0.14), transparent 55%),
+      radial-gradient(500px 280px at 85% 10%, rgba(161, 134, 111, 0.08), transparent 52%),
+      linear-gradient(180deg, #1a1108 0%, #2d221b 50%, #1a1108 100%);
+  }
+
+  #site-atmosphere-canvas {
+    opacity: 0.65;
+  }
+}

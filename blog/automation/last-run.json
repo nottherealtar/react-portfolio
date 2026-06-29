@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-29T09:57:44.545317+00:00",
+  "timestamp": "2026-06-29T19:15:17.425247+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 612,
-  "unseen_candidates": 598,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Describe Your JSON Query in English — Get JSONPath Instantly",
-      "link": "auto/20260629-describe-your-json-query-in-english-get-jsonpath-instantly-120078da.html",
-      "score": 112.939,
-      "source": "DEV Community",
+      "title": "Inside the Advisory Database and what happens when vulnerability volume breaks records",
+      "link": "auto/20260629-inside-the-advisory-database-and-what-happens-when-vulnerabi-9961abc5.html",
+      "score": 143.1193,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Describe Your JSON Query in English — Get JSONPath Instantly",
+    "date": "2026-06-29",
+    "category": "Coding & Community",
+    "summary": "JSONPath Assistant on FormatList lets you paste JSON, describe what you need in natural language, and get a validated JSONPath expression plus the actual results — all in your browser. Generate — the assistant reads your JSON structure and maps your query to JSONPath. Everything runs locally in your browser using pattern matching against your JSON structure.",
+    "link": "auto/20260629-describe-your-json-query-in-english-get-jsonpath-instantly-120078da.html",
+    "source_url": "https://dev.to/hito_x_6cebe8e1c528573a2f/describe-your-json-query-in-english-get-jsonpath-instantly-4m9p",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "How We Build Client-Safe Publishing Workflows",
     "date": "2026-06-28",
     "category": "Coding & Community",

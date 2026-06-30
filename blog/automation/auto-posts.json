@@ -37,6 +37,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Accelerate modern Linux workloads with Azure Files",
+    "date": "2026-06-29",
+    "category": "Cloud Automation",
+    "summary": "Azure Files helps teams make that transition with fully managed file storage for Linux workloads. In this blog, we explore how Azure Files NFS supports modern Linux workloads across AI, cloud-native, enterprise modernization, and partner or ISV scenarios.",
+    "link": "auto/20260629-accelerate-modern-linux-workloads-with-azure-files-465afd84.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/accelerate-modern-linux-workloads-with-azure-files/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO23_WorkAnywhere_025.jpg"
+  },
+  {
     "title": "How We Build Client-Safe Publishing Workflows",
     "date": "2026-06-28",
     "category": "Coding & Community",

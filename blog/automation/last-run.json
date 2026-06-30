@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-06-30T08:37:06.078392+00:00",
+  "timestamp": "2026-06-30T19:05:20.469805+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 612,
-  "unseen_candidates": 599,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Octo: An Open-Source Platform for Human-AI Agent Collaboration",
-      "link": "auto/20260630-octo-an-open-source-platform-for-human-ai-agent-collaboratio-0e8cd845.html",
-      "score": 129.8784,
-      "source": "DEV Community",
+      "title": "Accelerate modern Linux workloads with Azure Files",
+      "link": "auto/20260629-accelerate-modern-linux-workloads-with-azure-files-465afd84.html",
+      "score": 144.9746,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

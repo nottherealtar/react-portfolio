@@ -1,5 +1,17 @@
 [
   {
+    "title": "Octo: An Open-Source Platform for Human-AI Agent Collaboration",
+    "date": "2026-06-30",
+    "category": "Coding & Community",
+    "summary": "It provides infrastructure for human-agent and agent-agent collaboration, turning ad-hoc interactions into reusable organizational assets. When the work is done, discussion records, decision processes, and final outputs end up scattered across different tools. Parallel ideation : Multiple agents work independently on the same prompt, then a human picks the best.",
+    "link": "auto/20260630-octo-an-open-source-platform-for-human-ai-agent-collaboratio-0e8cd845.html",
+    "source_url": "https://dev.to/mininglamp/octo-an-open-source-platform-for-human-ai-agent-collaboration-3doa",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Inside the Advisory Database and what happens when vulnerability volume breaks records",
     "date": "2026-06-29",
     "category": "Developer Platform",

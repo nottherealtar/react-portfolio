@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering | TarsOnlineCafe</title>
+  <meta name="description" content="In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260701-thinkgraph-tutorial-how-to-make-your-llm-actually-think-befo-33b69bc0.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering">
+  <meta property="og:description" content="In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260701-thinkgraph-tutorial-how-to-make-your-llm-actually-think-befo-33b69bc0.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering">
+  <meta name="twitter:description" content="In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering", "description": "In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before…", "datePublished": "2026-07-01T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260701-thinkgraph-tutorial-how-to-make-your-llm-actually-think-befo-33b69bc0.html"}, "isBasedOn": "https://dev.to/mayne-x/thinkgraph-tutorial-how-to-make-your-llm-actually-think-before-answering-3amj", "wordCount": 590}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-07-01</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering</h1>
+        <p class="lede">In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before answering. Register a plugin: ThinkGraph sets a hard ceiling of 4x the direct answer tokens . But for any prompt involving comparison, planning, analysis, or multi-step reasoning, it shines.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>How to install ThinkGraph for Claude Code, OpenCode, Cursor, and others How to use the CLI for step-by-step prompt decomposition How self-consistency voting catches hallucinations How web grounding fills knowledge gaps without API keys How to integrate ThinkGraph as an MCP server The installer detects OpenCode, Claude Code, Cursor, Codex, Copilot, and Gemini CLI configs and injects the appropriate adapter. CLI Tutorial: Decompose a Complex Prompt Let&#x27;s walk through a real example. Say you ask: &quot;Should we migrate our PostgreSQL…</p>
+        <p>The agent (not the CLI) generates a dependency graph like: Checks for cycles, dangling deps, orphan nodes, and computes execution batches: Low-confidence sub-questions (&lt; 0.6) can trigger automatic web search: No API key needed -- ThinkGraph parses DuckDuckGo results directly via HTTP. This is huge for automated pipelines where you don&#x27;t want to manage search API credentials. Facts persist globally at ~/.thinkgraph/cache.json -- shared across projects and sessions.</p>
+        <p>Run synthesis 2-3 times, then vote on consistency: Output picks the Jaccard centroid -- the response with highest average word overlap: If a parent node&#x27;s answer already covers a child&#x27;s question, the child is auto-removed. Start the server: Then configure any MCP-compatible client: Seven tools are exposed: triage, validate-dag, vote, web-search, cache-get, cache-set, tokens. Your MCP client can call these directly without the CLI.</p>
+        <p>Use the A/B scorer: When synthesis context is too long, compress it: Uses TF-IDF sentence extraction to keep the 30% most important content. No embeddings, no API calls -- pure term-frequency math in stdlib Python. Here&#x27;s the budget for each stage: This means simple prompts (&lt; 200 tokens) bypass the pipeline entirely.</p>
+        <p>You never pay more than 4x, and most of the time you pay far less. Precompiled regex, LRU cache decorators, and sets for membership. It runs anywhere Python runs -- including CI runners, Docker scratch containers, and air-gapped environments.</p>
+        <p>The benchmark scores triage accuracy at 80%, compression quality at 70%, and vote consistency at 64% -- solid baselines that improve with use. Honest answer: don&#x27;t use it for simple Q&amp;A (&quot;What is the capital of France?&quot;). The triage stage catches trivial prompts and short-circuits.</p>
+        <p>Also don&#x27;t use it for creative writing -- decomposition kills flow. The entire project is MIT-licensed at github.com/Mayne-X/thinkgraph . If you want the big-picture overview first, read my introductory article .</p>
+        <p>Or just clone the repo and run python cli/thinkgraph.py triage on your hardest prompt right now. ThinkGraph forces structured thinking before guessing. Your prompts deserve a foundation, not a hallucination.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>How to install ThinkGraph for Claude Code, OpenCode, Cursor, and others How to use the CLI for step-by-step prompt decomposition How self-consistency voting catches hallucinations How web grounding fills knowledge gaps without API keys How to integrate ThinkGraph as an MCP server The installer detects OpenCode, Claude Code, Cursor, Codex, Copilot, and Gemini CLI configs and injects the appropriate adapter. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>CLI Tutorial: Decompose a Complex Prompt Let&#x27;s walk through a real example.</li>
+          <li>Also don&#x27;t use it for creative writing -- decomposition kills flow.</li>
+          <li>The entire project is MIT-licensed at github.com/Mayne-X/thinkgraph .</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/mayne-x/thinkgraph-tutorial-how-to-make-your-llm-actually-think-before-answering-3amj" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,5 +1,17 @@
 [
   {
+    "title": "ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering",
+    "date": "2026-07-01",
+    "category": "Coding & Community",
+    "summary": "In my previous article , I introduced ThinkGraph -- an open-source pipeline that forces LLMs to decompose complex prompts into atomic fact DAGs before answering. Register a plugin: ThinkGraph sets a hard ceiling of 4x the direct answer tokens . But for any prompt involving comparison, planning, analysis, or multi-step reasoning, it shines.",
+    "link": "auto/20260701-thinkgraph-tutorial-how-to-make-your-llm-actually-think-befo-33b69bc0.html",
+    "source_url": "https://dev.to/mayne-x/thinkgraph-tutorial-how-to-make-your-llm-actually-think-before-answering-3amj",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Octo: An Open-Source Platform for Human-AI Agent Collaboration",
     "date": "2026-06-30",
     "category": "Coding & Community",

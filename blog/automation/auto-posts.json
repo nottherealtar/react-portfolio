@@ -37,6 +37,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Claude in Microsoft Foundry is now generally available",
+    "date": "2026-06-29",
+    "category": "Cloud Automation",
+    "summary": "Claude in Microsoft Foundry is now generally available, hosted on Azure, giving teams a faster path from agent experimentation to production. Together, they give teams a trusted path to production AI with frontier model quality and the Azure controls they already trust. Anthropic’s Claude models bring strong reasoning, coding and enterprise capabilities that are valuable for complex technical work.",
+    "link": "auto/20260629-claude-in-microsoft-foundry-is-now-generally-available-2ed53ced.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/claude-in-microsoft-foundry-is-now-generally-available/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2025/12/2-24-Sovereignty-Blog_1_v2b-Copy-2.jpg"
+  },
+  {
     "title": "Accelerate modern Linux workloads with Azure Files",
     "date": "2026-06-29",
     "category": "Cloud Automation",

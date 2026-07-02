@@ -1,25 +1,29 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-01T19:10:05.660985+00:00",
+  "timestamp": "2026-07-02T08:24:31.035166+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 613,
-  "unseen_candidates": 600,
+  "fetched_candidates": 513,
+  "unseen_candidates": 501,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering",
-      "link": "auto/20260701-thinkgraph-tutorial-how-to-make-your-llm-actually-think-befo-33b69bc0.html",
-      "score": 123.856,
-      "source": "DEV Community",
+      "title": "Consoles continue their trend of just becoming worse PCs",
+      "link": "auto/20260701-consoles-continue-their-trend-of-just-becoming-worse-pcs-843ced66.html",
+      "score": 120.943,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
+    {
+      "source": "VG247",
+      "error": "Request failed for https://www.vg247.com/feed/: The read operation timed out"
+    },
     {
       "source": "Unreal Engine",
       "error": "Unable to parse XML for source Unreal Engine: junk after document element: line 1, column 757"

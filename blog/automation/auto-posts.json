@@ -25,6 +25,19 @@
     "hero_image": "https://assetsio.gnwcdn.com/sony-game-ownership-opinion-header.jpg?width=690&quality=85&format=jpg&auto=webp"
   },
   {
+    "title": "Meet Brain: The AI system behind Azure reliability",
+    "date": "2026-07-02",
+    "category": "Cloud Automation",
+    "summary": "Takeaway: Brain is Azure’s AI-powered cloud reliability intelligence system: an AIOps system that sits as an intelligent layer on top of Azure Resource Graph and fuses platform telemetry, AI/ML models, service dependencies, and customer impact into a single, continuously updated view of how every service, region, and workload is performing.",
+    "link": "auto/20260702-meet-brain-the-ai-system-behind-azure-reliability-9fc8df95.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/07/Brain-at-a-glance-2.jpeg"
+  },
+  {
     "title": "ThinkGraph Tutorial: How to Make Your LLM Actually Think Before Answering",
     "date": "2026-07-01",
     "category": "Coding & Community",

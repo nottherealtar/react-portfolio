@@ -1,5 +1,17 @@
 [
   {
+    "title": "Ash: ways to contact — AshJsonApi, AshGraphQL and AshTypescript",
+    "date": "2026-07-03",
+    "category": "Coding & Community",
+    "summary": "The main goal is to make integration predictable and eliminate the situation where a developer has to rewrite and test the same thing dozens of times just to achieve perfect compatibility. 😮 REST with AshJsonApi : a new approach Standard practice involves pinning down the contract between frontend and backend not only verbally but also in writing — usually via Swagger .",
+    "link": "auto/20260703-ash-ways-to-contact-ashjsonapi-ashgraphql-and-ashtypescript-2d982c31.html",
+    "source_url": "https://dev.to/adamanq/ash-ways-to-contact-ashjsonapi-ashgraphql-and-ashtypescript-c8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Sony kills game ownership and says it's all your fault",
     "date": "2026-07-02",
     "category": "Gaming News",

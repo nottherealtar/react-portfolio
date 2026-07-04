@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-03T18:38:26.227806+00:00",
+  "timestamp": "2026-07-04T08:04:00.688072+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Meet Brain: The AI system behind Azure reliability",
-      "link": "auto/20260702-meet-brain-the-ai-system-behind-azure-reliability-9fc8df95.html",
-      "score": 133.3884,
-      "source": "Microsoft Azure Blog",
+      "title": "Crack AI Testing Interview in 7 Days",
+      "link": "auto/20260704-crack-ai-testing-interview-in-7-days-7b0b99e2.html",
+      "score": 130.963,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

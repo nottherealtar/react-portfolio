@@ -1,5 +1,17 @@
 [
   {
+    "title": "Crack AI Testing Interview in 7 Days",
+    "date": "2026-07-04",
+    "category": "Coding & Community",
+    "summary": "Interviews now probe whether you can reason about probabilistic systems, define quality when there is no single correct answer, and build evaluation harnesses that catch regressions in behavior rather than in code. Q: How do you handle flaky evals caused by model non-determinism? AI testing is about measuring behavior distributions, not asserting exact values.",
+    "link": "auto/20260704-crack-ai-testing-interview-in-7-days-7b0b99e2.html",
+    "source_url": "https://dev.to/himanshuai/crack-ai-testing-interview-in-7-days-27kb",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Ash: ways to contact — AshJsonApi, AshGraphQL and AshTypescript",
     "date": "2026-07-03",
     "category": "Coding & Community",

@@ -62,6 +62,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Proving application resilience on Azure with Chaos Studio",
+    "date": "2026-07-01",
+    "category": "Cloud Automation",
+    "summary": "We’ve been hard at work making Workspaces easy to use, with broad fault support and named scenarios that mirror real outages, instead of isolated faults. How Chaos Studio Workspaces changes resilience testing Chaos Studio is Azure’s managed chaos engineering service for validating how applications behave under failure.",
+    "link": "auto/20260701-proving-application-resilience-on-azure-with-chaos-studio-b5366160.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/proving-application-resilience-on-azure-with-chaos-studio/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://opensource.microsoft.com/blog/wp-content/uploads/2026/06/word-image-98613-1.png"
+  },
+  {
     "title": "Consoles continue their trend of just becoming worse PCs",
     "date": "2026-07-01",
     "category": "Gaming & Industry",

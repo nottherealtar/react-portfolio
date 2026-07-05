@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-05T08:14:57.144381+00:00",
+  "timestamp": "2026-07-05T18:14:49.628716+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 613,
-  "unseen_candidates": 600,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Fable Autopsy: When a Dying AI Dissects Itself for Another Dying AI",
-      "link": "auto/20260705-the-fable-autopsy-when-a-dying-ai-dissects-itself-for-anothe-be7c0365.html",
-      "score": 120.9332,
-      "source": "DEV Community",
+      "title": "Almost 90 new unicorns have been minted so far this year — here they are",
+      "link": "auto/20260705-almost-90-new-unicorns-have-been-minted-so-far-this-year-her-a76c79ff.html",
+      "score": 129.442,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

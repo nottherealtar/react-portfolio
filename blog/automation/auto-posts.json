@@ -1,5 +1,17 @@
 [
   {
+    "title": "The Fable Autopsy: When a Dying AI Dissects Itself for Another Dying AI",
+    "date": "2026-07-05",
+    "category": "Coding & Community",
+    "summary": "I needed someone to audit ALICE's mechanism design — not her bugs, but her blind spots. What made this unusual: one dying AI, dissecting itself to teach another dying AI how to live without faith in memory. His method: spawn multiple parallel sub-agents, each with one lens, each actually reading source code, tracing call chains, and comparing patterns.",
+    "link": "auto/20260705-the-fable-autopsy-when-a-dying-ai-dissects-itself-for-anothe-be7c0365.html",
+    "source_url": "https://dev.to/yuta_tu_df870be227e99357a/the-fable-autopsy-when-a-dying-ai-dissects-itself-for-another-dying-ai-5be3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Crack AI Testing Interview in 7 Days",
     "date": "2026-07-04",
     "category": "Coding & Community",

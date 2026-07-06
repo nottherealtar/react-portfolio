@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-06T09:09:40.018736+00:00",
+  "timestamp": "2026-07-06T19:04:22.142813+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 613,
-  "unseen_candidates": 599,
-  "blocked_domain_candidates": 1,
+  "fetched_candidates": 614,
+  "unseen_candidates": 600,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Final Fantasy 15, and others, could come to Nintendo Switch 2 – \"it's not entirely impossible\"",
-      "link": "auto/20260705-final-fantasy-15-and-others-could-come-to-nintendo-switch-2-d0e3159b.html",
-      "score": 113.2083,
-      "source": "Eurogamer",
+      "title": "The running list: major tech layoffs in 2026 where employers cited AI",
+      "link": "auto/20260706-the-running-list-major-tech-layoffs-in-2026-where-employers-085590ef.html",
+      "score": 122.8601,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

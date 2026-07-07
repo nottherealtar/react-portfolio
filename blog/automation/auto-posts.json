@@ -1,5 +1,18 @@
 [
   {
+    "title": "What’s Next for TeamCity – CI/CD by JetBrains",
+    "date": "2026-07-07",
+    "category": "Developer Tools",
+    "summary": "We believe TeamCity is well-positioned for the evolution of CI/CD in a world with more code changes, more verification loops, more interaction between AI agents and CI/CD systems, and a stronger need for scale, reliability, and control.",
+    "link": "auto/20260707-what-s-next-for-teamcity-ci-cd-by-jetbrains-cb9c7fc6.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/07/whats-next-for-teamcity/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/whats-new-for-teamcity-social.png"
+  },
+  {
     "title": "I didn't write my n8n node's 323 operations. I scraped the docs and generated them.",
     "date": "2026-07-07",
     "category": "Coding & Community",

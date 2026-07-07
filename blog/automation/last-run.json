@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-07T08:39:50.562372+00:00",
+  "timestamp": "2026-07-07T19:15:00.761682+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 614,
-  "unseen_candidates": 600,
-  "blocked_domain_candidates": 2,
+  "unseen_candidates": 599,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I didn't write my n8n node's 323 operations. I scraped the docs and generated them.",
-      "link": "auto/20260707-i-didn-t-write-my-n8n-node-s-323-operations-i-scraped-the-do-1c774bf1.html",
-      "score": 128.9258,
-      "source": "DEV Community",
+      "title": "What’s Next for TeamCity – CI/CD by JetBrains",
+      "link": "auto/20260707-what-s-next-for-teamcity-ci-cd-by-jetbrains-cb9c7fc6.html",
+      "score": 141.4385,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

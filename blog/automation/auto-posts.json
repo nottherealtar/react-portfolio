@@ -1,5 +1,17 @@
 [
   {
+    "title": "I didn't write my n8n node's 323 operations. I scraped the docs and generated them.",
+    "date": "2026-07-07",
+    "category": "Coding & Community",
+    "summary": "This is the story of shipping a huge API surface as a solo dev by treating the node as a compiler target instead of a codebase. An n8n node describes every operation declaratively: resource options, operation options, every parameter with its type, defaults, and displayOptions controlling when it appears in the UI. That's a ~25,000-line file I would have to maintain by hand every time Holded touches their API.",
+    "link": "auto/20260707-i-didn-t-write-my-n8n-node-s-323-operations-i-scraped-the-do-1c774bf1.html",
+    "source_url": "https://dev.to/srcanton/i-didnt-write-my-n8n-nodes-323-operations-i-scraped-the-docs-and-generated-them-1pjn",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The running list: major tech layoffs in 2026 where employers cited AI",
     "date": "2026-07-06",
     "category": "Tech & Startups",

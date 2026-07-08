@@ -1,5 +1,17 @@
 [
   {
+    "title": "Applying SAST to Infrastructure as Code (Without TFSec)",
+    "date": "2026-07-08",
+    "category": "Coding & Community",
+    "summary": "TFSec is the tool most people reach for first, but it's not the only option on the OWASP Source Code Analysis Tools list . Checkov's multi-framework support (Terraform, OpenTofu, Pulumi, CloudFormation, Kubernetes) makes it a reasonable default if your org has more than one IaC tool in play. ## Demo repository The vulnerable Terraform config, the fixed version, .checkov.",
+    "link": "auto/20260708-applying-sast-to-infrastructure-as-code-without-tfsec-50054f9b.html",
+    "source_url": "https://dev.to/ikers/applying-sast-to-infrastructure-as-code-without-tfsec-4b3d",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What’s Next for TeamCity – CI/CD by JetBrains",
     "date": "2026-07-07",
     "category": "Developer Tools",

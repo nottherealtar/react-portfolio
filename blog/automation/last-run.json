@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-07T19:15:00.761682+00:00",
+  "timestamp": "2026-07-08T07:41:03.349807+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 614,
-  "unseen_candidates": 599,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 600,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What’s Next for TeamCity – CI/CD by JetBrains",
-      "link": "auto/20260707-what-s-next-for-teamcity-ci-cd-by-jetbrains-cb9c7fc6.html",
-      "score": 141.4385,
+      "title": "Shift-Left Static Code Analysis",
+      "link": "auto/20260707-shift-left-static-code-analysis-4f726ba6.html",
+      "score": 119.198,
       "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }

@@ -13,6 +13,19 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/whats-new-for-teamcity-social.png"
   },
   {
+    "title": "Shift-Left Static Code Analysis",
+    "date": "2026-07-07",
+    "category": "Developer Tools",
+    "summary": "When issues surface earlier in the cycle, your teams can adjust with far less disruption because changes are smaller, better understood, and easier to integrate while code is still being written, rather than when it’s ready for release. Static code analysis brings shift-left testing principles directly into everyday development. This allows checks to run during active development.",
+    "link": "auto/20260707-shift-left-static-code-analysis-4f726ba6.html",
+    "source_url": "https://blog.jetbrains.com/qodana/2026/07/shift-left-static-analysis/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/QD-Twitter_Facebook_LinkedIn-1200x675-1-1.png"
+  },
+  {
     "title": "I didn't write my n8n node's 323 operations. I scraped the docs and generated them.",
     "date": "2026-07-07",
     "category": "Coding & Community",

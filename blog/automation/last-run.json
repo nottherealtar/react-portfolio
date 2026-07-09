@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-08T18:42:20.009283+00:00",
+  "timestamp": "2026-07-09T08:43:17.432259+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 615,
   "unseen_candidates": 600,
-  "blocked_domain_candidates": 2,
+  "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Applying SAST to Infrastructure as Code (Without TFSec)",
-      "link": "auto/20260708-applying-sast-to-infrastructure-as-code-without-tfsec-50054f9b.html",
-      "score": 144.8903,
-      "source": "DEV Community",
+      "title": "Built to bounce back: How Azure resiliency evolved",
+      "link": "auto/20260708-built-to-bounce-back-how-azure-resiliency-evolved-22523956.html",
+      "score": 143.2224,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

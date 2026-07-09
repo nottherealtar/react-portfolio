@@ -1,5 +1,18 @@
 [
   {
+    "title": "Built to bounce back: How Azure resiliency evolved",
+    "date": "2026-07-08",
+    "category": "Cloud Automation",
+    "summary": "The platform provides deeply resilient infrastructure and increasingly intelligent capabilities, but resiliency outcomes only emerge when those are intentionally designed, aligned with sovereignty constraints, and continuously validated against real-world conditions.",
+    "link": "auto/20260708-built-to-bounce-back-how-azure-resiliency-evolved-22523956.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/built-to-bounce-back-how-azure-resiliency-evolved/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/05/CLO24-Azure-Fintech-012-scaled.jpg"
+  },
+  {
     "title": "Applying SAST to Infrastructure as Code (Without TFSec)",
     "date": "2026-07-08",
     "category": "Coding & Community",

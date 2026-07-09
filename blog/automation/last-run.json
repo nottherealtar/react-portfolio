@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-09T08:43:17.432259+00:00",
+  "timestamp": "2026-07-09T18:59:37.842668+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 615,
-  "unseen_candidates": 600,
+  "unseen_candidates": 599,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Built to bounce back: How Azure resiliency evolved",
-      "link": "auto/20260708-built-to-bounce-back-how-azure-resiliency-evolved-22523956.html",
-      "score": 143.2224,
-      "source": "Microsoft Azure Blog",
+      "title": "GitHub availability report: June 2026",
+      "link": "auto/20260708-github-availability-report-june-2026-1c059d91.html",
+      "score": 138.3153,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

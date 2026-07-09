@@ -1,5 +1,17 @@
 [
   {
+    "title": "GitHub availability report: June 2026",
+    "date": "2026-07-08",
+    "category": "Developer Platform",
+    "summary": "That number is lower than we’d hoped, because we paused the ramp for roughly a month after a stability incident on May 21 made it clear the environment wasn’t ready for more traffic. In June, we experienced six incidents that resulted in degraded performance across GitHub services. Remaining timed-out work drained by 19:59 UTC.",
+    "link": "auto/20260708-github-availability-report-june-2026-1c059d91.html",
+    "source_url": "https://github.blog/news-insights/company-news/github-availability-report-june-2026/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Built to bounce back: How Azure resiliency evolved",
     "date": "2026-07-08",
     "category": "Cloud Automation",

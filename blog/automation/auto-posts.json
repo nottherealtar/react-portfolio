@@ -1,5 +1,18 @@
 [
   {
+    "title": "Enterprise AI Agents Are Runtime Products | Focused Labs",
+    "date": "2026-07-10",
+    "category": "Coding & Community",
+    "summary": "Enterprise AI agents are runtime products. Teams get tricked thinking they bought a ‘clever model wrapper’ (a Deep Agents agent), but the real work goes on in code, network egress, credentials, traces, evals, deployment revisions, and audit receipts. That is the same argument behind the agent harness becoming the lock-in layer .",
+    "link": "auto/20260710-enterprise-ai-agents-are-runtime-products-focused-labs-13a029bd.html",
+    "source_url": "https://dev.to/focused_dot_io/enterprise-ai-agents-are-runtime-products-focused-labs-5dj",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftpk7mogm3bcdcgfofb1e.png"
+  },
+  {
     "title": "Engineering Beyond the Keystroke: Why the Future Belongs to Systems Thinkers",
     "date": "2026-07-10",
     "category": "Coding & Community",

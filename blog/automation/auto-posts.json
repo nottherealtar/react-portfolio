@@ -1,5 +1,17 @@
 [
   {
+    "title": "What Bun’s Rust Rewrite Tells Us About Rebuilding the AI Infrastructure Layer in C#",
+    "date": "2026-07-11",
+    "category": "Coding & Community",
+    "summary": "Original Chinese article: https://www.cnblogs.com/shanyou/p/21309486 Bun’s migration from Zig to Rust demonstrates a broader infrastructure trend: as software moves from experimentation into production, compiler-enforced correctness becomes more valuable than conventions that depend on developers always being careful. The broader thesis is not simply that C# can run AI workloads.",
+    "link": "auto/20260711-what-bun-s-rust-rewrite-tells-us-about-rebuilding-the-ai-inf-19fbe677.html",
+    "source_url": "https://dev.to/zhongkaifu/what-buns-rust-rewrite-tells-us-about-rebuilding-the-ai-infrastructure-layer-in-c-14ch",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Enterprise AI Agents Are Runtime Products | Focused Labs",
     "date": "2026-07-10",
     "category": "Coding & Community",

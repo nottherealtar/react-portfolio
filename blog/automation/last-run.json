@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-11T07:19:40.169121+00:00",
+  "timestamp": "2026-07-11T18:05:35.234843+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What Bun’s Rust Rewrite Tells Us About Rebuilding the AI Infrastructure Layer in C#",
-      "link": "auto/20260711-what-bun-s-rust-rewrite-tells-us-about-rebuilding-the-ai-inf-19fbe677.html",
-      "score": 132.8544,
-      "source": "DEV Community",
+      "title": "Handheld gaming PCs are cooked",
+      "link": "auto/20260711-handheld-gaming-pcs-are-cooked-98cd8efa.html",
+      "score": 125.1163,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

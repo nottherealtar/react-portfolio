@@ -62,6 +62,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Frontier models and production agents: Advancing Microsoft Foundry for the agentic era",
+    "date": "2026-07-09",
+    "category": "Cloud Automation",
+    "summary": "Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents. Together, the GPT-5.6 series gives organizations the flexibility to match model capability, cost, and performance requirements to specific business scenarios, rather than forcing every workload onto a single model.",
+    "link": "auto/20260709-frontier-models-and-production-agents-advancing-microsoft-fo-427d5a45.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/frontier-models-and-production-agents-advancing-microsoft-foundry-for-the-agentic-era/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-Infrastructure-Dark-1-scaled.jpg"
+  },
+  {
     "title": "GitHub availability report: June 2026",
     "date": "2026-07-08",
     "category": "Developer Platform",

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Frontier models and production agents: Advancing Microsoft Foundry for the agentic era | TarsOnlineCafe</title>
+  <meta name="description" content="Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents.…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260709-frontier-models-and-production-agents-advancing-microsoft-fo-427d5a45.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Frontier models and production agents: Advancing Microsoft Foundry for the agentic era">
+  <meta property="og:description" content="Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents.…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260709-frontier-models-and-production-agents-advancing-microsoft-fo-427d5a45.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Frontier models and production agents: Advancing Microsoft Foundry for the agentic era">
+  <meta name="twitter:description" content="Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents.…">
+  <meta property="og:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-Infrastructure-Dark-1-scaled.jpg">
+  <meta property="og:image:alt" content="Frontier models and production agents: Advancing Microsoft Foundry for the agentic era">
+  <meta name="twitter:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-Infrastructure-Dark-1-scaled.jpg">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Frontier models and production agents: Advancing Microsoft Foundry for the agentic era", "description": "Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents.…", "datePublished": "2026-07-09T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260709-frontier-models-and-production-agents-advancing-microsoft-fo-427d5a45.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/frontier-models-and-production-agents-advancing-microsoft-foundry-for-the-agentic-era/", "wordCount": 1880, "image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-Infrastructure-Dark-1-scaled.jpg"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-07-09</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>Frontier models and production agents: Advancing Microsoft Foundry for the agentic era</h1>
+        <p class="lede">Why Foundry is the best agent platform Microsoft Foundry is Microsoft’s end-to-end platform for building, running, governing, and distributing AI agents. Together, the GPT-5.6 series gives organizations the flexibility to match model capability, cost, and performance requirements to specific business scenarios, rather than forcing every workload onto a single model.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>AI only creates value when it shows up in real systems—systems that are reliable, observable, and aligned to business outcomes. More than 100,000 organizations are already building on Microsoft Foundry , and companies like Adobe, Telefónica, and Tata Consultancy Services are running agents in production today. At Microsoft Build, we laid out a simple promise for the agentic era: developers should be able to build an agent where they already work, run it on infrastructure they can trust, and put it in front of the people who need it—…</p>
+        <p>Today, that vision moves from roadmap to reality with three sets of updates now generally available in Microsoft Foundry: OpenAI’s latest frontier model series : GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6—each tuned to a different workload, available in Standard Global and Standard Data Zones. Asia-Pacific Data Zone , giving APAC customers a regional option to run frontier OpenAI models while keeping data processing within the region. Production agents in Foundry Agent Service, with hosted agents , toolboxes , and publishing to…</p>
+        <p>Together, these capabilities bring frontier models, production agent runtime, enterprise-grade identity, security, and compliance controls, and distribution across Microsoft 365 into a single platform—helping organizations move from experimentation to production without assembling disconnected tools and services. Foundry brings together the capabilities organizations need to move agents into production across three pillars: Build : Open and flexible across models and frameworks. Generate : Connected to enterprise data, tools, and…</p>
+        <p>Govern : Secured, managed, and optimized for long-term value. Build with any framework and model on the industry’s end-to-end AI platform Agent development starts where developers already work—in GitHub Copilot and Microsoft Visual Studio (VS) Code—with the Foundry Toolkit for VS Code and the Foundry skill handling deployment to Foundry. Whether teams build with Microsoft Agent Framework , GitHub Copilot SDK (generally available), or Claude Agent SDK, Foundry is the production destination—and it all starts with the right model.</p>
+        <p>Start with the right model for the right job An agent is only as capable as the model reasoning behind it. Today, we’re making OpenAI’s GPT-5.6 series generally available in Microsoft Foundry Models and Microsoft Foundry Agent Service: GPT-5.6 Sol delivers the most advanced reasoning capabilities yet, supporting extended reasoning, agentic workflows, and code-focused scenarios, for the most demanding enterprise workloads. GPT-5.6 Terra is a balanced model for everyday work, delivering performance competitive with GPT-5.5 at a lower…</p>
+        <p>GPT-5.6 Luna is the fastest and most affordable model in the family, making it well suited to high-volume, latency-sensitive workloads. Customers consistently tell us that access to new models matters as much as model quality. That’s why we are making GPT-5.6 available through Standard Global for all the existing 28 global regions and Standard Data Zones from day one .</p>
+        <p>It will also be available soon through Priority Processing and Provisioned, enabling customers to adopt the latest frontier AI where they’ve already built and scale. Run frontier AI where your business operates More models, in more regions, are only half of what platform expansion means. The other half is more places to run them compliantly.</p>
+        <p>This is exactly what the Asia-Pacific Data Zone delivers. Today we’re also announcing the general availability of the Asia-Pacific (APAC) Data Zone for Microsoft Foundry , enabling APAC customers to run frontier OpenAI models while keeping data processing within the Asia-Pacific regions, with no separate environment to stitch together and no waiting for capability to catch up. With Global, Data Zone, and Regional deployment options available in Foundry, organizations can align AI adoption with their sovereignty, compliance,…</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/Azure-Infrastructure-Dark-1-scaled.jpg" alt="Blue abstract waves and multi-colored shapes." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Together, these capabilities bring frontier models, production agent runtime, enterprise-grade identity, security, and compliance controls, and distribution across Microsoft 365 into a single platform—helping organizations move from experimentation to production without assembling disconnected tools and services. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>What’s new today GPT‑5.6 is generally available in Microsoft Foundry, alongside the Asia-Pacific Data Zone, and hosted agents in Foundry Agent Service.</li>
+          <li>Foundry brings together the capabilities organizations need to move agents into production across three pillars: Build : Open and flexible across models and frameworks.</li>
+          <li>Microsoft Foundry’s APAC Data Zone allows us to keep data processing regionally anchored while accessing advanced AI models at scale.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/frontier-models-and-production-agents-advancing-microsoft-foundry-for-the-agentic-era/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

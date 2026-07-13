@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Codegraph",
+    "date": "2026-07-13",
+    "category": "Coding & Community",
+    "summary": "How I Built CodeGraph: A Living Knowledge Graph That Tells You What Breaks Before You Break It Built for HACKHAZARDS '26 — powered by Neo4j AuraDB, tree-sitter, Groq LLaMA, and Next.js The Problem That Frustrated Me Every developer knows this feeling. I built CodeGraph to solve this. A codebase is inherently a graph.",
+    "link": "auto/20260713-codegraph-5d05311c.html",
+    "source_url": "https://dev.to/likitha_gujari_6352fbf376/codegraph-837",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Build Your First AI Agent in 30 Minutes: Zero to Production (2026)",
     "date": "2026-07-12",
     "category": "Coding & Community",

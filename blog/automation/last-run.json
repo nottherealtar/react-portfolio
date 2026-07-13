@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-12T18:07:50.080732+00:00",
+  "timestamp": "2026-07-13T08:27:25.054597+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 615,
-  "unseen_candidates": 599,
+  "unseen_candidates": 598,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Frontier models and production agents: Advancing Microsoft Foundry for the agentic era",
-      "link": "auto/20260709-frontier-models-and-production-agents-advancing-microsoft-fo-427d5a45.html",
-      "score": 131.1055,
-      "source": "Microsoft Azure Blog",
+      "title": "When to outsource web scraping vs build in-house (2026 framework)",
+      "link": "auto/20260713-when-to-outsource-web-scraping-vs-build-in-house-2026-framew-2a02d88b.html",
+      "score": 121.8706,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

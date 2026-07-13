@@ -1,5 +1,17 @@
 [
   {
+    "title": "When to outsource web scraping vs build in-house (2026 framework)",
+    "date": "2026-07-13",
+    "category": "Coding & Community",
+    "summary": "Before the Audit: Measuring Your Actual Maintenance Load The 2026 guide puts maintenance absorption at 20 to 40% of data-engineering capacity for programs past a few dozen sources. One that needed updates monthly or in response to anti-bot changes is high volatility.",
+    "link": "auto/20260713-when-to-outsource-web-scraping-vs-build-in-house-2026-framew-2a02d88b.html",
+    "source_url": "https://dev.to/promptcloud_services/when-to-outsource-web-scraping-vs-build-in-house-2026-framework-2aon",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Build Your First AI Agent in 30 Minutes: Zero to Production (2026)",
     "date": "2026-07-12",
     "category": "Coding & Community",

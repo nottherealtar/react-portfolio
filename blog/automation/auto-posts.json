@@ -1,5 +1,17 @@
 [
   {
+    "title": "Amazon Bedrock AgentCore Guide: Production AI Agents (2026)",
+    "date": "2026-07-14",
+    "category": "Coding & Community",
+    "summary": "Based on our analysis of production agent deployment options in April 2026, AgentCore is the most complete managed infrastructure platform available for teams building on AWS. The infrastructure challenge typically includes: Session isolation — ensuring agent sessions cannot bleed memory or context across users Long-running execution — managing agents that run for minutes or hours without timeouts killing them…",
+    "link": "auto/20260714-amazon-bedrock-agentcore-guide-production-ai-agents-2026-15edcc73.html",
+    "source_url": "https://dev.to/akaranjkar08/amazon-bedrock-agentcore-guide-production-ai-agents-2026-2gl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "When to outsource web scraping vs build in-house (2026 framework)",
     "date": "2026-07-13",
     "category": "Coding & Community",

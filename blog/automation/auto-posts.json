@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster",
+    "date": "2026-07-14",
+    "category": "Coding & Community",
+    "summary": "Meet Gubernator (or gbnt ), a \"Goldilocks\" container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass Ubuntu VMs: Decentralized Ingress & Localized Caddy Routing One of the biggest challenges in multi-host networking is how to route web traffic to containers without overloading the Manager. #devops #docker #golang #ai #pairprogramming #antigravity",
+    "link": "auto/20260714-building-a-hybrid-docker-orchestrator-in-go-the-journey-from-c4403093.html",
+    "source_url": "https://dev.to/gde/building-a-hybrid-docker-orchestrator-in-go-the-journey-from-single-vm-to-multi-node-cluster-3i7m",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Amazon Bedrock AgentCore Guide: Production AI Agents (2026)",
     "date": "2026-07-14",
     "category": "Coding & Community",

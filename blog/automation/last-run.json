@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-14T07:20:04.672759+00:00",
+  "timestamp": "2026-07-14T18:15:59.315585+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 615,
-  "unseen_candidates": 598,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Amazon Bedrock AgentCore Guide: Production AI Agents (2026)",
-      "link": "auto/20260714-amazon-bedrock-agentcore-guide-production-ai-agents-2026-15edcc73.html",
-      "score": 135.9813,
+      "title": "Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster",
+      "link": "auto/20260714-building-a-hybrid-docker-orchestrator-in-go-the-journey-from-c4403093.html",
+      "score": 140.8961,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

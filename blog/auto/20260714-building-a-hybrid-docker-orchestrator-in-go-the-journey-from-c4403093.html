@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster | TarsOnlineCafe</title>
+  <meta name="description" content="Meet Gubernator (or gbnt ), a &quot;Goldilocks&quot; container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260714-building-a-hybrid-docker-orchestrator-in-go-the-journey-from-c4403093.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster">
+  <meta property="og:description" content="Meet Gubernator (or gbnt ), a &quot;Goldilocks&quot; container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260714-building-a-hybrid-docker-orchestrator-in-go-the-journey-from-c4403093.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster">
+  <meta name="twitter:description" content="Meet Gubernator (or gbnt ), a &quot;Goldilocks&quot; container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster", "description": "Meet Gubernator (or gbnt ), a \"Goldilocks\" container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass…", "datePublished": "2026-07-14T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260714-building-a-hybrid-docker-orchestrator-in-go-the-journey-from-c4403093.html"}, "isBasedOn": "https://dev.to/gde/building-a-hybrid-docker-orchestrator-in-go-the-journey-from-single-vm-to-multi-node-cluster-3i7m", "wordCount": 684}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-07-14</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster</h1>
+        <p class="lede">Meet Gubernator (or gbnt ), a &quot;Goldilocks&quot; container orchestrator written in Go. To test the orchestrator realistically, we provisioned three Multipass Ubuntu VMs: Decentralized Ingress &amp; Localized Caddy Routing One of the biggest challenges in multi-host networking is how to route web traffic to containers without overloading the Manager. #devops #docker #golang #ai #pairprogramming #antigravity</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>What if you could combine the native simplicity of Docker Compose with the decentralized targeting and reliability of HashiCorp Nomad ? In this post, I want to share how I took Gubernator from a single-node API to a fully decentralized, multi-node VM cluster with autonomous DNS resolution and local ingress routing—all co-authored alongside Antigravity , Google DeepMind&#x27;s agentic AI pair programmer. Kubernetes is the undisputed king of container orchestration, but for small-to-medium projects, homelabs, or edge deployments, it…</p>
+        <p>Docker Swarm is simple but lacks fine-grained task scheduling constraints. Gubernator is designed to fill that sweet spot: Single Binary Portability: The same gbnt binary acts as the Central Manager (holding the centralized SQLite state) and the Worker Agents. Central SQLite with Local Cache: Workers run a local cache so that containers keep running and resolving internal routes even if connectivity to the Manager is lost.</p>
+        <p>Instead of routing all external traffic through a single ingress proxy on the Manager, we built a fully decentralized routing scheme: Decentralized DNS (CoreDNS): When a stack is deployed, Gubernator registers the domain (e.g., hello-app.gbnt ) pointing directly to the IP of the Worker VM hosting the container. Localized Ingress (Caddy): Each VM runs its own independent Caddy Ingress container. Decentralized Caddyfiles: Caddy on the Manager only manages reverse-proxy rules for containers running locally on the Manager.</p>
+        <p>Worker agents periodically poll the Manager for their assigned tasks and generate a local Caddyfile targeting only their local containers. This means if hello-app.gbnt is deployed on gbnt-worker2 ( 192.168.252.10 ): The client&#x27;s browser queries DNS, which resolves to 192.168.252.10 . The browser connects directly to Caddy on gbnt-worker2 on port 80.</p>
+        <p>Caddy proxies the request to the local container IP (e.g. Zero transit traffic touches the Manager VM. Co-authoring with Antigravity (Google DeepMind) What makes this project unique is that 100% of the Go code, GORM integrations, Flutter dashboard widgets, and cluster setups were co-authored with Antigravity , Google DeepMind&#x27;s agentic AI coding assistant.</p>
+        <p>Unlike simple autocomplete or chat windows, Antigravity acts as a pair programmer with agentic capabilities: Debugging Complex Network Behaviors: We encountered an issue where containers connected to multiple Docker networks (like bridge and gbnt-monitor-net ) had their IPs concatenated (e.g., 172.17.0.2172.19.0.7 ). Antigravity traced the container IP extraction logic, proposed a fix, and validated the parser. Infrastructure Bootstrapping: Antigravity ran Multipass commands to spin up the VMs, transfer Go binaries, configure…</p>
+        <p>Auto-Generating the Flutter Dashboard: Antigravity designed and iterated on the Flutter Web UI, implementing features like a real-time cluster topology map, live task statuses, and a settings dialog containing system metadata and version tags. By running gbnt monitor init , the Manager spins up a complete telemetry stack connected via a dedicated network gbnt-monitor-net : cAdvisor: Exposes hardware and container metrics. Loki &amp; Promtail: Aggregates logs across all nodes.</p>
+        <p>Gubernator proves that you don&#x27;t need a heavy orchestrator like Kubernetes to manage multi-host Docker deployments. Pair-programming with an agentic coder like Antigravity allowed me to focus on high-level architecture while the AI handled refactoring, cross-compilation, VM deployment, and frontend updates. If you are interested in building lightweight orchestration systems, check out the Gubernator repository and start building!</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Gubernator proves that you don&#x27;t need a heavy orchestrator like Kubernetes to manage multi-host Docker deployments. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Instead of routing all external traffic through a single ingress proxy on the Manager, we built a fully decentralized routing scheme: Decentralized DNS (CoreDNS): When a stack…</li>
+          <li>Infrastructure Bootstrapping: Antigravity ran Multipass commands to spin up the VMs, transfer Go binaries, configure authorization keys, and join the workers into the cluster…</li>
+          <li>By combining Go, SQLite, CoreDNS, and Caddy, we created a lightning-fast, decentralized orchestrator.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/gde/building-a-hybrid-docker-orchestrator-in-go-the-journey-from-single-vm-to-multi-node-cluster-3i7m" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

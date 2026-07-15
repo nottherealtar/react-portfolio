@@ -1,5 +1,17 @@
 [
   {
+    "title": "Rider 2026.2 Release Candidate Is Out!",
+    "date": "2026-07-15",
+    "category": "Developer Tools",
+    "summary": "This upcoming release opens the IDE’s own intelligence to your AI coding agents, brings GitHub Copilot in natively, and delivers a wave of performance gains across both .NET and game development. Rider 2026.2 makes debugger launch and branch switching noticeably faster, speeds up Unreal Engine indexing, and expands game development support with new project templates and professional Godot tooling.",
+    "link": "auto/20260715-rider-2026-2-release-candidate-is-out-2f2f0518.html",
+    "source_url": "https://blog.jetbrains.com/dotnet/2026/07/15/rider-2026-2-release-candidate-is-out/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "How BOLA killed my MVP (and what I wish I'd done before launch)",
     "date": "2026-07-15",
     "category": "Coding & Community",

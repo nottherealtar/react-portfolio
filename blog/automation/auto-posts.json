@@ -1,5 +1,17 @@
 [
   {
+    "title": "How BOLA killed my MVP (and what I wish I'd done before launch)",
+    "date": "2026-07-15",
+    "category": "Coding & Community",
+    "summary": "By Thursday, a user emailed me: \"Hey — why can I see someone else's projects when I change the number in the URL?\" That's how I found out I had a BOLA. What I had built (and the bug I didn't notice) I had the auth check. I explained what happened, what data was potentially visible, and what I'd done to fix it.",
+    "link": "auto/20260715-how-bola-killed-my-mvp-and-what-i-wish-i-d-done-before-launc-f35ce5f3.html",
+    "source_url": "https://dev.to/alejandxr/how-bola-killed-my-mvp-and-what-i-wish-id-done-before-launch-4hp3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Building a Hybrid Docker Orchestrator in Go: The Journey from Single VM to Multi-Node Cluster",
     "date": "2026-07-14",
     "category": "Coding & Community",

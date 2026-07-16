@@ -1,5 +1,17 @@
 [
   {
+    "title": "Claude Opus 4.6 vs GPT-5.3: Which AI Model Actually Wins in 2026?",
+    "date": "2026-07-16",
+    "category": "Coding & Community",
+    "summary": "We spent two weeks running over 50 structured tests across coding, writing, reasoning, creative tasks, and real business workflows. Strengths: Extended thinking, agentic coding, nuanced writing, instruction following API pricing: $15/MTok input, $75/MTok output Key feature: Claude Code with subagents, skills, and tool use Strengths: Multimodal reasoning, speed, plugin ecosystem, image generation API pricing:…",
+    "link": "auto/20260716-claude-opus-4-6-vs-gpt-5-3-which-ai-model-actually-wins-in-2-9acf8aaa.html",
+    "source_url": "https://dev.to/akaranjkar08/claude-opus-46-vs-gpt-53-which-ai-model-actually-wins-in-2026-3810",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Rider 2026.2 Release Candidate Is Out!",
     "date": "2026-07-15",
     "category": "Developer Tools",

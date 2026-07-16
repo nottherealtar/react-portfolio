@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-15T18:19:12.406970+00:00",
+  "timestamp": "2026-07-16T07:31:29.818706+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 615,
+  "fetched_candidates": 616,
   "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Rider 2026.2 Release Candidate Is Out!",
-      "link": "auto/20260715-rider-2026-2-release-candidate-is-out-2f2f0518.html",
-      "score": 146.4014,
-      "source": "JetBrains Blog",
+      "title": "Claude Opus 4.6 vs GPT-5.3: Which AI Model Actually Wins in 2026?",
+      "link": "auto/20260716-claude-opus-4-6-vs-gpt-5-3-which-ai-model-actually-wins-in-2-9acf8aaa.html",
+      "score": 135.9245,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

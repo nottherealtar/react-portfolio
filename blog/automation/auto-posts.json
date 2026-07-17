@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "PhpStorm 2026.2 is Now Out",
+    "date": "2026-07-17",
+    "category": "Developer Tools",
+    "summary": "This version advances PhpStorm as a platform for your preferred coding agents, models, and AI subscriptions, improves PHP and Laravel support, and delivers productivity gains for working with Git repositories, databases, and the built-in terminal. PhpStorm 2026.2 adds native support for more third-party AI providers and gives coding agents even greater access to the IDE’s deterministic features.",
+    "link": "auto/20260717-phpstorm-2026-2-is-now-out-3574b158.html",
+    "source_url": "https://blog.jetbrains.com/phpstorm/2026/07/phpstorm-2026-2-is-now-out/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/PS-releases-BlogFeatured-1280x720-1-2.png"
+  },
+  {
     "title": "Claude Opus 4.6 vs GPT-5.3: Which AI Model Actually Wins in 2026?",
     "date": "2026-07-16",
     "category": "Coding & Community",

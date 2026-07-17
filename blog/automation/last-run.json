@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-17T07:28:41.006260+00:00",
+  "timestamp": "2026-07-17T18:16:24.984838+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Turning a System of Record into an AI Agent: Building MCP Tools on Azure",
-      "link": "auto/20260717-turning-a-system-of-record-into-an-ai-agent-building-mcp-too-90c2e4c0.html",
-      "score": 136.8502,
-      "source": "DEV Community",
+      "title": "PhpStorm 2026.2 is Now Out",
+      "link": "auto/20260717-phpstorm-2026-2-is-now-out-3574b158.html",
+      "score": 139.4375,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

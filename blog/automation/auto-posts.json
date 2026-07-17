@@ -1,5 +1,17 @@
 [
   {
+    "title": "Turning a System of Record into an AI Agent: Building MCP Tools on Azure",
+    "date": "2026-07-17",
+    "category": "Coding & Community",
+    "summary": "That means an AI agent with safe, read-only access to a backend system of record, exposed as discrete tools the model can call. The agent should see many small, well-described tools — \"list records\", \"aggregate by category\", \"record change history\" — not one giant \"query the system\" tool. Step 3 — Describe the tools as OpenAPI The agent needs a tool schema per operation.",
+    "link": "auto/20260717-turning-a-system-of-record-into-an-ai-agent-building-mcp-too-90c2e4c0.html",
+    "source_url": "https://dev.to/vignesh_athiappan_818c9e0/turning-a-system-of-record-into-an-ai-agent-building-mcp-tools-on-azure-291f",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Claude Opus 4.6 vs GPT-5.3: Which AI Model Actually Wins in 2026?",
     "date": "2026-07-16",
     "category": "Coding & Community",

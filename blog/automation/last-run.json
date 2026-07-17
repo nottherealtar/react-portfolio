@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-16T18:18:54.386167+00:00",
+  "timestamp": "2026-07-17T07:28:41.006260+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "CLion 2026.2 Is Here",
-      "link": "auto/20260716-clion-2026-2-is-here-5f594109.html",
-      "score": 138.0571,
-      "source": "JetBrains Blog",
+      "title": "Turning a System of Record into an AI Agent: Building MCP Tools on Azure",
+      "link": "auto/20260717-turning-a-system-of-record-into-an-ai-agent-building-mcp-too-90c2e4c0.html",
+      "score": 136.8502,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

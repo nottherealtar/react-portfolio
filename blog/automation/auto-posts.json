@@ -25,6 +25,18 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/PS-releases-BlogFeatured-1280x720-1-2.png"
   },
   {
+    "title": "What’s fixed in IntelliJ IDEA 2026.2",
+    "date": "2026-07-16",
+    "category": "Developer Tools",
+    "summary": "Note that some of these improvements are planned for the IntelliJ IDEA 2026.2.1 update. See YouTrack issue IDEA-390826 for the full list of improvements. This resolves a long-standing feature request and makes it easier to work with technical documentation, articles, and other reference-heavy content directly in the IDE.",
+    "link": "auto/20260716-what-s-fixed-in-intellij-idea-2026-2-2dcf4123.html",
+    "source_url": "https://blog.jetbrains.com/idea/2026/07/whats-fixed-intellij-idea-2026-2/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "GoLand 2026.2 Is Now Available!",
     "date": "2026-07-16",
     "category": "Developer Tools",

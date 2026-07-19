@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "From Side Project to Production Tool: What 8 Releases of tfdrift Taught Me About Building DevOps Tooling",
+    "date": "2026-07-19",
+    "category": "Coding & Community",
+    "summary": "Incremental scanning changed everything This was the most recent addition and probably the most impactful. For a repo with 20 workspaces, that meant 20 terraform plan calls even if nothing had changed since the last scan. But even a rough number changes the conversation from \"someone changed something\" to \"someone's change costs us $304 a month.",
+    "link": "auto/20260719-from-side-project-to-production-tool-what-8-releases-of-tfdr-afb13fbd.html",
+    "source_url": "https://dev.to/sudarshan_thakur_1e141b99/from-side-project-to-production-tool-what-8-releases-of-tfdrift-taught-me-about-building-devops-30m8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Turning a System of Record into an AI Agent: Building MCP Tools on Azure",
     "date": "2026-07-17",
     "category": "Coding & Community",

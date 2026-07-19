@@ -1,5 +1,17 @@
 [
   {
+    "title": "n8n Salesforce Node: Automate CRM Records, Leads, and Opportunities (Free Workflow JSON)",
+    "date": "2026-07-19",
+    "category": "Coding & Community",
+    "summary": "Salesforce is the world's most-used CRM, and if you're running workflows that touch leads, contacts, accounts, or opportunities, the n8n Salesforce node can automate the tedious parts — data entry, record syncing, pipeline updates, and alert routing — without a custom API integration or an expensive middleware tool. The n8n node uses API names everywhere.",
+    "link": "auto/20260719-n8n-salesforce-node-automate-crm-records-leads-and-opportuni-46e33965.html",
+    "source_url": "https://dev.to/pirateprentice/n8n-salesforce-node-automate-crm-records-leads-and-opportunities-free-workflow-json-4lag",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Turning a System of Record into an AI Agent: Building MCP Tools on Azure",
     "date": "2026-07-17",
     "category": "Coding & Community",

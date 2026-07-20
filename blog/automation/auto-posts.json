@@ -1,5 +1,17 @@
 [
   {
+    "title": "We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud",
+    "date": "2026-07-20",
+    "category": "Coding & Community",
+    "summary": "Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says \"I got 47 of these 50 lines, here are the 3 I could not resolve\" saves real hours. The pipeline was the fun part.",
+    "link": "auto/20260720-we-built-an-agent-that-turns-messy-rfq-emails-into-priced-qu-dc776ba9.html",
+    "source_url": "https://dev.to/johnughiovhe/we-built-an-agent-that-turns-messy-rfq-emails-into-priced-quotes-and-shipped-it-on-alibaba-cloud-2oip",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Mackerel's Log Feature Just Opened in Beta — Here's What It Takes to Wire It Into an OTLP Pipeline",
     "date": "2026-07-20",
     "category": "Coding & Community",

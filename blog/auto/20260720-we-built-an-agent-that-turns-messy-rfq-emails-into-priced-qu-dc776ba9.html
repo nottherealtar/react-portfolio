@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud | TarsOnlineCafe</title>
+  <meta name="description" content="Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says &quot;I…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260720-we-built-an-agent-that-turns-messy-rfq-emails-into-priced-qu-dc776ba9.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud">
+  <meta property="og:description" content="Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says &quot;I…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260720-we-built-an-agent-that-turns-messy-rfq-emails-into-priced-qu-dc776ba9.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud">
+  <meta name="twitter:description" content="Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says &quot;I…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud", "description": "Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says \"I…", "datePublished": "2026-07-20T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260720-we-built-an-agent-that-turns-messy-rfq-emails-into-priced-qu-dc776ba9.html"}, "isBasedOn": "https://dev.to/johnughiovhe/we-built-an-agent-that-turns-messy-rfq-emails-into-priced-quotes-and-shipped-it-on-alibaba-cloud-2oip", "wordCount": 1323}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-07-20</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud</h1>
+        <p class="lede">Someone on the sales desk reads it, works out which catalog part each line actually refers to, checks pricing, and types up a quote. An agent that says &quot;I got 47 of these 50 lines, here are the 3 I could not resolve&quot; saves real hours. The pipeline was the fun part.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Every distributor we spoke to has the same quiet bottleneck, and none of them call it a problem. A request for quote lands in a shared inbox. More often it is three lines of text from someone&#x27;s phone, or a PDF that was scanned at an angle.</p>
+        <p>A busy desk does this thirty or forty times a day. It is slow, it is boring, and it is exactly the kind of work where a tired person on a Friday afternoon quotes the wrong bolt and nobody notices until the shipment arrives. We spent three weeks building Distill.ai to do that job.</p>
+        <p>This is what we learned, including the parts that went badly. From there a seven stage pipeline runs: Parse cleans the document into text. Extract pulls out the individual line items, quantities, and specs.</p>
+        <p>Classify works out what kind of request this is. Score attaches a confidence value to every match. It is what happens when the model is unsure.</p>
+        <p>Any line that scores below a 0.70 match threshold does not get quoted. It gets flagged with a reason and routed to a human review queue. An agent that is confidently wrong 5% of the time is worse than useless in procurement, because someone has to check all 100% of the output anyway.</p>
+        <p>We used two models from Alibaba Cloud Model Studio: Qwen-Plus for extraction and classification, including tool calling text-embedding-v4 for the 1024 dimension embeddings behind catalog matching Model Studio exposes an OpenAI-compatible endpoint, which mattered more than we expected. Our provider layer is a thin fetch wrapper, and switching models is a config change rather than a rewrite: The embeddings go into Postgres with pgvector, so catalog matching is a similarity search against real SKU rows rather than keyword guessing. &quot;M8…</p>
+        <p>One deliberate choice: we deployed in Singapore (ap-southeast-1) specifically to sit next to the Model Studio endpoint. On a pipeline that makes several model calls per request, the round trips add up. A NestJS modular monolith in TypeScript, split into two processes: API takes the request, validates it, persists it, and enqueues a job Worker consumes from Redis via BullMQ and runs all seven stages Splitting them matters because parsing a 40 page PDF and calling a model six times is not something you do inside an HTTP request.</p>
+        <p>The API answers immediately and the browser watches progress over Server-Sent Events, so you see each stage light up in real time instead of staring at a spinner. Everything is containerized: api, worker, client (React and Vite behind Nginx), Postgres with pgvector, and Redis. The whole thing runs on a single Alibaba Cloud ECS instance via docker-compose, with Caddy in front for TLS.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>From there a seven stage pipeline runs: Parse cleans the document into text. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>We spent three weeks building Distill.ai to do that job.</li>
+          <li>It is what happens when the model is unsure.</li>
+          <li>The whole thing runs on a single Alibaba Cloud ECS instance via docker-compose, with Caddy in front for TLS.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/johnughiovhe/we-built-an-agent-that-turns-messy-rfq-emails-into-priced-quotes-and-shipped-it-on-alibaba-cloud-2oip" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-19T18:06:46.110901+00:00",
+  "timestamp": "2026-07-20T08:17:31.074166+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 598,
+  "unseen_candidates": 599,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "From Side Project to Production Tool: What 8 Releases of tfdrift Taught Me About Building DevOps Tooling",
-      "link": "auto/20260719-from-side-project-to-production-tool-what-8-releases-of-tfdr-afb13fbd.html",
-      "score": 121.9378,
+      "title": "Mackerel's Log Feature Just Opened in Beta — Here's What It Takes to Wire It Into an OTLP Pipeline",
+      "link": "auto/20260720-mackerel-s-log-feature-just-opened-in-beta-here-s-what-it-ta-6e6f0c46.html",
+      "score": 135.9423,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

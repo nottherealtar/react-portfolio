@@ -1,5 +1,17 @@
 [
   {
+    "title": "Mackerel's Log Feature Just Opened in Beta — Here's What It Takes to Wire It Into an OTLP Pipeline",
+    "date": "2026-07-20",
+    "category": "Coding & Community",
+    "summary": "Mackerel — Hatena's Japan-origin observability platform — opened its log feature as public beta on July 16, 2026 . No platform in this comparison is framed as superior to another; each fits a different context, and the goal here is documenting what's actually supported, not ranking who's \"better.",
+    "link": "auto/20260720-mackerel-s-log-feature-just-opened-in-beta-here-s-what-it-ta-6e6f0c46.html",
+    "source_url": "https://dev.to/aws-builders/mackerels-log-feature-just-opened-in-beta-heres-what-it-takes-to-wire-it-into-an-otlp-pipeline-888",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "n8n Salesforce Node: Automate CRM Records, Leads, and Opportunities (Free Workflow JSON)",
     "date": "2026-07-19",
     "category": "Coding & Community",

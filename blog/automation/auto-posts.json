@@ -13,6 +13,19 @@
     "hero_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blta3f85503204169fc/696547b565f0535b7c308465/bryant2026headshot.png?width=100&auto=webp&quality=80&disable=upscale"
   },
   {
+    "title": "\"Built for that world doesn't mean built to require it\": Unity reveal their next game engine while walking a careful line around generative AI",
+    "date": "2026-07-21",
+    "category": "Gaming & PC",
+    "summary": "Epic are touting similar integrations with Unreal Engine 6 , but Unity aren't pushing the idea as hard as Epic. \"It's true that game creation is evolving—teams of creators and coding agents are increasingly working side by side, and Unity 7 is genuinely built for that world,\" Smith told Game Developer.",
+    "link": "auto/20260721-built-for-that-world-doesn-t-mean-built-to-require-it-unity-83ee4d54.html",
+    "source_url": "https://www.rockpapershotgun.com/built-for-that-world-doesnt-mean-built-to-require-it-unity-reveal-their-next-game-engine-while-walking-a-careful-line-around-generative-ai",
+    "source_name": "Rock Paper Shotgun",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://assetsio.gnwcdn.com/Unity7.jpg?width=690&quality=85&format=jpg&auto=webp"
+  },
+  {
     "title": "We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud",
     "date": "2026-07-20",
     "category": "Coding & Community",

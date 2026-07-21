@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-21T07:42:15.439085+00:00",
+  "timestamp": "2026-07-21T18:39:09.142295+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 600,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Unity unveils Unity 7 roadmap with update path that won't break your build",
-      "link": "auto/20260721-unity-unveils-unity-7-roadmap-with-update-path-that-won-t-br-1cb47e71.html",
-      "score": 125.3702,
-      "source": "Game Developer",
+      "title": "\"Built for that world doesn't mean built to require it\": Unity reveal their next game engine while walking a careful line around generative AI",
+      "link": "auto/20260721-built-for-that-world-doesn-t-mean-built-to-require-it-unity-83ee4d54.html",
+      "score": 125.4047,
+      "source": "Rock Paper Shotgun",
       "text_engine": "embedding-mmr"
     }
   ],

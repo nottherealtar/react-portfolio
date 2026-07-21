@@ -1,5 +1,18 @@
 [
   {
+    "title": "Unity unveils Unity 7 roadmap with update path that won't break your build",
+    "date": "2026-07-21",
+    "category": "Game Development",
+    "summary": "It's pitched as \"a new CLI and public API\" that lets artists, producers, and other developers \"validate assets, push builds, and collaborate from their own tools\" without full access to the Unity editor. \"It's true that game creation is evolving—teams of creators and coding agents are increasingly working side by side, and Unity 7 is genuinely built for that world,\" he said.",
+    "link": "auto/20260721-unity-unveils-unity-7-roadmap-with-update-path-that-won-t-br-1cb47e71.html",
+    "source_url": "https://www.gamedeveloper.com/programming/unity-unveils-unity-7-roadmap-with-update-path-that-won-t-break-your-build",
+    "source_name": "Game Developer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blta3f85503204169fc/696547b565f0535b7c308465/bryant2026headshot.png?width=100&auto=webp&quality=80&disable=upscale"
+  },
+  {
     "title": "We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud",
     "date": "2026-07-20",
     "category": "Coding & Community",

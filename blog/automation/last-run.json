@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-20T19:05:41.988146+00:00",
+  "timestamp": "2026-07-21T07:42:15.439085+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "We built an agent that turns messy RFQ emails into priced quotes, and shipped it on Alibaba Cloud",
-      "link": "auto/20260720-we-built-an-agent-that-turns-messy-rfq-emails-into-priced-qu-dc776ba9.html",
-      "score": 136.8823,
-      "source": "DEV Community",
+      "title": "Unity unveils Unity 7 roadmap with update path that won't break your build",
+      "link": "auto/20260721-unity-unveils-unity-7-roadmap-with-update-path-that-won-t-br-1cb47e71.html",
+      "score": 125.3702,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],

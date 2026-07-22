@@ -1,5 +1,18 @@
 [
   {
+    "title": "Rider 2026.2: IDE Intelligence for AI Agents, Faster Performance, and Spectacular Game Dev Updates",
+    "date": "2026-07-22",
+    "category": "Developer Tools",
+    "summary": "Bring Rider’s intelligence to your AI agents Rider 2026.2 connects coding agents directly to the IDE’s coverage data, profiler insights, refactoring engine, and framework-specific guidance, so they find context faster and make safer changes with less guesswork and token waste. Game-aware Unreal Engine skills for UE C++ authoring, live debugging, and test authoring.",
+    "link": "auto/20260722-rider-2026-2-ide-intelligence-for-ai-agents-faster-performan-fdbbbfc3.html",
+    "source_url": "https://blog.jetbrains.com/dotnet/2026/07/22/rider-2026-2-release/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/RD-262-Skills-Manager.jpg"
+  },
+  {
     "title": "OpenAI evaluation agent hacks Hugging Face as US safety APIs block the response",
     "date": "2026-07-22",
     "category": "Coding & Community",

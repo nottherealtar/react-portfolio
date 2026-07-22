@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-21T18:39:09.142295+00:00",
+  "timestamp": "2026-07-22T07:42:33.148477+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 601,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "\"Built for that world doesn't mean built to require it\": Unity reveal their next game engine while walking a careful line around generative AI",
-      "link": "auto/20260721-built-for-that-world-doesn-t-mean-built-to-require-it-unity-83ee4d54.html",
-      "score": 125.4047,
-      "source": "Rock Paper Shotgun",
+      "title": "OpenAI evaluation agent hacks Hugging Face as US safety APIs block the response",
+      "link": "auto/20260722-openai-evaluation-agent-hacks-hugging-face-as-us-safety-apis-f83659b5.html",
+      "score": 113.7982,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

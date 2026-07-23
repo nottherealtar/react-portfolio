@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-23T07:44:12.901710+00:00",
+  "timestamp": "2026-07-23T18:22:31.945000+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Copilot vs. raw API access: What are you actually paying for?",
-      "link": "auto/20260722-copilot-vs-raw-api-access-what-are-you-actually-paying-for-b8eb1fb9.html",
-      "score": 138.3609,
-      "source": "GitHub Blog",
+      "title": "We Don’t Have a Software Engineering Problem. We Have a Platform Engineering Problem.",
+      "link": "auto/20260723-we-don-t-have-a-software-engineering-problem-we-have-a-platf-972b9bca.html",
+      "score": 148.9472,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

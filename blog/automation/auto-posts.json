@@ -1,5 +1,17 @@
 [
   {
+    "title": "We Don’t Have a Software Engineering Problem. We Have a Platform Engineering Problem.",
+    "date": "2026-07-23",
+    "category": "Coding & Community",
+    "summary": "Because before anyone could write a single line of business logic, my team had to re-decide a dozen things our company should have settled years ago . I wanted to build the new application — eventually a microfrontend inside a larger enterprise platform — but I didn't want to write most of it myself. It's a platform engineering problem.",
+    "link": "auto/20260723-we-don-t-have-a-software-engineering-problem-we-have-a-platf-972b9bca.html",
+    "source_url": "https://dev.to/sagar_jha_9602020718acbde/we-dont-have-a-software-engineering-problem-we-have-a-platform-engineering-problem-1bm1",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Rider 2026.2: IDE Intelligence for AI Agents, Faster Performance, and Spectacular Game Dev Updates",
     "date": "2026-07-22",
     "category": "Developer Tools",

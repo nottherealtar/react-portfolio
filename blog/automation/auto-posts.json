@@ -26,6 +26,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmp2cc89ailinqo4vuiww.png"
   },
   {
+    "title": "Copilot vs. raw API access: What are you actually paying for?",
+    "date": "2026-07-22",
+    "category": "Developer Platform",
+    "summary": "Raw API access is for systems you own Direct API access is the right foundation when you are building a product feature, an internal agent platform, an evaluation harness, or an automation pipeline. You control the prompts, retrieval, routing, retries, logs, security model, and billing.",
+    "link": "auto/20260722-copilot-vs-raw-api-access-what-are-you-actually-paying-for-b8eb1fb9.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Unity unveils Unity 7 roadmap with update path that won't break your build",
     "date": "2026-07-21",
     "category": "Game Development",

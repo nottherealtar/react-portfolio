@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Code Coverage: How to Measure It, Understand the Metrics, and Improve Your Tests",
+    "date": "2026-07-23",
+    "category": "Developer Tools",
+    "summary": "Code coverage is one of those metrics that every development team talks about but few use to its full potential. Code Coverage measures the percentage of code executed during testing. For example, a test suite might execute 95% of the lines in a payment module, giving high Line Coverage.",
+    "link": "auto/20260723-code-coverage-how-to-measure-it-understand-the-metrics-and-i-90f21469.html",
+    "source_url": "https://blog.jetbrains.com/qodana/2026/07/code-coverage-tests/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/07/QD-social-BlogFeatured-1280x720-1.png"
+  },
+  {
     "title": "Rider 2026.2: IDE Intelligence for AI Agents, Faster Performance, and Spectacular Game Dev Updates",
     "date": "2026-07-22",
     "category": "Developer Tools",

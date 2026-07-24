@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-23T18:22:31.945000+00:00",
+  "timestamp": "2026-07-24T07:41:37.385039+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 602,
+  "unseen_candidates": 603,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "We Don’t Have a Software Engineering Problem. We Have a Platform Engineering Problem.",
-      "link": "auto/20260723-we-don-t-have-a-software-engineering-problem-we-have-a-platf-972b9bca.html",
-      "score": 148.9472,
-      "source": "DEV Community",
+      "title": "Code Coverage: How to Measure It, Understand the Metrics, and Improve Your Tests",
+      "link": "auto/20260723-code-coverage-how-to-measure-it-understand-the-metrics-and-i-90f21469.html",
+      "score": 129.7521,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

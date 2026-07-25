@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-24T18:44:28.770846+00:00",
+  "timestamp": "2026-07-25T07:27:47.199099+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 601,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Resident Evil 4 Has Sold More Than Twice As Much As Any Other Current-Gen Remake",
-      "link": "auto/20260724-resident-evil-4-has-sold-more-than-twice-as-much-as-any-othe-403d6428.html",
-      "score": 130.7953,
-      "source": "GameSpot",
+      "title": "AI Agent Security Audit Checklist: 8 Critical Tests for Production Deployments",
+      "link": "auto/20260725-ai-agent-security-audit-checklist-8-critical-tests-for-produ-caffd7d5.html",
+      "score": 141.8434,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

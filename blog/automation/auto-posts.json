@@ -1,5 +1,17 @@
 [
   {
+    "title": "AI Agent Security Audit Checklist: 8 Critical Tests for Production Deployments",
+    "date": "2026-07-25",
+    "category": "Coding & Community",
+    "summary": "Here, we distill that experience into a practical, actionable checklist — 8 tests every security team should run before putting AI agents into production. MCP Python SDK: 43 instances of AGT-TOOL-NO-READONLY Semantic Kernel (Microsoft): 2 instances Also check for tool-level permission enforcement: readOnlyHint is enforced at the transport/runtime layer, not just declared in the schema Each tool call is validated…",
+    "link": "auto/20260725-ai-agent-security-audit-checklist-8-critical-tests-for-produ-caffd7d5.html",
+    "source_url": "https://dev.to/correctover_15/ai-agent-security-audit-checklist-8-critical-tests-for-production-deployments-448o",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Resident Evil 4 Has Sold More Than Twice As Much As Any Other Current-Gen Remake",
     "date": "2026-07-24",
     "category": "Gaming News",

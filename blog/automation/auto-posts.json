@@ -1,5 +1,17 @@
 [
   {
+    "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
+    "date": "2026-07-25",
+    "category": "Coding & Community",
+    "summary": "I know what managed Kubernetes costs at scale. In my homelab, I can delete the CNI and watch the cluster melt. The Failures (And What Each One Taught Me) Failure 1: I Burned 3 SD Cards in 6 Weeks My first cluster booted from 64GB SanDisk Ultra SD cards.",
+    "link": "auto/20260725-i-run-bare-metal-kubernetes-on-200-of-scrap-hardware-and-why-1323b5f5.html",
+    "source_url": "https://dev.to/le_beltagy/i-run-bare-metal-kubernetes-on-200-of-scrap-hardware-and-why-i-burned-3-sd-cards-learning-34cb",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "AI Agent Security Audit Checklist: 8 Critical Tests for Production Deployments",
     "date": "2026-07-25",
     "category": "Coding & Community",

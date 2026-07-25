@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-25T07:27:47.199099+00:00",
+  "timestamp": "2026-07-25T18:06:22.993683+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 600,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "AI Agent Security Audit Checklist: 8 Critical Tests for Production Deployments",
-      "link": "auto/20260725-ai-agent-security-audit-checklist-8-critical-tests-for-produ-caffd7d5.html",
-      "score": 141.8434,
+      "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
+      "link": "auto/20260725-i-run-bare-metal-kubernetes-on-200-of-scrap-hardware-and-why-1323b5f5.html",
+      "score": 118.9459,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

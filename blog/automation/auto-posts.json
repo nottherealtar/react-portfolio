@@ -13,6 +13,18 @@
     "hero_image": "https://techcrunch.com/wp-content/uploads/2021/08/bellan-rebecca-contributor-copy.jpg?w=150"
   },
   {
+    "title": "How to Build a Platform Engineering Team & Internal Developer Portal: Lessons from Modern Engineering Organizations",
+    "date": "2026-07-26",
+    "category": "Coding & Community",
+    "summary": "This article walks through how I'd approach building a platform engineering team and an internal developer portal from the ground up. As organizations grow, engineering teams often experience the same challenges: Developers wait days for cloud resources. That's where platform engineering delivers value—by creating reusable capabilities that every team can consume.",
+    "link": "auto/20260726-how-to-build-a-platform-engineering-team-internal-developer-f19ecb91.html",
+    "source_url": "https://dev.to/joshua_dyson/how-to-build-a-platform-engineering-team-internal-developer-portal-lessons-from-modern-40l3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
     "date": "2026-07-25",
     "category": "Coding & Community",

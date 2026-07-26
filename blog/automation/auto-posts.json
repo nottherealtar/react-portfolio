@@ -1,5 +1,18 @@
 [
   {
+    "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+    "date": "2026-07-26",
+    "category": "Tech & Startups",
+    "summary": "Monday.com, the Tel Aviv-based work management software company known for its colorful, customizable project-tracking boards, this week became the latest tech company to cite AI as a factor in job cuts.",
+    "link": "auto/20260726-monday-com-is-the-latest-tech-company-to-blame-ai-for-layoff-a43cd096.html",
+    "source_url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://techcrunch.com/wp-content/uploads/2021/08/bellan-rebecca-contributor-copy.jpg?w=150"
+  },
+  {
     "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
     "date": "2026-07-25",
     "category": "Coding & Community",

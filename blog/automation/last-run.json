@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-25T18:06:22.993683+00:00",
+  "timestamp": "2026-07-26T07:45:24.169678+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 601,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
-      "link": "auto/20260725-i-run-bare-metal-kubernetes-on-200-of-scrap-hardware-and-why-1323b5f5.html",
-      "score": 118.9459,
-      "source": "DEV Community",
+      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "link": "auto/20260726-monday-com-is-the-latest-tech-company-to-blame-ai-for-layoff-a43cd096.html",
+      "score": 126.2124,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

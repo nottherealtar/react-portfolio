@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-27T08:45:59.323241+00:00",
+  "timestamp": "2026-07-27T18:45:07.867236+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "007 First Light's first major patch is here – and it's a doozy if you're playing on PS5",
-      "link": "auto/20260726-007-first-light-s-first-major-patch-is-here-and-it-s-a-doozy-cf816a83.html",
-      "score": 128.1353,
-      "source": "Eurogamer",
+      "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
+      "link": "auto/20260727-mcpradar-a-security-scanner-built-for-the-mcp-ecosystem-publ-123bb632.html",
+      "score": 133.9125,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

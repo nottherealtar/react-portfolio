@@ -1,5 +1,17 @@
 [
   {
+    "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
+    "date": "2026-07-27",
+    "category": "Coding & Community",
+    "summary": "MCPRadar isn't a single-purpose linter — it looks at an MCP server from several angles: Protocol inspection — enumerates tools, prompts, resources, and templates the server exposes, and checks server instructions for suspicious content.",
+    "link": "auto/20260727-mcpradar-a-security-scanner-built-for-the-mcp-ecosystem-publ-123bb632.html",
+    "source_url": "https://dev.to/yatuk/mcpradar-a-security-scanner-built-for-the-mcp-ecosystem-published-true-tags-mcp-security-ai-2pil",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
     "date": "2026-07-26",
     "category": "Tech & Startups",

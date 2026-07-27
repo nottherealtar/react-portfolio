@@ -25,6 +25,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "007 First Light's first major patch is here – and it's a doozy if you're playing on PS5",
+    "date": "2026-07-26",
+    "category": "Gaming News",
+    "summary": "\"From crash fixes and clipping issues to infamous achievement unlock bugs, this update demonstrates our team's commitment to refining the 007 First Light experience,\" the team explained. Fixed the \"Closing Time\" challenge (as part of the “Knightfall” mission) not completing when shutters were shot instead of hacked. Fixed an issue with the TacSim introduction challenge never completing.",
+    "link": "auto/20260726-007-first-light-s-first-major-patch-is-here-and-it-s-a-doozy-cf816a83.html",
+    "source_url": "https://www.eurogamer.net/007-first-light-first-major-patch-details",
+    "source_name": "Eurogamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://assetsio.gnwcdn.com/James-Bond-looks-sad-in-007-First-Light.jpg?width=690&quality=85&format=jpg&auto=webp"
+  },
+  {
     "title": "I Run Bare-Metal Kubernetes on $200 of Scrap Hardware (And Why I Burned 3 SD Cards Learning)",
     "date": "2026-07-25",
     "category": "Coding & Community",

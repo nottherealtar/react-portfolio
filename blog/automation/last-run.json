@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-26T18:11:23.122145+00:00",
+  "timestamp": "2026-07-27T08:45:59.323241+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 599,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How to Build a Platform Engineering Team & Internal Developer Portal: Lessons from Modern Engineering Organizations",
-      "link": "auto/20260726-how-to-build-a-platform-engineering-team-internal-developer-f19ecb91.html",
-      "score": 146.9607,
-      "source": "DEV Community",
+      "title": "007 First Light's first major patch is here – and it's a doozy if you're playing on PS5",
+      "link": "auto/20260726-007-first-light-s-first-major-patch-is-here-and-it-s-a-doozy-cf816a83.html",
+      "score": 128.1353,
+      "source": "Eurogamer",
       "text_engine": "embedding-mmr"
     }
   ],

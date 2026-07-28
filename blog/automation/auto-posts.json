@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Disrupting supply chain attacks on npm and GitHub Actions",
+    "date": "2026-07-28",
+    "category": "Developer Platform",
+    "summary": "In the past year, there’s been a pattern of supply chain attacks that target weaknesses in package repositories and CI/CD systems to quickly spread malware to hundreds of open source projects. Improvements made to npm and GitHub Actions in the past few months have been focused on cutting off specific, common techniques and providing ways for customers to identify and respond to these attacks.",
+    "link": "auto/20260728-disrupting-supply-chain-attacks-on-npm-and-github-actions-37c0e3e1.html",
+    "source_url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
     "date": "2026-07-27",
     "category": "Coding & Community",

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-28T07:46:56.246738+00:00",
+  "timestamp": "2026-07-28T18:43:15.304883+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 600,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Series Week 27/52 — Zero Trust for Databases: Rethinking Access in OCI",
-      "link": "auto/20260728-series-week-27-52-zero-trust-for-databases-rethinking-access-05092325.html",
-      "score": 125.9305,
-      "source": "DEV Community",
+      "title": "Disrupting supply chain attacks on npm and GitHub Actions",
+      "link": "auto/20260728-disrupting-supply-chain-attacks-on-npm-and-github-actions-37c0e3e1.html",
+      "score": 129.2226,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

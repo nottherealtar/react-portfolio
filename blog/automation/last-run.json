@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-27T18:45:07.867236+00:00",
+  "timestamp": "2026-07-28T07:46:56.246738+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
-      "link": "auto/20260727-mcpradar-a-security-scanner-built-for-the-mcp-ecosystem-publ-123bb632.html",
-      "score": 133.9125,
+      "title": "Series Week 27/52 — Zero Trust for Databases: Rethinking Access in OCI",
+      "link": "auto/20260728-series-week-27-52-zero-trust-for-databases-rethinking-access-05092325.html",
+      "score": 125.9305,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

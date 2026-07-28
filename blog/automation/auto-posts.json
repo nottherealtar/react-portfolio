@@ -1,5 +1,17 @@
 [
   {
+    "title": "Series Week 27/52 — Zero Trust for Databases: Rethinking Access in OCI",
+    "date": "2026-07-28",
+    "category": "Coding & Community",
+    "summary": "{ Abhilash Kumar Bhattaram : Follow on LinkedIn } This article focuses on access control in OCI, and how I help you rethink who — and what — actually gets to touch your database.",
+    "link": "auto/20260728-series-week-27-52-zero-trust-for-databases-rethinking-access-05092325.html",
+    "source_url": "https://dev.to/nabhaas/series-week-2752-zero-trust-for-databases-rethinking-access-in-oci-34hg",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
     "date": "2026-07-27",
     "category": "Coding & Community",

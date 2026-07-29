@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building an Escape Room Puzzle Designer in typescript with NodeJS",
+    "date": "2026-07-29",
+    "category": "Coding & Community",
+    "summary": "Escape room designers face several challenges: Puzzle Creation : Designing engaging puzzles with clear solutions Difficulty Balancing : Ensuring puzzles are appropriately challenging for the target audience Hint Management : Providing progressive hints that guide without spoiling Solution Tracking : Verifying solutions and analyzing player performance Our agent will address these challenges using HazelJS's…",
+    "link": "auto/20260729-building-an-escape-room-puzzle-designer-in-typescript-with-n-ad82c098.html",
+    "source_url": "https://dev.to/nisa_fatima_bcd75fa085b76/building-an-escape-room-puzzle-designer-in-typescript-with-nodejs-2lm8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Series Week 27/52 — Zero Trust for Databases: Rethinking Access in OCI",
     "date": "2026-07-28",
     "category": "Coding & Community",

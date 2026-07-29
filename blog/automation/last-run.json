@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-07-28T18:43:15.304883+00:00",
+  "timestamp": "2026-07-29T07:52:04.349612+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
   "unseen_candidates": 604,
-  "blocked_domain_candidates": 1,
+  "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Disrupting supply chain attacks on npm and GitHub Actions",
-      "link": "auto/20260728-disrupting-supply-chain-attacks-on-npm-and-github-actions-37c0e3e1.html",
-      "score": 129.2226,
-      "source": "GitHub Blog",
+      "title": "What customers value most in Microsoft Databases—from reliability to AI readiness",
+      "link": "auto/20260727-what-customers-value-most-in-microsoft-databases-from-reliab-2059e798.html",
+      "score": 142.3235,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

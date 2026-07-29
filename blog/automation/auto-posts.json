@@ -24,6 +24,19 @@
     "reading_minutes": 4
   },
   {
+    "title": "What customers value most in Microsoft Databases—from reliability to AI readiness",
+    "date": "2026-07-27",
+    "category": "Cloud Automation",
+    "summary": "Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences. SQL Server as a Tech Leader in Database Management Systems (DBMS) (#1) and Relational Database Tools (#1) Azure SQL Database as a Tech Leader in Database as a Service (DBaaS) (#2) Azure Database for PostgreSQL as a Tech Leader in Open Source Databases (#1) Azure Cosmos DB as a…",
+    "link": "auto/20260727-what-customers-value-most-in-microsoft-databases-from-reliab-2059e798.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/CLO20b_Jean_Alain_casual_office_003.jpg"
+  },
+  {
     "title": "MCPRadar: A Security Scanner Built for the MCP Ecosystem published: true tags: mcp, security, ai, opensource",
     "date": "2026-07-27",
     "category": "Coding & Community",

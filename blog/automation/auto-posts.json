@@ -1,5 +1,17 @@
 [
   {
+    "title": "Agentic Workflows That Survive Real Inputs",
+    "date": "2026-07-30",
+    "category": "Coding & Community",
+    "summary": "They arrive half-formed, with missing fields, contradictory context, PDFs that are actually images, and users who change their mind mid-thread. This is the single most useful exercise in agentic design, and it is the one most teams skip. Moving those to deterministic code cut error rate to near zero and made the whole pipeline debuggable.",
+    "link": "auto/20260730-agentic-workflows-that-survive-real-inputs-fbcf7649.html",
+    "source_url": "https://dev.to/lamingsrb/agentic-workflows-that-survive-real-inputs-4emd",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Building an Escape Room Puzzle Designer in typescript with NodeJS",
     "date": "2026-07-29",
     "category": "Coding & Community",

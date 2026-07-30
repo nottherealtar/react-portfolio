@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building Reliable AI Agents: Lessons from Failed Bots, FSMs, and the Hidden Costs of Agentic Workflows",
+    "date": "2026-07-30",
+    "category": "Coding & Community",
+    "summary": "This deep-dive explores the architectural pitfalls of naive agentic designs, the critical role of state management in preventing failure loops, and the often-overlooked \"hidden costs\" that determine whether an agent stays in production or gets archived. In the context of AI agents, an FSM does not replace the LLM; it governs it. Each step in an agentic workflow involves sending a prompt to the LLM.",
+    "link": "auto/20260730-building-reliable-ai-agents-lessons-from-failed-bots-fsms-an-a9b13d19.html",
+    "source_url": "https://dev.to/tamizuddin/building-reliable-ai-agents-lessons-from-failed-bots-fsms-and-the-hidden-costs-of-agentic-54ik",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Agentic Workflows That Survive Real Inputs",
     "date": "2026-07-30",
     "category": "Coding & Community",

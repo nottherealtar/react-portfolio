@@ -1,5 +1,17 @@
 [
   {
+    "title": "Build vs Buy: Should Coaching Institutes Build Their Own Learning Platform?",
+    "date": "2026-07-31",
+    "category": "Coding & Community",
+    "summary": "Video infrastructure at scale is genuinely hard. Once built, the marginal cost of running your own platform for additional students is largely infrastructure cost, rather than a per-student or per-batch fee that a SaaS platform would charge.",
+    "link": "auto/20260731-build-vs-buy-should-coaching-institutes-build-their-own-lear-c9cdf520.html",
+    "source_url": "https://dev.to/imbibeitlearn/build-vs-buy-should-coaching-institutes-build-their-own-learning-platform-5b6n",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Building Reliable AI Agents: Lessons from Failed Bots, FSMs, and the Hidden Costs of Agentic Workflows",
     "date": "2026-07-30",
     "category": "Coding & Community",

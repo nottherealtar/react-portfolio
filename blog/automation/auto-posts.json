@@ -1,5 +1,17 @@
 [
   {
+    "title": "Taming a 40-Minute Lean CI: Three Rounds, Three Wrong Suspects",
+    "date": "2026-08-02",
+    "category": "Coding & Community",
+    "summary": "Our Lean 4 + mathlib project used to spend 41 minutes in CI on every single PR. This article records the improvement in three rounds, each written in the same shape: problem → hypothesis → verification → fix . This is the axiom audit.",
+    "link": "auto/20260802-taming-a-40-minute-lean-ci-three-rounds-three-wrong-suspects-365801af.html",
+    "source_url": "https://dev.to/iroha1203/taming-a-40-minute-lean-ci-three-rounds-three-wrong-suspects-7ke",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Former Sony exec Shuhei Yoshida is 'a huge fan' of Bloodborne, says it's 'a complete mystery' why it was never put on PC",
     "date": "2026-08-01",
     "category": "Gaming & Industry",

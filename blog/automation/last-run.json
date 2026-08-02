@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-01T18:09:45.647607+00:00",
+  "timestamp": "2026-08-02T07:40:41.874317+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Former Sony exec Shuhei Yoshida is 'a huge fan' of Bloodborne, says it's 'a complete mystery' why it was never put on PC",
-      "link": "auto/20260801-former-sony-exec-shuhei-yoshida-is-a-huge-fan-of-bloodborne-b04df816.html",
-      "score": 124.9441,
-      "source": "PC Gamer",
+      "title": "Taming a 40-Minute Lean CI: Three Rounds, Three Wrong Suspects",
+      "link": "auto/20260802-taming-a-40-minute-lean-ci-three-rounds-three-wrong-suspects-365801af.html",
+      "score": 113.836,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

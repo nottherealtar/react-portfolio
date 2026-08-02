@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Picking a single chat completions API for OpenAI, Claude, and Gemini",
+    "date": "2026-08-02",
+    "category": "Coding & Community",
+    "summary": "If you just want the recommendation: pick a gateway that speaks the OpenAI chat completions dialect over plain HTTP, keep OpenAI, Claude, and Gemini as values in a model field, and don't hand-roll your own vendor abstraction. Your product spec probably says something like \"let the user choose a model\" — one line, one dropdown, zero justification for three integrations.",
+    "link": "auto/20260802-picking-a-single-chat-completions-api-for-openai-claude-and-12aaa48c.html",
+    "source_url": "https://dev.to/jamesanderson121/picking-a-single-chat-completions-api-for-openai-claude-and-gemini-2i7",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Former Sony exec Shuhei Yoshida is 'a huge fan' of Bloodborne, says it's 'a complete mystery' why it was never put on PC",
     "date": "2026-08-01",
     "category": "Gaming & Industry",

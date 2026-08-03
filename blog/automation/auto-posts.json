@@ -1,5 +1,18 @@
 [
   {
+    "title": "Steam Week in Review: Once positioned as mainstream-friendly PC gaming solutions, can Valve's hardware survive the memory crisis?",
+    "date": "2026-08-03",
+    "category": "Gaming & Industry",
+    "summary": "\"These new prices reflect the current state of component costs and other global logistical challenges across the industry as a whole,\" Valve wrote at the time, alluding to the way AI datacentres are gobbling up the bulk of components needed for most of the hardware used to play videogames.",
+    "link": "auto/20260803-steam-week-in-review-once-positioned-as-mainstream-friendly-8576b024.html",
+    "source_url": "https://www.pcgamer.com/gaming-industry/steam-week-in-review-once-positioned-as-mainstream-friendly-pc-gaming-solutions-can-valves-hardware-survive-the-memory-crisis/",
+    "source_name": "PC Gamer",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://cdn.mos.cms.futurecdn.net/V3gqb42ZaGSvEWF6mjJHTg.jpg"
+  },
+  {
     "title": "Taming a 40-Minute Lean CI: Three Rounds, Three Wrong Suspects",
     "date": "2026-08-02",
     "category": "Coding & Community",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Surviving the Shai-Hulud: Why Agent Eval Harnesses and Local LLMs Are the New Supply Chain Defense",
+    "date": "2026-08-04",
+    "category": "Coding & Community",
+    "summary": "In modern software engineering, we have a new Shai-Hulud: the chaotic, non-deterministic, and often opaque supply chain of Large Language Model (LLM) agents.\\n\\nFor years, \"supply chain security\" meant locking down npm packages, verifying GPG signatures for Docker images, and scanning binaries for CVEs. Relying on third-party APIs for critical reasoning is like trying to tame a sandworm by throwing it treats.",
+    "link": "auto/20260804-surviving-the-shai-hulud-why-agent-eval-harnesses-and-local-ddf13e69.html",
+    "source_url": "https://dev.to/tamizuddin/surviving-the-shai-hulud-why-agent-eval-harnesses-and-local-llms-are-the-new-supply-chain-defense-1aib",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "BYD has a Humanoid Robot. Automate 2026 says the Assembly Line is not ready for it yet.",
     "date": "2026-08-04",
     "category": "Coding & Community",

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-03T18:57:46.005702+00:00",
+  "timestamp": "2026-08-04T07:47:31.749851+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Best Vector Databases for AI Applications in 2026",
-      "link": "auto/20260803-best-vector-databases-for-ai-applications-in-2026-d67882e5.html",
-      "score": 144.7387,
+      "title": "BYD has a Humanoid Robot. Automate 2026 says the Assembly Line is not ready for it yet.",
+      "link": "auto/20260804-byd-has-a-humanoid-robot-automate-2026-says-the-assembly-lin-00b302f8.html",
+      "score": 121.9838,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

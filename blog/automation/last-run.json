@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-04T18:49:31.930610+00:00",
+  "timestamp": "2026-08-05T07:48:55.847210+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 607,
+  "unseen_candidates": 608,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Surviving the Shai-Hulud: Why Agent Eval Harnesses and Local LLMs Are the New Supply Chain Defense",
-      "link": "auto/20260804-surviving-the-shai-hulud-why-agent-eval-harnesses-and-local-ddf13e69.html",
-      "score": 145.7673,
-      "source": "DEV Community",
+      "title": "dotInsights | August 2026",
+      "link": "auto/20260804-dotinsights-august-2026-f472a959.html",
+      "score": 131.4616,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

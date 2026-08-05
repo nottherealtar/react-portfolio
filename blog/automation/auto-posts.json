@@ -1,5 +1,18 @@
 [
   {
+    "title": "dotInsights | August 2026",
+    "date": "2026-08-04",
+    "category": "Developer Tools",
+    "summary": "That would be Algol, where the semicolon was used to separate statements. Check it out here: We’ve released the 2026.2 wave of dotUltimate tools – Rider 2026.2 , with lots of goodies, including new skills and quality check hooks for agents, Hot Reload for WPF, TypeScript 7 support, improved game dev features for Unreal Engine and Godot.",
+    "link": "auto/20260804-dotinsights-august-2026-f472a959.html",
+    "source_url": "https://blog.jetbrains.com/dotnet/2026/08/04/dotinsights-august-2026/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/08/DN-social-BlogFeatured-1280x720-1.png"
+  },
+  {
     "title": "Surviving the Shai-Hulud: Why Agent Eval Harnesses and Local LLMs Are the New Supply Chain Defense",
     "date": "2026-08-04",
     "category": "Coding & Community",

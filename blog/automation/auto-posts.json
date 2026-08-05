@@ -1,5 +1,18 @@
 [
   {
+    "title": "Java Annotated Monthly – August 2026",
+    "date": "2026-08-05",
+    "category": "Developer Tools",
+    "summary": "Practical guides, clever shortcuts, and fresh ideas to help you understand Java better: The Java Story: A Film About All of Us The Java Story | The Official Documentary ZGC: A Decade of Redefining Java Performance Nulling Out References Won’t Help Your Garbage Collector Why We Moved Our Timefold Java Worker Pods from AMD to ARM64 Jeffrey Microscope for Generating Flame Graphs in Java A Bootiful Podcast: Java…",
+    "link": "auto/20260805-java-annotated-monthly-august-2026-d2a7bcc0.html",
+    "source_url": "https://blog.jetbrains.com/idea/2026/08/java-annotated-monthly-august-2026/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/08/1410569.jpeg"
+  },
+  {
     "title": "dotInsights | August 2026",
     "date": "2026-08-04",
     "category": "Developer Tools",

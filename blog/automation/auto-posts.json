@@ -1,5 +1,18 @@
 [
   {
+    "title": "We already have Kiro IDE, Kiro CLI, Kiro Web - What exactly Kiro Crew is?",
+    "date": "2026-08-06",
+    "category": "Coding & Community",
+    "summary": "Kiro Crew is an open-source development workspace for AI agents . That means it is designed for jobs like: keep project lessons across restarts coordinate several agents on related work pick up tasks from webhooks or chat tools expose agent actions, approvals, and audit logs keep working when the person is not sitting at the terminal This is the part that feels important for cloud teams.",
+    "link": "auto/20260806-we-already-have-kiro-ide-kiro-cli-kiro-web-what-exactly-kiro-acf03e13.html",
+    "source_url": "https://dev.to/ericpham03/we-already-have-kiro-ide-kiro-cli-kiro-web-what-exactly-kiro-crew-is-5hca",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ff8cs2i85zzqvve9kfmvn.png"
+  },
+  {
     "title": "Java Annotated Monthly – August 2026",
     "date": "2026-08-05",
     "category": "Developer Tools",

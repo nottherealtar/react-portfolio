@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ff8cs2i85zzqvve9kfmvn.png"
   },
   {
+    "title": "A guide to slash commands in the GitHub Copilot app",
+    "date": "2026-08-06",
+    "category": "Developer Platform",
+    "summary": "A single / opens up the list of slash commands that can help you move faster, explore new ideas, and get the most out of the app. Let’s take a look at some of the slash commands available in the GitHub Copilot app and how they can fit into your everyday workflows.",
+    "link": "auto/20260806-a-guide-to-slash-commands-in-the-github-copilot-app-fc2a0caa.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Java Annotated Monthly – August 2026",
     "date": "2026-08-05",
     "category": "Developer Tools",

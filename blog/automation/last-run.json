@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-07T06:23:58.474299+00:00",
+  "timestamp": "2026-08-07T18:00:10.714918+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A guide to slash commands in the GitHub Copilot app",
-      "link": "auto/20260806-a-guide-to-slash-commands-in-the-github-copilot-app-fc2a0caa.html",
-      "score": 132.979,
-      "source": "GitHub Blog",
+      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for AI-Augmented Code Modernization Tools",
+      "link": "auto/20260806-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-618cee7a.html",
+      "score": 140.2849,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

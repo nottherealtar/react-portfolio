@@ -1,5 +1,17 @@
 [
   {
+    "title": "The Agent Stack Is Filling In. The Judgment Layer Is Still an Open Problem",
+    "date": "2026-08-09",
+    "category": "Coding & Community",
+    "summary": "The ecosystem is getting much better at answering: What can this agent access and execute? This seems like a reasonable direction for enterprise agents. This is easy to miss when we think about agent governance only as a policy check performed immediately before a tool call.",
+    "link": "auto/20260809-the-agent-stack-is-filling-in-the-judgment-layer-is-still-an-0fa1e1c4.html",
+    "source_url": "https://dev.to/kikashy/the-agent-stack-is-filling-in-the-judgment-layer-is-still-an-open-problem-40g2",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Andrew Ng เปิดซอร์ส OpenWorker, AI Coworker ที่ทำงานให้คุณเสร็จ ไม่ได้มีเพียงแชท",
     "date": "2026-08-09",
     "category": "Coding & Community",

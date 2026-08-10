@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>UI Lab — TarsOnlineCafe Dev Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/dev-lab.css">
+</head>
+<body class="dev-lab">
+  <div class="dev-scroll-progress" aria-hidden="true"></div>
+
+  <header class="dev-lab__banner">
+    <div>
+      <strong>dev/ui-lab</strong>
+      <p>Safe sandbox for UI experiments — not linked from production nav</p>
+    </div>
+    <a href="/">← Back to live site</a>
+  </header>
+
+  <main class="dev-lab__main">
+    <div class="dev-lab__intro">
+      <h1>Portfolio UI Lab</h1>
+      <p>
+        Prototype interactions from the August 2026 UI analysis before merging into
+        <code>index.html</code>. Each block below maps to a recommended upgrade phase.
+      </p>
+    </div>
+
+    <div class="dev-lab__grid">
+      <section class="dev-lab__section" id="phase-1">
+        <h2>Phase 1 · Foundation</h2>
+        <h3>Global micro-interactions</h3>
+        <p>Scroll progress bar (top edge), link underline growth, and button press feedback.</p>
+        <div class="dev-lab__panel">
+          <p class="dev-link-demo">Try a <a href="#phase-2">link with animated underline</a> or these buttons:</p>
+          <div class="dev-btn-row">
+            <button type="button" class="dev-btn dev-btn--primary">Primary CTA</button>
+            <button type="button" class="dev-btn dev-btn--ghost">Secondary</button>
+          </div>
+          <p style="margin: 1.25rem 0 0; font-size: 0.82rem; color: var(--lab-muted);">
+            Availability indicator prototype:
+          </p>
+          <div class="dev-status" role="status">
+            <span class="dev-status__dot" aria-hidden="true"></span>
+            Available for projects · SAST
+          </div>
+        </div>
+      </section>
+
+      <section class="dev-lab__section" id="phase-2">
+        <h2>Phase 2 · Hero &amp; identity</h2>
+        <h3>Terminal boot sequence</h3>
+        <p>Replaces static hero copy with a short system-initialization animation. Click skip to finish instantly.</p>
+        <div class="dev-terminal" aria-label="Terminal boot sequence demo">
+          <div class="dev-terminal__chrome">
+            <span class="dev-terminal__dot dev-terminal__dot--red"></span>
+            <span class="dev-terminal__dot dev-terminal__dot--yellow"></span>
+            <span class="dev-terminal__dot dev-terminal__dot--green"></span>
+            <span class="dev-terminal__title">josh@tarsonlinecafe ~ %</span>
+          </div>
+          <div class="dev-terminal__body">
+            <div id="dev-terminal-output"></div>
+            <p id="dev-terminal-current" class="dev-terminal__line dev-terminal__line--cmd" aria-live="polite">
+              <span class="dev-terminal__cursor" aria-hidden="true"></span>
+            </p>
+            <button type="button" class="dev-terminal__skip" id="dev-terminal-skip">Skip animation</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dev-lab__section" id="phase-3">
+        <h2>Phase 3 · Content elevation</h2>
+        <h3>Scroll-triggered process pipeline</h3>
+        <p>Discovery → Build → Deliver as a filling pipeline line. Scroll this section to activate each step.</p>
+        <div class="dev-lab__panel">
+          <div class="dev-pipeline">
+            <div class="dev-pipeline__track" aria-hidden="true">
+              <div class="dev-pipeline__fill"></div>
+            </div>
+            <div class="dev-pipeline__step">
+              <div class="dev-pipeline__node">01</div>
+              <h4>Discovery</h4>
+              <p>Map workflows, pain points, and integration targets.</p>
+            </div>
+            <div class="dev-pipeline__step">
+              <div class="dev-pipeline__node">02</div>
+              <h4>Build</h4>
+              <p>Automate with Python, Azure Logic Apps, and APIs.</p>
+            </div>
+            <div class="dev-pipeline__step">
+              <div class="dev-pipeline__node">03</div>
+              <h4>Deliver</h4>
+              <p>Hand over documented systems with support runway.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dev-lab__section" id="roadmap">
+        <h2>Next up</h2>
+        <h3>Implementation checklist</h3>
+        <p>Items ready to port from this lab into the production homepage.</p>
+        <ul class="dev-checklist">
+          <li class="is-done">Dev server + Cloud Agent environment config</li>
+          <li class="is-done">UI lab sandbox page</li>
+          <li>Hero terminal boot (merge into hero section)</li>
+          <li>Interactive system map (SVG data-flow diagram)</li>
+          <li>Expandable service cards (accordion)</li>
+          <li>Case study hero treatment for WeSolveYourProblem</li>
+          <li>Staggered testimonial reveal</li>
+          <li>JetBrains Mono + Inter dual-font body hierarchy</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="/scripts/dev-terminal.js" defer></script>
+  <script src="/scripts/dev-micro-interactions.js" defer></script>
+</body>
+</html>

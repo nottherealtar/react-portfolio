@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building APIs: Backend API Concepts And When To Use Them",
+    "date": "2026-08-10",
+    "category": "Coding & Community",
+    "summary": "This is the nightmare scenario for a payments API, so it's the first thing you harden. Concurrency is exactly where hand-rolled idempotency falls apart, and with money, \"falls apart\" means a customer's account is wrong. Stage 2: The garbage payload (validation + honest errors) Now requests arrive with amount: -500 (a transfer that pulls money the wrong way) and a missing toAccount .",
+    "link": "auto/20260810-building-apis-backend-api-concepts-and-when-to-use-them-d3f72979.html",
+    "source_url": "https://dev.to/towernter/building-apis-backend-api-concepts-and-when-to-use-them-32hh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Agent Stack Is Filling In. The Judgment Layer Is Still an Open Problem",
     "date": "2026-08-09",
     "category": "Coding & Community",

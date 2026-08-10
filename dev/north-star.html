@@ -34,26 +34,10 @@
   </nav>
 
   <div class="ns-hero-wrap">
-    <div class="ns-desk" aria-hidden="true">
-      <div class="ns-desk__lamp"></div>
-      <div class="ns-desk__surface"></div>
-
-      <div class="ns-monitor">
-        <div class="ns-monitor__bezel">
-          <div class="ns-monitor__screen" id="ns-monitor-screen" aria-hidden="true"></div>
-        </div>
-        <div class="ns-monitor__chin"></div>
-        <div class="ns-monitor__stand"></div>
-      </div>
-
-      <div class="ns-keyboard" aria-hidden="true"></div>
-
-      <div class="ns-mug" aria-hidden="true">
-        <div class="ns-mug__steam">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="ns-mug__cup"></div>
-        <div class="ns-mug__saucer"></div>
+    <div class="ns-scene">
+      <canvas id="ns-scene-canvas" class="ns-scene__canvas" aria-hidden="true"></canvas>
+      <div class="ns-screen-overlay">
+        <div class="ns-monitor__screen" id="ns-monitor-screen" aria-hidden="true"></div>
       </div>
     </div>
 
@@ -134,6 +118,9 @@
     <p>Direction preview · <a href="/">tarsonlinecafe.work</a></p>
   </footer>
 
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+  <script defer src="/globe/desk-scene.js"></script>
   <script src="/scripts/north-star-boot.js" defer></script>
   <script src="/scripts/north-star-desk.js" defer></script>
 </body>

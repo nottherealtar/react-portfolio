@@ -19,31 +19,45 @@
 
 ## Tars translation (not a clone)
 
-**Do not** rebuild a Commodore PET or lean on 80s beige nostalgia. **Do** build the thing your name already says: **PCs and coffee** — a modern desk at the café counter, monitor glowing, cup steaming, shell ready.
+**Do not** rebuild a Commodore PET or lean on 80s beige nostalgia. **Do** let the site *feel* like TarsOnlineCafe through composition — a desk, a glowing screen, steam, warm wood — without stating the metaphor in copy.
 
-### Centerpiece: “The Café Desk”
+### Centerpiece: 3D café desk (Three.js)
 
-| Element | Role |
-|---------|------|
-| **Monitor + shell** | edh’s interactivity — a terminal you can type in (`help`, `work`, `contact`). Modern flat panel, not retro plastic. |
-| **Coffee mug + steam** | Tars warmth — human pace, café identity. CSS/Canvas steam, optional 3D mug later. |
-| **Wood desk surface** | Grounds the scene. Warm `#2d221b` tones, soft top-light like a window seat. |
-| **Keyboard** | Subtle silhouette — you’re at work, not in a museum. |
+Primary hero is **WebGL**, not CSS mockups:
 
-The **globe** can stay elsewhere (integrations map, about section) but the **hero** is the desk: PC meets coffee.
+| Element | Implementation |
+|---------|----------------|
+| **Desk** | `MeshStandardMaterial` wood, shadows |
+| **Monitor** | Bezel + emissive screen (pulses) |
+| **Mug + steam** | Cylinder geometry + particle steam |
+| **Mini globe** | Wireframe sphere on desk — integrations motif, ties to existing globe work |
+| **Interaction** | OrbitControls — gentle drag + auto-rotate |
+| **Terminal** | HTML overlay on screen until shell is fully in-canvas |
 
-### Entry ritual: PC boot × coffee brew
+Production globe (`globe/index.js`) remains for integrations map sections; desk scene (`globe/desk-scene.js`) is the hero anchor.
+
+### Entry ritual: PC boot × workspace load
 
 ```
 POST… OK
-Grinding beans…
+Warming up…
 Mounting ~/integrations…
-Heating the group head…
-Starting cafe-shell…
+Loading workspace…
 Ready.
 ```
 
 Skippable. Respects `prefers-reduced-motion`.
+
+### 3D implementation (north-star preview)
+
+| File | Role |
+|------|------|
+| `globe/desk-scene.js` | WebGL desk: wood, monitor, mug, steam particles, mini wireframe globe, OrbitControls |
+| `dev/north-star.html` | Hero canvas + HTML terminal overlay on monitor |
+| `scripts/north-star-boot.js` | Boot overlay sequence |
+| `scripts/north-star-desk.js` | Types terminal lines after boot |
+
+Scene pauses when off-screen (`IntersectionObserver`). Auto-rotate resumes after 4s idle post-drag.
 
 ### Typography & layout shift
 - **Hero:** Giant name over the **café desk** (monitor + mug) — edh scale, coffee palette
@@ -80,8 +94,9 @@ Skippable. Respects `prefers-reduced-motion`.
 
 ## Phased roadmap
 
-### Phase 0 — North star (this branch)
-- `dev/north-star.html` — PC×coffee desk hero, boot ritual, monitor shell, editorial sample
+### Phase 0 — North star (this branch) ✅
+- `dev/north-star.html` — Three.js desk hero, boot ritual, monitor terminal overlay, editorial sample
+- `globe/desk-scene.js` — reusable WebGL desk scene module
 
 ### Phase 1 — Hero & entry
 - Port café desk + boot to production `index.html`
@@ -95,9 +110,11 @@ Skippable. Respects `prefers-reduced-motion`.
 - Command set: `help`, `about`, `work`, `contact`, `open <url>`, `menu`
 - Mobile: desk scales down; shell collapses to typed intro
 
-### Phase 4 — 3D depth (optional)
-- Low-poly desk scene in Three.js (monitor, mug, keyboard) — orbit slightly on scroll
-- Globe moves to **Work** or **About** as “integrations map”, not hero
+### Phase 4 — 3D depth
+- Port `globe/desk-scene.js` to production hero
+- Screen content via CanvasTexture or CSS3D overlay
+- Scroll-linked camera drift on work section
+- Full-size integration globe as dedicated section (existing `globe/index.js`)
 
 ### Phase 5 — Polish & perf
 - Lighthouse 90+; boot skip; CI visual regression optional

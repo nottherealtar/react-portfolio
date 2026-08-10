@@ -73,137 +73,65 @@
         </div>
       </section>
 
-      <section class="dev-lab__section dev-lab__section--wide" id="phase-3">
+      <section class="dev-lab__section" id="phase-3">
         <h2>Phase 3 · Content elevation</h2>
-        <h3>Interactive process orchestrator</h3>
+        <h3>How it works — with a little more life</h3>
         <p>
-          Scroll through each phase below — or click a node — to watch data flow, deliverables update,
-          and a live activity log react in real time.
+          Same three steps as the live site, but the timeline responds as you scroll.
+          Tap a step to jump ahead.
         </p>
 
-        <div class="dev-flow" id="dev-flow" data-active-step="0">
-          <div class="dev-flow__layout">
-            <aside class="dev-flow__viz" aria-label="Process pipeline visualization">
-              <div class="dev-flow__grid" aria-hidden="true"></div>
+        <div class="dev-process" id="dev-process" data-active-step="0">
+          <div class="dev-process__timeline">
+            <svg class="dev-process__pour" viewBox="0 0 4 340" preserveAspectRatio="none" aria-hidden="true">
+              <path class="dev-process__pour-track" d="M 2 0 L 2 340" />
+              <path class="dev-process__pour-fill" d="M 2 0 L 2 340" />
+            </svg>
 
-              <div class="dev-flow__hud">
-                <div class="dev-flow__hud-row">
-                  <span class="dev-flow__hud-label">orchestrator</span>
-                  <span class="dev-flow__hud-status" data-flow-status data-phase="discovery">discovery :: running</span>
-                </div>
-                <div class="dev-flow__meter" role="progressbar" aria-valuemin="0" aria-valuemax="3" aria-valuenow="1">
-                  <div class="dev-flow__meter-fill"></div>
-                </div>
+            <article class="dev-process__step is-active" data-step="0">
+              <button type="button" class="dev-process__node" aria-expanded="true" aria-controls="dev-process-panel-0">
+                <span aria-hidden="true">☕</span>
+              </button>
+              <div class="dev-process__body" id="dev-process-panel-0">
+                <h4 class="dev-process__title">Discovery</h4>
+                <p class="dev-process__lead">
+                  We have a conversation about your problem — what it costs you today, what the ideal state looks like, and whether I&apos;m the right fit.
+                </p>
+                <p class="dev-process__note">
+                  No commitment required. If it&apos;s not a match, I&apos;ll say so.
+                </p>
               </div>
+            </article>
 
-              <svg class="dev-flow__svg" viewBox="0 0 400 200" aria-hidden="true">
-                <defs>
-                  <linearGradient id="flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#a1866f" stop-opacity="0.3" />
-                    <stop offset="50%" stop-color="#c9a96e" />
-                    <stop offset="100%" stop-color="#e8b84a" />
-                  </linearGradient>
-                  <filter id="flow-glow">
-                    <feGaussianBlur stdDeviation="2" result="blur" />
-                    <feMerge>
-                      <feMergeNode in="blur" />
-                      <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                <path class="dev-flow__path" d="M 70 100 C 120 60, 130 60, 200 100" data-segment="0" />
-                <path class="dev-flow__path" d="M 200 100 C 270 140, 280 140, 330 100" data-segment="1" />
-
-                <circle class="dev-flow__packet" r="4" filter="url(#flow-glow)" />
-                <circle class="dev-flow__packet dev-flow__packet--lag" r="3" filter="url(#flow-glow)" />
-              </svg>
-
-              <div class="dev-flow__nodes" role="tablist" aria-label="Process steps">
-                <button type="button" class="dev-flow__node is-active" data-step="0" role="tab" aria-selected="true">
-                  <span class="dev-flow__node-ring" aria-hidden="true"></span>
-                  <span class="dev-flow__node-icon" aria-hidden="true">☕</span>
-                  <span class="dev-flow__node-num">01</span>
-                  <span class="dev-flow__node-label">Discovery</span>
-                </button>
-                <button type="button" class="dev-flow__node" data-step="1" role="tab" aria-selected="false">
-                  <span class="dev-flow__node-ring" aria-hidden="true"></span>
-                  <span class="dev-flow__node-icon" aria-hidden="true">⚙️</span>
-                  <span class="dev-flow__node-num">02</span>
-                  <span class="dev-flow__node-label">Build</span>
-                </button>
-                <button type="button" class="dev-flow__node" data-step="2" role="tab" aria-selected="false">
-                  <span class="dev-flow__node-ring" aria-hidden="true"></span>
-                  <span class="dev-flow__node-icon" aria-hidden="true">🚀</span>
-                  <span class="dev-flow__node-num">03</span>
-                  <span class="dev-flow__node-label">Deliver</span>
-                </button>
+            <article class="dev-process__step" data-step="1">
+              <button type="button" class="dev-process__node" aria-expanded="false" aria-controls="dev-process-panel-1">
+                <span aria-hidden="true">⚙️</span>
+              </button>
+              <div class="dev-process__body" id="dev-process-panel-1">
+                <h4 class="dev-process__title">Build</h4>
+                <p class="dev-process__lead">
+                  I design, build, and test the solution with your input at each stage. Clean code, documented, and built to last beyond day one.
+                </p>
+                <p class="dev-process__note">
+                  You see working pieces early — not a big reveal at the end.
+                </p>
               </div>
-            </aside>
+            </article>
 
-            <div class="dev-flow__content">
-              <div class="dev-flow__detail">
-                <p class="dev-flow__detail-eyebrow" data-detail-tagline>Map the mess before we automate it</p>
-                <h4 class="dev-flow__detail-title" data-detail-title>Discovery</h4>
-                <p class="dev-flow__detail-summary" data-detail-summary></p>
-
-                <div class="dev-flow__detail-meta">
-                  <div>
-                    <span class="dev-flow__meta-label">Typical duration</span>
-                    <span class="dev-flow__meta-value" data-detail-duration>3–5 days</span>
-                  </div>
-                  <div>
-                    <span class="dev-flow__meta-label">Deliverables</span>
-                    <div class="dev-flow__tags" data-detail-deliverables></div>
-                  </div>
-                  <div>
-                    <span class="dev-flow__meta-label">Tools involved</span>
-                    <div class="dev-flow__tools" data-detail-tools></div>
-                  </div>
-                </div>
-
-                <div class="dev-flow__log-wrap">
-                  <div class="dev-flow__log-header">
-                    <span>activity.log</span>
-                    <span class="dev-flow__log-pulse" aria-hidden="true"></span>
-                  </div>
-                  <div class="dev-flow__log" data-flow-log aria-live="polite"></div>
-                </div>
+            <article class="dev-process__step" data-step="2">
+              <button type="button" class="dev-process__node" aria-expanded="false" aria-controls="dev-process-panel-2">
+                <span aria-hidden="true">🚀</span>
+              </button>
+              <div class="dev-process__body" id="dev-process-panel-2">
+                <h4 class="dev-process__title">Deliver</h4>
+                <p class="dev-process__lead">
+                  Handed over with full documentation and a walkthrough session. Ongoing support and iterations available as your needs evolve.
+                </p>
+                <p class="dev-process__note">
+                  Your team should be able to run it without guessing.
+                </p>
               </div>
-
-              <div class="dev-flow__chapters">
-                <article class="dev-flow__chapter is-active" data-step="0">
-                  <span class="dev-flow__chapter-num">01</span>
-                  <h5>What happens in Discovery</h5>
-                  <p>We map your actual workflows — where data gets re-typed, which systems don't talk, and what manual steps cost you each week. You get a clear scope before any code is written.</p>
-                  <ul class="dev-flow__chapter-list">
-                    <li>Stakeholder interviews &amp; process walkthroughs</li>
-                    <li>Integration inventory (CRM, helpdesk, spreadsheets)</li>
-                    <li>POPIA / compliance constraints documented</li>
-                  </ul>
-                </article>
-                <article class="dev-flow__chapter" data-step="1">
-                  <span class="dev-flow__chapter-num">02</span>
-                  <h5>What happens in Build</h5>
-                  <p>Automation gets built in layers — orchestration first, then edge cases, then alerting. You see working integrations early, not a big reveal at the end.</p>
-                  <ul class="dev-flow__chapter-list">
-                    <li>Azure Logic Apps + Python workers wired up</li>
-                    <li>Retry policies, dead-letter queues, error alerts</li>
-                    <li>Staging environment for your team to test</li>
-                  </ul>
-                </article>
-                <article class="dev-flow__chapter" data-step="2">
-                  <span class="dev-flow__chapter-num">03</span>
-                  <h5>What happens in Deliver</h5>
-                  <p>Handover means your team can operate the system without guessing. Documentation, monitoring, and a support window so you're not left on your own.</p>
-                  <ul class="dev-flow__chapter-list">
-                    <li>Runbook + architecture diagram</li>
-                    <li>Live walkthrough with your stakeholders</li>
-                    <li>30-day support for tweaks and questions</li>
-                  </ul>
-                </article>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -215,8 +143,8 @@
         <ul class="dev-checklist">
           <li class="is-done">Dev server + Cloud Agent environment config</li>
           <li class="is-done">UI lab sandbox page</li>
+          <li class="is-done">Scroll-reactive process timeline (Phase 3)</li>
           <li>Hero terminal boot (merge into hero section)</li>
-          <li>Interactive system map (SVG data-flow diagram)</li>
           <li>Expandable service cards (accordion)</li>
           <li>Case study hero treatment for WeSolveYourProblem</li>
           <li>Staggered testimonial reveal</li>
@@ -228,6 +156,6 @@
 
   <script src="/scripts/dev-terminal.js" defer></script>
   <script src="/scripts/dev-micro-interactions.js" defer></script>
-  <script src="/scripts/dev-pipeline.js" defer></script>
+  <script src="/scripts/dev-process.js" defer></script>
 </body>
 </html>

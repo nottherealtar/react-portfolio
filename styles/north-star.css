@@ -7,6 +7,7 @@
   --ns-accent: #c9a96e;
   --ns-desk: #2d221b;
   --ns-monitor: #1e1814;
+  --ns-scroll-stage-height: 280vh;
   min-height: 100vh;
   background: var(--ns-bg);
   color: var(--ns-text);
@@ -119,25 +120,30 @@
   color: var(--ns-muted);
 }
 
-/* ── Hero: Three.js desk scene ── */
-.ns-hero-wrap {
+/* ── Scroll-driven 3D intro ── */
+.ns-scroll-stage {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  height: var(--ns-scroll-stage-height);
+}
+
+.ns-scene-pin {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: hidden;
-  padding-top: 3.5rem;
 }
 
 .ns-scene {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: clamp(300px, 52vh, 480px);
-  flex-shrink: 0;
-  margin: 0 auto;
-  max-width: 1200px;
+  height: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .ns-scene::before {
@@ -162,6 +168,20 @@
   animation: none;
 }
 
+.ns-scene.is-close::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(26, 17, 8, 0.72) 0%,
+    rgba(26, 17, 8, 0.2) 38%,
+    transparent 62%
+  );
+}
+
 @keyframes nsSceneShimmer {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
@@ -171,71 +191,79 @@
   display: block;
   width: 100%;
   height: 100%;
+  touch-action: pan-y;
+  cursor: default;
+}
+
+.ns-scene__canvas.is-orbit-ready {
   touch-action: none;
   cursor: grab;
 }
 
-.ns-scene__canvas:active {
+.ns-scene__canvas.is-orbit-ready:active {
   cursor: grabbing;
 }
 
 .ns-screen-overlay {
   position: absolute;
-  left: 50%;
-  top: 46%;
-  transform: translate(-54%, -52%);
-  width: min(28vw, 220px);
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
   pointer-events: none;
-  z-index: 2;
+  z-index: 3;
+  transition: opacity 0.2s ease;
 }
 
 .ns-monitor__screen {
-  aspect-ratio: 16 / 10;
-  background: rgba(10, 8, 6, 0.72);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: rgba(10, 8, 6, 0.82);
   border-radius: 3px;
-  padding: 0.55rem 0.65rem;
+  padding: 0.45rem 0.5rem;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: clamp(0.5rem, 1.2vw, 0.68rem);
-  line-height: 1.5;
+  font-size: clamp(0.42rem, 1.1vw, 0.68rem);
+  line-height: 1.45;
   overflow: hidden;
   backdrop-filter: blur(2px);
   box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.6);
 }
 
-.ns-monitor__line {
-  margin: 0 0 0.3rem;
-  color: #9ca3af;
+.ns-scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  height: 2px;
+  background: rgba(161, 134, 111, 0.18);
 }
 
-.ns-monitor__line--prompt {
-  color: var(--ns-accent);
-}
-
-.ns-monitor__line--prompt::before {
-  content: '~ ';
-  color: var(--ns-muted);
-}
-
-.ns-monitor__cursor {
-  display: inline-block;
-  width: 6px;
-  height: 1.1em;
+.ns-scroll-progress__fill {
+  height: 100%;
+  width: 100%;
   background: var(--ns-accent);
-  vertical-align: text-bottom;
-  animation: nsCursorBlink 1s step-end infinite;
-}
-
-@keyframes nsCursorBlink {
-  50% { opacity: 0; }
+  transform-origin: left center;
+  transform: scaleX(0);
+  will-change: transform;
 }
 
 .ns-hero {
+  --ns-hero-in: 0;
   position: relative;
   z-index: 4;
-  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vh, 4.5rem);
+  padding: 1.25rem clamp(1.25rem, 5vw, 3rem) clamp(2.5rem, 7vh, 4rem);
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  opacity: var(--ns-hero-in);
+  transform: translateY(calc((1 - var(--ns-hero-in)) * 28px));
+  pointer-events: none;
+}
+
+.ns-scroll-stage.is-settled .ns-hero {
+  pointer-events: auto;
 }
 
 .ns-hero__kicker {
@@ -247,7 +275,7 @@
 
 .ns-hero__name {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(3.5rem, 18vw, 9rem);
+  font-size: clamp(3rem, 16vw, 9rem);
   line-height: 0.92;
   margin: 0;
   letter-spacing: -0.02em;
@@ -280,14 +308,15 @@
 
 .ns-hero__scroll {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 6;
   font-size: 0.78rem;
   color: var(--ns-muted);
   letter-spacing: 0.06em;
   animation: nsScrollBob 2.5s ease-in-out infinite;
+  transition: opacity 0.25s ease;
 }
 
 @keyframes nsScrollBob {
@@ -401,18 +430,29 @@
 }
 
 @media (max-width: 640px) {
-  .ns-scene {
-    height: clamp(240px, 44vh, 340px);
+  .north-star {
+    --ns-scroll-stage-height: 200vh;
   }
 
-  .ns-screen-overlay {
-    width: min(42vw, 160px);
-    top: 44%;
-    transform: translate(-52%, -50%);
+  .ns-hero__name {
+    font-size: clamp(2.75rem, 20vw, 5rem);
+  }
+
+  .ns-hero {
+    padding-bottom: clamp(2rem, 6vh, 3rem);
+  }
+
+  .ns-monitor__screen {
+    font-size: clamp(0.38rem, 2.8vw, 0.55rem);
+    padding: 0.3rem 0.35rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .north-star {
+    --ns-scroll-stage-height: 100vh;
+  }
+
   .ns-boot,
   .ns-boot__fill,
   .ns-hero__scroll,
@@ -426,8 +466,15 @@
     opacity: 0;
   }
 
-  .ns-scene__canvas {
-    cursor: default;
+  .ns-hero {
+    --ns-hero-in: 1;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .ns-hero__scroll {
+    display: none;
   }
 
   .ns-boot.is-done {
@@ -436,5 +483,9 @@
 
   .ns-monitor__cursor {
     opacity: 1;
+  }
+
+  .ns-scroll-progress {
+    display: none;
   }
 }

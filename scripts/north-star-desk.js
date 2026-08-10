@@ -64,6 +64,23 @@
     return;
   }
 
-  document.addEventListener('ns-boot-done', startTyping, { once: true });
-  if (document.documentElement.classList.contains('ns-ready')) startTyping();
+  let bootDone = false;
+  let scrollDone = false;
+  let started = false;
+
+  function tryStart() {
+    if (started || !bootDone || !scrollDone) return;
+    started = true;
+    setTimeout(startTyping, 280);
+  }
+
+  document.addEventListener('ns-boot-done', () => {
+    bootDone = true;
+    tryStart();
+  }, { once: true });
+
+  document.addEventListener('ns-scroll-settled', () => {
+    scrollDone = true;
+    tryStart();
+  }, { once: true });
 })();

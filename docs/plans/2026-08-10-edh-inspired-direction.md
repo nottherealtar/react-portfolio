@@ -52,12 +52,12 @@ Skippable. Respects `prefers-reduced-motion`.
 
 | File | Role |
 |------|------|
-| `globe/desk-scene.js` | WebGL desk: wood, monitor, mug, steam particles, mini wireframe globe, OrbitControls |
-| `dev/north-star.html` | Hero canvas + HTML terminal overlay on monitor |
+| `globe/desk-scene.js` | WebGL desk + **scroll-driven camera path** (intro → dolly in → settle) |
+| `dev/north-star.html` | Sticky fullscreen scroll stage + hero + editorial sections |
 | `scripts/north-star-boot.js` | Boot overlay sequence |
-| `scripts/north-star-desk.js` | Types terminal lines after boot |
+| `scripts/north-star-desk.js` | Types terminal lines after boot + scroll settle |
 
-Scene pauses when off-screen (`IntersectionObserver`). Auto-rotate resumes after 4s idle post-drag.
+**Scroll intro (edh-style):** A tall sticky stage (`280vh` desktop / `200vh` mobile) maps scroll progress to a camera spline — distant monitor glow → arc around desk → settled workspace view. Monitor terminal overlay is **3D-projected** onto the screen mesh. Orbit drag unlocks on desktop after scroll completes; mobile stays scroll-only.
 
 ### Typography & layout shift
 - **Hero:** Giant name over the **café desk** (monitor + mug) — edh scale, coffee palette

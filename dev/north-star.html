@@ -33,26 +33,32 @@
     <span class="ns-nav__label">Preview</span>
   </nav>
 
-  <div class="ns-hero-wrap">
-    <div class="ns-scene">
-      <canvas id="ns-scene-canvas" class="ns-scene__canvas" aria-hidden="true"></canvas>
-      <div class="ns-screen-overlay">
-        <div class="ns-monitor__screen" id="ns-monitor-screen" aria-hidden="true"></div>
+  <section class="ns-scroll-stage" id="ns-scroll-stage" aria-label="Intro scene">
+    <div class="ns-scene-pin">
+      <div class="ns-scene" id="ns-scene">
+        <canvas id="ns-scene-canvas" class="ns-scene__canvas" aria-hidden="true"></canvas>
+        <div class="ns-screen-overlay" id="ns-screen-overlay" hidden>
+          <div class="ns-monitor__screen" id="ns-monitor-screen" aria-hidden="true"></div>
+        </div>
       </div>
+
+      <div class="ns-scroll-progress" aria-hidden="true">
+        <div class="ns-scroll-progress__fill" id="ns-scroll-progress-fill"></div>
+      </div>
+
+      <header class="ns-hero" id="ns-hero">
+        <p class="ns-hero__kicker">Hi there, I&apos;m</p>
+        <h1 class="ns-hero__name">Josh</h1>
+        <ul class="ns-hero__roles">
+          <li>Automation &amp; Integration</li>
+          <li>Azure &amp; Freshworks</li>
+        </ul>
+        <p class="ns-hero__tagline">I automate what slows your business down.</p>
+      </header>
+
+      <p class="ns-hero__scroll" id="ns-scroll-hint" aria-hidden="true">Scroll to enter ↓</p>
     </div>
-
-    <header class="ns-hero">
-      <p class="ns-hero__kicker">Hi there, I&apos;m</p>
-      <h1 class="ns-hero__name">Josh</h1>
-      <ul class="ns-hero__roles">
-        <li>Automation &amp; Integration</li>
-        <li>Azure &amp; Freshworks</li>
-      </ul>
-      <p class="ns-hero__tagline">I automate what slows your business down.</p>
-    </header>
-
-    <p class="ns-hero__scroll" aria-hidden="true">Scroll ↓</p>
-  </div>
+  </section>
 
   <main class="ns-main">
     <section id="about">

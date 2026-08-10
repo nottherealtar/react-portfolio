@@ -48,37 +48,4 @@
       sections.forEach((el) => observer.observe(el));
     }
   }
-
-  const pipeline = document.querySelector('.dev-pipeline');
-  const pipelineFill = document.querySelector('.dev-pipeline__fill');
-  const pipelineSteps = document.querySelectorAll('.dev-pipeline__step');
-
-  if (pipeline && pipelineFill && pipelineSteps.length && !reducedMotion) {
-    const pipelineObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          const ratio = entry.intersectionRatio;
-          const activeCount = Math.min(
-            pipelineSteps.length,
-            Math.max(1, Math.ceil(ratio * pipelineSteps.length + 0.3))
-          );
-
-          pipelineFill.style.width = ((activeCount - 1) / (pipelineSteps.length - 1)) * 100 + '%';
-
-          pipelineSteps.forEach((step, index) => {
-            step.classList.toggle('is-active', index < activeCount);
-          });
-        });
-      },
-      { threshold: [0, 0.25, 0.5, 0.75, 1] }
-    );
-
-    pipelineObserver.observe(pipeline);
-    pipelineSteps[0].classList.add('is-active');
-  } else if (pipelineSteps.length) {
-    pipelineSteps.forEach((step) => step.classList.add('is-active'));
-    if (pipelineFill) pipelineFill.style.width = '100%';
-  }
 })();

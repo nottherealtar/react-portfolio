@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>North Star — TarsOnlineCafe direction preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/north-star.css">
+</head>
+<body class="north-star">
+  <div class="ns-boot" id="ns-boot" role="status" aria-live="polite">
+    <h2>Brewing…</h2>
+    <div class="ns-boot__bar" aria-hidden="true">
+      <div class="ns-boot__fill"></div>
+    </div>
+    <p class="ns-boot__status">Starting…</p>
+    <button type="button" class="ns-boot__skip">Skip</button>
+  </div>
+
+  <nav class="ns-nav" aria-label="Preview navigation">
+    <a class="ns-nav__back" href="/dev/ui-lab.html">← UI lab</a>
+    <span class="ns-nav__label">Direction preview</span>
+  </nav>
+
+  <div class="ns-hero-wrap">
+    <canvas class="canvas ns-hero-canvas" width="1200" height="800" aria-hidden="true"></canvas>
+    <div class="ns-hero-vignette" aria-hidden="true"></div>
+
+    <header class="ns-hero">
+      <p class="ns-hero__kicker">Hi there, I&apos;m</p>
+      <h1 class="ns-hero__name">Josh</h1>
+      <ul class="ns-hero__roles">
+        <li>Automation &amp; Integration</li>
+        <li>Azure &amp; Freshworks</li>
+      </ul>
+    </header>
+
+    <p class="ns-hero__scroll" aria-hidden="true">Scroll ↓</p>
+  </div>
+
+  <main class="ns-main">
+    <section id="about">
+      <h1>Hi there</h1>
+      <p>
+        My name is Joshua Coetzer. I build bespoke automation and integration
+        solutions for businesses in Johannesburg and beyond — Azure Logic Apps,
+        Freshworks, Python, and the APIs that connect them.
+      </p>
+      <p>
+        This page is a <strong>direction preview</strong> inspired by
+        <a href="https://edh.dev/" rel="noopener noreferrer">edh.dev</a>:
+        the site itself should feel like something you engineered, not a
+        brochure you filled in.
+      </p>
+      <p>
+        Below is how work could read — editorial, specific, no card grid.
+      </p>
+    </section>
+
+    <section id="work">
+      <h1>Work</h1>
+      <hr>
+
+      <h2>WeSolveYourProblem</h2>
+      <h3>2024–25</h3>
+      <ul class="ns-tags">
+        <li>Multi-page site</li>
+        <li>Lead gen</li>
+        <li>CRM flows</li>
+        <li>POPIA</li>
+      </ul>
+      <p>
+        End-to-end marketing website for a Cape Town agency — services, process,
+        FAQ, and quote flows. Live in production with a 24-hour response commitment
+        and POPIA-compliant data handling.
+      </p>
+      <p>
+        <a href="https://solvemyproblem.co.za" rel="noopener noreferrer">solvemyproblem.co.za →</a>
+      </p>
+
+      <hr>
+
+      <h2>TarsOnlineCafe (this site)</h2>
+      <h3>2020–26</h3>
+      <ul class="ns-tags">
+        <li>Three.js</li>
+        <li>Static HTML</li>
+        <li>Automated blog</li>
+        <li>Vercel</li>
+      </ul>
+      <p>
+        The portfolio you&apos;re looking at — coffee aesthetic, ambient globe,
+        automated blog pipeline, and (in this direction) a boot sequence,
+        scroll narrative, and terminal you can actually use.
+      </p>
+      <p>
+        The north-star goal: visitors experience integration and craft before
+        they read a single service bullet.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>
+        Ready to stop doing things manually? The production site has a full
+        contact form — this preview just points you there.
+      </p>
+      <a class="ns-cta" href="/#contact">Let&apos;s talk on the live site →</a>
+    </section>
+  </main>
+
+  <footer class="ns-footer">
+  <p>Direction preview · not production · <a href="/">tarsonlinecafe.work</a></p>
+  <p>Plan: <code>docs/plans/2026-08-10-edh-inspired-direction.md</code></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js" defer></script>
+  <script src="/globe/index.js" defer></script>
+  <script src="/scripts/north-star-boot.js" defer></script>
+</body>
+</html>

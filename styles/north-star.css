@@ -1,0 +1,323 @@
+/* North star — edh.dev-inspired direction for TarsOnlineCafe */
+
+.north-star {
+  --ns-bg: #1a1108;
+  --ns-text: #f7efe2;
+  --ns-muted: #a1866f;
+  --ns-accent: #c9a96e;
+  min-height: 100vh;
+  background: var(--ns-bg);
+  color: var(--ns-text);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Boot overlay ── */
+.ns-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  background: var(--ns-bg);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.ns-boot.is-done {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ns-boot h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0;
+  color: var(--ns-text);
+}
+
+.ns-boot__bar {
+  width: min(280px, 70vw);
+  height: 3px;
+  background: rgba(161, 134, 111, 0.25);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ns-boot__fill {
+  height: 100%;
+  width: 0%;
+  background: var(--ns-accent);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.ns-boot__status {
+  font-size: 0.82rem;
+  color: var(--ns-muted);
+  min-height: 1.25em;
+}
+
+.ns-boot__skip {
+  margin-top: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--ns-muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: inherit;
+}
+
+.ns-boot__skip:hover {
+  color: var(--ns-accent);
+}
+
+/* ── Nav ── */
+.ns-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  pointer-events: none;
+}
+
+.ns-nav > * {
+  pointer-events: auto;
+}
+
+.ns-nav__back {
+  font-size: 0.8rem;
+  color: var(--ns-muted);
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(247, 239, 226, 0.12);
+  border-radius: 6px;
+  background: rgba(26, 17, 8, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.ns-nav__back:hover {
+  color: var(--ns-accent);
+  border-color: rgba(201, 169, 110, 0.35);
+}
+
+.ns-nav__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ns-muted);
+}
+
+/* ── Hero (edh-scale type over WebGL) ── */
+.ns-hero-wrap {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.ns-hero-canvas {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.ns-hero-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to top, var(--ns-bg) 0%, transparent 45%),
+    linear-gradient(to bottom, rgba(26, 17, 8, 0.5) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+.ns-hero {
+  position: relative;
+  z-index: 2;
+  padding: 0 clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vh, 5rem);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ns-hero__kicker {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--ns-muted);
+  margin: 0 0 0.25rem;
+  font-weight: 400;
+}
+
+.ns-hero__name {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(4.5rem, 22vw, 11rem);
+  line-height: 0.9;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: var(--ns-text);
+}
+
+.ns-hero__roles {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: var(--ns-accent);
+}
+
+.ns-hero__roles li::before {
+  content: '— ';
+  color: var(--ns-muted);
+}
+
+.ns-hero__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 0.78rem;
+  color: var(--ns-muted);
+  letter-spacing: 0.06em;
+  animation: nsScrollBob 2.5s ease-in-out infinite;
+}
+
+@keyframes nsScrollBob {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+}
+
+/* ── Editorial content (edh-style) ── */
+.ns-main {
+  position: relative;
+  z-index: 3;
+  background: var(--ns-bg);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 5vw, 2rem) 5rem;
+}
+
+.ns-main section {
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(247, 239, 226, 0.08);
+}
+
+.ns-main h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 400;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.ns-main h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 2.5rem 0 0.35rem;
+}
+
+.ns-main h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ns-muted);
+  margin: 0 0 1rem;
+}
+
+.ns-main p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #ede0cc;
+  margin: 0 0 1rem;
+}
+
+.ns-main hr {
+  border: none;
+  border-top: 1px solid rgba(247, 239, 226, 0.12);
+  margin: 2rem 0;
+}
+
+.ns-tags {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  font-size: 0.82rem;
+  color: var(--ns-accent);
+}
+
+.ns-tags li::before {
+  content: '·';
+  margin-right: 0.35rem;
+  color: var(--ns-muted);
+}
+
+.ns-tags li:first-child::before {
+  content: none;
+  margin: 0;
+}
+
+.ns-cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--ns-accent);
+  color: var(--ns-bg);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.ns-cta:hover {
+  background: #b8944f;
+}
+
+.ns-cta:active {
+  transform: scale(0.98);
+}
+
+.ns-footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  font-size: 0.78rem;
+  color: rgba(161, 134, 111, 0.65);
+  border-top: 1px solid rgba(247, 239, 226, 0.06);
+}
+
+.ns-footer a {
+  color: var(--ns-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ns-boot,
+  .ns-boot__fill,
+  .ns-hero__scroll {
+    transition: none;
+    animation: none;
+  }
+
+  .ns-boot.is-done {
+    display: none;
+  }
+}

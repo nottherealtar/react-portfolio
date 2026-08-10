@@ -4,16 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="robots" content="noindex, nofollow">
-  <title>North Star — TarsOnlineCafe direction preview</title>
+  <title>North Star — PCs &amp; coffee · TarsOnlineCafe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
   <link rel="stylesheet" href="/styles/north-star.css">
 </head>
 <body class="north-star">
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+
   <div class="ns-boot" id="ns-boot" role="status" aria-live="polite">
-    <h2>Brewing…</h2>
+    <h2>Warming up…</h2>
     <div class="ns-boot__bar" aria-hidden="true">
       <div class="ns-boot__fill"></div>
     </div>
@@ -23,12 +30,31 @@
 
   <nav class="ns-nav" aria-label="Preview navigation">
     <a class="ns-nav__back" href="/dev/ui-lab.html">← UI lab</a>
-    <span class="ns-nav__label">Direction preview</span>
+    <span class="ns-nav__label">PCs &amp; coffee</span>
   </nav>
 
   <div class="ns-hero-wrap">
-    <canvas class="canvas ns-hero-canvas" width="1200" height="800" aria-hidden="true"></canvas>
-    <div class="ns-hero-vignette" aria-hidden="true"></div>
+    <div class="ns-desk" aria-hidden="true">
+      <div class="ns-desk__surface"></div>
+
+      <div class="ns-monitor">
+        <div class="ns-monitor__bezel">
+          <div class="ns-monitor__screen" id="ns-monitor-screen" aria-hidden="true"></div>
+        </div>
+        <div class="ns-monitor__chin"></div>
+        <div class="ns-monitor__stand"></div>
+      </div>
+
+      <div class="ns-keyboard" aria-hidden="true"></div>
+
+      <div class="ns-mug" aria-hidden="true">
+        <div class="ns-mug__steam">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="ns-mug__cup"></div>
+        <div class="ns-mug__saucer"></div>
+      </div>
+    </div>
 
     <header class="ns-hero">
       <p class="ns-hero__kicker">Hi there, I&apos;m</p>
@@ -37,6 +63,7 @@
         <li>Automation &amp; Integration</li>
         <li>Azure &amp; Freshworks</li>
       </ul>
+      <p class="ns-hero__tagline">Where PCs meet coffee — integrations built at the counter, not in a slide deck.</p>
     </header>
 
     <p class="ns-hero__scroll" aria-hidden="true">Scroll ↓</p>
@@ -47,14 +74,16 @@
       <h1>Hi there</h1>
       <p>
         My name is Joshua Coetzer. I build bespoke automation and integration
-        solutions for businesses in Johannesburg and beyond — Azure Logic Apps,
-        Freshworks, Python, and the APIs that connect them.
+        solutions from Johannesburg — Azure Logic Apps, Freshworks, Python,
+        and the APIs that connect them.
       </p>
       <p>
-        This page is a <strong>direction preview</strong> inspired by
-        <a href="https://edh.dev/" rel="noopener noreferrer">edh.dev</a>:
-        the site itself should feel like something you engineered, not a
-        brochure you filled in.
+        <strong>TarsOnlineCafe</strong> is the idea in one name: the focus of a
+        good café (warm, unhurried, human) and the precision of a well-built
+        machine (reliable, observable, documented). Inspired by sites like
+        <a href="https://edh.dev/" rel="noopener noreferrer">edh.dev</a> where
+        the portfolio <em>is</em> the demo — but our metaphor is a desk with
+        a monitor and a cup, not a museum piece.
       </p>
       <p>
         Below is how work could read — editorial, specific, no card grid.
@@ -87,19 +116,15 @@
       <h2>TarsOnlineCafe (this site)</h2>
       <h3>2020–26</h3>
       <ul class="ns-tags">
+        <li>Interactive shell</li>
         <li>Three.js</li>
-        <li>Static HTML</li>
         <li>Automated blog</li>
         <li>Vercel</li>
       </ul>
       <p>
-        The portfolio you&apos;re looking at — coffee aesthetic, ambient globe,
-        automated blog pipeline, and (in this direction) a boot sequence,
-        scroll narrative, and terminal you can actually use.
-      </p>
-      <p>
-        The north-star goal: visitors experience integration and craft before
-        they read a single service bullet.
+        The portfolio you&apos;re looking at — a café you can browse. Monitor,
+        terminal, steam from the mug, automated blog pipeline underneath.
+        The north-star goal: visitors feel the desk before they read the résumé.
       </p>
     </section>
 
@@ -107,19 +132,17 @@
       <h1>Contact</h1>
       <p>
         Ready to stop doing things manually? The production site has a full
-        contact form — this preview just points you there.
+        contact form — this preview points you there.
       </p>
       <a class="ns-cta" href="/#contact">Let&apos;s talk on the live site →</a>
     </section>
   </main>
 
   <footer class="ns-footer">
-  <p>Direction preview · not production · <a href="/">tarsonlinecafe.work</a></p>
-  <p>Plan: <code>docs/plans/2026-08-10-edh-inspired-direction.md</code></p>
+    <p>Direction preview · <a href="/">tarsonlinecafe.work</a></p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js" defer></script>
-  <script src="/globe/index.js" defer></script>
   <script src="/scripts/north-star-boot.js" defer></script>
+  <script src="/scripts/north-star-desk.js" defer></script>
 </body>
 </html>

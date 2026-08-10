@@ -1,5 +1,5 @@
 /**
- * Coffee boot sequence for north-star prototype (edh.dev-style entry ritual).
+ * Boot sequence — PC startup meets coffee ritual (north-star preview).
  */
 (function () {
   const boot = document.getElementById('ns-boot');
@@ -11,10 +11,11 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const steps = [
-    { pct: 20, text: 'Grinding beans…' },
-    { pct: 45, text: 'Heating the group head…' },
-    { pct: 70, text: 'Warming the globe…' },
-    { pct: 92, text: 'Pulling the first shot…' },
+    { pct: 18, text: 'POST… OK' },
+    { pct: 38, text: 'Grinding beans…' },
+    { pct: 58, text: 'Mounting ~/integrations…' },
+    { pct: 78, text: 'Heating the group head…' },
+    { pct: 94, text: 'Starting cafe-shell…' },
     { pct: 100, text: 'Ready.' },
   ];
 
@@ -23,6 +24,7 @@
   function finish() {
     boot.classList.add('is-done');
     document.documentElement.classList.add('ns-ready');
+    document.dispatchEvent(new CustomEvent('ns-boot-done'));
   }
 
   function skip() {
@@ -44,10 +46,10 @@
       if (cancelled) break;
       if (fill) fill.style.width = step.pct + '%';
       if (status) status.textContent = step.text;
-      await new Promise((r) => setTimeout(r, 520));
+      await new Promise((r) => setTimeout(r, 480));
     }
     if (!cancelled) {
-      await new Promise((r) => setTimeout(r, 280));
+      await new Promise((r) => setTimeout(r, 260));
       finish();
     }
   }

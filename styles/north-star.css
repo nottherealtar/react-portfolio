@@ -1,10 +1,12 @@
-/* North star — edh.dev-inspired direction for TarsOnlineCafe */
+/* North star — PCs & coffee (edh.dev craft, TarsOnlineCafe metaphor) */
 
 .north-star {
   --ns-bg: #1a1108;
   --ns-text: #f7efe2;
   --ns-muted: #a1866f;
   --ns-accent: #c9a96e;
+  --ns-desk: #2d221b;
+  --ns-monitor: #1e1814;
   min-height: 100vh;
   background: var(--ns-bg);
   color: var(--ns-text);
@@ -117,39 +119,207 @@
   color: var(--ns-muted);
 }
 
-/* ── Hero (edh-scale type over WebGL) ── */
+/* ── Hero: café desk with monitor + mug ── */
 .ns-hero-wrap {
   position: relative;
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   overflow: hidden;
+  padding-top: 4rem;
 }
 
-.ns-hero-canvas {
-  position: absolute !important;
-  inset: 0;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 0;
-  opacity: 0.85;
+.ns-desk {
+  position: relative;
+  width: min(920px, 94vw);
+  margin: 0 auto;
+  height: clamp(220px, 38vh, 340px);
+  flex-shrink: 0;
 }
 
-.ns-hero-vignette {
+.ns-desk__surface {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 0;
+  height: 42%;
+  background: linear-gradient(180deg, #3d2e24 0%, var(--ns-desk) 40%, #1e1610 100%);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 -2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.ns-desk__surface::after {
+  content: '';
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(to top, var(--ns-bg) 0%, transparent 45%),
-    linear-gradient(to bottom, rgba(26, 17, 8, 0.5) 0%, transparent 30%);
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.06), transparent);
   pointer-events: none;
+}
+
+/* Monitor */
+.ns-monitor {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  transform: translateX(-58%);
+  width: min(420px, 52vw);
+  z-index: 2;
+}
+
+.ns-monitor__bezel {
+  background: linear-gradient(145deg, #2a221c 0%, #14100e 100%);
+  border-radius: 12px 12px 4px 4px;
+  padding: 10px 10px 8px;
+  border: 1px solid rgba(247, 239, 226, 0.08);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.ns-monitor__screen {
+  aspect-ratio: 16 / 10;
+  background: #0a0806;
+  border-radius: 4px;
+  padding: 0.75rem 0.85rem;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: clamp(0.62rem, 1.6vw, 0.78rem);
+  line-height: 1.55;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.ns-monitor__line {
+  margin: 0 0 0.35rem;
+  color: #9ca3af;
+}
+
+.ns-monitor__line--prompt {
+  color: var(--ns-accent);
+}
+
+.ns-monitor__line--prompt::before {
+  content: '~ ';
+  color: var(--ns-muted);
+}
+
+.ns-monitor__cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1.1em;
+  background: var(--ns-accent);
+  vertical-align: text-bottom;
+  animation: nsCursorBlink 1s step-end infinite;
+}
+
+@keyframes nsCursorBlink {
+  50% { opacity: 0; }
+}
+
+.ns-monitor__chin {
+  height: 6px;
+  background: #1a1410;
+  margin: 0 18%;
+  border-radius: 0 0 3px 3px;
+}
+
+.ns-monitor__stand {
+  width: 28%;
+  height: 14px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #2a221c, #14100e);
+  border-radius: 0 0 4px 4px;
+}
+
+/* Keyboard hint */
+.ns-keyboard {
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  transform: translateX(-42%);
+  width: min(280px, 36vw);
+  height: 10px;
+  background: linear-gradient(180deg, #1e1814, #0f0c0a);
+  border-radius: 4px;
+  border: 1px solid rgba(247, 239, 226, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Coffee mug */
+.ns-mug {
+  position: absolute;
+  right: 8%;
+  bottom: 22%;
+  width: 72px;
+  z-index: 3;
+}
+
+.ns-mug__steam {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.ns-mug__steam span {
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(to top, rgba(247, 239, 226, 0.25), transparent);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: nsSteam 3.5s ease-in-out infinite;
+}
+
+.ns-mug__steam span:nth-child(2) { animation-delay: 0.8s; height: 34px; }
+.ns-mug__steam span:nth-child(3) { animation-delay: 1.6s; height: 24px; }
+
+@keyframes nsSteam {
+  0%, 100% { opacity: 0.2; transform: translateY(0) scaleX(1); }
+  50% { opacity: 0.55; transform: translateY(-10px) scaleX(1.15); }
+}
+
+.ns-mug__cup {
+  width: 52px;
+  height: 44px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f7efe2 0%, #d4c4a8 50%, #a1866f 100%);
+  border-radius: 4px 4px 8px 8px;
+  box-shadow:
+    inset -4px 0 8px rgba(0, 0, 0, 0.12),
+    0 6px 16px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.ns-mug__cup::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: 10px;
+  width: 16px;
+  height: 22px;
+  border: 4px solid #d4c4a8;
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+
+.ns-mug__saucer {
+  width: 68px;
+  height: 8px;
+  margin: 4px auto 0;
+  background: #d4c4a8;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .ns-hero {
   position: relative;
-  z-index: 2;
-  padding: 0 clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vh, 5rem);
+  z-index: 4;
+  padding: 1.5rem clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vh, 4.5rem);
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
@@ -164,8 +334,8 @@
 
 .ns-hero__name {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(4.5rem, 22vw, 11rem);
-  line-height: 0.9;
+  font-size: clamp(3.5rem, 18vw, 9rem);
+  line-height: 0.92;
   margin: 0;
   letter-spacing: -0.02em;
   color: var(--ns-text);
@@ -173,18 +343,27 @@
 
 .ns-hero__roles {
   list-style: none;
-  margin: 1rem 0 0;
+  margin: 0.85rem 0 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 1.25rem;
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
   color: var(--ns-accent);
 }
 
 .ns-hero__roles li::before {
   content: '— ';
   color: var(--ns-muted);
+}
+
+.ns-hero__tagline {
+  margin: 1rem 0 0;
+  max-width: 36ch;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ns-muted);
+  font-style: italic;
 }
 
 .ns-hero__scroll {
@@ -309,15 +488,42 @@
   color: var(--ns-muted);
 }
 
+@media (max-width: 640px) {
+  .ns-desk {
+    height: clamp(180px, 32vh, 260px);
+  }
+
+  .ns-monitor {
+    transform: translateX(-50%);
+    width: min(300px, 78vw);
+  }
+
+  .ns-keyboard {
+    display: none;
+  }
+
+  .ns-mug {
+    right: 4%;
+    bottom: 20%;
+    transform: scale(0.85);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ns-boot,
   .ns-boot__fill,
-  .ns-hero__scroll {
+  .ns-hero__scroll,
+  .ns-mug__steam span,
+  .ns-monitor__cursor {
     transition: none;
     animation: none;
   }
 
   .ns-boot.is-done {
     display: none;
+  }
+
+  .ns-monitor__cursor {
+    opacity: 1;
   }
 }

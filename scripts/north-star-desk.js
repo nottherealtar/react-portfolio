@@ -8,7 +8,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const lines = [
-    { prompt: true, text: 'cafe-shell --login josh' },
+    { prompt: true, text: 'login josh' },
     { text: 'TarsOnlineCafe · Johannesburg' },
     { text: 'I automate what slows your business down.' },
     { prompt: true, text: '_' },

@@ -12,10 +12,9 @@
 
   const steps = [
     { pct: 18, text: 'POST… OK' },
-    { pct: 38, text: 'Grinding beans…' },
-    { pct: 58, text: 'Mounting ~/integrations…' },
-    { pct: 78, text: 'Heating the group head…' },
-    { pct: 94, text: 'Starting cafe-shell…' },
+    { pct: 40, text: 'Warming up…' },
+    { pct: 62, text: 'Mounting ~/integrations…' },
+    { pct: 84, text: 'Loading workspace…' },
     { pct: 100, text: 'Ready.' },
   ];
 

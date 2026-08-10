@@ -19,24 +19,34 @@
 
 ## Tars translation (not a clone)
 
-**Do not** rebuild a retro computer. Your brand is coffee + automation + Johannesburg. The equivalent of Ed’s PET is something only you would build.
+**Do not** rebuild a Commodore PET or lean on 80s beige nostalgia. **Do** build the thing your name already says: **PCs and coffee** — a modern desk at the café counter, monitor glowing, cup steaming, shell ready.
 
-### Proposed centerpiece: “The Cafe Terminal”
-- Keep/evolve the **Three.js globe** (Johannesburg pin, connection lines) as ambient WebGL — already on-brand for “integrations across systems”
-- Overlay a **working mini-terminal** (Phase 2 lab prototype, expanded): visitors run `ls`, `cat about.txt`, `open work/solvemyproblem` — content loads from real site data, not fake logs
-- Optional later: low-poly **espresso machine** or **desk scene** instead of globe — only if it serves the story
+### Centerpiece: “The Café Desk”
 
-### Entry ritual: “Brewing…” not “Booting…”
+| Element | Role |
+|---------|------|
+| **Monitor + shell** | edh’s interactivity — a terminal you can type in (`help`, `work`, `contact`). Modern flat panel, not retro plastic. |
+| **Coffee mug + steam** | Tars warmth — human pace, café identity. CSS/Canvas steam, optional 3D mug later. |
+| **Wood desk surface** | Grounds the scene. Warm `#2d221b` tones, soft top-light like a window seat. |
+| **Keyboard** | Subtle silhouette — you’re at work, not in a museum. |
+
+The **globe** can stay elsewhere (integrations map, about section) but the **hero** is the desk: PC meets coffee.
+
+### Entry ritual: PC boot × coffee brew
+
 ```
+POST… OK
 Grinding beans…
+Mounting ~/integrations…
 Heating the group head…
-Pulling the first shot…
+Starting cafe-shell…
 Ready.
 ```
+
 Skippable. Respects `prefers-reduced-motion`.
 
 ### Typography & layout shift
-- **Hero:** Giant name (`Josh` or `Tars`) over WebGL — edh scale, coffee palette
+- **Hero:** Giant name over the **café desk** (monitor + mug) — edh scale, coffee palette
 - **Below fold:** Strip glassmorphism card grids in favour of **editorial sections** (edh-style `h1` / `h2` / `hr` / tag `<ul>`)
 - **Work:** Case studies as long-form project entries (year, stack tags, story) — WeSolveYourProblem first
 - **Services:** Short, confident blocks — not four identical cards
@@ -71,24 +81,23 @@ Skippable. Respects `prefers-reduced-motion`.
 ## Phased roadmap
 
 ### Phase 0 — North star (this branch)
-- `dev/north-star.html` — boot, giant hero, globe, editorial sample, scroll hint
-- Align stakeholders on look/feel before touching `index.html`
+- `dev/north-star.html` — PC×coffee desk hero, boot ritual, monitor shell, editorial sample
 
 ### Phase 1 — Hero & entry
-- Port boot + giant typography to production `index.html`
-- Merge terminal boot (ui-lab Phase 2) into hero; static fallback for SEO/crawlers
+- Port café desk + boot to production `index.html`
+- Expand monitor into a **working cafe-shell** (ui-lab terminal → real commands)
 
 ### Phase 2 — Editorial work section
 - Rebuild `#work` as edh-style project list (Solve My Problem hero entry)
 - Remove redundant card chrome
 
-### Phase 3 — Interactive terminal
-- Command set: `help`, `about`, `work`, `contact`, `open <url>`
-- Mobile: terminal collapses to typed intro animation only
+### Phase 3 — Interactive shell
+- Command set: `help`, `about`, `work`, `contact`, `open <url>`, `menu`
+- Mobile: desk scales down; shell collapses to typed intro
 
-### Phase 4 — 3D depth
-- Globe reacts to scroll section (subtle camera drift)
-- Or replace with cafe desk scene if globe feels weak
+### Phase 4 — 3D depth (optional)
+- Low-poly desk scene in Three.js (monitor, mug, keyboard) — orbit slightly on scroll
+- Globe moves to **Work** or **About** as “integrations map”, not hero
 
 ### Phase 5 — Polish & perf
 - Lighthouse 90+; boot skip; CI visual regression optional

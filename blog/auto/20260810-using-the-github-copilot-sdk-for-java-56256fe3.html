@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Using the GitHub Copilot SDK for Java | TarsOnlineCafe</title>
+  <meta name="description" content="And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260810-using-the-github-copilot-sdk-for-java-56256fe3.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Using the GitHub Copilot SDK for Java">
+  <meta property="og:description" content="And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260810-using-the-github-copilot-sdk-for-java-56256fe3.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Using the GitHub Copilot SDK for Java">
+  <meta name="twitter:description" content="And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK…">
+  <meta property="og:image" content="https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?resize=1024%2C173">
+  <meta property="og:image:alt" content="Using the GitHub Copilot SDK for Java">
+  <meta name="twitter:image" content="https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?resize=1024%2C173">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Using the GitHub Copilot SDK for Java", "description": "And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK…", "datePublished": "2026-08-10T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260810-using-the-github-copilot-sdk-for-java-56256fe3.html"}, "isBasedOn": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/", "wordCount": 1491, "image": "https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?resize=1024%2C173"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-08-10</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Using the GitHub Copilot SDK for Java</h1>
+        <p class="lede">And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK will feel like home: CompletableFuture , annotations, lambdas, virtual threads, it’s all here.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Java developers no longer have to rely on Java framework-specific approaches to drive AI from their enterprise apps. While it is true that Langchain4j empowered developers by disintermediating specific AI vendors, you still had a dependency on Langchain4j. And with Spring AI, well, of course you had a dependency on design choices made by Spring, if not on Spring itself.</p>
+        <p>Now, GitHub Copilot SDK for Java is the first truly framework agnostic way to drive AI from Java. The GitHub Copilot SDK for Java is a client library that empowers your server-side Java code to create Copilot agent sessions, register tools, send prompts, and receive structured responses—all programmatically. It works in server environments, including Jakarta EE and Spring.</p>
+        <p>This post shows you how to use the SDK, walks through a complete Jakarta EE 11 sample application, and leaves you with concrete next steps to try it yourself. I chose Jakarta EE 11 for my demo because I was the lead release coordinator for that release. I believe in open standards as the best way to empower developers.</p>
+        <p>For more on Jakarta EE 11 see this InfoQ article . This sample app is an agent harness using Jakarta EE 11. But, of course, developers can build their own agent harness using the well-known Java frameworks and libraries of their choice.</p>
+        <p>Clone the sample app and try it yourself &gt; The SDK is available as a Maven dependency: JDK 17 or 25 (25 recommended — unlocks virtual threads and other modern features) A GitHub account with an active Copilot subscription The Copilot CLI installed locally at version 1.0.71 or later. The best way to see the SDK in action is to run this sample application . The application is a real-estate lead-management agent pipeline.</p>
+        <p>A customer submits an enquiry (“I’m looking for a 3-bedroom house in London under £800,000”), and the system spins up an isolated Copilot Agent on a virtual thread to process it through a pipeline: The architecture uses Jakarta WebSocket to push real-time status updates from the server to the browser, so you can watch agents progress through phases as the model calls tools: Submit multiple inquiries simultaneously to see concurrent virtual-thread agents in action. Each one processes independently with its own Copilot session. Let’s…</p>
+        <p>If you’ve ever written a @GET endpoint in JAX-RS or an @MessageDriven bean, this will feel instantly familiar: The @CopilotTool annotation declares the method as a tool the model can call. The @CopilotToolParam annotation describes each parameter so the model knows what to pass. The SDK handles all the JSON Schema generation, argument parsing, and dispatch.</p>
+        <p>The annotation-based tool API is currently an experimental feature of the SDK, so you need to configure two things in your Maven build: Enable experimental APIs : pass -Acopilot.experimental.allowed=true to the compiler. Without this flag, the annotation processor will refuse to generate the tool metadata. For more details on the experimental APIs see Copilot SDK documentation .</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?resize=1024%2C173" alt="Application flow diagram showing the pipeline stages: Customer Enquiry flows to QUEUED, then VALIDATING, which branches to either SEARCHING (if genuine) or REJECTED (if spam/off-topic). SEARCHING leads to WRITING_REPORT " loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?w=2454" alt="Application flow diagram showing the pipeline stages: Customer Enquiry flows to QUEUED, then VALIDATING, which branches to either SEARCHING (if genuine) or REJECTED (if spam/off-topic). SEARCHING leads to WRITING_REPORT " loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-02-app-architecture-diagram.png?resize=1024%2C628" alt="Application architecture diagram showing Browser with Pipeline Dashboard connecting to Open Liberty server containing AppState, CopilotClient in EMPTY mode, virtual thread agents, and WebSocket push for real-time UI upda" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-02-app-architecture-diagram.png?w=2034" alt="Application architecture diagram showing Browser with Pipeline Dashboard connecting to Open Liberty server containing AppState, CopilotClient in EMPTY mode, virtual thread agents, and WebSocket push for real-time UI upda" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-03-sample-app-01.png?resize=1024%2C940" alt="Screenshot of the sample application showing the pipeline dashboard with multiple enquiries being processed concurrently." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/figure-03-sample-app-01.png?w=1806" alt="Screenshot of the sample application showing the pipeline dashboard with multiple enquiries being processed concurrently." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>The GitHub Copilot SDK for Java is a client library that empowers your server-side Java code to create Copilot agent sessions, register tools, send prompts, and receive structured responses—all programmatically. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Now, GitHub Copilot SDK for Java is the first truly framework agnostic way to drive AI from Java.</li>
+          <li>This sample app is an agent harness using Jakarta EE 11.</li>
+          <li>Let’s walk through the key SDK features as they appear in the sample code.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/engineering/using-the-github-copilot-sdk-for-java/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Using the GitHub Copilot SDK for Java",
+    "date": "2026-08-10",
+    "category": "Developer Platform",
+    "summary": "And with its BYOK support, GitHub Copilot SDK for Java is also AI vendor neutral. If you’ve been building enterprise Java for any length of time, this SDK will feel like home: CompletableFuture , annotations, lambdas, virtual threads, it’s all here.",
+    "link": "auto/20260810-using-the-github-copilot-sdk-for-java-56256fe3.html",
+    "source_url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/08/figure-01-app-flow-diagram.png?resize=1024%2C173"
+  },
+  {
     "title": "I've seen much more of 1666: Amsterdam, and the witchy game by the creator of Assassin's Creed has some surprising ideas",
     "date": "2026-08-10",
     "category": "Gaming News",

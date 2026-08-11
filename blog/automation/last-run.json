@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-10T18:01:47.334799+00:00",
+  "timestamp": "2026-08-11T06:02:06.194026+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 609,
+  "unseen_candidates": 608,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I've seen much more of 1666: Amsterdam, and the witchy game by the creator of Assassin's Creed has some surprising ideas",
-      "link": "auto/20260810-i-ve-seen-much-more-of-1666-amsterdam-and-the-witchy-game-by-d7a0da17.html",
-      "score": 126.4339,
-      "source": "Eurogamer",
+      "title": "Using the GitHub Copilot SDK for Java",
+      "link": "auto/20260810-using-the-github-copilot-sdk-for-java-56256fe3.html",
+      "score": 140.99,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

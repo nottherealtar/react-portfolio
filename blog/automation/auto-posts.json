@@ -1,5 +1,18 @@
 [
   {
+    "title": "The “LSP Moment” for AI Agents: WebStorm ACP",
+    "date": "2026-08-11",
+    "category": "Developer Tools",
+    "summary": "Instead of WebStorm building a custom integration for every new agent on the market, any agent that implements ACP becomes a first-class citizen in your editor. Agent Client Protocol (ACP): Standardizes how the IDE sends context (files, diffs, and terminal output) to an agent and how the agent sends back actions (file edits, tool calls, and shell commands).",
+    "link": "auto/20260811-the-lsp-moment-for-ai-agents-webstorm-acp-2384cc17.html",
+    "source_url": "https://blog.jetbrains.com/webstorm/2026/08/the-lsp-moment-for-ai-agents-webstorm-acp/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/08/ws_compatible_agents.png"
+  },
+  {
     "title": "Using the GitHub Copilot SDK for Java",
     "date": "2026-08-10",
     "category": "Developer Platform",

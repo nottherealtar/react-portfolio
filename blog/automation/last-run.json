@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-12T06:40:41.771522+00:00",
+  "timestamp": "2026-08-12T18:10:20.141170+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 605,
-  "unseen_candidates": 594,
+  "fetched_candidates": 606,
+  "unseen_candidates": 596,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Edge Computing Revolution: Securing and Scaling Middleware for Distributed Systems",
-      "link": "auto/20260812-the-edge-computing-revolution-securing-and-scaling-middlewar-a74b0b18.html",
-      "score": 126.8113,
-      "source": "DEV Community",
+      "title": "Your contributors are AI-first now. Is your project?",
+      "link": "auto/20260812-your-contributors-are-ai-first-now-is-your-project-52817327.html",
+      "score": 127.9514,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

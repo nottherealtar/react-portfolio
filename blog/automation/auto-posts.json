@@ -1,5 +1,17 @@
 [
   {
+    "title": "The Edge Computing Revolution: Securing and Scaling Middleware for Distributed Systems",
+    "date": "2026-08-12",
+    "category": "Coding & Community",
+    "summary": "This deep-dive explores the architectural implications, challenges, and solutions for building robust, secure, and scalable middleware for the edge. Edge Servers/Micro-datacenters: More powerful compute and storage resources located closer to the edge gateways, capable of running complex applications and AI/ML inference.",
+    "link": "auto/20260812-the-edge-computing-revolution-securing-and-scaling-middlewar-a74b0b18.html",
+    "source_url": "https://dev.to/tamizuddin/the-edge-computing-revolution-securing-and-scaling-middleware-for-distributed-systems-fem",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The “LSP Moment” for AI Agents: WebStorm ACP",
     "date": "2026-08-11",
     "category": "Developer Tools",

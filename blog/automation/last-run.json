@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-11T18:05:33.378352+00:00",
+  "timestamp": "2026-08-12T06:40:41.771522+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 619,
-  "unseen_candidates": 608,
+  "fetched_candidates": 605,
+  "unseen_candidates": 594,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The “LSP Moment” for AI Agents: WebStorm ACP",
-      "link": "auto/20260811-the-lsp-moment-for-ai-agents-webstorm-acp-2384cc17.html",
-      "score": 135.8397,
-      "source": "JetBrains Blog",
+      "title": "The Edge Computing Revolution: Securing and Scaling Middleware for Distributed Systems",
+      "link": "auto/20260812-the-edge-computing-revolution-securing-and-scaling-middlewar-a74b0b18.html",
+      "score": 126.8113,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

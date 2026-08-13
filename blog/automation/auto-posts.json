@@ -1,5 +1,18 @@
 [
   {
+    "title": "What 50 open source projects taught us about security in the AI era",
+    "date": "2026-08-13",
+    "category": "Developer Platform",
+    "summary": "AI is changing the pace of open source development and the security challenges that come with it. The program combines hands-on security education, direct engagement with GitHub Security Lab experts, and a trusted community where maintainers can work through security challenges with their peers. The projects below are grouped by the role they play in the software ecosystem.",
+    "link": "auto/20260813-what-50-open-source-projects-taught-us-about-security-in-the-b70411f0.html",
+    "source_url": "https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/08/openclaw.png?resize=1920%2C1080"
+  },
+  {
     "title": "Your contributors are AI-first now. Is your project?",
     "date": "2026-08-12",
     "category": "Developer Platform",

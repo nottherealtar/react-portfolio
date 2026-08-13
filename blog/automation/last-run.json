@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-12T18:10:20.141170+00:00",
+  "timestamp": "2026-08-13T06:43:31.338480+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 596,
+  "unseen_candidates": 595,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Your contributors are AI-first now. Is your project?",
-      "link": "auto/20260812-your-contributors-are-ai-first-now-is-your-project-52817327.html",
-      "score": 127.9514,
+      "title": "GitHub availability report: July 2026",
+      "link": "auto/20260812-github-availability-report-july-2026-b07daeda.html",
+      "score": 148.5905,
       "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }

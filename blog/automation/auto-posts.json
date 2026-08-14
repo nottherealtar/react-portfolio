@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "AI Code Review - How to Automate Quality Control in 2026",
+    "date": "2026-08-14",
+    "category": "Coding & Community",
+    "summary": "AI code review reasons about code contextually, catching bugs and security vulnerabilities that rule-based static analysis tools miss It is most reliable for security vulnerabilities, logic errors, performance patterns, and API misuse; it struggles with novel business logic bugs and system-level architectural problems The most effective integration triggers a review when a PR is opened and posts findings as inline…",
+    "link": "auto/20260814-ai-code-review-how-to-automate-quality-control-in-2026-2eba64f6.html",
+    "source_url": "https://dev.to/mecanik-dev/ai-code-review-how-to-automate-quality-control-in-2026-2533",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What 50 open source projects taught us about security in the AI era",
     "date": "2026-08-13",
     "category": "Developer Platform",

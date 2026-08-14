@@ -1,5 +1,17 @@
 [
   {
+    "title": "EverShop 2.2.1: our biggest release since 2.0 — page builder, metafields, and React 19",
+    "date": "2026-08-14",
+    "category": "Coding & Community",
+    "summary": "It folds in the React 19 work that had been sitting in an unpublished 2.1.3 branch and stacks four months of development on top of it: a visual page builder, a blog module, entity custom fields, a multi-language storefront with a translated admin, a rebuilt shipping and fulfillment stack, built-in cloud storage, product recommendations, and a serious security and performance pass.",
+    "link": "auto/20260814-evershop-2-2-1-our-biggest-release-since-2-0-page-builder-me-e905a82f.html",
+    "source_url": "https://dev.to/the_nguyen/evershop-221-our-biggest-release-since-20-page-builder-metafields-and-react-19-1g1o",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What 50 open source projects taught us about security in the AI era",
     "date": "2026-08-13",
     "category": "Developer Platform",

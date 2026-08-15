@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-15T05:38:42.589283+00:00",
+  "timestamp": "2026-08-15T17:33:46.211009+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 593,
+  "unseen_candidates": 592,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "If you're not paying attention to retro game recompilations, you're missing the most exciting thing in gaming right now",
-      "link": "auto/20260813-if-you-re-not-paying-attention-to-retro-game-recompilations-980517d9.html",
-      "score": 123.675,
-      "source": "PC Gamer",
+      "title": "\"half-open\" twice is not the same state: the bug that shaped breakwater 1.0",
+      "link": "auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html",
+      "score": 128.934,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

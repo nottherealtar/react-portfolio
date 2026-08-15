@@ -1,5 +1,17 @@
 [
   {
+    "title": "\"half-open\" twice is not the same state: the bug that shaped breakwater 1.0",
+    "date": "2026-08-15",
+    "category": "Coding & Community",
+    "summary": "When the cooldown elapses, exactly one of them probes the recovering dependency while the rest keep waiting. The instance decides: reopen the circuit. The real fix: identify the period, not the state The fix is a fence — a monotonic token the store mints on every successful transition: The swap lands only if the state is still from and nothing has transitioned since you read that fence.",
+    "link": "auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html",
+    "source_url": "https://dev.to/pinceladasdaweb/half-open-twice-is-not-the-same-state-the-bug-that-shaped-breakwater-10-4m6c",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "EverShop 2.2.1: our biggest release since 2.0 — page builder, metafields, and React 19",
     "date": "2026-08-14",
     "category": "Coding & Community",

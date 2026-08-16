@@ -1,5 +1,17 @@
 [
   {
+    "title": "5 Things I Check First When a Linux Server Goes Down",
+    "date": "2026-08-16",
+    "category": "Coding & Community",
+    "summary": "Here are the 5 things I check first whenever a Linux server goes down, crashes, or stops responding. Resource Starvation, System Load, and the OOM Killer If you can log in, but commands take thirty seconds to execute or web services fail to reply, the system is likely suffering from resource starvation. b (blocked processes): A high count indicates processes stuck waiting for disk or network I/O.",
+    "link": "auto/20260816-5-things-i-check-first-when-a-linux-server-goes-down-0eb68ddc.html",
+    "source_url": "https://dev.to/asepsayyad007/5-things-i-check-first-when-a-linux-server-goes-down-3e0i",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "\"half-open\" twice is not the same state: the bug that shaped breakwater 1.0",
     "date": "2026-08-15",
     "category": "Coding & Community",

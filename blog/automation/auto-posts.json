@@ -36,6 +36,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
+    "date": "2026-08-13",
+    "category": "Developer Platform",
+    "summary": "This demo builds a stack with the GitHub CLI, reviews it on github.com, and merges each pull request as it’s ready—so you leave with a workflow you can use tomorrow. At Home Assistant, every step happens in the open across 20,000 contributors and a dozen GitHub organizations.",
+    "link": "auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html",
+    "source_url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What 50 open source projects taught us about security in the AI era",
     "date": "2026-08-13",
     "category": "Developer Platform",

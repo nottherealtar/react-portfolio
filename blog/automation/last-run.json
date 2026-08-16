@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-15T17:33:46.211009+00:00",
+  "timestamp": "2026-08-16T05:40:51.437754+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "\"half-open\" twice is not the same state: the bug that shaped breakwater 1.0",
-      "link": "auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html",
-      "score": 128.934,
-      "source": "DEV Community",
+      "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
+      "link": "auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html",
+      "score": 116.234,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

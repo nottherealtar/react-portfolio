@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-17T05:48:35.312696+00:00",
+  "timestamp": "2026-08-17T17:42:42.472043+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 592,
+  "unseen_candidates": 593,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "An Index Suggestion Is a Hypothesis, Not a Patch",
-      "link": "auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html",
-      "score": 116.8442,
+      "title": "Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)",
+      "link": "auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html",
+      "score": 123.8982,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

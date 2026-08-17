@@ -1,5 +1,17 @@
 [
   {
+    "title": "Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)",
+    "date": "2026-08-17",
+    "category": "Coding & Community",
+    "summary": "A useful state machine is accepted -> streaming -> validated with terminal alternatives such as rejected , invalid , and abandoned . Now consider the opposite ordering: the adapter completes, validation passes, persistence commits, and the socket closes one instruction before the terminal event reaches the browser.",
+    "link": "auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html",
+    "source_url": "https://dev.to/mitchellcross2134/authenticated-nodejs-web-chatbot-backend-validates-streaming-reviews-without-an-sdk-14bm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "An Index Suggestion Is a Hypothesis, Not a Patch",
     "date": "2026-08-17",
     "category": "Coding & Community",

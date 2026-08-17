@@ -1,5 +1,17 @@
 [
   {
+    "title": "An Index Suggestion Is a Hypothesis, Not a Patch",
+    "date": "2026-08-17",
+    "category": "Coding & Community",
+    "summary": "A free disposable server lets you repeat the same before-and-after measurement on a second copy of the data, which catches the cases where your local experiment was too small to show the real cost or too artificial to match your query mix. A better prompt is not 'Is this query slow?' but 'Given this schema and this query, propose one index and tell me the smallest test that would show it helps.",
+    "link": "auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html",
+    "source_url": "https://dev.to/codepy_1473/an-index-suggestion-is-a-hypothesis-not-a-patch-20e4",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "5 Things I Check First When a Linux Server Goes Down",
     "date": "2026-08-16",
     "category": "Coding & Community",

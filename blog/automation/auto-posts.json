@@ -1,5 +1,17 @@
 [
   {
+    "title": "Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps",
+    "date": "2026-08-18",
+    "category": "Coding & Community",
+    "summary": "How should a SaaS app compare compatible chat completions behind one API key? A useful fixture includes a ticket ID, redacted text, allowed destination queues, expected urgency, and an annotation note for ambiguous cases. This design also separates inference attempts from business effects: operators may retry a transient call, but only one validated decision can win the commit.",
+    "link": "auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html",
+    "source_url": "https://dev.to/ellsworthpierce7528/single-api-key-comparison-for-compatible-chat-integration-in-fintech-saas-apps-54l",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Readme",
     "date": "2026-08-18",
     "category": "Coding & Community",

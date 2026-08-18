@@ -1,5 +1,17 @@
 [
   {
+    "title": "Readme",
+    "date": "2026-08-18",
+    "category": "Coding & Community",
+    "summary": "No source-code changes are required. Configure the dedicated Oracle metadata schema: Set a strong application admin password: Do not reuse the Oracle or Ollama credential. Point the backend at the organisation Ollama server: The API key is read only by FastAPI and is never sent to the React browser.",
+    "link": "auto/20260818-readme-0c66fe7e.html",
+    "source_url": "https://dev.to/iamry02/readme-1j7b",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)",
     "date": "2026-08-17",
     "category": "Coding & Community",

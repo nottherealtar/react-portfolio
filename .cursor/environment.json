@@ -1,0 +1,14 @@
+{
+  "name": "react-portfolio",
+  "install": "pip3 install --user -r scripts/requirements-blog.txt",
+  "terminals": [
+    {
+      "name": "static-server",
+      "command": "python3 -m http.server 8000",
+      "description": "Serves the static portfolio at http://localhost:8000. UI experiments live at /dev/ui-lab.html."
+    }
+  ],
+  "ports": [
+    { "name": "static site", "port": 8000 }
+  ]
+}

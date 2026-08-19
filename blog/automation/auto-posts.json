@@ -24,6 +24,19 @@
     "reading_minutes": 2
   },
   {
+    "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms",
+    "date": "2026-08-17",
+    "category": "Cloud Automation",
+    "summary": "Microsoft has been named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms , which we believe recognizes the platforms organizations rely on to build, deploy, and operate cloud-native applications at scale.",
+    "link": "auto/20260817-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-3a88122c.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-cloud-native-application-platforms/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/MQ-Cloud-Native-App-Platform-Blog-Thumbnail-2-1024x1024.webp"
+  },
+  {
     "title": "Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)",
     "date": "2026-08-17",
     "category": "Coding & Community",

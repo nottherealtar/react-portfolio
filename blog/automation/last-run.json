@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-18T17:40:46.892549+00:00",
+  "timestamp": "2026-08-19T05:44:44.225593+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 606,
-  "unseen_candidates": 593,
+  "unseen_candidates": 594,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps",
-      "link": "auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html",
-      "score": 131.885,
-      "source": "DEV Community",
+      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms",
+      "link": "auto/20260817-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-3a88122c.html",
+      "score": 139.9298,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,18 @@
 [
   {
+    "title": "TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts",
+    "date": "2026-08-19",
+    "category": "Coding & Community",
+    "summary": "TypeScript Exclude and Extract in Depth: Filtering Union Types for Real API Contracts Most union type problems stem from treating them as static lists instead of transformable sets. Exclude<T, U> removes unwanted types before they reach production code. Combining Exclude and Extract with conditional types enables self-documenting type transformations that encode business rules directly in the type system.",
+    "link": "auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html",
+    "source_url": "https://dev.to/jsmanifest/typescript-exclude-and-extract-in-depth-filtering-union-types-for-real-api-contracts-24k3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fml5o0wwxgp7vh9sx9w8j.png"
+  },
+  {
     "title": "Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps",
     "date": "2026-08-18",
     "category": "Coding & Community",

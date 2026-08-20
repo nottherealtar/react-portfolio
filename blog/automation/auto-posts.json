@@ -1,5 +1,18 @@
 [
   {
+    "title": "Identity Infrastructure: Why Credentials Are the Layer Directories Don't Secure",
+    "date": "2026-08-20",
+    "category": "Coding & Community",
+    "summary": "A mature identity infrastructure secures both the governance plane (directories, identity providers, lifecycle management) and the credential plane (exposure detection, ownership, vault coverage, secrets hygiene). This is where modern identity infrastructure extends beyond the directory: into the credentials moving through code, pipelines, collaboration tools, and developer environments.",
+    "link": "auto/20260820-identity-infrastructure-why-credentials-are-the-layer-direct-2bc8d001.html",
+    "source_url": "https://dev.to/gitguardian/identity-infrastructure-why-credentials-are-the-layer-directories-dont-secure-21gm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fixmzn8y9zlf6g83ov1my.png"
+  },
+  {
     "title": "TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts",
     "date": "2026-08-19",
     "category": "Coding & Community",

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-19T17:38:08.228216+00:00",
+  "timestamp": "2026-08-20T05:45:01.599695+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 594,
+  "unseen_candidates": 595,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts",
-      "link": "auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html",
-      "score": 129.8208,
-      "source": "DEV Community",
+      "title": "New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown",
+      "link": "auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html",
+      "score": 131.5245,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

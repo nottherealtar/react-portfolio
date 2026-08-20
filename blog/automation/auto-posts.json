@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fml5o0wwxgp7vh9sx9w8j.png"
   },
   {
+    "title": "New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown",
+    "date": "2026-08-19",
+    "category": "Developer Tools",
+    "summary": "When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one thing – that you’re logged in. If you have Claude set up to work in Air via ACP, we suggest switching to the bundled Claude Agent for better functionality and an enhanced experience.",
+    "link": "auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html",
+    "source_url": "https://blog.jetbrains.com/air/2026/08/new-in-air-claude-subscriptions-multiproject-view-and-improved-markdown/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps",
     "date": "2026-08-18",
     "category": "Coding & Community",

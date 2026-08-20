@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown | TarsOnlineCafe</title>
+  <meta name="description" content="When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown">
+  <meta property="og:description" content="When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown">
+  <meta name="twitter:description" content="When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown", "description": "When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one…", "datePublished": "2026-08-19T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html"}, "isBasedOn": "https://blog.jetbrains.com/air/2026/08/new-in-air-claude-subscriptions-multiproject-view-and-improved-markdown/", "wordCount": 817}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-08-19</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown</h1>
+        <p class="lede">When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one thing – that you’re logged in. If you have Claude set up to work in Air via ACP, we suggest switching to the bundled Claude Agent for better functionality and an enhanced experience.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>You can now use Air with your existing Claude Pro, Max, or Team subscription. Usage counts against your subscription quota – there’s no need to purchase API credits and no per-token Console billing. Login goes through Anthropic’s own authentication flow.</p>
+        <p>This was our most-requested feature and it took longer to implement than anyone wanted, including us. But our delay wasn’t without good reason: We weren’t prepared to ship an OAuth workaround that could put your Anthropic account at risk, so we waited until we could build on Anthropic’s documented authentication method. Your browser opens, you authorize the connection, and your token stays where Anthropic designed it to stay: with Claude.</p>
+        <p>Air’s implementation follows Anthropic’s documented flow for exactly this use case. Your credentials are handled by Claude itself, end to end. However, this bundled Claude Agent in Air is a first-party integration with: Current models, selectable in Air, with reasoning effort control For clarity, we’ve called it Claude Agent – the first-party agent, powered by your Claude subscription.</p>
+        <p>Docker environments still require API billing or JetBrains AI credits You can’t currently run Claude Agent in Docker environments without API billing. Because your subscription token lives with Claude on your machine and Air never holds a copy, there’s no credential Air could hand into an isolated container. Containerized runs have to go through API billing or JetBrains AI credits.</p>
+        <p>Until now, opening another repository in Air meant opening another Air window. The new multiproject view puts multiple projects and their tasks in one place. The sidebar groups tasks by project, search covers the full task list, and each task keeps its project and branch visible as you move between them.</p>
+        <p>This changes the unit of navigation in Air from windows to tasks. Start an agent in your backend repo, switch to the frontend while it runs, and then jump to a completed task in a third project – all without losing track of which agent is working where. Running and completed tasks stay visible together, so you can coordinate multirepo work as one workflow instead of several disconnected Air sessions.</p>
+        <p>Markdown files now read like documents Air now renders any .md file with clear heading hierarchy, formatted lists, distinct code blocks, and syntax highlighting for commands, paths, and inline code. The syntax recedes while you read and appears when you edit, making READMEs, plans, notes, and documentation easier to scan without parsing the formatting first. Remove the ACP entry and log in through the bundled Claude Agent – you’ll get correct model reporting, slash commands, and all the other first-party features.</p>
+        <p>My company has Claude Team seats and no API budget. You can use your Claude Team seat with a subscription. It follows Anthropic’s documented authentication flow – credentials are handled by Claude itself, never by Air.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>You can now use Air with your existing Claude Pro, Max, or Team subscription. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Claude in Air is the full first-party experience Some of you have already connected Claude to Air yourselves through ACP.</li>
+          <li>Because your subscription token lives with Claude on your machine and Air never holds a copy, there’s no credential Air could hand into an isolated container.</li>
+          <li>Inventory dependent integrations and add regression checks before you widen rollout.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/air/2026/08/new-in-air-claude-subscriptions-multiproject-view-and-improved-markdown/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

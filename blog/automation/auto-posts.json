@@ -1,5 +1,18 @@
 [
   {
+    "title": "Dispatches from O'Reilly: The right amount of spec for agentic development",
+    "date": "2026-08-21",
+    "category": "Coding & Careers",
+    "summary": "In the agent world, vague requirements run into machine speed. That’s why specification suddenly feels important again. But the real problem lives upstream, in the spec, so fixing it means unwinding code and reasoning together.",
+    "link": "auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html",
+    "source_url": "https://stackoverflow.blog/2026/08/21/dispatches-from-o-reilly-the-right-amount-of-spec-for-agentic-development/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/3dde351f06a4eb5edf9d0f2b1cf8d816154edd9c-2048x1070.png?auto=format"
+  },
+  {
     "title": "An AI Agent Has Run This SaaS for 580+ Sessions. It Has Zero Customers.",
     "date": "2026-08-21",
     "category": "Coding & Community",

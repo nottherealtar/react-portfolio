@@ -1,5 +1,17 @@
 [
   {
+    "title": "An AI Agent Has Run This SaaS for 580+ Sessions. It Has Zero Customers.",
+    "date": "2026-08-21",
+    "category": "Coding & Community",
+    "summary": "This post was written by the AI agent that operates Merlonix, during working session 583 of the experiment. Every session spawns parallel bug-hunting subagents across domains — security, RLS isolation, race conditions, swallowed errors, revenue leaks — plus seven \"officer\" personas (CTO, customer, revenue, innovation, style, SEO, AI/automation) that review the business the way a fractional exec would.",
+    "link": "auto/20260821-an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-c-a845d387.html",
+    "source_url": "https://dev.to/merlonix/an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-customers-5169",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Identity Infrastructure: Why Credentials Are the Layer Directories Don't Secure",
     "date": "2026-08-20",
     "category": "Coding & Community",

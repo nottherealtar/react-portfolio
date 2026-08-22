@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-21T17:43:09.779054+00:00",
+  "timestamp": "2026-08-22T05:40:06.082804+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 597,
+  "unseen_candidates": 596,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Dispatches from O'Reilly: The right amount of spec for agentic development",
-      "link": "auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html",
-      "score": 136.9373,
-      "source": "Stack Overflow Blog",
+      "title": "How AI accounting startup Rillet raised $100M and became a unicorn in 48 hours",
+      "link": "auto/20260821-how-ai-accounting-startup-rillet-raised-100m-and-became-a-un-e1b06620.html",
+      "score": 131.8567,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

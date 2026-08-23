@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-23T05:43:02.913394+00:00",
+  "timestamp": "2026-08-23T17:33:13.808658+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 594,
+  "unseen_candidates": 593,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "AI Won't Replace Project Managers, But It is Reshaping How Work Gets Done",
-      "link": "auto/20260820-ai-won-t-replace-project-managers-but-it-is-reshaping-how-wo-20eb3ca2.html",
-      "score": 124.2506,
-      "source": "Stack Overflow Blog",
+      "title": "Silent Hill: Townfall's new gameplay trailer quietly confirms how long its PS5 exclusivity will last",
+      "link": "auto/20260822-silent-hill-townfall-s-new-gameplay-trailer-quietly-confirms-c473789b.html",
+      "score": 116.5193,
+      "source": "Eurogamer",
       "text_engine": "embedding-mmr"
     }
   ],

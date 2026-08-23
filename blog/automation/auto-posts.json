@@ -64,6 +64,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fixmzn8y9zlf6g83ov1my.png"
   },
   {
+    "title": "AI Won't Replace Project Managers, But It is Reshaping How Work Gets Done",
+    "date": "2026-08-20",
+    "category": "Coding & Careers",
+    "summary": "AI-Augmented Delivery AI is shifting project managers’ time from manual coordination to strategic work. Instead, they become a Systems Architect, coordinating a workforce made up of both humans and intelligent agents. Implementing AI exposes hidden operational debt, and technical leaders must be prepared for the friction.",
+    "link": "auto/20260820-ai-won-t-replace-project-managers-but-it-is-reshaping-how-wo-20eb3ca2.html",
+    "source_url": "https://stackoverflow.blog/2026/08/20/ai-won-t-replace-project-managers-but-it-is-reshaping-how-work-gets-done/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/31cc6b93f2770c5c32cbf61d3c4241c41a0b592e-828x848.jpg?auto=format"
+  },
+  {
     "title": "TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts",
     "date": "2026-08-19",
     "category": "Coding & Community",

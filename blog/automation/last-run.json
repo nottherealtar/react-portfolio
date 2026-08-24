@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-24T05:51:39.909471+00:00",
+  "timestamp": "2026-08-24T17:45:02.639709+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 607,
-  "unseen_candidates": 592,
+  "unseen_candidates": 595,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What Broke When We Turned Government Open Data Into Agent-Callable Evidence",
-      "link": "auto/20260824-what-broke-when-we-turned-government-open-data-into-agent-ca-ba374c50.html",
-      "score": 128.8739,
+      "title": "Taming Kubernetes Cost Sprawl: A FinOps Blueprint for Executives",
+      "link": "auto/20260824-taming-kubernetes-cost-sprawl-a-finops-blueprint-for-executi-1834f492.html",
+      "score": 147.9463,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

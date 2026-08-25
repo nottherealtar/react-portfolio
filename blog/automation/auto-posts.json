@@ -1,5 +1,18 @@
 [
   {
+    "title": "I built agent-inspect to debug TypeScript AI agent trajectories",
+    "date": "2026-08-25",
+    "category": "Coding & Community",
+    "summary": "Output only tests could miss a bad path that happened to produce a plausible answer. AgentInspect is a local evidence debugger and trajectory-test toolkit for TypeScript AI agents. It turns one local trace into three things: a readable execution tree, a deterministic regression gate, and a derived Evidence v2 bundle that you can review before sharing.",
+    "link": "auto/20260825-i-built-agent-inspect-to-debug-typescript-ai-agent-trajector-e239cf37.html",
+    "source_url": "https://dev.to/raju_dandigam/i-built-agent-inspect-to-debug-typescript-ai-agent-trajectories-2jg6",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhqxm45u2leky1mwqqwy6.gif"
+  },
+  {
     "title": "Anthropic's Best Model Can't Hold Users",
     "date": "2026-08-25",
     "category": "Coding & Community",

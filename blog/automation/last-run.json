@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-24T17:45:02.639709+00:00",
+  "timestamp": "2026-08-25T05:45:55.641642+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Taming Kubernetes Cost Sprawl: A FinOps Blueprint for Executives",
-      "link": "auto/20260824-taming-kubernetes-cost-sprawl-a-finops-blueprint-for-executi-1834f492.html",
-      "score": 147.9463,
+      "title": "Anthropic's Best Model Can't Hold Users",
+      "link": "auto/20260825-anthropic-s-best-model-can-t-hold-users-1f404465.html",
+      "score": 133.9292,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

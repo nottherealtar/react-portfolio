@@ -1,5 +1,18 @@
 [
   {
+    "title": "Anthropic's Best Model Can't Hold Users",
+    "date": "2026-08-25",
+    "category": "Coding & Community",
+    "summary": "Here is what it shows for Anthropic's model mix: Opus 4.8: ~50% of spend (surged from 15% in June) Opus 5: Mid-teens percent (overtook Fable within weeks of July 24 launch) Fable 5: ~11% (plateaued since June launch) The pattern is unmistakable. At that premium, it needs to deliver 2x the value per task. The AI pricing landscape has undergone a structural shift in 2026.",
+    "link": "auto/20260825-anthropic-s-best-model-can-t-hold-users-1f404465.html",
+    "source_url": "https://dev.to/max_quimby/anthropics-best-model-cant-hold-users-2nk0",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fra86nw9jez53jrfzwj65.png"
+  },
+  {
     "title": "What Broke When We Turned Government Open Data Into Agent-Callable Evidence",
     "date": "2026-08-24",
     "category": "Coding & Community",

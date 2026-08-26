@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-26T05:48:18.897741+00:00",
+  "timestamp": "2026-08-26T19:16:55.107422+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 607,
-  "unseen_candidates": 596,
+  "fetched_candidates": 609,
+  "unseen_candidates": 598,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Responsible AI adoption needs developer workflow design",
-      "link": "auto/20260824-responsible-ai-adoption-needs-developer-workflow-design-fab3583e.html",
-      "score": 126.6271,
-      "source": "Stack Overflow Blog",
+      "title": "Google Expands Gemini Into an Agent Platform for Building and Running Business AI",
+      "link": "auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html",
+      "score": 143.8504,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Google Expands Gemini Into an Agent Platform for Building and Running Business AI",
+    "date": "2026-08-26",
+    "category": "Coding & Community",
+    "summary": "What Gemini Enterprise Agent Platform brings together Google describes the Agent Platform as the runtime and governance layer for production-scale AI agents. Google also positions the Gemini Enterprise app as an employee-facing front end for delivering agents inside an organization.",
+    "link": "auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html",
+    "source_url": "https://dev.to/alifar/google-expands-gemini-into-an-agent-platform-for-building-and-running-business-ai-19nf",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "I built agent-inspect to debug TypeScript AI agent trajectories",
     "date": "2026-08-25",
     "category": "Coding & Community",

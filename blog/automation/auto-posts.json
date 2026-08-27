@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "The patch window is collapsing: Why security needs a new control plane",
+    "date": "2026-08-25",
+    "category": "Cloud Automation",
+    "summary": "At the same time, vulnerabilities are becoming more visible, more widely distributed, and more rapidly weaponized than ever before. It is time to rethink how the industry approaches security during the critical period between disclosure and remediation. Many organizations find themselves in a position where they know exactly which systems are vulnerable but cannot immediately patch them.",
+    "link": "auto/20260825-the-patch-window-is-collapsing-why-security-needs-a-new-cont-dbcd4420.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/the-patch-window-is-collapsing-why-security-needs-a-new-control-plane/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/08/1121922_In-blog-3-1024x576.jpg"
+  },
+  {
     "title": "I built agent-inspect to debug TypeScript AI agent trajectories",
     "date": "2026-08-25",
     "category": "Coding & Community",

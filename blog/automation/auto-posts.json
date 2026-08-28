@@ -1,5 +1,18 @@
 [
   {
+    "title": "The State of Django 2026: Boring is so back",
+    "date": "2026-08-28",
+    "category": "Developer Tools",
+    "summary": "AI is mainstream, but no workflow has won AI has become part of the normal Django development workflow. What remains unsettled is how developers use them. Python tooling is consolidating fast Two tools that barely existed a few years ago are already near the top of the survey.",
+    "link": "auto/20260828-the-state-of-django-2026-boring-is-so-back-b2b6fc04.html",
+    "source_url": "https://blog.jetbrains.com/pycharm/2026/08/the-state-of-django-2026-boring-is-so-back/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/08/Blog_infographics_2-3.png"
+  },
+  {
     "title": "Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs",
     "date": "2026-08-27",
     "category": "Cloud Automation",

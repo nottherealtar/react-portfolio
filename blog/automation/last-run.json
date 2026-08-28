@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-28T01:29:44.057087+00:00",
+  "timestamp": "2026-08-28T17:26:01.380003+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 599,
+  "unseen_candidates": 598,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs",
-      "link": "auto/20260827-managed-postgresql-vs-self-hosted-postgresql-key-benefits-an-4daf025d.html",
-      "score": 144.5727,
-      "source": "Microsoft Azure Blog",
+      "title": "The State of Django 2026: Boring is so back",
+      "link": "auto/20260828-the-state-of-django-2026-boring-is-so-back-b2b6fc04.html",
+      "score": 152.1021,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

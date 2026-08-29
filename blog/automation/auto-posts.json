@@ -1,5 +1,17 @@
 [
   {
+    "title": "A Simulation ID Is Not a Running Simulation",
+    "date": "2026-08-29",
+    "category": "Coding & Community",
+    "summary": "MiroFish answered that the simulation had not been prepared. A typed client can still encode the wrong lifecycle I started with the reasonable model: upload context, ask MiroFish to build a graph, start a simulation, then fetch its report. Graph construction did return a task ID and required polling.",
+    "link": "auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html",
+    "source_url": "https://dev.to/kingsleyonoh/a-simulation-id-is-not-a-running-simulation-787",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "The State of Django 2026: Boring is so back",
     "date": "2026-08-28",
     "category": "Developer Tools",

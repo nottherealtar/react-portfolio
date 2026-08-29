@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-29T11:39:39.537000+00:00",
+  "timestamp": "2026-08-29T19:43:51.835776+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A Simulation ID Is Not a Running Simulation",
-      "link": "auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html",
-      "score": 140.9796,
-      "source": "DEV Community",
+      "title": "Panic refunds tariff fees, 1047 Games pivots from Splitgate, and Gamescom Dev grows - Patch Notes #67",
+      "link": "auto/20260828-panic-refunds-tariff-fees-1047-games-pivots-from-splitgate-a-1d1e5df5.html",
+      "score": 129.4472,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Browser Automation and Proxies: Complete Integration Guide for Selenium, Puppeteer, and Playwright",
+    "date": "2026-08-30",
+    "category": "Coding & Community",
+    "summary": "Distributing requests across IP addresses — masking automation as diverse traffic Bypassing geographic restrictions — accessing location-gated content Reducing detection risk — rotating datacenter, residential, or mobile IPs Load balancing — scaling volume across proxy pools instead of melting a single connection The tradeoff: slower requests (proxy adds latency), increased costs (~$5–50/GB depending on type), and…",
+    "link": "auto/20260830-browser-automation-and-proxies-complete-integration-guide-fo-be4705d7.html",
+    "source_url": "https://dev.to/yaroslav_k/browser-automation-and-proxies-complete-integration-guide-for-selenium-puppeteer-and-playwright-3cda",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "A Simulation ID Is Not a Running Simulation",
     "date": "2026-08-29",
     "category": "Coding & Community",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "What Bridgeless Mode Actually Changed in React Native",
+    "date": "2026-08-31",
+    "category": "Coding & Community",
+    "summary": "I have seen the Bridge evolve from a revolutionary idea into the primary architectural constraint for high-performance apps. The release of React Native’s New Architecture—specifically Bridgeless Mode—is not just a performance patch. In the legacy architecture, the JavaScript thread and the Native thread lived in total isolation.",
+    "link": "auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html",
+    "source_url": "https://dev.to/techamit95ch/what-bridgeless-mode-actually-changed-in-react-native-16db",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Why Salesforce? Where Technology Meets Business",
     "date": "2026-08-30",
     "category": "Coding & Community",

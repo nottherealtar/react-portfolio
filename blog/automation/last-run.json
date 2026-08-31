@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-31T11:34:48.290646+00:00",
+  "timestamp": "2026-08-31T21:54:12.623522+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What Bridgeless Mode Actually Changed in React Native",
-      "link": "auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html",
-      "score": 126.8621,
+      "title": "Case Study: Scaling Smart Teleassistance Voice Routing with Edge Compute and Zero-Cold-Start Cascades",
+      "link": "auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html",
+      "score": 131.7546,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

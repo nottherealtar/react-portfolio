@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Case Study: Scaling Smart Teleassistance Voice Routing with Edge Compute and Zero-Cold-Start Cascades",
+    "date": "2026-08-31",
+    "category": "Coding & Community",
+    "summary": "Whether you are managing an SRE team handling cluster failures or a teleassistance platform routing domestic SOS alerts, the core engineering challenge remains identical: getting a human's attention in milliseconds without administrative friction.",
+    "link": "auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html",
+    "source_url": "https://dev.to/enrique_drack_34c8d81d28d/case-study-scaling-smart-teleassistance-voice-routing-with-edge-compute-and-zero-cold-start-o00",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Why Salesforce? Where Technology Meets Business",
     "date": "2026-08-30",
     "category": "Coding & Community",

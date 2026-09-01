@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-01T10:03:56.585785+00:00",
+  "timestamp": "2026-09-01T19:56:00.938384+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Ensuring Code Compliance in Public Sector Software Projects",
-      "link": "auto/20260901-ensuring-code-compliance-in-public-sector-software-projects-93149f8a.html",
-      "score": 131.3856,
-      "source": "JetBrains Blog",
+      "title": "I Tried Needle2 for Local Tool Calling. I Ended Up With llama.cpp + Granite",
+      "link": "auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html",
+      "score": 122.9028,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

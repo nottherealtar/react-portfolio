@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-08-31T21:54:12.623522+00:00",
+  "timestamp": "2026-09-01T10:03:56.585785+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Case Study: Scaling Smart Teleassistance Voice Routing with Edge Compute and Zero-Cold-Start Cascades",
-      "link": "auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html",
-      "score": 131.7546,
-      "source": "DEV Community",
+      "title": "Ensuring Code Compliance in Public Sector Software Projects",
+      "link": "auto/20260901-ensuring-code-compliance-in-public-sector-software-projects-93149f8a.html",
+      "score": 131.3856,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

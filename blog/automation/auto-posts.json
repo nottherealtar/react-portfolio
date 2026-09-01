@@ -1,5 +1,18 @@
 [
   {
+    "title": "Ensuring Code Compliance in Public Sector Software Projects",
+    "date": "2026-09-01",
+    "category": "Developer Tools",
+    "summary": "Public sector software compliance cheat sheet Strict standards apply across public sector software for data protection, security controls, accessibility, and supply chain transparency. Using weak and outdated cryptography is another compliance risk, as it leaves public sector software vulnerable to attacks.",
+    "link": "auto/20260901-ensuring-code-compliance-in-public-sector-software-projects-93149f8a.html",
+    "source_url": "https://blog.jetbrains.com/qodana/2026/09/ensuring-code-compliance/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/pexels-matreding-16124523.jpg"
+  },
+  {
     "title": "What Bridgeless Mode Actually Changed in React Native",
     "date": "2026-08-31",
     "category": "Coding & Community",

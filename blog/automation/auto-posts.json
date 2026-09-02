@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Economics of Agent Optimization: Context engineering for enterprise AI agents",
+    "date": "2026-09-02",
+    "category": "Cloud Automation",
+    "summary": "But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering does: it decides what enters the context window on each turn, so the agent gets what this request needs rather than everything it might ever need.",
+    "link": "auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-2.webp"
+  },
+  {
     "title": "I Tried Needle2 for Local Tool Calling. I Ended Up With llama.cpp + Granite",
     "date": "2026-09-01",
     "category": "Coding & Community",

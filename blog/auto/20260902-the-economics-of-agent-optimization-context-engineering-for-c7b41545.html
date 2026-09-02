@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Economics of Agent Optimization: Context engineering for enterprise AI agents | TarsOnlineCafe</title>
+  <meta name="description" content="But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Economics of Agent Optimization: Context engineering for enterprise AI agents">
+  <meta property="og:description" content="But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Economics of Agent Optimization: Context engineering for enterprise AI agents">
+  <meta name="twitter:description" content="But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context…">
+  <meta property="og:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-2.webp">
+  <meta property="og:image:alt" content="The Economics of Agent Optimization: Context engineering for enterprise AI agents">
+  <meta name="twitter:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-2.webp">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Economics of Agent Optimization: Context engineering for enterprise AI agents", "description": "But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context…", "datePublished": "2026-09-02T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/", "wordCount": 1778, "image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-2.webp"}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--espresso, #1a1108);
+      color: var(--foam, #f7efe2);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(45, 34, 27, 0.72);
+      border: 1px solid rgba(247, 239, 226, 0.14);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin-bottom: 0.75rem;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(247, 239, 226, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(201, 169, 110, 0.45);
+      color: var(--crema, #c9a96e);
+      background: rgba(201, 169, 110, 0.1);
+    }
+    h1 {
+      font-family: "DM Serif Display", Georgia, serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.18;
+      margin: 0 0 1rem;
+      color: var(--foam, #f7efe2);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ede0cc);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(247, 239, 226, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #c9a96e);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(237, 224, 204, 0.95);
+    }
+    a {
+      color: var(--crema, #c9a96e);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(247, 239, 226, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f7efe2);
+      text-decoration: none;
+      border: 1px solid rgba(247, 239, 226, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #c9a96e);
+      color: var(--crema, #c9a96e);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(247, 239, 226, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(247, 239, 226, 0.1);
+      background: rgba(26, 17, 8, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <span class="nav-logo-icon">☕</span>
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-02</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>The Economics of Agent Optimization: Context engineering for enterprise AI agents</h1>
+        <p class="lede">But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering does: it decides what enters the context window on each turn, so the agent gets what this request needs rather than everything it might ever need.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>This blog post is the third of a four-part series called The Economics of Agent Optimization , which shares the strategies, capabilities, and proof points to help you optimize agent costs and run AI as a managed investment system on Microsoft Foundry. The first post set out the three decisions that systems rest on. The second post took the request at runtime.</p>
+        <p>In many production systems, that choice was set during prototyping and never revisited, even though it often drives the largest share of operating cost and contributes to disappointing answers. The model remains as capable as when you selected it, and instructions change only when someone rewrites them. Managing that process is called context engineering.</p>
+        <p>Why the context window sets what an agent costs A model has no memory of its own. When the turn ends, that context disappears and must be sent again on the next one. That cost is manageable for a chatbot answering one question.</p>
+        <p>For an agent working across many turns toward one outcome, it is often the largest expense. Because the context window is paid for every turn, unnecessary content is billed repeatedly. More context does not guarantee better answers: a relevant fact buried in 40 pages is harder to use, and a long tool list makes the wrong choice more likely.</p>
+        <p>That makes context worth a leader’s attention. Most cost reductions involve a tradeoff: a cheaper model may reduce quality, and shorter instructions may weaken an answer. By contrast, removing unnecessary context can lower costs without reducing quality, making it an easier optimization for teams to support.</p>
+        <p>Practiced continuously, it is how an agent improves, because every turn reveals what it actually used. Four questions cover the work, and teams usually take them in this order. Many teams begin with broad searches that insert entire documents into the prompt.</p>
+        <p>This approach is easy to build but costly to run, and it forces the model to find the one relevant detail amid everything else. Foundry IQ replaces that with a managed knowledge layer. A knowledge base points at sources across Work IQ , Fabric IQ , Web IQ , Microsoft Azure Blob Storage , SharePoint , OneLake , and Azure SQL .</p>
+        <p>When an agent submits a query, Foundry IQ decomposes it into subqueries, searches connected sources in parallel, semantically reranks the results, and returns grounded passages with citations. Two features make this knowledge layer reusable across agents and governable at scale. A single knowledge base can serve multiple agents.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/image-2.webp" alt="U I when creating a toolbox in Foundry." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/06/CLO24-Azure-Retail-020-1-scaled.jpg" alt="Person sitting at a desk with headphones around their neck working on a computer." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>The first post set out the three decisions that systems rest on. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>This is also the part of an agent that can improve on its own.</li>
+          <li>Why the context window sets what an agent costs A model has no memory of its own.</li>
+          <li>Every tool attached to an agent has that description sent to the model on every turn, needed or not, and enterprise agents pick up tools quickly as they connect to more systems.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

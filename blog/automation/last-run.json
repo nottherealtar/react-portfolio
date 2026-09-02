@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-01T19:56:00.938384+00:00",
+  "timestamp": "2026-09-02T09:35:11.985946+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I Tried Needle2 for Local Tool Calling. I Ended Up With llama.cpp + Granite",
-      "link": "auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html",
-      "score": 122.9028,
-      "source": "DEV Community",
+      "title": "Introducing Azure Multicloud Interconnect for AWS",
+      "link": "auto/20260831-introducing-azure-multicloud-interconnect-for-aws-1621f670.html",
+      "score": 125.6895,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

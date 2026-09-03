@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-02T19:47:40.354306+00:00",
+  "timestamp": "2026-09-03T09:46:30.452738+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Economics of Agent Optimization: Context engineering for enterprise AI agents",
-      "link": "auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html",
-      "score": 133.9158,
-      "source": "Microsoft Azure Blog",
+      "title": "Remote MCP Servers: Connecting and Securing SaaS Tools",
+      "link": "auto/20260903-remote-mcp-servers-connecting-and-securing-saas-tools-f257e014.html",
+      "score": 131.8619,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

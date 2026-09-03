@@ -1,5 +1,18 @@
 [
   {
+    "title": "Remote MCP Servers: Connecting and Securing SaaS Tools",
+    "date": "2026-09-03",
+    "category": "Coding & Community",
+    "summary": "Connecting remote MCP servers directly to local AI clients creates credential sprawl, audit blind spots, and unmonitored SaaS API access. Deploying a dedicated gateway unifies remote tool connections over Server-Sent Events (SSE) and Streamable HTTP into a single authenticated interface.",
+    "link": "auto/20260903-remote-mcp-servers-connecting-and-securing-saas-tools-f257e014.html",
+    "source_url": "https://dev.to/kuldeep_paul/remote-mcp-servers-connecting-and-securing-saas-tools-5472",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F49j5wxfmeidgloxcxjak.jpg"
+  },
+  {
     "title": "The Economics of Agent Optimization: Context engineering for enterprise AI agents",
     "date": "2026-09-02",
     "category": "Cloud Automation",

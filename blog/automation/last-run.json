@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-03T19:49:05.725106+00:00",
+  "timestamp": "2026-09-04T09:36:30.334610+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 598,
+  "unseen_candidates": 597,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Elevating security, control, and accessibility: Stack Internal 2026.6",
-      "link": "auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html",
-      "score": 134.9091,
-      "source": "Stack Overflow Blog",
+      "title": "PlayStation State Of Play September 2026: All The Biggest Announcements, Games, And Trailers",
+      "link": "auto/20260903-playstation-state-of-play-september-2026-all-the-biggest-ann-f9a0023f.html",
+      "score": 130.0404,
+      "source": "GameSpot",
       "text_engine": "embedding-mmr"
     }
   ],

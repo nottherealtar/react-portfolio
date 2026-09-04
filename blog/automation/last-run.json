@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-04T09:36:30.334610+00:00",
+  "timestamp": "2026-09-04T19:33:27.342419+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "PlayStation State Of Play September 2026: All The Biggest Announcements, Games, And Trailers",
-      "link": "auto/20260903-playstation-state-of-play-september-2026-all-the-biggest-ann-f9a0023f.html",
-      "score": 130.0404,
-      "source": "GameSpot",
+      "title": "Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access",
+      "link": "auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html",
+      "score": 136.9147,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

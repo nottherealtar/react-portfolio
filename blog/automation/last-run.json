@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-04T19:33:27.342419+00:00",
+  "timestamp": "2026-09-05T09:02:36.456742+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 597,
+  "unseen_candidates": 599,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access",
-      "link": "auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html",
-      "score": 136.9147,
+      "title": "10 Practical Things You Can Build With n8n and MCP",
+      "link": "auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html",
+      "score": 149.9283,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

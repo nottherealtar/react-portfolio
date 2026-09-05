@@ -1,5 +1,17 @@
 [
   {
+    "title": "10 Practical Things You Can Build With n8n and MCP",
+    "date": "2026-09-05",
+    "category": "Coding & Community",
+    "summary": "MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request actions, and hand off to humans when needed. A read-only “what automations do we have?” assistant Scenario: Your team has dozens of n8n workflows.",
+    "link": "auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html",
+    "source_url": "https://dev.to/hosseinhezami/10-practical-things-you-can-build-with-n8n-and-mcp-koh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access",
     "date": "2026-09-04",
     "category": "Coding & Community",

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-05T09:02:36.456742+00:00",
+  "timestamp": "2026-09-05T19:01:27.223288+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 599,
+  "unseen_candidates": 597,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "10 Practical Things You Can Build With n8n and MCP",
-      "link": "auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html",
-      "score": 149.9283,
+      "title": "OpenAI Launches GPT-6 Astra With Computer Use Tools and Broad Platform Rollout",
+      "link": "auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html",
+      "score": 136.8526,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

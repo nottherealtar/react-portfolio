@@ -373,6 +373,11 @@ img {
   animation: soft-float 5.5s ease-in-out infinite;
 }
 
+.device-laptop.is-floating:hover,
+.device-laptop.is-floating:focus-within {
+  animation-play-state: paused;
+}
+
 @keyframes soft-float {
   0%,
   100% {

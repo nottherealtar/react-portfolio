@@ -1,5 +1,17 @@
 [
   {
+    "title": "Preventing Duplicate Side Effects in Event-Driven Systems",
+    "date": "2026-09-06",
+    "category": "Coding & Community",
+    "summary": "For example, consider an automation system where a user action eventually triggers an external API call: User Action --> Webhook --> Event Queue --> Worker --> External API If the worker crashes after the external API accepts the request but before our database records the result, we have an ambiguous state. Therefore, every queue consumer that performs an external side effect should be safe to retry.",
+    "link": "auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html",
+    "source_url": "https://dev.to/neeru_jaroliya/preventing-duplicate-side-effects-in-event-driven-systems-196f",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "OpenAI Launches GPT-6 Astra With Computer Use Tools and Broad Platform Rollout",
     "date": "2026-09-05",
     "category": "Coding & Community",

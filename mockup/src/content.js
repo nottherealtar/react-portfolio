@@ -28,6 +28,18 @@ export const nav = [
   { label: 'Contact', href: '#contact' },
 ]
 
+export const marquee = [
+  'Azure Logic Apps',
+  'Freshworks',
+  'Python',
+  'API Integration',
+  'Next.js',
+  'Google Cloud',
+  'Process Automation',
+  'CRM / FSM',
+  'Web Platforms',
+]
+
 export const proof = {
   eyebrow: 'Working together',
   title: 'What you can count on',

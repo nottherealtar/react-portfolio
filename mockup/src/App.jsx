@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import {
   about,
   contact,
   hero,
+  marquee,
   nav,
   process,
   proof,
@@ -12,6 +13,8 @@ import {
   testimonials,
   work,
 } from './content'
+
+const EmberField = lazy(() => import('./EmberField'))
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -34,22 +37,52 @@ function Reveal({ children, delay = 0, className, role }) {
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
+      viewport={{ once: true, amount: 0.22 }}
+      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>
   )
 }
 
-function Atmosphere() {
+function PointerGlow() {
+  const reduce = useReducedMotion()
+  const ref = useRef(null)
+
+  useEffect(() => {
+    if (reduce) return undefined
+    const el = ref.current
+    const onMove = (e) => {
+      el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+    }
+    window.addEventListener('pointermove', onMove, { passive: true })
+    return () => window.removeEventListener('pointermove', onMove)
+  }, [reduce])
+
+  if (reduce) return null
+  return <div className="pointer-glow" ref={ref} aria-hidden="true" />
+}
+
+function Magnetic({ className, href, children, ...rest }) {
+  const ref = useRef(null)
+  const reduce = useReducedMotion()
+
+  const onMove = (e) => {
+    if (reduce || !ref.current) return
+    const rect = ref.current.getBoundingClientRect()
+    const x = e.clientX - rect.left - rect.width / 2
+    const y = e.clientY - rect.top - rect.height / 2
+    ref.current.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`
+  }
+
+  const onLeave = () => {
+    if (ref.current) ref.current.style.transform = 'translate(0, 0)'
+  }
+
   return (
-    <div className="atmosphere" aria-hidden="true">
-      <div className="atmosphere__mesh" />
-      <div className="atmosphere__orb atmosphere__orb--a" />
-      <div className="atmosphere__orb atmosphere__orb--b" />
-      <div className="atmosphere__grain" />
-    </div>
+    <a ref={ref} className={className} href={href} onPointerMove={onMove} onPointerLeave={onLeave} {...rest}>
+      {children}
+    </a>
   )
 }
 
@@ -87,9 +120,9 @@ function Nav() {
             </li>
           ))}
         </ul>
-        <a className="btn btn-primary nav-cta" href="#contact">
+        <Magnetic className="btn btn-primary nav-cta" href="#contact">
           Let&apos;s Talk →
-        </a>
+        </Magnetic>
         <button
           className="nav-toggle"
           type="button"
@@ -138,9 +171,7 @@ function BrandOrb() {
           <path id="circlePath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
         </defs>
         <text>
-          <textPath href="#circlePath">
-            TARS ONLINE CAFE · EST 2020 · TARS ONLINE CAFE · EST 2020 ·
-          </textPath>
+          <textPath href="#circlePath">TARS ONLINE CAFE · EST 2020 · TARS ONLINE CAFE · EST 2020 ·</textPath>
         </text>
       </svg>
       <div className="brand-orb__core">
@@ -154,13 +185,11 @@ function Hero() {
   const reduce = useReducedMotion()
   return (
     <section id="hero" className="hero">
-      <div className="hero__visual">
-        <div className="hero__visual-gradient" />
-        <div className="hero__steam" aria-hidden="true">
-          <div className="steam-wisp" />
-          <div className="steam-wisp" />
-          <div className="steam-wisp" />
-        </div>
+      <div className="hero__stage">
+        <Suspense fallback={null}>
+          <EmberField />
+        </Suspense>
+        <div className="hero__veil" />
         <BrandOrb />
       </div>
 
@@ -196,18 +225,31 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
         >
-          <a className="btn btn-primary" href={hero.primaryCta.href}>
+          <Magnetic className="btn btn-primary" href={hero.primaryCta.href}>
             {hero.primaryCta.label}
-          </a>
-          <a className="btn btn-ghost" href={hero.secondaryCta.href}>
+          </Magnetic>
+          <Magnetic className="btn btn-ghost" href={hero.secondaryCta.href}>
             {hero.secondaryCta.label} →
-          </a>
+          </Magnetic>
         </motion.div>
         <p className="hero__est">
           {site.founder} · {site.location} · {site.tagline}
         </p>
       </div>
     </section>
+  )
+}
+
+function Marquee() {
+  const items = [...marquee, ...marquee]
+  return (
+    <div className="marquee" aria-hidden="true">
+      <div className="marquee__track">
+        {items.map((item, i) => (
+          <span key={`${item}-${i}`}>{item}</span>
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -224,7 +266,7 @@ function Proof() {
         </Reveal>
         <div className="proof-grid">
           {proof.items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.06} className="proof-item">
+            <Reveal key={item.title} delay={i * 0.06} className="proof-item glass-panel">
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </Reveal>
@@ -279,7 +321,7 @@ function About() {
                 in
               </a>
             </div>
-            <aside className="recruiter-panel" aria-label="For recruiters">
+            <aside className="recruiter-panel glass-panel" aria-label="For recruiters">
               <p className="eyebrow">{about.recruiter.title}</p>
               <p>{about.recruiter.hint}</p>
               <div className="recruiter-links">
@@ -317,7 +359,7 @@ function Services() {
           </Reveal>
           <div className="service-list" role="list">
             {services.items.map((item, i) => (
-              <Reveal key={item.num} delay={i * 0.07} className="service-item" role="listitem">
+              <Reveal key={item.num} delay={i * 0.07} className="service-item glass-panel" role="listitem">
                 <span className="service-num" aria-hidden="true">
                   {item.num}
                 </span>
@@ -377,12 +419,12 @@ function Work() {
               ))}
             </div>
             <div className="work-actions">
-              <a className="btn btn-primary" href={project.url} target="_blank" rel="noopener noreferrer">
+              <Magnetic className="btn btn-primary" href={project.url} target="_blank" rel="noopener noreferrer">
                 Visit live site ↗
-              </a>
-              <a className="btn btn-ghost" href="#contact">
+              </Magnetic>
+              <Magnetic className="btn btn-ghost" href="#contact">
                 Build something similar
-              </a>
+              </Magnetic>
             </div>
           </Reveal>
 
@@ -402,7 +444,7 @@ function Work() {
                 <em>Get a Free Quote</em>
               </div>
             </div>
-            <aside className="work-aside">
+            <aside className="work-aside glass-panel">
               <p className="label">Why this matters</p>
               <p>{project.aside}</p>
             </aside>
@@ -423,7 +465,7 @@ function Process() {
         </Reveal>
         <div className="process-track">
           {process.steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.08} className="process-step">
+            <Reveal key={step.title} delay={i * 0.08} className="process-step glass-panel">
               <div className="process-node" aria-hidden="true">
                 {String(i + 1).padStart(2, '0')}
               </div>
@@ -449,7 +491,7 @@ function Testimonials() {
         <div className="testimonial-grid">
           {testimonials.items.map((item, i) => (
             <Reveal key={item.name} delay={i * 0.07}>
-              <blockquote className="testimonial">
+              <blockquote className="testimonial glass-panel">
                 <p>“{item.quote}”</p>
                 <footer>
                   <div className="avatar" aria-hidden="true">
@@ -489,7 +531,7 @@ function Contact() {
           <p className="section-lead">{contact.subtitle}</p>
         </Reveal>
 
-        <Reveal className="contact-panel">
+        <Reveal className="contact-panel glass-panel">
           {sent ? (
             <div aria-live="polite">
               <h3 className="section-title" style={{ fontSize: '1.8rem' }}>
@@ -584,11 +626,12 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <Atmosphere />
+      <PointerGlow />
       <div className="app-shell">
         <Nav />
         <main id="main">
           <Hero />
+          <Marquee />
           <Proof />
           <About />
           <Services />
@@ -599,7 +642,7 @@ export default function App() {
         </main>
         <Footer />
       </div>
-      <div className="mockup-banner">Redesign mockup</div>
+      <div className="mockup-banner">Redesign mockup · WebGL</div>
     </>
   )
 }

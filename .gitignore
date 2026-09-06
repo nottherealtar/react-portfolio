@@ -9,3 +9,4 @@ __pycache__/
 # Redesign mockup
 mockup/node_modules/
 mockup/dist/
+.playwright-mcp/

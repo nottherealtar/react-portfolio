@@ -6,6 +6,7 @@ import {
   useReducedMotion,
   useScroll,
   useSpring,
+  useTransform,
 } from 'framer-motion'
 import {
   about,
@@ -27,12 +28,12 @@ const easeOut = [0.22, 1, 0.36, 1]
 
 function Icon({ name }) {
   const common = {
-    width: 20,
-    height: 20,
+    width: 22,
+    height: 22,
     viewBox: '0 0 24 24',
     fill: 'none',
     stroke: 'currentColor',
-    strokeWidth: 1.6,
+    strokeWidth: 1.5,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
     'aria-hidden': true,
@@ -40,33 +41,33 @@ function Icon({ name }) {
   if (name === 'route') {
     return (
       <svg {...common}>
-        <circle cx="6" cy="19" r="2.2" />
-        <circle cx="18" cy="5" r="2.2" />
-        <path d="M8 18.2C12 18 14 14 14 10V8.5" />
+        <circle cx="6" cy="19" r="2" />
+        <circle cx="18" cy="5" r="2" />
+        <path d="M8 18.2C11.5 18 14 14.2 14 10.2V8.2" />
+        <path d="M14 8.2h2.5" />
       </svg>
     )
   }
   if (name === 'shield') {
     return (
       <svg {...common}>
-        <path d="M12 3l7 3v5c0 5-3.2 8.2-7 10-3.8-1.8-7-5-7-10V6l7-3z" />
-        <path d="M9.5 12.2l1.8 1.8 3.4-3.6" />
+        <path d="M12 3.2l7 2.8v5.2c0 4.8-3.1 7.9-7 9.6-3.9-1.7-7-4.8-7-9.6V6l7-2.8z" />
+        <path d="M9.4 12.1l1.8 1.8 3.5-3.7" />
       </svg>
     )
   }
   if (name === 'chat') {
     return (
       <svg {...common}>
-        <path d="M5 6.5A2.5 2.5 0 017.5 4h9A2.5 2.5 0 0119 6.5v6A2.5 2.5 0 0116.5 15H10l-4 3.2V6.5z" />
+        <path d="M5.2 7A2.8 2.8 0 018 4.2h8A2.8 2.8 0 0118.8 7v5.2A2.8 2.8 0 0116 15H10.2L6 18.2V7z" />
       </svg>
     )
   }
   return (
     <svg {...common}>
-      <rect x="3.5" y="3.5" width="7" height="7" rx="1.4" />
-      <rect x="13.5" y="3.5" width="7" height="7" rx="1.4" />
-      <rect x="3.5" y="13.5" width="7" height="7" rx="1.4" />
-      <rect x="13.5" y="13.5" width="7" height="7" rx="1.4" />
+      <path d="M12 3.5l8 4.2-8 4.2-8-4.2 8-4.2z" />
+      <path d="M4 12.2l8 4.2 8-4.2" />
+      <path d="M4 16.2l8 4.2 8-4.2" />
     </svg>
   )
 }
@@ -84,37 +85,57 @@ function Reveal({ children, delay = 0, className, role }) {
     <motion.div
       className={className}
       role={role}
-      initial={{ opacity: 0, y: 22 }}
+      initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.22 }}
-      transition={{ duration: 0.7, ease: easeOut, delay }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.75, ease: easeOut, delay }}
     >
       {children}
     </motion.div>
   )
 }
 
+function WordReveal({ text, className, as: Tag = 'h2', delay = 0 }) {
+  const reduce = useReducedMotion()
+  const words = text.split(' ')
+  if (reduce) {
+    return <Tag className={className}>{text}</Tag>
+  }
+  return (
+    <Tag className={`${className} frost-word-reveal`} aria-label={text}>
+      {words.map((word, i) => (
+        <span className="frost-word-reveal__word" key={`${word}-${i}`}>
+          <motion.span
+            aria-hidden="true"
+            initial={{ opacity: 0, y: '105%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.45 }}
+            transition={{ duration: 0.7, ease: easeOut, delay: delay + i * 0.045 }}
+          >
+            {word}
+          </motion.span>
+        </span>
+      ))}
+    </Tag>
+  )
+}
+
 function ScrollProgress() {
   const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 32, mass: 0.2 })
-  return <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.2 })
+  return <motion.div className="frost-progress" style={{ scaleX }} aria-hidden="true" />
 }
 
 function FrostOrb() {
   const reduce = useReducedMotion()
   return (
-    <div className={`frost-orb ${reduce ? 'is-static' : ''}`} aria-hidden="true">
-      <div className="frost-orb__plane" />
-      <div className="frost-orb__glow frost-orb__glow--a" />
-      <div className="frost-orb__glow frost-orb__glow--b" />
-      <div className="frost-orb__sphere">
-        <div className="frost-orb__sheen" />
-        <div className="frost-orb__core">
-          <img src={site.logo} alt="" width={56} height={56} />
-        </div>
-      </div>
-      <div className="frost-orb__ring" />
-      <div className="frost-orb__ring frost-orb__ring--outer" />
+    <div className="frost-orb" aria-hidden="true">
+      <div className={`frost-orb__glow ${reduce ? 'is-static' : ''}`} />
+      <div className={`frost-orb__core ${reduce ? 'is-static' : ''}`} />
+      <div className={`frost-orb__ring frost-orb__ring--a ${reduce ? 'is-static' : ''}`} />
+      <div className={`frost-orb__ring frost-orb__ring--b ${reduce ? 'is-static' : ''}`} />
+      <div className="frost-orb__shine" />
+      <div className="frost-orb__mist" />
     </div>
   )
 }
@@ -122,16 +143,9 @@ function FrostOrb() {
 function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
-  const [hidden, setHidden] = useState(false)
-  const lastY = useRef(0)
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY
-      setScrolled(y > 12)
-      setHidden(y > 120 && y > lastY.current)
-      lastY.current = y
-    }
+    const onScroll = () => setScrolled(window.scrollY > 18)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -150,8 +164,8 @@ function Nav() {
     <AnimatePresence>
       {open && (
         <motion.div
-          key="nav-sheet"
-          className="nav-sheet"
+          key="frost-sheet"
+          className="frost-sheet"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
@@ -161,27 +175,28 @@ function Nav() {
           onClick={close}
         >
           <motion.div
-            className="nav-sheet__panel"
+            className="frost-sheet__panel"
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
-            transition={{ type: 'spring', stiffness: 400, damping: 38 }}
+            transition={{ type: 'spring', stiffness: 380, damping: 36 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="nav-sheet__handle" aria-hidden="true" />
+            <div className="frost-sheet__handle" aria-hidden="true" />
+            <p className="frost-sheet__label">Navigate</p>
             {nav.map((item, i) => (
               <motion.a
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.04 + i * 0.035 }}
+                transition={{ delay: 0.05 + i * 0.04 }}
               >
                 {item.label}
               </motion.a>
             ))}
-            <a className="btn btn-primary nav-sheet__cta" href="#contact" onClick={close}>
+            <a className="frost-btn frost-btn--fill frost-sheet__cta" href="#contact" onClick={close}>
               Start a Project
             </a>
           </motion.div>
@@ -192,26 +207,23 @@ function Nav() {
 
   return (
     <>
-      <nav
-        className={`site-nav ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
-        aria-label="Main navigation"
-      >
-        <a className="nav-brand" href="#hero" onClick={close}>
+      <header className={`frost-nav ${scrolled ? 'is-scrolled' : ''}`}>
+        <a className="frost-nav__brand" href="#hero" onClick={close}>
           <img src={site.logo} alt="" width={28} height={28} />
           <span>{site.brand}</span>
         </a>
-        <ul className="nav-links">
+        <ul className="frost-nav__links">
           {nav.map((item) => (
             <li key={item.href}>
               <a href={item.href}>{item.label}</a>
             </li>
           ))}
         </ul>
-        <a className="btn btn-primary nav-cta" href="#contact">
-          Let&apos;s Talk
+        <a className="frost-btn frost-btn--ghost frost-nav__cta" href="#contact">
+          Start a Project
         </a>
         <button
-          className={`nav-toggle ${open ? 'is-open' : ''}`}
+          className={`frost-nav__toggle ${open ? 'is-open' : ''}`}
           type="button"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
@@ -220,7 +232,7 @@ function Nav() {
           <span />
           <span />
         </button>
-      </nav>
+      </header>
       {typeof document !== 'undefined' ? createPortal(sheet, document.body) : null}
     </>
   )
@@ -228,58 +240,70 @@ function Nav() {
 
 function Hero() {
   const reduce = useReducedMotion()
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  })
+  const orbY = useTransform(scrollYProgress, [0, 1], [0, 140])
+  const orbScale = useTransform(scrollYProgress, [0, 1], [1, 1.18])
+  const copyY = useTransform(scrollYProgress, [0, 1], [0, -48])
+
   return (
-    <section id="hero" className="hero">
-      <div className="hero__grid">
-        <div className="hero__copy">
-          <motion.p
-            className="hero__brand"
-            initial={reduce ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: easeOut }}
-          >
-            {site.brand}
-          </motion.p>
-          <motion.h1
-            className="hero__headline"
-            initial={reduce ? false : { opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08, duration: 0.8, ease: easeOut }}
-          >
-            {hero.headline}
-          </motion.h1>
-          <motion.p
-            className="hero__body"
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18, duration: 0.7, ease: easeOut }}
-          >
-            {hero.body}
-          </motion.p>
-          <motion.div
-            className="hero__ctas"
-            initial={reduce ? false : { opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.28, duration: 0.65, ease: easeOut }}
-          >
-            <a className="btn btn-primary" href={hero.primaryCta.href}>
-              {hero.primaryCta.label}
-            </a>
-            <a className="btn btn-ghost" href={hero.secondaryCta.href}>
-              {hero.secondaryCta.label}
-            </a>
-          </motion.div>
-        </div>
-        <motion.div
-          className="hero__visual"
-          initial={reduce ? false : { opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.12, duration: 0.9, ease: easeOut }}
+    <section id="hero" className="frost-hero" ref={ref}>
+      <div className="frost-hero__atmosphere" aria-hidden="true" />
+      <motion.div
+        className="frost-hero__orb-wrap"
+        style={reduce ? undefined : { y: orbY, scale: orbScale }}
+      >
+        <FrostOrb />
+      </motion.div>
+
+      <motion.div className="frost-hero__copy" style={reduce ? undefined : { y: copyY }}>
+
+        <motion.h1
+          className="frost-hero__brand"
+          initial={reduce ? false : { opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.18, duration: 0.8, ease: easeOut }}
         >
-          <FrostOrb />
+          {site.brand}
+        </motion.h1>
+
+        <motion.p
+          className="frost-hero__headline"
+          initial={reduce ? false : { opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.42, duration: 0.7, ease: easeOut }}
+        >
+          {hero.headline}
+        </motion.p>
+
+        <motion.p
+          className="frost-hero__body"
+          initial={reduce ? false : { opacity: 0, y: 14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.58, duration: 0.65, ease: easeOut }}
+        >
+          {hero.body}
+        </motion.p>
+
+        <motion.div
+          className="frost-hero__ctas"
+          initial={reduce ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.72, duration: 0.6, ease: easeOut }}
+        >
+          <a className="frost-btn frost-btn--fill" href={hero.primaryCta.href}>
+            {hero.primaryCta.label}
+          </a>
+          <a className="frost-btn frost-btn--ghost" href={hero.secondaryCta.href}>
+            {hero.secondaryCta.label}
+          </a>
         </motion.div>
-      </div>
-      <a className="scroll-cue" href="#proof" aria-label="Scroll to content">
+      </motion.div>
+
+      <a className="frost-scroll-cue" href="#proof" aria-label="Scroll to content">
         <span />
       </a>
     </section>
@@ -289,10 +313,13 @@ function Hero() {
 function Marquee() {
   const items = [...marquee, ...marquee]
   return (
-    <div className="marquee" aria-hidden="true">
-      <div className="marquee__track">
+    <div className="frost-marquee" aria-hidden="true">
+      <div className="frost-marquee__track">
         {items.map((item, i) => (
-          <span key={`${item}-${i}`}>{item}</span>
+          <span key={`${item}-${i}`}>
+            {item}
+            <em>·</em>
+          </span>
         ))}
       </div>
     </div>
@@ -301,17 +328,17 @@ function Marquee() {
 
 function Proof() {
   return (
-    <section id="proof" className="proof">
-      <div className="section-shell">
-        <Reveal>
-          <p className="eyebrow">{proof.eyebrow}</p>
-          <h2 className="section-title">{proof.title}</h2>
-          <p className="section-lead">{proof.lead}</p>
+    <section id="proof" className="frost-proof">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <p className="frost-eyebrow">{proof.eyebrow}</p>
+          <WordReveal className="frost-display" text={proof.title} />
+          <p className="frost-lead">{proof.lead}</p>
         </Reveal>
-        <div className="proof-grid">
+        <div className="frost-proof__grid">
           {proof.items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.05} className="proof-item">
-              <div className="proof-item__icon">
+            <Reveal key={item.title} delay={i * 0.06} className="frost-proof__item">
+              <div className="frost-proof__icon">
                 <Icon name={item.icon} />
               </div>
               <h3>{item.title}</h3>
@@ -326,51 +353,46 @@ function Proof() {
 
 function About() {
   return (
-    <section id="about" className="about">
-      <div className="section-shell">
-        <Reveal>
-          <p className="eyebrow">{about.eyebrow}</p>
-          <h2 className="section-title">{about.title}</h2>
-          <p className="section-lead">{about.lead}</p>
+    <section id="about" className="frost-about">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <p className="frost-eyebrow">{about.eyebrow}</p>
+          <WordReveal className="frost-display" text={about.title} />
+          <p className="frost-lead">{about.lead}</p>
         </Reveal>
-        <div className="about-grid">
-          <Reveal className="terminal">
-            <div className="terminal__bar" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-              <em>about_josh.txt</em>
+
+        <div className="frost-about__layout">
+          <Reveal className="frost-terminal">
+            <div className="frost-terminal__bar">
+              <span className="frost-terminal__dots" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+              <span>about.txt</span>
             </div>
-            <pre className="terminal__cmd">$ cat about_josh.txt</pre>
             <pre>{about.terminal.join('\n')}</pre>
           </Reveal>
-          <Reveal delay={0.06} className="about-story">
+
+          <Reveal delay={0.08} className="frost-about__story">
             <h3>{about.storyTitle}</h3>
             {about.story.map((p) => (
-              <p key={p.slice(0, 28)}>{p}</p>
+              <p key={p.slice(0, 40)}>{p}</p>
             ))}
-            <ul className="pill-row">
+            <ul className="frost-pills">
               {about.pills.map((pill) => (
                 <li key={pill}>{pill}</li>
               ))}
             </ul>
-            <div className="stack-row">
+            <div className="frost-stack">
               {about.stack.map((tech) => (
                 <span key={tech}>{tech}</span>
               ))}
             </div>
-            <div className="about-social">
-              <a href={site.social.github} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </a>
-              <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-            </div>
-            <aside className="recruiter-note">
-              <p className="eyebrow">{about.recruiter.title}</p>
+            <aside className="frost-recruiter">
+              <p className="frost-eyebrow">{about.recruiter.title}</p>
               <p>{about.recruiter.hint}</p>
-              <div className="recruiter-links">
+              <div className="frost-social">
                 <a href={site.social.github} target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
@@ -389,22 +411,25 @@ function About() {
 
 function Services() {
   return (
-    <section id="services" className="services">
-      <div className="section-shell">
-        <Reveal>
-          <p className="eyebrow">{services.eyebrow}</p>
-          <h2 className="section-title">{services.title}</h2>
-          <p className="section-lead">{services.subtitle}</p>
+    <section id="services" className="frost-services">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <p className="frost-eyebrow">{services.eyebrow}</p>
+          <WordReveal className="frost-display" text={services.title} />
+          <p className="frost-lead">{services.subtitle}</p>
         </Reveal>
-        <div className="services-layout">
-          <Reveal className="services-intro">
+
+        <div className="frost-services__layout">
+          <Reveal className="frost-services__intro">
             <p>{services.intro}</p>
             <a href="#contact">Discuss your project →</a>
           </Reveal>
-          <div className="service-list" role="list">
+          <div className="frost-services__list" role="list">
             {services.items.map((item, i) => (
-              <Reveal key={item.num} delay={i * 0.06} className="service-row" role="listitem">
-                <span className="service-num">{item.num}</span>
+              <Reveal key={item.num} delay={i * 0.07} className="frost-service" role="listitem">
+                <span className="frost-service__num" aria-hidden="true">
+                  {item.num}
+                </span>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
@@ -423,33 +448,33 @@ function Work() {
   const [activeSpot, setActiveSpot] = useState(0)
 
   return (
-    <section id="work" className="work">
-      <div className="section-shell">
-        <Reveal>
-          <p className="eyebrow">{work.eyebrow}</p>
-          <h2 className="section-title">{work.title}</h2>
-          <p className="section-lead">{work.subtitle}</p>
+    <section id="work" className="frost-work">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <p className="frost-eyebrow">{work.eyebrow}</p>
+          <WordReveal className="frost-display" text={work.title} />
+          <p className="frost-lead">{work.subtitle}</p>
         </Reveal>
 
-        <div className="work-stage">
-          <Reveal className="work-copy">
-            <div className="work-kicker">
-              <span className="live-badge">{project.badge}</span>
+        <div className="frost-work__stage">
+          <Reveal className="frost-work__copy">
+            <div className="frost-work__kicker">
+              <span className="frost-badge">{project.badge}</span>
               <span>{project.meta}</span>
             </div>
-            <h3>{project.name}</h3>
-            <p className="work-url">
+            <h3 className="frost-work__name">{project.name}</h3>
+            <p className="frost-work__url">
               <a href={project.url} target="_blank" rel="noopener noreferrer">
                 {project.urlLabel}
               </a>
             </p>
-            <p className="work-tagline">{project.tagline}</p>
-            <ul className="work-highlights">
+            <p className="frost-work__tagline">{project.tagline}</p>
+            <ul className="frost-work__highlights">
               {project.highlights.map((h) => (
                 <li key={h}>{h}</li>
               ))}
             </ul>
-            <div className="work-metrics">
+            <div className="frost-work__metrics">
               {project.metrics.map((m) => (
                 <div key={m.label}>
                   <strong>{m.value}</strong>
@@ -457,31 +482,31 @@ function Work() {
                 </div>
               ))}
             </div>
-            <div className="work-stack">
+            <div className="frost-stack">
               {project.stack.map((s) => (
                 <span key={s}>{s}</span>
               ))}
             </div>
-            <div className="work-actions">
-              <a className="btn btn-primary" href={project.url} target="_blank" rel="noopener noreferrer">
+            <div className="frost-work__actions">
+              <a className="frost-btn frost-btn--fill" href={project.url} target="_blank" rel="noopener noreferrer">
                 Visit live site
               </a>
-              <a className="btn btn-ghost" href="#contact">
+              <a className="frost-btn frost-btn--ghost" href="#contact">
                 Build something similar
               </a>
             </div>
           </Reveal>
 
-          <Reveal delay={0.08} className="work-visual">
-            <div className="device-frame">
-              <div className="device-frame__chrome" aria-hidden="true">
+          <Reveal delay={0.1} className="frost-work__visual">
+            <div className="frost-frame">
+              <div className="frost-frame__chrome" aria-hidden="true">
                 <i />
                 <i />
                 <i />
                 <span>{project.urlLabel}</span>
               </div>
-              <div className="device-frame__screen">
-                <div className="device-frame__demo" aria-hidden="true">
+              <div className="frost-frame__screen">
+                <div className="frost-frame__demo" aria-hidden="true">
                   <strong>
                     solve my<span>PROBLEM</span>
                   </strong>
@@ -492,7 +517,7 @@ function Work() {
                   <button
                     key={spot.label}
                     type="button"
-                    className={`hotspot hotspot--${i} ${activeSpot === i ? 'is-active' : ''}`}
+                    className={`frost-hotspot frost-hotspot--${i} ${activeSpot === i ? 'is-active' : ''}`}
                     onClick={() => setActiveSpot(i)}
                     aria-label={spot.label}
                     aria-pressed={activeSpot === i}
@@ -502,12 +527,11 @@ function Work() {
                 ))}
               </div>
             </div>
-            <div className="hotspot-panel" aria-live="polite">
-              <p className="eyebrow">{project.hotspots[activeSpot].label}</p>
+            <div className="frost-hotspot-card" aria-live="polite">
+              <p className="frost-eyebrow">{project.hotspots[activeSpot].label}</p>
               <p>{project.hotspots[activeSpot].detail}</p>
             </div>
-            <aside className="work-aside">
-              <p className="eyebrow">Why this matters</p>
+            <aside className="frost-work__aside">
               <p>{project.aside}</p>
             </aside>
           </Reveal>
@@ -519,16 +543,16 @@ function Work() {
 
 function Process() {
   return (
-    <section id="process" className="process">
-      <div className="section-shell">
-        <Reveal>
-          <h2 className="section-title">{process.title}</h2>
-          <p className="section-lead">{process.subtitle}</p>
+    <section id="process" className="frost-process">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <WordReveal className="frost-display" text={process.title} />
+          <p className="frost-lead">{process.subtitle}</p>
         </Reveal>
-        <div className="process-rail">
+        <div className="frost-process__rail">
           {process.steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.07} className="process-step">
-              <div className="process-step__num">{String(i + 1).padStart(2, '0')}</div>
+            <Reveal key={step.title} delay={i * 0.08} className="frost-process__step">
+              <div className="frost-process__num">{String(i + 1).padStart(2, '0')}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
             </Reveal>
@@ -541,17 +565,17 @@ function Process() {
 
 function Testimonials() {
   return (
-    <section id="testimonials" className="testimonials">
-      <div className="section-shell">
-        <Reveal>
-          <h2 className="section-title">{testimonials.title}</h2>
+    <section id="testimonials" className="frost-testimonials">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <WordReveal className="frost-display" text={testimonials.title} />
         </Reveal>
-        <div className="testimonial-rail">
+        <div className="frost-testimonial__rail">
           {testimonials.items.map((item, i) => (
-            <Reveal key={item.name} delay={i * 0.06} className="testimonial">
-              <p>“{item.quote}”</p>
+            <Reveal key={item.name} delay={i * 0.07} className="frost-quote">
+              <p className="frost-quote__text">“{item.quote}”</p>
               <footer>
-                <div className="avatar" aria-hidden="true">
+                <div className="frost-quote__avatar" aria-hidden="true">
                   {item.initials}
                 </div>
                 <div>
@@ -562,7 +586,7 @@ function Testimonials() {
                   in
                 </a>
               </footer>
-              <div className="verified">✓ {item.verified}</div>
+              <div className="frost-quote__verified">✓ {item.verified}</div>
             </Reveal>
           ))}
         </div>
@@ -575,44 +599,45 @@ function Contact() {
   const [sent, setSent] = useState(false)
 
   return (
-    <section id="contact" className="contact">
-      <div className="section-shell">
-        <Reveal>
-          <h2 className="section-title">{contact.title}</h2>
-          <p className="section-lead">{contact.subtitle}</p>
+    <section id="contact" className="frost-contact">
+      <div className="frost-shell">
+        <Reveal className="frost-section-head">
+          <WordReveal className="frost-display" text={contact.title} />
+          <p className="frost-lead">{contact.subtitle}</p>
         </Reveal>
-        <Reveal className="contact-panel">
+
+        <Reveal className="frost-contact__panel">
           {sent ? (
-            <div className="contact-success" aria-live="polite">
+            <div className="frost-contact__success" aria-live="polite">
               <h3>Got it</h3>
               <p>I&apos;ll be back within 24 hours.</p>
-              <button className="btn btn-ghost" type="button" onClick={() => setSent(false)}>
+              <button className="frost-btn frost-btn--ghost" type="button" onClick={() => setSent(false)}>
                 Send another message
               </button>
             </div>
           ) : (
             <form
-              className="contact-form"
+              className="frost-form"
               onSubmit={(e) => {
                 e.preventDefault()
                 setSent(true)
               }}
             >
-              <div className="contact-row">
-                <label className="field">
+              <div className="frost-form__row">
+                <label className="frost-field">
                   <span>Name *</span>
                   <input name="name" required autoComplete="name" placeholder="Your name" />
                 </label>
-                <label className="field">
+                <label className="frost-field">
                   <span>Company</span>
                   <input name="company" autoComplete="organization" placeholder="Optional" />
                 </label>
               </div>
-              <label className="field">
+              <label className="frost-field">
                 <span>Email *</span>
                 <input name="email" type="email" required autoComplete="email" placeholder="you@company.com" />
               </label>
-              <label className="field">
+              <label className="frost-field">
                 <span>Project type *</span>
                 <select name="project_type" required defaultValue="">
                   <option value="" disabled>
@@ -625,20 +650,21 @@ function Contact() {
                   ))}
                 </select>
               </label>
-              <label className="field">
+              <label className="frost-field">
                 <span>Tell me about it *</span>
                 <textarea name="message" rows={5} required placeholder="Describe the problem you’re trying to solve…" />
               </label>
-              <p className="contact-note">Mockup form — local-only for this redesign preview.</p>
-              <button className="btn btn-primary" type="submit">
+              <p className="frost-form__note">Mockup form — local-only for this redesign preview.</p>
+              <button className="frost-btn frost-btn--fill" type="submit">
                 Send message
               </button>
             </form>
           )}
         </Reveal>
-        <div className="coffee-support">
+
+        <div className="frost-coffee">
           <p>{contact.coffeeText}</p>
-          <a className="btn btn-ghost" href={site.social.coffee} target="_blank" rel="noopener noreferrer">
+          <a className="frost-btn frost-btn--ghost" href={site.social.coffee} target="_blank" rel="noopener noreferrer">
             Buy me a coffee
           </a>
         </div>
@@ -649,10 +675,10 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="site-footer">
-      <div className="section-shell footer-inner">
-        <div className="footer-brand">{site.brand}</div>
-        <div className="footer-links">
+    <footer className="frost-footer">
+      <div className="frost-shell frost-footer__inner">
+        <div className="frost-footer__brand">{site.brand}</div>
+        <div className="frost-footer__links">
           <a href={site.social.github} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
@@ -661,9 +687,7 @@ function Footer() {
           </a>
           <a href={site.social.blog}>Blog</a>
         </div>
-        <p className="footer-copy">
-          © 2020–2026 {site.brand}. All rights reserved. · {site.founder} · {site.location} · {site.est}
-        </p>
+        <p className="frost-footer__copy">© 2020–2026 {site.brand}. All rights reserved.</p>
       </div>
     </footer>
   )
@@ -671,22 +695,24 @@ function Footer() {
 
 function MobileDock() {
   const [show, setShow] = useState(false)
+
   useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.65)
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.55)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
   return (
     <AnimatePresence>
       {show && (
         <motion.a
-          className="mobile-dock"
+          className="frost-dock"
           href="#contact"
-          initial={{ y: 72, opacity: 0 }}
+          initial={{ y: 88, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 72, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+          exit={{ y: 88, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 360, damping: 28 }}
         >
           Start a Project
         </motion.a>
@@ -698,13 +724,12 @@ function MobileDock() {
 export default function App() {
   return (
     <>
-      <a className="skip-link" href="#main">
+      <a className="frost-skip" href="#main">
         Skip to content
       </a>
       <VariantChrome id="frost" name="Frost" />
       <ScrollProgress />
-      <div className="fog-layer" aria-hidden="true" />
-      <div className="app-shell">
+      <div className="frost-app">
         <Nav />
         <main id="main">
           <Hero />
@@ -720,7 +745,6 @@ export default function App() {
         <Footer />
       </div>
       <MobileDock />
-      <div className="mockup-banner">Redesign mockup · Frost</div>
     </>
   )
 }

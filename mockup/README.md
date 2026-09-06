@@ -1,15 +1,33 @@
-# TarsOnlineCafe Redesign Mockup
+# TarsOnlineCafe — Redesign Mockup (leveled)
 
-React + Framer Motion + Three.js preview of a richer portfolio redesign, inspired by interactive WebGL portfolio patterns (e.g. [ThreeUI](https://threeui.com)-style particle fields and motion-led heroes).
+A React + Framer Motion + Three.js portfolio redesign that blends multiple inspiration sources into one cohesive coffee-atelier aesthetic — without losing live-site content.
 
-## What’s in this mockup
+## Inspiration stack (woven, not copied)
 
-- **WebGL ember field** — mouse-reactive particle constellation behind the hero (`EmberField.jsx` via React Three Fiber)
-- **Motion** — Framer Motion page load + scroll reveals, magnetic CTAs, pointer glow
-- **Brand-forward hero** — rotating `TARS ONLINE CAFE · EST 2020` orb with logo mark
-- **Preserved site content** — about, services, featured work, process, testimonials, contact
+| Source | What we borrowed |
+|---|---|
+| **Apple HIG** | Clarity, 44px targets, bottom sheet nav, reduced-motion respect, hierarchy |
+| **shaders.com / Active Theory** | Atmospheric GPU field as mood layer, pointer-reactive |
+| **Spline / Morflax / ProVisual** | Cinematic proof object (device frame + hotspots) |
+| **Typeface Animator / StringTune** | Kinetic brand letters on hero only |
+| **Design Spells / Lottieflow** | Micro-interactions: magnetic CTAs, scroll cue, sheet spring |
+| **Iconsax** | Single stroke icon family for proof cards |
+| **Rotato / LS.graphics** | Product-in-situ presentation language |
+| **UI Guideline / ContentCore** | Editorial spacing rhythm, one job per section |
+| **Iteration X** | Hotspot annotations on featured work |
 
-## Run locally
+`apple-skills.md` was not found in the repo; Apple HIG principles were applied directly.
+
+## Features
+
+- WebGL ember constellation (paused offscreen, lighter on mobile)
+- Kinetic brand type + scroll progress + pointer glow (desktop)
+- Mobile bottom-sheet navigation + sticky project dock
+- Cinematic work showcase with tappable hotspots
+- Snap-scroll process/testimonial rails on small screens
+- `prefers-reduced-motion` fallbacks throughout
+
+## Run
 
 ```bash
 cd mockup
@@ -17,19 +35,12 @@ npm install
 npm run dev
 ```
 
-Open the URL Vite prints (defaults to `http://localhost:5173/redesign/`).
+Open `/redesign/`.
 
-## Build static preview
+## Build
 
 ```bash
-cd mockup
 npm run build
 ```
 
-Outputs to `/redesign` at the repo root for static hosting. Production site at `/` is unchanged.
-
-## Notes
-
-- Contact form is mock-only in this preview.
-- WebGL pauses conceptually via `prefers-reduced-motion` (static fallback).
-- Three.js is code-split into its own chunk for faster first paint.
+Static output → `/redesign` (production `/` untouched).

@@ -1,5 +1,12 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useSpring,
+  useTransform,
+} from 'framer-motion'
 import {
   about,
   contact,
@@ -16,9 +23,52 @@ import {
 
 const EmberField = lazy(() => import('./EmberField'))
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: { opacity: 1, y: 0 },
+const easeOut = [0.22, 1, 0.36, 1]
+
+function Icon({ name }) {
+  const common = {
+    width: 22,
+    height: 22,
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: 1.7,
+    strokeLinecap: 'round',
+    strokeLinejoin: 'round',
+    'aria-hidden': true,
+  }
+  if (name === 'route') {
+    return (
+      <svg {...common}>
+        <circle cx="6" cy="19" r="2.2" />
+        <circle cx="18" cy="5" r="2.2" />
+        <path d="M8 18.2C12 18 14 14 14 10V8.5" />
+      </svg>
+    )
+  }
+  if (name === 'shield') {
+    return (
+      <svg {...common}>
+        <path d="M12 3l7 3v5c0 5-3.2 8.2-7 10-3.8-1.8-7-5-7-10V6l7-3z" />
+        <path d="M9.5 12.2l1.8 1.8 3.4-3.6" />
+      </svg>
+    )
+  }
+  if (name === 'chat') {
+    return (
+      <svg {...common}>
+        <path d="M5 6.5A2.5 2.5 0 017.5 4h9A2.5 2.5 0 0119 6.5v6A2.5 2.5 0 0116.5 15H10l-4 3.2V6.5z" />
+      </svg>
+    )
+  }
+  return (
+    <svg {...common}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.4" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.4" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.4" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.4" />
+    </svg>
+  )
 }
 
 function Reveal({ children, delay = 0, className, role }) {
@@ -34,33 +84,43 @@ function Reveal({ children, delay = 0, className, role }) {
     <motion.div
       className={className}
       role={role}
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.22 }}
-      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay }}
+      initial={{ opacity: 0, y: 28, filter: 'blur(6px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.75, ease: easeOut, delay }}
     >
       {children}
     </motion.div>
   )
 }
 
-function PointerGlow() {
+function KineticText({ text, className, as: Tag = 'p', delay = 0 }) {
   const reduce = useReducedMotion()
-  const ref = useRef(null)
+  const chars = useMemoChars(text)
 
-  useEffect(() => {
-    if (reduce) return undefined
-    const el = ref.current
-    const onMove = (e) => {
-      el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
-    }
-    window.addEventListener('pointermove', onMove, { passive: true })
-    return () => window.removeEventListener('pointermove', onMove)
-  }, [reduce])
+  if (reduce) {
+    return <Tag className={className}>{text}</Tag>
+  }
 
-  if (reduce) return null
-  return <div className="pointer-glow" ref={ref} aria-hidden="true" />
+  return (
+    <Tag className={`${className} kinetic`} aria-label={text}>
+      {chars.map((ch, i) => (
+        <motion.span
+          key={`${ch}-${i}`}
+          aria-hidden="true"
+          initial={{ opacity: 0, y: '0.55em' }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55, ease: easeOut, delay: delay + i * 0.024 }}
+        >
+          {ch === ' ' ? '\u00A0' : ch}
+        </motion.span>
+      ))}
+    </Tag>
+  )
+}
+
+function useMemoChars(text) {
+  return text.split('')
 }
 
 function Magnetic({ className, href, children, ...rest }) {
@@ -68,11 +128,11 @@ function Magnetic({ className, href, children, ...rest }) {
   const reduce = useReducedMotion()
 
   const onMove = (e) => {
-    if (reduce || !ref.current) return
+    if (reduce || !ref.current || window.matchMedia('(pointer: coarse)').matches) return
     const rect = ref.current.getBoundingClientRect()
     const x = e.clientX - rect.left - rect.width / 2
     const y = e.clientY - rect.top - rect.height / 2
-    ref.current.style.transform = `translate(${x * 0.18}px, ${y * 0.22}px)`
+    ref.current.style.transform = `translate(${x * 0.16}px, ${y * 0.2}px)`
   }
 
   const onLeave = () => {
@@ -86,12 +146,43 @@ function Magnetic({ className, href, children, ...rest }) {
   )
 }
 
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 28, mass: 0.2 })
+  return <motion.div className="scroll-progress" style={{ scaleX }} aria-hidden="true" />
+}
+
+function PointerGlow() {
+  const reduce = useReducedMotion()
+  const ref = useRef(null)
+
+  useEffect(() => {
+    if (reduce || window.matchMedia('(pointer: coarse)').matches) return undefined
+    const el = ref.current
+    const onMove = (e) => {
+      el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+    }
+    window.addEventListener('pointermove', onMove, { passive: true })
+    return () => window.removeEventListener('pointermove', onMove)
+  }, [reduce])
+
+  if (reduce) return null
+  return <div className="pointer-glow" ref={ref} aria-hidden="true" />
+}
+
 function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const lastY = useRef(0)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => {
+      const y = window.scrollY
+      setScrolled(y > 18)
+      setHidden(y > 140 && y > lastY.current)
+      lastY.current = y
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -108,9 +199,12 @@ function Nav() {
 
   return (
     <>
-      <nav className={`site-nav ${scrolled ? 'is-scrolled' : ''}`} aria-label="Main navigation">
+      <nav
+        className={`site-nav ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
+        aria-label="Main navigation"
+      >
         <a className="nav-brand" href="#hero" onClick={close}>
-          <img src={site.logo} alt="" width={34} height={34} />
+          <img src={site.logo} alt="" width={32} height={32} />
           <span>{site.brand}</span>
         </a>
         <ul className="nav-links">
@@ -121,16 +215,15 @@ function Nav() {
           ))}
         </ul>
         <Magnetic className="btn btn-primary nav-cta" href="#contact">
-          Let&apos;s Talk →
+          Let&apos;s Talk
         </Magnetic>
         <button
-          className="nav-toggle"
+          className={`nav-toggle ${open ? 'is-open' : ''}`}
           type="button"
-          aria-label="Toggle mobile menu"
+          aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
-          <span />
           <span />
           <span />
         </button>
@@ -139,7 +232,7 @@ function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="nav-mobile"
+            className="nav-sheet"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
@@ -147,14 +240,30 @@ function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            {nav.map((item) => (
-              <a key={item.href} href={item.href} onClick={close}>
-                {item.label}
+            <motion.div
+              className="nav-sheet__panel"
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', stiffness: 380, damping: 36 }}
+            >
+              <div className="nav-sheet__handle" aria-hidden="true" />
+              {nav.map((item, i) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  onClick={close}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 + i * 0.04 }}
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+              <a className="btn btn-primary nav-sheet__cta" href="#contact" onClick={close}>
+                Start a Project
               </a>
-            ))}
-            <a className="btn btn-primary" href="#contact" onClick={close}>
-              Let&apos;s Talk →
-            </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -181,61 +290,66 @@ function BrandOrb() {
   )
 }
 
-function Hero() {
+function Hero({ scrollProgress }) {
   const reduce = useReducedMotion()
   return (
     <section id="hero" className="hero">
       <div className="hero__stage">
-        <Suspense fallback={null}>
-          <EmberField />
+        <Suspense fallback={<div className="ember-field ember-field--static" aria-hidden="true" />}>
+          <EmberField scrollProgress={scrollProgress} />
         </Suspense>
+        <div className="hero__aurora" aria-hidden="true" />
         <div className="hero__veil" />
         <BrandOrb />
       </div>
 
       <div className="hero__content">
+        <KineticText className="hero__brand" text={site.brand} delay={0.05} />
         <motion.p
-          className="hero__brand"
-          initial={reduce ? false : { opacity: 0, y: 24 }}
+          className="hero__est-pill"
+          initial={reduce ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.35, duration: 0.5 }}
         >
-          {site.brand}
-          <span>{site.est}</span>
+          {site.est}
         </motion.p>
         <motion.h1
           className="hero__headline"
-          initial={reduce ? false : { opacity: 0, y: 28 }}
+          initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.28, duration: 0.8, ease: easeOut }}
         >
           {hero.headline}
         </motion.h1>
         <motion.p
           className="hero__body"
-          initial={reduce ? false : { opacity: 0, y: 20 }}
+          initial={reduce ? false : { opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.4, duration: 0.7, ease: easeOut }}
         >
           {hero.body}
         </motion.p>
         <motion.div
           className="hero__ctas"
-          initial={reduce ? false : { opacity: 0, y: 16 }}
+          initial={reduce ? false : { opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.5, duration: 0.65, ease: easeOut }}
         >
           <Magnetic className="btn btn-primary" href={hero.primaryCta.href}>
             {hero.primaryCta.label}
           </Magnetic>
           <Magnetic className="btn btn-ghost" href={hero.secondaryCta.href}>
-            {hero.secondaryCta.label} →
+            {hero.secondaryCta.label}
           </Magnetic>
         </motion.div>
-        <p className="hero__est">
+        <p className="hero__meta">
           {site.founder} · {site.location} · {site.tagline}
         </p>
       </div>
+
+      <a className="scroll-cue" href="#proof" aria-label="Scroll to content">
+        <span />
+      </a>
     </section>
   )
 }
@@ -255,18 +369,19 @@ function Marquee() {
 
 function Proof() {
   return (
-    <section className="proof" aria-labelledby="proof-title">
+    <section id="proof" className="proof">
       <div className="section-shell">
         <Reveal>
           <p className="eyebrow">{proof.eyebrow}</p>
-          <h2 id="proof-title" className="section-title">
-            {proof.title}
-          </h2>
+          <h2 className="section-title">{proof.title}</h2>
           <p className="section-lead">{proof.lead}</p>
         </Reveal>
         <div className="proof-grid">
           {proof.items.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.06} className="proof-item glass-panel">
+            <Reveal key={item.title} delay={i * 0.06} className="proof-card">
+              <div className="proof-card__icon">
+                <Icon name={item.icon} />
+              </div>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>
             </Reveal>
@@ -286,7 +401,6 @@ function About() {
           <h2 className="section-title">{about.title}</h2>
           <p className="section-lead">{about.lead}</p>
         </Reveal>
-
         <div className="about-grid">
           <Reveal className="terminal">
             <div className="terminal__dots" aria-hidden="true">
@@ -297,31 +411,30 @@ function About() {
             <pre className="terminal__cmd">$ cat about_josh.txt</pre>
             <pre>{about.terminal.join('\n')}</pre>
           </Reveal>
-
           <Reveal delay={0.08} className="about-story">
             <h3>{about.storyTitle}</h3>
             {about.story.map((p) => (
-              <p key={p.slice(0, 24)}>{p}</p>
+              <p key={p.slice(0, 28)}>{p}</p>
             ))}
-            <ul className="pill-row" aria-label="What you can expect">
+            <ul className="pill-row">
               {about.pills.map((pill) => (
                 <li key={pill}>{pill}</li>
               ))}
             </ul>
-            <div className="stack-row" aria-label="Core technologies">
+            <div className="stack-row">
               {about.stack.map((tech) => (
-                <span key={tech}>▸ {tech}</span>
+                <span key={tech}>{tech}</span>
               ))}
             </div>
             <div className="about-social">
               <a href={site.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                GH
+                GitHub
               </a>
               <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                in
+                LinkedIn
               </a>
             </div>
-            <aside className="recruiter-panel glass-panel" aria-label="For recruiters">
+            <aside className="recruiter-card">
               <p className="eyebrow">{about.recruiter.title}</p>
               <p>{about.recruiter.hint}</p>
               <div className="recruiter-links">
@@ -353,16 +466,12 @@ function Services() {
         <div className="services-layout">
           <Reveal className="services-intro">
             <p>{services.intro}</p>
-            <a href="#contact">
-              Discuss your project <span aria-hidden="true">→</span>
-            </a>
+            <a href="#contact">Discuss your project →</a>
           </Reveal>
           <div className="service-list" role="list">
             {services.items.map((item, i) => (
-              <Reveal key={item.num} delay={i * 0.07} className="service-item glass-panel" role="listitem">
-                <span className="service-num" aria-hidden="true">
-                  {item.num}
-                </span>
+              <Reveal key={item.num} delay={i * 0.07} className="service-item" role="listitem">
+                <span className="service-num">{item.num}</span>
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.desc}</p>
@@ -378,6 +487,8 @@ function Services() {
 
 function Work() {
   const project = work.project
+  const [activeSpot, setActiveSpot] = useState(0)
+
   return (
     <section id="work" className="work">
       <div className="section-shell">
@@ -387,11 +498,11 @@ function Work() {
           <p className="section-lead">{work.subtitle}</p>
         </Reveal>
 
-        <div className="work-feature">
-          <Reveal>
+        <div className="work-stage">
+          <Reveal className="work-copy">
             <div className="work-kicker">
               <span className="live-badge">{project.badge}</span>
-              <span className="work-meta">{project.meta}</span>
+              <span>{project.meta}</span>
             </div>
             <h3>{project.name}</h3>
             <p className="work-url">
@@ -405,22 +516,22 @@ function Work() {
                 <li key={h}>{h}</li>
               ))}
             </ul>
-            <div className="work-metrics" aria-label="Site highlights">
+            <div className="work-metrics">
               {project.metrics.map((m) => (
-                <div className="work-metric" key={m.label}>
+                <div key={m.label}>
                   <strong>{m.value}</strong>
                   <span>{m.label}</span>
                 </div>
               ))}
             </div>
-            <div className="work-stack" aria-label="Focus areas">
+            <div className="work-stack">
               {project.stack.map((s) => (
                 <span key={s}>{s}</span>
               ))}
             </div>
             <div className="work-actions">
               <Magnetic className="btn btn-primary" href={project.url} target="_blank" rel="noopener noreferrer">
-                Visit live site ↗
+                Visit live site
               </Magnetic>
               <Magnetic className="btn btn-ghost" href="#contact">
                 Build something similar
@@ -428,24 +539,39 @@ function Work() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="browser-frame" aria-hidden="true">
-              <div className="browser-chrome">
+          <Reveal delay={0.1} className="work-visual">
+            <div className="device-frame" aria-hidden="true">
+              <div className="device-frame__chrome">
                 <i />
                 <i />
                 <i />
-                <div className="browser-url">{project.urlLabel}</div>
+                <span>{project.urlLabel}</span>
               </div>
-              <div className="browser-preview">
+              <div className="device-frame__screen">
                 <strong>
                   solve my<span>PROBLEM</span>
                 </strong>
                 <p>Email marketing &amp; lead generation for growing businesses</p>
                 <em>Get a Free Quote</em>
+                {project.hotspots.map((spot, i) => (
+                  <button
+                    key={spot.label}
+                    type="button"
+                    className={`hotspot hotspot--${i} ${activeSpot === i ? 'is-active' : ''}`}
+                    onClick={() => setActiveSpot(i)}
+                    aria-label={spot.label}
+                  >
+                    <span />
+                  </button>
+                ))}
               </div>
             </div>
-            <aside className="work-aside glass-panel">
-              <p className="label">Why this matters</p>
+            <div className="hotspot-card" aria-live="polite">
+              <p className="eyebrow">{project.hotspots[activeSpot].label}</p>
+              <p>{project.hotspots[activeSpot].detail}</p>
+            </div>
+            <aside className="work-aside">
+              <p className="eyebrow">Why this matters</p>
               <p>{project.aside}</p>
             </aside>
           </Reveal>
@@ -463,16 +589,12 @@ function Process() {
           <h2 className="section-title">{process.title}</h2>
           <p className="section-lead">{process.subtitle}</p>
         </Reveal>
-        <div className="process-track">
+        <div className="process-rail">
           {process.steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.08} className="process-step glass-panel">
-              <div className="process-node" aria-hidden="true">
-                {String(i + 1).padStart(2, '0')}
-              </div>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.desc}</p>
-              </div>
+            <Reveal key={step.title} delay={i * 0.08} className="process-card">
+              <div className="process-card__num">{String(i + 1).padStart(2, '0')}</div>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
             </Reveal>
           ))}
         </div>
@@ -488,25 +610,23 @@ function Testimonials() {
         <Reveal>
           <h2 className="section-title">{testimonials.title}</h2>
         </Reveal>
-        <div className="testimonial-grid">
+        <div className="testimonial-rail">
           {testimonials.items.map((item, i) => (
-            <Reveal key={item.name} delay={i * 0.07}>
-              <blockquote className="testimonial glass-panel">
-                <p>“{item.quote}”</p>
-                <footer>
-                  <div className="avatar" aria-hidden="true">
-                    {item.initials}
-                  </div>
-                  <div>
-                    <cite>{item.name}</cite>
-                    <div className="role">{item.role}</div>
-                  </div>
-                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${item.name} on LinkedIn`}>
-                    in
-                  </a>
-                </footer>
-                <div className="verified">✓ {item.verified}</div>
-              </blockquote>
+            <Reveal key={item.name} delay={i * 0.07} className="testimonial-card">
+              <p>“{item.quote}”</p>
+              <footer>
+                <div className="avatar" aria-hidden="true">
+                  {item.initials}
+                </div>
+                <div>
+                  <cite>{item.name}</cite>
+                  <span>{item.role}</span>
+                </div>
+                <a href={item.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${item.name} on LinkedIn`}>
+                  in
+                </a>
+              </footer>
+              <div className="verified">✓ {item.verified}</div>
             </Reveal>
           ))}
         </div>
@@ -518,11 +638,6 @@ function Testimonials() {
 function Contact() {
   const [sent, setSent] = useState(false)
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-    setSent(true)
-  }
-
   return (
     <section id="contact" className="contact">
       <div className="section-shell">
@@ -530,37 +645,40 @@ function Contact() {
           <h2 className="section-title">{contact.title}</h2>
           <p className="section-lead">{contact.subtitle}</p>
         </Reveal>
-
-        <Reveal className="contact-panel glass-panel">
+        <Reveal className="contact-panel">
           {sent ? (
-            <div aria-live="polite">
-              <h3 className="section-title" style={{ fontSize: '1.8rem' }}>
-                Got it!
-              </h3>
-              <p className="section-lead">I&apos;ll be back within 24 hours.</p>
-              <button className="btn btn-ghost" type="button" onClick={() => setSent(false)} style={{ marginTop: '1.25rem' }}>
+            <div className="contact-success" aria-live="polite">
+              <h3>Got it</h3>
+              <p>I&apos;ll be back within 24 hours.</p>
+              <button className="btn btn-ghost" type="button" onClick={() => setSent(false)}>
                 Send another message
               </button>
             </div>
           ) : (
-            <form className="contact-form" onSubmit={onSubmit}>
+            <form
+              className="contact-form"
+              onSubmit={(e) => {
+                e.preventDefault()
+                setSent(true)
+              }}
+            >
               <div className="contact-row">
-                <div className="field">
-                  <label htmlFor="cf-name">Name *</label>
-                  <input id="cf-name" name="name" required autoComplete="name" placeholder="Your name" />
-                </div>
-                <div className="field">
-                  <label htmlFor="cf-company">Company (optional)</label>
-                  <input id="cf-company" name="company" autoComplete="organization" placeholder="Your company" />
-                </div>
+                <label className="field">
+                  <span>Name *</span>
+                  <input name="name" required autoComplete="name" placeholder="Your name" />
+                </label>
+                <label className="field">
+                  <span>Company</span>
+                  <input name="company" autoComplete="organization" placeholder="Optional" />
+                </label>
               </div>
-              <div className="field">
-                <label htmlFor="cf-email">Email *</label>
-                <input id="cf-email" name="email" type="email" required autoComplete="email" placeholder="you@company.com" />
-              </div>
-              <div className="field">
-                <label htmlFor="cf-type">Type of project *</label>
-                <select id="cf-type" name="project_type" required defaultValue="">
+              <label className="field">
+                <span>Email *</span>
+                <input name="email" type="email" required autoComplete="email" placeholder="you@company.com" />
+              </label>
+              <label className="field">
+                <span>Project type *</span>
+                <select name="project_type" required defaultValue="">
                   <option value="" disabled>
                     Select a category…
                   </option>
@@ -570,25 +688,18 @@ function Contact() {
                     </option>
                   ))}
                 </select>
-              </div>
-              <div className="field">
-                <label htmlFor="cf-message">Tell me about it *</label>
-                <textarea
-                  id="cf-message"
-                  name="message"
-                  rows={5}
-                  required
-                  placeholder="Describe the problem you're trying to solve…"
-                />
-              </div>
-              <p className="contact-note">Mockup form — submission is local-only for this redesign preview.</p>
+              </label>
+              <label className="field">
+                <span>Tell me about it *</span>
+                <textarea name="message" rows={5} required placeholder="Describe the problem you’re trying to solve…" />
+              </label>
+              <p className="contact-note">Mockup form — local-only for this redesign preview.</p>
               <button className="btn btn-primary" type="submit">
-                Send it
+                Send message
               </button>
             </form>
           )}
         </Reveal>
-
         <div className="coffee-support">
           <p>{contact.coffeeText}</p>
           <a className="btn btn-ghost" href={site.social.coffee} target="_blank" rel="noopener noreferrer">
@@ -620,17 +731,47 @@ function Footer() {
   )
 }
 
+function MobileDock() {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.7)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+  return (
+    <AnimatePresence>
+      {show && (
+        <motion.a
+          className="mobile-dock"
+          href="#contact"
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 80, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+        >
+          Start a Project
+        </motion.a>
+      )}
+    </AnimatePresence>
+  )
+}
+
 export default function App() {
+  const { scrollYProgress } = useScroll()
+
   return (
     <>
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <ScrollProgress />
       <PointerGlow />
+      <div className="noise-layer" aria-hidden="true" />
       <div className="app-shell">
         <Nav />
         <main id="main">
-          <Hero />
+          <Hero scrollProgress={scrollYProgress} />
           <Marquee />
           <Proof />
           <About />
@@ -642,7 +783,8 @@ export default function App() {
         </main>
         <Footer />
       </div>
-      <div className="mockup-banner">Redesign mockup · WebGL</div>
+      <MobileDock />
+      <div className="mockup-banner">Redesign mockup · leveled UI</div>
     </>
   )
 }

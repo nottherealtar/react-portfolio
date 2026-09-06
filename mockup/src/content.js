@@ -48,18 +48,22 @@ export const proof = {
     {
       title: 'End-to-end ownership',
       desc: 'From discovery to handover — design, build, document, and walk your team through it.',
+      icon: 'route',
     },
     {
       title: 'Production-minded',
       desc: 'Error paths, retries, and alerts so failures surface instead of silently piling up.',
+      icon: 'shield',
     },
     {
       title: 'Plain-language clarity',
       desc: 'Technical depth when you need it, without losing the business thread.',
+      icon: 'chat',
     },
     {
       title: 'Systems that compound',
       desc: 'Work designed to connect: APIs, workflows, and data that stay maintainable.',
+      icon: 'layers',
     },
   ],
 }
@@ -136,6 +140,11 @@ export const work = {
       'Lead capture and enquiry paths tuned for a quote-based, POPIA-compliant business',
       'Clear service positioning across email marketing, automation, and CRM integration',
       'Production deployment — not a concept mockup or side project sitting in a repo',
+    ],
+    hotspots: [
+      { label: 'Lead capture', detail: 'Quote flows tuned for conversion' },
+      { label: 'Service map', detail: 'Clear positioning across offers' },
+      { label: 'POPIA paths', detail: 'Compliant enquiry handling' },
     ],
     metrics: [
       { value: 'Live', label: 'In production' },

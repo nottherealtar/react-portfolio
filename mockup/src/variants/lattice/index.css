@@ -508,7 +508,8 @@ img {
 
 .hero-diagram {
   position: relative;
-  min-height: 320px;
+  min-height: 340px;
+  padding: 1.4rem 0.35rem 1.6rem;
 }
 
 .hero-diagram__frame {
@@ -597,7 +598,7 @@ img {
 }
 
 .hero-diagram__node--c {
-  bottom: 8%;
+  bottom: 14%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -644,6 +645,7 @@ img {
   border-radius: 50%;
   background: var(--teal);
   box-shadow: 0 0 0 3px rgba(15, 122, 95, 0.18);
+  flex: none;
 }
 
 .pin em {
@@ -653,41 +655,44 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
-  background: rgba(247, 250, 252, 0.92);
+  background: rgba(247, 250, 252, 0.96);
   padding: 0.15rem 0.35rem;
   border: 1px solid var(--line);
+  white-space: nowrap;
 }
 
 .pin--1 {
-  top: 34%;
-  left: 28%;
+  top: 28%;
+  left: 34%;
 }
 
 .pin--2 {
-  top: 34%;
-  right: 22%;
+  top: 28%;
+  right: 30%;
 }
 
 .pin--3 {
-  bottom: 28%;
-  left: 54%;
+  bottom: 36%;
+  left: 58%;
 }
 
 .hero-diagram__callout {
   position: absolute;
-  background: rgba(247, 250, 252, 0.94);
-  border: 1px solid var(--line);
+  z-index: 2;
+  background: rgba(247, 250, 252, 0.98);
+  border: 1px solid var(--line-strong);
   padding: 0.35rem 0.5rem;
+  box-shadow: 0 4px 12px rgba(11, 31, 51, 0.06);
 }
 
 .hero-diagram__callout--1 {
-  top: -0.35rem;
-  left: 0;
+  top: 0.15rem;
+  left: 0.15rem;
 }
 
 .hero-diagram__callout--2 {
-  bottom: -0.35rem;
-  right: 0;
+  bottom: 0.15rem;
+  right: 0.15rem;
 }
 
 @media (min-width: 960px) {
@@ -695,10 +700,12 @@ img {
     grid-template-columns: 1.05fr 0.95fr;
     gap: 3rem;
     min-height: min(78vh, 720px);
+    align-items: center;
   }
 
   .hero-diagram {
-    min-height: 380px;
+    min-height: 400px;
+    padding: 1.6rem 0.5rem 1.8rem;
   }
 
   .hero-diagram__body {

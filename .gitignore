@@ -5,3 +5,7 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# Redesign mockup
+mockup/node_modules/
+mockup/dist/

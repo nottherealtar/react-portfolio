@@ -49,7 +49,7 @@ const variants = [
     name: 'Hybrid',
     href: './hybrid.html',
     inspo: 'Best-of combination',
-    thesis: 'Recommended merge after critique — atmosphere + clarity + product stage.',
+    thesis: 'Ship this: Ember atmosphere + Stage device cinema + Frost mobile sheet/dock discipline.',
     tone: 'Recommended',
     palette: ['#070605', '#e8a15a', '#f6f1ea'],
     featured: true,

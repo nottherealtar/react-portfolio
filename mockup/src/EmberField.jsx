@@ -147,21 +147,26 @@ export default function EmberField({ scrollProgress }) {
     return unsub
   }, [scrollProgress])
 
+  useEffect(() => {
+    if (reduce || window.matchMedia('(pointer: coarse)').matches) return undefined
+    const onMove = (e) => {
+      const el = rootRef.current
+      if (!el) return
+      const rect = el.getBoundingClientRect()
+      if (rect.width === 0 || rect.height === 0) return
+      mouse.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
+      mouse.current.y = -(((e.clientY - rect.top) / rect.height) * 2 - 1)
+    }
+    window.addEventListener('pointermove', onMove, { passive: true })
+    return () => window.removeEventListener('pointermove', onMove)
+  }, [reduce])
+
   if (reduce) {
     return <div className="ember-field ember-field--static" aria-hidden="true" />
   }
 
   return (
-    <div
-      ref={rootRef}
-      className="ember-field"
-      aria-hidden="true"
-      onPointerMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect()
-        mouse.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1
-        mouse.current.y = -(((e.clientY - rect.top) / rect.height) * 2 - 1)
-      }}
-    >
+    <div ref={rootRef} className="ember-field" aria-hidden="true">
       {visible && (
         <Canvas
           dpr={mobile ? [1, 1.25] : [1, 1.6]}
@@ -171,6 +176,7 @@ export default function EmberField({ scrollProgress }) {
             scene.background = null
           }}
           gl={{ antialias: !mobile, alpha: true, powerPreference: 'high-performance', premultipliedAlpha: false }}
+          style={{ pointerEvents: 'none' }}
         >
           <Suspense fallback={null}>
             <fog attach="fog" args={['#070605', 7, 17]} />

@@ -1,4 +1,5 @@
 import { Suspense, lazy, useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import {
   AnimatePresence,
   motion,
@@ -96,31 +97,42 @@ function Reveal({ children, delay = 0, className, role }) {
 
 function KineticText({ text, className, as: Tag = 'p', delay = 0 }) {
   const reduce = useReducedMotion()
-  const chars = useMemoChars(text)
+  // Wrap by camelCase / space units so inline-block letters don't split mid-word
+  const words = text.split(/(\s+|(?<=[a-z])(?=[A-Z]))/).filter((w) => w !== '')
 
   if (reduce) {
     return <Tag className={className}>{text}</Tag>
   }
 
+  let charIndex = 0
   return (
     <Tag className={`${className} kinetic`} aria-label={text}>
-      {chars.map((ch, i) => (
-        <motion.span
-          key={`${ch}-${i}`}
-          aria-hidden="true"
-          initial={{ opacity: 0, y: '0.55em' }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: easeOut, delay: delay + i * 0.024 }}
-        >
-          {ch === ' ' ? '\u00A0' : ch}
-        </motion.span>
-      ))}
+      {words.map((word, wi) => {
+        if (/^\s+$/.test(word)) {
+          charIndex += word.length
+          return <span key={`sp-${wi}`}>{'\u00A0'}</span>
+        }
+        const chars = word.split('')
+        const start = charIndex
+        charIndex += chars.length
+        return (
+          <span className="kinetic-word" key={`w-${wi}-${word}`}>
+            {chars.map((ch, i) => (
+              <motion.span
+                key={`${ch}-${start + i}`}
+                aria-hidden="true"
+                initial={{ opacity: 0, y: '0.55em' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, ease: easeOut, delay: delay + (start + i) * 0.024 }}
+              >
+                {ch}
+              </motion.span>
+            ))}
+          </span>
+        )
+      })}
     </Tag>
   )
-}
-
-function useMemoChars(text) {
-  return text.split('')
 }
 
 function Magnetic({ className, href, children, ...rest }) {
@@ -197,6 +209,50 @@ function Nav() {
 
   const close = () => setOpen(false)
 
+  const sheet = (
+    <AnimatePresence>
+      {open && (
+        <motion.div
+          key="nav-sheet"
+          className="nav-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={close}
+        >
+          <motion.div
+            className="nav-sheet__panel"
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            transition={{ type: 'spring', stiffness: 380, damping: 36 }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="nav-sheet__handle" aria-hidden="true" />
+            {nav.map((item, i) => (
+              <motion.a
+                key={item.href}
+                href={item.href}
+                onClick={close}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 + i * 0.04 }}
+              >
+                {item.label}
+              </motion.a>
+            ))}
+            <a className="btn btn-primary nav-sheet__cta" href="#contact" onClick={close}>
+              Start a Project
+            </a>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+
   return (
     <>
       <nav
@@ -229,44 +285,7 @@ function Nav() {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="nav-sheet"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Mobile navigation"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.div
-              className="nav-sheet__panel"
-              initial={{ y: '100%' }}
-              animate={{ y: 0 }}
-              exit={{ y: '100%' }}
-              transition={{ type: 'spring', stiffness: 380, damping: 36 }}
-            >
-              <div className="nav-sheet__handle" aria-hidden="true" />
-              {nav.map((item, i) => (
-                <motion.a
-                  key={item.href}
-                  href={item.href}
-                  onClick={close}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 + i * 0.04 }}
-                >
-                  {item.label}
-                </motion.a>
-              ))}
-              <a className="btn btn-primary nav-sheet__cta" href="#contact" onClick={close}>
-                Start a Project
-              </a>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {typeof document !== 'undefined' ? createPortal(sheet, document.body) : null}
     </>
   )
 }
@@ -540,19 +559,21 @@ function Work() {
           </Reveal>
 
           <Reveal delay={0.1} className="work-visual">
-            <div className="device-frame" aria-hidden="true">
-              <div className="device-frame__chrome">
+            <div className="device-frame">
+              <div className="device-frame__chrome" aria-hidden="true">
                 <i />
                 <i />
                 <i />
                 <span>{project.urlLabel}</span>
               </div>
               <div className="device-frame__screen">
-                <strong>
-                  solve my<span>PROBLEM</span>
-                </strong>
-                <p>Email marketing &amp; lead generation for growing businesses</p>
-                <em>Get a Free Quote</em>
+                <div className="device-frame__demo" aria-hidden="true">
+                  <strong>
+                    solve my<span>PROBLEM</span>
+                  </strong>
+                  <p>Email marketing &amp; lead generation for growing businesses</p>
+                  <em>Get a Free Quote</em>
+                </div>
                 {project.hotspots.map((spot, i) => (
                   <button
                     key={spot.label}
@@ -560,6 +581,7 @@ function Work() {
                     className={`hotspot hotspot--${i} ${activeSpot === i ? 'is-active' : ''}`}
                     onClick={() => setActiveSpot(i)}
                     aria-label={spot.label}
+                    aria-pressed={activeSpot === i}
                   >
                     <span />
                   </button>

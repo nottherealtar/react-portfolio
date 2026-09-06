@@ -125,7 +125,6 @@ img {
 
 .app-shell {
   position: relative;
-  z-index: 1;
 }
 
 .section-shell {
@@ -204,7 +203,7 @@ img {
 .site-nav {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 60;
+  z-index: 210;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -278,10 +277,16 @@ img {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.03);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 6px;
+  padding: 0;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-toggle span {
@@ -290,6 +295,7 @@ img {
   height: 1.5px;
   background: var(--foam);
   transition: transform 0.3s var(--ease);
+  pointer-events: none;
 }
 
 .nav-toggle.is-open span:first-child {
@@ -303,7 +309,7 @@ img {
 .nav-sheet {
   position: fixed;
   inset: 0;
-  z-index: 55;
+  z-index: 200;
   background: rgba(5, 4, 3, 0.55);
   backdrop-filter: blur(8px);
   display: flex;
@@ -374,8 +380,9 @@ img {
   pointer-events: none;
 }
 
-.hero__stage .ember-field {
-  pointer-events: auto;
+.hero__stage .ember-field,
+.hero__stage .ember-field canvas {
+  pointer-events: none;
 }
 
 .ember-field,
@@ -486,13 +493,19 @@ img {
   display: inline-block;
 }
 
+.kinetic-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .hero__brand {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.35rem, 9vw, 5.1rem);
+  font-size: clamp(2.1rem, 8.2vw, 5.1rem);
   font-weight: 800;
   letter-spacing: -0.05em;
-  line-height: 0.9;
+  line-height: 0.95;
+  max-width: 100%;
 }
 
 .hero__est-pill {
@@ -1078,6 +1091,13 @@ img {
   background:
     radial-gradient(circle at 18% 20%, rgba(212, 137, 74, 0.18), transparent 42%),
     linear-gradient(160deg, #16110d, #0c0a08);
+  isolation: isolate;
+}
+
+.device-frame__demo {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .device-frame__screen strong {
@@ -1110,42 +1130,62 @@ img {
 
 .hotspot {
   position: absolute;
-  width: 28px;
-  height: 28px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
   border: 0;
   border-radius: 50%;
   background: transparent;
   padding: 0;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hotspot span {
   display: block;
-  width: 12px;
-  height: 12px;
-  margin: 8px;
+  width: 14px;
+  height: 14px;
+  margin: 15px;
   border-radius: 50%;
   background: var(--ember);
-  box-shadow: 0 0 0 6px rgba(240, 164, 90, 0.2);
+  box-shadow:
+    0 0 0 7px rgba(240, 164, 90, 0.28),
+    0 0 18px rgba(240, 164, 90, 0.55);
   transition: transform 0.25s var(--ease);
+  animation: hotspot-pulse 2.2s var(--ease) infinite;
 }
 
 .hotspot.is-active span,
 .hotspot:hover span {
   transform: scale(1.2);
+  animation: none;
 }
 
 .hotspot--0 {
-  top: 28%;
-  right: 18%;
+  top: 22%;
+  right: 12%;
 }
 .hotspot--1 {
-  top: 58%;
-  left: 22%;
+  top: 52%;
+  left: 14%;
 }
 .hotspot--2 {
-  bottom: 18%;
-  right: 28%;
+  bottom: 12%;
+  right: 22%;
+}
+
+@keyframes hotspot-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 6px rgba(240, 164, 90, 0.22),
+      0 0 14px rgba(240, 164, 90, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 10px rgba(240, 164, 90, 0.12),
+      0 0 22px rgba(240, 164, 90, 0.55);
+  }
 }
 
 .hotspot-card,
@@ -1422,7 +1462,7 @@ img {
   left: var(--pad);
   right: var(--pad);
   bottom: calc(1rem + var(--safe-bottom));
-  z-index: 65;
+  z-index: 190;
   min-height: 52px;
   border-radius: 999px;
   display: grid;
@@ -1461,7 +1501,8 @@ img {
   .brand-orb__ring,
   .marquee__track,
   .hero__aurora,
-  .scroll-cue span {
+  .scroll-cue span,
+  .hotspot span {
     animation: none !important;
   }
 }

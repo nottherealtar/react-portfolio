@@ -1,46 +1,36 @@
-# TarsOnlineCafe — Redesign Mockup (leveled)
+# TarsOnlineCafe — Redesign Variant Lab
 
-A React + Framer Motion + Three.js portfolio redesign that blends multiple inspiration sources into one cohesive coffee-atelier aesthetic — without losing live-site content.
+Multi-direction React mockups sharing **locked live-site content** from `src/content.js`. Production `/` is untouched. Built output lives in `/redesign/`.
 
-## Inspiration stack (woven, not copied)
-
-| Source | What we borrowed |
-|---|---|
-| **Apple HIG** | Clarity, 44px targets, bottom sheet nav, reduced-motion respect, hierarchy |
-| **shaders.com / Active Theory** | Atmospheric GPU field as mood layer, pointer-reactive |
-| **Spline / Morflax / ProVisual** | Cinematic proof object (device frame + hotspots) |
-| **Typeface Animator / StringTune** | Kinetic brand letters on hero only |
-| **Design Spells / Lottieflow** | Micro-interactions: magnetic CTAs, scroll cue, sheet spring |
-| **Iconsax** | Single stroke icon family for proof cards |
-| **Rotato / LS.graphics** | Product-in-situ presentation language |
-| **UI Guideline / ContentCore** | Editorial spacing rhythm, one job per section |
-| **Iteration X** | Hotspot annotations on featured work |
-
-`apple-skills.md` was not found in the repo; Apple HIG principles were applied directly.
-
-## Features
-
-- WebGL ember constellation (paused offscreen, lighter on mobile)
-- Kinetic brand type + scroll progress + pointer glow (desktop)
-- Mobile bottom-sheet navigation + sticky project dock
-- Cinematic work showcase with tappable hotspots
-- Snap-scroll process/testimonial rails on small screens
-- `prefers-reduced-motion` fallbacks throughout
-
-## Run
+## Open the lab
 
 ```bash
 cd mockup
 npm install
 npm run dev
+# → http://localhost:5173/redesign/
 ```
 
-Open `/redesign/`.
-
-## Build
+Or build + preview:
 
 ```bash
-npm run build
+npm run build && npm run preview
 ```
 
-Static output → `/redesign` (production `/` untouched).
+## Variants
+
+| Route | Name | Thesis | Inspiration |
+|---|---|---|---|
+| `/redesign/` | Hub | Comparison board | — |
+| `/redesign/ember.html` | Ember | Dark coffee atelier + WebGL | shaders · Active Theory · Design Spells |
+| `/redesign/frost.html` | Frost | Light Apple editorial clarity | Apple HIG · UI Guideline · ContentCore |
+| `/redesign/signal.html` | Signal | Kinetic type as product | Typeface Animator · StringTune |
+| `/redesign/stage.html` | Stage | Device cinema / product stage | Rotato · LS.graphics · ProVisual · Spline |
+| `/redesign/lattice.html` | Lattice | Annotated systems blueprint | Iteration X · Iconsax · UI Guideline |
+| `/redesign/hybrid.html` | Hybrid | Recommended combination | Best-of merge |
+
+## Rules
+
+- Do not rewrite hero/about/services/work/process/testimonials/contact wording — import `content.js`.
+- Mobile-first (≈390px), 44px targets, sheet nav, reduced-motion.
+- `apple-skills.md` was not in-repo; Apple HIG applied where relevant (Frost/Hybrid).

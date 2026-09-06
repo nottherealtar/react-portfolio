@@ -61,6 +61,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "How Microsoft’s Physical Security Engineering Team scaled hybrid operations with Azure Arc and Azure Virtual Desktop",
+    "date": "2026-09-03",
+    "category": "Cloud Automation",
+    "summary": "When a physical security operator begins a shift supporting Microsoft’s global datacenter operations, they depend on a collection of applications and systems that help monitor access activity, review video feeds, investigate alerts, and coordinate physical security operations across a complex global environment.",
+    "link": "auto/20260903-how-microsoft-s-physical-security-engineering-team-scaled-hy-ca0a43f6.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/how-microsofts-physical-security-engineering-team-scaled-hybrid-operations-with-azure-arc-and-azure-virtual-desktop/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Elevating security, control, and accessibility: Stack Internal 2026.6",
     "date": "2026-09-03",
     "category": "Coding & Careers",

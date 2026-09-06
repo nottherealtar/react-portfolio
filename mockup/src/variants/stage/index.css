@@ -1628,9 +1628,8 @@ img {
 
 .mockup-banner {
   position: fixed;
-  left: 50%;
-  top: max(0.55rem, env(safe-area-inset-top));
-  transform: translateX(-50%);
+  right: max(0.75rem, env(safe-area-inset-right));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
   z-index: 70;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;

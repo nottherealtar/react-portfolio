@@ -10,9 +10,7 @@ function usePrefers() {
   return useMemo(() => {
     if (typeof window === 'undefined') return { reduced: false, lowPower: false }
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const lowPower =
-      window.matchMedia('(max-width: 720px)').matches ||
-      (navigator.hardwareConcurrency || 8) <= 4
+    const lowPower = window.matchMedia('(max-width: 720px)').matches
     return { reduced, lowPower }
   }, [])
 }

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-06T19:08:47.334780+00:00",
+  "timestamp": "2026-09-07T10:14:27.502022+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Preventing Duplicate Side Effects in Event-Driven Systems",
-      "link": "auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html",
-      "score": 133.8581,
+      "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
+      "link": "auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html",
+      "score": 132.9696,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
+    "date": "2026-09-07",
+    "category": "Coding & Community",
+    "summary": "The agent decides which tools to invoke based on user intent, then coordinates state across tool calls. This decouples the LLM from API churn. Semantic search indexes data from connected apps.",
+    "link": "auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html",
+    "source_url": "https://dev.to/mech_app_ai/slashys-cross-app-agent-architecture-memory-semantic-search-and-custom-tools-29k4",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Preventing Duplicate Side Effects in Event-Driven Systems",
     "date": "2026-09-06",
     "category": "Coding & Community",

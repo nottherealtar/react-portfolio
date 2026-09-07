@@ -14,6 +14,8 @@
     }
   ],
   "rewrites": [
+    { "source": "/qa", "destination": "/redesign/ember.html" },
+    { "source": "/qa/", "destination": "/redesign/ember.html" },
     { "source": "/redesign", "destination": "/redesign/index.html" },
     { "source": "/redesign/", "destination": "/redesign/index.html" }
   ]

@@ -267,8 +267,11 @@ img {
   font-size: 0.92rem;
   font-weight: 600;
   min-height: 44px;
+  min-width: 44px;
+  padding: 0 0.35rem;
   display: inline-flex;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-links a:hover {
@@ -364,7 +367,8 @@ img {
   width: 100%;
   display: grid;
   place-items: center;
-  padding: 0.55rem 0 0.35rem;
+  min-height: 44px;
+  padding: 0.65rem 0 0.4rem;
   margin: 0 auto;
 }
 
@@ -663,13 +667,17 @@ img {
   bottom: 1.25rem;
   transform: translateX(-50%);
   z-index: 3;
-  width: 28px;
+  width: 44px;
+  min-width: 44px;
   height: 44px;
+  min-height: 44px;
   border: 1px solid var(--line);
   border-radius: 999px;
   display: grid;
   justify-items: center;
-  padding-top: 8px;
+  align-content: start;
+  padding-top: 10px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .scroll-cue span {
@@ -985,6 +993,11 @@ img {
 .services-intro a {
   color: var(--ember);
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .service-list {
@@ -1087,6 +1100,11 @@ img {
 .work-url a {
   color: var(--ember);
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.25rem 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .work-tagline {
@@ -1405,13 +1423,17 @@ img {
 
 .testimonial-card footer a {
   margin-left: auto;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
   border-radius: 50%;
   border: 1px solid var(--line);
   display: grid;
   place-items: center;
   font-weight: 700;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .verified {
@@ -1587,9 +1609,12 @@ img {
   color: var(--mist);
   font-weight: 600;
   min-height: 44px;
+  min-width: 44px;
   display: inline-flex;
   align-items: center;
-  padding: 0 0.35rem;
+  justify-content: center;
+  padding: 0 0.5rem;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .footer-copy {

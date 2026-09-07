@@ -28,4 +28,22 @@ QA still uses `noindex` + `robots.txt` Disallow until cutover.
 7. Dispatch Auto Blog Pipeline on `main` with `dry_run=true`, then live
 8. Keep a tagged rollback commit of the previous `index.html`
 
+### Root `vercel.json` on promote (do not replace wholesale)
+
+`scripts/promote-ember-homepage.mjs` **never** overwrites root `vercel.json` (blog rewrites / security headers must stay). When promoting hashed Vite bundles to `/assets/*`, ensure root `vercel.json` includes this **additive** header entry only — keep existing `headers` for `/(.*)` and all `rewrites` intact:
+
+```json
+{
+  "source": "/assets/(.*)",
+  "headers": [
+    {
+      "key": "Cache-Control",
+      "value": "public, max-age=31536000, immutable"
+    }
+  ]
+}
+```
+
+QA already ships the same rule in `ember-qa/vercel.json`. Do **not** copy `ember-qa/vercel.json` over production (it lacks blog/redesign rewrites).
+
 Until then, leave production on the current homepage.

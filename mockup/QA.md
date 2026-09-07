@@ -12,10 +12,26 @@ Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until yo
 
 ## Public QA
 
-- https://temporary-racing-mercury-tzx66rp.vercel.app/
-- https://tarsonline-ember-qa.vercel.app/
+- https://temporary-racing-mercury-tzx66rp.vercel.app/ (claimed mercury — may lag if Vercel daily deploy cap is hit)
+- https://tarsonline-ember-qa.vercel.app/ (**canonical QA** — prerendered as of SHA `305f85d`)
 
 QA still uses `noindex` + `robots.txt` Disallow until cutover.
+
+### Redeploy recipe (self-contained)
+
+1. Push a commit that updates `ember-qa/` (`cd mockup && npm run build:ember-qa`).
+2. `bash scripts/prepare-ember-qa-vercel.sh <sha>` — builds `.tmp-ember-qa-vercel/` with:
+   - static site under `public/`
+   - **`api/submit-contact.js` at project root** (serverless; never nest under `public/` or POSTs 404)
+3. Deploy that tree to both QA projects (`target=production`). Prefer MCP `deploy_to_vercel` with a `build.sh` that mirrors the prepare layout, or upload the prepared tree.
+4. Verify: `data-prerendered="true"`, Blog nav, `/robots.txt` Disallow, `POST /api/submit-contact` returns **503** until `WEB3FORMS_ACCESS_KEY` is set (not 404).
+
+### Contact env (QA + production)
+
+Set on the Vercel project (not in git):
+
+- `WEB3FORMS_ACCESS_KEY` (required)
+- `CONTACT_ALLOWED_ORIGIN` (optional; e.g. `https://tarsonline-ember-qa.vercel.app` for QA, production origin for cutover)
 
 ## Promote checklist (only after approval)
 

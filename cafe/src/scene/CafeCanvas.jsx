@@ -23,9 +23,9 @@ const STATIONS = {
     fov: 34,
   },
   work: {
-    position: new THREE.Vector3(-1.48, 1.2, 0.12),
-    target: new THREE.Vector3(-2.24, 1.04, -0.86),
-    fov: 30,
+    position: new THREE.Vector3(-3.05, 1.24, 0.42),
+    target: new THREE.Vector3(-2.18, 1.02, -0.82),
+    fov: 32,
   },
   process: {
     position: new THREE.Vector3(0.08, 1.24, 0.82),

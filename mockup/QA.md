@@ -1,34 +1,30 @@
 # QA review — Ember redesign
 
-Production site (`tarsonlinecafe.work`) is **unchanged** until you explicitly approve a promote.
+Production site (`https://tarsonlinecafe.work`) is **unchanged** until you explicitly approve a promote.
 
-## Primary public QA (no SSO)
+## Public QA (no Vercel login)
 
-**Use this temporary public deploy** (serves real Ember HTML; no Vercel login):
+Primary (anonymous Vercel, claim to keep):
 
-- **Public Ember QA:** https://temporary-instant-sitar-ltgfd2c.vercel.app/
-- **Claim URL:** https://vercel.com/claim-deployment?code=01d73a5b-ce04-40fa-ba44-e56e9500dcb7
+- https://temporary-instant-sitar-ltgfd2c.vercel.app/
+- Claim (keeps it under your Vercel team): https://vercel.com/claim-deployment?code=01d73a5b-ce04-40fa-ba44-e56e9500dcb7
 
-It expires in ~60 minutes unless claimed.
+Stable alias (redirects to the public QA while the claimable deploy is live):
 
-`https://tarsonline-ember-qa.vercel.app/` currently only serves a **client-side redirect stub** to the temporary URL above (not Ember HTML itself). Prefer the temporary URL for review.
+- https://tarsonline-ember-qa.vercel.app/
 
-(Older temp mirror, same build: https://temporary-rapid-piano-newuvh6.vercel.app/ — may also expire.)
+CDN mirror from this branch (public, no SSO):
 
-## Branch preview (SSO / Vercel login)
+- https://cdn.jsdelivr.net/gh/nottherealtar/react-portfolio@cursor/react-redesign-mockup-f822/ember-qa/
 
-Stable branch preview (may require Vercel authentication):
+## Branch preview (Vercel Authentication / SSO)
 
 - https://tarsonlineportfolio-git-cursor-react-re-ef7e92-tar420s-projects.vercel.app/qa
 - https://tarsonlineportfolio-git-cursor-react-re-ef7e92-tar420s-projects.vercel.app/redesign/ember.html
 
-Variant lab (all styles):
+## Promote to production (only after you approve)
 
-- https://tarsonlineportfolio-git-cursor-react-re-ef7e92-tar420s-projects.vercel.app/redesign/
+1. Tell the agent to promote Ember to the live homepage, **or**
+2. Merge PR `#7` (`cursor/react-redesign-mockup-f822` → `main`) / promote the approved preview in Vercel.
 
-## Promote to production (after you approve)
-
-1. Merge PR `#7` (`cursor/react-redesign-mockup-f822` → `main`), **or**
-2. In Vercel: promote the approved preview deployment to Production.
-
-Until then, live production stays on the current homepage. Do not treat any of the QA URLs as production.
+Until then, leave production on the current homepage.

@@ -6,7 +6,7 @@ Production site (`https://tarsonlinecafe.work`) is **unchanged** until you expli
 
 **Recommended — CDN mirror** (permanent while this commit is on the branch):
 
-- https://cdn.jsdelivr.net/gh/nottherealtar/react-portfolio@CURSOR_SHA/ember-qa/index.html
+- https://cdn.jsdelivr.net/gh/nottherealtar/react-portfolio@96dd1379cbf6c8c13d52a498b4ca470a18138596/ember-qa/index.html
 
 Vercel alias (redirects to the CDN mirror once updated):
 

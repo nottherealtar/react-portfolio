@@ -627,6 +627,7 @@ a {
   border: 0;
   background: transparent;
   color: var(--text-2);
+  flex: 0 0 auto;
   min-width: 64px;
   min-height: 44px;
   padding: 0 10px;
@@ -726,6 +727,19 @@ a {
 @media (min-width: 1180px) {
   .panel {
     width: 500px;
+  }
+}
+
+@media (max-width: 680px) {
+  .dock-btn {
+    min-width: 56px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .nav-brand span,
+  .nav-brand {
+    font-size: 14px;
   }
 }
 

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-07T10:14:27.502022+00:00",
+  "timestamp": "2026-09-07T20:33:55.568100+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 598,
+  "unseen_candidates": 599,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
-      "link": "auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html",
-      "score": 132.9696,
+      "title": "Building Automation LLMs: What 66 Studies Reveal About Deploying Agents in HVAC Systems",
+      "link": "auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html",
+      "score": 143.864,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

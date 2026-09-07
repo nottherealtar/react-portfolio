@@ -382,7 +382,7 @@ export function BarStool({ position }) {
 export function Laptop() {
   const maps = useMaps()
   return (
-    <group position={[-2.34, 0.822, -0.94]} rotation={[0, -0.42, 0]} scale={1.48}>
+    <group position={[-2.34, 0.822, -0.94]} rotation={[0, 0.52, 0]} scale={1.48}>
       <RoundedBox args={[0.78, 0.014, 0.52]} radius={0.014} smoothness={4} castShadow>
         <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} clearcoat={0.22} />
       </RoundedBox>

@@ -276,6 +276,10 @@ a {
   transform-origin: bottom left;
 }
 
+.panel-work {
+  width: min(100%, 400px);
+}
+
 .panel-solid {
   background: rgba(22, 22, 24, 0.88);
   box-shadow: var(--sh-panel);

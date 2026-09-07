@@ -203,7 +203,7 @@ export default function StationPanel() {
 
   return (
     <aside id="hud" className="hud">
-      <div className={`panel ${station === 'hero' ? 'glass' : 'panel-solid'}`}>
+      <div className={`panel ${station === 'hero' || station === 'work' ? 'glass' : 'panel-solid'}${station === 'work' ? ' panel-work' : ''}`}>
         <div className="panel-inner">
           {station === 'hero' && <HeroPanel onWork={onWork} onTalk={onTalk} />}
           {station === 'about' && <AboutPanel />}

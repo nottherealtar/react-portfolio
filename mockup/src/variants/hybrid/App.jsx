@@ -3,11 +3,9 @@ import { createPortal } from 'react-dom'
 import {
   AnimatePresence,
   motion,
-  useMotionValue,
   useReducedMotion,
   useScroll,
   useSpring,
-  useTransform,
 } from 'framer-motion'
 import {
   about,
@@ -191,9 +189,6 @@ function Nav() {
   const [hidden, setHidden] = useState(false)
   const lastY = useRef(0)
   const toggleRef = useRef(null)
-  const sheetDragY = useMotionValue(0)
-  const sheetBackdropOpacity = useTransform(sheetDragY, [0, 240], [1, 0.25])
-
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY
@@ -215,7 +210,6 @@ function Nav() {
 
   const close = () => {
     setOpen(false)
-    sheetDragY.set(0)
     toggleRef.current?.focus()
   }
 
@@ -233,7 +227,6 @@ function Nav() {
       close()
       return
     }
-    sheetDragY.set(0)
   }
 
   const sheet = (
@@ -245,12 +238,16 @@ function Nav() {
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
           onClick={close}
         >
-          <motion.div className="nav-sheet__dim" style={{ opacity: sheetBackdropOpacity }} aria-hidden="true" />
+          <motion.div
+            className="nav-sheet__dim"
+            aria-hidden="true"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          />
           <motion.div
             id="hybrid-mobile-nav"
             className="nav-sheet__panel"
@@ -262,9 +259,6 @@ function Nav() {
             dragConstraints={{ top: 0, bottom: 0 }}
             dragElastic={{ top: 0, bottom: 0.62 }}
             dragMomentum={false}
-            onDrag={(_event, info) => {
-              sheetDragY.set(Math.max(0, info.offset.y))
-            }}
             onDragEnd={onSheetDragEnd}
             onClick={(e) => e.stopPropagation()}
           >

@@ -1383,6 +1383,9 @@ img {
     grid-auto-flow: column;
     grid-auto-columns: minmax(78%, 1fr);
     overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
     scroll-snap-type: x mandatory;
     padding-bottom: 0.35rem;
     -webkit-overflow-scrolling: touch;
@@ -1391,6 +1394,7 @@ img {
   .process-card,
   .testimonial-card {
     scroll-snap-align: start;
+    overflow: visible;
   }
 }
 

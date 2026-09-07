@@ -1,9 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { prerenderEmber } from './plugins/prerender-ember.js'
+
+const root = fileURLToPath(new URL('.', import.meta.url))
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), prerenderEmber()],
   base: '/redesign/',
   server: {
     host: true,
@@ -14,13 +18,13 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        ember: resolve(__dirname, 'ember.html'),
-        frost: resolve(__dirname, 'frost.html'),
-        signal: resolve(__dirname, 'signal.html'),
-        stage: resolve(__dirname, 'stage.html'),
-        lattice: resolve(__dirname, 'lattice.html'),
-        hybrid: resolve(__dirname, 'hybrid.html'),
+        main: resolve(root, 'index.html'),
+        ember: resolve(root, 'ember.html'),
+        frost: resolve(root, 'frost.html'),
+        signal: resolve(root, 'signal.html'),
+        stage: resolve(root, 'stage.html'),
+        lattice: resolve(root, 'lattice.html'),
+        hybrid: resolve(root, 'hybrid.html'),
       },
     },
   },

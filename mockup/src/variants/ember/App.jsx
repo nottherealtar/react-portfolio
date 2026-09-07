@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import {
   AnimatePresence,
+  MotionConfig,
   motion,
   useReducedMotion,
   useScroll,
@@ -71,14 +72,7 @@ function Icon({ name }) {
 }
 
 function Reveal({ children, delay = 0, className, role, shift = true }) {
-  const reduce = useReducedMotion()
-  if (reduce) {
-    return (
-      <div className={className} role={role}>
-        {children}
-      </div>
-    )
-  }
+  // Keep identical markup for SSR + reduced-motion clients (MotionConfig handles reduce).
   return (
     <motion.div
       className={className}
@@ -94,14 +88,17 @@ function Reveal({ children, delay = 0, className, role, shift = true }) {
 }
 
 function KineticText({ text, className, as: Tag = 'p', delay = 0 }) {
-  const reduce = useReducedMotion()
-  // Wrap by camelCase / space units so inline-block letters don't split mid-word
-  const words = text.split(/(\s+|(?<=[a-z])(?=[A-Z]))/).filter((w) => w !== '')
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-  if (reduce) {
+  // SSR + first client paint: plain text (hydration-safe + visible for LCP).
+  if (!mounted) {
     return <Tag className={className}>{text}</Tag>
   }
 
+  const words = text.split(/(\s+|(?<=[a-z])(?=[A-Z]))/).filter((w) => w !== '')
   let charIndex = 0
   return (
     <Tag className={`${className} kinetic`} aria-label={text}>
@@ -163,20 +160,19 @@ function ScrollProgress() {
 }
 
 function PointerGlow() {
-  const reduce = useReducedMotion()
   const ref = useRef(null)
 
   useEffect(() => {
-    if (reduce || window.matchMedia('(pointer: coarse)').matches) return undefined
+    if (window.matchMedia('(pointer: coarse)').matches) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
     const el = ref.current
     const onMove = (e) => {
       el.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
     }
     window.addEventListener('pointermove', onMove, { passive: true })
     return () => window.removeEventListener('pointermove', onMove)
-  }, [reduce])
+  }, [])
 
-  if (reduce) return null
   return <div className="pointer-glow" ref={ref} aria-hidden="true" />
 }
 
@@ -343,57 +339,40 @@ function BrandOrb() {
 }
 
 function Hero({ scrollProgress }) {
-  const reduce = useReducedMotion()
+  const [fieldReady, setFieldReady] = useState(false)
+  useEffect(() => {
+    setFieldReady(true)
+  }, [])
+
   return (
     <section id="hero" className="hero">
       <div className="hero__stage">
-        <Suspense fallback={<div className="ember-field ember-field--static" aria-hidden="true" />}>
-          <EmberField scrollProgress={scrollProgress} />
-        </Suspense>
+        {fieldReady ? (
+          <Suspense fallback={<div className="ember-field ember-field--static" aria-hidden="true" />}>
+            <EmberField scrollProgress={scrollProgress} />
+          </Suspense>
+        ) : (
+          <div className="ember-field ember-field--static" aria-hidden="true" />
+        )}
         <div className="hero__aurora" aria-hidden="true" />
         <div className="hero__veil" />
         <BrandOrb />
       </div>
 
+      {/* Hero copy uses CSS entrance so prerendered HTML paints without opacity:0 */}
       <div className="hero__content">
-        <KineticText className="hero__brand" text={site.brand} delay={0.05} />
-        <motion.p
-          className="hero__est-pill"
-          initial={reduce ? false : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.5 }}
-        >
-          {site.est}
-        </motion.p>
-        <motion.h1
-          className="hero__headline"
-          initial={reduce ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28, duration: 0.8, ease: easeOut }}
-        >
-          {hero.headline}
-        </motion.h1>
-        <motion.p
-          className="hero__body"
-          initial={reduce ? false : { opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.7, ease: easeOut }}
-        >
-          {hero.body}
-        </motion.p>
-        <motion.div
-          className="hero__ctas"
-          initial={reduce ? false : { opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.65, ease: easeOut }}
-        >
+        <KineticText className="hero__brand hero-rise" text={site.brand} delay={0.05} />
+        <p className="hero__est-pill hero-rise hero-rise--d1">{site.est}</p>
+        <h1 className="hero__headline hero-rise hero-rise--d2">{hero.headline}</h1>
+        <p className="hero__body hero-rise hero-rise--d3">{hero.body}</p>
+        <div className="hero__ctas hero-rise hero-rise--d4">
           <Magnetic className="btn btn-primary" href={hero.primaryCta.href}>
             {hero.primaryCta.label}
           </Magnetic>
           <Magnetic className="btn btn-ghost" href={hero.secondaryCta.href}>
             {hero.secondaryCta.label}
           </Magnetic>
-        </motion.div>
+        </div>
         <p className="hero__meta">
           {site.founder} · {site.location} · {site.tagline}
         </p>
@@ -879,6 +858,7 @@ function Contact() {
                   role="group"
                   aria-labelledby="ember-captcha-label"
                   aria-describedby={error ? 'ember-contact-error' : undefined}
+                  suppressHydrationWarning
                 />
               </div>
               {error ? (
@@ -928,7 +908,7 @@ export default function App() {
   const { scrollYProgress } = useScroll()
 
   return (
-    <>
+    <MotionConfig reducedMotion="user">
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -950,6 +930,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </MotionConfig>
   )
 }

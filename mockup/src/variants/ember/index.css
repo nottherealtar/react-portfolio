@@ -570,6 +570,47 @@ img {
   max-width: 100%;
 }
 
+.hero-rise {
+  animation: hero-rise 0.8s var(--ease) both;
+}
+
+.hero-rise--d1 {
+  animation-delay: 0.12s;
+}
+
+.hero-rise--d2 {
+  animation-delay: 0.2s;
+}
+
+.hero-rise--d3 {
+  animation-delay: 0.28s;
+}
+
+.hero-rise--d4 {
+  animation-delay: 0.36s;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
+
+  .pointer-glow {
+    display: none !important;
+  }
+}
+
 .hero__est-pill {
   display: inline-flex;
   margin: 0.85rem 0 0;

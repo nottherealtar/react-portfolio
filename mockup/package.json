@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "build:ember-qa": "vite build --config vite.ember-qa.config.js && node ../scripts/finalize-ember-qa.mjs",
+    "build:promote": "vite build --config vite.promote.config.js",
+    "promote:dry": "npm run build:promote && node ../scripts/promote-ember-homepage.mjs --dry-run",
     "lint": "oxlint",
     "preview": "vite preview"
   },

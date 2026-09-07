@@ -27,13 +27,23 @@ Shop → About → Menu → Work → Pour → Guests → Order
 
 Scroll, arrow keys, the dock, or the glowing floor rings move the camera.
 
-## Local
+## How to preview
+
+The cloud-agent Vite ports (4173/4175) are inside the remote VM. Open this on **your** machine instead.
+
+**Vercel (this branch):** `/3d-cafe/` on the PR preview, for example:
+
+https://tarsonlineportfolio-git-cursor-3d-cafe-f9238f-tar420s-projects.vercel.app/3d-cafe/
+
+**Local** (after pulling the branch):
 
 ```bash
 cd cafe
 npm install
 npm run dev
 ```
+
+Then open `http://localhost:5173/3d-cafe/` (Vite, not 4175). You need a GPU/WebGL browser; reduced-motion OS settings fall back to a 2D layout.
 
 Production build writes static files to `/3d-cafe/` at the repo root (Vercel serves them as-is).
 

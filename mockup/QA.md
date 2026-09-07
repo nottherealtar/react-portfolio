@@ -13,7 +13,10 @@ Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until yo
 ## Public QA
 
 - https://temporary-racing-mercury-tzx66rp.vercel.app/ (claimed mercury — may lag if Vercel daily deploy cap is hit)
-- https://tarsonline-ember-qa.vercel.app/ (**canonical QA** — prerendered as of SHA `305f85d`)
+- https://tarsonline-ember-qa.vercel.app/ (**canonical QA** — prerendered; Contact still 404 until claim below lands)
+- **Claim now (Contact-fixed, ~60m):** https://temporary-racing-savanna-nihuxxx.vercel.app/  
+  Claim into `tarsonline-ember-qa`: https://vercel.com/claim-deployment?code=2b1bfd44-158a-45f4-9564-3d0008273c2f  
+  Verified: prerendered, `POST /api/submit-contact` → **503**, `GET …/submit-contact.js` → **405**
 
 QA still uses `noindex` + `robots.txt` Disallow until cutover.
 
@@ -42,11 +45,13 @@ Neither is a Cursor “cap” — it is the Vercel Hobby daily deployment quota.
 `main` already has Ember blog chrome (`styles/ember-blog.css`). If production is stuck on an older SHA because of Hobby rate limit, **promote an existing READY preview** (no rebuild):
 
 ```bash
-vercel promote <preview-deployment-url-or-id> --yes
-# or REST: POST /v10/projects/{projectId}/promote/{deploymentId}?teamId=...
+# Ships blog Ember chrome only — keeps old cafe homepage (e6b2955 tree)
+vercel promote dpl_FTMGaRxsGg1psEwuRUeQUKM1QHo5 --yes --scope tar420s-projects
+# REST equivalent:
+# POST /v10/projects/prj_ODmlQ25lzDmmuC8Henf7d3OFOHcy/promote/dpl_FTMGaRxsGg1psEwuRUeQUKM1QHo5?teamId=team_RRwuapwHKgkHS89WFDBbdjIB
 ```
 
-Do **not** promote an `ember-qa` project to the production domain.
+Do **not** promote an `ember-qa` project to the production domain. Do **not** run homepage `promote-ember-homepage.mjs` without explicit approval.
 
 ### Contact env (QA + production)
 

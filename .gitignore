@@ -5,3 +5,7 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# 3D cafe mockup
+cafe/node_modules
+cafe/dist

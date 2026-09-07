@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/3d-cafe", "destination": "/3d-cafe/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

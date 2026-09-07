@@ -321,17 +321,63 @@ export function MenuBoard() {
 }
 
 export function GuestWall() {
+  const notes = useMemo(() => {
+    const items = [
+      ['I love the site.', 'Jacques'],
+      ['Proactive across teams.', 'Beryl'],
+      ['Knowledgeable, with a smile.', 'Jason'],
+    ]
+    return items.map(([quote, name]) => {
+      const canvas = document.createElement('canvas')
+      canvas.width = 512
+      canvas.height = 704
+      const ctx = canvas.getContext('2d')
+      ctx.fillStyle = '#efe3cc'
+      ctx.fillRect(0, 0, 512, 704)
+      ctx.fillStyle = '#3a2a1c'
+      ctx.font = 'italic 36px "SF Pro Text", Georgia, serif'
+      wrapText(ctx, `"${quote}"`, 48, 160, 416, 48)
+      ctx.font = '600 28px "SF Pro Text", Helvetica, sans-serif'
+      ctx.fillText(`— ${name}`, 48, 620)
+      const texture = new THREE.CanvasTexture(canvas)
+      texture.colorSpace = THREE.SRGBColorSpace
+      texture.needsUpdate = true
+      return texture
+    })
+  }, [])
+
   return (
     <group position={[-3.52, 1.48, 0.15]} rotation={[0, Math.PI / 2, 0]}>
       {[-0.58, 0, 0.58].map((x, i) => (
         <group key={x} position={[x, 0.08, 0.03]} rotation={[0, 0, (i - 1) * 0.03]}>
           <RoundedBox args={[0.46, 0.6, 0.02]} radius={0.01} smoothness={3} castShadow>
-            <meshPhysicalMaterial color={i === 1 ? '#f1e6d2' : '#e4d4bb'} roughness={0.7} />
+            <meshPhysicalMaterial color="#efe3cc" roughness={0.7} />
           </RoundedBox>
+          <mesh position={[0, 0, 0.012]}>
+            <planeGeometry args={[0.42, 0.54]} />
+            <meshBasicMaterial map={notes[i]} />
+          </mesh>
         </group>
       ))}
     </group>
   )
+}
+
+function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+  const words = text.split(' ')
+  let line = ''
+  let cursor = y
+  words.forEach((word) => {
+    const test = `${line}${word} `
+    if (ctx.measureText(test).width > maxWidth && line) {
+      ctx.fillText(line.trim(), x, cursor)
+      line = `${word} `
+      cursor += lineHeight
+    } else {
+      line = test
+    }
+  })
+  ctx.fillText(line.trim(), x, cursor)
 }
 
 export function BottleShelf() {

@@ -1,1 +1,1 @@
-Ember QA static export (relative asset paths for CDN).
+Ember redesign static QA export for public review via jsDelivr / Vercel.

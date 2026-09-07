@@ -16,6 +16,8 @@ import {
   Plant,
   Plaster,
   ShopSign,
+  Tamper,
+  Tiles,
   Window,
   Wood,
 } from './props'
@@ -56,12 +58,6 @@ export default function CafeWorld({ reduced, lowPower }) {
         <planeGeometry args={[10, 10.4]} />
         <Wood variant="floor" roughness={0.78} />
       </mesh>
-      {Array.from({ length: 14 }).map((_, i) => (
-        <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, -4.2 + i * 0.66]} receiveShadow>
-          <planeGeometry args={[10, 0.018]} />
-          <meshStandardMaterial color="#1a110c" />
-        </mesh>
-      ))}
 
       <mesh position={[0, 1.58, -3.48]} receiveShadow>
         <boxGeometry args={[9.4, 3.16, 0.2]} />
@@ -87,9 +83,27 @@ export default function CafeWorld({ reduced, lowPower }) {
         <boxGeometry args={[3.5, 0.52, 0.2]} />
         <Wood variant="oak" />
       </mesh>
-      <mesh position={[0, 3.18, 0.3]}>
+      <mesh position={[0, 3.18, 0.3]} receiveShadow>
         <boxGeometry args={[9.4, 0.1, 7.8]} />
-        <meshStandardMaterial color="#2a2118" roughness={0.9} />
+        <Plaster />
+      </mesh>
+      {[-2.35, 0, 2.35].map((x) => (
+        <mesh key={x} position={[x, 3.08, 0.3]} castShadow>
+          <boxGeometry args={[0.18, 0.16, 7.6]} />
+          <Wood variant="walnut" roughness={0.55} />
+        </mesh>
+      ))}
+      <mesh position={[0, 0.08, -3.36]}>
+        <boxGeometry args={[9.2, 0.16, 0.08]} />
+        <Wood variant="oak" />
+      </mesh>
+      <mesh position={[-4.48, 0.08, 0.35]}>
+        <boxGeometry args={[0.08, 0.16, 7.6]} />
+        <Wood variant="oak" />
+      </mesh>
+      <mesh position={[4.48, 0.08, 0.35]}>
+        <boxGeometry args={[0.08, 0.16, 7.6]} />
+        <Wood variant="oak" />
       </mesh>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 6.35]} receiveShadow>
         <planeGeometry args={[9.4, 4.4]} />
@@ -122,11 +136,20 @@ export default function CafeWorld({ reduced, lowPower }) {
         <boxGeometry args={[0.72, 0.16, 0.5]} />
         <Wood variant="walnut" />
       </mesh>
+      <mesh position={[0, 0.92, 0.28]} castShadow>
+        <boxGeometry args={[4.58, 0.055, 0.08]} />
+        <Wood variant="oak" roughness={0.32} />
+      </mesh>
+      <mesh position={[0.08, 1.42, -0.76]} receiveShadow>
+        <planeGeometry args={[2.15, 0.72]} />
+        <Tiles />
+      </mesh>
 
-      <EspressoMachine />
+      <EspressoMachine reduced={reduced} />
+      <Tamper />
       <BottleShelf />
-      <Cup position={[-0.2, 1.01, -0.14]} withSteam reduced={reduced} />
-      <Cup position={[0.44, 1.01, -0.08]} rotation={[0, 0.4, 0]} withSteam reduced={reduced} />
+      <Cup position={[-0.62, 1.01, 0.12]} withSteam reduced={reduced} />
+      <Cup position={[0.62, 1.01, 0.16]} rotation={[0, 0.4, 0]} withSteam reduced={reduced} />
       <Cup position={[1.48, 0.74, 0.46]} rotation={[0, -0.3, 0]} />
       <MenuBoard />
       <Laptop />

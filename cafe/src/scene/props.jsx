@@ -18,10 +18,12 @@ export function Wood({ variant = 'walnut', roughness = 0.62, metalness = 0.04 })
     <meshPhysicalMaterial
       map={src.map}
       normalMap={src.normalMap}
+      roughnessMap={src.roughnessMap}
       roughness={roughness}
       metalness={metalness}
       clearcoat={0.08}
       clearcoatRoughness={0.7}
+      envMapIntensity={0.85}
     />
   )
 }
@@ -32,6 +34,7 @@ export function Metal() {
     <meshPhysicalMaterial
       map={maps.metal.map}
       normalMap={maps.metal.normalMap}
+      roughnessMap={maps.metal.roughnessMap}
       metalness={0.92}
       roughness={0.28}
       clearcoat={0.35}
@@ -47,6 +50,7 @@ export function Plaster() {
     <meshStandardMaterial
       map={maps.plaster.map}
       normalMap={maps.plaster.normalMap}
+      roughnessMap={maps.plaster.roughnessMap}
       roughness={0.92}
       metalness={0}
     />
@@ -59,11 +63,27 @@ export function Ceramic() {
     <meshPhysicalMaterial
       map={maps.ceramic.map}
       normalMap={maps.ceramic.normalMap}
+      roughnessMap={maps.ceramic.roughnessMap}
       roughness={0.22}
       metalness={0.04}
       clearcoat={0.85}
       clearcoatRoughness={0.18}
       envMapIntensity={0.9}
+    />
+  )
+}
+
+export function Tiles() {
+  const maps = useMaps()
+  return (
+    <meshPhysicalMaterial
+      map={maps.tiles.map}
+      normalMap={maps.tiles.normalMap}
+      roughnessMap={maps.tiles.roughnessMap}
+      roughness={0.32}
+      metalness={0.06}
+      clearcoat={0.35}
+      clearcoatRoughness={0.4}
     />
   )
 }
@@ -104,6 +124,7 @@ export function Steam({ position = [0, 0, 0], count = 48, reduced }) {
         transparent
         depthWrite={false}
         blending={THREE.AdditiveBlending}
+        toneMapped={false}
       />
     </points>
   )
@@ -145,12 +166,13 @@ export function GodRays({ reduced }) {
         depthWrite={false}
         side={THREE.DoubleSide}
         blending={THREE.AdditiveBlending}
+        toneMapped={false}
       />
     </mesh>
   )
 }
 
-export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced }) {
+export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced, scale = 1 }) {
   const profile = useMemo(
     () =>
       [
@@ -162,9 +184,23 @@ export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced }) {
       ].map(([x, y]) => new THREE.Vector2(x, y)),
     [],
   )
+  const saucer = useMemo(
+    () =>
+      [
+        [0.02, 0],
+        [0.09, 0.006],
+        [0.118, 0.012],
+        [0.122, 0.018],
+      ].map(([x, y]) => new THREE.Vector2(x, y)),
+    [],
+  )
 
   return (
-    <group position={position} rotation={rotation}>
+    <group position={position} rotation={rotation} scale={scale}>
+      <mesh position={[0, -0.006, 0]} receiveShadow>
+        <latheGeometry args={[saucer, 40]} />
+        <Ceramic />
+      </mesh>
       <mesh castShadow>
         <latheGeometry args={[profile, 48]} />
         <Ceramic />
@@ -179,7 +215,7 @@ export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced }) {
   )
 }
 
-export function EspressoMachine() {
+export function EspressoMachine({ reduced }) {
   const beanRef = useRef()
   const beanSeeds = useMemo(
     () =>
@@ -228,6 +264,8 @@ export function EspressoMachine() {
             <boxGeometry args={[0.09, 0.018, 0.03]} />
             <Metal />
           </mesh>
+          <Steam position={[0, -0.02, 0.06]} count={22} reduced={reduced} />
+          <Cup position={[0, -0.155, 0.07]} scale={0.72} reduced={reduced} />
         </group>
       ))}
       <mesh position={[0.38, 0.34, 0.18]} rotation={[0.4, 0, 0.2]} castShadow>
@@ -238,17 +276,39 @@ export function EspressoMachine() {
         <sphereGeometry args={[0.018, 16, 16]} />
         <Metal />
       </mesh>
+      <mesh position={[-0.34, 0.46, 0.235]} rotation={[Math.PI / 2, 0, 0]}>
+        <cylinderGeometry args={[0.038, 0.038, 0.012, 28]} />
+        <meshPhysicalMaterial color="#1a1c20" metalness={0.7} roughness={0.25} />
+      </mesh>
+      <mesh position={[-0.34, 0.46, 0.242]}>
+        <circleGeometry args={[0.03, 24]} />
+        <meshPhysicalMaterial color="#c9a227" metalness={0.6} roughness={0.2} emissive="#c9a227" emissiveIntensity={0.25} />
+      </mesh>
       <mesh position={[0, 0.02, 0.2]}>
         <boxGeometry args={[0.78, 0.04, 0.22]} />
         <meshPhysicalMaterial color="#1c1c1e" metalness={0.6} roughness={0.4} />
       </mesh>
+      {[-0.28, -0.14, 0, 0.14, 0.28].map((x) => (
+        <mesh key={x} position={[x, 0.042, 0.2]}>
+          <boxGeometry args={[0.08, 0.006, 0.18]} />
+          <Metal />
+        </mesh>
+      ))}
       <mesh position={[0.34, 0.44, 0.235]}>
         <cylinderGeometry args={[0.028, 0.028, 0.012, 24]} />
         <meshPhysicalMaterial color={crema} emissive={crema} emissiveIntensity={1.4} metalness={0.3} roughness={0.2} />
       </mesh>
       <mesh position={[0, 0.78, 0]}>
         <cylinderGeometry args={[0.12, 0.14, 0.16, 24]} />
-        <meshPhysicalMaterial color="#2a241c" roughness={0.5} />
+        <meshPhysicalMaterial
+          color="#2a241c"
+          roughness={0.12}
+          metalness={0.08}
+          transmission={0.55}
+          thickness={0.25}
+          ior={1.5}
+          transparent
+        />
       </mesh>
       <instancedMesh ref={beanRef} args={[undefined, undefined, 42]} position={[0, 0.82, 0]}>
         <sphereGeometry args={[0.018, 8, 8]} />
@@ -258,7 +318,23 @@ export function EspressoMachine() {
   )
 }
 
+export function Tamper({ position = [0.72, 1.01, -0.18] }) {
+  return (
+    <group position={position}>
+      <mesh castShadow>
+        <cylinderGeometry args={[0.032, 0.032, 0.018, 24]} />
+        <Metal />
+      </mesh>
+      <mesh position={[0, 0.04, 0]} castShadow>
+        <cylinderGeometry args={[0.012, 0.014, 0.06, 12]} />
+        <Wood variant="walnut" />
+      </mesh>
+    </group>
+  )
+}
+
 export function BarStool({ position }) {
+  const maps = useMaps()
   return (
     <group position={position}>
       <mesh position={[0, 0.46, 0]} castShadow>
@@ -267,7 +343,13 @@ export function BarStool({ position }) {
       </mesh>
       <mesh position={[0, 0.5, 0]} castShadow>
         <cylinderGeometry args={[0.155, 0.155, 0.03, 32]} />
-        <meshPhysicalMaterial color="#4a3020" roughness={0.55} />
+        <meshPhysicalMaterial
+          map={maps.leather.map}
+          normalMap={maps.leather.normalMap}
+          roughnessMap={maps.leather.roughnessMap}
+          roughness={0.55}
+          clearcoat={0.12}
+        />
       </mesh>
       <mesh position={[0, 0.22, 0]}>
         <cylinderGeometry args={[0.022, 0.028, 0.44, 16]} />
@@ -300,6 +382,7 @@ export function Laptop() {
           <planeGeometry args={[0.58, 0.34]} />
           <meshBasicMaterial map={maps.screen} toneMapped={false} />
         </mesh>
+        <pointLight position={[0, 0, 0.12]} color="#c9a96e" intensity={1.6} distance={1.8} decay={2} />
       </group>
     </group>
   )
@@ -392,9 +475,15 @@ export function BottleShelf() {
             <cylinderGeometry args={[0.048, 0.052, 0.42, 20]} />
             <meshPhysicalMaterial
               color={i % 2 ? '#4a2018' : '#243428'}
-              roughness={0.22}
+              roughness={0.08}
               metalness={0.05}
-              clearcoat={0.4}
+              transmission={0.42}
+              thickness={0.35}
+              ior={1.5}
+              attenuationColor={i % 2 ? '#4a2018' : '#243428'}
+              attenuationDistance={0.55}
+              clearcoat={0.6}
+              transparent
             />
           </mesh>
           <mesh position={[0, 0.24, 0]}>
@@ -420,7 +509,7 @@ export function Pendant({ position, intensity = 8 }) {
       </mesh>
       <mesh position={[0, -0.48, 0]}>
         <sphereGeometry args={[0.045, 20, 20]} />
-        <meshStandardMaterial color="#ffd7a1" emissive="#ffc07a" emissiveIntensity={4.2} />
+        <meshStandardMaterial color="#ffd7a1" emissive="#ffc07a" emissiveIntensity={4.2} toneMapped={false} />
       </mesh>
       <pointLight position={[0, -0.56, 0]} color="#ffc27a" intensity={intensity} distance={5.5} decay={2} />
     </group>
@@ -428,23 +517,50 @@ export function Pendant({ position, intensity = 8 }) {
 }
 
 export function Plant({ position }) {
+  const maps = useMaps()
+  const leafRef = useRef()
+
+  useLayoutEffect(() => {
+    if (!leafRef.current) return
+    const dummy = new THREE.Object3D()
+    for (let i = 0; i < 14; i += 1) {
+      const a = (i / 14) * Math.PI * 2 + (i % 3) * 0.2
+      dummy.position.set(Math.sin(a) * 0.08, 0.2 + (i % 4) * 0.045, Math.cos(a) * 0.08)
+      dummy.rotation.set(0.85, a, 0.18)
+      dummy.scale.setScalar(0.72 + (i % 3) * 0.14)
+      dummy.updateMatrix()
+      leafRef.current.setMatrixAt(i, dummy.matrix)
+    }
+    leafRef.current.instanceMatrix.needsUpdate = true
+  }, [])
+
+  const pot = useMemo(
+    () =>
+      [
+        [0.09, 0],
+        [0.11, 0.02],
+        [0.1, 0.14],
+        [0.12, 0.155],
+      ].map(([x, y]) => new THREE.Vector2(x, y)),
+    [],
+  )
+
   return (
     <group position={position}>
-      <mesh>
-        <cylinderGeometry args={[0.1, 0.12, 0.16, 16]} />
-        <meshStandardMaterial color="#6b3a28" roughness={0.8} />
+      <mesh castShadow>
+        <latheGeometry args={[pot, 24]} />
+        <meshStandardMaterial color="#6b3a28" roughness={0.82} />
       </mesh>
-      {[0, 1, 2, 3, 4, 5].map((i) => (
-        <mesh
-          key={i}
-          position={[Math.sin(i * 1.1) * 0.09, 0.24 + (i % 3) * 0.05, Math.cos(i * 1.1) * 0.09]}
-          rotation={[0.45, i, 0.15]}
-          castShadow
-        >
-          <sphereGeometry args={[0.085 - i * 0.006, 14, 12]} />
-          <meshPhysicalMaterial color="#2c5a38" roughness={0.55} />
-        </mesh>
-      ))}
+      <instancedMesh ref={leafRef} args={[undefined, undefined, 14]} castShadow>
+        <planeGeometry args={[0.16, 0.22]} />
+        <meshPhysicalMaterial
+          map={maps.leaf}
+          transparent
+          alphaTest={0.35}
+          side={THREE.DoubleSide}
+          roughness={0.55}
+        />
+      </instancedMesh>
     </group>
   )
 }
@@ -472,34 +588,45 @@ export function Window() {
         <planeGeometry args={[3.55, 1.9]} />
         <meshBasicMaterial map={maps.dusk} toneMapped={false} />
       </mesh>
-      <mesh position={[0, 0, 0.02]}>
-        <planeGeometry args={[3.55, 1.9]} />
-        <meshPhysicalMaterial
-          color="#d7c4a4"
-          transparent
-          opacity={0.1}
-          roughness={0.08}
-          metalness={0.12}
-        />
-      </mesh>
-      <mesh position={[0, 0.97, 0.02]}>
+      {[-0.88, 0.88].map((x) =>
+        [-0.46, 0.46].map((y) => (
+          <mesh key={`${x}:${y}`} position={[x, y, 0.018]}>
+            <planeGeometry args={[1.68, 0.86]} />
+            <meshPhysicalMaterial
+              color="#f0e4d0"
+              transmission={0.78}
+              thickness={0.06}
+              ior={1.45}
+              roughness={0.05}
+              metalness={0}
+              transparent
+              envMapIntensity={1.35}
+            />
+          </mesh>
+        )),
+      )}
+      <mesh position={[0, 0.97, 0.03]}>
         <boxGeometry args={[3.72, 0.07, 0.09]} />
         <Wood variant="oak" />
       </mesh>
-      <mesh position={[0, -0.97, 0.02]}>
+      <mesh position={[0, -0.97, 0.03]}>
         <boxGeometry args={[3.72, 0.07, 0.09]} />
         <Wood variant="oak" />
       </mesh>
-      <mesh position={[-1.8, 0, 0.02]}>
+      <mesh position={[-1.8, 0, 0.03]}>
         <boxGeometry args={[0.07, 1.98, 0.09]} />
         <Wood variant="oak" />
       </mesh>
-      <mesh position={[1.8, 0, 0.02]}>
+      <mesh position={[1.8, 0, 0.03]}>
         <boxGeometry args={[0.07, 1.98, 0.09]} />
         <Wood variant="oak" />
       </mesh>
-      <mesh position={[0, 0, 0.02]}>
+      <mesh position={[0, 0, 0.03]}>
         <boxGeometry args={[0.05, 1.98, 0.07]} />
+        <Wood variant="oak" />
+      </mesh>
+      <mesh position={[0, 0, 0.03]} rotation={[0, 0, Math.PI / 2]}>
+        <boxGeometry args={[0.05, 3.5, 0.07]} />
         <Wood variant="oak" />
       </mesh>
     </group>

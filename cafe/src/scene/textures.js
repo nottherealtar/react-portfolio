@@ -31,7 +31,11 @@ function fbm(x, y, octaves = 5) {
   return value
 }
 
-function makeDataTexture(width, height, fill, srgb = true) {
+function mix(a, b, t) {
+  return a + (b - a) * t
+}
+
+function makeDataTexture(width, height, fill, { srgb = true, roughMin = 0.32, roughMax = 0.88 } = {}) {
   const data = new Uint8Array(width * height * 4)
   const heightMap = new Float32Array(width * height)
   fill(data, heightMap, width, height)
@@ -39,10 +43,11 @@ function makeDataTexture(width, height, fill, srgb = true) {
   map.colorSpace = srgb ? THREE.SRGBColorSpace : THREE.NoColorSpace
   map.wrapS = THREE.RepeatWrapping
   map.wrapT = THREE.RepeatWrapping
-  map.anisotropy = 8
+  map.anisotropy = 16
   map.needsUpdate = true
 
   const normalData = new Uint8Array(width * height * 4)
+  const roughnessData = new Uint8Array(width * height * 4)
   const strength = 2.4
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
@@ -62,22 +67,30 @@ function makeDataTexture(width, height, fill, srgb = true) {
       normalData[i + 1] = (ny * 0.5 + 0.5) * 255
       normalData[i + 2] = (nz * 0.5 + 0.5) * 255
       normalData[i + 3] = 255
+      const rough = THREE.MathUtils.clamp(mix(roughMin, roughMax, heightMap[y * width + x]), 0, 1) * 255
+      roughnessData[i] = rough
+      roughnessData[i + 1] = rough
+      roughnessData[i + 2] = rough
+      roughnessData[i + 3] = 255
     }
   }
   const normalMap = new THREE.DataTexture(normalData, width, height)
   normalMap.colorSpace = THREE.NoColorSpace
   normalMap.wrapS = THREE.RepeatWrapping
   normalMap.wrapT = THREE.RepeatWrapping
-  normalMap.anisotropy = 8
+  normalMap.anisotropy = 16
   normalMap.needsUpdate = true
-  return { map, normalMap }
+
+  const roughnessMap = new THREE.DataTexture(roughnessData, width, height)
+  roughnessMap.colorSpace = THREE.NoColorSpace
+  roughnessMap.wrapS = THREE.RepeatWrapping
+  roughnessMap.wrapT = THREE.RepeatWrapping
+  roughnessMap.anisotropy = 16
+  roughnessMap.needsUpdate = true
+  return { map, normalMap, roughnessMap }
 }
 
-function mix(a, b, t) {
-  return a + (b - a) * t
-}
-
-function woodFill(data, heightMap, width, height, palette) {
+function woodFill(data, heightMap, width, height, palette, { planks = false } = {}) {
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
       const u = x / width
@@ -86,7 +99,14 @@ function woodFill(data, heightMap, width, height, palette) {
       const grain = fbm(u * 1.4 + warp * 0.35, v * 18.0, 5)
       const rings = Math.sin((u * 14 + warp * 1.8 + grain * 0.4) * Math.PI * 2) * 0.5 + 0.5
       const pores = fbm(u * 40, v * 90, 3)
-      const t = THREE.MathUtils.clamp(rings * 0.62 + grain * 0.28 + pores * 0.1, 0, 1)
+      let t = THREE.MathUtils.clamp(rings * 0.62 + grain * 0.28 + pores * 0.1, 0, 1)
+      if (planks) {
+        const boards = 9
+        const board = Math.floor(v * boards)
+        const local = v * boards - board
+        t = THREE.MathUtils.clamp(t + (hash2(board, 4) - 0.5) * 0.16, 0, 1)
+        if (local < 0.045) t *= 0.22
+      }
       const i = (y * width + x) * 4
       data[i] = mix(palette[0], palette[3], t)
       data[i + 1] = mix(palette[1], palette[4], t)
@@ -148,6 +168,56 @@ function ceramicFill(data, heightMap, width, height) {
   }
 }
 
+function tileFill(data, heightMap, width, height) {
+  const cols = 7
+  const rows = 10
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const u = x / width
+      const v = y / height
+      const col = Math.floor(u * cols)
+      const row = Math.floor(v * rows)
+      const fu = u * cols - col
+      const fv = v * rows - row
+      const grout = fu < 0.07 || fv < 0.09 || fu > 0.96 || fv > 0.94
+      const i = (y * width + x) * 4
+      if (grout) {
+        data[i] = 92
+        data[i + 1] = 78
+        data[i + 2] = 64
+        data[i + 3] = 255
+        heightMap[y * width + x] = 0.02
+      } else {
+        const n = fbm(u * 18, v * 18, 3)
+        const stain = hash2(col, row) * 0.12
+        data[i] = mix(214, 236, n) - stain * 30
+        data[i + 1] = mix(196, 216, n) - stain * 22
+        data[i + 2] = mix(168, 188, n) - stain * 10
+        data[i + 3] = 255
+        heightMap[y * width + x] = 0.22 + n * 0.08
+      }
+    }
+  }
+}
+
+function leatherFill(data, heightMap, width, height) {
+  for (let y = 0; y < height; y += 1) {
+    for (let x = 0; x < width; x += 1) {
+      const u = x / width
+      const v = y / height
+      const grain = fbm(u * 28, v * 28, 4)
+      const wrinkle = fbm(u * 6, v * 4, 3)
+      const t = grain * 0.7 + wrinkle * 0.3
+      const i = (y * width + x) * 4
+      data[i] = mix(58, 92, t)
+      data[i + 1] = mix(32, 52, t)
+      data[i + 2] = mix(22, 36, t)
+      data[i + 3] = 255
+      heightMap[y * width + x] = t * 0.4
+    }
+  }
+}
+
 function duskFill(data, heightMap, width, height) {
   for (let y = 0; y < height; y += 1) {
     for (let x = 0; x < width; x += 1) {
@@ -195,6 +265,13 @@ function canvasTexture(draw, w, h) {
   return texture
 }
 
+function tileRepeat(src, x, y) {
+  src.map.repeat.set(x, y)
+  src.normalMap.repeat.set(x, y)
+  src.roughnessMap.repeat.set(x, y)
+  return src
+}
+
 let maps
 
 export function getCafeMaps() {
@@ -207,13 +284,20 @@ export function getCafeMaps() {
     woodFill(data, heightMap, w, h, [62, 38, 22, 156, 110, 68])
   })
   const floor = makeDataTexture(512, 512, (data, heightMap, w, h) => {
-    woodFill(data, heightMap, w, h, [38, 22, 12, 108, 70, 38])
-  })
-  floor.map.repeat.set(8, 8)
-  floor.normalMap.repeat.set(8, 8)
-  const plaster = makeDataTexture(512, 512, plasterFill)
-  const metal = makeDataTexture(512, 512, metalFill)
-  const ceramic = makeDataTexture(256, 256, ceramicFill)
+    woodFill(data, heightMap, w, h, [38, 22, 12, 108, 70, 38], { planks: true })
+  }, { roughMin: 0.48, roughMax: 0.92 })
+  tileRepeat(floor, 8, 8)
+  const plaster = makeDataTexture(512, 512, plasterFill, { roughMin: 0.78, roughMax: 0.98 })
+  plaster.map.repeat.set(2, 2)
+  plaster.normalMap.repeat.set(2, 2)
+  plaster.roughnessMap.repeat.set(2, 2)
+  const metal = makeDataTexture(512, 512, metalFill, { roughMin: 0.12, roughMax: 0.38 })
+  const ceramic = makeDataTexture(256, 256, ceramicFill, { roughMin: 0.08, roughMax: 0.28 })
+  const tiles = makeDataTexture(512, 512, tileFill, { roughMin: 0.18, roughMax: 0.42 })
+  tiles.map.repeat.set(2.4, 1.1)
+  tiles.normalMap.repeat.set(2.4, 1.1)
+  tiles.roughnessMap.repeat.set(2.4, 1.1)
+  const leather = makeDataTexture(256, 256, leatherFill, { roughMin: 0.42, roughMax: 0.72 })
   const dusk = makeDataTexture(1024, 768, duskFill)
 
   const chalkboard = canvasTexture((ctx, w, h) => {
@@ -290,6 +374,27 @@ export function getCafeMaps() {
     ctx.fillRect(360, 270, 300, 90)
   }, 1024, 400)
 
+  const leaf = canvasTexture((ctx, w, h) => {
+    ctx.clearRect(0, 0, w, h)
+    ctx.translate(w / 2, h / 2)
+    ctx.beginPath()
+    ctx.moveTo(0, -h * 0.44)
+    ctx.bezierCurveTo(w * 0.3, -h * 0.18, w * 0.32, h * 0.16, 0, h * 0.44)
+    ctx.bezierCurveTo(-w * 0.32, h * 0.16, -w * 0.3, -h * 0.18, 0, -h * 0.44)
+    const g = ctx.createLinearGradient(-w * 0.1, -h * 0.4, w * 0.12, h * 0.4)
+    g.addColorStop(0, '#5a9a58')
+    g.addColorStop(0.45, '#2f6a38')
+    g.addColorStop(1, '#1c4022')
+    ctx.fillStyle = g
+    ctx.fill()
+    ctx.strokeStyle = 'rgba(18, 40, 20, 0.45)'
+    ctx.lineWidth = 3
+    ctx.beginPath()
+    ctx.moveTo(0, -h * 0.4)
+    ctx.lineTo(0, h * 0.4)
+    ctx.stroke()
+  }, 256, 256)
+
   maps = {
     walnut,
     oak,
@@ -297,11 +402,14 @@ export function getCafeMaps() {
     plaster,
     metal,
     ceramic,
+    tiles,
+    leather,
     dusk: dusk.map,
     chalkboard,
     sign,
     screen,
     keyboard,
+    leaf,
   }
   return maps
 }

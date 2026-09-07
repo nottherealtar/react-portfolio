@@ -66,6 +66,8 @@ export const coffeeFragment = /* glsl */ `
     col += vec3(0.16, 0.1, 0.05) * (1.0 - rim) * 0.4;
     if (r > 0.5) discard;
     gl_FragColor = vec4(col, 1.0);
+    #include <tonemapping_fragment>
+    #include <colorspace_fragment>
   }
 `
 
@@ -81,10 +83,14 @@ export const godrayFragment = /* glsl */ `
   uniform float uTime;
   varying vec2 vUv;
   void main() {
-    float shaft = pow(1.0 - abs(vUv.x - 0.5) * 2.0, 2.4);
-    float fall = pow(1.0 - vUv.y, 1.4);
-    float shimmer = 0.85 + 0.15 * sin(uTime * 0.35 + vUv.y * 8.0);
-    float alpha = shaft * fall * 0.14 * shimmer;
+    float shaft = 0.0;
+    shaft += pow(max(0.0, 1.0 - abs(vUv.x - 0.28) * 3.4), 2.5);
+    shaft += pow(max(0.0, 1.0 - abs(vUv.x - 0.5) * 2.6), 2.2) * 0.85;
+    shaft += pow(max(0.0, 1.0 - abs(vUv.x - 0.74) * 3.4), 2.5) * 0.7;
+    float fall = pow(1.0 - vUv.y, 1.35);
+    float shimmer = 0.82 + 0.18 * sin(uTime * 0.32 + vUv.y * 9.0 + vUv.x * 4.0);
+    float dust = 0.92 + 0.08 * sin(uTime * 1.1 + vUv.y * 40.0);
+    float alpha = clamp(shaft, 0.0, 1.0) * fall * 0.16 * shimmer * dust;
     vec3 col = vec3(1.0, 0.78, 0.48);
     gl_FragColor = vec4(col, alpha);
   }

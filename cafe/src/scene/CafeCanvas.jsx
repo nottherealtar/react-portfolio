@@ -1,6 +1,6 @@
-import { AdaptiveDpr, Environment, Lightformer, Preload, SoftShadows } from '@react-three/drei'
+import { AdaptiveDpr, ContactShadows, Environment, Lightformer, Preload, SoftShadows } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { Bloom, EffectComposer, SMAA, Vignette } from '@react-three/postprocessing'
+import { Bloom, EffectComposer, N8AO, SMAA, Vignette } from '@react-three/postprocessing'
 import { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useCafe } from '../ui/CafeContext'
@@ -75,7 +75,7 @@ function CameraRig({ reduced }) {
 
 function StudioLights() {
   return (
-    <Environment resolution={256} environmentIntensity={0.42}>
+    <Environment resolution={512} environmentIntensity={0.48}>
       <Lightformer intensity={3.6} position={[0, 4.2, -3.2]} scale={[7, 1.2, 1]} color="#ffb070" />
       <Lightformer intensity={1.6} position={[0, 3.8, 4]} scale={[8, 2, 1]} color="#2a1810" />
       <Lightformer intensity={2.2} position={[-5, 2.2, 0.5]} scale={[2.5, 5, 1]} color="#8aa4ff" />
@@ -111,11 +111,24 @@ export default function CafeCanvas({ reduced, lowPower }) {
           {!lowPower && <SoftShadows size={18} samples={12} focus={0.6} />}
           <StudioLights />
           <CafeWorld reduced={reduced} lowPower={lowPower} />
+          {!lowPower && (
+            <ContactShadows
+              position={[0, 0.012, 0]}
+              opacity={0.48}
+              scale={11}
+              blur={2.3}
+              far={2.8}
+              resolution={512}
+              frames={1}
+              color="#0a0706"
+            />
+          )}
           {!lowPower && !reduced && (
             <EffectComposer multisampling={0} enableNormalPass={false}>
-              <SMAA />
+              <N8AO aoRadius={0.85} intensity={1.2} quality="performance" halfRes color="#1a100c" />
               <Bloom intensity={0.42} luminanceThreshold={0.88} mipmapBlur />
               <Vignette eskil={false} offset={0.18} darkness={0.55} />
+              <SMAA />
             </EffectComposer>
           )}
           <AdaptiveDpr />

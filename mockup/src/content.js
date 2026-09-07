@@ -25,6 +25,7 @@ export const nav = [
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'Process', href: '#process' },
+  { label: 'Recruiters', href: '#hiring' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -218,11 +219,11 @@ export const contact = {
   title: 'Let\'s work together',
   subtitle: 'Tell me what you\'re trying to solve. I\'ll come back to you within 24 hours.',
   types: [
-    'Process Automation',
-    'Azure Logic Apps',
-    'Freshworks Integration',
-    'API / Systems Integration',
-    'Other',
+    { value: 'automation', label: 'Process Automation' },
+    { value: 'azure', label: 'Azure Logic Apps' },
+    { value: 'freshworks', label: 'Freshworks Integration' },
+    { value: 'api', label: 'API / Systems Integration' },
+    { value: 'other', label: 'Other' },
   ],
   coffeeText: 'Enjoyed my work? Support me with a coffee!',
 }

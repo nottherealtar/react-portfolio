@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:ember-qa": "vite build --config vite.ember-qa.config.js && node ../scripts/finalize-ember-qa.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

@@ -389,8 +389,8 @@ function About() {
                 <span key={tech}>{tech}</span>
               ))}
             </div>
-            <aside className="frost-recruiter">
-              <p className="frost-eyebrow">{about.recruiter.title}</p>
+            <aside id="hiring" className="frost-recruiter" aria-labelledby="hiring-title" tabIndex={-1}>
+              <p id="hiring-title" className="frost-eyebrow">{about.recruiter.title}</p>
               <p>{about.recruiter.hint}</p>
               <div className="frost-social">
                 <a href={site.social.github} target="_blank" rel="noopener noreferrer">
@@ -644,8 +644,8 @@ function Contact() {
                     Select a category…
                   </option>
                   {contact.types.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
+                    <option key={type.value} value={type.value}>
+                      {type.label}
                     </option>
                   ))}
                 </select>

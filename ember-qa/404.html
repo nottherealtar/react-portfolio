@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>404 — Page not found | Joshua Coetzer</title>
+    <meta name="description" content="That page does not exist. Head back to the portfolio or blog." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://www.tarsonlinecafe.work/404.html" />
+    <link rel="icon" href="./logo.png" type="image/png" />
+    <meta name="theme-color" content="#050403" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root { --void:#050403; --foam:#f3ebe3; --copper:#d4895a; }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 2rem;
+        font-family: Figtree, system-ui, sans-serif; color: var(--foam);
+        background:
+          radial-gradient(900px 480px at 12% -10%, rgba(212,137,90,.16), transparent 55%),
+          radial-gradient(700px 400px at 88% 8%, rgba(80,50,30,.35), transparent 50%),
+          var(--void);
+      }
+      main { max-width: 28rem; text-align: center; }
+      p.kicker { letter-spacing: .14em; text-transform: uppercase; font-size: .75rem; opacity: .7; margin: 0 0 .75rem; }
+      h1 { font-family: Syne, Figtree, sans-serif; font-size: clamp(2.5rem, 8vw, 4rem); margin: 0 0 .75rem; line-height: 1.05; }
+      p { margin: 0 0 1.5rem; line-height: 1.55; opacity: .88; }
+      a {
+        display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+        padding: .65rem 1.15rem; border-radius: 999px; background: var(--copper); color: #1a1108;
+        font-weight: 600; text-decoration: none;
+      }
+      a.secondary { margin-left: .5rem; background: transparent; color: var(--foam); border: 1px solid rgba(243,235,227,.35); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="kicker">404</p>
+      <h1>Page not found</h1>
+      <p>That URL doesn’t exist on this build. Head home or open the blog.</p>
+      <p>
+        <a href="./">Back home</a>
+        <a class="secondary" href="/blog/blog.html">Blog</a>
+      </p>
+    </main>
+  </body>
+</html>

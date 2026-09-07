@@ -465,8 +465,8 @@ function About() {
                 LinkedIn
               </a>
             </div>
-            <aside className="sig-recruiter">
-              <p className="sig-eyebrow">{about.recruiter.title}</p>
+            <aside id="hiring" className="sig-recruiter" aria-labelledby="hiring-title" tabIndex={-1}>
+              <p id="hiring-title" className="sig-eyebrow">{about.recruiter.title}</p>
               <p>{about.recruiter.hint}</p>
               <div className="sig-social">
                 <a href={site.social.github} target="_blank" rel="noopener noreferrer">
@@ -722,8 +722,8 @@ function Contact() {
                     Select a category…
                   </option>
                   {contact.types.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
+                    <option key={type.value} value={type.value}>
+                      {type.label}
                     </option>
                   ))}
                 </select>

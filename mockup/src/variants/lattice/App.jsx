@@ -479,8 +479,8 @@ function About() {
                 LinkedIn <Icon name="external" size={14} />
               </a>
             </div>
-            <aside className="recruiter-note">
-              <MonoLabel>{about.recruiter.title}</MonoLabel>
+            <aside id="hiring" className="recruiter-note" aria-labelledby="hiring-title" tabIndex={-1}>
+              <MonoLabel id="hiring-title">{about.recruiter.title}</MonoLabel>
               <p>{about.recruiter.hint}</p>
               <div className="recruiter-links">
                 <a href={site.social.github} target="_blank" rel="noopener noreferrer">
@@ -796,8 +796,8 @@ function Contact() {
                     Select a category…
                   </option>
                   {contact.types.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
+                    <option key={type.value} value={type.value}>
+                      {type.label}
                     </option>
                   ))}
                 </select>

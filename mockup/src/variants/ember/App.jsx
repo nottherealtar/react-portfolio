@@ -486,8 +486,10 @@ function About() {
                 LinkedIn
               </a>
             </div>
-            <aside className="recruiter-card">
-              <p className="eyebrow">{about.recruiter.title}</p>
+            <aside id="hiring" className="recruiter-card" aria-labelledby="hiring-title" tabIndex={-1}>
+              <p id="hiring-title" className="eyebrow">
+                {about.recruiter.title}
+              </p>
               <p>{about.recruiter.hint}</p>
               <div className="recruiter-links">
                 <a href={site.social.github} target="_blank" rel="noopener noreferrer">
@@ -717,6 +719,12 @@ function Contact() {
     setError('')
     const form = e.currentTarget
     const data = new FormData(form)
+    // Production honeypot — bots that fill this are silently dropped
+    if (String(data.get('botcheck') || '').trim()) {
+      setSent(true)
+      form.reset()
+      return
+    }
     const name = String(data.get('name') || '').trim()
     const email = String(data.get('email') || '').trim()
     const company = String(data.get('company') || '').trim()
@@ -797,10 +805,25 @@ function Contact() {
             </div>
           ) : (
             <form ref={formRef} className="contact-form" onSubmit={onSubmit} noValidate>
+              <input
+                type="text"
+                name="botcheck"
+                defaultValue=""
+                tabIndex={-1}
+                autoComplete="off"
+                className="hp-field"
+                aria-hidden="true"
+              />
               <div className="contact-row">
                 <label className="field">
                   <span>Name *</span>
-                  <input name="name" required autoComplete="name" placeholder="Your name" />
+                  <input
+                    name="name"
+                    required
+                    autoComplete="name"
+                    placeholder="Your name"
+                    aria-describedby={error ? 'ember-contact-error' : undefined}
+                  />
                 </label>
                 <label className="field">
                   <span>Company</span>
@@ -809,17 +832,29 @@ function Contact() {
               </div>
               <label className="field">
                 <span>Email *</span>
-                <input name="email" type="email" required autoComplete="email" placeholder="you@company.com" />
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  autoComplete="email"
+                  placeholder="you@company.com"
+                  aria-describedby={error ? 'ember-contact-error' : undefined}
+                />
               </label>
               <label className="field">
                 <span>Project type *</span>
-                <select name="project_type" required defaultValue="">
+                <select
+                  name="project_type"
+                  required
+                  defaultValue=""
+                  aria-describedby={error ? 'ember-contact-error' : undefined}
+                >
                   <option value="" disabled>
                     Select a category…
                   </option>
                   {contact.types.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
+                    <option key={type.value} value={type.value}>
+                      {type.label}
                     </option>
                   ))}
                 </select>
@@ -831,6 +866,7 @@ function Contact() {
                   rows={5}
                   required
                   placeholder="Describe the problem you’re trying to solve…"
+                  aria-describedby={error ? 'ember-contact-error' : undefined}
                 />
               </label>
               <div className="field contact-hcaptcha">
@@ -842,10 +878,11 @@ function Contact() {
                   data-size="normal"
                   role="group"
                   aria-labelledby="ember-captcha-label"
+                  aria-describedby={error ? 'ember-contact-error' : undefined}
                 />
               </div>
               {error ? (
-                <p className="contact-note contact-note--error" role="alert">
+                <p id="ember-contact-error" className="contact-note contact-note--error" role="alert">
                   {error}
                 </p>
               ) : null}

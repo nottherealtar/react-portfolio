@@ -277,7 +277,17 @@ a {
 }
 
 .panel-work {
-  width: min(100%, 400px);
+  width: min(100%, 340px);
+}
+
+.hud-work {
+  justify-items: start;
+}
+
+.panel-work .panel-inner {
+  max-height: min(38dvh, 360px);
+  padding: 16px 16px 14px;
+  gap: 10px;
 }
 
 .panel-solid {

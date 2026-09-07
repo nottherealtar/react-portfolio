@@ -271,7 +271,10 @@ function canvasTexture(draw, w, h) {
   draw(ctx, w, h)
   const texture = new THREE.CanvasTexture(canvas)
   texture.colorSpace = THREE.SRGBColorSpace
-  texture.anisotropy = 8
+  texture.anisotropy = 16
+  texture.minFilter = THREE.LinearFilter
+  texture.magFilter = THREE.LinearFilter
+  texture.generateMipmaps = false
   texture.needsUpdate = true
   return texture
 }

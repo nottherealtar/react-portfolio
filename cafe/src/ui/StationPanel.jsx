@@ -202,7 +202,7 @@ export default function StationPanel() {
   const onTalk = () => setStation('contact')
 
   return (
-    <aside id="hud" className="hud">
+    <aside id="hud" className={`hud${station === 'work' ? ' hud-work' : ''}`}>
       <div className={`panel ${station === 'hero' || station === 'work' ? 'glass' : 'panel-solid'}${station === 'work' ? ' panel-work' : ''}`}>
         <div className="panel-inner">
           {station === 'hero' && <HeroPanel onWork={onWork} onTalk={onTalk} />}

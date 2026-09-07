@@ -382,7 +382,7 @@ export function BarStool({ position }) {
 export function Laptop() {
   const maps = useMaps()
   return (
-    <group position={[-2.34, 0.822, -0.94]} rotation={[0, 0.52, 0]} scale={1.48}>
+    <group position={[-2.16, 0.822, -0.68]} rotation={[0, 0.82, 0]} scale={1.58}>
       <RoundedBox args={[0.78, 0.014, 0.52]} radius={0.014} smoothness={4} castShadow>
         <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} clearcoat={0.22} />
       </RoundedBox>
@@ -401,7 +401,7 @@ export function Laptop() {
         <cylinderGeometry args={[0.008, 0.008, 0.74, 12]} />
         <meshPhysicalMaterial color="#2a2a30" metalness={0.84} roughness={0.24} />
       </mesh>
-      <group position={[0, 0.016, -0.252]} rotation={[-0.12, 0, 0]}>
+      <group position={[0, 0.016, -0.252]} rotation={[-0.06, 0, 0]}>
         <group position={[0, 0.225, 0]}>
           <RoundedBox args={[0.78, 0.46, 0.012]} radius={0.012} smoothness={4} castShadow>
             <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} />
@@ -410,8 +410,8 @@ export function Laptop() {
             <planeGeometry args={[0.74, 0.42]} />
             <meshPhysicalMaterial color="#09090b" roughness={0.78} />
           </mesh>
-          <mesh position={[0, -0.006, 0.0086]}>
-            <planeGeometry args={[0.7, 0.394]} />
+          <mesh position={[0, -0.004, 0.0088]}>
+            <planeGeometry args={[0.705, 0.4]} />
             <meshBasicMaterial map={maps.screen} toneMapped={false} />
           </mesh>
           <mesh position={[0, 0.208, 0.008]}>

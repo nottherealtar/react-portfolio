@@ -160,12 +160,12 @@ export default function CafeWorld({ reduced, lowPower }) {
       <Plant position={[-3.72, 0.08, -2.55]} />
       <Plant position={[3.72, 0.08, 2.42]} />
 
-      <mesh position={[-2.48, 0.4, -1.12]} castShadow receiveShadow>
-        <boxGeometry args={[1.48, 0.8, 0.9]} />
+      <mesh position={[-2.36, 0.4, -0.92]} castShadow receiveShadow>
+        <boxGeometry args={[1.36, 0.8, 1.1]} />
         <Wood variant="walnut" />
       </mesh>
-      <mesh position={[-2.48, 0.82, -1.54]}>
-        <boxGeometry args={[1.48, 0.06, 0.1]} />
+      <mesh position={[-2.36, 0.82, -1.42]}>
+        <boxGeometry args={[1.36, 0.06, 0.1]} />
         <Wood variant="oak" />
       </mesh>
 

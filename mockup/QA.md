@@ -1,15 +1,21 @@
-# QA review — Ember redesign
+# QA review — Ember redesign (production candidate)
 
-Production site (`https://www.tarsonlinecafe.work`) is **unchanged** until you explicitly approve a promote.
+Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until you explicitly approve a promote.
 
-## Public QA (no Vercel login)
+## Public QA (production-ready candidate)
 
-Use a real `text/html` host (jsDelivr HTML mirrors render as plaintext):
+Stable self-hosted build (full assets + contact API on the QA project — not a temp redirect):
 
-- See the latest claimable Vercel snapshot in PR #7 / agent notes
-- https://tarsonline-ember-qa.vercel.app/ (redirects to the live snapshot when configured)
+- https://tarsonline-ember-qa.vercel.app/
 
-QA pages ship production-grade SEO meta + JSON-LD, but keep `noindex,nofollow` until homepage cutover.
+This QA build is meant to match the production homepage cutover:
+
+- No lab chrome / mockup banner
+- Production SEO meta + JSON-LD (still `noindex,nofollow` until cutover)
+- Mobile nav with swipe-down dismiss and sharp iOS menu panel
+- Contact form posts to `/api/submit-contact` with hCaptcha (same path as production)
+
+Optional claimed snapshot (if the alias is mid-redeploy): see the latest claim link in PR #7 / agent notes.
 
 ## Mobile check
 

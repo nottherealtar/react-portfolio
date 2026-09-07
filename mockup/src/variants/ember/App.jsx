@@ -20,9 +20,6 @@ import {
   testimonials,
   work,
 } from '../../content'
-import { VariantChrome } from '../../shared/VariantChrome'
-import '../../shared/variant-chrome.css'
-
 const EmberField = lazy(() => import('./EmberField'))
 
 const easeOut = [0.22, 1, 0.36, 1]
@@ -695,6 +692,92 @@ function Testimonials() {
 
 function Contact() {
   const [sent, setSent] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
+  const formRef = useRef(null)
+
+  useEffect(() => {
+    if (sent) return
+    const render = window.hcaptcha?.render
+    const nodes = formRef.current?.querySelectorAll('.h-captcha')
+    if (!render || !nodes?.length) return
+    nodes.forEach((node) => {
+      if (node.dataset.hcaptchaWidgetId) return
+      try {
+        const id = render(node)
+        if (id != null) node.dataset.hcaptchaWidgetId = String(id)
+      } catch {
+        /* widget may already be bound by web3forms script */
+      }
+    })
+  }, [sent])
+
+  async function onSubmit(e) {
+    e.preventDefault()
+    setError('')
+    const form = e.currentTarget
+    const data = new FormData(form)
+    const name = String(data.get('name') || '').trim()
+    const email = String(data.get('email') || '').trim()
+    const company = String(data.get('company') || '').trim()
+    const project_type = String(data.get('project_type') || '').trim()
+    const message = String(data.get('message') || '').trim()
+    const hCaptchaResponse = String(data.get('h-captcha-response') || '').trim()
+
+    if (!name || !email || !project_type || message.length < 10) {
+      setError('Please complete all required fields.')
+      return
+    }
+    if (!hCaptchaResponse) {
+      setError('Please complete the verification.')
+      return
+    }
+
+    setSubmitting(true)
+    try {
+      const res = await fetch('/api/submit-contact', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          project_type,
+          message,
+          hCaptchaResponse,
+        }),
+      })
+      const json = await res.json().catch(() => ({}))
+      if (res.ok && json.success) {
+        setSent(true)
+        form.reset()
+        try {
+          window.hcaptcha?.reset?.()
+        } catch {
+          /* noop */
+        }
+      } else {
+        setError(json.message || 'Submission failed. Please try again in a few minutes.')
+        try {
+          window.hcaptcha?.reset?.()
+        } catch {
+          /* noop */
+        }
+      }
+    } catch {
+      setError('Network error while sending. Please try again.')
+      try {
+        window.hcaptcha?.reset?.()
+      } catch {
+        /* noop */
+      }
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   return (
     <section id="contact" className="contact">
@@ -713,13 +796,7 @@ function Contact() {
               </button>
             </div>
           ) : (
-            <form
-              className="contact-form"
-              onSubmit={(e) => {
-                e.preventDefault()
-                setSent(true)
-              }}
-            >
+            <form ref={formRef} className="contact-form" onSubmit={onSubmit} noValidate>
               <div className="contact-row">
                 <label className="field">
                   <span>Name *</span>
@@ -749,11 +826,31 @@ function Contact() {
               </label>
               <label className="field">
                 <span>Tell me about it *</span>
-                <textarea name="message" rows={5} required placeholder="Describe the problem you’re trying to solve…" />
+                <textarea
+                  name="message"
+                  rows={5}
+                  required
+                  placeholder="Describe the problem you’re trying to solve…"
+                />
               </label>
-              <p className="contact-note">Mockup form — local-only for this redesign preview.</p>
-              <button className="btn btn-primary" type="submit">
-                Send message
+              <div className="field contact-hcaptcha">
+                <span id="ember-captcha-label">Verification *</span>
+                <div
+                  className="h-captcha"
+                  data-captcha="true"
+                  data-theme="dark"
+                  data-size="normal"
+                  role="group"
+                  aria-labelledby="ember-captcha-label"
+                />
+              </div>
+              {error ? (
+                <p className="contact-note contact-note--error" role="alert">
+                  {error}
+                </p>
+              ) : null}
+              <button className="btn btn-primary" type="submit" disabled={submitting}>
+                {submitting ? 'Sending…' : 'Send message'}
               </button>
             </form>
           )}
@@ -798,7 +895,6 @@ export default function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <VariantChrome id="ember" name="Ember" />
       <ScrollProgress />
       <PointerGlow />
       <div className="noise-layer" aria-hidden="true" />
@@ -817,7 +913,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-<div className="mockup-banner">Redesign mockup · leveled UI</div>
     </>
   )
 }

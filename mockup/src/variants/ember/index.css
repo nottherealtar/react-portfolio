@@ -1454,6 +1454,18 @@ img {
   font-size: 0.85rem;
 }
 
+.contact-note--error {
+  color: #e8a090;
+}
+
+.contact-hcaptcha {
+  gap: 0.65rem;
+}
+
+.contact-hcaptcha .h-captcha {
+  min-height: 78px;
+}
+
 .contact-success h3 {
   margin: 0;
   font-family: var(--font-display);

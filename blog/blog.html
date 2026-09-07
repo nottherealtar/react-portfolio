@@ -6,13 +6,13 @@
     <title>Blog | Joshua Coetzer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="/67793100.png" type="image/png">
     <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/blog.html">
     <meta name="description" content="Automation, integration, and AI implementation insights curated for real business outcomes.">
     <meta name="keywords" content="automation blog, integration, AI workflows, API, Azure, Freshworks, operations">
     <meta name="author" content="Joshua Coetzer">
-    <meta name="theme-color" content="#2d221b">
+    <meta name="theme-color" content="#050403">
     <meta property="og:title" content="Blog | Joshua Coetzer">
     <meta property="og:description" content="Automation, integration, and AI implementation insights for real business outcomes.">
     <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/blog.html">
@@ -32,11 +32,12 @@
     <link rel="stylesheet" href="/styles/spacing.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/showcase.css">
+    <link rel="stylesheet" href="/styles/ember-blog.css">
 
     <style>
         body {
             margin: 0;
-            font-family: Inter, system-ui, sans-serif;
+            font-family: var(--font-body, Figtree, system-ui, sans-serif);
             background: var(--espresso, #1a1108);
             color: var(--foam, #f7efe2);
         }
@@ -265,7 +266,10 @@
         .chip {
             cursor: pointer;
             border-radius: 999px;
-            padding: 0.28rem 0.75rem;
+            padding:  0.45rem 0.9rem;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
             font-size: 0.78rem;
             font-weight: 500;
             border: 1px solid rgba(247, 239, 226, 0.16);

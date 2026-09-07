@@ -937,6 +937,16 @@ img {
   gap: 0.65rem;
 }
 
+.work-actions a {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.55rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .about-social a,
 .recruiter-links a {
   min-height: 44px;

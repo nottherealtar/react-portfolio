@@ -1,0 +1,277 @@
+/**
+ * Ember visual chrome for /blog/** — additive overlay.
+ * Loads AFTER /styles/themes.css (and related site CSS).
+ * Remaps coffee-era tokens to Ember palette; keeps existing class names.
+ * Does not replace production root stylesheets.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap");
+
+:root {
+  /* Ember core */
+  --void: #050403;
+  --ink: #0c0907;
+  --roast: #16110d;
+  --bark: #241c16;
+  --copper: #d4894a;
+  --ember: #f0a45a;
+  --foam: #f5eee5;
+  --mist: #cbb9a6;
+  --line: rgba(245, 238, 229, 0.12);
+  --glass: rgba(20, 15, 11, 0.62);
+  --ok: #8fcea0;
+  --font-display: "Syne", sans-serif;
+  --font-body: "Figtree", sans-serif;
+  --radius: 18px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Remap legacy blog / themes.css tokens → Ember */
+  --espresso: var(--void);
+  --dark-roast: var(--roast);
+  --latte: var(--mist);
+  --crema: var(--copper);
+  --steamed-milk: #ebe0d2;
+  --glass-bg: var(--glass);
+  --glass-border: var(--line);
+
+  --theme-primary: var(--void);
+  --theme-secondary: var(--mist);
+  --theme-accent: var(--foam);
+  --theme-text: var(--foam);
+  --theme-card-bg: rgba(36, 28, 22, 0.55);
+  --theme-card-border: var(--line);
+  --theme-footer-bg: var(--ink);
+  --theme-footer-text: var(--mist);
+
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--void) !important;
+  color: var(--foam);
+  font-family: var(--font-body) !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Atmosphere: warmer ember glows when site-atmosphere is present */
+.site-atmosphere__glow--1 {
+  background: radial-gradient(circle, rgba(240, 164, 90, 0.18), transparent 68%) !important;
+}
+
+.site-atmosphere__glow--2 {
+  background: radial-gradient(circle, rgba(212, 137, 74, 0.12), transparent 70%) !important;
+}
+
+.site-atmosphere__glow--3 {
+  background: radial-gradient(circle, rgba(245, 238, 229, 0.05), transparent 65%) !important;
+}
+
+/* Nav brand: Syne + logo mark */
+.site-nav.scrolled {
+  background: rgba(12, 9, 7, 0.9) !important;
+  box-shadow: 0 1px 0 var(--line) !important;
+}
+
+.nav-logo {
+  font-family: var(--font-display) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  gap: 0.55rem !important;
+}
+
+.nav-logo-icon {
+  display: none !important;
+}
+
+.nav-logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(240, 164, 90, 0.35);
+}
+
+.nav-links a {
+  font-family: var(--font-body) !important;
+}
+
+.nav-links a::after {
+  background: var(--ember) !important;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--foam) !important;
+}
+
+.nav-cta,
+.nav-mobile-cta {
+  background: linear-gradient(135deg, var(--ember), var(--copper)) !important;
+  color: var(--void) !important;
+  border: none !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 28px rgba(212, 137, 74, 0.28);
+  transition: transform 0.35s var(--ease), filter 0.35s var(--ease);
+}
+
+.nav-cta:hover,
+.nav-mobile-cta:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Display type */
+.hero-title,
+.post-title,
+.article-shell h1,
+.card h1,
+h1 {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.hero-kicker,
+.eyebrow,
+.filter-label,
+.article-shell h2,
+.card h2 {
+  color: var(--copper) !important;
+  letter-spacing: 0.16em !important;
+}
+
+/* Hub surfaces */
+.blog-hero {
+  background: linear-gradient(145deg, rgba(36, 28, 22, 0.72), rgba(12, 9, 7, 0.55)) !important;
+  border-color: var(--line) !important;
+  border-radius: var(--radius) !important;
+}
+
+.blog-hero::after {
+  background: linear-gradient(115deg, transparent 35%, rgba(240, 164, 90, 0.08) 100%) !important;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(135deg, var(--ember), var(--copper)) !important;
+  color: var(--void) !important;
+  border-color: transparent !important;
+  font-weight: 700;
+  box-shadow: 0 12px 34px rgba(212, 137, 74, 0.28);
+}
+
+.hero-btn:not(.primary):hover,
+.back:hover,
+.post-title a:hover,
+.post-link:hover {
+  color: var(--ember) !important;
+  border-color: rgba(240, 164, 90, 0.45) !important;
+}
+
+.blog-card,
+.article-shell,
+.card {
+  background: rgba(22, 17, 13, 0.72) !important;
+  border-color: var(--line) !important;
+  border-radius: var(--radius) !important;
+}
+
+.blog-card:hover {
+  border-color: rgba(240, 164, 90, 0.4) !important;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35) !important;
+}
+
+.blog-card.featured {
+  background: linear-gradient(135deg, rgba(36, 28, 22, 0.85), rgba(12, 9, 7, 0.65)) !important;
+  border-color: rgba(240, 164, 90, 0.28) !important;
+}
+
+.post-pill,
+.pill,
+.chip.is-active,
+.chip:hover {
+  color: var(--ember) !important;
+  border-color: rgba(240, 164, 90, 0.45) !important;
+  background: rgba(240, 164, 90, 0.1) !important;
+}
+
+.search-input:focus,
+.search-wrap:focus-within {
+  border-color: rgba(240, 164, 90, 0.55) !important;
+  box-shadow: 0 0 0 2px rgba(240, 164, 90, 0.28) !important;
+}
+
+a {
+  color: var(--copper);
+}
+
+.article-shell a,
+.source-row a,
+.post-link {
+  color: var(--ember) !important;
+}
+
+.back {
+  border-color: var(--line) !important;
+  color: var(--foam) !important;
+  font-family: var(--font-body);
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+/* Subtle motion: hub cards + article enter */
+@media (prefers-reduced-motion: no-preference) {
+  .blog-card,
+  .article-shell {
+    animation: ember-rise 0.7s var(--ease) both;
+  }
+
+  .blog-card:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+
+  .blog-card:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+
+  .blog-hero {
+    animation: ember-rise 0.65s var(--ease) both;
+  }
+
+  .nav-logo-mark {
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+
+  .nav-logo:hover .nav-logo-mark {
+    transform: scale(1.06) rotate(-3deg);
+    box-shadow: 0 0 0 1px rgba(240, 164, 90, 0.55), 0 8px 20px rgba(212, 137, 74, 0.25);
+  }
+}
+
+@keyframes ember-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-footer {
+  color: var(--mist) !important;
+  opacity: 0.85;
+}

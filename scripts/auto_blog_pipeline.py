@@ -1117,14 +1117,15 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
 {ld_block}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles/themes.css">
   <link rel="stylesheet" href="/styles/site-atmosphere.css">
   <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
   <style>
     body {{
       margin: 0;
-      font-family: Inter, system-ui, sans-serif;
+      font-family: var(--font-body, Figtree, system-ui, sans-serif);
       background: var(--espresso, #1a1108);
       color: var(--foam, #f7efe2);
       line-height: 1.65;
@@ -1175,7 +1176,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       background: rgba(201, 169, 110, 0.1);
     }}
     h1 {{
-      font-family: "DM Serif Display", Georgia, serif;
+      font-family: var(--font-display, Syne, sans-serif);
       font-size: clamp(1.75rem, 4.5vw, 2.45rem);
       line-height: 1.18;
       margin: 0 0 1rem;
@@ -1233,6 +1234,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
       border: 1px solid rgba(247, 239, 226, 0.28);
       border-radius: 999px;
       padding: 0.5rem 1.1rem;
+      min-height: 44px;
       font-size: 0.88rem;
       font-weight: 500;
       transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;

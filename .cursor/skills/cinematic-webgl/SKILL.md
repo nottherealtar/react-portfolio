@@ -32,7 +32,7 @@ Every repeating surface needs at least:
 
 Generate maps procedurally in this project (`cafe/src/scene/textures.js`) so the preview stays network-free. Derive normals from a height field. Repeat + anisotropy on large floors.
 
-Glass: `transmission`, `thickness`, `ior` on `MeshPhysicalMaterial` — not a transparent color plane. Keep dusk/sky as a textured plane *behind* the glazing.
+Glass: skip MeshPhysical `transmission` in this cafe (too expensive). Use a thin clearcoat overlay in front of a dusk/sky plane.
 
 Emissive practicals (pendants, laptop UI, neon sign) should be bright enough to bloom, then tone-mapped with ACES.
 
@@ -55,12 +55,12 @@ Add architectural millwork the camera will actually see: baseboards, counter nos
 
 - `Environment` + `Lightformer` cards for studio IBL (warm key, cool fill)
 - One large `rectAreaLight` in the window (init `RectAreaLightUniformsLib`)
-- One shadow-casting spot or directional with `PCFSoftShadowMap` + `SoftShadows`
-- `ContactShadows` on the floor (`frames={1}` for a static shop)
+- One shadow-casting spot or directional with `PCFSoftShadowMap` (no `SoftShadows`)
+- `ContactShadows` on the floor (`frames={1}` for a static shop) + `BakeShadows`
 - Hemisphere + tiny ambient only as bounce, not the key
 - ACES filmic + `SRGBColorSpace`; fog that matches the background
 
-Camera: low cinematic FOV (~34), damped station rigs, subtle pointer parallax. Honor `prefers-reduced-motion` (cut parallax, skip particles, offer a 2D fallback).
+Camera: low cinematic FOV (~34), ease-in-out station moves (~0.86s), subtle pointer parallax. Honor `prefers-reduced-motion` (cut parallax, skip particles, offer a 2D fallback).
 
 ## Shaders and post
 
@@ -68,20 +68,22 @@ Custom `ShaderMaterial` for effects that materials cannot do. Additive steam/god
 
 Desktop post stack (skip on mobile width and reduced motion):
 
-1. SSAO (`N8AO`, half-res, performance quality)
-2. Bloom on practicals (high luminance threshold)
-3. Vignette
-4. SMAA last
+1. Bloom on practicals (high luminance threshold)
+2. Vignette
+3. SMAA last
+
+Skip N8AO on this cafe — the extra AO pass costs more FPS than it returns.
 
 Do not gate quality on `hardwareConcurrency` — cloud VMs look low-end and would skip the hero look. Gate on viewport width (`max-width: 720px`) and reduced motion only.
 
 ## Performance
 
-- Cap DPR (~1.75 desktop, 1 mobile)
-- `AdaptiveDpr`
+- Cap DPR (~1.45 desktop, 1 mobile) with `AdaptiveDpr`
+- Bake shadow maps after the first frames (`BakeShadows`)
+- Skip MeshPhysical `transmission` on bottles/windows; use clearcoat or a cheap glass overlay
+- Skip N8AO/SoftShadows on the hero path; keep Bloom + SMAA + contact shadows
 - Instanced meshes over hundreds of objects
-- One shared texture atlas/factory (`getCafeMaps()`), not per-mesh canvases in render
-- Transmission only on a handful of glass pieces
+- One shared texture factory (`getCafeMaps()`), not per-mesh canvases in render
 - No GLTF downloads unless the user asks for authored assets
 
 ## Implementation map (this repo)

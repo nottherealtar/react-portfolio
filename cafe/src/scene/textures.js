@@ -252,6 +252,17 @@ function duskFill(data, heightMap, width, height) {
   }
 }
 
+function roundRect(ctx, x, y, w, h, r) {
+  const radius = Math.min(r, w / 2, h / 2)
+  ctx.beginPath()
+  ctx.moveTo(x + radius, y)
+  ctx.arcTo(x + w, y, x + w, y + h, radius)
+  ctx.arcTo(x + w, y + h, x, y + h, radius)
+  ctx.arcTo(x, y + h, x, y, radius)
+  ctx.arcTo(x, y, x + w, y, radius)
+  ctx.closePath()
+}
+
 function canvasTexture(draw, w, h) {
   const canvas = document.createElement('canvas')
   canvas.width = w
@@ -339,40 +350,145 @@ export function getCafeMaps() {
   }, 1024, 192)
 
   const screen = canvasTexture((ctx, w, h) => {
-    const g = ctx.createLinearGradient(0, 0, 0, h)
-    g.addColorStop(0, '#241810')
-    g.addColorStop(1, '#0c0907')
-    ctx.fillStyle = g
+    ctx.fillStyle = '#0c0b0a'
     ctx.fillRect(0, 0, w, h)
+
+    ctx.fillStyle = '#1b1b1f'
+    ctx.fillRect(0, 0, w, 38)
+    ctx.fillStyle = '#ff5f57'
+    ctx.beginPath()
+    ctx.arc(22, 19, 6, 0, Math.PI * 2)
+    ctx.fill()
+    ctx.fillStyle = '#febc2e'
+    ctx.beginPath()
+    ctx.arc(42, 19, 6, 0, Math.PI * 2)
+    ctx.fill()
+    ctx.fillStyle = '#28c840'
+    ctx.beginPath()
+    ctx.arc(62, 19, 6, 0, Math.PI * 2)
+    ctx.fill()
+    ctx.fillStyle = '#2a2a30'
+    roundRect(ctx, w * 0.22, 8, w * 0.56, 22, 11)
+    ctx.fill()
+    ctx.fillStyle = 'rgba(243,234,220,0.72)'
+    ctx.font = '500 13px Helvetica, sans-serif'
+    ctx.textAlign = 'center'
+    ctx.fillText('solvemyproblem.co.za', w / 2, 24)
+
+    ctx.fillStyle = '#14110e'
+    ctx.fillRect(0, 38, w, 56)
+    ctx.textAlign = 'left'
     ctx.fillStyle = '#c9a96e'
-    ctx.font = '700 40px "SF Pro Display", Helvetica, sans-serif'
-    ctx.fillText('solve my PROBLEM', 56, 140)
-    ctx.fillStyle = '#f3eadc'
-    ctx.font = '400 26px "SF Pro Text", Helvetica, sans-serif'
-    ctx.fillText('Email marketing & lead generation', 56, 196)
-    ctx.fillText('for growing businesses', 56, 234)
+    ctx.font = '700 22px Helvetica, sans-serif'
+    ctx.fillText('solve my PROBLEM', 28, 74)
+    ctx.fillStyle = 'rgba(243,234,220,0.55)'
+    ctx.font = '500 14px Helvetica, sans-serif'
+    ctx.fillText('Services', w - 340, 74)
+    ctx.fillText('Process', w - 230, 74)
+    ctx.fillText('Contact', w - 130, 74)
     ctx.fillStyle = '#c9a96e'
-    ctx.fillRect(56, 310, 248, 56)
+    roundRect(ctx, w - 118, 52, 94, 26, 6)
+    ctx.fill()
     ctx.fillStyle = '#1d1d1f'
-    ctx.font = '650 20px "SF Pro Text", Helvetica, sans-serif'
-    ctx.fillText('Get a Free Quote', 86, 346)
-    ctx.fillStyle = 'rgba(243,234,220,0.5)'
-    ctx.font = '400 18px "SF Pro Text", Helvetica, sans-serif'
-    ctx.fillText('solvemyproblem.co.za  ·  Live  ·  POPIA', 56, 470)
-  }, 1024, 640)
+    ctx.font = '600 12px Helvetica, sans-serif'
+    ctx.fillText('Free Quote', w - 102, 70)
+
+    const hero = ctx.createLinearGradient(0, 94, 0, 430)
+    hero.addColorStop(0, '#3a2416')
+    hero.addColorStop(0.45, '#1a120e')
+    hero.addColorStop(1, '#0c0b0a')
+    ctx.fillStyle = hero
+    ctx.fillRect(0, 94, w, 340)
+    ctx.fillStyle = '#c9a96e'
+    ctx.font = '600 13px Helvetica, sans-serif'
+    ctx.fillText('CAPE TOWN  ·  DIGITAL AGENCY', 36, 140)
+    ctx.fillStyle = '#f3eadc'
+    ctx.font = '700 48px Helvetica, sans-serif'
+    ctx.fillText('Email marketing that', 36, 200)
+    ctx.fillText('grows the business.', 36, 256)
+    ctx.fillStyle = 'rgba(243,234,220,0.78)'
+    ctx.font = '400 18px Helvetica, sans-serif'
+    ctx.fillText('Lead generation, CRM integration, and automation', 36, 300)
+    ctx.fillText('for Cape Town teams who need enquiries, not noise.', 36, 326)
+    ctx.fillStyle = '#c9a96e'
+    roundRect(ctx, 36, 350, 210, 46, 8)
+    ctx.fill()
+    ctx.fillStyle = '#1d1d1f'
+    ctx.font = '600 16px Helvetica, sans-serif'
+    ctx.fillText('Get a Free Quote', 70, 379)
+
+    const cards = [
+      ['01', 'Email marketing'],
+      ['02', 'Lead generation'],
+      ['03', 'CRM + automation'],
+    ]
+    cards.forEach(([num, label], i) => {
+      const x = 36 + i * 330
+      ctx.fillStyle = '#16120f'
+      roundRect(ctx, x, 460, 310, 140, 12)
+      ctx.fill()
+      ctx.strokeStyle = 'rgba(201,169,110,0.38)'
+      ctx.lineWidth = 1.5
+      roundRect(ctx, x, 460, 310, 140, 12)
+      ctx.stroke()
+      ctx.fillStyle = '#c9a96e'
+      ctx.font = '700 18px Helvetica, sans-serif'
+      ctx.fillText(num, x + 22, 502)
+      ctx.fillStyle = '#f3eadc'
+      ctx.font = '600 22px Helvetica, sans-serif'
+      ctx.fillText(label, x + 22, 542)
+      ctx.fillStyle = 'rgba(243,234,220,0.5)'
+      ctx.font = '400 14px Helvetica, sans-serif'
+      ctx.fillText('WeSolveYourProblem', x + 22, 572)
+    })
+    ctx.fillStyle = 'rgba(243,234,220,0.4)'
+    ctx.font = '400 14px Helvetica, sans-serif'
+    ctx.fillText('Live  ·  POPIA  ·  24hr response', 36, 630)
+  }, 1280, 800)
 
   const keyboard = canvasTexture((ctx, w, h) => {
-    ctx.fillStyle = '#161618'
+    ctx.fillStyle = '#16161a'
     ctx.fillRect(0, 0, w, h)
-    ctx.fillStyle = '#2a2a2e'
-    for (let row = 0; row < 5; row += 1) {
-      for (let col = 0; col < 14; col += 1) {
-        ctx.fillRect(18 + col * 70, 20 + row * 46, 60, 36)
+    const rows = [14, 14, 13, 12, 1]
+    const labels = [
+      ['esc', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '⌫'],
+      ['tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', '\\'],
+      ['caps', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'return'],
+      ['shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'shift'],
+    ]
+    const keyH = 42
+    rows.forEach((count, row) => {
+      const y = 10 + row * 50
+      if (row === 4) {
+        ctx.fillStyle = '#222228'
+        roundRect(ctx, w * 0.22, y, w * 0.56, keyH, 6)
+        ctx.fill()
+        ctx.fillStyle = '#3a3a42'
+        roundRect(ctx, w * 0.22 + 2, y + 2, w * 0.56 - 4, 8, 3)
+        ctx.fill()
+        return
       }
-    }
-    ctx.fillStyle = '#3a3a40'
-    ctx.fillRect(360, 270, 300, 90)
-  }, 1024, 400)
+      const gap = 8
+      const usable = w - 20
+      const keyW = (usable - gap * (count - 1)) / count
+      for (let col = 0; col < count; col += 1) {
+        const x = 10 + col * (keyW + gap)
+        ctx.fillStyle = '#232328'
+        roundRect(ctx, x, y, keyW, keyH, 6)
+        ctx.fill()
+        ctx.fillStyle = '#3a3a42'
+        roundRect(ctx, x + 2, y + 2, keyW - 4, 8, 3)
+        ctx.fill()
+        const label = labels[row]?.[col]
+        if (label) {
+          ctx.fillStyle = 'rgba(220,220,230,0.55)'
+          ctx.font = '500 11px Helvetica, sans-serif'
+          ctx.textAlign = 'left'
+          ctx.fillText(label, x + 6, y + 28)
+        }
+      }
+    })
+  }, 1024, 280)
 
   const leaf = canvasTexture((ctx, w, h) => {
     ctx.clearRect(0, 0, w, h)

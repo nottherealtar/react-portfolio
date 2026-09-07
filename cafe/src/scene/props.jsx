@@ -88,7 +88,7 @@ export function Tiles() {
   )
 }
 
-export function Steam({ position = [0, 0, 0], count = 48, reduced }) {
+export function Steam({ position = [0, 0, 0], count = 20, reduced }) {
   const mat = useRef()
   const geo = useMemo(() => {
     const geometry = new THREE.BufferGeometry()
@@ -115,7 +115,7 @@ export function Steam({ position = [0, 0, 0], count = 48, reduced }) {
   if (reduced) return null
 
   return (
-    <points position={position} geometry={geo} frustumCulled={false}>
+    <points position={position} geometry={geo}>
       <shaderMaterial
         ref={mat}
         vertexShader={steamVertex}
@@ -137,7 +137,7 @@ export function CoffeeSurface({ radius = 0.055 }) {
   })
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.046, 0]}>
-      <circleGeometry args={[radius, 48]} />
+      <circleGeometry args={[radius, 32]} />
       <shaderMaterial
         ref={mat}
         vertexShader={coffeeVertex}
@@ -172,7 +172,7 @@ export function GodRays({ reduced }) {
   )
 }
 
-export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced, scale = 1 }) {
+export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced, scale = 1, simple = false }) {
   const profile = useMemo(
     () =>
       [
@@ -198,19 +198,29 @@ export function Cup({ position, rotation = [0, 0, 0], withSteam, reduced, scale 
   return (
     <group position={position} rotation={rotation} scale={scale}>
       <mesh position={[0, -0.006, 0]} receiveShadow>
-        <latheGeometry args={[saucer, 40]} />
+        <latheGeometry args={[saucer, 24]} />
         <Ceramic />
       </mesh>
       <mesh castShadow>
-        <latheGeometry args={[profile, 48]} />
+        <latheGeometry args={[profile, 28]} />
         <Ceramic />
       </mesh>
-      <CoffeeSurface />
-      <mesh position={[0.082, 0.05, 0]} rotation={[Math.PI / 2, 0, Math.PI / 2]} castShadow>
-        <torusGeometry args={[0.03, 0.0075, 12, 28, Math.PI]} />
-        <Ceramic />
-      </mesh>
-      {withSteam && <Steam position={[0, 0.12, 0]} count={36} reduced={reduced} />}
+      {!simple && <CoffeeSurface />}
+      <group position={[0.062, 0.054, 0]}>
+        <mesh rotation={[0, 0, -Math.PI / 2]} castShadow>
+          <torusGeometry args={[0.034, 0.0084, 10, 20, Math.PI]} />
+          <Ceramic />
+        </mesh>
+        <mesh position={[0.001, 0.033, 0]} castShadow>
+          <sphereGeometry args={[0.009, 10, 8]} />
+          <Ceramic />
+        </mesh>
+        <mesh position={[0.001, -0.033, 0]} castShadow>
+          <sphereGeometry args={[0.009, 10, 8]} />
+          <Ceramic />
+        </mesh>
+      </group>
+      {withSteam && <Steam position={[0, 0.12, 0]} count={20} reduced={reduced} />}
     </group>
   )
 }
@@ -219,7 +229,7 @@ export function EspressoMachine({ reduced }) {
   const beanRef = useRef()
   const beanSeeds = useMemo(
     () =>
-      Array.from({ length: 42 }, () => ({
+      Array.from({ length: 24 }, () => ({
         x: (Math.random() - 0.5) * 0.14,
         y: Math.random() * 0.1,
         z: (Math.random() - 0.5) * 0.14,
@@ -244,27 +254,37 @@ export function EspressoMachine({ reduced }) {
 
   return (
     <group position={[0.1, 0.99, -0.52]}>
-      <RoundedBox args={[0.92, 0.58, 0.46]} radius={0.035} smoothness={6} position={[0, 0.29, 0]} castShadow>
+      <RoundedBox args={[0.92, 0.58, 0.46]} radius={0.035} smoothness={3} position={[0, 0.29, 0]} castShadow>
         <Metal />
       </RoundedBox>
-      <RoundedBox args={[0.92, 0.08, 0.46]} radius={0.02} smoothness={4} position={[0, 0.62, 0]}>
+      <RoundedBox args={[0.92, 0.08, 0.46]} radius={0.02} smoothness={3} position={[0, 0.62, 0]}>
         <meshPhysicalMaterial color="#1a1c20" metalness={0.85} roughness={0.22} />
       </RoundedBox>
       {[-0.2, 0.18].map((x) => (
         <group key={x} position={[x, 0.16, 0.24]}>
           <mesh rotation={[Math.PI / 2, 0, 0]} castShadow>
-            <cylinderGeometry args={[0.055, 0.055, 0.08, 24]} />
+            <cylinderGeometry args={[0.055, 0.055, 0.08, 16]} />
             <Metal />
           </mesh>
           <mesh position={[0, -0.08, 0.02]} rotation={[0.35, 0, 0]} castShadow>
-            <cylinderGeometry args={[0.048, 0.042, 0.12, 20]} />
+            <cylinderGeometry args={[0.048, 0.042, 0.12, 14]} />
             <meshPhysicalMaterial color="#2a1c14" roughness={0.45} metalness={0.2} />
           </mesh>
-          <mesh position={[0.07, -0.1, 0.02]} rotation={[0, 0, -0.6]}>
-            <boxGeometry args={[0.09, 0.018, 0.03]} />
-            <Metal />
-          </mesh>
-          <Cup position={[0, -0.155, 0.07]} scale={0.72} reduced={reduced} />
+          <group position={[0.048, -0.09, 0.03]} rotation={[0.08, 0.12, -0.18]}>
+            <mesh position={[0.08, 0, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
+              <cylinderGeometry args={[0.011, 0.014, 0.17, 12]} />
+              <Metal />
+            </mesh>
+            <mesh position={[0.185, 0, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
+              <cylinderGeometry args={[0.018, 0.015, 0.12, 12]} />
+              <meshPhysicalMaterial color="#1a1410" roughness={0.62} />
+            </mesh>
+            <mesh position={[0.248, 0, 0]} castShadow>
+              <sphereGeometry args={[0.017, 12, 10]} />
+              <meshPhysicalMaterial color="#1a1410" roughness={0.62} />
+            </mesh>
+          </group>
+          <Cup position={[0, -0.155, 0.07]} scale={0.72} simple reduced={reduced} />
         </group>
       ))}
       <mesh position={[0.38, 0.34, 0.18]} rotation={[0.4, 0, 0.2]} castShadow>
@@ -301,16 +321,13 @@ export function EspressoMachine({ reduced }) {
         <cylinderGeometry args={[0.12, 0.14, 0.16, 24]} />
         <meshPhysicalMaterial
           color="#2a241c"
-          roughness={0.12}
-          metalness={0.08}
-          transmission={0.55}
-          thickness={0.25}
-          ior={1.5}
-          transparent
+          roughness={0.18}
+          metalness={0.12}
+          clearcoat={0.45}
         />
       </mesh>
-      <instancedMesh ref={beanRef} args={[undefined, undefined, 42]} position={[0, 0.82, 0]}>
-        <sphereGeometry args={[0.018, 8, 8]} />
+      <instancedMesh ref={beanRef} args={[undefined, undefined, 24]} position={[0, 0.82, 0]}>
+        <sphereGeometry args={[0.018, 6, 6]} />
         <meshStandardMaterial color="#3a2214" roughness={0.7} />
       </instancedMesh>
     </group>
@@ -365,24 +382,58 @@ export function BarStool({ position }) {
 export function Laptop() {
   const maps = useMaps()
   return (
-    <group position={[-2.42, 0.805, -1.02]} rotation={[0, 0.48, 0]}>
-      <RoundedBox args={[0.64, 0.018, 0.44]} radius={0.012} smoothness={4} castShadow>
-        <meshPhysicalMaterial color="#1c1c1e" metalness={0.55} roughness={0.32} />
+    <group position={[-2.34, 0.822, -0.94]} rotation={[0, 0.68, 0]} scale={1.48}>
+      <RoundedBox args={[0.78, 0.014, 0.52]} radius={0.014} smoothness={4} castShadow>
+        <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} clearcoat={0.22} />
       </RoundedBox>
-      <mesh position={[0, 0.01, 0.02]} rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[0.58, 0.36]} />
+      <mesh position={[0, 0.008, 0.012]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[0.72, 0.46]} />
+        <meshPhysicalMaterial color="#1c1c20" roughness={0.62} metalness={0.2} />
+      </mesh>
+      <mesh position={[0, 0.0105, -0.06]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[0.66, 0.27]} />
         <meshBasicMaterial map={maps.keyboard} />
       </mesh>
-      <group position={[0, 0.205, -0.2]} rotation={[-0.22, 0, 0]}>
-        <RoundedBox args={[0.64, 0.4, 0.016]} radius={0.01} smoothness={4}>
-          <meshPhysicalMaterial color="#111214" metalness={0.4} roughness={0.35} />
-        </RoundedBox>
-        <mesh position={[0, 0.01, 0.01]}>
-          <planeGeometry args={[0.58, 0.34]} />
-          <meshBasicMaterial map={maps.screen} toneMapped={false} />
-        </mesh>
-        <pointLight position={[0, 0, 0.12]} color="#c9a96e" intensity={1.6} distance={1.8} decay={2} />
+      <RoundedBox args={[0.3, 0.0035, 0.18]} radius={0.012} smoothness={3} position={[0, 0.011, 0.16]}>
+        <meshPhysicalMaterial color="#2e2e34" metalness={0.5} roughness={0.28} />
+      </RoundedBox>
+      <mesh position={[0, 0.009, -0.252]} rotation={[0, 0, Math.PI / 2]}>
+        <cylinderGeometry args={[0.008, 0.008, 0.74, 12]} />
+        <meshPhysicalMaterial color="#2a2a30" metalness={0.84} roughness={0.24} />
+      </mesh>
+      <group position={[0, 0.016, -0.252]} rotation={[-0.18, 0, 0]}>
+        <group position={[0, 0.225, 0]}>
+          <RoundedBox args={[0.78, 0.46, 0.012]} radius={0.012} smoothness={4} castShadow>
+            <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} />
+          </RoundedBox>
+          <mesh position={[0, 0, 0.007]}>
+            <planeGeometry args={[0.74, 0.42]} />
+            <meshPhysicalMaterial color="#09090b" roughness={0.78} />
+          </mesh>
+          <mesh position={[0, -0.006, 0.0086]}>
+            <planeGeometry args={[0.7, 0.394]} />
+            <meshBasicMaterial map={maps.screen} toneMapped={false} />
+          </mesh>
+          <mesh position={[0, -0.006, 0.0092]}>
+            <planeGeometry args={[0.7, 0.394]} />
+            <meshPhysicalMaterial color="#d8e4ff" transparent opacity={0.07} roughness={0.08} metalness={0.15} />
+          </mesh>
+          <mesh position={[0, 0.208, 0.008]}>
+            <circleGeometry args={[0.0045, 10]} />
+            <meshStandardMaterial color="#111" />
+          </mesh>
+          <mesh position={[0, 0.208, 0.0084]}>
+            <circleGeometry args={[0.0018, 8]} />
+            <meshStandardMaterial color="#1a3048" emissive="#3a6a9a" emissiveIntensity={0.4} />
+          </mesh>
+        </group>
       </group>
+      {[[-0.32, -0.2], [0.32, -0.2], [-0.32, 0.2], [0.32, 0.2]].map(([x, z]) => (
+        <mesh key={`${x}:${z}`} position={[x, -0.01, z]}>
+          <cylinderGeometry args={[0.012, 0.012, 0.006, 8]} />
+          <meshStandardMaterial color="#111" />
+        </mesh>
+      ))}
     </group>
   )
 }
@@ -474,29 +525,24 @@ function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
 export function BottleShelf() {
   return (
     <group position={[0.15, 1.92, -1.02]}>
-      <RoundedBox args={[2.5, 0.05, 0.3]} radius={0.01} smoothness={3}>
+      <RoundedBox args={[2.5, 0.05, 0.3]} radius={0.01} smoothness={2}>
         <Wood variant="oak" />
       </RoundedBox>
-      {[-0.95, -0.48, 0, 0.48, 0.95].map((x, i) => (
+      {[-0.85, -0.28, 0.28, 0.85].map((x, i) => (
         <group key={x} position={[x, 0.24, 0]}>
           <mesh castShadow>
-            <cylinderGeometry args={[0.048, 0.052, 0.42, 20]} />
+            <cylinderGeometry args={[0.048, 0.052, 0.42, 14]} />
             <meshPhysicalMaterial
               color={i % 2 ? '#4a2018' : '#243428'}
-              roughness={0.08}
-              metalness={0.05}
-              transmission={0.42}
-              thickness={0.35}
-              ior={1.5}
-              attenuationColor={i % 2 ? '#4a2018' : '#243428'}
-              attenuationDistance={0.55}
-              clearcoat={0.6}
-              transparent
+              roughness={0.16}
+              metalness={0.08}
+              clearcoat={0.55}
+              clearcoatRoughness={0.2}
             />
           </mesh>
           <mesh position={[0, 0.24, 0]}>
-            <cylinderGeometry args={[0.03, 0.036, 0.08, 16]} />
-            <meshPhysicalMaterial color="#cfc6b8" roughness={0.2} metalness={0.1} />
+            <cylinderGeometry args={[0.03, 0.036, 0.08, 12]} />
+            <meshPhysicalMaterial color="#cfc6b8" roughness={0.22} metalness={0.1} />
           </mesh>
         </group>
       ))}
@@ -519,7 +565,9 @@ export function Pendant({ position, intensity = 8 }) {
         <sphereGeometry args={[0.045, 20, 20]} />
         <meshStandardMaterial color="#ffd7a1" emissive="#ffc07a" emissiveIntensity={4.2} toneMapped={false} />
       </mesh>
-      <pointLight position={[0, -0.56, 0]} color="#ffc27a" intensity={intensity} distance={5.5} decay={2} />
+      {intensity > 0 && (
+        <pointLight position={[0, -0.56, 0]} color="#ffc27a" intensity={intensity} distance={5.5} decay={2} />
+      )}
     </group>
   )
 }
@@ -531,8 +579,8 @@ export function Plant({ position }) {
   useLayoutEffect(() => {
     if (!leafRef.current) return
     const dummy = new THREE.Object3D()
-    for (let i = 0; i < 14; i += 1) {
-      const a = (i / 14) * Math.PI * 2 + (i % 3) * 0.2
+    for (let i = 0; i < 10; i += 1) {
+      const a = (i / 10) * Math.PI * 2 + (i % 3) * 0.2
       dummy.position.set(Math.sin(a) * 0.08, 0.2 + (i % 4) * 0.045, Math.cos(a) * 0.08)
       dummy.rotation.set(0.85, a, 0.18)
       dummy.scale.setScalar(0.72 + (i % 3) * 0.14)
@@ -559,7 +607,7 @@ export function Plant({ position }) {
         <latheGeometry args={[pot, 24]} />
         <meshStandardMaterial color="#6b3a28" roughness={0.82} />
       </mesh>
-      <instancedMesh ref={leafRef} args={[undefined, undefined, 14]} castShadow>
+      <instancedMesh ref={leafRef} args={[undefined, undefined, 10]}>
         <planeGeometry args={[0.16, 0.22]} />
         <meshPhysicalMaterial
           map={maps.leaf}
@@ -596,23 +644,16 @@ export function Window() {
         <planeGeometry args={[3.55, 1.9]} />
         <meshBasicMaterial map={maps.dusk} toneMapped={false} />
       </mesh>
-      {[-0.88, 0.88].map((x) =>
-        [-0.46, 0.46].map((y) => (
-          <mesh key={`${x}:${y}`} position={[x, y, 0.018]}>
-            <planeGeometry args={[1.68, 0.86]} />
-            <meshPhysicalMaterial
-              color="#f0e4d0"
-              transmission={0.78}
-              thickness={0.06}
-              ior={1.45}
-              roughness={0.05}
-              metalness={0}
-              transparent
-              envMapIntensity={1.35}
-            />
-          </mesh>
-        )),
-      )}
+      <mesh position={[0, 0, 0.02]}>
+        <planeGeometry args={[3.55, 1.9]} />
+        <meshPhysicalMaterial
+          color="#d7c4a4"
+          transparent
+          opacity={0.12}
+          roughness={0.08}
+          metalness={0.1}
+        />
+      </mesh>
       <mesh position={[0, 0.97, 0.03]}>
         <boxGeometry args={[3.72, 0.07, 0.09]} />
         <Wood variant="oak" />

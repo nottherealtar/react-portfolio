@@ -37,12 +37,12 @@ export default function CafeWorld({ reduced, lowPower }) {
         position={[0.2, 3.35, 0.4]}
         angle={0.62}
         penumbra={0.72}
-        intensity={lowPower ? 18 : 32}
+        intensity={lowPower ? 16 : 24}
         color="#ffd2a4"
         castShadow={!lowPower}
-        shadow-mapSize={lowPower ? 1024 : 2048}
-        shadow-bias={-0.00015}
-        shadow-normalBias={0.03}
+        shadow-mapSize={1024}
+        shadow-bias={-0.00018}
+        shadow-normalBias={0.035}
       />
       <directionalLight position={[-2.4, 3.2, 3.4]} intensity={1.35} color="#9eb6ff" />
       <rectAreaLight
@@ -88,7 +88,7 @@ export default function CafeWorld({ reduced, lowPower }) {
         <Plaster />
       </mesh>
       {[-2.35, 0, 2.35].map((x) => (
-        <mesh key={x} position={[x, 3.08, 0.3]} castShadow>
+        <mesh key={x} position={[x, 3.08, 0.3]}>
           <boxGeometry args={[0.18, 0.16, 7.6]} />
           <Wood variant="walnut" roughness={0.55} />
         </mesh>
@@ -114,12 +114,12 @@ export default function CafeWorld({ reduced, lowPower }) {
       <GodRays reduced={reduced || lowPower} />
       {!lowPower && !reduced && (
         <Sparkles
-          count={48}
+          count={18}
           scale={[3.2, 1.8, 1.4]}
           position={[0, 1.55, -2.1]}
-          size={2.4}
-          speed={0.28}
-          opacity={0.45}
+          size={2}
+          speed={0.22}
+          opacity={0.35}
           color="#ffd4a0"
         />
       )}
@@ -149,8 +149,8 @@ export default function CafeWorld({ reduced, lowPower }) {
       <Tamper />
       <BottleShelf />
       <Cup position={[-0.62, 1.01, 0.12]} withSteam reduced={reduced} />
-      <Cup position={[0.62, 1.01, 0.16]} rotation={[0, 0.4, 0]} withSteam reduced={reduced} />
-      <Cup position={[1.48, 0.74, 0.46]} rotation={[0, -0.3, 0]} />
+      <Cup position={[0.62, 1.01, 0.16]} withSteam reduced={reduced} />
+      <Cup position={[1.48, 0.74, 0.46]} />
       <MenuBoard />
       <Laptop />
       <GuestWall />
@@ -169,9 +169,9 @@ export default function CafeWorld({ reduced, lowPower }) {
         <Wood variant="oak" />
       </mesh>
 
-      <Pendant position={[-1.28, 2.92, 0.18]} intensity={lowPower ? 5 : 9} />
-      <Pendant position={[1.12, 2.92, -0.16]} intensity={lowPower ? 6 : 11} />
-      <Pendant position={[-2.38, 2.78, -1]} intensity={lowPower ? 4 : 7} />
+      <Pendant position={[-1.28, 2.92, 0.18]} intensity={lowPower ? 5 : 8} />
+      <Pendant position={[1.12, 2.92, -0.16]} intensity={lowPower ? 6 : 10} />
+      <Pendant position={[-2.38, 2.78, -1]} intensity={0} />
       <ShopSign />
 
       <Hotspots setStation={setStation} />

@@ -26,7 +26,7 @@ function WheelBridge() {
       setStation(stations[next].id)
       window.setTimeout(() => {
         locked = false
-      }, 520)
+      }, 950)
     }
     const onWheel = (event) => {
       if (event.target.closest('.panel, input, textarea, select, form')) return

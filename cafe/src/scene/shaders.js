@@ -13,7 +13,7 @@ export const steamVertex = /* glsl */ `
     vAlpha = smoothstep(0.0, 0.12, life) * (1.0 - smoothstep(0.42, 1.0, life));
     vec4 mv = modelViewMatrix * vec4(p, 1.0);
     gl_Position = projectionMatrix * mv;
-    gl_PointSize = mix(36.0, 86.0, life) * mix(0.9, 1.3, aSeed);
+    gl_PointSize = mix(18.0, 44.0, life) * mix(0.85, 1.15, aSeed);
   }
 `
 
@@ -24,8 +24,8 @@ export const steamFragment = /* glsl */ `
     float d = length(p);
     float core = smoothstep(0.48, 0.08, d);
     if (core < 0.02) discard;
-    vec3 col = vec3(0.96, 0.93, 0.88);
-    gl_FragColor = vec4(col, core * vAlpha * 0.28);
+    vec3 col = vec3(0.86, 0.82, 0.76);
+    gl_FragColor = vec4(col, core * vAlpha * 0.12);
   }
 `
 

@@ -264,8 +264,7 @@ export function EspressoMachine({ reduced }) {
             <boxGeometry args={[0.09, 0.018, 0.03]} />
             <Metal />
           </mesh>
-          <Steam position={[0, -0.02, 0.06]} count={22} reduced={reduced} />
-          <Cup position={[0, -0.155, 0.07]} scale={0.72} reduced={reduced} />
+          <Cup position={[0, -0.155, 0.07]} scale={0.72} withSteam reduced={reduced} />
         </group>
       ))}
       <mesh position={[0.38, 0.34, 0.18]} rotation={[0.4, 0, 0.2]} castShadow>
@@ -415,13 +414,21 @@ export function GuestWall() {
       canvas.width = 512
       canvas.height = 704
       const ctx = canvas.getContext('2d')
-      ctx.fillStyle = '#efe3cc'
+      ctx.fillStyle = '#e8d7b6'
       ctx.fillRect(0, 0, 512, 704)
-      ctx.fillStyle = '#3a2a1c'
-      ctx.font = 'italic 36px "SF Pro Text", Georgia, serif'
-      wrapText(ctx, `"${quote}"`, 48, 160, 416, 48)
-      ctx.font = '600 28px "SF Pro Text", Helvetica, sans-serif'
-      ctx.fillText(`— ${name}`, 48, 620)
+      const paper = ctx.getImageData(0, 0, 512, 704)
+      for (let p = 0; p < paper.data.length; p += 4) {
+        const n = (Math.random() * 22) | 0
+        paper.data[p] -= n
+        paper.data[p + 1] -= n
+        paper.data[p + 2] -= n
+      }
+      ctx.putImageData(paper, 0, 0)
+      ctx.fillStyle = '#2a1c12'
+      ctx.font = 'italic 48px Georgia, "Times New Roman", serif'
+      wrapText(ctx, `"${quote}"`, 40, 150, 430, 62)
+      ctx.font = '600 34px Georgia, "Times New Roman", serif'
+      ctx.fillText(`— ${name}`, 40, 600)
       const texture = new THREE.CanvasTexture(canvas)
       texture.colorSpace = THREE.SRGBColorSpace
       texture.needsUpdate = true
@@ -432,13 +439,14 @@ export function GuestWall() {
   return (
     <group position={[-3.52, 1.48, 0.15]} rotation={[0, Math.PI / 2, 0]}>
       {[-0.58, 0, 0.58].map((x, i) => (
-        <group key={x} position={[x, 0.08, 0.03]} rotation={[0, 0, (i - 1) * 0.03]}>
-          <RoundedBox args={[0.46, 0.6, 0.02]} radius={0.01} smoothness={3} castShadow>
-            <meshPhysicalMaterial color="#efe3cc" roughness={0.7} />
-          </RoundedBox>
-          <mesh position={[0, 0, 0.012]}>
-            <planeGeometry args={[0.42, 0.54]} />
-            <meshBasicMaterial map={notes[i]} />
+        <group key={x} position={[x, 0.08, 0.05]} rotation={[0, 0, (i - 1) * 0.03]}>
+          <mesh position={[0, 0, -0.01]} castShadow>
+            <boxGeometry args={[0.5, 0.64, 0.018]} />
+            <meshPhysicalMaterial color="#d7c4a0" roughness={0.78} />
+          </mesh>
+          <mesh position={[0, 0, 0.002]} castShadow>
+            <planeGeometry args={[0.46, 0.6]} />
+            <meshPhysicalMaterial map={notes[i]} roughness={0.86} metalness={0} />
           </mesh>
         </group>
       ))}

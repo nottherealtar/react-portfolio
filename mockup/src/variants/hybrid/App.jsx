@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import {
   AnimatePresence,
   motion,
+  useMotionValue,
   useReducedMotion,
   useScroll,
   useSpring,
@@ -189,6 +190,9 @@ function Nav() {
   const [open, setOpen] = useState(false)
   const [hidden, setHidden] = useState(false)
   const lastY = useRef(0)
+  const toggleRef = useRef(null)
+  const sheetDragY = useMotionValue(0)
+  const sheetBackdropOpacity = useTransform(sheetDragY, [0, 240], [1, 0.25])
 
   useEffect(() => {
     const onScroll = () => {
@@ -209,7 +213,28 @@ function Nav() {
     }
   }, [open])
 
-  const close = () => setOpen(false)
+  const close = () => {
+    setOpen(false)
+    sheetDragY.set(0)
+    toggleRef.current?.focus()
+  }
+
+  useEffect(() => {
+    if (!open) return undefined
+    const onKey = (event) => {
+      if (event.key === 'Escape') close()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  const onSheetDragEnd = (_event, info) => {
+    if (info.offset.y > 72 || info.velocity.y > 650) {
+      close()
+      return
+    }
+    sheetDragY.set(0)
+  }
 
   const sheet = (
     <AnimatePresence>
@@ -225,15 +250,28 @@ function Nav() {
           exit={{ opacity: 0 }}
           onClick={close}
         >
+          <motion.div className="nav-sheet__dim" style={{ opacity: sheetBackdropOpacity }} aria-hidden="true" />
           <motion.div
+            id="hybrid-mobile-nav"
             className="nav-sheet__panel"
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', stiffness: 380, damping: 36 }}
+            drag="y"
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={{ top: 0, bottom: 0.62 }}
+            dragMomentum={false}
+            onDrag={(_event, info) => {
+              sheetDragY.set(Math.max(0, info.offset.y))
+            }}
+            onDragEnd={onSheetDragEnd}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="nav-sheet__handle" aria-hidden="true" />
+            <div className="nav-sheet__handle" aria-hidden="true">
+              <span />
+            </div>
+            <p className="nav-sheet__hint">Swipe down to close</p>
             {nav.map((item, i) => (
               <motion.a
                 key={item.href}
@@ -262,7 +300,7 @@ function Nav() {
         aria-label="Main navigation"
       >
         <a className="nav-brand" href="#hero" onClick={close}>
-          <img src={site.logo} alt="" width={32} height={32} />
+          <img src={site.logo} alt={`${site.brand} logo`} width={32} height={32} />
           <span>{site.brand}</span>
         </a>
         <ul className="nav-links">
@@ -276,10 +314,12 @@ function Nav() {
           Let&apos;s Talk
         </Magnetic>
         <button
+          ref={toggleRef}
           className={`nav-toggle ${open ? 'is-open' : ''}`}
           type="button"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
+          aria-controls="hybrid-mobile-nav"
           onClick={() => setOpen((v) => !v)}
         >
           <span />

@@ -1,16 +1,19 @@
 # QA review — Ember redesign
 
-Production site (`https://tarsonlinecafe.work`) is **unchanged** until you explicitly approve a promote.
+Production site (`https://www.tarsonlinecafe.work`) is **unchanged** until you explicitly approve a promote.
 
 ## Public QA (no Vercel login)
 
-**Use these** (served as real `text/html` — jsDelivr HTML mirrors render as plain text in browsers):
+Use a real `text/html` host (jsDelivr HTML mirrors render as plaintext):
 
-- https://temporary-racing-quasar-8fod55h.vercel.app/
-- Claim to keep under your Vercel team: https://vercel.com/claim-deployment?code=cb64fd93-2ad2-4201-b2a2-58e207cb9f67
-- https://tarsonline-ember-qa.vercel.app/ (redirects to the live public snapshot)
+- See the latest claimable Vercel snapshot in PR #7 / agent notes
+- https://tarsonline-ember-qa.vercel.app/ (redirects to the live snapshot when configured)
 
-> Tip: open the claim link once so the snapshot does not expire (~60 minutes).
+QA pages ship production-grade SEO meta + JSON-LD, but keep `noindex,nofollow` until homepage cutover.
+
+## Mobile check
+
+Open the hamburger sheet, then **swipe / drag down** on the sheet (handle or panel) to dismiss it. Backdrop tap and Escape also close it.
 
 ## Branch preview (Vercel Authentication / SSO)
 
@@ -20,6 +23,6 @@ Production site (`https://tarsonlinecafe.work`) is **unchanged** until you expli
 ## Promote to production (only after you approve)
 
 1. Tell the agent to promote Ember to the live homepage, **or**
-2. Merge PR `#7` (`cursor/react-redesign-mockup-f822` → `main`) / promote the approved preview in Vercel.
+2. Merge the redesign PR to `main` / promote the approved preview in Vercel.
 
 Until then, leave production on the current homepage.

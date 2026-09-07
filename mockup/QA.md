@@ -4,12 +4,14 @@ Production site (`tarsonlinecafe.work`) is **unchanged** until you explicitly ap
 
 ## Primary public QA (no SSO)
 
-`https://tarsonline-ember-qa.vercel.app/` is currently **broken** (returns a path string instead of Ember HTML).
-
-Use this temporary public deploy until it is fixed or claimed (expires ~60 minutes; claim to keep):
+**Use this temporary public deploy** (serves real Ember HTML; no Vercel login):
 
 - **Public Ember QA:** https://temporary-instant-sitar-ltgfd2c.vercel.app/
 - **Claim URL:** https://vercel.com/claim-deployment?code=01d73a5b-ce04-40fa-ba44-e56e9500dcb7
+
+It expires in ~60 minutes unless claimed.
+
+`https://tarsonline-ember-qa.vercel.app/` currently only serves a **client-side redirect stub** to the temporary URL above (not Ember HTML itself). Prefer the temporary URL for review.
 
 (Older temp mirror, same build: https://temporary-rapid-piano-newuvh6.vercel.app/ — may also expire.)
 

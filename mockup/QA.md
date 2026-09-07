@@ -55,10 +55,11 @@ Do **not** promote an `ember-qa` project to the production domain. Do **not** ru
 
 ### Contact env (QA + production)
 
-Set on the Vercel project (not in git):
+**Verified on live production (2026-09-07):** project `tarsonlineportfolio` already has `WEB3FORMS_ACCESS_KEY`. A probe `POST /api/submit-contact` returned **502** (invalid captcha / Web3Forms reject). Missing-key would be **503** `"Service unavailable."` — so the secret is present on prod. Agents cannot read or copy Vercel secrets (no CLI auth; no env MCP tools).
 
-- `WEB3FORMS_ACCESS_KEY` (required)
-- `CONTACT_ALLOWED_ORIGIN` (optional; e.g. `https://tarsonline-ember-qa.vercel.app` for QA, production origin for cutover)
+**Owner action:** in the Vercel dashboard, copy `WEB3FORMS_ACCESS_KEY` (and `CONTACT_ALLOWED_ORIGIN` if set) from **tarsonlineportfolio** → paste onto **tarsonline-ember-qa** (Production + Preview), then redeploy QA. Optional QA origin lock: `CONTACT_ALLOWED_ORIGIN=https://tarsonline-ember-qa.vercel.app`.
+
+Do **not** put keys in git.
 
 ## Promote checklist (only after approval)
 

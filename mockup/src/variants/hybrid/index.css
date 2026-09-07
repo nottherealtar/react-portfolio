@@ -1380,19 +1380,23 @@ img {
 @media (max-width: 799px) {
   .process-rail,
   .testimonial-rail {
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(78%, 1fr);
+    display: flex;
+    gap: 0.85rem;
+    margin-top: 2rem;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: clip;
     overscroll-behavior-x: contain;
+    overscroll-behavior-y: none;
     touch-action: pan-x;
     scroll-snap-type: x mandatory;
-    padding-bottom: 0.35rem;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
   }
 
   .process-card,
   .testimonial-card {
+    flex: 0 0 78%;
+    min-width: 78%;
     scroll-snap-align: start;
     overflow: visible;
   }

@@ -14,8 +14,8 @@ Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until yo
 
 - https://temporary-racing-mercury-tzx66rp.vercel.app/ (claimed mercury — may lag if Vercel daily deploy cap is hit)
 - https://tarsonline-ember-qa.vercel.app/ (**canonical QA** — prerendered; Contact still 404 until claim below lands)
-- **Claim now (Contact-fixed, ~60m):** https://temporary-racing-savanna-nihuxxx.vercel.app/  
-  Claim into `tarsonline-ember-qa`: https://vercel.com/claim-deployment?code=2b1bfd44-158a-45f4-9564-3d0008273c2f  
+- **Claim now (Contact-fixed, ~60m):** https://temporary-zippy-oasis-jvec8zm.vercel.app/  
+  Claim into `tarsonline-ember-qa`: https://vercel.com/claim-deployment?code=dabdf8af-0fe4-4f28-90e4-27a9a04ba034  
   Verified: prerendered, `POST /api/submit-contact` → **503**, `GET …/submit-contact.js` → **405**
 
 QA still uses `noindex` + `robots.txt` Disallow until cutover.

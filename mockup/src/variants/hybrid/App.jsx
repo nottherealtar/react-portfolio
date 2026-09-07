@@ -296,7 +296,7 @@ function Nav() {
   return (
     <>
       <nav
-        className={`site-nav ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''}`}
+        className={`site-nav ${scrolled ? 'is-scrolled' : ''} ${hidden && !open ? 'is-hidden' : ''} ${open ? 'is-menu-open' : ''}`}
         aria-label="Main navigation"
       >
         <a className="nav-brand" href="#hero" onClick={close}>

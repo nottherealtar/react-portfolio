@@ -224,6 +224,14 @@ img {
   border-bottom-color: var(--line);
 }
 
+.site-nav.is-menu-open,
+.site-nav.is-menu-open.is-scrolled {
+  /* Avoid iOS backdrop-filter compositing over the open sheet. */
+  background: #0c0907;
+  backdrop-filter: none;
+  border-bottom-color: var(--line);
+}
+
 .site-nav.is-hidden {
   transform: translateY(-120%);
 }
@@ -313,21 +321,28 @@ img {
   display: flex;
   align-items: flex-end;
   background: transparent;
+  /* Keep sheet compositing separate from page filters (iOS Safari bug). */
+  isolation: isolate;
 }
 
 .nav-sheet__dim {
   position: absolute;
   inset: 0;
-  background: rgba(5, 4, 3, 0.55);
-  backdrop-filter: blur(8px);
+  /* Solid scrim only — backdrop-filter under a transformed sheet blurs
+     menu text on iOS Safari while opaque CTAs stay sharp. */
+  background: rgba(5, 4, 3, 0.72);
   pointer-events: none;
+  z-index: 0;
 }
 
 .nav-sheet__panel {
+  position: relative;
+  z-index: 1;
   width: 100%;
   padding: 0.35rem var(--pad) calc(1.5rem + var(--safe-bottom));
   border-radius: 24px 24px 0 0;
-  background: linear-gradient(180deg, rgba(28, 22, 17, 0.98), rgba(10, 8, 6, 0.98));
+  /* Fully opaque so nothing behind can composite through as blur. */
+  background: #16110d;
   border: 1px solid var(--line);
   border-bottom: 0;
   display: grid;
@@ -335,6 +350,9 @@ img {
   touch-action: none;
   cursor: grab;
   user-select: none;
+  isolation: isolate;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .nav-sheet__panel:active {

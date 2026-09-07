@@ -1,0 +1,5 @@
+# Ember QA preview — do not index until production cutover.
+User-agent: *
+Disallow: /
+
+# After cutover, replace with production robots.txt from the main site.

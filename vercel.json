@@ -11,6 +11,21 @@
           "value": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
         }
       ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
+  ],
+  "rewrites": [
+    { "source": "/qa", "destination": "/redesign/ember.html" },
+    { "source": "/qa/", "destination": "/redesign/ember.html" },
+    { "source": "/redesign", "destination": "/redesign/index.html" },
+    { "source": "/redesign/", "destination": "/redesign/index.html" }
   ]
 }

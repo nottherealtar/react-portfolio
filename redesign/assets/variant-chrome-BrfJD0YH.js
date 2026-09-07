@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-vA_J4xXe.js";var t=e();function n({id:e,name:n}){return(0,t.jsxs)(`a`,{className:`variant-chrome`,href:`/redesign/`,"aria-label":`Back to variant lab`,children:[(0,t.jsx)(`span`,{children:`Lab`}),(0,t.jsx)(`strong`,{children:n})]})}export{n as t};

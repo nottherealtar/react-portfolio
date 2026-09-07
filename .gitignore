@@ -5,3 +5,21 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# Redesign mockup
+mockup/node_modules/
+mockup/dist/
+mockup/node_modules/.ember-prerender/
+dist-promote/
+.playwright-mcp/
+
+# Local QA scratch / screenshots (do not commit)
+variant_*.png
+ember_*.png
+ember_*.webp
+.tmp-ember-*.json
+.ember-compact-files.json
+emb_flag.txt
+claimed-mercury-*.log
+
+.tmp-ember-qa-vercel/

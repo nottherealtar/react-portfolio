@@ -3,6 +3,13 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useReducedMotion } from 'framer-motion'
 import * as THREE from 'three'
 
+/**
+ * Directional “brew + build” field:
+ * - Roast column: warm embers rise from a hearth bed (coffee)
+ * - Integration rails: brighter nodes linked in directed pipelines (fullstack systems)
+ * Pointer steers pour bend; scroll cools intensity.
+ */
+
 function useIsMobile() {
   const [mobile, setMobile] = useState(() =>
     typeof window !== 'undefined' ? window.matchMedia('(max-width: 768px)').matches : false,
@@ -16,108 +23,193 @@ function useIsMobile() {
   return mobile
 }
 
-function EmberParticles({ mouse, intensity, count }) {
-  const points = useRef()
-  const lines = useRef()
+function BrewField({ mouse, intensity, count, railCount }) {
+  const roastRef = useRef()
+  const nodesRef = useRef()
+  const railsRef = useRef()
   const { viewport } = useThree()
 
-  const { positions, seeds, linkPositions, linkCount } = useMemo(() => {
+  const roast = useMemo(() => {
     const positions = new Float32Array(count * 3)
-    const seeds = new Float32Array(count * 3)
+    const seeds = new Float32Array(count * 4)
     for (let i = 0; i < count; i += 1) {
       const i3 = i * 3
-      const r = Math.pow(Math.random(), 0.62) * 8.2
-      const theta = Math.random() * Math.PI * 2
-      const y = (Math.random() - 0.4) * 7.2
-      positions[i3] = Math.cos(theta) * r
-      positions[i3 + 1] = y
-      positions[i3 + 2] = Math.sin(theta) * r * 0.7
-      seeds[i3] = Math.random() * Math.PI * 2
-      seeds[i3 + 1] = 0.2 + Math.random() * 0.95
-      seeds[i3 + 2] = 0.35 + Math.random() * 1.35
+      const i4 = i * 4
+      // Hearth ellipse at bottom — roast bed
+      const u = Math.random()
+      const v = Math.random()
+      const rx = (u - 0.5) * 7.2
+      const rz = (v - 0.5) * 3.4
+      positions[i3] = rx
+      positions[i3 + 1] = -3.4 + Math.random() * 0.55
+      positions[i3 + 2] = rz - 0.4
+      seeds[i4] = Math.random() * Math.PI * 2 // phase
+      seeds[i4 + 1] = 0.55 + Math.random() * 1.15 // rise speed
+      seeds[i4 + 2] = 0.25 + Math.random() * 0.9 // sway
+      seeds[i4 + 3] = 4.8 + Math.random() * 4.2 // max height before recycle
     }
-    const linkCount = Math.min(56, Math.floor(count / 18))
-    const linkPositions = new Float32Array(linkCount * 6)
-    return { positions, seeds, linkPositions, linkCount }
+    return { positions, seeds }
   }, [count])
 
-  const geometry = useMemo(() => {
-    const geo = new THREE.BufferGeometry()
-    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-    return geo
-  }, [positions])
+  const rails = useMemo(() => {
+    // Directed pipelines: left→right integration lanes at staggered depths
+    const lanes = Math.max(3, Math.min(7, Math.floor(railCount / 18)))
+    const nodesPerLane = Math.max(4, Math.floor(railCount / lanes))
+    const total = lanes * nodesPerLane
+    const positions = new Float32Array(total * 3)
+    const seeds = new Float32Array(total * 3)
+    const laneMeta = []
+    let idx = 0
+    for (let lane = 0; lane < lanes; lane += 1) {
+      const yBase = -1.6 + lane * 0.85
+      const z = -1.2 + (lane % 3) * 0.55
+      const start = idx
+      for (let n = 0; n < nodesPerLane; n += 1) {
+        const t = n / (nodesPerLane - 1)
+        const i3 = idx * 3
+        positions[i3] = -4.6 + t * 9.2
+        positions[i3 + 1] = yBase + Math.sin(t * Math.PI) * 0.22
+        positions[i3 + 2] = z
+        seeds[i3] = t
+        seeds[i3 + 1] = 0.35 + Math.random() * 0.4
+        seeds[i3 + 2] = lane * 0.7 + Math.random()
+        idx += 1
+      }
+      laneMeta.push({ start, count: nodesPerLane })
+    }
+    // Directed segments along each lane (not random mesh)
+    const segments = laneMeta.reduce((sum, l) => sum + Math.max(0, l.count - 1), 0)
+    const linkPositions = new Float32Array(segments * 6)
+    return { positions, seeds, laneMeta, linkPositions, total, segments }
+  }, [railCount])
 
-  const lineGeometry = useMemo(() => {
+  const roastGeo = useMemo(() => {
     const geo = new THREE.BufferGeometry()
-    geo.setAttribute('position', new THREE.BufferAttribute(linkPositions, 3))
+    geo.setAttribute('position', new THREE.BufferAttribute(roast.positions.slice(0), 3))
     return geo
-  }, [linkPositions])
+  }, [roast])
+
+  const nodeGeo = useMemo(() => {
+    const geo = new THREE.BufferGeometry()
+    geo.setAttribute('position', new THREE.BufferAttribute(rails.positions.slice(0), 3))
+    return geo
+  }, [rails])
+
+  const railGeo = useMemo(() => {
+    const geo = new THREE.BufferGeometry()
+    geo.setAttribute('position', new THREE.BufferAttribute(rails.linkPositions, 3))
+    return geo
+  }, [rails])
 
   useFrame((state) => {
-    if (!points.current) return
     const t = state.clock.elapsedTime
-    const arr = points.current.geometry.attributes.position.array
-    const ampScale = 0.55 + intensity.current * 0.7
-    const mx = mouse.current.x * viewport.width * 0.1
-    const my = mouse.current.y * viewport.height * 0.08
+    const pourX = mouse.current.x * viewport.width * 0.14
+    const pourY = mouse.current.y
+    const lift = 0.7 + intensity.current * 0.9 + Math.max(0, -pourY) * 0.35
 
-    for (let i = 0; i < count; i += 1) {
-      const i3 = i * 3
-      const phase = seeds[i3]
-      const speed = seeds[i3 + 1]
-      const amp = seeds[i3 + 2] * ampScale
-      arr[i3] = positions[i3] + Math.sin(t * speed + phase) * 0.16 * amp + mx * (0.12 + (i % 5) * 0.008)
-      arr[i3 + 1] = positions[i3 + 1] + Math.cos(t * speed * 0.85 + phase) * 0.12 * amp + my * 0.1
-      arr[i3 + 2] = positions[i3 + 2] + Math.sin(t * 0.32 + phase) * 0.1
-    }
-    points.current.geometry.attributes.position.needsUpdate = true
-    points.current.rotation.y = t * 0.028 + mouse.current.x * 0.12
-    points.current.rotation.x = mouse.current.y * 0.06
-
-    if (lines.current) {
-      const linkArr = lines.current.geometry.attributes.position.array
-      let cursor = 0
-      for (let i = 0; i < linkCount; i += 1) {
-        const a = (i * 17) % count
-        const b = (i * 29 + 11) % count
-        const a3 = a * 3
-        const b3 = b * 3
-        linkArr[cursor++] = arr[a3]
-        linkArr[cursor++] = arr[a3 + 1]
-        linkArr[cursor++] = arr[a3 + 2]
-        linkArr[cursor++] = arr[b3]
-        linkArr[cursor++] = arr[b3 + 1]
-        linkArr[cursor++] = arr[b3 + 2]
+    // Rising roast steam / embers
+    if (roastRef.current) {
+      const arr = roastRef.current.geometry.attributes.position.array
+      const base = roast.positions
+      const seeds = roast.seeds
+      for (let i = 0; i < count; i += 1) {
+        const i3 = i * 3
+        const i4 = i * 4
+        const phase = seeds[i4]
+        const speed = seeds[i4 + 1] * lift
+        const sway = seeds[i4 + 2]
+        const maxH = seeds[i4 + 3]
+        const life = (t * speed + phase * 1.7) % maxH
+        const progress = life / maxH
+        // taper: denser near hearth, thinner as it rises
+        const spread = 1 + progress * 1.35
+        arr[i3] =
+          base[i3] * spread +
+          Math.sin(t * (0.6 + sway) + phase) * 0.22 * sway +
+          pourX * (0.15 + progress * 0.55)
+        arr[i3 + 1] = base[i3 + 1] + life
+        arr[i3 + 2] = base[i3 + 2] * (1 + progress * 0.25) + Math.cos(t * 0.45 + phase) * 0.12
       }
-      lines.current.geometry.attributes.position.needsUpdate = true
-      lines.current.rotation.copy(points.current.rotation)
-      lines.current.material.opacity = 0.08 + intensity.current * 0.12
+      roastRef.current.geometry.attributes.position.needsUpdate = true
+      roastRef.current.material.opacity = 0.42 + intensity.current * 0.38
+      roastRef.current.material.size = 0.028 + intensity.current * 0.018
     }
 
-    points.current.material.opacity = 0.55 + intensity.current * 0.35
-    points.current.material.size = 0.032 + intensity.current * 0.02
+    // Directed integration rails (packet flow left → right)
+    if (nodesRef.current && railsRef.current) {
+      const narr = nodesRef.current.geometry.attributes.position.array
+      const base = rails.positions
+      const seeds = rails.seeds
+      for (let i = 0; i < rails.total; i += 1) {
+        const i3 = i * 3
+        const pulse = Math.sin(t * (1.2 + seeds[i3 + 1]) + seeds[i3] * Math.PI * 2 + seeds[i3 + 2])
+        // packets drift along lane direction
+        const drift = ((t * 0.55 * seeds[i3 + 1] + seeds[i3]) % 1) * 0.35
+        narr[i3] = base[i3] + drift + pourX * 0.08
+        narr[i3 + 1] = base[i3 + 1] + pulse * 0.06 + pourY * 0.12
+        narr[i3 + 2] = base[i3 + 2]
+      }
+      nodesRef.current.geometry.attributes.position.needsUpdate = true
+
+      const linkArr = railsRef.current.geometry.attributes.position.array
+      let cursor = 0
+      for (const lane of rails.laneMeta) {
+        for (let n = 0; n < lane.count - 1; n += 1) {
+          const a = (lane.start + n) * 3
+          const b = (lane.start + n + 1) * 3
+          linkArr[cursor++] = narr[a]
+          linkArr[cursor++] = narr[a + 1]
+          linkArr[cursor++] = narr[a + 2]
+          linkArr[cursor++] = narr[b]
+          linkArr[cursor++] = narr[b + 1]
+          linkArr[cursor++] = narr[b + 2]
+        }
+      }
+      railsRef.current.geometry.attributes.position.needsUpdate = true
+      railsRef.current.material.opacity = 0.1 + intensity.current * 0.16
+      nodesRef.current.material.opacity = 0.55 + intensity.current * 0.3
+    }
   })
 
   return (
     <group>
-      <points ref={points} geometry={geometry}>
+      {/* Hearth glow — roast bed */}
+      <mesh position={[0, -3.55, -0.2]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[3.4, 48]} />
+        <meshBasicMaterial color="#c8884a" transparent opacity={0.05} />
+      </mesh>
+      <mesh position={[0, -3.2, 0]}>
+        <sphereGeometry args={[2.4, 24, 16, 0, Math.PI * 2, 0, Math.PI * 0.45]} />
+        <meshBasicMaterial color="#d4894a" transparent opacity={0.055} side={THREE.DoubleSide} />
+      </mesh>
+
+      <points ref={roastRef} geometry={roastGeo}>
         <pointsMaterial
-          size={0.04}
+          size={0.036}
           color="#e8a054"
           transparent
-          opacity={0.8}
+          opacity={0.75}
           depthWrite={false}
           sizeAttenuation
           blending={THREE.AdditiveBlending}
         />
       </points>
-      <lineSegments ref={lines} geometry={lineGeometry}>
-        <lineBasicMaterial color="#d4894a" transparent opacity={0.12} blending={THREE.AdditiveBlending} />
+
+      <points ref={nodesRef} geometry={nodeGeo}>
+        <pointsMaterial
+          size={0.055}
+          color="#f0c48a"
+          transparent
+          opacity={0.7}
+          depthWrite={false}
+          sizeAttenuation
+          blending={THREE.AdditiveBlending}
+        />
+      </points>
+
+      <lineSegments ref={railsRef} geometry={railGeo}>
+        <lineBasicMaterial color="#c8884a" transparent opacity={0.14} blending={THREE.AdditiveBlending} />
       </lineSegments>
-      <mesh position={[2.1, 0.35, -1.4]}>
-        <sphereGeometry args={[1.25, 24, 24]} />
-        <meshBasicMaterial color="#d4894a" transparent opacity={0.04} />
-      </mesh>
     </group>
   )
 }
@@ -126,10 +218,11 @@ export default function EmberField({ scrollProgress }) {
   const reduce = useReducedMotion()
   const mobile = useIsMobile()
   const mouse = useRef({ x: 0, y: 0 })
-  const intensity = useRef(0.45)
+  const intensity = useRef(0.55)
   const [visible, setVisible] = useState(true)
   const rootRef = useRef(null)
-  const count = mobile ? 520 : 1100
+  const count = mobile ? 380 : 820
+  const railCount = mobile ? 48 : 84
 
   useEffect(() => {
     const el = rootRef.current
@@ -142,7 +235,7 @@ export default function EmberField({ scrollProgress }) {
   useEffect(() => {
     if (!scrollProgress) return undefined
     const unsub = scrollProgress.on('change', (v) => {
-      intensity.current = Math.max(0.2, 1 - v * 1.4)
+      intensity.current = Math.max(0.22, 0.95 - v * 1.25)
     })
     return unsub
   }, [scrollProgress])
@@ -170,7 +263,7 @@ export default function EmberField({ scrollProgress }) {
       {visible && (
         <Canvas
           dpr={mobile ? [1, 1.25] : [1, 1.6]}
-          camera={{ position: [0, 0.15, 7.1], fov: 42 }}
+          camera={{ position: [0, 0.35, 7.4], fov: 40 }}
           onCreated={({ gl, scene }) => {
             gl.setClearColor(0x000000, 0)
             scene.background = null
@@ -179,8 +272,8 @@ export default function EmberField({ scrollProgress }) {
           style={{ pointerEvents: 'none' }}
         >
           <Suspense fallback={null}>
-            <fog attach="fog" args={['#070605', 7, 17]} />
-            <EmberParticles mouse={mouse} intensity={intensity} count={count} />
+            <fog attach="fog" args={['#070605', 8, 16]} />
+            <BrewField mouse={mouse} intensity={intensity} count={count} railCount={railCount} />
           </Suspense>
         </Canvas>
       )}

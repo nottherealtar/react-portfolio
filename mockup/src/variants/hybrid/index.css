@@ -401,26 +401,34 @@ img {
 
 .ember-field--static {
   background:
-    radial-gradient(ellipse 55% 42% at 72% 30%, rgba(240, 164, 90, 0.22), transparent 60%),
-    radial-gradient(ellipse 40% 35% at 18% 75%, rgba(110, 65, 30, 0.28), transparent 55%),
+    radial-gradient(ellipse 70% 38% at 50% 108%, rgba(232, 160, 84, 0.34), transparent 58%),
+    linear-gradient(180deg, transparent 8%, rgba(212, 137, 74, 0.07) 42%, rgba(90, 48, 22, 0.22) 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 72px,
+      rgba(200, 136, 74, 0.045) 72px,
+      rgba(200, 136, 74, 0.045) 73px
+    ),
     #060504;
 }
 
 .hero__aurora {
   background:
-    radial-gradient(ellipse 50% 40% at 20% 20%, rgba(212, 137, 74, 0.12), transparent 55%),
-    radial-gradient(ellipse 45% 35% at 85% 60%, rgba(120, 70, 40, 0.16), transparent 50%);
+    radial-gradient(ellipse 55% 48% at 50% 92%, rgba(232, 160, 84, 0.2), transparent 62%),
+    radial-gradient(ellipse 40% 28% at 18% 36%, rgba(212, 137, 74, 0.08), transparent 55%),
+    radial-gradient(ellipse 36% 26% at 84% 30%, rgba(120, 70, 40, 0.12), transparent 50%);
   filter: blur(8px);
-  animation: aurora 14s ease-in-out infinite alternate;
-  opacity: 0.85;
+  animation: aurora 16s ease-in-out infinite alternate;
+  opacity: 0.9;
 }
 
 @keyframes aurora {
   from {
-    transform: translate3d(-2%, 0, 0) scale(1);
+    transform: translate3d(0, 2%, 0) scale(1);
   }
   to {
-    transform: translate3d(3%, 2%, 0) scale(1.05);
+    transform: translate3d(0, -3%, 0) scale(1.04);
   }
 }
 

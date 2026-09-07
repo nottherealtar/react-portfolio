@@ -301,7 +301,7 @@ function BrandOrb() {
           <path id="circlePath" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" />
         </defs>
         <text>
-          <textPath href="#circlePath">TARS ONLINE CAFE · EST 2020 · TARS ONLINE CAFE · EST 2020 ·</textPath>
+          <textPath href="#circlePath">BREW · BUILD · SHIP · TARS ONLINE CAFE · EST 2020 · </textPath>
         </text>
       </svg>
       <div className="brand-orb__core">

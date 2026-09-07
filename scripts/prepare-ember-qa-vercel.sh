@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Deploy self-contained Ember QA to Vercel via MCP/CLI-friendly file tree.
 # Critical: api/ must sit at project ROOT (serverless), static site in public/.
+# If Hobby api-deployments-free-per-day is exhausted, from the output dir run:
+#   vercel deploy --temporary --yes
+# then claim the printed URL into tarsonline-ember-qa (see mockup/QA.md).
 set -euo pipefail
 
 SHA="${1:-$(git -C "$(dirname "$0")/.." rev-parse HEAD)}"

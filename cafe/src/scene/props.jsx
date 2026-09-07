@@ -401,7 +401,7 @@ export function Laptop() {
         <cylinderGeometry args={[0.008, 0.008, 0.74, 12]} />
         <meshPhysicalMaterial color="#2a2a30" metalness={0.84} roughness={0.24} />
       </mesh>
-      <group position={[0, 0.016, -0.252]} rotation={[-0.18, 0, 0]}>
+      <group position={[0, 0.016, -0.252]} rotation={[-0.12, 0, 0]}>
         <group position={[0, 0.225, 0]}>
           <RoundedBox args={[0.78, 0.46, 0.012]} radius={0.012} smoothness={4} castShadow>
             <meshPhysicalMaterial color="#4a4a50" metalness={0.82} roughness={0.28} />

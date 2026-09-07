@@ -70,7 +70,7 @@ function Icon({ name }) {
   )
 }
 
-function Reveal({ children, delay = 0, className, role }) {
+function Reveal({ children, delay = 0, className, role, shift = true }) {
   const reduce = useReducedMotion()
   if (reduce) {
     return (
@@ -83,8 +83,8 @@ function Reveal({ children, delay = 0, className, role }) {
     <motion.div
       className={className}
       role={role}
-      initial={{ opacity: 0, y: 28, filter: 'blur(6px)' }}
-      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      initial={shift ? { opacity: 0, y: 28, filter: 'blur(6px)' } : { opacity: 0 }}
+      whileInView={shift ? { opacity: 1, y: 0, filter: 'blur(0px)' } : { opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.75, ease: easeOut, delay }}
     >
@@ -646,7 +646,7 @@ function Process() {
         </Reveal>
         <div className="process-rail">
           {process.steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.08} className="process-card">
+            <Reveal key={step.title} delay={i * 0.08} className="process-card" shift={false}>
               <div className="process-card__num">{String(i + 1).padStart(2, '0')}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
@@ -667,7 +667,7 @@ function Testimonials() {
         </Reveal>
         <div className="testimonial-rail">
           {testimonials.items.map((item, i) => (
-            <Reveal key={item.name} delay={i * 0.07} className="testimonial-card">
+            <Reveal key={item.name} delay={i * 0.07} className="testimonial-card" shift={false}>
               <p>“{item.quote}”</p>
               <footer>
                 <div className="avatar" aria-hidden="true">

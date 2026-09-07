@@ -693,33 +693,6 @@ function Footer() {
   )
 }
 
-function MobileDock() {
-  const [show, setShow] = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.55)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  return (
-    <AnimatePresence>
-      {show && (
-        <motion.a
-          className="frost-dock"
-          href="#contact"
-          initial={{ y: 88, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 88, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 360, damping: 28 }}
-        >
-          Start a Project
-        </motion.a>
-      )}
-    </AnimatePresence>
-  )
-}
 
 export default function App() {
   return (
@@ -744,7 +717,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-      <MobileDock />
-    </>
+</>
   )
 }

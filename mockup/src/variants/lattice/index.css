@@ -1722,30 +1722,8 @@ img {
   }
 }
 
-/* ——— Mobile dock ——— */
-.mobile-dock {
-  position: fixed;
-  left: 50%;
-  bottom: calc(0.85rem + var(--safe-bottom));
-  transform: translateX(-50%);
-  z-index: 80;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  min-width: min(280px, calc(100vw - 2rem));
-  padding: 0.75rem 1.25rem;
-  border-radius: 3px;
-  background: var(--ink);
-  color: var(--white);
-  font-weight: 700;
-  box-shadow: 0 12px 28px rgba(11, 31, 51, 0.28);
-}
 
 @media (min-width: 880px) {
-  .mobile-dock {
-    display: none;
-  }
 }
 
 .mockup-banner {

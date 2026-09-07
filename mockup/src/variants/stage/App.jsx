@@ -738,31 +738,6 @@ function Footer() {
   )
 }
 
-function MobileDock() {
-  const [show, setShow] = useState(false)
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > window.innerHeight * 0.7)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-  return (
-    <AnimatePresence>
-      {show && (
-        <motion.a
-          className="mobile-dock"
-          href="#contact"
-          initial={{ y: 80, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 80, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-        >
-          Start a Project
-        </motion.a>
-      )}
-    </AnimatePresence>
-  )
-}
 
 export default function App() {
   return (
@@ -789,8 +764,7 @@ export default function App() {
         </main>
         <Footer />
       </div>
-      <MobileDock />
-      <div className="mockup-banner">Redesign mockup · Stage</div>
+<div className="mockup-banner">Redesign mockup · Stage</div>
     </>
   )
 }

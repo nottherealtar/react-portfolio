@@ -357,8 +357,7 @@ img {
     display: flex;
   }
 
-  .nav-toggle,
-  .mobile-dock {
+  .nav-toggle {
     display: none !important;
   }
 }
@@ -1465,21 +1464,6 @@ img {
   font-size: 0.84rem;
 }
 
-.mobile-dock {
-  position: fixed;
-  left: var(--pad);
-  right: var(--pad);
-  bottom: calc(1rem + var(--safe-bottom));
-  z-index: 190;
-  min-height: 52px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--ember), var(--copper));
-  color: var(--void);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-}
 
 .mockup-banner {
   position: fixed;

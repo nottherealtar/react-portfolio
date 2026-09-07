@@ -276,6 +276,26 @@ def merge_posts(manual_posts: List[Dict[str, Any]], auto_posts: List[Dict[str, A
     return combined
 
 
+def write_posts_latest(posts: List[Dict[str, Any]], limit: int = 12) -> None:
+    """Slim latest-posts feed for a future homepage rail (never load full posts.json)."""
+    slim: List[Dict[str, Any]] = []
+    for post in posts[:limit]:
+        link = post.get("link") or ""
+        if not link:
+            continue
+        slim.append(
+            {
+                "title": post.get("title") or "",
+                "link": link,
+                "date": normalize_date(post.get("date", "")),
+                "summary": (post.get("summary") or "")[:220],
+                "category": post.get("category") or "",
+                "reading_minutes": estimate_reading_minutes(post),
+            }
+        )
+    write_json(BLOG_DIR / "posts.latest.json", {"posts": slim})
+
+
 def update_sitemap(posts: List[Dict[str, Any]]) -> None:
     ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
     tree = ET.parse(SITE_MAP_PATH)
@@ -325,6 +345,7 @@ def main() -> int:
     merged_posts = merge_posts(manual_posts, auto_posts)
 
     write_json(BLOG_DIR / "posts.json", merged_posts)
+    write_posts_latest(merged_posts)
     update_sitemap(merged_posts)
     write_readme_analytics_shields(merged_posts, manual_posts, auto_posts)
 

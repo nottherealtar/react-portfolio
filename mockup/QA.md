@@ -17,14 +17,36 @@ Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until yo
 
 QA still uses `noindex` + `robots.txt` Disallow until cutover.
 
+### Hobby plan deploy limits (real)
+
+Josh’s Vercel team is **Hobby**. When hit, you will see either:
+
+- Git status: `Deployment rate limited — retry in 24 hours`
+- MCP/API: `402 api-deployments-free-per-day` with `remaining: 0`
+
+Neither is a Cursor “cap” — it is the Vercel Hobby daily deployment quota. Upgrade the team to Pro **or** wait for reset, **or** use the anonymous temporary path below (expires ~60 minutes unless claimed).
+
 ### Redeploy recipe (self-contained)
 
 1. Push a commit that updates `ember-qa/` (`cd mockup && npm run build:ember-qa`).
 2. `bash scripts/prepare-ember-qa-vercel.sh <sha>` — builds `.tmp-ember-qa-vercel/` with:
    - static site under `public/`
    - **`api/submit-contact.js` at project root** (serverless; never nest under `public/` or POSTs 404)
-3. Deploy that tree to both QA projects (`target=production`). Prefer MCP `deploy_to_vercel` with a `build.sh` that mirrors the prepare layout, or upload the prepared tree.
-4. Verify: `data-prerendered="true"`, Blog nav, `/robots.txt` Disallow, `POST /api/submit-contact` returns **503** until `WEB3FORMS_ACCESS_KEY` is set (not 404).
+3. Deploy that tree:
+   - Prefer MCP `deploy_to_vercel` / git-linked project with `rootDirectory=ember-qa` when quota allows.
+   - **Bypass when Hobby-capped:** from `.tmp-ember-qa-vercel/`, run `vercel deploy --temporary --yes` (anonymous). Verify, then **claim** the deployment into `tarsonline-ember-qa` via the printed claim URL so it stays durable.
+4. Verify: `data-prerendered="true"`, Blog nav, `/robots.txt` Disallow, `POST /api/submit-contact` returns **503** until `WEB3FORMS_ACCESS_KEY` is set (not 404). `GET /api/submit-contact.js` must **not** return the handler source as static JS (expect 405 from the serverless function).
+
+### Production blog chrome when git deploy is rate-limited
+
+`main` already has Ember blog chrome (`styles/ember-blog.css`). If production is stuck on an older SHA because of Hobby rate limit, **promote an existing READY preview** (no rebuild):
+
+```bash
+vercel promote <preview-deployment-url-or-id> --yes
+# or REST: POST /v10/projects/{projectId}/promote/{deploymentId}?teamId=...
+```
+
+Do **not** promote an `ember-qa` project to the production domain.
 
 ### Contact env (QA + production)
 

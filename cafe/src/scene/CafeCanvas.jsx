@@ -23,9 +23,9 @@ const STATIONS = {
     fov: 34,
   },
   work: {
-    position: new THREE.Vector3(-1.42, 1.18, 0.06),
-    target: new THREE.Vector3(-2.3, 1.04, -0.9),
-    fov: 28,
+    position: new THREE.Vector3(-1.58, 1.14, -0.16),
+    target: new THREE.Vector3(-2.28, 1.01, -0.9),
+    fov: 26,
   },
   process: {
     position: new THREE.Vector3(0.08, 1.24, 0.82),
@@ -92,7 +92,7 @@ function CameraRig({ reduced }) {
     const px = pointerSmooth.current.x * parallax * (mobile ? 0.28 : 1)
     const py = pointerSmooth.current.y * parallax * 0.28
     const duration = reduced ? 0.22 : 0.86
-    progress.current = Math.min(1, progress.current + dt / duration)
+    progress.current = Math.min(1, progress.current + Math.min(delta, 0.1) / duration)
     const k = reduced ? 1 : easeInOutCubic(progress.current)
     basePos.current.lerpVectors(fromPos.current, next.position, k)
     look.current.lerpVectors(fromLook.current, next.target, k)
@@ -165,7 +165,7 @@ export default function CafeCanvas({ reduced, lowPower }) {
           {!lowPower && <BakeShadows />}
           {!lowPower && !reduced && (
             <EffectComposer multisampling={0} enableNormalPass={false}>
-              <Bloom intensity={0.32} luminanceThreshold={0.92} mipmapBlur />
+              <Bloom intensity={0.22} luminanceThreshold={0.96} mipmapBlur />
               <Vignette eskil={false} offset={0.2} darkness={0.5} />
               <SMAA />
             </EffectComposer>

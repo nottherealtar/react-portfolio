@@ -414,10 +414,6 @@ export function Laptop() {
             <planeGeometry args={[0.7, 0.394]} />
             <meshBasicMaterial map={maps.screen} toneMapped={false} />
           </mesh>
-          <mesh position={[0, -0.006, 0.0092]}>
-            <planeGeometry args={[0.7, 0.394]} />
-            <meshPhysicalMaterial color="#d8e4ff" transparent opacity={0.07} roughness={0.08} metalness={0.15} />
-          </mesh>
           <mesh position={[0, 0.208, 0.008]}>
             <circleGeometry args={[0.0045, 10]} />
             <meshStandardMaterial color="#111" />

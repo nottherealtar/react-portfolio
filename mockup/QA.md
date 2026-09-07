@@ -4,18 +4,18 @@ Production site (`https://tarsonlinecafe.work`) is **unchanged** until you expli
 
 ## Public QA (no Vercel login)
 
-Primary (anonymous Vercel, claim to keep):
+**Recommended — CDN mirror** (permanent while this commit is on the branch):
 
-- https://temporary-instant-sitar-ltgfd2c.vercel.app/
-- Claim (keeps it under your Vercel team): https://vercel.com/claim-deployment?code=01d73a5b-ce04-40fa-ba44-e56e9500dcb7
+- https://cdn.jsdelivr.net/gh/nottherealtar/react-portfolio@CURSOR_SHA/ember-qa/index.html
 
-Stable alias (redirects to the public QA while the claimable deploy is live):
+Vercel alias (redirects to the CDN mirror once updated):
 
 - https://tarsonline-ember-qa.vercel.app/
 
-CDN mirror from this branch (public, no SSO):
+Fresh claimable Vercel snapshot (expires ~60m unless claimed):
 
-- https://cdn.jsdelivr.net/gh/nottherealtar/react-portfolio@cursor/react-redesign-mockup-f822/ember-qa/
+- https://temporary-brisk-lilac-io81q22.vercel.app/
+- Claim: https://vercel.com/claim-deployment?code=03c92d3c-2dcd-4ddd-a2e6-9c8187b8f75f
 
 ## Branch preview (Vercel Authentication / SSO)
 

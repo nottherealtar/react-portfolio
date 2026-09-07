@@ -1,1 +1,1 @@
-Ember QA static export. Prefer Vercel QA project.
+Ember QA static export (relative asset paths for CDN).

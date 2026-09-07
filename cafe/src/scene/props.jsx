@@ -264,7 +264,7 @@ export function EspressoMachine({ reduced }) {
             <boxGeometry args={[0.09, 0.018, 0.03]} />
             <Metal />
           </mesh>
-          <Cup position={[0, -0.155, 0.07]} scale={0.72} withSteam reduced={reduced} />
+          <Cup position={[0, -0.155, 0.07]} scale={0.72} reduced={reduced} />
         </group>
       ))}
       <mesh position={[0.38, 0.34, 0.18]} rotation={[0.4, 0, 0.2]} castShadow>

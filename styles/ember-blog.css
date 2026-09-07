@@ -95,6 +95,21 @@ body {
   display: none !important;
 }
 
+/* Brand mark for legacy posts (coffee emoji hidden) without HTML rewrites */
+.nav-logo::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: url("/67793100.png") center / cover no-repeat;
+  box-shadow: 0 0 0 1px rgba(240, 164, 90, 0.35);
+}
+
+.nav-logo:has(.nav-logo-mark)::before {
+  display: none;
+}
+
 .nav-logo-mark {
   width: 28px;
   height: 28px;

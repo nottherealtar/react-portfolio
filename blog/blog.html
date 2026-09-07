@@ -98,10 +98,12 @@
         }
 
         .hero-title {
-            font-family: "DM Serif Display", Georgia, serif;
+            font-family: var(--font-display, Syne, sans-serif);
             font-size: clamp(2rem, 4.2vw, 3.15rem);
             margin: 0;
             line-height: 1.12;
+            font-weight: 800;
+            letter-spacing: -0.035em;
         }
 
         .hero-subtitle {
@@ -381,9 +383,11 @@
 
         .post-title {
             margin: 0;
-            font-family: "DM Serif Display", Georgia, serif;
+            font-family: var(--font-display, Syne, sans-serif);
             font-size: 1.35rem;
             line-height: 1.22;
+            font-weight: 700;
+            letter-spacing: -0.03em;
         }
 
         .blog-card.featured .post-title {
@@ -506,7 +510,7 @@
     </script>
     <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
         <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
-            <span class="nav-logo-icon">☕</span>
+            <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
             <span>TarsOnlineCafe</span>
         </a>
 

@@ -1048,6 +1048,30 @@ def _json_ld_script(payload: Dict[str, Any]) -> str:
     return f"  <script type=\"application/ld+json\">\n{safe}\n  </script>"
 
 
+
+POST_TEMPLATE_PATH = AUTO_DIR / "_template.html"
+
+
+def _load_post_template() -> str:
+    """Load blog/auto/_template.html (required for Auto Blog chrome parity)."""
+    if not POST_TEMPLATE_PATH.is_file():
+        raise FileNotFoundError(
+            f"Missing auto-post template: {POST_TEMPLATE_PATH}. "
+            "Restore blog/auto/_template.html before generating posts."
+        )
+    return POST_TEMPLATE_PATH.read_text(encoding="utf-8")
+
+
+def _fill_template(template: str, mapping: Dict[str, str]) -> str:
+    """Replace {{key}} placeholders. Values must already be escaped where needed."""
+    out = template
+    for key, value in mapping.items():
+        out = out.replace("{{" + key + "}}", value)
+    leftover = re.findall(r"\{\{[a-z_]+\}\}", out)
+    if leftover:
+        raise ValueError(f"Unfilled template placeholders: {sorted(set(leftover))}")
+    return out
+
 def render_post_html(metadata: Dict[str, Any]) -> str:
     takeaways_html = "\n".join(f"          <li>{escape_html(item)}</li>" for item in metadata["takeaways"])
     read_min = int(metadata.get("reading_minutes") or 1)
@@ -1071,11 +1095,12 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
     body_section = ""
     if body_paragraphs:
         paras = "\n".join(f"        <p>{escape_html(p)}</p>" for p in body_paragraphs)
-        body_section = f"""        <h2>Key details from the source</h2>
-        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
-{paras}
-
-"""
+        body_section = (
+            "        <h2>Key details from the source</h2>\n"
+            '        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. '
+            "Open the primary source for quotes, figures, and updates.</p>\n"
+            f"{paras}\n\n"
+        )
     json_ld: Dict[str, Any] = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -1098,247 +1123,29 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
     json_ld = {k: v for k, v in json_ld.items() if v is not None}
     ld_block = _json_ld_script(json_ld)
 
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>{escape_html(metadata['title'])} | TarsOnlineCafe</title>
-  <meta name="description" content="{meta_desc}">
-  <link rel="canonical" href="{canonical}">
-  <meta name="robots" content="index,follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{og_title}">
-  <meta property="og:description" content="{meta_desc}">
-  <meta property="og:url" content="{canonical}">
-  <meta name="twitter:card" content="{twitter_card}">
-  <meta name="twitter:title" content="{og_title}">
-  <meta name="twitter:description" content="{meta_desc}">{og_image_tag}
-{ld_block}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/themes.css">
-  <link rel="stylesheet" href="/styles/site-atmosphere.css">
-  <link rel="stylesheet" href="/styles/nav.css">
-  <link rel="stylesheet" href="/styles/ember-blog.css">
-  <style>
-    body {{
-      margin: 0;
-      font-family: var(--font-body, Figtree, system-ui, sans-serif);
-      background: var(--espresso, #1a1108);
-      color: var(--foam, #f7efe2);
-      line-height: 1.65;
-      min-height: 100vh;
-    }}
-    .page-bg {{
-      min-height: 100vh;
-      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
-    }}
-    .wrap {{
-      max-width: 720px;
-      margin: 0 auto;
-    }}
-    .article-shell {{
-      background: rgba(45, 34, 27, 0.72);
-      border: 1px solid rgba(247, 239, 226, 0.14);
-      border-radius: 24px;
-      padding: clamp(1.5rem, 4vw, 2.5rem);
-      backdrop-filter: blur(14px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-    }}
-    .eyebrow {{
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--crema, #c9a96e);
-      margin-bottom: 0.75rem;
-    }}
-    .meta {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem 1rem;
-      align-items: center;
-      font-size: 0.88rem;
-      color: rgba(247, 239, 226, 0.78);
-      margin-bottom: 1.25rem;
-    }}
-    .pill {{
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      border-radius: 999px;
-      padding: 0.2rem 0.65rem;
-      font-size: 0.72rem;
-      font-weight: 500;
-      border: 1px solid rgba(201, 169, 110, 0.45);
-      color: var(--crema, #c9a96e);
-      background: rgba(201, 169, 110, 0.1);
-    }}
-    h1 {{
-      font-family: var(--font-display, Syne, sans-serif);
-      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
-      line-height: 1.18;
-      margin: 0 0 1rem;
-      color: var(--foam, #f7efe2);
-    }}
-    .lede {{
-      font-size: 1.05rem;
-      color: var(--steamed-milk, #ede0cc);
-      margin: 0 0 1.75rem;
-    }}
-    .section-intro {{
-      font-size: 0.92rem;
-      color: rgba(247, 239, 226, 0.72);
-      margin: -0.35rem 0 1.1rem;
-      line-height: 1.55;
-    }}
-    h2 {{
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--crema, #c9a96e);
-      margin: 2rem 0 0.65rem;
-      font-weight: 600;
-    }}
-    p {{
-      margin: 0 0 1rem;
-      color: rgba(237, 224, 204, 0.95);
-    }}
-    ul {{
-      margin: 0 0 1rem;
-      padding-left: 1.15rem;
-    }}
-    li {{
-      margin-bottom: 0.55rem;
-      color: rgba(237, 224, 204, 0.95);
-    }}
-    a {{
-      color: var(--crema, #c9a96e);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }}
-    .source-row {{
-      margin-top: 2rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid rgba(247, 239, 226, 0.12);
-      font-size: 0.92rem;
-    }}
-    .back {{
-      display: inline-flex;
-      margin-top: 1.5rem;
-      align-items: center;
-      gap: 0.35rem;
-      color: var(--foam, #f7efe2);
-      text-decoration: none;
-      border: 1px solid rgba(247, 239, 226, 0.28);
-      border-radius: 999px;
-      padding: 0.5rem 1.1rem;
-      min-height: 44px;
-      font-size: 0.88rem;
-      font-weight: 500;
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }}
-    .back:hover {{
-      border-color: var(--crema, #c9a96e);
-      color: var(--crema, #c9a96e);
-      transform: translateY(-1px);
-    }}
-    .img-disclaimer {{
-      font-size: 0.82rem;
-      color: rgba(247, 239, 226, 0.65);
-      margin: -0.25rem 0 0.85rem;
-    }}
-    .figure-grid {{
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-    }}
-    .src-fig {{
-      margin: 0;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(247, 239, 226, 0.1);
-      background: rgba(26, 17, 8, 0.45);
-    }}
-    .src-fig img {{
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 420px;
-      object-fit: contain;
-      background: rgba(0, 0, 0, 0.2);
-    }}
-  </style>
-</head>
-<body>
-  <div class="site-atmosphere" aria-hidden="true">
-    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
-    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
-    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
-    <div class="site-atmosphere__grain"></div>
-  </div>
-  <div id="canvas-container"></div>
-  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
-    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
-      <span class="nav-logo-icon">☕</span>
-      <span>TarsOnlineCafe</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="/">Portfolio</a></li>
-      <li><a href="/blog/blog.html" class="active">Blog</a></li>
-    </ul>
-    <a href="/#contact" class="nav-cta">Let's Talk →</a>
-    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </nav>
+    return _fill_template(
+        _load_post_template(),
+        {
+            "title": escape_html(metadata["title"]),
+            "meta_desc": meta_desc,
+            "canonical": canonical,
+            "og_title": og_title,
+            "twitter_card": twitter_card,
+            "og_image_tag": og_image_tag,
+            "ld_block": ld_block,
+            "category": category,
+            "read_min": str(read_min),
+            "date": escape_html(metadata["date"]),
+            "source_name": escape_html(metadata["source_name"]),
+            "summary": escape_html(metadata["summary"]),
+            "body_section": body_section,
+            "images_html": images_html,
+            "why_it_matters": escape_html(metadata["why_it_matters"]),
+            "takeaways_html": takeaways_html,
+            "source_url": escape_html(metadata["source_url"]),
+        },
+    )
 
-  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <a href="/">Portfolio</a>
-    <a href="/blog/blog.html">Blog</a>
-    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
-  </div>
-
-  <div class="page-bg">
-    <main class="wrap">
-      <article class="article-shell">
-        <div class="eyebrow">Automation brief</div>
-        <div class="meta">
-          <span class="pill">{category}</span>
-          <span class="pill">~{read_min} min read</span>
-          <span>{escape_html(metadata['date'])}</span>
-          <span>{escape_html(metadata['source_name'])}</span>
-        </div>
-        <h1>{escape_html(metadata['title'])}</h1>
-        <p class="lede">{escape_html(metadata['summary'])}</p>
-
-{body_section}{images_html}
-
-        <h2>Why this matters</h2>
-        <p>{escape_html(metadata['why_it_matters'])}</p>
-
-        <h2>Operational takeaways</h2>
-        <ul>
-{takeaways_html}
-        </ul>
-
-        <div class="source-row">
-          <strong style="color: var(--crema, #c9a96e); font-weight: 600;">Primary source</strong><br />
-          <a href="{escape_html(metadata['source_url'])}" target="_blank" rel="noopener noreferrer">{escape_html(metadata['source_name'])} — original article</a>
-        </div>
-
-        <a class="back" href="/blog/blog.html">← Back to journal</a>
-      </article>
-    </main>
-  </div>
-  <script defer src="/scripts/site-atmosphere.js"></script>
-  <script defer src="/scripts/nav.js"></script>
-</body>
-</html>
-"""
 
 
 def main() -> int:

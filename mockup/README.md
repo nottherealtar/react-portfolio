@@ -22,7 +22,7 @@ npm run build && npm run preview
 | Route | Name | Thesis | Inspiration |
 |---|---|---|---|
 | `/redesign/` | Hub | Comparison board | — |
-| `/redesign/ember.html` | Ember | Dark coffee atelier + WebGL | shaders · Active Theory · Design Spells |
+| `/redesign/ember.html` | Ember | Dark coffee atelier + directed brew/build WebGL | shaders · Active Theory · Design Spells |
 | `/redesign/frost.html` | Frost | Light Apple editorial clarity | Apple HIG · UI Guideline · ContentCore |
 | `/redesign/signal.html` | Signal | Kinetic type as product | Typeface Animator · StringTune |
 | `/redesign/stage.html` | Stage | Device cinema / product stage | Rotato · LS.graphics · ProVisual · Spline |

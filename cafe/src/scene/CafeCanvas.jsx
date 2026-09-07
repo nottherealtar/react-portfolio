@@ -1,7 +1,7 @@
 import { AdaptiveDpr, BakeShadows, ContactShadows, Environment, Lightformer, Preload } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Bloom, EffectComposer, SMAA, Vignette } from '@react-three/postprocessing'
-import { Suspense, useEffect, useLayoutEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useCafe } from '../ui/CafeContext'
 import CafeWorld from './CafeWorld'
@@ -44,34 +44,16 @@ const STATIONS = {
   },
 }
 
-function easeInOutCubic(t) {
-  return t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2
-}
-
 function CameraRig({ reduced }) {
   const { station } = useCafe()
   const { camera, size } = useThree()
   const look = useRef(new THREE.Vector3(0.08, 1.16, -0.35))
   const pointer = useRef({ x: 0, y: 0 })
   const pointerSmooth = useRef({ x: 0, y: 0 })
-  const fromPos = useRef(new THREE.Vector3(0.12, 1.52, 6.55))
-  const fromLook = useRef(new THREE.Vector3(0.08, 1.16, -0.35))
-  const fromFov = useRef(34)
   const basePos = useRef(new THREE.Vector3(0.12, 1.52, 6.55))
-  const progress = useRef(1)
   const prevFov = useRef(camera.fov)
-  const ready = useRef(false)
-
-  useLayoutEffect(() => {
-    if (!ready.current) {
-      ready.current = true
-      return
-    }
-    fromPos.current.copy(basePos.current)
-    fromLook.current.copy(look.current)
-    fromFov.current = camera.fov
-    progress.current = 0
-  }, [station, camera])
+  const stationRef = useRef(station)
+  stationRef.current = station
 
   useEffect(() => {
     const onMove = (event) => {
@@ -83,25 +65,27 @@ function CameraRig({ reduced }) {
   }, [])
 
   useFrame((_, delta) => {
-    const next = STATIONS[station] || STATIONS.hero
-    const dt = Math.min(delta, 0.05)
+    const next = STATIONS[stationRef.current] || STATIONS.hero
+    const dt = Math.min(Math.max(delta, 0), 0.08)
     pointerSmooth.current.x = THREE.MathUtils.damp(pointerSmooth.current.x, pointer.current.x, 8, dt)
     pointerSmooth.current.y = THREE.MathUtils.damp(pointerSmooth.current.y, pointer.current.y, 8, dt)
     const parallax = reduced ? 0 : 0.07
     const mobile = size.width < 720
     const px = pointerSmooth.current.x * parallax * (mobile ? 0.28 : 1)
     const py = pointerSmooth.current.y * parallax * 0.28
-    const duration = reduced ? 0.22 : 0.86
-    progress.current = Math.min(1, progress.current + Math.min(delta, 0.1) / duration)
-    const k = reduced ? 1 : easeInOutCubic(progress.current)
-    basePos.current.lerpVectors(fromPos.current, next.position, k)
-    look.current.lerpVectors(fromLook.current, next.target, k)
+    const lambda = reduced ? 14 : 3.35
+    basePos.current.x = THREE.MathUtils.damp(basePos.current.x, next.position.x, lambda, dt)
+    basePos.current.y = THREE.MathUtils.damp(basePos.current.y, next.position.y, lambda, dt)
+    basePos.current.z = THREE.MathUtils.damp(basePos.current.z, next.position.z, lambda, dt)
+    look.current.x = THREE.MathUtils.damp(look.current.x, next.target.x, lambda * 1.08, dt)
+    look.current.y = THREE.MathUtils.damp(look.current.y, next.target.y, lambda * 1.08, dt)
+    look.current.z = THREE.MathUtils.damp(look.current.z, next.target.z, lambda * 1.08, dt)
     camera.position.copy(basePos.current)
     camera.position.x += px
     camera.position.y -= py
     camera.lookAt(look.current)
     const fovTarget = mobile ? Math.min(40, next.fov + 6) : next.fov
-    camera.fov = THREE.MathUtils.lerp(fromFov.current, fovTarget, k)
+    camera.fov = THREE.MathUtils.damp(camera.fov, fovTarget, 3.1, dt)
     if (Math.abs(camera.fov - prevFov.current) > 0.02) {
       prevFov.current = camera.fov
       camera.updateProjectionMatrix()

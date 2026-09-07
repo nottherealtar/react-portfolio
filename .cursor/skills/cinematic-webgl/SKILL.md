@@ -60,7 +60,7 @@ Add architectural millwork the camera will actually see: baseboards, counter nos
 - Hemisphere + tiny ambient only as bounce, not the key
 - ACES filmic + `SRGBColorSpace`; fog that matches the background
 
-Camera: low cinematic FOV (~34), ease-in-out station moves (~0.86s), subtle pointer parallax. Honor `prefers-reduced-motion` (cut parallax, skip particles, offer a 2D fallback).
+Camera: low cinematic FOV (~34), critically damped station moves, subtle pointer parallax. Honor `prefers-reduced-motion` (cut parallax, skip particles, offer a 2D fallback).
 
 ## Shaders and post
 

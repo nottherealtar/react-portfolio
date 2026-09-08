@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>I Wired the Boring 80% So You Can Build the Interesting 20% | TarsOnlineCafe</title>
+  <meta name="description" content="Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query +…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="I Wired the Boring 80% So You Can Build the Interesting 20%">
+  <meta property="og:description" content="Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query +…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="I Wired the Boring 80% So You Can Build the Interesting 20%">
+  <meta name="twitter:description" content="Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query +…">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "I Wired the Boring 80% So You Can Build the Interesting 20%", "description": "Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query +…", "datePublished": "2026-09-08T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Organization", "name": "TarsOnlineCafe"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html"}, "isBasedOn": "https://dev.to/ihssmaheel/i-wired-the-boring-80-so-you-can-build-the-interesting-20-3dfm", "wordCount": 1510}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/67793100.png" type="image/png">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Figtree, system-ui, sans-serif;
+      background: var(--espresso, #050403);
+      color: var(--foam, #f5eee5);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    .page-bg {
+      min-height: 100vh;
+      padding: calc(5.5rem + env(safe-area-inset-top, 0px)) 1rem calc(4rem + env(safe-area-inset-bottom, 0px));
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .article-shell {
+      background: rgba(22, 17, 13, 0.72);
+      border: 1px solid rgba(245, 238, 229, 0.12);
+      border-radius: 18px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--crema, #d4894a);
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      align-items: center;
+      font-size: 0.88rem;
+      color: rgba(245, 238, 229, 0.78);
+      margin-bottom: 1.25rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      border: 1px solid rgba(240, 164, 90, 0.45);
+      color: var(--ember, #f0a45a);
+      background: rgba(240, 164, 90, 0.1);
+    }
+    h1 {
+      font-family: Syne, Figtree, sans-serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.45rem);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+      margin: 0 0 1rem;
+      color: var(--foam, #f5eee5);
+    }
+    .lede {
+      font-size: 1.05rem;
+      color: var(--steamed-milk, #ebe0d2);
+      margin: 0 0 1.75rem;
+    }
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    h2 {
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--crema, #d4894a);
+      margin: 2rem 0 0.65rem;
+      font-weight: 600;
+    }
+    p {
+      margin: 0 0 1rem;
+      color: rgba(235, 224, 210, 0.95);
+    }
+    ul {
+      margin: 0 0 1rem;
+      padding-left: 1.15rem;
+    }
+    li {
+      margin-bottom: 0.55rem;
+      color: rgba(235, 224, 210, 0.95);
+    }
+    a {
+      color: var(--crema, #d4894a);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .source-row {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(245, 238, 229, 0.12);
+      font-size: 0.92rem;
+    }
+    .back {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--foam, #f5eee5);
+      text-decoration: none;
+      border: 1px solid rgba(245, 238, 229, 0.28);
+      border-radius: 999px;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+    .back:hover {
+      border-color: var(--crema, #d4894a);
+      color: var(--ember, #f0a45a);
+      transform: translateY(-1px);
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .src-fig {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(245, 238, 229, 0.1);
+      background: rgba(12, 9, 7, 0.45);
+    }
+    .src-fig img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-08</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>I Wired the Boring 80% So You Can Build the Interesting 20%</h1>
+        <p class="lede">Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + NativeWind (mirrors the web features) Contracts: Zod 4 schemas shared end-to-end — the compiler catches API drift Already wired: fine-grained authorization (RBAC + ReBAC + ABAC), multi-tenancy, GDPR…</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Built for the AI era: a production-ready TypeScript modular monolith with guardrails for robot coworkers. Built for the AI era: a production-ready TypeScript modular monolith with guardrails for robot coworkers. You need auth, multi-tenancy, file uploads, notifications, emails, i18n, a web app, a mobile app, tests, observability… and three weeks later you&#x27;re still wiring boilerplate instead of building the thing that actually matters.</p>
+        <p>So I built the starter I always wished existed: a production-grade modular monolith in TypeScript — one repo, one deployable, zero premature microservices — with all the boring-but-critical stuff already done. It&#x27;s open source and free: fork it, change it, make it yours → https://github.com/ihssmaheel-dev/modular-monolith-starter . AI made it possible to build a working app in a weekend.</p>
+        <p>That&#x27;s amazing — but it&#x27;s also where the trouble starts. Once real users, real data, and real money arrive, so do the questions nobody planned for: Where does this business rule even live? Why does changing one screen break three others?</p>
+        <p>How do we delete a user&#x27;s data when the law says we must? How do we ship mobile without rewriting everything? This starter exists so you can have both: move fast on day one, and still sleep well on day one thousand.</p>
+        <p>No microservice maze when you have three developers and a dream. You can always split later, when (and if) you actually need to. Modular — inside that monolith, every feature ( auth , notes , files , notifications …) is a strict module with walls around it.</p>
+        <p>Modules never touch each other&#x27;s database tables. They talk through clean commands, queries, and events — and CI blocks you if you cheat. Lite DDD — each module has small layers: presentation, application, domain, infrastructure.</p>
+        <p>Just enough structure to keep business logic pure and testable, without the enterprise paperwork. Simple to start, safe to scale — easy for a new developer (or an AI agent) to grasp in an afternoon, and solid when the team grows to twenty. Each domain module follows CQRS: thin controllers, single-responsibility commands and queries, pure domain entities, and Drizzle repositories.</p>
+        <p>Application code never throws — it returns neverthrow Results. The kind of boring that sleeps through the night? oRPC + REST with parity — type-safe RPC by default, REST fallback during migrations, interactive Scalar API docs at /api/docs Fine-grained authorization — one vocabulary ( notes:create , team:invite …), ownership checks, tenant and department predicates, enforced via decorators and services Zero-trust multi-tenancy — single or multi-tenant via one flag, automatic row-level isolation, Postgres RLS as defense in depth…</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>So I built the starter I always wished existed: a production-grade modular monolith in TypeScript — one repo, one deployable, zero premature microservices — with all the boring-but-critical stuff already done. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>You need auth, multi-tenancy, file uploads, notifications, emails, i18n, a web app, a mobile app, tests, observability… and three weeks later you&#x27;re still wiring boilerplate…</li>
+          <li>Modular — inside that monolith, every feature ( auth , notes , files , notifications …) is a strict module with walls around it.</li>
+          <li>Simple to start, safe to scale — easy for a new developer (or an AI agent) to grasp in an afternoon, and solid when the team grows to twenty.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--crema, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/ihssmaheel/i-wired-the-boring-80-so-you-can-build-the-interesting-20-3dfm" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

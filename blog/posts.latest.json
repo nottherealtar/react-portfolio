@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "I Wired the Boring 80% So You Can Build the Interesting 20%",
+      "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
+      "date": "2026-09-08",
+      "summary": "Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + Na",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.",
       "link": "auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html",
       "date": "2026-09-08",
@@ -86,14 +94,6 @@
       "date": "2026-09-03",
       "summary": "That means ensuring the underlying knowledge layer is fresh, secure, accessible, and seamlessly integrated into developer workflows. In our 2026.6 release, we are shipping updates across administrative security, programm",
       "category": "Coding & Careers",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The Economics of Agent Optimization: Context engineering for enterprise AI agents",
-      "link": "auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html",
-      "date": "2026-09-02",
-      "summary": "But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering d",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

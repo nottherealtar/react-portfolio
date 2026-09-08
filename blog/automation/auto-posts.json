@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F70jia83rnszf8lez9bdl.png"
   },
   {
+    "title": "I Wired the Boring 80% So You Can Build the Interesting 20%",
+    "date": "2026-09-08",
+    "category": "Coding & Community",
+    "summary": "Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + NativeWind (mirrors the web features) Contracts: Zod 4 schemas shared end-to-end — the compiler catches API drift Already wired: fine-grained authorization (RBAC + ReBAC + ABAC), multi-tenancy, GDPR…",
+    "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
+    "source_url": "https://dev.to/ihssmaheel/i-wired-the-boring-80-so-you-can-build-the-interesting-20-3dfm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
     "date": "2026-09-07",
     "category": "Coding & Community",

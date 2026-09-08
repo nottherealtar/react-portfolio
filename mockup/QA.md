@@ -12,11 +12,9 @@ Production site (`https://www.tarsonlinecafe.work`) stays **unchanged** until yo
 
 ## Public QA
 
-- https://temporary-racing-mercury-tzx66rp.vercel.app/ (claimed mercury — may lag if Vercel daily deploy cap is hit)
-- https://tarsonline-ember-qa.vercel.app/ (**canonical QA** — prerendered; Contact still 404 until claim below lands)
-- **Claim now (Contact-fixed, ~60m):** https://temporary-zippy-oasis-jvec8zm.vercel.app/  
-  Claim into `tarsonline-ember-qa`: https://vercel.com/claim-deployment?code=dabdf8af-0fe4-4f28-90e4-27a9a04ba034  
-  Verified: prerendered, `POST /api/submit-contact` → **503**, `GET …/submit-contact.js` → **405**
+**Canonical host only:** Vercel project **`tarsonline-ember-qa`** → https://tarsonline-ember-qa.vercel.app/
+
+Do **not** use anonymous `vercel deploy --temporary` / claim-deployment flows for this redesign. Always deploy into `tarsonline-ember-qa` (MCP `deploy_to_vercel` with `name=tarsonline-ember-qa`, or CLI linked to that project).
 
 QA still uses `noindex` + `robots.txt` Disallow until cutover.
 
@@ -27,18 +25,16 @@ Josh’s Vercel team is **Hobby**. When hit, you will see either:
 - Git status: `Deployment rate limited — retry in 24 hours`
 - MCP/API: `402 api-deployments-free-per-day` with `remaining: 0`
 
-Neither is a Cursor “cap” — it is the Vercel Hobby daily deployment quota. Upgrade the team to Pro **or** wait for reset, **or** use the anonymous temporary path below (expires ~60 minutes unless claimed).
+Neither is a Cursor “cap” — it is the Vercel Hobby daily deployment quota. Upgrade the team to Pro **or** wait for reset. Do not fall back to temporary/claim for Ember QA.
 
-### Redeploy recipe (self-contained)
+### Redeploy recipe (self-contained → `tarsonline-ember-qa`)
 
 1. Push a commit that updates `ember-qa/` (`cd mockup && npm run build:ember-qa`).
 2. `bash scripts/prepare-ember-qa-vercel.sh <sha>` — builds `.tmp-ember-qa-vercel/` with:
    - static site under `public/`
    - **`api/submit-contact.js` at project root** (serverless; never nest under `public/` or POSTs 404)
-3. Deploy that tree:
-   - Prefer MCP `deploy_to_vercel` / git-linked project with `rootDirectory=ember-qa` when quota allows.
-   - **Bypass when Hobby-capped:** from `.tmp-ember-qa-vercel/`, run `vercel deploy --temporary --yes` (anonymous). Verify, then **claim** the deployment into `tarsonline-ember-qa` via the printed claim URL so it stays durable.
-4. Verify: `data-prerendered="true"`, Blog nav, `/robots.txt` Disallow, `POST /api/submit-contact` returns **503** until `WEB3FORMS_ACCESS_KEY` is set (not 404). `GET /api/submit-contact.js` must **not** return the handler source as static JS (expect 405 from the serverless function).
+3. Deploy that tree **into project `tarsonline-ember-qa`** via MCP `deploy_to_vercel` (`target=production`, `name=tarsonline-ember-qa`, `outputDirectory=public`) or CLI linked to the same project.
+4. Verify: `data-prerendered="true"`, `/assets/*` **200**, Blog nav, `/robots.txt` Disallow, `POST /api/submit-contact` returns **503** until `WEB3FORMS_ACCESS_KEY` is set on this QA project (not 404). `GET /api/submit-contact.js` must **not** return the handler source as static JS (expect 405).
 
 ### Production blog chrome when git deploy is rate-limited
 

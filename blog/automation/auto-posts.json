@@ -1,5 +1,18 @@
 [
   {
+    "title": "I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.",
+    "date": "2026-09-08",
+    "category": "Coding & Community",
+    "summary": "I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel=\"dofollow\" , visible in the server-rendered HTML that Googlebot receives. The marketing copy and the actual markup did not agree.",
+    "link": "auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html",
+    "source_url": "https://dev.to/norabennett_music/i-ran-22-directory-submissions-with-playwright-in-one-day-here-is-what-actually-blocked-me-1egh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F70jia83rnszf8lez9bdl.png"
+  },
+  {
     "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
     "date": "2026-09-07",
     "category": "Coding & Community",

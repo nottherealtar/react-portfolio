@@ -29,7 +29,6 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="/styles/themes.css">
     <link rel="stylesheet" href="/styles/site-atmosphere.css">
-    <link rel="stylesheet" href="/styles/spacing.css">
     <link rel="stylesheet" href="/styles/nav.css">
     <link rel="stylesheet" href="/styles/showcase.css">
     <link rel="stylesheet" href="/styles/ember-blog.css">
@@ -37,6 +36,19 @@
     <style>
         /* Layout + feed chrome live in /styles/ember-blog.css */
         .blog-page { min-height: 100vh; }
+        .blog-page .section-inner {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          min-width: 0 !important;
+        }
+        .blog-page .blog-list,
+        .blog-page .blog-card,
+        .blog-page .blog-card.featured {
+          min-width: 0 !important;
+          max-width: 100% !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
         .empty-state {
             padding: 2rem 1.25rem;
             border: 1px dashed var(--line, rgba(245,238,229,.12));

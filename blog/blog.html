@@ -3,27 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Blog | Joshua Coetzer</title>
+    <title>Automation Blog | Joshua Coetzer — TarsOnlineCafe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="/67793100.png" type="image/png">
+    <link rel="icon" href="/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/blog.html">
-    <meta name="description" content="Automation, integration, and AI implementation insights curated for real business outcomes.">
-    <meta name="keywords" content="automation blog, integration, AI workflows, API, Azure, Freshworks, operations">
+    <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+    <meta name="description" content="Automation, integration, and AI implementation briefs from Joshua Coetzer — Azure, Freshworks, APIs, and ops workflows curated for real business outcomes.">
+    <meta name="keywords" content="automation blog, integration, AI workflows, API, Azure, Freshworks, operations, Joshua Coetzer, TarsOnlineCafe">
     <meta name="author" content="Joshua Coetzer">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="theme-color" content="#050403">
-    <meta property="og:title" content="Blog | Joshua Coetzer">
-    <meta property="og:description" content="Automation, integration, and AI implementation insights for real business outcomes.">
+    <meta property="og:title" content="Automation Blog | Joshua Coetzer — TarsOnlineCafe">
+    <meta property="og:description" content="Automation, integration, and AI implementation briefs for real business outcomes.">
     <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/blog.html">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.tarsonlinecafe.work/67793100.png">
+    <meta property="og:site_name" content="TarsOnlineCafe">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="TarsOnlineCafe — Joshua Coetzer">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Blog | Joshua Coetzer">
-    <meta name="twitter:description" content="Automation, integration, and AI implementation insights for real business outcomes.">
-    <meta name="twitter:image" content="https://www.tarsonlinecafe.work/67793100.png">
-
+    <meta name="twitter:title" content="Automation Blog | Joshua Coetzer — TarsOnlineCafe">
+    <meta name="twitter:description" content="Automation, integration, and AI implementation briefs for real business outcomes.">
+    <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://www.tarsonlinecafe.work/blog/blog.html#blog",
+          "name": "TarsOnlineCafe Automation Blog",
+          "url": "https://www.tarsonlinecafe.work/blog/blog.html",
+          "description": "Automation, integration, and AI implementation briefs curated for real business outcomes.",
+          "inLanguage": "en-ZA",
+          "publisher": {
+            "@type": "Organization",
+            "name": "TarsOnlineCafe",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.tarsonlinecafe.work/logo.png"
+            }
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Joshua Coetzer",
+            "url": "https://www.tarsonlinecafe.work/"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.tarsonlinecafe.work/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.tarsonlinecafe.work/blog/blog.html"
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.tarsonlinecafe.work/blog/blog.html",
+          "url": "https://www.tarsonlinecafe.work/blog/blog.html",
+          "name": "Automation Blog | Joshua Coetzer",
+          "isPartOf": { "@id": "https://www.tarsonlinecafe.work/blog/blog.html#blog" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.tarsonlinecafe.work/blog/blog.html?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -159,6 +226,31 @@
             let searchQuery = '';
             const searchHayCache = new WeakMap();
 
+            function readSearchFromUrl() {
+                try {
+                    const params = new URLSearchParams(window.location.search);
+                    return (params.get('q') || params.get('search') || '').trim();
+                } catch (_) {
+                    return '';
+                }
+            }
+
+            function syncSearchToUrl(value) {
+                try {
+                    const url = new URL(window.location.href);
+                    const next = (value || '').trim();
+                    if (next) url.searchParams.set('q', next);
+                    else url.searchParams.delete('q');
+                    url.searchParams.delete('search');
+                    window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+                } catch (_) { /* ignore */ }
+            }
+
+            const initialQ = readSearchFromUrl();
+            if (initialQ && searchInput) {
+                searchInput.value = initialQ;
+                searchQuery = initialQ;
+            }
             const formatDate = (value) => {
                 const parsed = new Date(value);
                 if (Number.isNaN(parsed.getTime())) return value;
@@ -403,6 +495,7 @@
 
             searchInput.addEventListener('input', () => {
                 searchQuery = searchInput.value;
+                syncSearchToUrl(searchQuery);
                 updateSearchExpand();
                 render();
             });

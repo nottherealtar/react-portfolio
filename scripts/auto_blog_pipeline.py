@@ -1081,16 +1081,22 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
     canonical_raw = (metadata.get("canonical_url") or "").strip()
     canonical = escape_html(canonical_raw)
     og_title = escape_html(metadata["title"])
-    og_image_raw = (metadata.get("og_image") or "").strip()
-    twitter_card = "summary_large_image" if og_image_raw else "summary"
-    og_image_tag = ""
-    if og_image_raw:
-        og_escaped = escape_html(og_image_raw)
-        og_image_tag = (
-            f'\n  <meta property="og:image" content="{og_escaped}">\n'
-            f'  <meta property="og:image:alt" content="{og_title}">\n'
-            f'  <meta name="twitter:image" content="{og_escaped}">'
+    default_og = "https://www.tarsonlinecafe.work/og-share.png"
+    og_image_raw = (metadata.get("og_image") or "").strip() or default_og
+    using_default_og = og_image_raw == default_og
+    twitter_card = "summary_large_image"
+    og_escaped = escape_html(og_image_raw)
+    og_image_tag = (
+        f'\n  <meta property="og:image" content="{og_escaped}">\n'
+        f'  <meta property="og:image:alt" content="{og_title}">\n'
+        f'  <meta name="twitter:image" content="{og_escaped}">'
+    )
+    if using_default_og:
+        og_image_tag += (
+            '\n  <meta property="og:image:width" content="1200">'
+            '\n  <meta property="og:image:height" content="630">'
         )
+    article_published = escape_html(f"{metadata['date']}T12:00:00.000Z")
     body_paragraphs: List[str] = list(metadata.get("body_paragraphs") or [])
     body_section = ""
     if body_paragraphs:
@@ -1107,9 +1113,22 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
         "headline": metadata["title"],
         "description": metadata.get("meta_description") or metadata["summary"],
         "datePublished": f"{metadata['date']}T12:00:00.000Z",
-        "inLanguage": metadata.get("language") or "en",
-        "author": {"@type": "Organization", "name": "TarsOnlineCafe"},
-        "publisher": {"@type": "Organization", "name": "TarsOnlineCafe"},
+        "dateModified": f"{metadata['date']}T12:00:00.000Z",
+        "inLanguage": metadata.get("language") or "en-ZA",
+        "author": {
+            "@type": "Person",
+            "name": "Joshua Coetzer",
+            "url": "https://www.tarsonlinecafe.work/",
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TarsOnlineCafe",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.tarsonlinecafe.work/logo.png",
+            },
+        },
+        "image": og_image_raw,
         "mainEntityOfPage": {"@type": "WebPage", "@id": canonical_raw} if canonical_raw else None,
     }
     source_url = (metadata.get("source_url") or "").strip()
@@ -1118,8 +1137,6 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
     wc = int(metadata.get("word_count") or 0)
     if wc > 0:
         json_ld["wordCount"] = wc
-    if og_image_raw:
-        json_ld["image"] = og_image_raw
     json_ld = {k: v for k, v in json_ld.items() if v is not None}
     ld_block = _json_ld_script(json_ld)
 
@@ -1132,6 +1149,7 @@ def render_post_html(metadata: Dict[str, Any]) -> str:
             "og_title": og_title,
             "twitter_card": twitter_card,
             "og_image_tag": og_image_tag,
+            "article_published": article_published,
             "ld_block": ld_block,
             "category": category,
             "read_min": str(read_min),

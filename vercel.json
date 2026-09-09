@@ -20,9 +20,46 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600" },
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/blog/rss.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=1800, s-maxage=1800" },
+        { "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/og-share.png",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
     }
   ],
   "rewrites": [
+    { "source": "/feed", "destination": "/blog/rss.xml" },
+    { "source": "/feed.xml", "destination": "/blog/rss.xml" },
+    { "source": "/rss.xml", "destination": "/blog/rss.xml" },
     { "source": "/qa", "destination": "/redesign/ember.html" },
     { "source": "/qa/", "destination": "/redesign/ember.html" },
     { "source": "/redesign", "destination": "/redesign/index.html" },

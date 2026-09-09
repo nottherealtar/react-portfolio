@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TarsOnlineCafe Blog — Automation Signals</title>
+    <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
+    <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
+    <language>en-za</language>
+    <lastBuildDate>Wed, 09 Sep 2026 07:25:12 +0000</lastBuildDate>
+    <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
+    <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>I Wired the Boring 80% So You Can Build the Interesting 20%</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + NativeWind (mirrors the web features) Contracts: Zod 4 schemas shared end-to-end — the compiler catches API drift Already wired: fine-grained authorization (RBAC + ReBAC + ABAC), multi-tenancy, GDPR…</description>
+    </item>
+    <item>
+      <title>I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel="dofollow" , visible in the server-rendered HTML that Googlebot receives. The marketing copy and the actual markup did not agree.</description>
+    </item>
+    <item>
+      <title>Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The agent decides which tools to invoke based on user intent, then coordinates state across tool calls. This decouples the LLM from API churn. Semantic search indexes data from connected apps.</description>
+    </item>
+    <item>
+      <title>Building Automation LLMs: What 66 Studies Reveal About Deploying Agents in HVAC Systems</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html</guid>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A new systematic review of 66 peer-reviewed studies on LLMs for HVAC operations exposes the plumbing challenges when agents must parse heterogeneous sensor streams, normalize metadata, and make decisions in physical systems where failure modes include frozen pipes and carbon monoxide buildup. It does not predict sensor values.</description>
+    </item>
+    <item>
+      <title>Preventing Duplicate Side Effects in Event-Driven Systems</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>For example, consider an automation system where a user action eventually triggers an external API call: User Action --&gt; Webhook --&gt; Event Queue --&gt; Worker --&gt; External API If the worker crashes after the external API accepts the request but before our database records the result, we have an ambiguous state. Therefore, every queue consumer that performs an external side effect should be safe to retry.</description>
+    </item>
+    <item>
+      <title>OpenAI Launches GPT-6 Astra With Computer Use Tools and Broad Platform Rollout</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>OpenAI’s official GPT-6 Astra announcement establishes the substantive news: a staged, multi-platform deployment with defined API pricing, large context capacity and capabilities aimed at completing more complex digital tasks. For businesses, the important question is less whether Astra is unusual and more whether its computer-use functions can reliably reduce manual work in existing processes.</description>
+    </item>
+    <item>
+      <title>10 Practical Things You Can Build With n8n and MCP</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request actions, and hand off to humans when needed. A read-only “what automations do we have?” assistant Scenario: Your team has dozens of n8n workflows.</description>
+    </item>
+    <item>
+      <title>Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html</guid>
+      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The release gives developers, paid Gemini users and Gemini Enterprise customers different routes to use the general model, with a separate access program for the cybersecurity model. Google says Gemini 3.8 Flash shares a foundational intelligence with the Cyber variant and is accelerated by agentic loops.</description>
+    </item>
+    <item>
+      <title>Remote MCP Servers: Connecting and Securing SaaS Tools</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260903-remote-mcp-servers-connecting-and-securing-saas-tools-f257e014.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260903-remote-mcp-servers-connecting-and-securing-saas-tools-f257e014.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Connecting remote MCP servers directly to local AI clients creates credential sprawl, audit blind spots, and unmonitored SaaS API access. Deploying a dedicated gateway unifies remote tool connections over Server-Sent Events (SSE) and Streamable HTTP into a single authenticated interface.</description>
+    </item>
+    <item>
+      <title>PlayStation State Of Play September 2026: All The Biggest Announcements, Games, And Trailers</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260903-playstation-state-of-play-september-2026-all-the-biggest-ann-f9a0023f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260903-playstation-state-of-play-september-2026-all-the-biggest-ann-f9a0023f.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming News</category>
+      <description>Some of the highlights included an April 2027 release date for Final Fantasy 7 Revelation , a sneak peek at the Resident Evil movie, and a stacked selection of games being developed by Asian studios. Up next was Ghost of Yotei, and fans looking to test their mettle--and their metal--can get ready for a new hardcore roguelite survival mode in single-player.</description>
+    </item>
+    <item>
+      <title>How Microsoft’s Physical Security Engineering Team scaled hybrid operations with Azure Arc and Azure Virtual Desktop</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260903-how-microsoft-s-physical-security-engineering-team-scaled-hy-ca0a43f6.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260903-how-microsoft-s-physical-security-engineering-team-scaled-hy-ca0a43f6.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>When a physical security operator begins a shift supporting Microsoft’s global datacenter operations, they depend on a collection of applications and systems that help monitor access activity, review video feeds, investigate alerts, and coordinate physical security operations across a complex global environment.</description>
+    </item>
+    <item>
+      <title>Elevating security, control, and accessibility: Stack Internal 2026.6</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html</guid>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>That means ensuring the underlying knowledge layer is fresh, secure, accessible, and seamlessly integrated into developer workflows. In our 2026.6 release, we are shipping updates across administrative security, programmatic API control, developer portal integrations, and platform-wide accessibility—ensuring both your engineers and your AI agents act on verified, decision-grade knowledge.</description>
+    </item>
+    <item>
+      <title>The Economics of Agent Optimization: Context engineering for enterprise AI agents</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering does: it decides what enters the context window on each turn, so the agent gets what this request needs rather than everything it might ever need.</description>
+    </item>
+    <item>
+      <title>I Tried Needle2 for Local Tool Calling. I Ended Up With llama.cpp + Granite</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Needle2 is tiny, focused on tool calling and structured extraction, and designed to run locally. Another thing I learned quickly was how sensitive a small model is to tool descriptions. For the shell itself I wanted native integration.</description>
+    </item>
+    <item>
+      <title>Ensuring Code Compliance in Public Sector Software Projects</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260901-ensuring-code-compliance-in-public-sector-software-projects-93149f8a.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260901-ensuring-code-compliance-in-public-sector-software-projects-93149f8a.html</guid>
+      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>Public sector software compliance cheat sheet Strict standards apply across public sector software for data protection, security controls, accessibility, and supply chain transparency. Using weak and outdated cryptography is another compliance risk, as it leaves public sector software vulnerable to attacks.</description>
+    </item>
+    <item>
+      <title>What Bridgeless Mode Actually Changed in React Native</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>I have seen the Bridge evolve from a revolutionary idea into the primary architectural constraint for high-performance apps. The release of React Native’s New Architecture—specifically Bridgeless Mode—is not just a performance patch. In the legacy architecture, the JavaScript thread and the Native thread lived in total isolation.</description>
+    </item>
+    <item>
+      <title>Introducing Azure Multicloud Interconnect for AWS</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-introducing-azure-multicloud-interconnect-for-aws-1621f670.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-introducing-azure-multicloud-interconnect-for-aws-1621f670.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>Azure Multicloud Interconnect helps make that possible by providing resilient, high-performance, private connectivity between Azure and AWS through a simplified, cloud-native experience. Together, we are reducing the complexity of multicloud networking and giving customers the scale, reliability, and agility they need to power the next generation of AI and data-driven innovation.</description>
+    </item>
+    <item>
+      <title>Case Study: Scaling Smart Teleassistance Voice Routing with Edge Compute and Zero-Cold-Start Cascades</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html</guid>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Whether you are managing an SRE team handling cluster failures or a teleassistance platform routing domestic SOS alerts, the core engineering challenge remains identical: getting a human's attention in milliseconds without administrative friction.</description>
+    </item>
+    <item>
+      <title>Why Salesforce? Where Technology Meets Business</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260830-why-salesforce-where-technology-meets-business-eea5c94c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260830-why-salesforce-where-technology-meets-business-eea5c94c.html</guid>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>For someone with a technical background and experience across development , automation , customer interaction , sales and digital processes , that combination is particularly interesting. And a Case can represent a customer service issue that needs to be managed. Instead of simply generating and forwarding leads, CRM platforms can provide a structured environment for managing the entire relationship.</description>
+    </item>
+    <item>
+      <title>Browser Automation and Proxies: Complete Integration Guide for Selenium, Puppeteer, and Playwright</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260830-browser-automation-and-proxies-complete-integration-guide-fo-be4705d7.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260830-browser-automation-and-proxies-complete-integration-guide-fo-be4705d7.html</guid>
+      <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Distributing requests across IP addresses — masking automation as diverse traffic Bypassing geographic restrictions — accessing location-gated content Reducing detection risk — rotating datacenter, residential, or mobile IPs Load balancing — scaling volume across proxy pools instead of melting a single connection The tradeoff: slower requests (proxy adds latency), increased costs (~$5–50/GB depending on type), and…</description>
+    </item>
+    <item>
+      <title>A Simulation ID Is Not a Running Simulation</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>MiroFish answered that the simulation had not been prepared. A typed client can still encode the wrong lifecycle I started with the reasonable model: upload context, ask MiroFish to build a graph, start a simulation, then fetch its report. Graph construction did return a task ID and required polling.</description>
+    </item>
+    <item>
+      <title>The State of Django 2026: Boring is so back</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260828-the-state-of-django-2026-boring-is-so-back-b2b6fc04.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260828-the-state-of-django-2026-boring-is-so-back-b2b6fc04.html</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>AI is mainstream, but no workflow has won AI has become part of the normal Django development workflow. What remains unsettled is how developers use them. Python tooling is consolidating fast Two tools that barely existed a few years ago are already near the top of the survey.</description>
+    </item>
+    <item>
+      <title>Panic refunds tariff fees, 1047 Games pivots from Splitgate, and Gamescom Dev grows - Patch Notes #67</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260828-panic-refunds-tariff-fees-1047-games-pivots-from-splitgate-a-1d1e5df5.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260828-panic-refunds-tariff-fees-1047-games-pivots-from-splitgate-a-1d1e5df5.html</guid>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Game Development</category>
+      <description>There was barely any room in between announcements, with tonally distinct games being shown back to back at breakneck speed. Playdate maker Panic is refunding tariff fees to customers via Game Developer // Good news is getting increasingly rare, so it's worth highlighting when we get some.</description>
+    </item>
+    <item>
+      <title>Managed PostgreSQL vs. self-hosted PostgreSQL: Key benefits and trade-offs</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260827-managed-postgresql-vs-self-hosted-postgresql-key-benefits-an-4daf025d.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260827-managed-postgresql-vs-self-hosted-postgresql-key-benefits-an-4daf025d.html</guid>
+      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>It compares two valid operating models—self-managed PostgreSQL and a managed database service—through business and operational outcomes: control, engineering capacity, resilience, security, cost predictability, risk tolerance, and access to specialist expertise. In a self-hosted scenario (e.g.</description>
+    </item>
+    <item>
+      <title>Google Expands Gemini Into an Agent Platform for Building and Running Business AI</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>What Gemini Enterprise Agent Platform brings together Google describes the Agent Platform as the runtime and governance layer for production-scale AI agents. Google also positions the Gemini Enterprise app as an employee-facing front end for delivering agents inside an organization.</description>
+    </item>
+    <item>
+      <title>The patch window is collapsing: Why security needs a new control plane</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260825-the-patch-window-is-collapsing-why-security-needs-a-new-cont-dbcd4420.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260825-the-patch-window-is-collapsing-why-security-needs-a-new-cont-dbcd4420.html</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>At the same time, vulnerabilities are becoming more visible, more widely distributed, and more rapidly weaponized than ever before. It is time to rethink how the industry approaches security during the critical period between disclosure and remediation. Many organizations find themselves in a position where they know exactly which systems are vulnerable but cannot immediately patch them.</description>
+    </item>
+    <item>
+      <title>I built agent-inspect to debug TypeScript AI agent trajectories</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260825-i-built-agent-inspect-to-debug-typescript-ai-agent-trajector-e239cf37.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260825-i-built-agent-inspect-to-debug-typescript-ai-agent-trajector-e239cf37.html</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Output only tests could miss a bad path that happened to produce a plausible answer. AgentInspect is a local evidence debugger and trajectory-test toolkit for TypeScript AI agents. It turns one local trace into three things: a readable execution tree, a deterministic regression gate, and a derived Evidence v2 bundle that you can review before sharing.</description>
+    </item>
+    <item>
+      <title>Anthropic's Best Model Can't Hold Users</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260825-anthropic-s-best-model-can-t-hold-users-1f404465.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260825-anthropic-s-best-model-can-t-hold-users-1f404465.html</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Here is what it shows for Anthropic's model mix: Opus 4.8: ~50% of spend (surged from 15% in June) Opus 5: Mid-teens percent (overtook Fable within weeks of July 24 launch) Fable 5: ~11% (plateaued since June launch) The pattern is unmistakable. At that premium, it needs to deliver 2x the value per task. The AI pricing landscape has undergone a structural shift in 2026.</description>
+    </item>
+    <item>
+      <title>What Broke When We Turned Government Open Data Into Agent-Callable Evidence</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260824-what-broke-when-we-turned-government-open-data-into-agent-ca-ba374c50.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260824-what-broke-when-we-turned-government-open-data-into-agent-ca-ba374c50.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>It is not enough for a production system that has to answer a consequential question next month, after the publisher changes a field, caps a response, moves an endpoint, or returns an empty page that looks exactly like “there are no records.</description>
+    </item>
+    <item>
+      <title>Taming Kubernetes Cost Sprawl: A FinOps Blueprint for Executives</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260824-taming-kubernetes-cost-sprawl-a-finops-blueprint-for-executi-1834f492.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260824-taming-kubernetes-cost-sprawl-a-finops-blueprint-for-executi-1834f492.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>For many CEOs, CTOs, and business executives, the promise of Kubernetes-driven efficiency is often overshadowed by opaque, escalating cloud bills. The dynamic nature of Kubernetes deployments, coupled with its resource abstraction, makes it notoriously difficult to track, attribute, and optimize spending — leading to what we call Kubernetes Cost Sprawl .</description>
+    </item>
+    <item>
+      <title>Responsible AI adoption needs developer workflow design</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260824-responsible-ai-adoption-needs-developer-workflow-design-fab3583e.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260824-responsible-ai-adoption-needs-developer-workflow-design-fab3583e.html</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>Stack Overflow's developer AI adoption and trust findings show why this operational focus matters: 84% of respondents use or plan to use AI tools, while more developers distrust AI accuracy than trust it. By the time an engineer pastes sensitive material into a public model or quietly installs an unapproved coding assistant, the organization has already failed to provide a credible route for getting the work done.</description>
+    </item>
+    <item>
+      <title>Silent Hill: Townfall's new gameplay trailer quietly confirms how long its PS5 exclusivity will last</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260822-silent-hill-townfall-s-new-gameplay-trailer-quietly-confirms-c473789b.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260822-silent-hill-townfall-s-new-gameplay-trailer-quietly-confirms-c473789b.html</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Gaming News</category>
+      <description>A new Silent Hill: Townfall gameplay trailer has offered up over 18 minutes of first-look footage while also quietly confirming exactly how long the game's PlayStation 5 exclusivity will last. No major plot beats are spoiled, though anyone wanting to go in completely blind may still want to give it a miss. Alongside reiterating that Townfall is a PS5 console exclusive, a caption confirmed: "Also available on PC.</description>
+    </item>
+    <item>
+      <title>Metal Gear Solid 4: Guns of the Patriots review</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-metal-gear-solid-4-guns-of-the-patriots-review-ea7ae30f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-metal-gear-solid-4-guns-of-the-patriots-review-ea7ae30f.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>This is a stealth game that doesn't mind if you try to play it like Call of Duty, but going loud comes at the cost of stressing Snake the fuck out. More than anything else though, MGS4's long exile has given me a new appreciation for its extremely balanced stealth. Replaying Guns of the Patriots and Splinter Cell: Chaos Theory in the same year is highlighting just how bland open worlds have made level design.</description>
+    </item>
+    <item>
+      <title>How AI accounting startup Rillet raised $100M and became a unicorn in 48 hours</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-how-ai-accounting-startup-rillet-raised-100m-and-became-a-un-e1b06620.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-how-ai-accounting-startup-rillet-raised-100m-and-became-a-un-e1b06620.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>His customers aren’t piloting Rillet either, he said — they’re yanking out ERP and accounting software from competitors like Intuit, NetSuite, or Oracle. “Rillet’s initial wedge is accounting, but ultimately they are reinventing the entire finance function,” Bek told TechCrunch, adding that agentic finance could become “one of the largest application software opportunities of the AI era.</description>
+    </item>
+    <item>
+      <title>Dispatches from O'Reilly: The right amount of spec for agentic development</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>In the agent world, vague requirements run into machine speed. That’s why specification suddenly feels important again. But the real problem lives upstream, in the spec, so fixing it means unwinding code and reasoning together.</description>
+    </item>
+    <item>
+      <title>An AI Agent Has Run This SaaS for 580+ Sessions. It Has Zero Customers.</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-c-a845d387.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-c-a845d387.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>This post was written by the AI agent that operates Merlonix, during working session 583 of the experiment. Every session spawns parallel bug-hunting subagents across domains — security, RLS isolation, race conditions, swallowed errors, revenue leaks — plus seven "officer" personas (CTO, customer, revenue, innovation, style, SEO, AI/automation) that review the business the way a fractional exec would.</description>
+    </item>
+    <item>
+      <title>Identity Infrastructure: Why Credentials Are the Layer Directories Don't Secure</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260820-identity-infrastructure-why-credentials-are-the-layer-direct-2bc8d001.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260820-identity-infrastructure-why-credentials-are-the-layer-direct-2bc8d001.html</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A mature identity infrastructure secures both the governance plane (directories, identity providers, lifecycle management) and the credential plane (exposure detection, ownership, vault coverage, secrets hygiene). This is where modern identity infrastructure extends beyond the directory: into the credentials moving through code, pipelines, collaboration tools, and developer environments.</description>
+    </item>
+    <item>
+      <title>AI Won't Replace Project Managers, But It is Reshaping How Work Gets Done</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260820-ai-won-t-replace-project-managers-but-it-is-reshaping-how-wo-20eb3ca2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260820-ai-won-t-replace-project-managers-but-it-is-reshaping-how-wo-20eb3ca2.html</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>AI-Augmented Delivery AI is shifting project managers’ time from manual coordination to strategic work. Instead, they become a Systems Architect, coordinating a workforce made up of both humans and intelligent agents. Implementing AI exposes hidden operational debt, and technical leaders must be prepared for the friction.</description>
+    </item>
+    <item>
+      <title>TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>TypeScript Exclude and Extract in Depth: Filtering Union Types for Real API Contracts Most union type problems stem from treating them as static lists instead of transformable sets. Exclude&lt;T, U&gt; removes unwanted types before they reach production code. Combining Exclude and Extract with conditional types enables self-documenting type transformations that encode business rules directly in the type system.</description>
+    </item>
+    <item>
+      <title>New in Air: Claude Subscriptions, Multiproject View, and Improved Markdown</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260819-new-in-air-claude-subscriptions-multiproject-view-and-improv-14343906.html</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one thing – that you’re logged in. If you have Claude set up to work in Air via ACP, we suggest switching to the bundled Claude Agent for better functionality and an enhanced experience.</description>
+    </item>
+    <item>
+      <title>Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>How should a SaaS app compare compatible chat completions behind one API key? A useful fixture includes a ticket ID, redacted text, allowed destination queues, expected urgency, and an annotation note for ambiguous cases. This design also separates inference attempts from business effects: operators may retry a transient call, but only one validated decision can win the commit.</description>
+    </item>
+    <item>
+      <title>Readme</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260818-readme-0c66fe7e.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260818-readme-0c66fe7e.html</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>No source-code changes are required. Configure the dedicated Oracle metadata schema: Set a strong application admin password: Do not reuse the Oracle or Ollama credential. Point the backend at the organisation Ollama server: The API key is read only by FastAPI and is never sent to the React browser.</description>
+    </item>
+    <item>
+      <title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260817-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-3a88122c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260817-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-3a88122c.html</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>Microsoft has been named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms , which we believe recognizes the platforms organizations rely on to build, deploy, and operate cloud-native applications at scale.</description>
+    </item>
+    <item>
+      <title>Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A useful state machine is accepted -&gt; streaming -&gt; validated with terminal alternatives such as rejected , invalid , and abandoned . Now consider the opposite ordering: the adapter completes, validation passes, persistence commits, and the socket closes one instruction before the terminal event reaches the browser.</description>
+    </item>
+    <item>
+      <title>An Index Suggestion Is a Hypothesis, Not a Patch</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A free disposable server lets you repeat the same before-and-after measurement on a second copy of the data, which catches the cases where your local experiment was too small to show the real cost or too artificial to match your query mix. A better prompt is not 'Is this query slow?' but 'Given this schema and this query, propose one index and tell me the smallest test that would show it helps.</description>
+    </item>
+    <item>
+      <title>5 Things I Check First When a Linux Server Goes Down</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260816-5-things-i-check-first-when-a-linux-server-goes-down-0eb68ddc.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260816-5-things-i-check-first-when-a-linux-server-goes-down-0eb68ddc.html</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Here are the 5 things I check first whenever a Linux server goes down, crashes, or stops responding. Resource Starvation, System Load, and the OOM Killer If you can log in, but commands take thirty seconds to execute or web services fail to reply, the system is likely suffering from resource starvation. b (blocked processes): A high count indicates processes stuck waiting for disk or network I/O.</description>
+    </item>
+    <item>
+      <title>"half-open" twice is not the same state: the bug that shaped breakwater 1.0</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>When the cooldown elapses, exactly one of them probes the recovering dependency while the rest keep waiting. The instance decides: reopen the circuit. The real fix: identify the period, not the state The fix is a fence — a monotonic token the store mints on every successful transition: The swap lands only if the state is still from and nothing has transitioned since you read that fence.</description>
+    </item>
+    <item>
+      <title>EverShop 2.2.1: our biggest release since 2.0 — page builder, metafields, and React 19</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260814-evershop-2-2-1-our-biggest-release-since-2-0-page-builder-me-e905a82f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260814-evershop-2-2-1-our-biggest-release-since-2-0-page-builder-me-e905a82f.html</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>It folds in the React 19 work that had been sitting in an unpublished 2.1.3 branch and stacks four months of development on top of it: a visual page builder, a blog module, entity custom fields, a multi-language storefront with a translated admin, a rebuilt shipping and fulfillment stack, built-in cloud storage, product recommendations, and a serious security and performance pass.</description>
+    </item>
+    <item>
+      <title>AI Code Review - How to Automate Quality Control in 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260814-ai-code-review-how-to-automate-quality-control-in-2026-2eba64f6.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260814-ai-code-review-how-to-automate-quality-control-in-2026-2eba64f6.html</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>AI code review reasons about code contextually, catching bugs and security vulnerabilities that rule-based static analysis tools miss It is most reliable for security vulnerabilities, logic errors, performance patterns, and API misuse; it struggles with novel business logic bugs and system-level architectural problems The most effective integration triggers a review when a PR is opened and posts findings as inline…</description>
+    </item>
+    <item>
+      <title>Your guide to GitHub Universe 2026 is here: The schedule just launched!</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>This demo builds a stack with the GitHub CLI, reviews it on github.com, and merges each pull request as it’s ready—so you leave with a workflow you can use tomorrow. At Home Assistant, every step happens in the open across 20,000 contributors and a dozen GitHub organizations.</description>
+    </item>
+  </channel>
+</rss>

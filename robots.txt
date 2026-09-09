@@ -1,28 +1,59 @@
-# Robots.txt for tarsonlinecafe.work
-# Allow all web crawlers to access the site
+# https://www.tarsonlinecafe.work
+# Prefer HTTPS www host. Index public pages; keep tooling and APIs out of the crawl budget.
 
 User-agent: *
 Allow: /
-
-# Disallow crawling of development/test files
-Disallow: /test-lazy-loading.html
-Disallow: /test-integration.html
-Disallow: /test-performance-monitoring.html
-Disallow: /.kiro/
-Disallow: /.vscode/
-Disallow: /.git/
-
-# Disallow crawling of API endpoints to prevent unnecessary load
-Disallow: /api/
-
-# Allow crawling of important directories
 Allow: /blog/
 Allow: /styles/
 Allow: /scripts/
 Allow: /globe/
+Allow: /og-share.png
+Allow: /llms.txt
+Allow: /site.webmanifest
+Allow: /blog/rss.xml
 
-# Crawl delay to be respectful to server resources
-Crawl-delay: 1
+# Operational / non-content surfaces
+Disallow: /api/
+Disallow: /redesign/
+Disallow: /qa
+Disallow: /qa/
+Disallow: /ember-qa/
+Disallow: /mockup/
+Disallow: /dist-promote/
+Disallow: /dist-ember-qa/
+Disallow: /.tmp
+Disallow: /.tmp-
+Disallow: /.git/
+Disallow: /.kiro/
+Disallow: /.vscode/
+Disallow: /.github/
+Disallow: /test-lazy-loading.html
+Disallow: /test-integration.html
+Disallow: /test-performance-monitoring.html
 
-# Sitemap location
+# AI / answer-engine crawlers — welcome for discovery and citations
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://www.tarsonlinecafe.work/sitemap.xml

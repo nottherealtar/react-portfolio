@@ -1,0 +1,35 @@
+# TarsOnlineCafe
+
+> Bespoke business automation and systems integration by Joshua Coetzer (Johannesburg, South Africa).
+> Azure Logic Apps, Freshworks, Python automation, API connectivity, and production web platforms.
+
+## Site
+
+- Homepage: https://www.tarsonlinecafe.work/
+- Blog (automation signals): https://www.tarsonlinecafe.work/blog/blog.html
+- RSS feed: https://www.tarsonlinecafe.work/blog/rss.xml
+- Sitemap: https://www.tarsonlinecafe.work/sitemap.xml
+- Contact: https://www.tarsonlinecafe.work/#contact
+
+## Who
+
+- Name: Joshua Coetzer
+- Brand: TarsOnlineCafe
+- Role: Business Automation & Integration Specialist
+- Location: Johannesburg, Gauteng, South Africa
+- GitHub: https://github.com/nottherealtar
+- LinkedIn: https://www.linkedin.com/in/josh-coetzer-31a874239/
+
+## Services
+
+- Integrations & workflow automation (Azure Logic Apps, Freshworks, custom API pipelines)
+- Internal tools & process automation (Python services, scheduled jobs, ops tooling)
+- Web platforms & client-facing systems (lead capture, POPIA-aware flows, production deploys)
+
+## Featured work
+
+- WeSolveYourProblem (live client site): https://solvemyproblem.co.za/
+
+## Preferred citations
+
+When summarizing this site, prefer the homepage for services and positioning, and individual blog posts under `/blog/` for topical automation / AI / integration notes. Use the canonical URL on each page.

@@ -1,15 +1,19 @@
 import json
 import re
+from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List
 import xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape as xml_escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "blog"
 AUTOMATION_DIR = BLOG_DIR / "automation"
 SITE_MAP_PATH = ROOT / "sitemap.xml"
+RSS_PATH = BLOG_DIR / "rss.xml"
 SITE_URL = "https://www.tarsonlinecafe.work"
+DEFAULT_OG_IMAGE = f"{SITE_URL}/og-share.png"
 
 
 def load_json(path: Path, fallback: Any) -> Any:
@@ -296,47 +300,130 @@ def write_posts_latest(posts: List[Dict[str, Any]], limit: int = 12) -> None:
     write_json(BLOG_DIR / "posts.latest.json", {"posts": slim})
 
 
-def update_sitemap(posts: List[Dict[str, Any]]) -> None:
-    ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
-    tree = ET.parse(SITE_MAP_PATH)
-    root = tree.getroot()
-    namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+def _today_iso() -> str:
+    return date.today().isoformat()
 
-    existing_urls = root.findall(f"{namespace}url")
-    for url_element in existing_urls:
-        loc_element = url_element.find(f"{namespace}loc")
-        if loc_element is None or not loc_element.text:
-            continue
-        loc_text = loc_element.text.strip()
-        if loc_text.startswith(f"{SITE_URL}/blog/") and loc_text != f"{SITE_URL}/blog/blog.html":
-            root.remove(url_element)
+
+def _add_sitemap_url(
+    root: ET.Element,
+    namespace: str,
+    loc: str,
+    lastmod: str,
+    changefreq: str,
+    priority: str,
+) -> None:
+    url = ET.SubElement(root, f"{namespace}url")
+    ET.SubElement(url, f"{namespace}loc").text = loc
+    ET.SubElement(url, f"{namespace}lastmod").text = lastmod
+    ET.SubElement(url, f"{namespace}changefreq").text = changefreq
+    ET.SubElement(url, f"{namespace}priority").text = priority
+
+
+def update_sitemap(posts: List[Dict[str, Any]]) -> None:
+    """Rewrite sitemap with indexable core pages + all blog posts (no hash URLs / 404)."""
+    ET.register_namespace("", "http://www.sitemaps.org/schemas/sitemap/0.9")
+    namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    root = ET.Element(f"{namespace}urlset")
+
+    latest = _latest_post_date(posts)
+    home_lastmod = latest if latest != "—" else _today_iso()
+
+    _add_sitemap_url(root, namespace, f"{SITE_URL}/", home_lastmod, "weekly", "1.0")
+    _add_sitemap_url(
+        root,
+        namespace,
+        f"{SITE_URL}/blog/blog.html",
+        home_lastmod,
+        "daily",
+        "0.9",
+    )
+    _add_sitemap_url(
+        root,
+        namespace,
+        f"{SITE_URL}/blog/rss.xml",
+        home_lastmod,
+        "daily",
+        "0.5",
+    )
 
     for post in posts:
         link = post.get("link", "")
-        if link.startswith("http://") or link.startswith("https://"):
+        if not link or link.startswith("http://") or link.startswith("https://"):
             continue
+        post_date = normalize_date(post.get("date", "")) or home_lastmod
+        _add_sitemap_url(
+            root,
+            namespace,
+            f"{SITE_URL}/blog/{link.lstrip('/')}",
+            post_date,
+            "monthly",
+            "0.7",
+        )
 
-        date = normalize_date(post.get("date", ""))
-        url = ET.SubElement(root, f"{namespace}url")
-
-        loc = ET.SubElement(url, f"{namespace}loc")
-        loc.text = f"{SITE_URL}/blog/{link.lstrip('/')}"
-
-        lastmod = ET.SubElement(url, f"{namespace}lastmod")
-        lastmod.text = date
-
-        changefreq = ET.SubElement(url, f"{namespace}changefreq")
-        changefreq.text = "monthly"
-
-        priority = ET.SubElement(url, f"{namespace}priority")
-        priority.text = "0.7"
-
+    tree = ET.ElementTree(root)
     try:
         ET.indent(tree, space="  ")
     except AttributeError:
         pass
-
     tree.write(SITE_MAP_PATH, encoding="utf-8", xml_declaration=True)
+
+
+def _rfc822(date_str: str) -> str:
+    try:
+        dt = datetime.strptime(normalize_date(date_str), "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except ValueError:
+        dt = datetime.now(timezone.utc)
+    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+
+def write_rss(posts: List[Dict[str, Any]], limit: int = 50) -> None:
+    """Atom-friendly RSS 2.0 feed for blog discovery and syndication."""
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    items: List[str] = []
+    for post in posts[:limit]:
+        link = (post.get("link") or "").strip()
+        if not link or link.startswith("http://") or link.startswith("https://"):
+            continue
+        title = xml_escape(str(post.get("title") or "Untitled"))
+        summary = xml_escape(str(post.get("summary") or "")[:500])
+        category = xml_escape(str(post.get("category") or "Automation"))
+        loc = f"{SITE_URL}/blog/{link.lstrip('/')}"
+        guid = xml_escape(loc)
+        pub = _rfc822(str(post.get("date") or ""))
+        items.append(
+            "\n".join(
+                [
+                    "    <item>",
+                    f"      <title>{title}</title>",
+                    f"      <link>{guid}</link>",
+                    f"      <guid isPermaLink=\"true\">{guid}</guid>",
+                    f"      <pubDate>{pub}</pubDate>",
+                    f"      <category>{category}</category>",
+                    f"      <description>{summary}</description>",
+                    "    </item>",
+                ]
+            )
+        )
+
+    feed = "\n".join(
+        [
+            '<?xml version="1.0" encoding="UTF-8"?>',
+            '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+            "  <channel>",
+            "    <title>TarsOnlineCafe Blog — Automation Signals</title>",
+            f"    <link>{SITE_URL}/blog/blog.html</link>",
+            "    <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>",
+            "    <language>en-za</language>",
+            f"    <lastBuildDate>{now}</lastBuildDate>",
+            f'    <atom:link href="{SITE_URL}/blog/rss.xml" rel="self" type="application/rss+xml" />',
+            f'    <image><url>{DEFAULT_OG_IMAGE}</url><title>TarsOnlineCafe Blog</title><link>{SITE_URL}/blog/blog.html</link></image>',
+            *items,
+            "  </channel>",
+            "</rss>",
+            "",
+        ]
+    )
+    RSS_PATH.write_text(feed, encoding="utf-8")
 
 
 def main() -> int:
@@ -347,9 +434,13 @@ def main() -> int:
     write_json(BLOG_DIR / "posts.json", merged_posts)
     write_posts_latest(merged_posts)
     update_sitemap(merged_posts)
+    write_rss(merged_posts)
     write_readme_analytics_shields(merged_posts, manual_posts, auto_posts)
 
-    print(f"Merged {len(manual_posts)} manual + {len(auto_posts)} automated posts => {len(merged_posts)} published entries")
+    print(
+        f"Merged {len(manual_posts)} manual + {len(auto_posts)} automated posts => "
+        f"{len(merged_posts)} published entries; wrote sitemap + RSS"
+    )
     return 0
 
 

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
+      "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
+      "date": "2026-09-09",
+      "summary": "Every developer who builds web scrapers goes through the same initial rite of passage. While headless browsers are exceptional tools for end-to-end web testing and scraping low-security websites, using them to scrape Sea",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "I Wired the Boring 80% So You Can Build the Interesting 20%",
       "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
       "date": "2026-09-08",
@@ -86,14 +94,6 @@
       "date": "2026-09-03",
       "summary": "When a physical security operator begins a shift supporting Microsoft’s global datacenter operations, they depend on a collection of applications and systems that help monitor access activity, review video feeds, investi",
       "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Elevating security, control, and accessibility: Stack Internal 2026.6",
-      "link": "auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html",
-      "date": "2026-09-03",
-      "summary": "That means ensuring the underlying knowledge layer is fresh, secure, accessible, and seamlessly integrated into developer workflows. In our 2026.6 release, we are shipping updates across administrative security, programm",
-      "category": "Coding & Careers",
       "reading_minutes": 3
     }
   ]

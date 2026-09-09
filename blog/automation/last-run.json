@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-08T19:54:26.030967+00:00",
+  "timestamp": "2026-09-09T09:42:25.196226+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I Wired the Boring 80% So You Can Build the Interesting 20%",
-      "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
-      "score": 154.8582,
+      "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
+      "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
+      "score": 133.8672,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

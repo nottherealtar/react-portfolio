@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 09 Sep 2026 07:25:12 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 09:43:52 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html</guid>
+      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Every developer who builds web scrapers goes through the same initial rite of passage. While headless browsers are exceptional tools for end-to-end web testing and scraping low-security websites, using them to scrape Search Engine Results Pages (SERPs) is an expensive engineering trap.</description>
+    </item>
     <item>
       <title>I Wired the Boring 80% So You Can Build the Interesting 20%</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>AI code review reasons about code contextually, catching bugs and security vulnerabilities that rule-based static analysis tools miss It is most reliable for security vulnerabilities, logic errors, performance patterns, and API misuse; it struggles with novel business logic bugs and system-level architectural problems The most effective integration triggers a review when a PR is opened and posts findings as inline…</description>
-    </item>
-    <item>
-      <title>Your guide to GitHub Universe 2026 is here: The schedule just launched!</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260813-your-guide-to-github-universe-2026-is-here-the-schedule-just-6ef7cdf2.html</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Developer Platform</category>
-      <description>This demo builds a stack with the GitHub CLI, reviews it on github.com, and merges each pull request as it’s ready—so you leave with a workflow you can use tomorrow. At Home Assistant, every step happens in the open across 20,000 contributors and a dozen GitHub organizations.</description>
     </item>
   </channel>
 </rss>

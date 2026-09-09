@@ -1,5 +1,18 @@
 [
   {
+    "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
+    "date": "2026-09-09",
+    "category": "Coding & Community",
+    "summary": "Every developer who builds web scrapers goes through the same initial rite of passage. While headless browsers are exceptional tools for end-to-end web testing and scraping low-security websites, using them to scrape Search Engine Results Pages (SERPs) is an expensive engineering trap.",
+    "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
+    "source_url": "https://dev.to/eunit/headless-browsers-vs-serp-apis-why-your-playwright-scraper-fails-in-production-4cgo",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frsdggff2zc51dajtq2uo.jpeg"
+  },
+  {
     "title": "I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.",
     "date": "2026-09-08",
     "category": "Coding & Community",

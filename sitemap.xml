@@ -19,6 +19,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.tarsonlinecafe.work/blog/auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html</loc>
     <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Evolution of WSL Support in JetBrains IDEs",
+    "date": "2026-09-09",
+    "category": "Developer Tools",
+    "summary": "We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces significant trade-offs in both file access and process execution. In a WSLg setup, the IDE may run on the native Wayland path, where JetBrains Runtime uses WLToolkit against WSLg’s Wayland compositor.",
+    "link": "auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html",
+    "source_url": "https://blog.jetbrains.com/platform/2026/09/the-evolution-of-wsl-support-in-jetbrains-ides/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/image3.jpg"
+  },
+  {
     "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
     "date": "2026-09-09",
     "category": "Coding & Community",

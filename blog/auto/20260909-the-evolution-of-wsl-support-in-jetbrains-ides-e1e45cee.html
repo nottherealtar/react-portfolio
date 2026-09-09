@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Evolution of WSL Support in JetBrains IDEs | TarsOnlineCafe</title>
+  <meta name="description" content="We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="The Evolution of WSL Support in JetBrains IDEs">
+  <meta property="og:description" content="We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html">
+  <meta property="article:published_time" content="2026-09-09T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Evolution of WSL Support in JetBrains IDEs">
+  <meta name="twitter:description" content="We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this…">
+  <meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/09/image3.jpg">
+  <meta property="og:image:alt" content="The Evolution of WSL Support in JetBrains IDEs">
+  <meta name="twitter:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/09/image3.jpg">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Evolution of WSL Support in JetBrains IDEs", "description": "We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this…", "datePublished": "2026-09-09T12:00:00.000Z", "dateModified": "2026-09-09T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/image3.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html"}, "isBasedOn": "https://blog.jetbrains.com/platform/2026/09/the-evolution-of-wsl-support-in-jetbrains-ides/", "wordCount": 1743}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-09</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>The Evolution of WSL Support in JetBrains IDEs</h1>
+        <p class="lede">We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces significant trade-offs in both file access and process execution. In a WSLg setup, the IDE may run on the native Wayland path, where JetBrains Runtime uses WLToolkit against WSLg’s Wayland compositor.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>JetBrains IDEs have worked with WSL for many years, and over time, several ways of using it have emerged across our products. Depending on the entry point, the IDE could rely on a different underlying architecture, leading to a different experience. Starting with the 2026.2 release, there is one recommended entry point.</p>
+        <p>The IDE stays a Windows application, while a small agent inside WSL handles files and processes on its behalf. Below is how Native mode works, how our approach to WSL integration evolved to get here, and – since we tried three other approaches first – why we’re confident it’s the right foundation for your work. What it takes to support WSL in an IDE We’ll start with an idealized picture in which the IDE functions seamlessly inside WSL while being operated from Windows.</p>
+        <p>In practical terms, “seamlessly” means you should be able to use any of the IDE’s capabilities – terminal, run and debug configurations, profiling, etc. – against a project that resides in a Linux environment. Not only that, but this must incur as little latency as possible for the coding experience to feel quick and natural, as if the project files and the IDE itself resided in a single operating-system environment.</p>
+        <p>We’ll trace how this challenge has been addressed, beginning with the earliest implementation, in which the IDE interacted with WSL through the 9P transport protocol. 9P filesystem access and GeneralCommandLine For the IDE to function, it needs access to the basics of a project, which are plain files. It provides the mechanism that allows Windows-side processes access files inside WSL.</p>
+        <p>In practice, project-related file I/O performed by the IDE – scanning, indexing, archive access, and similar operations – is routed through the 9P-based filesystem layer to the Linux virtual machine. While running on Windows, the IDE must be able to invoke tools inside WSL with the correct Linux paths, working directories, executables, environment variables, and arguments. The 9P protocol is known to be problematic for several reasons: Limited symlink handling – 9P does not properly expose Linux symbolic links to Windows through…</p>
+        <p>As a result, the IDE may detect an entry but be unable to resolve or index the linked directory tree. This affects pnpm workspaces, Python virtual environments, PHP Composer path repositories, and other environments that rely on symlinks. Microsoft Defender scans – on-access scanning over 9P can stretch WSL file reads by tens of seconds.</p>
+        <p>Latency and degraded throughput – 9P-backed filesystem access adds latency, and throughput can degrade significantly, especially in workflows involving many small files. Core IDE operations such as indexing follow this pattern, generating numerous separate requests that cross the Windows/WSL VM boundary through 9P. The situation was no less challenging on the GeneralCommandLine side.</p>
+        <p>The pipeline added a maintenance burden, as developers had to account for WSL-specific execution semantics across the codebase. As a consequence, the approach became increasingly difficult to scale and maintain, and it surfaced persistent issues with symlink handling and performance. Running the IDE inside WSL with WSLg What if, instead, the IDE itself resided inside WSL, close to the project it works with?</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/09/image3.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/09/image5.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/09/image4.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/09/image6.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/09/WSL-Native-Mode.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>What it takes to support WSL in an IDE We’ll start with an idealized picture in which the IDE functions seamlessly inside WSL while being operated from Windows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The IDE stays a Windows application, while a small agent inside WSL handles files and processes on its behalf.</li>
+          <li>We’ll trace how this challenge has been addressed, beginning with the earliest implementation, in which the IDE interacted with WSL through the 9P transport protocol.</li>
+          <li>Although running the IDE through WSLg is technically viable, it has never been considered the preferred direction, and no dedicated out-of-the-box installation or onboarding…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/platform/2026/09/the-evolution-of-wsl-support-in-jetbrains-ides/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

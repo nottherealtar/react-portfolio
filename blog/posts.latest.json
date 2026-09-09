@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Evolution of WSL Support in JetBrains IDEs",
+      "link": "auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html",
+      "date": "2026-09-09",
+      "summary": "We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces signifi",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
       "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
       "date": "2026-09-09",
@@ -86,14 +94,6 @@
       "date": "2026-09-03",
       "summary": "Some of the highlights included an April 2027 release date for Final Fantasy 7 Revelation , a sneak peek at the Resident Evil movie, and a stacked selection of games being developed by Asian studios. Up next was Ghost of",
       "category": "Gaming News",
-      "reading_minutes": 3
-    },
-    {
-      "title": "How Microsoft’s Physical Security Engineering Team scaled hybrid operations with Azure Arc and Azure Virtual Desktop",
-      "link": "auto/20260903-how-microsoft-s-physical-security-engineering-team-scaled-hy-ca0a43f6.html",
-      "date": "2026-09-03",
-      "summary": "When a physical security operator begins a shift supporting Microsoft’s global datacenter operations, they depend on a collection of applications and systems that help monitor access activity, review video feeds, investi",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

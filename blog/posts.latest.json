@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "GitHub availability report: August 2026",
+      "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
+      "date": "2026-09-10",
+      "summary": "As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions ",
+      "category": "Developer Platform",
+      "reading_minutes": 3
+    },
+    {
       "title": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions",
       "link": "auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html",
       "date": "2026-09-10",
@@ -85,14 +93,6 @@
       "link": "auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html",
       "date": "2026-09-04",
       "summary": "The release gives developers, paid Gemini users and Gemini Enterprise customers different routes to use the general model, with a separate access program for the cybersecurity model. Google says Gemini 3.8 Flash shares a",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Remote MCP Servers: Connecting and Securing SaaS Tools",
-      "link": "auto/20260903-remote-mcp-servers-connecting-and-securing-saas-tools-f257e014.html",
-      "date": "2026-09-03",
-      "summary": "Connecting remote MCP servers directly to local AI clients creates credential sprawl, audit blind spots, and unmonitored SaaS API access. Deploying a dedicated gateway unifies remote tool connections over Server-Sent Eve",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

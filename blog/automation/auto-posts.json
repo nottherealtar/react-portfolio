@@ -1,5 +1,18 @@
 [
   {
+    "title": "GitHub availability report: August 2026",
+    "date": "2026-09-10",
+    "category": "Developer Platform",
+    "summary": "As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions gained additional capacity while longer-term isolation work continues.",
+    "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
+    "source_url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/09/Actions-Run-Start_delay.png?resize=1024%2C509"
+  },
+  {
     "title": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions",
     "date": "2026-09-10",
     "category": "Coding & Community",

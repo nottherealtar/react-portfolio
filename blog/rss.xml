@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 10 Sep 2026 09:41:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 19:41:41 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>GitHub availability report: August 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260910-github-availability-report-august-2026-a105b3ce.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260910-github-availability-report-august-2026-a105b3ce.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions gained additional capacity while longer-term isolation work continues.</description>
+    </item>
     <item>
       <title>AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Here are the 5 things I check first whenever a Linux server goes down, crashes, or stops responding. Resource Starvation, System Load, and the OOM Killer If you can log in, but commands take thirty seconds to execute or web services fail to reply, the system is likely suffering from resource starvation. b (blocked processes): A high count indicates processes stuck waiting for disk or network I/O.</description>
-    </item>
-    <item>
-      <title>"half-open" twice is not the same state: the bug that shaped breakwater 1.0</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260815-half-open-twice-is-not-the-same-state-the-bug-that-shaped-br-07ac9ba4.html</guid>
-      <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>When the cooldown elapses, exactly one of them probes the recovering dependency while the rest keep waiting. The instance decides: reopen the circuit. The real fix: identify the period, not the state The fix is a fence — a monotonic token the store mints on every successful transition: The swap lands only if the state is still from and nothing has transitioned since you read that fence.</description>
     </item>
   </channel>
 </rss>

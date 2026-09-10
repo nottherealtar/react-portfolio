@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions",
+      "link": "auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html",
+      "date": "2026-09-10",
+      "summary": "Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, an",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The Evolution of WSL Support in JetBrains IDEs",
       "link": "auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html",
       "date": "2026-09-09",
@@ -86,14 +94,6 @@
       "date": "2026-09-03",
       "summary": "Connecting remote MCP servers directly to local AI clients creates credential sprawl, audit blind spots, and unmonitored SaaS API access. Deploying a dedicated gateway unifies remote tool connections over Server-Sent Eve",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "PlayStation State Of Play September 2026: All The Biggest Announcements, Games, And Trailers",
-      "link": "auto/20260903-playstation-state-of-play-september-2026-all-the-biggest-ann-f9a0023f.html",
-      "date": "2026-09-03",
-      "summary": "Some of the highlights included an April 2027 release date for Final Fantasy 7 Revelation , a sneak peek at the Resident Evil movie, and a stacked selection of games being developed by Asian studios. Up next was Ghost of",
-      "category": "Gaming News",
       "reading_minutes": 3
     }
   ]

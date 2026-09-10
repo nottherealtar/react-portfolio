@@ -1,5 +1,17 @@
 [
   {
+    "title": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions",
+    "date": "2026-09-10",
+    "category": "Coding & Community",
+    "summary": "Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, and document creation.",
+    "link": "auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html",
+    "source_url": "https://dev.to/ai_made_tools/ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-10-copilot-adds-enforced-permissions-41f7",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Evolution of WSL Support in JetBrains IDEs",
     "date": "2026-09-09",
     "category": "Developer Tools",

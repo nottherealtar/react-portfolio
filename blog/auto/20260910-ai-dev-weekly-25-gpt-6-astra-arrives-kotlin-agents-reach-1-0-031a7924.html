@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions | TarsOnlineCafe</title>
+  <meta name="description" content="Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions">
+  <meta property="og:description" content="Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html">
+  <meta property="article:published_time" content="2026-09-10T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions">
+  <meta name="twitter:description" content="Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions", "description": "Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability…", "datePublished": "2026-09-10T12:00:00.000Z", "dateModified": "2026-09-10T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html"}, "isBasedOn": "https://dev.to/ai_made_tools/ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-10-copilot-adds-enforced-permissions-41f7", "wordCount": 1538}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-10</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions</h1>
+        <p class="lede">Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, and document creation.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>AI Dev Weekly is a Thursday series where I cover the week&#x27;s most important AI developer news, with my take as someone who actually uses these tools daily. Four different layers of the agent stack changed this week. GitHub gave enterprise administrators permissions that local settings cannot weaken.</p>
+        <p>And NVIDIA released a local inference router that spreads independent agent calls across computers you already own. The API model ID is gpt-6-astra , with a 1,050,000-token context window, 128,000 maximum output tokens, and low through max reasoning levels. The official model guide adds three API capabilities that matter more than another benchmark table: asynchronous tool calls , so the model can continue independent work while your application runs a slow tool; mid-turn steering over a WebSocket connection, preserving completed…</p>
+        <p>These features are aimed at long-running systems, not one-shot chat. Async tools require the application to track pending calls and return results with the original call ID. Mid-turn steering needs event handling that distinguishes new instructions from tool results.</p>
+        <p>Neither feature makes concurrency safe automatically. Standard pricing is $10 per million input tokens, $1 per million cached input tokens, and $50 per million output tokens . Batch and Flex are half the standard rates, while Fast mode is twice the standard price.</p>
+        <p>Requests above 272,000 input tokens charge the full request at 2x input and cache rates and 1.5x output rates. A 300K-token prompt is not billed at the standard rate for the first 272K. OpenAI&#x27;s launch announcement describes a staged rollout across the direct API, ChatGPT, Azure, and AWS Bedrock.</p>
+        <p>GitHub separately made Astra generally available in Copilot on September 4 for eligible plans. Those are different availability surfaces, so check the exact account and endpoint before migrating. My take: Astra is an escalation model, not a cost-blind default.</p>
+        <p>The new coordination features can reduce idle time and preserve work during long tasks, but they also create more application state to test. Compare cost per accepted result against Sol or Terra, including tool retries and reviewer time. Our GPT-6 Astra guide covers pricing, rollout, and tool support, while Astra vs GPT-5.6 Sol handles the model-routing decision.</p>
+        <p>Google&#x27;s Agent Development Kit for Kotlin reaches 1.0 Google released ADK for Kotlin 1.0 on September 9. The core is generally available and reaches feature parity with the Python and Java ADK cores. It supports hierarchical multi-agent systems, context compaction, resumable sessions, long-running tools, human confirmation flows, and Java interoperability.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>OpenAI&#x27;s launch announcement describes a staged rollout across the direct API, ChatGPT, Azure, and AWS Bedrock. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>GitHub separately made Astra generally available in Copilot on September 4 for eligible plans.</li>
+          <li>Google&#x27;s Agent Development Kit for Kotlin reaches 1.0 Google released ADK for Kotlin 1.0 on September 9.</li>
+          <li>It supports hierarchical multi-agent systems, context compaction, resumable sessions, long-running tools, human confirmation flows, and Java interoperability.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/ai_made_tools/ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-10-copilot-adds-enforced-permissions-41f7" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap",
+    "date": "2026-09-11",
+    "category": "Coding & Community",
+    "summary": "Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores \"input costs $1.25 per million\" and multiplies will under-charge every long request by the tier multiple, without any error to show for it.",
+    "link": "auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html",
+    "source_url": "https://dev.to/sakurasky/tollgate-v023-what-long-context-pricing-does-to-a-spend-cap-ia5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "GitHub availability report: August 2026",
     "date": "2026-09-10",
     "category": "Developer Platform",

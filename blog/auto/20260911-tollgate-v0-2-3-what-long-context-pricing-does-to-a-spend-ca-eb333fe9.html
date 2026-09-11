@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap | TarsOnlineCafe</title>
+  <meta name="description" content="Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap">
+  <meta property="og:description" content="Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html">
+  <meta property="article:published_time" content="2026-09-11T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap">
+  <meta name="twitter:description" content="Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap", "description": "Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class…", "datePublished": "2026-09-11T12:00:00.000Z", "dateModified": "2026-09-11T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html"}, "isBasedOn": "https://dev.to/sakurasky/tollgate-v023-what-long-context-pricing-does-to-a-spend-cap-ia5", "wordCount": 2099}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-09-11</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap</h1>
+        <p class="lede">Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores &quot;input costs $1.25 per million&quot; and multiplies will under-charge every long request by the tier multiple, without any error to show for it.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Most teams find out what their long-context requests cost when the invoice arrives, and the gap is usually wider than the extra tokens explain. At the end of August I wrote about Tollgate , an open-source gateway that prices every LLM request by token, reserves the worst-case cost before forwarding, and refuses the request if that reservation would break a budget. Once the provider reports usage, the reservation is settled to the actual figure.</p>
+        <p>Four releases later, v0.2.3 is out (Stevens, 2026), and most of the work in between went into the pricing rather than into the reserve and settle path itself. Where a rate per token stops working This is the part worth checking against your own provider&#x27;s pricing page, because it is easy to miss and it costs money in one direction only. Google prices Gemini 2.5 Pro at $1.25 per million input tokens for prompts up to 200,000 tokens and $2.50 above it, with output going from $10.00 to $15.00 at the same threshold.</p>
+        <p>Gemini 3.1 Pro Preview uses the same 200,000 token threshold and the same 2x input and 1.5x output multiples at different absolute rates (Google, 2026a). The same tiering appears on Vertex AI, which is the Google surface Tollgate proxies (Google, 2026b). What re-rates is the whole request, rather than the excess above the threshold, so a prompt one token over the line costs twice as much on its input leg as the same prompt one token under it.</p>
+        <p>Anthropic states that Claude 4.6 and later include the full one million token context window at standard pricing, and that a 900,000 token request is billed at the same per-token rate as a 9,000 token one (Anthropic, 2026). A provider that tiered last year may stop, and a new model family may arrive tiered. For a proxy sitting in front of the model, that creates a specific problem.</p>
+        <p>The ledger then disagrees with the invoice by an amount that looks like a rounding difference right up until somebody runs a long-context workload, at which point the same defect shows up as a several-thousand-dollar variance nobody can account for. Migration 0010, in v0.2.2, puts a threshold and separate input and output multiples on the price row, resolved field by field against a deployment default. The tier applies to the reservation as well as to the settlement, so the two cannot drift apart on exactly the largest requests,…</p>
+        <p>Tiering stays off until you configure it, per model. Defaulting to an uplift would invent a charge and break the meaning of the unit, since a million tokens would stop costing the per-million rate. Until the tier is set, a prompt above the threshold is logged as a possible under-charge rather than re-rated.</p>
+        <p>I would rather leave a gap somebody can see than fill it with a number I made up. It speaks the protocols the clients already speak. There is a native Anthropic route at POST /v1/messages , which takes the key as x-api-key and returns the upstream body unwrapped, and an OpenAI-compatible route at POST /v1/chat/completions that takes a bearer token.</p>
+        <p>The Anthropic SDK, OpenAI clients, LiteLLM and Google ADK agents route through it by changing a base URL and a key, with no Tollgate SDK to adopt. Where a request does cross protocols, as an OpenAI-shaped request to a Google model does, the cost is metered from the usage the provider reports rather than from the shape of the request, because token accounting is usually the first thing a translation layer loses. Tollgate builds on proxy and cost-control patterns that LiteLLM established (BerriAI, 2026).</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>What re-rates is the whole request, rather than the excess above the threshold, so a prompt one token over the line costs twice as much on its input leg as the same prompt one token under it. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Most teams find out what their long-context requests cost when the invoice arrives, and the gap is usually wider than the extra tokens explain.</li>
+          <li>The tier applies to the reservation as well as to the settlement, so the two cannot drift apart on exactly the largest requests, which are the ones where drift is expensive.</li>
+          <li>Several under-charges that had been present from the first release were fixed across v0.1.2 and v0.2.0: Gemini thinking tokens and tool-use prompt tokens were not billed at…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/sakurasky/tollgate-v023-what-long-context-pricing-does-to-a-spend-cap-ia5" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

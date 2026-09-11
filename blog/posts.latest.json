@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap",
+      "link": "auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html",
+      "date": "2026-09-11",
+      "summary": "Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores \"input costs $",
+      "category": "Coding & Community",
+      "reading_minutes": 4
+    },
+    {
       "title": "GitHub availability report: August 2026",
       "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
       "date": "2026-09-10",
@@ -85,14 +93,6 @@
       "link": "auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html",
       "date": "2026-09-05",
       "summary": "MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request ac",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access",
-      "link": "auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html",
-      "date": "2026-09-04",
-      "summary": "The release gives developers, paid Gemini users and Gemini Enterprise customers different routes to use the general model, with a separate access program for the cybersecurity model. Google says Gemini 3.8 Flash shares a",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

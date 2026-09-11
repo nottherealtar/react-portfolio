@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 10 Sep 2026 19:41:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 09:40:44 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores "input costs $1.25 per million" and multiplies will under-charge every long request by the tier multiple, without any error to show for it.</description>
+    </item>
     <item>
       <title>GitHub availability report: August 2026</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260910-github-availability-report-august-2026-a105b3ce.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>A free disposable server lets you repeat the same before-and-after measurement on a second copy of the data, which catches the cases where your local experiment was too small to show the real cost or too artificial to match your query mix. A better prompt is not 'Is this query slow?' but 'Given this schema and this query, propose one index and tell me the smallest test that would show it helps.</description>
-    </item>
-    <item>
-      <title>5 Things I Check First When a Linux Server Goes Down</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260816-5-things-i-check-first-when-a-linux-server-goes-down-0eb68ddc.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260816-5-things-i-check-first-when-a-linux-server-goes-down-0eb68ddc.html</guid>
-      <pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Here are the 5 things I check first whenever a Linux server goes down, crashes, or stops responding. Resource Starvation, System Load, and the OOM Killer If you can log in, but commands take thirty seconds to execute or web services fail to reply, the system is likely suffering from resource starvation. b (blocked processes): A high count indicates processes stuck waiting for disk or network I/O.</description>
     </item>
   </channel>
 </rss>

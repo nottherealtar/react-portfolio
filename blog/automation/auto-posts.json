@@ -12,6 +12,18 @@
     "reading_minutes": 4
   },
   {
+    "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
+    "date": "2026-09-11",
+    "category": "Developer Platform",
+    "summary": "I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an API . If your repetitive work runs through a tool that offers either an event platform, a CRM, a form builder, an analytics service, the pattern in this post applies to you.",
+    "link": "auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "GitHub availability report: August 2026",
     "date": "2026-09-10",
     "category": "Developer Platform",

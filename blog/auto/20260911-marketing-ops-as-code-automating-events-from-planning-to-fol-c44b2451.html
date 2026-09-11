@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Marketing ops as code: Automating events from planning to follow-up on GitHub | TarsOnlineCafe</title>
+  <meta name="description" content="I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Marketing ops as code: Automating events from planning to follow-up on GitHub">
+  <meta property="og:description" content="I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html">
+  <meta property="article:published_time" content="2026-09-11T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marketing ops as code: Automating events from planning to follow-up on GitHub">
+  <meta name="twitter:description" content="I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Marketing ops as code: Automating events from planning to follow-up on GitHub">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Marketing ops as code: Automating events from planning to follow-up on GitHub", "description": "I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do…", "datePublished": "2026-09-11T12:00:00.000Z", "dateModified": "2026-09-11T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html"}, "isBasedOn": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/", "wordCount": 2109}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-11</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Marketing ops as code: Automating events from planning to follow-up on GitHub</h1>
+        <p class="lede">I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an API . If your repetitive work runs through a tool that offers either an event platform, a CRM, a form builder, an analytics service, the pattern in this post applies to you.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I run marketing for GitHub in Japan and Korea, and events are the heartbeat of it: a recurring webinar series for enterprise developers, community meetups in Tokyo, invite-only executive sessions in Seoul. What does a developer in this market actually need right now? Which topics are worth an hour of their time, and who should be in the room?</p>
+        <p>I’d happily spend all day on those questions. What follows the decisions is another matter. Once an event is greenlit, a fixed sequence begins: Duplicate a landing page on our event platform.</p>
+        <p>Generate a set of UTM-tagged links: one for each channel, each formatted just so. Every morning until the event: download the registrant list, clean it up, post a status update for stakeholders. After the event: export the attendees, reshape the list for a CRM upload, tag the right records, and write a report.</p>
+        <p>While none of these tasks are hard on their own, they’re an opportunity to paste the wrong link, skip a day, or misspell a campaign name that 15 downstream reports depend on. My first career was keeping databases alive on Linux servers for enterprise customers. While my coding may be rusty, I can still see a pipeline begging to be automated.</p>
+        <p>Today, an event I used to assemble by hand over a couple of days sets itself up from a single GitHub Issue, screens its own registrants every morning, and cleans up after itself when it’s over. This post walks through how that works, and why I think anyone whose job involves repetitive work across tools that offer any scriptable way in (an API, or even just a CLI) can do the same. I can’t claim the foundational idea as my own.</p>
+        <p>Marketing teams at GitHub already had a habit of opening one GitHub Issue per project. This becomes the place where the plan, the discussion, and the status live together. Three GitHub primitives carry the whole system: Issue forms are the application form.</p>
+        <p>Instead of a blank text box, an issue form presents structured fields: event title, date, region, campaign name, target audience. We have one form per event type, such as webinars and in-person events, and they feed the same machinery. A label like event-setup isn’t a tag, it’s a trigger.</p>
+        <p>Each automation workflow starts with a condition that says, in effect, “only run when this label is present.” Actions are the machinery. GitHub Actions workflows fire when labels land, parse the form fields out of the issue body, and go do the work. Everything a repository gives developers, it gave my marketing workflow for free: history, visibility, review, and a URL for every decision.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>What does a developer in this market actually need right now? It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>I run marketing for GitHub in Japan and Korea, and events are the heartbeat of it: a recurring webinar series for enterprise developers, community meetups in Tokyo, invite-only…</li>
+          <li>After the event: export the attendees, reshape the list for a CRM upload, tag the right records, and write a report.</li>
+          <li>Three GitHub primitives carry the whole system: Issue forms are the application form.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

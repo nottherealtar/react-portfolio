@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 11 Sep 2026 09:40:44 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 19:43:31 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores "input costs $1.25 per million" and multiplies will under-charge every long request by the tier multiple, without any error to show for it.</description>
+    </item>
+    <item>
+      <title>Marketing ops as code: Automating events from planning to follow-up on GitHub</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html</guid>
+      <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an API . If your repetitive work runs through a tool that offers either an event platform, a CRM, a form builder, an analytics service, the pattern in this post applies to you.</description>
     </item>
     <item>
       <title>GitHub availability report: August 2026</title>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>A useful state machine is accepted -&gt; streaming -&gt; validated with terminal alternatives such as rejected , invalid , and abandoned . Now consider the opposite ordering: the adapter completes, validation passes, persistence commits, and the socket closes one instruction before the terminal event reaches the browser.</description>
-    </item>
-    <item>
-      <title>An Index Suggestion Is a Hypothesis, Not a Patch</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260817-an-index-suggestion-is-a-hypothesis-not-a-patch-1b4bdfcb.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>A free disposable server lets you repeat the same before-and-after measurement on a second copy of the data, which catches the cases where your local experiment was too small to show the real cost or too artificial to match your query mix. A better prompt is not 'Is this query slow?' but 'Given this schema and this query, propose one index and tell me the smallest test that would show it helps.</description>
     </item>
   </channel>
 </rss>

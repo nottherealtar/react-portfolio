@@ -9,6 +9,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
+      "link": "auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html",
+      "date": "2026-09-11",
+      "summary": "I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an ",
+      "category": "Developer Platform",
+      "reading_minutes": 3
+    },
+    {
       "title": "GitHub availability report: August 2026",
       "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
       "date": "2026-09-10",
@@ -85,14 +93,6 @@
       "link": "auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html",
       "date": "2026-09-05",
       "summary": "OpenAI’s official GPT-6 Astra announcement establishes the substantive news: a staged, multi-platform deployment with defined API pricing, large context capacity and capabilities aimed at completing more complex digital ",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "10 Practical Things You Can Build With n8n and MCP",
-      "link": "auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html",
-      "date": "2026-09-05",
-      "summary": "MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request ac",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "BlizzCon 2026 Opening Ceremony live coverage and how to watch—what's next for Warcraft, Overwatch, Diablo, and StarCraft",
+      "link": "auto/20260912-blizzcon-2026-opening-ceremony-live-coverage-and-how-to-watc-ac512c49.html",
+      "date": "2026-09-12",
+      "summary": "...That a StarCraft announcement is imminent, its presence on a huge banner among Blizzard's other major series may put that to rest. Meanwhile, some risky original projects have been cancelled in recent years, namely a ",
+      "category": "Gaming & Industry",
+      "reading_minutes": 4
+    },
+    {
       "title": "Tollgate v0.2.3: What Long-Context Pricing Does to a Spend Cap",
       "link": "auto/20260911-tollgate-v0-2-3-what-long-context-pricing-does-to-a-spend-ca-eb333fe9.html",
       "date": "2026-09-11",
@@ -85,14 +93,6 @@
       "link": "auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html",
       "date": "2026-09-07",
       "summary": "A new systematic review of 66 peer-reviewed studies on LLMs for HVAC operations exposes the plumbing challenges when agents must parse heterogeneous sensor streams, normalize metadata, and make decisions in physical syst",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Preventing Duplicate Side Effects in Event-Driven Systems",
-      "link": "auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html",
-      "date": "2026-09-06",
-      "summary": "For example, consider an automation system where a user action eventually triggers an external API call: User Action --> Webhook --> Event Queue --> Worker --> External API If the worker crashes after the external API ac",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

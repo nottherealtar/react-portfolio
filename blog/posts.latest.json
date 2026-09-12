@@ -17,6 +17,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI",
+      "link": "auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html",
+      "date": "2026-09-10",
+      "summary": "For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "GitHub availability report: August 2026",
       "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
       "date": "2026-09-10",
@@ -85,14 +93,6 @@
       "link": "auto/20260906-preventing-duplicate-side-effects-in-event-driven-systems-2d33934c.html",
       "date": "2026-09-06",
       "summary": "For example, consider an automation system where a user action eventually triggers an external API call: User Action --> Webhook --> Event Queue --> Worker --> External API If the worker crashes after the external API ac",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "OpenAI Launches GPT-6 Astra With Computer Use Tools and Broad Platform Rollout",
-      "link": "auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html",
-      "date": "2026-09-05",
-      "summary": "OpenAI’s official GPT-6 Astra announcement establishes the substantive news: a staged, multi-platform deployment with defined API pricing, large context capacity and capabilities aimed at completing more complex digital ",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

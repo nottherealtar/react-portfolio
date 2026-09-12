@@ -24,6 +24,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI",
+    "date": "2026-09-10",
+    "category": "Cloud Automation",
+    "summary": "For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer to the systems creating it. Teams can see estimated costs across projects, inspect cost and token usage for individual agents, and monitor model costs.",
+    "link": "auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-how-ai-agent-governance-controls-cost-and-proves-roi/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp"
+  },
+  {
     "title": "GitHub availability report: August 2026",
     "date": "2026-09-10",
     "category": "Developer Platform",

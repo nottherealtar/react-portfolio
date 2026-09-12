@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 11 Sep 2026 19:43:31 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 09:18:41 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -23,6 +23,14 @@
       <pubDate>Fri, 11 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Platform</category>
       <description>I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an API . If your repetitive work runs through a tool that offers either an event platform, a CRM, a form builder, an analytics service, the pattern in this post applies to you.</description>
+    </item>
+    <item>
+      <title>The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer to the systems creating it. Teams can see estimated costs across projects, inspect cost and token usage for individual agents, and monitor model costs.</description>
     </item>
     <item>
       <title>GitHub availability report: August 2026</title>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>Microsoft has been named a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms , which we believe recognizes the platforms organizations rely on to build, deploy, and operate cloud-native applications at scale.</description>
-    </item>
-    <item>
-      <title>Authenticated Node.js Web Chatbot Backend Validates Streaming Reviews (Without an SDK)</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260817-authenticated-node-js-web-chatbot-backend-validates-streamin-2c7d9694.html</guid>
-      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>A useful state machine is accepted -&gt; streaming -&gt; validated with terminal alternatives such as rejected , invalid , and abandoned . Now consider the opposite ordering: the adapter completes, validation passes, persistence commits, and the socket closes one instruction before the terminal event reaches the browser.</description>
     </item>
   </channel>
 </rss>

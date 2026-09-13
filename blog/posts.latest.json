@@ -41,6 +41,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management",
+      "link": "auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html",
+      "date": "2026-09-10",
+      "summary": "AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Ma",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "GitHub availability report: August 2026",
       "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
       "date": "2026-09-10",
@@ -85,14 +93,6 @@
       "link": "auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html",
       "date": "2026-09-08",
       "summary": "I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel=\"dofo",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools",
-      "link": "auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html",
-      "date": "2026-09-07",
-      "summary": "The agent decides which tools to invoke based on user intent, then coordinates state across tool calls. This decouples the LLM from API churn. Semantic search indexes data from connected apps.",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

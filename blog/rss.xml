@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 13 Sep 2026 10:16:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 19:29:55 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -47,6 +47,14 @@
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer to the systems creating it. Teams can see estimated costs across projects, inspect cost and token usage for individual agents, and monitor model costs.</description>
+    </item>
+    <item>
+      <title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Manager ..</description>
     </item>
     <item>
       <title>GitHub availability report: August 2026</title>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>When you click Connect Claude.ai Account , Air doesn’t run its own OAuth flow. Claude owns the credential, Claude refreshes it, and Air only ever learns one thing – that you’re logged in. If you have Claude set up to work in Air via ACP, we suggest switching to the bundled Claude Agent for better functionality and an enhanced experience.</description>
-    </item>
-    <item>
-      <title>Single API Key Comparison for Compatible Chat Integration in Fintech SaaS Apps</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260818-single-api-key-comparison-for-compatible-chat-integration-in-78ff19a2.html</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>How should a SaaS app compare compatible chat completions behind one API key? A useful fixture includes a ticket ID, redacted text, allowed destination queues, expected urgency, and an annotation note for ambiguous cases. This design also separates inference attempts from business effects: operators may retry a transient call, but only one validated decision can win the commit.</description>
     </item>
   </channel>
 </rss>

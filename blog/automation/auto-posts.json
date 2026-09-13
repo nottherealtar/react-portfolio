@@ -62,6 +62,19 @@
     "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Effective-cost-governance-screenshot.webp"
   },
   {
+    "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management",
+    "date": "2026-09-10",
+    "category": "Cloud Automation",
+    "summary": "AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Manager ..",
+    "link": "auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-for-container-management/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/Container-Management-quadrant-927x1024.webp"
+  },
+  {
     "title": "GitHub availability report: August 2026",
     "date": "2026-09-10",
     "category": "Developer Platform",

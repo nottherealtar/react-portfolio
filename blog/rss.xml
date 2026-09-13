@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 12 Sep 2026 19:20:41 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 10:16:26 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>I Catalogued 1,000+ Open-Source Claude Agent Skills. Here's What the Ecosystem Actually Looks Like.</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Cluster the skills by what they actually do and the vast majority fall into five buckets: Document manipulation. The description field is doing the heavy lifting This was the most consequential thing I learned, and it has nothing to do with the skill's content. Most of the skills I indexed get this wrong in one of two directions.</description>
+    </item>
     <item>
       <title>BlizzCon 2026 Opening Ceremony live coverage and how to watch—what's next for Warcraft, Overwatch, Diablo, and StarCraft</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260912-blizzcon-2026-opening-ceremony-live-coverage-and-how-to-watc-ac512c49.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>How should a SaaS app compare compatible chat completions behind one API key? A useful fixture includes a ticket ID, redacted text, allowed destination queues, expected urgency, and an annotation note for ambiguous cases. This design also separates inference attempts from business effects: operators may retry a transient call, but only one validated decision can win the commit.</description>
-    </item>
-    <item>
-      <title>Readme</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260818-readme-0c66fe7e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260818-readme-0c66fe7e.html</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>No source-code changes are required. Configure the dedicated Oracle metadata schema: Set a strong application admin password: Do not reuse the Oracle or Ollama credential. Point the backend at the organisation Ollama server: The API key is read only by FastAPI and is never sent to the React browser.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,28 @@
+/* TEAM */
+Creator: Joshua Coetzer
+Role: Business Automation & Integration Specialist
+Location: Johannesburg, Gauteng, South Africa
+Current: Wetility — business process & solutions
+Brand: TarsOnlineCafe
+Site: https://www.tarsonlinecafe.work/
+LinkedIn: https://www.linkedin.com/in/josh-coetzer-31a874239/
+GitHub: https://github.com/nottherealtar/
+Contact: https://www.tarsonlinecafe.work/#contact
+Recruiters: https://www.tarsonlinecafe.work/#hiring
+
+/* SKILLS */
+Azure Logic Apps, Freshworks (Freshdesk / Freshservice), Python automation,
+API & systems integration, Next.js / React web platforms, Google Cloud,
+CRM / FSM connectivity, process & workflow automation, POPIA-aware lead flows
+
+/* FOR RECRUITERS */
+Search titles: Business Automation Specialist, Integration Engineer,
+Solutions Engineer, Azure Logic Apps / API Integration
+Open to: recruiting conversations and client project briefs
+Prefer LinkedIn for roles; use the site contact form for project enquiries
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript, React, Vite
+Last update: 2026-09-14
+Language: en-ZA
+Doctype: HTML5

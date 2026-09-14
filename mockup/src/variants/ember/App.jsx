@@ -469,15 +469,38 @@ function About() {
               <p id="hiring-title" className="eyebrow">
                 {about.recruiter.title}
               </p>
-              <p>{about.recruiter.hint}</p>
+              <p className="recruiter-card__hint">{about.recruiter.hint}</p>
+              <p className="recruiter-card__summary">{about.recruiter.summary}</p>
+              <dl className="recruiter-facts">
+                {about.recruiter.facts.map((fact) => (
+                  <div key={fact.label} className="recruiter-facts__row">
+                    <dt>{fact.label}</dt>
+                    <dd>{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="recruiter-card__label">Titles recruiters search</p>
+              <ul className="recruiter-titles">
+                {about.recruiter.searchTitles.map((title) => (
+                  <li key={title}>{title}</li>
+                ))}
+              </ul>
+              <p className="recruiter-card__label">Core stack</p>
+              <ul className="recruiter-skills">
+                {about.recruiter.skills.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
+              </ul>
+              <p className="recruiter-card__cta">{about.recruiter.cta}</p>
               <div className="recruiter-links">
-                <a href={site.social.github} target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
                 <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
+                <a href={site.social.github} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
                 <a href={site.social.blog}>Blog</a>
+                <a href="#contact">Contact</a>
               </div>
             </aside>
           </Reveal>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
+    "date": "2026-09-14",
+    "category": "Tech & Startups",
+    "summary": "Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something customers will still value after the next model release?",
+    "link": "auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html",
+    "source_url": "https://techcrunch.com/2026/09/14/only-at-techcrunch-disrupt-2026-what-happens-when-openai-ships-your-roadmap/",
+    "source_name": "TechCrunch",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://techcrunch.com/wp-content/uploads/2026/09/TCD26_3-Speaker-Tong-Toews-Tricot_16x9-Dark.png?w=680"
+  },
+  {
     "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
     "date": "2026-09-14",
     "category": "Coding & Community",

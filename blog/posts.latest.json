@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
+      "link": "auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html",
+      "date": "2026-09-14",
+      "summary": "Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something ",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
       "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
       "date": "2026-09-14",
@@ -85,14 +93,6 @@
       "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
       "date": "2026-09-09",
       "summary": "Every developer who builds web scrapers goes through the same initial rite of passage. While headless browsers are exceptional tools for end-to-end web testing and scraping low-security websites, using them to scrape Sea",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "I Wired the Boring 80% So You Can Build the Interesting 20%",
-      "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
-      "date": "2026-09-08",
-      "summary": "Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + Na",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 14 Sep 2026 10:38:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 20:59:05 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something customers will still value after the next model release?</description>
+    </item>
     <item>
       <title>Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>AI-Augmented Delivery AI is shifting project managers’ time from manual coordination to strategic work. Instead, they become a Systems Architect, coordinating a workforce made up of both humans and intelligent agents. Implementing AI exposes hidden operational debt, and technical leaders must be prepared for the friction.</description>
-    </item>
-    <item>
-      <title>TypeScript `Exclude` and `Extract` in Depth: Filtering Union Types for Real API Contracts</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260819-typescript-exclude-and-extract-in-depth-filtering-union-type-aff8f76f.html</guid>
-      <pubDate>Wed, 19 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>TypeScript Exclude and Extract in Depth: Filtering Union Types for Real API Contracts Most union type problems stem from treating them as static lists instead of transformable sets. Exclude&lt;T, U&gt; removes unwanted types before they reach production code. Combining Exclude and Extract with conditional types enables self-documenting type transformations that encode business rules directly in the type system.</description>
     </item>
   </channel>
 </rss>

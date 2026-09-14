@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-13T19:27:21.319666+00:00",
+  "timestamp": "2026-09-14T10:36:29.693327+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 611,
-  "unseen_candidates": 598,
+  "unseen_candidates": 597,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management",
-      "link": "auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html",
-      "score": 127.8697,
-      "source": "Microsoft Azure Blog",
+      "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
+      "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
+      "score": 141.872,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

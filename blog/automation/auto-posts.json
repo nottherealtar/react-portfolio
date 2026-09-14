@@ -1,5 +1,17 @@
 [
   {
+    "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
+    "date": "2026-09-14",
+    "category": "Coding & Community",
+    "summary": "Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns parallel sub-tasks in separate sandboxes. Partial commits are tagged with a failure marker so the system can resume from the last known good state.",
+    "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
+    "source_url": "https://dev.to/mech_app_ai/background-agents-four-layer-fault-tolerance-for-long-running-code-sessions-5208",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "I Catalogued 1,000+ Open-Source Claude Agent Skills. Here's What the Ecosystem Actually Looks Like.",
     "date": "2026-09-13",
     "category": "Coding & Community",

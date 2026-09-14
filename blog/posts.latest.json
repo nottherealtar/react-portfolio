@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
+      "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
+      "date": "2026-09-14",
+      "summary": "Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns pa",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "I Catalogued 1,000+ Open-Source Claude Agent Skills. Here's What the Ecosystem Actually Looks Like.",
       "link": "auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html",
       "date": "2026-09-13",
@@ -85,14 +93,6 @@
       "link": "auto/20260908-i-wired-the-boring-80-so-you-can-build-the-interesting-20-bfcfb97b.html",
       "date": "2026-09-08",
       "summary": "Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + Na",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.",
-      "link": "auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html",
-      "date": "2026-09-08",
-      "summary": "I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel=\"dofo",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

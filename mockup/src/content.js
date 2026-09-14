@@ -93,8 +93,33 @@ export const about = {
   pills: ['Documented handovers', 'Measurable outcomes', 'Honest scoping'],
   stack: ['Next.js', 'Python', 'Azure', 'Google Cloud', 'API'],
   recruiter: {
-    title: 'For recruiters',
-    hint: 'Integrations, APIs, Azure & Python, shipped with a production-first mindset.',
+    title: 'For recruiters & hiring managers',
+    hint: 'Integrations, APIs, Azure Logic Apps & Python — shipped with a production-first mindset.',
+    summary:
+      'Johannesburg-based automation and integration specialist with 5+ years connecting CRM, service desk, ops tools, and cloud. Currently at Wetility; also ships client work via TarsOnlineCafe.',
+    facts: [
+      { label: 'Location', value: 'Johannesburg, South Africa' },
+      { label: 'Experience', value: '5+ years' },
+      { label: 'Current role', value: 'Wetility — business process & solutions' },
+      { label: 'Availability', value: 'Open to recruiting conversations & client projects' },
+    ],
+    searchTitles: [
+      'Business Automation Specialist',
+      'Integration Engineer',
+      'Solutions Engineer',
+      'Azure Logic Apps / API Integration',
+    ],
+    skills: [
+      'Azure Logic Apps',
+      'Python',
+      'Freshworks',
+      'API Integration',
+      'Next.js',
+      'Google Cloud',
+      'CRM / FSM',
+      'Process Automation',
+    ],
+    cta: 'Roles: reach out on LinkedIn. Project briefs: use Contact below.',
   },
 }
 
@@ -224,6 +249,7 @@ export const contact = {
     { value: 'azure', label: 'Azure Logic Apps' },
     { value: 'freshworks', label: 'Freshworks Integration' },
     { value: 'api', label: 'API / Systems Integration' },
+    { value: 'hiring', label: 'Recruiting / hiring enquiry' },
     { value: 'other', label: 'Other' },
   ],
   coffeeText: 'Enjoyed my work? Support me with a coffee!',

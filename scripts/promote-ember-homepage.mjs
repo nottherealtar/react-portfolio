@@ -22,8 +22,17 @@ if (!existsSync(join(src, 'ember.html')) && !existsSync(join(src, 'index.html'))
 const htmlName = existsSync(join(src, 'index.html')) ? 'index.html' : 'ember.html'
 let html = readFileSync(join(src, htmlName), 'utf8')
 
-// Promote must be indexable
-html = html.replace(/\s*<meta\s+name="robots"\s+content="noindex,\s*nofollow"\s*\/?>/i, '')
+// Promote must be indexable (replace QA noindex with production robots)
+const productionRobots =
+  '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />'
+if (/name=["']robots["']/i.test(html)) {
+  html = html.replace(
+    /<meta\s+name=["']robots["']\s+content=["'][^"']*["']\s*\/?>/i,
+    productionRobots,
+  )
+} else {
+  html = html.replace(/<\/title>/i, `</title>\n    ${productionRobots}`)
+}
 html = html.replace(/\s*<!--\s*QA \/ preview only[\s\S]*?-->/i, '')
 
 if (!html.includes('data-prerendered="true"')) {

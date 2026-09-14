@@ -8,7 +8,10 @@ Allow: /styles/
 Allow: /scripts/
 Allow: /globe/
 Allow: /og-share.png
+Allow: /logo.png
+Allow: /favicon.svg
 Allow: /llms.txt
+Allow: /humans.txt
 Allow: /site.webmanifest
 Allow: /blog/rss.xml
 

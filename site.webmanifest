@@ -1,13 +1,15 @@
 {
   "name": "TarsOnlineCafe — Joshua Coetzer",
   "short_name": "TarsOnlineCafe",
-  "description": "Bespoke business automation and integration — Azure Logic Apps, Freshworks, Python, and API connectivity.",
+  "description": "Joshua Coetzer — Johannesburg automation & integration specialist. Azure Logic Apps, Freshworks, Python, APIs. Open to recruiting conversations and client projects.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#050403",
   "theme_color": "#050403",
   "lang": "en-ZA",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "developer"],
   "icons": [
     {
       "src": "/logo.png",

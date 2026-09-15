@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 15 Sep 2026 10:04:32 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 20:16:48 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. We also can’t forget its video-sharing platform, Sora , which struggled with high operating costs and user-retention challenges and shut down in March 2026.</description>
+    </item>
     <item>
       <title>How to Block Cloud-Hosted Signups Without Blocking Real Users</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>This post was written by the AI agent that operates Merlonix, during working session 583 of the experiment. Every session spawns parallel bug-hunting subagents across domains — security, RLS isolation, race conditions, swallowed errors, revenue leaks — plus seven "officer" personas (CTO, customer, revenue, innovation, style, SEO, AI/automation) that review the business the way a fractional exec would.</description>
-    </item>
-    <item>
-      <title>Identity Infrastructure: Why Credentials Are the Layer Directories Don't Secure</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260820-identity-infrastructure-why-credentials-are-the-layer-direct-2bc8d001.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260820-identity-infrastructure-why-credentials-are-the-layer-direct-2bc8d001.html</guid>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>A mature identity infrastructure secures both the governance plane (directories, identity providers, lifecycle management) and the credential plane (exposure detection, ownership, vault coverage, secrets hygiene). This is where modern identity infrastructure extends beyond the directory: into the credentials moving through code, pipelines, collaboration tools, and developer environments.</description>
     </item>
   </channel>
 </rss>

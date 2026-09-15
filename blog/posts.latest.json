@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "link": "auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html",
+      "date": "2026-09-15",
+      "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. We also can’t forget its video-sharing platform, Sora , which stru",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "How to Block Cloud-Hosted Signups Without Blocking Real Users",
       "link": "auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html",
       "date": "2026-09-15",
@@ -86,14 +94,6 @@
       "date": "2026-09-10",
       "summary": "Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, an",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The Evolution of WSL Support in JetBrains IDEs",
-      "link": "auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html",
-      "date": "2026-09-09",
-      "summary": "We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces signifi",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

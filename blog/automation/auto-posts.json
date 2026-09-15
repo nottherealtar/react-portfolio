@@ -1,5 +1,17 @@
 [
   {
+    "title": "How to Block Cloud-Hosted Signups Without Blocking Real Users",
+    "date": "2026-09-15",
+    "category": "Coding & Community",
+    "summary": "TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of boolean flags for an IP; the logic decides which flags mean \"a server is pretending to be a user\" and which mean \"a real user is behind a shared address.\" Get that split right and you can substantially reduce the false positives of a blunt cloud-IP block.",
+    "link": "auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html",
+    "source_url": "https://dev.to/abdullah_afzal/how-to-block-cloud-hosted-signups-without-blocking-real-users-1l7h",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
     "date": "2026-09-14",
     "category": "Tech & Startups",

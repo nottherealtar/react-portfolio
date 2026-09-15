@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>How to Block Cloud-Hosted Signups Without Blocking Real Users | TarsOnlineCafe</title>
+  <meta name="description" content="TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="How to Block Cloud-Hosted Signups Without Blocking Real Users">
+  <meta property="og:description" content="TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html">
+  <meta property="article:published_time" content="2026-09-15T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Block Cloud-Hosted Signups Without Blocking Real Users">
+  <meta name="twitter:description" content="TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="How to Block Cloud-Hosted Signups Without Blocking Real Users">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Block Cloud-Hosted Signups Without Blocking Real Users", "description": "TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of…", "datePublished": "2026-09-15T12:00:00.000Z", "dateModified": "2026-09-15T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html"}, "isBasedOn": "https://dev.to/abdullah_afzal/how-to-block-cloud-hosted-signups-without-blocking-real-users-1l7h", "wordCount": 1972}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-15</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>How to Block Cloud-Hosted Signups Without Blocking Real Users</h1>
+        <p class="lede">TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of boolean flags for an IP; the logic decides which flags mean &quot;a server is pretending to be a user&quot; and which mean &quot;a real user is behind a shared address.&quot; Get that split right and you can substantially reduce the false positives of a blunt cloud-IP block.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Nobody opens a laptop, routes through an AWS datacenter in us-east-1 , and fills in your registration form by hand. Datacenter traffic at a signup endpoint is automation: scrapers, credential-stuffing scripts, mass account creation, the odd misconfigured integration. Then someone on your own team gets locked out, an entire company behind a corporate proxy can&#x27;t register, and you&#x27;re staring at a support ticket wondering what you broke.</p>
+        <p>Here&#x27;s both, with code you can paste into a Node or Python signup route. If your signup policy blocks cloud-origin traffic, gate on is_cloud_provider , not on &quot;is this user anonymized.&quot; Keep the VPN/proxy/Tor/relay decision separate and softer. Those flags catch real, privacy-minded users, so challenge them, don&#x27;t hard-block.</p>
+        <p>Two cloud IPs you must not block: corporate secure-web-gateway egress ( is_corporate_gateway , one IP fronts a whole company) and declared crawlers ( is_known_good_bot ). Use cloud_provider_name to log an auditable reason for every block. Do not use the provider name alone as an allowlist: shared cloud providers host many unrelated customers.</p>
+        <p>Static CIDR lists rot and know nothing about gateways or good bots. That&#x27;s the failure mode behind most &quot;it blocked my own laptop&quot; bugs. If your signup policy blocks cloud-origin traffic, gate on is_cloud_provider , not on &quot;is this user anonymized.&quot; Keep the VPN/proxy/Tor/relay decision separate and softer.</p>
+        <p>Those flags catch real, privacy-minded users, so challenge them, don&#x27;t hard-block. Two cloud IPs you must not block: corporate secure-web-gateway egress ( is_corporate_gateway , one IP fronts a whole company) and declared crawlers ( is_known_good_bot ). Use cloud_provider_name to log an auditable reason for every block.</p>
+        <p>Do not use the provider name alone as an allowlist: shared cloud providers host many unrelated customers. Static CIDR lists rot and know nothing about gateways or good bots. That&#x27;s the failure mode behind most &quot;it blocked my own laptop&quot; bugs.</p>
+        <p>In practice this is one lookup and about fifteen lines of decision logic. A datacenter IP is a different signal than a VPN Most &quot;block anonymous traffic&quot; advice lumps everything together: VPN, proxy, Tor, relay, datacenter, all treated as one risk bucket. A person on a corporate VPN, iCloud Private Relay, or a mobile network that happens to route through a proxy is very often a real user with a real reason to sign up.</p>
+        <p>Block them and you&#x27;re turning away customers. A request from an EC2 instance or a rented Hetzner box is a different thing entirely: there&#x27;s no human sitting at that IP. The traffic exists because someone rented compute and pointed it at your form.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Nobody opens a laptop, routes through an AWS datacenter in us-east-1 , and fills in your registration form by hand. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>A signup from a cloud-hosted IP is almost never a real person.</li>
+          <li>Two cloud IPs you must not block: corporate secure-web-gateway egress ( is_corporate_gateway , one IP fronts a whole company) and declared crawlers ( is_known_good_bot ).</li>
+          <li>The one I&#x27;ll use here, ipgeolocation.io, returns it as a boolean plus the provider&#x27;s name, alongside the rest of the risk signals in a single response.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/abdullah_afzal/how-to-block-cloud-hosted-signups-without-blocking-real-users-1l7h" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

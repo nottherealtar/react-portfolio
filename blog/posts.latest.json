@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How to Block Cloud-Hosted Signups Without Blocking Real Users",
+      "link": "auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html",
+      "date": "2026-09-15",
+      "summary": "TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of boolean flags for an IP; the logic decides which flags mean \"a server ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
       "link": "auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html",
       "date": "2026-09-14",
@@ -86,14 +94,6 @@
       "date": "2026-09-09",
       "summary": "We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces signifi",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Headless browsers vs. SERP APIs: Why your Playwright scraper fails in production",
-      "link": "auto/20260909-headless-browsers-vs-serp-apis-why-your-playwright-scraper-f-18619841.html",
-      "date": "2026-09-09",
-      "summary": "Every developer who builds web scrapers goes through the same initial rite of passage. While headless browsers are exceptional tools for end-to-end web testing and scraping low-security websites, using them to scrape Sea",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

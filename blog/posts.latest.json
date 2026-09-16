@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
+      "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
+      "date": "2026-09-16",
+      "summary": "It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get the",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
       "link": "auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html",
       "date": "2026-09-15",
@@ -86,14 +94,6 @@
       "date": "2026-09-10",
       "summary": "As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions ",
       "category": "Developer Platform",
-      "reading_minutes": 3
-    },
-    {
-      "title": "AI Dev Weekly #25: GPT-6 Astra Arrives, Kotlin Agents Reach 1.0, Copilot Adds Enforced Permissions",
-      "link": "auto/20260910-ai-dev-weekly-25-gpt-6-astra-arrives-kotlin-agents-reach-1-0-031a7924.html",
-      "date": "2026-09-10",
-      "summary": "Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, an",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

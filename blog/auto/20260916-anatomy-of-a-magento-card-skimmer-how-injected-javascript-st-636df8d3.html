@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It | TarsOnlineCafe</title>
+  <meta name="description" content="It&#x27;s one of the most common and most damaging things that happens to a Magento store, and it&#x27;s built from the ground up to be invisible. How a card skimmer…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It">
+  <meta property="og:description" content="It&#x27;s one of the most common and most damaging things that happens to a Magento store, and it&#x27;s built from the ground up to be invisible. How a card skimmer…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html">
+  <meta property="article:published_time" content="2026-09-16T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It">
+  <meta name="twitter:description" content="It&#x27;s one of the most common and most damaging things that happens to a Magento store, and it&#x27;s built from the ground up to be invisible. How a card skimmer…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It", "description": "It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer…", "datePublished": "2026-09-16T12:00:00.000Z", "dateModified": "2026-09-16T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html"}, "isBasedOn": "https://dev.to/byte8io/anatomy-of-a-magento-card-skimmer-how-injected-javascript-steals-cards-and-why-uptime-checks-4am8", "wordCount": 1879}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-16</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It</h1>
+        <p class="lede">It&#x27;s one of the most common and most damaging things that happens to a Magento store, and it&#x27;s built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker&#x27;s goal is simple: get their JavaScript to execute on your checkout page. The payload is usually obfuscated so it doesn&#x27;t read as &quot;skimmer&quot; to a casual glance.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>A Magento store can be fully up, fast, and passing every uptime check while quietly sending each customer&#x27;s card number to a criminal. Orders complete, pages load in 400ms, the status page is green — and card data is being copied at the moment it&#x27;s typed. This post walks through exactly how a skimmer gets in, what the injected code does, why traditional monitoring can&#x27;t see it, and how to catch and remove one.</p>
+        <p>The store keeps returning HTTP 200, the page stays fast, and no PHP exception is ever thrown. Detection is hard precisely because, by every conventional signal, the store looks healthy. Magento has admin fields whose contents are rendered into every page: the &quot;Miscellaneous HTML&quot; boxes (header/footer), the head includes, tracking-script fields.</p>
+        <p>A single row in core_config_data can inject a script store-wide. A widget or static block that appears on many pages — a footer block, a promo banner — is edited to carry the payload. After a server or admin compromise, the attacker edits .phtml templates or layout XML directly to add a &lt;script&gt; tag.</p>
+        <p>File-level, so it survives cache flushes but not a clean redeploy. The entry point for most of the above: a reused admin password with no 2FA, or a vulnerable third-party extension that allows content to be written. Recent unauthenticated RCE flaws have let attackers skip the login step entirely.</p>
+        <p>A legitimate external script the storefront already loads — analytics, a chat widget, a tag manager — is swapped at its source. The store&#x27;s own database is untouched, which makes this variant especially sneaky. The attacker gains write access to content: a guessed or phished admin login, an exploited extension, or in the worst case remote code execution on the server.</p>
+        <p>No 2FA on even one admin account is often all it takes. They add a few lines of JavaScript to one of the injection points above — most often a core_config_data field or a CMS block, because those render site-wide and don&#x27;t require touching the filesystem. They read the payment and address fields — card number, expiry, CVV, name, billing address — either by watching keystrokes or by scraping the form just before submit.</p>
+        <p>The harvested data is sent to an attacker-controlled domain, frequently one that mimics a real service (a lookalike of a CDN, analytics, or font host) so it blends into normal network traffic. Exfiltration often rides on an image request or a fetch to a domain that looks innocuous in a list of third-party calls. They throw no errors, add no visible latency, and often re-inject themselves from a second foothold if the first is cleaned.</p>
+        <p>The store keeps working normally, which is the whole point — the longer it looks healthy, the longer the cards keep flowing. Why uptime checks — and even APM — are blind to it This is the part that catches teams out. An uptime monitor asks &quot;did the page respond?&quot; — it did.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>A Magento card skimmer — a form of Magecart or digital skimming attack — is malicious JavaScript injected into a store&#x27;s frontend that reads payment and personal details from the checkout form and sends them to an attacker-controlled server. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>A Magento store can be fully up, fast, and passing every uptime check while quietly sending each customer&#x27;s card number to a criminal.</li>
+          <li>This post walks through exactly how a skimmer gets in, what the injected code does, why traditional monitoring can&#x27;t see it, and how to catch and remove one.</li>
+          <li>They add a few lines of JavaScript to one of the injection points above — most often a core_config_data field or a CMS block, because those render site-wide and don&#x27;t require…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/byte8io/anatomy-of-a-magento-card-skimmer-how-injected-javascript-steals-cards-and-why-uptime-checks-4am8" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

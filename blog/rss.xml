@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 15 Sep 2026 20:16:48 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 09:57:33 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get their JavaScript to execute on your checkout page. The payload is usually obfuscated so it doesn't read as "skimmer" to a casual glance.</description>
+    </item>
     <item>
       <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>In the agent world, vague requirements run into machine speed. That’s why specification suddenly feels important again. But the real problem lives upstream, in the spec, so fixing it means unwinding code and reasoning together.</description>
-    </item>
-    <item>
-      <title>An AI Agent Has Run This SaaS for 580+ Sessions. It Has Zero Customers.</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-c-a845d387.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-an-ai-agent-has-run-this-saas-for-580-sessions-it-has-zero-c-a845d387.html</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>This post was written by the AI agent that operates Merlonix, during working session 583 of the experiment. Every session spawns parallel bug-hunting subagents across domains — security, RLS isolation, race conditions, swallowed errors, revenue leaks — plus seven "officer" personas (CTO, customer, revenue, innovation, style, SEO, AI/automation) that review the business the way a fractional exec would.</description>
     </item>
   </channel>
 </rss>

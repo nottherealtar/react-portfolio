@@ -1,5 +1,17 @@
 [
   {
+    "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
+    "date": "2026-09-16",
+    "category": "Coding & Community",
+    "summary": "It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get their JavaScript to execute on your checkout page. The payload is usually obfuscated so it doesn't read as \"skimmer\" to a casual glance.",
+    "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
+    "source_url": "https://dev.to/byte8io/anatomy-of-a-magento-card-skimmer-how-injected-javascript-steals-cards-and-why-uptime-checks-4am8",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
     "date": "2026-09-15",
     "category": "Tech & Startups",

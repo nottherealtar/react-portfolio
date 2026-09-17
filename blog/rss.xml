@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 17 Sep 2026 10:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 20:20:33 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Platform</category>
       <description>It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly. The architecture of the CLI and its runtime also contributed to challenges here. And it meant forced out-of-process communication just to make function calls.</description>
+    </item>
+    <item>
+      <title>Enterprise AI Observability Platforms: Architecture, Key Capabilities, and Evaluation Guide</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Enterprise AI observability platforms provide distributed tracing, automated evaluation, and governance for non-deterministic LLM applications and agentic workflows. Platforms such as Maxim AI provide the necessary instrumentation, session replay, and automated scoring to ensure AI systems remain reliable, compliant, and cost-effective.</description>
     </item>
     <item>
       <title>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It</title>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>This is a stealth game that doesn't mind if you try to play it like Call of Duty, but going loud comes at the cost of stressing Snake the fuck out. More than anything else though, MGS4's long exile has given me a new appreciation for its extremely balanced stealth. Replaying Guns of the Patriots and Splinter Cell: Chaos Theory in the same year is highlighting just how bland open worlds have made level design.</description>
-    </item>
-    <item>
-      <title>How AI accounting startup Rillet raised $100M and became a unicorn in 48 hours</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-how-ai-accounting-startup-rillet-raised-100m-and-became-a-un-e1b06620.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-how-ai-accounting-startup-rillet-raised-100m-and-became-a-un-e1b06620.html</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Tech &amp; Startups</category>
-      <description>His customers aren’t piloting Rillet either, he said — they’re yanking out ERP and accounting software from competitors like Intuit, NetSuite, or Oracle. “Rillet’s initial wedge is accounting, but ultimately they are reinventing the entire finance function,” Bek told TechCrunch, adding that agentic finance could become “one of the largest application software opportunities of the AI era.</description>
     </item>
   </channel>
 </rss>

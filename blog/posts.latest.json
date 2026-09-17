@@ -9,6 +9,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "Enterprise AI Observability Platforms: Architecture, Key Capabilities, and Evaluation Guide",
+      "link": "auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html",
+      "date": "2026-09-17",
+      "summary": "Enterprise AI observability platforms provide distributed tracing, automated evaluation, and governance for non-deterministic LLM applications and agentic workflows. Platforms such as Maxim AI provide the necessary instr",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
       "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
       "date": "2026-09-16",
@@ -85,14 +93,6 @@
       "link": "auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html",
       "date": "2026-09-10",
       "summary": "For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer",
-      "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management",
-      "link": "auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html",
-      "date": "2026-09-10",
-      "summary": "AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Ma",
       "category": "Cloud Automation",
       "reading_minutes": 3
     }

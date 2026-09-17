@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 16 Sep 2026 09:57:33 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 10:00:19 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Migrating the GitHub Copilot runtime to Rust, using Copilot</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly. The architecture of the CLI and its runtime also contributed to challenges here. And it meant forced out-of-process communication just to make function calls.</description>
+    </item>
     <item>
       <title>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
       <category>Tech &amp; Startups</category>
       <description>His customers aren’t piloting Rillet either, he said — they’re yanking out ERP and accounting software from competitors like Intuit, NetSuite, or Oracle. “Rillet’s initial wedge is accounting, but ultimately they are reinventing the entire finance function,” Bek told TechCrunch, adding that agentic finance could become “one of the largest application software opportunities of the AI era.</description>
-    </item>
-    <item>
-      <title>Dispatches from O'Reilly: The right amount of spec for agentic development</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-dispatches-from-o-reilly-the-right-amount-of-spec-for-agenti-e9ceebe4.html</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Careers</category>
-      <description>In the agent world, vague requirements run into machine speed. That’s why specification suddenly feels important again. But the real problem lives upstream, in the spec, so fixing it means unwinding code and reasoning together.</description>
     </item>
   </channel>
 </rss>

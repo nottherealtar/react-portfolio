@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Migrating the GitHub Copilot runtime to Rust, using Copilot | TarsOnlineCafe</title>
+  <meta name="description" content="It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Migrating the GitHub Copilot runtime to Rust, using Copilot">
+  <meta property="og:description" content="It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html">
+  <meta property="article:published_time" content="2026-09-17T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Migrating the GitHub Copilot runtime to Rust, using Copilot">
+  <meta name="twitter:description" content="It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed…">
+  <meta property="og:image" content="https://github.blog/wp-content/uploads/2026/09/architecture-before-after.svg?resize=1024,512">
+  <meta property="og:image:alt" content="Migrating the GitHub Copilot runtime to Rust, using Copilot">
+  <meta name="twitter:image" content="https://github.blog/wp-content/uploads/2026/09/architecture-before-after.svg?resize=1024,512">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Migrating the GitHub Copilot runtime to Rust, using Copilot", "description": "It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed…", "datePublished": "2026-09-17T12:00:00.000Z", "dateModified": "2026-09-17T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://github.blog/wp-content/uploads/2026/09/architecture-before-after.svg?resize=1024,512", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html"}, "isBasedOn": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/", "wordCount": 2012}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-09-17</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Migrating the GitHub Copilot runtime to Rust, using Copilot</h1>
+        <p class="lede">It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly. The architecture of the CLI and its runtime also contributed to challenges here. And it meant forced out-of-process communication just to make function calls.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>The GitHub Copilot CLI , GitHub Copilot app , and GitHub Copilot SDK are all backed by the Copilot agent runtime, an agentic harness that can be embedded into applications and services. Using the GitHub Copilot app and the Copilot CLI, we completely rewrote the runtime into more than 800,000 lines of production Rust. AI agents wrote most of the code, spanning 128 pull requests that landed in main and shipped incrementally rather than waiting for a single cutover at the end.</p>
+        <p>The few inevitable regressions were discovered and fixed quickly along the way, while the performance of the runtime improved by orders of magnitude. A project that would have taken a whole team of developers a year or two before agents was now completed primarily by a single developer, in only a few months, all while the rest of the team continued to greatly expand the runtime’s capabilities and reach. It backs a growing set of Microsoft, GitHub, and ecosystem solutions, for each of which AI support is, architecturally, a shell…</p>
+        <p>This includes not only the GitHub Copilot CLI and the GitHub Copilot app, but also the latest releases of VS Code, Visual Studio, CCA, Copilot Code Review ( CCR ), Copilot Cowork, Copilot Studio, and Excel and Outlook and PowerPoint and Word and… it goes on. These are very different products, and none of them wants to or should need to implement everything that goes into a production agent harness. They want all of the intelligence, security, reliability, and performance, and they want it shared so that a fix in one place fixes it…</p>
+        <p>Most of the products listed in the previous paragraph initially implemented their own agent loop, but have since replaced it with the GitHub Copilot SDK, which is the entry point to the Copilot agent runtime. Doing so enables them to focus on their core business value and leave the details to the runtime. That’s all the more important given the pace of the industry and the employed agent loop needing to stay always best-of-breed in the face of intense competition.</p>
+        <p>The problem was the nature of the thing being shared. If we look at the CLI, it’s logically a terminal UI (TUI) on top of an agent loop. That’s a respectable choice for a TUI application; TypeScript and Node.js are broadly accessible and enable very rapid application development.</p>
+        <p>And for the needs of a console application, the performance implications in terms of startup, responsiveness, throughput, and memory consumption are also reasonable. They are, unfortunately, much less reasonable when you think about that implementation being used in other environments, with other constraints, with demands for things like fast startup and excellent server density due to low memory overhead. The whole industry is running extremely fast, and in that context, really bright people make decisions for delivery speed and…</p>
+        <p>The Copilot CLI was initially written and shipped quickly, and in doing so, the TUI and the runtime were fairly intertwined rather than separated into discrete layers. Then when an SDK was needed for programmatic access to that runtime, without clear separation of the layers, a pragmatic decision was made to layer the SDK on top of the CLI, even though logically you’d expect the inverse architecture. Rather than only being accessible via commands provided by the user at the command line, the CLI was updated with a mode where it…</p>
+        <p>A JSON-RPC protocol could then be used to marshal function calls from an external process to and from the CLI. The SDK could then be embedded in arbitrary consuming programs, which would spawn a CLI process to host the agent loop out-of-process, with the SDK calling functions in the remote process via this JSON-RPC mechanism. But not great for the performance (startup, memory, throughput) and reliability of those consuming applications.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/architecture-before-after.svg?resize=1024,512" alt="The Copilot runtime architecture before and after the Rust rewrite, showing the old SDK-to-CLI process boundary and the new in-process and out-of-process hosting paths." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/runtime-line-history.svg?resize=1024,563" alt="TypeScript fell to zero while production Rust rose to approximately 830,000 lines and Rust unit tests to approximately 469,000 lines." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/port-fix-release-timeline-1.svg?resize=1024,397" alt="Timeline from May 12 through August 21 showing 128 port pull request merges sized by changed lines and 135 public CLI releases; the largest port changes cluster near completion of the port." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/pr-timeline.svg?resize=712,1024" alt="Timeline of 128 landed port pull requests from May through August, progressing from small foundational components to larger orchestration and session work." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/interop-surface.svg?resize=1024,546" alt="Temporary Rust N-API exports and their TypeScript call sites grew during the incremental port, then declined as callers moved to Rust and the temporary interop surface disappeared." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/09/user-message-intents.svg?resize=1024,538" alt="Of 2,639 human-authored messages, 31.0% focused on review, testing, and CI; 17.4% challenged technical or design decisions; and 15.0% pushed for completeness." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Using the GitHub Copilot app and the Copilot CLI, we completely rewrote the runtime into more than 800,000 lines of production Rust. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The GitHub Copilot CLI , GitHub Copilot app , and GitHub Copilot SDK are all backed by the Copilot agent runtime, an agentic harness that can be embedded into applications and…</li>
+          <li>The Copilot CLI was initially written and shipped quickly, and in doing so, the TUI and the runtime were fairly intertwined rather than separated into discrete layers.</li>
+          <li>It meant all the memory overhead associated with V8.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

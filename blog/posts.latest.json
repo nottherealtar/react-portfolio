@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "link": "auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html",
+      "date": "2026-09-17",
+      "summary": "It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly.",
+      "category": "Developer Platform",
+      "reading_minutes": 4
+    },
+    {
       "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
       "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
       "date": "2026-09-16",
@@ -86,14 +94,6 @@
       "date": "2026-09-10",
       "summary": "AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Ma",
       "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "GitHub availability report: August 2026",
-      "link": "auto/20260910-github-availability-report-august-2026-a105b3ce.html",
-      "date": "2026-09-10",
-      "summary": "As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions ",
-      "category": "Developer Platform",
       "reading_minutes": 3
     }
   ]

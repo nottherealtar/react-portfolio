@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-16T09:55:04.973014+00:00",
+  "timestamp": "2026-09-17T09:58:20.423784+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 612,
-  "unseen_candidates": 598,
+  "fetched_candidates": 613,
+  "unseen_candidates": 602,
   "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
-      "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
-      "score": 130.9244,
-      "source": "DEV Community",
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "link": "auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html",
+      "score": 134.278,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+    "date": "2026-09-17",
+    "category": "Developer Platform",
+    "summary": "It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly. The architecture of the CLI and its runtime also contributed to challenges here. And it meant forced out-of-process communication just to make function calls.",
+    "link": "auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html",
+    "source_url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/09/architecture-before-after.svg?resize=1024,512"
+  },
+  {
     "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
     "date": "2026-09-16",
     "category": "Coding & Community",

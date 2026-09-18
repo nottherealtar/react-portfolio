@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Bloated Clouds, Anyone? | TarsOnlineCafe</title>
+  <meta name="description" content="Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Bloated Clouds, Anyone?">
+  <meta property="og:description" content="Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html">
+  <meta property="article:published_time" content="2026-09-18T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bloated Clouds, Anyone?">
+  <meta name="twitter:description" content="Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpz9poh8vpg1mrrr52hzk.png">
+  <meta property="og:image:alt" content="Bloated Clouds, Anyone?">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpz9poh8vpg1mrrr52hzk.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Bloated Clouds, Anyone?", "description": "Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that…", "datePublished": "2026-09-18T12:00:00.000Z", "dateModified": "2026-09-18T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpz9poh8vpg1mrrr52hzk.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html"}, "isBasedOn": "https://dev.to/sharpvik/bloated-clouds-anyone-1jhc", "wordCount": 599}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-18</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Bloated Clouds, Anyone?</h1>
+        <p class="lede">Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that come with it. As a developer, I have to live with it every day.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Chasing the next big thing, they abandoned any attempt at improving developer experience, which is the reason clouds blew up in the first place. Big tech companies have the money to pay for DevOps. The rest of us have to choose between wasting developer time on it or delegating it to an AI agent that can&#x27;t be held responsible when it all comes crashing down.</p>
+        <p>regular deployments have to arrive via SSH or some elaborate CI setup (we&#x27;ll look at the options in the next post), you&#x27;ll be paying for more compute than you actually use, and when your service becomes popular enough to use its entire CPU/RAM allowance, you have to scale it up manually. You can go serverless and it will scale up and down automatically, but servers with stateful functionality will underperform (for instance, Next.js has server-side caching, and it doesn&#x27;t work when you run it as a scale-to-zero container), Firebase…</p>
+        <p>You will forget to update it sooner or later, and it will crash with a bug. Suppose you do want the scalability, smooth CI deploys that just make sense, and all your code living in a GitHub repo you control. Welcome to provisioning a Docker image registry.</p>
+        <p>Welcome to setting up Traefik for TLS termination. Welcome to setting up security groups and service accounts. Welcome to configuring ingress and egress rules.</p>
+        <p>Welcome to not understanding why this call from &quot;web&quot; to &quot;api&quot; times out. Or is it because the &quot;api&quot; service link you put into the &quot;web&quot; env is cluster-local, and &quot;web&quot; lives in a different cluster?) I can hear you thinking, &quot; Claude can do that for me, no problem,&quot; and you&#x27;re right ... And remember, all this setup bought you a nicer dev experience (aside from having to set it up and maintain it), but Kubernetes runs on top of real VMs!</p>
+        <p>Put your Next.js app on Vercel (for most of us, their $20/mo tier is enough). Provision managed resources ( Postgres , MongoDB , Kafka , RabbitMQ , etc.) from DigitalOcean , Supabase , Scaleway , AWS , or Google Cloud . It doesn&#x27;t really matter which; they all offer good SLAs.</p>
+        <p>Put your API on DigitalOcean or Scaleway, either as serverless or on App Platform . Set up a GitHub Actions workflow ( lint + test + build + deploy ) as early as possible. Doing this for every project is still a stretch, but when it&#x27;s done properly, you can git push to main and it&#x27;ll just deploy, without having to run your own k8s.</p>
+        <p>This rant covers only a fraction of what&#x27;s wrong with today&#x27;s cloud infra. So I said &quot;enough,&quot; and now I&#x27;m building Gagarin Cloud , where deploying a web app is just: And a nice dependency graph is included:</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpz9poh8vpg1mrrr52hzk.png" alt="Gagarin Cloud Console Screenshot" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>So I said &quot;enough,&quot; and now I&#x27;m building Gagarin Cloud , where deploying a web app is just: And a nice dependency graph is included: It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Chasing the next big thing, they abandoned any attempt at improving developer experience, which is the reason clouds blew up in the first place.</li>
+          <li>Suppose you do want the scalability, smooth CI deploys that just make sense, and all your code living in a GitHub repo you control.</li>
+          <li>Put your API on DigitalOcean or Scaleway, either as serverless or on App Platform .</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/sharpvik/bloated-clouds-anyone-1jhc" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

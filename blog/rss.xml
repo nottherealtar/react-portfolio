@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 18 Sep 2026 09:45:39 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 19:36:26 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Bloated Clouds, Anyone?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that come with it. As a developer, I have to live with it every day.</description>
+    </item>
     <item>
       <title>Apache Data Lakehouse Weekly: September 9 to 17, 2026</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>Stack Overflow's developer AI adoption and trust findings show why this operational focus matters: 84% of respondents use or plan to use AI tools, while more developers distrust AI accuracy than trust it. By the time an engineer pastes sensitive material into a public model or quietly installs an unapproved coding assistant, the organization has already failed to provide a credible route for getting the work done.</description>
-    </item>
-    <item>
-      <title>Silent Hill: Townfall's new gameplay trailer quietly confirms how long its PS5 exclusivity will last</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260822-silent-hill-townfall-s-new-gameplay-trailer-quietly-confirms-c473789b.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260822-silent-hill-townfall-s-new-gameplay-trailer-quietly-confirms-c473789b.html</guid>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Gaming News</category>
-      <description>A new Silent Hill: Townfall gameplay trailer has offered up over 18 minutes of first-look footage while also quietly confirming exactly how long the game's PlayStation 5 exclusivity will last. No major plot beats are spoiled, though anyone wanting to go in completely blind may still want to give it a miss. Alongside reiterating that Townfall is a PS5 console exclusive, a caption confirmed: "Also available on PC.</description>
     </item>
   </channel>
 </rss>

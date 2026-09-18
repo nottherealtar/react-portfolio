@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Bloated Clouds, Anyone?",
+      "link": "auto/20260918-bloated-clouds-anyone-3d73064e.html",
+      "date": "2026-09-18",
+      "summary": "Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that come with it. As a developer, I have to live with it every day.",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Apache Data Lakehouse Weekly: September 9 to 17, 2026",
       "link": "auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html",
       "date": "2026-09-18",
@@ -87,14 +95,6 @@
       "summary": "Some current models bill the whole request at a higher rate once the prompt crosses a size threshold, and a spend tool that stores one rate per token class has no way to represent that. A proxy that stores \"input costs $",
       "category": "Coding & Community",
       "reading_minutes": 4
-    },
-    {
-      "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
-      "link": "auto/20260911-marketing-ops-as-code-automating-events-from-planning-to-fol-c44b2451.html",
-      "date": "2026-09-11",
-      "summary": "I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an ",
-      "category": "Developer Platform",
-      "reading_minutes": 3
     }
   ]
 }

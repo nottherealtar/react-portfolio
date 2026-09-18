@@ -1,5 +1,18 @@
 [
   {
+    "title": "Bloated Clouds, Anyone?",
+    "date": "2026-09-18",
+    "category": "Coding & Community",
+    "summary": "Conventional cloud platforms had to serve everyone, and they became bloated with features. Welcome to Kubernetes and the 4,000 lines of YAML config that come with it. As a developer, I have to live with it every day.",
+    "link": "auto/20260918-bloated-clouds-anyone-3d73064e.html",
+    "source_url": "https://dev.to/sharpvik/bloated-clouds-anyone-1jhc",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpz9poh8vpg1mrrr52hzk.png"
+  },
+  {
     "title": "Apache Data Lakehouse Weekly: September 9 to 17, 2026",
     "date": "2026-09-18",
     "category": "Coding & Community",

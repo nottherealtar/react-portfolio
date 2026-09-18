@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Apache Data Lakehouse Weekly: September 9 to 17, 2026",
+      "link": "auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html",
+      "date": "2026-09-18",
+      "summary": "Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository under the Apache DataFusion project. He put up a fix and added a ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
       "link": "auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html",
       "date": "2026-09-17",
@@ -86,14 +94,6 @@
       "date": "2026-09-11",
       "summary": "I wrote down my runbooks, handed them to GitHub Copilot, and grew the automation in conversation. One thing made this possible, and it has nothing to do with events specifically: our event management platform exposes an ",
       "category": "Developer Platform",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The Economics of Agent Optimization: How AI agent governance controls cost and proves ROI",
-      "link": "auto/20260910-the-economics-of-agent-optimization-how-ai-agent-governance-d6870c93.html",
-      "date": "2026-09-10",
-      "summary": "For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

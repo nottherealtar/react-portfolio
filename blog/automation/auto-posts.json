@@ -1,5 +1,17 @@
 [
   {
+    "title": "Apache Data Lakehouse Weekly: September 9 to 17, 2026",
+    "date": "2026-09-18",
+    "category": "Coding & Community",
+    "summary": "Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository under the Apache DataFusion project. He put up a fix and added a cargo publish --dry-run check to CI so the problem surfaces on every pull request.",
+    "link": "auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html",
+    "source_url": "https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-9-to-17-2026-1509",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
     "date": "2026-09-17",
     "category": "Developer Platform",

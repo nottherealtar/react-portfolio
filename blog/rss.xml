@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 17 Sep 2026 20:20:33 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 09:45:39 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Apache Data Lakehouse Weekly: September 9 to 17, 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository under the Apache DataFusion project. He put up a fix and added a cargo publish --dry-run check to CI so the problem surfaces on every pull request.</description>
+    </item>
     <item>
       <title>Migrating the GitHub Copilot runtime to Rust, using Copilot</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
       <category>Gaming News</category>
       <description>A new Silent Hill: Townfall gameplay trailer has offered up over 18 minutes of first-look footage while also quietly confirming exactly how long the game's PlayStation 5 exclusivity will last. No major plot beats are spoiled, though anyone wanting to go in completely blind may still want to give it a miss. Alongside reiterating that Townfall is a PS5 console exclusive, a caption confirmed: "Also available on PC.</description>
-    </item>
-    <item>
-      <title>Metal Gear Solid 4: Guns of the Patriots review</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260821-metal-gear-solid-4-guns-of-the-patriots-review-ea7ae30f.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260821-metal-gear-solid-4-guns-of-the-patriots-review-ea7ae30f.html</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Gaming &amp; Industry</category>
-      <description>This is a stealth game that doesn't mind if you try to play it like Call of Duty, but going loud comes at the cost of stressing Snake the fuck out. More than anything else though, MGS4's long exile has given me a new appreciation for its extremely balanced stealth. Replaying Guns of the Patriots and Splinter Cell: Chaos Theory in the same year is highlighting just how bland open worlds have made level design.</description>
     </item>
   </channel>
 </rss>

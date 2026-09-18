@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apache Data Lakehouse Weekly: September 9 to 17, 2026 | TarsOnlineCafe</title>
+  <meta name="description" content="Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Apache Data Lakehouse Weekly: September 9 to 17, 2026">
+  <meta property="og:description" content="Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html">
+  <meta property="article:published_time" content="2026-09-18T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apache Data Lakehouse Weekly: September 9 to 17, 2026">
+  <meta name="twitter:description" content="Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Apache Data Lakehouse Weekly: September 9 to 17, 2026">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Apache Data Lakehouse Weekly: September 9 to 17, 2026", "description": "Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository…", "datePublished": "2026-09-18T12:00:00.000Z", "dateModified": "2026-09-18T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260918-apache-data-lakehouse-weekly-september-9-to-17-2026-2ba791a7.html"}, "isBasedOn": "https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-9-to-17-2026-1509", "wordCount": 2029}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-18</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Apache Data Lakehouse Weekly: September 9 to 17, 2026</h1>
+        <p class="lede">Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository under the Apache DataFusion project. He put up a fix and added a cargo publish --dry-run check to CI so the problem surfaces on every pull request.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Iceberg Rust 0.11.0 failed two release votes, Polaris 1.8.0 drew a -1 on its first day, and the Polaris Catalog Migrator needed a second candidate. None of those failures came from broken code paths in the usual sense. They came from license notices, a crate that failed to publish, and an encryption check that one engine skipped and another engine enforced.</p>
+        <p>The lakehouse projects are now mature enough that the hard problems live at the seams: between languages, between engines, between a spec and the many readers that implement it. That theme runs through every project this week. Parquet spent the week arguing about what a reader should do when it meets a file from the future.</p>
+        <p>Polaris debated how to add Cloudflare R2 without bending its S3 configuration into a shape it was never meant to hold. Apache Ossie (incubating) proposed that one document should hold one semantic model, which is a seam question too. And Arrow shipped a Rust release that puts the new ALP floating point encoding into a production Parquet implementation for the first time.</p>
+        <p>This issue covers the dev lists for Apache Iceberg, Apache Polaris, Apache Arrow, Apache Parquet, Apache DataFusion, and Apache Ossie (incubating), using the Pony Mail archives at lists.apache.org. Every thread link below points to the public archive so you can read the full discussion yourself. The DataFusion integration finds a new home The biggest structural change of the week was a clean two-project vote.</p>
+        <p>Gabriel Musat had already done the heavy lifting by porting the code and its full history into a pull request on the new repository. The Iceberg vote passed with 17 +1 votes , five of them binding, from Kevin, Fokko Driesprong, Renjie Liu, Szehon Ho, and Russell Spitzer. Xuanwo summed up the reasoning in his +1: DataFusion contributors get a natural place to maintain the integration, and the code stays under Apache governance.</p>
+        <p>On September 16, Andrew confirmed on the same thread that both votes had passed unanimously. Why does this matter to people who never read Rust? The integration is the glue that lets a DataFusion query plan read and write Iceberg tables.</p>
+        <p>When it lived inside iceberg-rust, every DataFusion upgrade forced a change in the Iceberg repository, and the people who understood DataFusion&#x27;s planner internals were not the people reviewing the pull requests. Putting the crate next to the engine it plugs into puts the reviewers next to the code. Integration code belongs with the project whose APIs churn fastest, and the table format library can stay focused on the format.</p>
+        <p>Iceberg Rust 0.11.0 fails twice, and the failures teach something Danny Jones and Shawn Chang ran the 0.11.0 RC1 vote , and early verifiers reported clean results. Hsieh ran 2,209 tests on an arm64 Mac with no failures. Anoop Johnson ran the full suite on Ubuntu 24.04, including Docker-based integration tests against MinIO, the REST catalog, Hive Metastore, and Spark.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Iceberg and DataFusion voted to move the Rust DataFusion integration into the DataFusion project, which redraws a boundary that had been drawn in the wrong place. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>And Arrow shipped a Rust release that puts the new ALP floating point encoding into a production Parquet implementation for the first time.</li>
+          <li>When it lived inside iceberg-rust, every DataFusion upgrade forced a change in the Iceberg repository, and the people who understood DataFusion&#x27;s planner internals were not the…</li>
+          <li>Kevin pointed out that the project hit the same trap with 0.5.0, when the vote passed, the publish failed, and the team had to cut 0.5.1.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/alexmercedcoder/apache-data-lakehouse-weekly-september-9-to-17-2026-1509" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

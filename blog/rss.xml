@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 18 Sep 2026 19:36:26 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 09:30:02 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Control Resonant review</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260918-control-resonant-review-837d6761.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260918-control-resonant-review-837d6761.html</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>Melee action in an open world being ripped apart by interdimensional forces. Resonant's handful of boss fights are more engaging threats to navigate (though the sheer heft of their health bars still feels like a slog).</description>
+    </item>
     <item>
       <title>Bloated Clouds, Anyone?</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260918-bloated-clouds-anyone-3d73064e.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>For many CEOs, CTOs, and business executives, the promise of Kubernetes-driven efficiency is often overshadowed by opaque, escalating cloud bills. The dynamic nature of Kubernetes deployments, coupled with its resource abstraction, makes it notoriously difficult to track, attribute, and optimize spending — leading to what we call Kubernetes Cost Sprawl .</description>
-    </item>
-    <item>
-      <title>Responsible AI adoption needs developer workflow design</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260824-responsible-ai-adoption-needs-developer-workflow-design-fab3583e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260824-responsible-ai-adoption-needs-developer-workflow-design-fab3583e.html</guid>
-      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Careers</category>
-      <description>Stack Overflow's developer AI adoption and trust findings show why this operational focus matters: 84% of respondents use or plan to use AI tools, while more developers distrust AI accuracy than trust it. By the time an engineer pastes sensitive material into a public model or quietly installs an unapproved coding assistant, the organization has already failed to provide a credible route for getting the work done.</description>
     </item>
   </channel>
 </rss>

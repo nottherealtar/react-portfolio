@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-18T19:35:04.734127+00:00",
+  "timestamp": "2026-09-19T09:28:46.068632+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 613,
-  "unseen_candidates": 589,
+  "unseen_candidates": 590,
   "blocked_domain_candidates": 12,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Bloated Clouds, Anyone?",
-      "link": "auto/20260918-bloated-clouds-anyone-3d73064e.html",
-      "score": 139.9566,
-      "source": "DEV Community",
+      "title": "Control Resonant review",
+      "link": "auto/20260918-control-resonant-review-837d6761.html",
+      "score": 125.1487,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

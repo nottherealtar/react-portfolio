@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?",
+      "link": "auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html",
+      "date": "2026-09-20",
+      "summary": "By April 2026, the full year's AI budget had been consumed [1]. And yet enterprise AI bills keep climbing. Reasoning-optimized models went from negligible to over 50% of all enterprise tokens by late 2025 [6].",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Even mid-sprint to a secret flight, the Navy’s tech chief has a pitch for investors",
       "link": "auto/20260919-even-mid-sprint-to-a-secret-flight-the-navy-s-tech-chief-has-5bcedb98.html",
       "date": "2026-09-19",
@@ -86,14 +94,6 @@
       "date": "2026-09-14",
       "summary": "Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something ",
       "category": "Tech & Startups",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions",
-      "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
-      "date": "2026-09-14",
-      "summary": "Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns pa",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

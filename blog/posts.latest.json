@@ -9,6 +9,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "Control Resonant review: A superbly strange action-RPG that'll make you feel tiny and godly at once",
+      "link": "auto/20260918-control-resonant-review-a-superbly-strange-action-rpg-that-l-200ef181.html",
+      "date": "2026-09-18",
+      "summary": "Resonant’s reality-bending trip across a kaleidoscopic Manhattan is as rich in stark views, eerie atmosphere, and creative quests as Control ’s Oldest House ever was, driven along by strong character-first storytelling a",
+      "category": "Gaming & PC",
+      "reading_minutes": 4
+    },
+    {
       "title": "Control Resonant review",
       "link": "auto/20260918-control-resonant-review-837d6761.html",
       "date": "2026-09-18",
@@ -85,14 +93,6 @@
       "link": "auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html",
       "date": "2026-09-14",
       "summary": "Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns pa",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "I Catalogued 1,000+ Open-Source Claude Agent Skills. Here's What the Ecosystem Actually Looks Like.",
-      "link": "auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html",
-      "date": "2026-09-13",
-      "summary": "Cluster the skills by what they actually do and the vast majority fall into five buckets: Document manipulation. The description field is doing the heavy lifting This was the most consequential thing I learned, and it ha",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

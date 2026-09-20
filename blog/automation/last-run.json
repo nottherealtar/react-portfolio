@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-19T19:18:52.478981+00:00",
+  "timestamp": "2026-09-20T09:47:36.752471+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 613,
-  "unseen_candidates": 589,
+  "unseen_candidates": 588,
   "blocked_domain_candidates": 12,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Even mid-sprint to a secret flight, the Navy’s tech chief has a pitch for investors",
-      "link": "auto/20260919-even-mid-sprint-to-a-secret-flight-the-navy-s-tech-chief-has-5bcedb98.html",
-      "score": 123.3387,
-      "source": "TechCrunch",
+      "title": "Control Resonant review: A superbly strange action-RPG that'll make you feel tiny and godly at once",
+      "link": "auto/20260918-control-resonant-review-a-superbly-strange-action-rpg-that-l-200ef181.html",
+      "score": 117.2057,
+      "source": "Rock Paper Shotgun",
       "text_engine": "embedding-mmr"
     }
   ],

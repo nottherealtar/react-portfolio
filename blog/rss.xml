@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 21 Sep 2026 10:42:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 21:03:57 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Three of those target infrastructure that anyone running self-hosted AI has probably deployed: LiteLLM, Kestra, and Starlette. If you are running an AI proxy, an orchestration engine, or a FastAPI-based model server, your stack is now on the same federal vulnerability list as SonicWall and Sangoma appliances. Every entry represents a vulnerability that has been confirmed exploited in the wild.</description>
+    </item>
     <item>
       <title>Steam Week in Review: This indie publisher released 29 terrible-looking Steam games in a single day—will they make any money?</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260921-steam-week-in-review-this-indie-publisher-released-29-terrib-6be0a5b6.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>What Gemini Enterprise Agent Platform brings together Google describes the Agent Platform as the runtime and governance layer for production-scale AI agents. Google also positions the Gemini Enterprise app as an employee-facing front end for delivering agents inside an organization.</description>
-    </item>
-    <item>
-      <title>The patch window is collapsing: Why security needs a new control plane</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260825-the-patch-window-is-collapsing-why-security-needs-a-new-cont-dbcd4420.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260825-the-patch-window-is-collapsing-why-security-needs-a-new-cont-dbcd4420.html</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>At the same time, vulnerabilities are becoming more visible, more widely distributed, and more rapidly weaponized than ever before. It is time to rethink how the industry approaches security during the critical period between disclosure and remediation. Many organizations find themselves in a position where they know exactly which systems are vulnerable but cannot immediately patch them.</description>
     </item>
   </channel>
 </rss>

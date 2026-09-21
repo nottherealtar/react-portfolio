@@ -1,5 +1,17 @@
 [
   {
+    "title": "Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List",
+    "date": "2026-09-21",
+    "category": "Coding & Community",
+    "summary": "Three of those target infrastructure that anyone running self-hosted AI has probably deployed: LiteLLM, Kestra, and Starlette. If you are running an AI proxy, an orchestration engine, or a FastAPI-based model server, your stack is now on the same federal vulnerability list as SonicWall and Sangoma appliances. Every entry represents a vulnerability that has been confirmed exploited in the wild.",
+    "link": "auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html",
+    "source_url": "https://dev.to/numbpill3d/your-self-hosted-ai-stack-just-landed-on-cisas-exploited-vulnerabilities-list-iel",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Steam Week in Review: This indie publisher released 29 terrible-looking Steam games in a single day—will they make any money?",
     "date": "2026-09-21",
     "category": "Gaming & Industry",

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 20 Sep 2026 19:28:50 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Sep 2026 10:42:41 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Steam Week in Review: This indie publisher released 29 terrible-looking Steam games in a single day—will they make any money?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260921-steam-week-in-review-this-indie-publisher-released-29-terrib-6be0a5b6.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260921-steam-week-in-review-this-indie-publisher-released-29-terrib-6be0a5b6.html</guid>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>It's been a busy week for prodigious game publisher Hard Shark Games: on September 15 it released an astonishing 29 games on Steam across a huge variety of genres. Using the popular Boxleiter Method (via impress.games ), which uses a game's public Steam review count to estimate sales, Supermarket Life Simulator—to use just one example—could have made as much as $885 as a high estimate, or $295 on the lower end.</description>
+    </item>
     <item>
       <title>Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>At the same time, vulnerabilities are becoming more visible, more widely distributed, and more rapidly weaponized than ever before. It is time to rethink how the industry approaches security during the critical period between disclosure and remediation. Many organizations find themselves in a position where they know exactly which systems are vulnerable but cannot immediately patch them.</description>
-    </item>
-    <item>
-      <title>I built agent-inspect to debug TypeScript AI agent trajectories</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260825-i-built-agent-inspect-to-debug-typescript-ai-agent-trajector-e239cf37.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260825-i-built-agent-inspect-to-debug-typescript-ai-agent-trajector-e239cf37.html</guid>
-      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Output only tests could miss a bad path that happened to produce a plausible answer. AgentInspect is a local evidence debugger and trajectory-test toolkit for TypeScript AI agents. It turns one local trace into three things: a readable execution tree, a deterministic regression gate, and a derived Evidence v2 bundle that you can review before sharing.</description>
     </item>
   </channel>
 </rss>

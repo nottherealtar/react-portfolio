@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Steam Week in Review: This indie publisher released 29 terrible-looking Steam games in a single day—will they make any money?",
+      "link": "auto/20260921-steam-week-in-review-this-indie-publisher-released-29-terrib-6be0a5b6.html",
+      "date": "2026-09-21",
+      "summary": "It's been a busy week for prodigious game publisher Hard Shark Games: on September 15 it released an astonishing 29 games on Steam across a huge variety of genres. Using the popular Boxleiter Method (via impress.games ),",
+      "category": "Gaming & Industry",
+      "reading_minutes": 4
+    },
+    {
       "title": "Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?",
       "link": "auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html",
       "date": "2026-09-20",
@@ -86,14 +94,6 @@
       "date": "2026-09-15",
       "summary": "TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of boolean flags for an IP; the logic decides which flags mean \"a server ",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Only at TechCrunch Disrupt 2026: What happens when OpenAI ships your roadmap?",
-      "link": "auto/20260914-only-at-techcrunch-disrupt-2026-what-happens-when-openai-shi-9523fe09.html",
-      "date": "2026-09-14",
-      "summary": "Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something ",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

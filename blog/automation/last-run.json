@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-20T19:27:00.544832+00:00",
+  "timestamp": "2026-09-21T10:40:22.457171+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?",
-      "link": "auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html",
-      "score": 122.7905,
-      "source": "DEV Community",
+      "title": "Steam Week in Review: This indie publisher released 29 terrible-looking Steam games in a single day—will they make any money?",
+      "link": "auto/20260921-steam-week-in-review-this-indie-publisher-released-29-terrib-6be0a5b6.html",
+      "score": 121.2097,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

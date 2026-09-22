@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
+      "link": "auto/20260922-five-ai-safety-sessions-every-founder-should-have-on-their-t-0c0fc63e.html",
+      "date": "2026-09-22",
+      "summary": "As AI moves out of demos and into businesses, vehicles, robots, and autonomous agents, safety and security become part of the product. Secure your pass to Disrupt and add these five AI safety sessions to your agenda. For",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List",
       "link": "auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html",
       "date": "2026-09-21",
@@ -85,14 +93,6 @@
       "link": "auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html",
       "date": "2026-09-17",
       "summary": "Enterprise AI observability platforms provide distributed tracing, automated evaluation, and governance for non-deterministic LLM applications and agentic workflows. Platforms such as Maxim AI provide the necessary instr",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It",
-      "link": "auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html",
-      "date": "2026-09-16",
-      "summary": "It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get the",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

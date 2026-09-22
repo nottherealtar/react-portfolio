@@ -1,5 +1,18 @@
 [
   {
+    "title": "JetBrains Air: Building a System of Products for Agentic Software Development",
+    "date": "2026-09-22",
+    "category": "Developer Tools",
+    "summary": "As part of our continued investment, we are now bringing the foundational agentic experience into JetBrains IDEs, giving professional developers an environment where they can work effectively with agents while understanding, changing, and verifying the resulting code. That system is based on a core belief that the future of agentic development will be multi-vendor.",
+    "link": "auto/20260922-jetbrains-air-building-a-system-of-products-for-agentic-soft-029088bc.html",
+    "source_url": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/jetbrains_air_system.png"
+  },
+  {
     "title": "Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List",
     "date": "2026-09-21",
     "category": "Coding & Community",

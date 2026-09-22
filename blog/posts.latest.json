@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "JetBrains Air: Building a System of Products for Agentic Software Development",
+      "link": "auto/20260922-jetbrains-air-building-a-system-of-products-for-agentic-soft-029088bc.html",
+      "date": "2026-09-22",
+      "summary": "As part of our continued investment, we are now bringing the foundational agentic experience into JetBrains IDEs, giving professional developers an environment where they can work effectively with agents while understand",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List",
       "link": "auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html",
       "date": "2026-09-21",
@@ -86,14 +94,6 @@
       "date": "2026-09-16",
       "summary": "It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get the",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "link": "auto/20260915-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-34fe49b4.html",
-      "date": "2026-09-15",
-      "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. We also can’t forget its video-sharing platform, Sora , which stru",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

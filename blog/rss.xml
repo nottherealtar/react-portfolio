@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 21 Sep 2026 21:03:57 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 09:57:28 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>JetBrains Air: Building a System of Products for Agentic Software Development</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260922-jetbrains-air-building-a-system-of-products-for-agentic-soft-029088bc.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260922-jetbrains-air-building-a-system-of-products-for-agentic-soft-029088bc.html</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>As part of our continued investment, we are now bringing the foundational agentic experience into JetBrains IDEs, giving professional developers an environment where they can work effectively with agents while understanding, changing, and verifying the resulting code. That system is based on a core belief that the future of agentic development will be multi-vendor.</description>
+    </item>
     <item>
       <title>Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>It compares two valid operating models—self-managed PostgreSQL and a managed database service—through business and operational outcomes: control, engineering capacity, resilience, security, cost predictability, risk tolerance, and access to specialist expertise. In a self-hosted scenario (e.g.</description>
-    </item>
-    <item>
-      <title>Google Expands Gemini Into an Agent Platform for Building and Running Business AI</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260826-google-expands-gemini-into-an-agent-platform-for-building-an-33a05e3c.html</guid>
-      <pubDate>Wed, 26 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>What Gemini Enterprise Agent Platform brings together Google describes the Agent Platform as the runtime and governance layer for production-scale AI agents. Google also positions the Gemini Enterprise app as an employee-facing front end for delivering agents inside an organization.</description>
     </item>
   </channel>
 </rss>

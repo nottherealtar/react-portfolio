@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your AI Agent Has Too Much Power",
+      "link": "auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html",
+      "date": "2026-09-23",
+      "summary": "If you've connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the AG-Men defend your runtime step by step: The Cleaner (Local PII",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses",
       "link": "auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html",
       "date": "2026-09-23",
@@ -87,14 +95,6 @@
       "summary": "Kevin Liu opened the Iceberg-side vote to move the iceberg-datafusion crate out of apache/iceberg-rust and into a new apache/datafusion-iceberg repository under the Apache DataFusion project. He put up a fix and added a ",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
-      "link": "auto/20260917-migrating-the-github-copilot-runtime-to-rust-using-copilot-6e4c7787.html",
-      "date": "2026-09-17",
-      "summary": "It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly.",
-      "category": "Developer Platform",
-      "reading_minutes": 4
     }
   ]
 }

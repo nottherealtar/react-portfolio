@@ -1,5 +1,18 @@
 [
   {
+    "title": "Your AI Agent Has Too Much Power",
+    "date": "2026-09-23",
+    "category": "Coding & Community",
+    "summary": "If you've connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the AG-Men defend your runtime step by step: The Cleaner (Local PII Sanitizer): Before a single byte leaves server memory, The Cleaner scrubs emails and credit cards on the fly.",
+    "link": "auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html",
+    "source_url": "https://dev.to/thienban/your-ai-agent-has-too-much-power-2bah",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi2tzbsgsmcpzntktxncw.jpeg"
+  },
+  {
     "title": "Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses",
     "date": "2026-09-23",
     "category": "Coding & Community",

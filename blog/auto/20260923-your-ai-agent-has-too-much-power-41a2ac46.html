@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Your AI Agent Has Too Much Power | TarsOnlineCafe</title>
+  <meta name="description" content="If you&#x27;ve connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Your AI Agent Has Too Much Power">
+  <meta property="og:description" content="If you&#x27;ve connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html">
+  <meta property="article:published_time" content="2026-09-23T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your AI Agent Has Too Much Power">
+  <meta name="twitter:description" content="If you&#x27;ve connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi2tzbsgsmcpzntktxncw.jpeg">
+  <meta property="og:image:alt" content="Your AI Agent Has Too Much Power">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi2tzbsgsmcpzntktxncw.jpeg">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your AI Agent Has Too Much Power", "description": "If you've connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the…", "datePublished": "2026-09-23T12:00:00.000Z", "dateModified": "2026-09-23T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi2tzbsgsmcpzntktxncw.jpeg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html"}, "isBasedOn": "https://dev.to/thienban/your-ai-agent-has-too-much-power-2bah", "wordCount": 672}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-23</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Your AI Agent Has Too Much Power</h1>
+        <p class="lede">If you&#x27;ve connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the AG-Men defend your runtime step by step: The Cleaner (Local PII Sanitizer): Before a single byte leaves server memory, The Cleaner scrubs emails and credit cards on the fly.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Giving an LLM the ability to decide its own next step means shifting from passive text generation to active system execution . In demos, it looks like magic: the agent reasons, picks a tool, fetches data, and loops until the task is solved. An indirect prompt injection slipped inside an ingested PDF instructs your agent to exfiltrate private DB records via an outbound HTTP webhook.</p>
+        <p>A looping reasoning process burns 80,000 reasoning tokens in 12 turns on a dead-end premise, costing 50x more than expected. Sensitive customer PII (credit cards, emails, internal keys) is handed directly to third-party model providers inside execution context. The traditional answer to this is the classic LLMOps sledgehammer : spin up Docker containers for Langfuse, Helicone, OpenLit, a vector database, ClickHouse, Redis, and an S3 bucket just to trace calls and apply basic guardrails.</p>
+        <p>For most developers and lean teams, the monitoring infrastructure ends up costing more in maintenance and compute than the LLM calls themselves. There is a better way: handling security, guardrails, and cost controls in-process , directly at the application runtime level. When building autonomous workflows or multi-step agents, security vulnerabilities aren&#x27;t theoretical — they fall into three clear failure modes: Unchecked Tool Execution &amp; Side-Effects: Once an agent has tools, an injection is no longer just a jailbreak: it becomes…</p>
+        <p>Context Contamination &amp; Data Leaks: If your RAG or tool outputs include raw PII, your LLM will gladly send it over the wire to external APIs or echo it into log sinks. Runaway Loops &amp; Cost Explosion: Without per-turn token limits and hard budget circuit-breakers, recursive tool loops can easily drain your monthly quota in minutes. The Solution: Zero-Infra Control Plane with avantGate Meet AG-Men (avantGate&#x27;s in-process engine): a tiny, sub-millisecond guardian that sits directly between your model&#x27;s thoughts and your backend APIs.</p>
+        <p>Avant Gate runs directly in your TypeScript process. Imagine a user submits an invoice query packed with an indirect prompt injection and a customer&#x27;s raw credit card. The external LLM never catches a glimpse of the private data.</p>
+        <p>The Breaker (Budget Circuit-Breaker): Turn three hits an infinite recursive loop triggered by the injection. The Breaker detects the runaway token surge, trips the fuse, and cuts the execution instantly. The Law (Deterministic Guardrails): The hallucinating agent tries to force an unvetted database write.</p>
+        <p>The Law blocks it cold against a strict Zod contract — zero unauthorized side-effects. The Shapeshifter (Resilient Fallback): The primary model throws a sudden 529 Overloaded . The Shapeshifter catches the fall mid-air and swaps to a backup provider, landing the mission safely without a glitch.</p>
+        <p>Hands-on: Securing an Agent Workflow Here is how you wrap your agent runtime with avantGate in TypeScript: Step 1: Initialize the Control Plane Step 2: Safe Tool Execution &amp; Workflow Interception In an agentic workflow, you must never let the model invoke tools with unchecked parameters. You can intercept and validate both the step input and the agent&#x27;s intent: If an injection attempts to inject DROP TABLE or trigger a recursive chain that blows past your token limits, avantGate halts the execution context before it wrecks your…</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi2tzbsgsmcpzntktxncw.jpeg" alt="prompt injection to AI Agent" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnj9ph4mv4fnj6mt0c3g2.jpeg" alt="a super hero crew" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Why In-Process Beats External LLMOps for 90% of Use Cases Agents are the future of software engineering, but building agents without deterministic boundaries is an invitation for disaster. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Giving an LLM the ability to decide its own next step means shifting from passive text generation to active system execution .</li>
+          <li>Sensitive customer PII (credit cards, emails, internal keys) is handed directly to third-party model providers inside execution context.</li>
+          <li>Check out the project and docs on GitHub: 👉 Avant Gate How are you currently handling runaway agent loops and tool validation in your stack?</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/thienban/your-ai-agent-has-too-much-power-2bah" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

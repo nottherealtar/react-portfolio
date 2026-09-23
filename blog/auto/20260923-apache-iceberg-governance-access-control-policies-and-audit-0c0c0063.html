@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses | TarsOnlineCafe</title>
+  <meta name="description" content="This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses">
+  <meta property="og:description" content="This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html">
+  <meta property="article:published_time" content="2026-09-23T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses">
+  <meta name="twitter:description" content="This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdh0kzmszdytaihbg0jyy.png">
+  <meta property="og:image:alt" content="Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdh0kzmszdytaihbg0jyy.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses", "description": "This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential…", "datePublished": "2026-09-23T12:00:00.000Z", "dateModified": "2026-09-23T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdh0kzmszdytaihbg0jyy.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html"}, "isBasedOn": "https://dev.to/jonisar/apache-iceberg-governance-tools-access-control-policies-and-audit-for-open-lakehouses-f61", "wordCount": 1735}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-09-23</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses</h1>
+        <p class="lede">This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential vending to the new Read Restrictions spec, policy engines, compliance patterns, and the operational governance layer that most teams overlook.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Governance in an Apache Iceberg lakehouse is not a feature you enable. In a data warehouse — Snowflake, BigQuery, Redshift — governance is built in. The vendor controls access, enforces policies, manages retention, and produces audit trails.</p>
+        <p>The trade-off is lock-in: your data lives in a proprietary format, governed by a single vendor&#x27;s rules. The table format is open, engine-agnostic, and deliberately governance-unaware. That openness creates a governance vacuum that you have to fill with a stack of purpose-built tools — and filling it correctly is one of the hardest operational problems in production lakehouses.</p>
+        <p>Why Iceberg Governance Works Differently The Iceberg community made a deliberate choice: the table format is responsible for data portability, not governance. Three reasons this is the right boundary: Portability would be destroyed. If Iceberg metadata included ACLs and masking rules, every engine would need to implement the same governance model — the same RBAC structure, the same masking functions, the same row-filter syntax.</p>
+        <p>Any engine that doesn&#x27;t implement the full model either breaks compatibility or silently bypasses security. Governance requirements change faster than storage formats. GDPR, CCPA, DORA, the AI Act — regulatory regimes evolve, classification taxonomies expand, organizational structures shift.</p>
+        <p>Encoding governance in metadata means every policy change requires metadata migration across potentially thousands of tables. When rules live in the format, enforcement depends on the reader. A misconfigured Trino deployment ignores it.</p>
+        <p>A custom Parquet reader bypasses it entirely. There is no enforcement authority — only conventions that cooperative engines follow and adversarial engines ignore. The result: governance in an Iceberg lakehouse must be decomposed into separate, independently evolvable layers.</p>
+        <p>Every production Iceberg governance architecture decomposes into three layers: The format defines what the data looks like — how data files, manifests, snapshots, and metadata are organized. It carries structural metadata that governance systems can leverage (column names for classification, snapshot history for audit, table properties for labels), but it never interprets these as rules. Every operation — table creation, schema alteration, data read, snapshot commit — routes through the catalog.</p>
+        <p>If the catalog denies access, the engine never sees the metadata, let alone the data files. The policy engine defines the rules the catalog enforces. This separation is critical: the catalog is the enforcement mechanism, but it should not be the rule-authoring system.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fdh0kzmszdytaihbg0jyy.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frmsv2q323bcve5btzl9g.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkzo57z6uapoitapd1g21.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwzzlemy04mt089bs1gsc.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fn8f5e5hv0ze3ze4vnl0e.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Flakeops.dev%2Fsolutions%2Fagentic-ai%2Fopengraph-image%3F3c1c0c109477c485" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Why Iceberg Governance Works Differently The Iceberg community made a deliberate choice: the table format is responsible for data portability, not governance. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Governance in an Apache Iceberg lakehouse is not a feature you enable.</li>
+          <li>Every production Iceberg governance architecture decomposes into three layers: The format defines what the data looks like — how data files, manifests, snapshots, and metadata…</li>
+          <li>This separation is critical: the catalog is the enforcement mechanism, but it should not be the rule-authoring system.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/jonisar/apache-iceberg-governance-tools-access-control-policies-and-audit-for-open-lakehouses-f61" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

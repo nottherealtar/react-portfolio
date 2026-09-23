@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-22T20:11:23.047648+00:00",
+  "timestamp": "2026-09-23T09:57:51.556106+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 613,
+  "fetched_candidates": 614,
   "unseen_candidates": 588,
   "blocked_domain_candidates": 12,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
-      "link": "auto/20260922-five-ai-safety-sessions-every-founder-should-have-on-their-t-0c0fc63e.html",
-      "score": 129.5172,
-      "source": "TechCrunch",
+      "title": "Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses",
+      "link": "auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html",
+      "score": 126.9404,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>AI-powered fuzzing with the GitHub Security Lab Taskflow Agent | TarsOnlineCafe</title>
+  <meta name="description" content="Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="AI-powered fuzzing with the GitHub Security Lab Taskflow Agent">
+  <meta property="og:description" content="Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html">
+  <meta property="article:published_time" content="2026-09-24T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI-powered fuzzing with the GitHub Security Lab Taskflow Agent">
+  <meta name="twitter:description" content="Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those…">
+  <meta property="og:image" content="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.16.38-PM.png?resize=1024%2C453">
+  <meta property="og:image:alt" content="AI-powered fuzzing with the GitHub Security Lab Taskflow Agent">
+  <meta name="twitter:image" content="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.16.38-PM.png?resize=1024%2C453">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent", "description": "Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those…", "datePublished": "2026-09-24T12:00:00.000Z", "dateModified": "2026-09-24T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.16.38-PM.png?resize=1024%2C453", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html"}, "isBasedOn": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/", "wordCount": 1980}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-24</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>AI-powered fuzzing with the GitHub Security Lab Taskflow Agent</h1>
+        <p class="lede">Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those functions If you just want a quick smoke test before committing to a long campaign, point it at something small: A word of warning before you run it: this taskflow runs afl-fuzz , clang , and arbitrary build commands chosen by the LLM directly on the host, with no…</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>If you’re new to fuzzing and want to learn the fundamentals first, check out our Fuzzing 101 course at gh.io/fuzzing101 . Continuous fuzzing is not a magic solution that solves all your problems . Even projects that have been enrolled in OSS-Fuzz for years can still hide critical bugs, and the reason is almost always the same: someone needs to keep an eye on coverage, write new harnesses for the code that nobody is reaching, and triage the crashes that come out the other end.</p>
+        <p>In other words, fuzzing still needs a human in the loop. So the natural question I kept asking myself was: how much of that human work can we actually hand over to an LLM agent? That is what led me to build the Fuzzing Taskflow, an autonomous fuzzing pipeline for C/C++ projects.</p>
+        <p>You only need to point it at a GitHub repository, and it does the rest: it identifies the suitable entrypoints, analyzes the build system, writes the harnesses, runs AFL++, reads the coverage reports, improves the harnesses, triages every crash, and writes a vulnerability report for each unique bug, all without a human babysitting it. The Fuzzing Taskflow is built on top of the GitHub Security Lab Taskflow Agent , our framework for writing LLM-driven security automation, so the pipeline is expressed as a set of taskflows that an…</p>
+        <p>The simplest way to run it’s just to go to https://github.com/GitHubSecurityLab/seclab-taskflows-fuzzing and start a codespace. The argument is just a GitHub owner/repo slug. A prompt-injected agent could, in principle, do anything your user can.</p>
+        <p>So please run it only inside a disposable environment (e.g., a Codespace or a throwaway VM), without elevated privileges . Some frontier models impose security guardrails on their outputs. For the fuzzing task flow, we use Claude Sonnet 5 by default because it passed all of our internal tests without issues.</p>
+        <p>You can choose a different model by modifying the following file: src/seclab_taskflows_fuzzing/configs/model_config.yaml . Before getting into the interesting parts, it helps to know how the pieces fit together. There are three layers: A shell driver ( run_fuzzing.sh) that chains the pipeline stages together.</p>
+        <p>A set of taskflow YAMLs , one per stage, which are essentially the prompts that tell the LLM agent what to do at each step. A set of MCP tools that the agent calls to actually do the work: run AFL, compile a harness, store a crash, read a coverage report, and so on. The design rule I cared about most is a clean separation of responsibility: the LLM agent owns the decisions, and the MCP tools own the execution .</p>
+        <p>The agent decides what to fuzz, what harness to write, and what coverage gap to chase next. The tools just expose primitives like run_afl_for or compile_harness . All the state lives in a SQLite database ( fuzz_context.db ), so the stages never hand data to each other in memory, only through the database.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.16.38-PM.png?resize=1024%2C453" alt="Screenshot of Seclab Taskflows Fuzzing." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.16.38-PM.png?w=2486" alt="Screenshot of Seclab Taskflows Fuzzing." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-08-26-at-1.37.40-PM.png?resize=843%2C704" alt="Three bubbles that say: Run the fuzzers, Check the coverage, and Improve the fuzzers. They are connected by three arrows in a circular flow." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-08-26-at-1.37.40-PM.png?w=843" alt="Three bubbles that say: Run the fuzzers, Check the coverage, and Improve the fuzzers. They are connected by three arrows in a circular flow." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.19.43-PM.png?resize=1024%2C345" alt="Screenshot of the fuzzing dashboard." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/08/Screenshot-2026-09-23-at-3.19.43-PM.png?w=2826" alt="Screenshot of the fuzzing dashboard." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>The Fuzzing Taskflow is built on top of the GitHub Security Lab Taskflow Agent , our framework for writing LLM-driven security automation, so the pipeline is expressed as a set of taskflows that an agent runs end to end. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The agent decides what to fuzz, what harness to write, and what coverage gap to chase next.</li>
+          <li>The .afl binary does the fuzzing; the .cov binary replays AFL’s queue afterwards to produce real source-line and branch coverage.</li>
+          <li>Inventory dependent integrations and add regression checks before you widen rollout.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

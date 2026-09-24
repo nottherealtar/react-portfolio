@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>You Don&#x27;t Need Adobe Commerce Cloud to Survive Black Friday | TarsOnlineCafe</title>
+  <meta name="description" content="Adobe&#x27;s own architecture docs describe the Pro production environment as having &quot;three virtual machines (VMs) behind an Elastic Load Balancer,&quot; and each…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="You Don&#x27;t Need Adobe Commerce Cloud to Survive Black Friday">
+  <meta property="og:description" content="Adobe&#x27;s own architecture docs describe the Pro production environment as having &quot;three virtual machines (VMs) behind an Elastic Load Balancer,&quot; and each…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html">
+  <meta property="article:published_time" content="2026-09-24T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You Don&#x27;t Need Adobe Commerce Cloud to Survive Black Friday">
+  <meta name="twitter:description" content="Adobe&#x27;s own architecture docs describe the Pro production environment as having &quot;three virtual machines (VMs) behind an Elastic Load Balancer,&quot; and each…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-pro-real-topology.avif">
+  <meta property="og:image:alt" content="You Don&#x27;t Need Adobe Commerce Cloud to Survive Black Friday">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-pro-real-topology.avif">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "You Don't Need Adobe Commerce Cloud to Survive Black Friday", "description": "Adobe's own architecture docs describe the Pro production environment as having \"three virtual machines (VMs) behind an Elastic Load Balancer,\" and each…", "datePublished": "2026-09-24T12:00:00.000Z", "dateModified": "2026-09-24T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-pro-real-topology.avif", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html"}, "isBasedOn": "https://dev.to/andriiboyko/you-dont-need-adobe-commerce-cloud-to-survive-black-friday-2jcf", "wordCount": 1736}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-09-24</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>You Don&#x27;t Need Adobe Commerce Cloud to Survive Black Friday</h1>
+        <p class="lede">Adobe&#x27;s own architecture docs describe the Pro production environment as having &quot;three virtual machines (VMs) behind an Elastic Load Balancer,&quot; and each project &quot;replicated on three separate AWS or Azure Availability Zones.&quot; Once you&#x27;ve seen that, the Black Friday question changes shape completely. They explicitly contrast this with &quot;a traditional active-passive master or master-slave setup.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Everyone treats Adobe Commerce Cloud like it&#x27;s the only thing standing between their store and a Black Friday meltdown. It&#x27;s the platform that survives the spike, the managed fortress you can&#x27;t possibly replicate, the reason the six-figure invoice is worth it. So let&#x27;s pull the curtain back and look at what a Pro production environment actually is.</p>
+        <p>It stops being &quot;how do I buy the platform that survives&quot; and becomes &quot;can I build a three-node, multi-AZ cluster on AWS?&quot; And you already know the answer to that one. What Adobe Commerce Cloud Pro actually is Strip the branding and Pro is a managed, dedicated cluster on AWS (Azure is an option, but AWS is the common case). Three nodes, and here&#x27;s the part people get wrong: it&#x27;s not a primary with two hot spares.</p>
+        <p>Adobe runs a Galera cluster where &quot;all three instances accept reads and writes,&quot; with an auto-increment setting of three so IDs stay unique across every node. Each of those three nodes carries the full stack: Fastly in front for CDN, WAF, and image optimization (more on that below). Galera / MariaDB as the active-active database, one instance per node.</p>
+        <p>Redis (Valkey on newer releases), one server per VM, &quot;with only one active and the other two as replicas.&quot; Elasticsearch or OpenSearch for catalog search, and which one depends on your version. Elasticsearch on older Commerce releases, OpenSearch from 2.4.4 onward. Never say just &quot;Elasticsearch&quot; without checking the version, because on a current store it&#x27;s almost certainly OpenSearch.</p>
+        <p>GlusterFS as the shared file store, keeping media and static assets synced across the three nodes. Now, the &quot;six nodes&quot; number you may have heard is real, but it is not the baseline. Adobe&#x27;s scaled architecture splits the stack into a tiered layout: &quot;a minimum of six nodes: three nodes for the core database and services and three nodes for the web server.&quot; That only kicks in on &quot;the Pro 48 cluster or greater.&quot; So the default Pro store surviving your Black Friday is three nodes, and the six-node split is a bigger-plan upgrade, not…</p>
+        <p>If someone tells you Adobe Cloud is inherently a six-node monster, they&#x27;re describing a tier most stores never buy. The part that actually survives the spike Here&#x27;s the thing worth internalizing before you write a check: none of what makes this cluster survive Black Friday is proprietary Adobe magic. It&#x27;s a handful of well-understood architecture decisions, and every one of them is a pattern you can name.</p>
+        <p>Fastly is a Varnish-based service that caches &quot;site pages, assets, CSS, and more&quot; at global edge nodes. On Black Friday, the overwhelming majority of your traffic is people looking at the same category and product pages. If those are served from cache, they never touch PHP or the database at all.</p>
+        <p>This is the single biggest reason the cluster holds: the origin only sees the long tail of uncacheable, personalized, add-to-cart requests. Fastly also runs the WAF, though note it&#x27;s &quot;available on Pro and Starter Production environments only,&quot; so your staging traffic isn&#x27;t behind it. An active-active database with no single writer.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-pro-real-topology.avif" alt="Adobe Commerce Cloud Pro topology: Fastly CDN, WAF and image optimization over an ELB feeding three identical nodes, each running NGINX + PHP-FPM, Galera/MariaDB, Redis, OpenSearch and GlusterFS, with the Galera layers l" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-self-hosted-aws.avif" alt="Two-column table mapping Adobe Cloud Pro components to AWS equivalents: Fastly to CloudFront + AWS WAF, Varnish to Varnish on EC2, ELB to ALB, PHP-FPM nodes to an EC2 Auto Scaling group, Galera to Aurora or RDS MySQL Mul" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Adobe&#x27;s scaled architecture splits the stack into a tiered layout: &quot;a minimum of six nodes: three nodes for the core database and services and three nodes for the web server.&quot; That only kicks in on &quot;the Pro 48 cluster or greater.&quot; So the default Pro store surviving your Black Friday is three nodes, and the six-node split is a bigger-plan upgrade, not the standard. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>It stops being &quot;how do I buy the platform that survives&quot; and becomes &quot;can I build a three-node, multi-AZ cluster on AWS?&quot; And you already know the answer to that one.</li>
+          <li>Redis (Valkey on newer releases), one server per VM, &quot;with only one active and the other two as replicas.&quot; Elasticsearch or OpenSearch for catalog search, and which one depends…</li>
+          <li>The part that actually survives the spike Here&#x27;s the thing worth internalizing before you write a check: none of what makes this cluster survive Black Friday is proprietary…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/andriiboyko/you-dont-need-adobe-commerce-cloud-to-survive-black-friday-2jcf" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

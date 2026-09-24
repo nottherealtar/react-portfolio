@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 23 Sep 2026 20:21:17 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 10:00:51 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>You Don't Need Adobe Commerce Cloud to Survive Black Friday</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Adobe's own architecture docs describe the Pro production environment as having "three virtual machines (VMs) behind an Elastic Load Balancer," and each project "replicated on three separate AWS or Azure Availability Zones." Once you've seen that, the Black Friday question changes shape completely. They explicitly contrast this with "a traditional active-passive master or master-slave setup.</description>
+    </item>
     <item>
       <title>Your AI Agent Has Too Much Power</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 30 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Distributing requests across IP addresses — masking automation as diverse traffic Bypassing geographic restrictions — accessing location-gated content Reducing detection risk — rotating datacenter, residential, or mobile IPs Load balancing — scaling volume across proxy pools instead of melting a single connection The tradeoff: slower requests (proxy adds latency), increased costs (~$5–50/GB depending on type), and…</description>
-    </item>
-    <item>
-      <title>A Simulation ID Is Not a Running Simulation</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260829-a-simulation-id-is-not-a-running-simulation-7cf5965c.html</guid>
-      <pubDate>Sat, 29 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>MiroFish answered that the simulation had not been prepared. A typed client can still encode the wrong lifecycle I started with the reasonable model: upload context, ask MiroFish to build a graph, start a simulation, then fetch its report. Graph construction did return a task ID and required polling.</description>
     </item>
   </channel>
 </rss>

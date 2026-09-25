@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 25 Sep 2026 10:13:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 20:30:35 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Tesla finally moves to electrify trucking after a decade of work and delays</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260925-tesla-finally-moves-to-electrify-trucking-after-a-decade-of-509ed3fc.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260925-tesla-finally-moves-to-electrify-trucking-after-a-decade-of-509ed3fc.html</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>He has also changed Tesla’s mission to “build a world of amazing abundance.” When he showed off the Semi in 2017, Tesla’s mission was still “to accelerate the world’s transition to sustainable energy.” Despite the change in positioning, and seemingly priorities for Tesla, Thursday’s event still saw a lot of discussion about reducing trucking emissions.</description>
+    </item>
     <item>
       <title>You Don't Need Adobe Commerce Cloud to Survive Black Friday</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>Azure Multicloud Interconnect helps make that possible by providing resilient, high-performance, private connectivity between Azure and AWS through a simplified, cloud-native experience. Together, we are reducing the complexity of multicloud networking and giving customers the scale, reliability, and agility they need to power the next generation of AI and data-driven innovation.</description>
-    </item>
-    <item>
-      <title>Case Study: Scaling Smart Teleassistance Voice Routing with Edge Compute and Zero-Cold-Start Cascades</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-case-study-scaling-smart-teleassistance-voice-routing-with-e-0994b109.html</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Whether you are managing an SRE team handling cluster failures or a teleassistance platform routing domestic SOS alerts, the core engineering challenge remains identical: getting a human's attention in milliseconds without administrative friction.</description>
     </item>
   </channel>
 </rss>

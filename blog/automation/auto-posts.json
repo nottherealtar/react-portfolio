@@ -13,6 +13,19 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fandriiboyko.com%2Fassets%2Fimgs%2Farticles%2Fyou-dont-need-adobe-commerce-cloud-to-survive-black-friday%2Fadobe-commerce-cloud-pro-real-topology.avif"
   },
   {
+    "title": "Ship agents faster with expanded model choice, voice agents, and continuous optimization",
+    "date": "2026-09-24",
+    "category": "Cloud Automation",
+    "summary": "Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business.",
+    "link": "auto/20260924-ship-agents-faster-with-expanded-model-choice-voice-agents-a-a291ddaa.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/ship-agents-faster-with-expanded-model-choice-voice-agents-and-continuous-optimization/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/09/foundry-agent-loop-v2.webp"
+  },
+  {
     "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
     "date": "2026-09-24",
     "category": "Developer Platform",

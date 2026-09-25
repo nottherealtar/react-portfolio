@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-24T20:29:31.100469+00:00",
+  "timestamp": "2026-09-25T10:10:46.608467+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
   "unseen_candidates": 583,
-  "blocked_domain_candidates": 12,
+  "blocked_domain_candidates": 13,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-      "link": "auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html",
-      "score": 132.4128,
-      "source": "GitHub Blog",
+      "title": "Ship agents faster with expanded model choice, voice agents, and continuous optimization",
+      "link": "auto/20260924-ship-agents-faster-with-expanded-model-choice-voice-agents-a-a291ddaa.html",
+      "score": 144.3773,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

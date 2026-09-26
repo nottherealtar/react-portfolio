@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 25 Sep 2026 20:30:35 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 09:53:49 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
       <category>Tech &amp; Startups</category>
       <description>He has also changed Tesla’s mission to “build a world of amazing abundance.” When he showed off the Semi in 2017, Tesla’s mission was still “to accelerate the world’s transition to sustainable energy.” Despite the change in positioning, and seemingly priorities for Tesla, Thursday’s event still saw a lot of discussion about reducing trucking emissions.</description>
+    </item>
+    <item>
+      <title>Ace Combat 8: Wings of Theve review</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260925-ace-combat-8-wings-of-theve-review-f6bc40db.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260925-ace-combat-8-wings-of-theve-review-f6bc40db.html</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>Some of Wings of Theve's best moments were when pursuers boxed me into a dense pocket of cloud cover, forcing me to blindly hammer the throttle and commit to a mach-three, nose-down drag race.</description>
     </item>
     <item>
       <title>You Don't Need Adobe Commerce Cloud to Survive Black Friday</title>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>I have seen the Bridge evolve from a revolutionary idea into the primary architectural constraint for high-performance apps. The release of React Native’s New Architecture—specifically Bridgeless Mode—is not just a performance patch. In the legacy architecture, the JavaScript thread and the Native thread lived in total isolation.</description>
-    </item>
-    <item>
-      <title>Introducing Azure Multicloud Interconnect for AWS</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-introducing-azure-multicloud-interconnect-for-aws-1621f670.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-introducing-azure-multicloud-interconnect-for-aws-1621f670.html</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>Azure Multicloud Interconnect helps make that possible by providing resilient, high-performance, private connectivity between Azure and AWS through a simplified, cloud-native experience. Together, we are reducing the complexity of multicloud networking and giving customers the scale, reliability, and agility they need to power the next generation of AI and data-driven innovation.</description>
     </item>
   </channel>
 </rss>

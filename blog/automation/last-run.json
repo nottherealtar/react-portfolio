@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-25T20:28:39.933435+00:00",
+  "timestamp": "2026-09-26T09:51:03.467926+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
-  "unseen_candidates": 584,
+  "unseen_candidates": 582,
   "blocked_domain_candidates": 13,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Tesla finally moves to electrify trucking after a decade of work and delays",
-      "link": "auto/20260925-tesla-finally-moves-to-electrify-trucking-after-a-decade-of-509ed3fc.html",
-      "score": 123.5532,
-      "source": "TechCrunch",
+      "title": "Ace Combat 8: Wings of Theve review",
+      "link": "auto/20260925-ace-combat-8-wings-of-theve-review-f6bc40db.html",
+      "score": 114.3283,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

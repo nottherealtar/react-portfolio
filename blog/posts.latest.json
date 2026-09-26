@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates",
+      "link": "auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html",
+      "date": "2026-09-26",
+      "summary": "A logistics startup choosing a transactional email API for welcome emails and password resets should decide who owns each template before comparing an API with SMTP relay providers. That puts review, tests, and deploymen",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Tesla finally moves to electrify trucking after a decade of work and delays",
       "link": "auto/20260925-tesla-finally-moves-to-electrify-trucking-after-a-decade-of-509ed3fc.html",
       "date": "2026-09-25",
@@ -87,14 +95,6 @@
       "summary": "It's been a busy week for prodigious game publisher Hard Shark Games: on September 15 it released an astonishing 29 games on Steam across a huge variety of genres. Using the popular Boxleiter Method (via impress.games ),",
       "category": "Gaming & Industry",
       "reading_minutes": 4
-    },
-    {
-      "title": "Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?",
-      "link": "auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html",
-      "date": "2026-09-20",
-      "summary": "By April 2026, the full year's AI budget had been consumed [1]. And yet enterprise AI bills keep climbing. Reasoning-optimized models went from negligible to over 50% of all enterprise tokens by late 2025 [6].",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 26 Sep 2026 09:53:49 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 19:52:48 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A logistics startup choosing a transactional email API for welcome emails and password resets should decide who owns each template before comparing an API with SMTP relay providers. That puts review, tests, and deployment beside the code that creates the reset token.</description>
+    </item>
     <item>
       <title>Tesla finally moves to electrify trucking after a decade of work and delays</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260925-tesla-finally-moves-to-electrify-trucking-after-a-decade-of-509ed3fc.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>Public sector software compliance cheat sheet Strict standards apply across public sector software for data protection, security controls, accessibility, and supply chain transparency. Using weak and outdated cryptography is another compliance risk, as it leaves public sector software vulnerable to attacks.</description>
-    </item>
-    <item>
-      <title>What Bridgeless Mode Actually Changed in React Native</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260831-what-bridgeless-mode-actually-changed-in-react-native-756f5494.html</guid>
-      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>I have seen the Bridge evolve from a revolutionary idea into the primary architectural constraint for high-performance apps. The release of React Native’s New Architecture—specifically Bridgeless Mode—is not just a performance patch. In the legacy architecture, the JavaScript thread and the Native thread lived in total isolation.</description>
     </item>
   </channel>
 </rss>

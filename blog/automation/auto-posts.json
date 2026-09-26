@@ -1,5 +1,17 @@
 [
   {
+    "title": "Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates",
+    "date": "2026-09-26",
+    "category": "Coding & Community",
+    "summary": "A logistics startup choosing a transactional email API for welcome emails and password resets should decide who owns each template before comparing an API with SMTP relay providers. That puts review, tests, and deployment beside the code that creates the reset token.",
+    "link": "auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html",
+    "source_url": "https://dev.to/thalynrift3485/startup-logistics-transactional-email-api-vs-smtp-owning-password-reset-templates-59n6",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Tesla finally moves to electrify trucking after a decade of work and delays",
     "date": "2026-09-25",
     "category": "Tech & Startups",

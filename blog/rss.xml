@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 27 Sep 2026 10:34:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 20:11:18 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html</guid>
+      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>Come back every weekend to read a new interview, digging into the important questions, like "How tidy is your desktop?" and "What game will you never uninstall?" William Pugh grew up on a diet of shareware Mac titles like 1993's Scruffy versus the Invaders from Mars , but his earliest PC gaming memory is engaging in annelid antics in Worms 4: Mayhem—his first encounter with online multiplayer: "I remember playing…</description>
+    </item>
     <item>
       <title>What is SAST? A developer's guide to static application security testing</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering does: it decides what enters the context window on each turn, so the agent gets what this request needs rather than everything it might ever need.</description>
-    </item>
-    <item>
-      <title>I Tried Needle2 for Local Tool Calling. I Ended Up With llama.cpp + Granite</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260901-i-tried-needle2-for-local-tool-calling-i-ended-up-with-llama-6b5e3e99.html</guid>
-      <pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Needle2 is tiny, focused on tool calling and structured extraction, and designed to run locally. Another thing I learned quickly was how sensitive a small model is to tool descriptions. For the shell itself I wanted native integration.</description>
     </item>
   </channel>
 </rss>

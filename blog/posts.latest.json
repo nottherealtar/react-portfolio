@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'",
+      "link": "auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html",
+      "date": "2026-09-27",
+      "summary": "Come back every weekend to read a new interview, digging into the important questions, like \"How tidy is your desktop?\" and \"What game will you never uninstall?\" William Pugh grew up on a diet of shareware Mac titles lik",
+      "category": "Gaming & Industry",
+      "reading_minutes": 3
+    },
+    {
       "title": "What is SAST? A developer's guide to static application security testing",
       "link": "auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html",
       "date": "2026-09-27",
@@ -86,14 +94,6 @@
       "date": "2026-09-22",
       "summary": "As AI moves out of demos and into businesses, vehicles, robots, and autonomous agents, safety and security become part of the product. Secure your pass to Disrupt and add these five AI safety sessions to your agenda. For",
       "category": "Tech & Startups",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Your Self-Hosted AI Stack Just Landed on CISA's Exploited Vulnerabilities List",
-      "link": "auto/20260921-your-self-hosted-ai-stack-just-landed-on-cisa-s-exploited-vu-8291e9bf.html",
-      "date": "2026-09-21",
-      "summary": "Three of those target infrastructure that anyone running self-hosted AI has probably deployed: LiteLLM, Kestra, and Starlette. If you are running an AI proxy, an orchestration engine, or a FastAPI-based model server, you",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

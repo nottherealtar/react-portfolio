@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-27T10:32:41.884619+00:00",
+  "timestamp": "2026-09-27T20:08:17.574775+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What is SAST? A developer's guide to static application security testing",
-      "link": "auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html",
-      "score": 154.9264,
-      "source": "DEV Community",
+      "title": "William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'",
+      "link": "auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html",
+      "score": 129.8177,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

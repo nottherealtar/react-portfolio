@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-26T19:50:00.664305+00:00",
+  "timestamp": "2026-09-27T10:32:41.884619+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates",
-      "link": "auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html",
-      "score": 114.9458,
+      "title": "What is SAST? A developer's guide to static application security testing",
+      "link": "auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html",
+      "score": 154.9264,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

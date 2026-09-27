@@ -1,5 +1,17 @@
 [
   {
+    "title": "What is SAST? A developer's guide to static application security testing",
+    "date": "2026-09-27",
+    "category": "Coding & Community",
+    "summary": "Static Application Security Testing (SAST) is the practice of analyzing source code — or bytecode, or compiled binaries — for security vulnerabilities without executing the program. Taint analysis is how serious SQL injection, XSS, and command injection detections work.",
+    "link": "auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html",
+    "source_url": "https://dev.to/rushabh5000/what-is-sast-a-developers-guide-to-static-application-security-testing-40lk",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates",
     "date": "2026-09-26",
     "category": "Coding & Community",

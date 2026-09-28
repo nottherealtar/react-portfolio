@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
+      "link": "auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html",
+      "date": "2026-09-28",
+      "summary": "You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not fetch a value, not execute a command, but reason through policy and",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "I built a sales agent that still remembers the deal after I close the tab",
       "link": "auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html",
       "date": "2026-09-28",
@@ -87,14 +95,6 @@
       "summary": "This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential vending to the new Read Restrictions spec, policy engines, compl",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "JetBrains Air: Building a System of Products for Agentic Software Development",
-      "link": "auto/20260922-jetbrains-air-building-a-system-of-products-for-agentic-soft-029088bc.html",
-      "date": "2026-09-22",
-      "summary": "As part of our continued investment, we are now bringing the foundational agentic experience into JetBrains IDEs, giving professional developers an environment where they can work effectively with agents while understand",
-      "category": "Developer Tools",
-      "reading_minutes": 3
     }
   ]
 }

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-28T11:40:08.727262+00:00",
+  "timestamp": "2026-09-28T22:32:06.849682+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 608,
-  "unseen_candidates": 581,
+  "unseen_candidates": 583,
   "blocked_domain_candidates": 13,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "I built a sales agent that still remembers the deal after I close the tab",
-      "link": "auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html",
-      "score": 128.9675,
+      "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
+      "link": "auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html",
+      "score": 126.9441,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

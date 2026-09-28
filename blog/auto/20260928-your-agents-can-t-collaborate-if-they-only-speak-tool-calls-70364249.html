@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation | TarsOnlineCafe</title>
+  <meta name="description" content="You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation">
+  <meta property="og:description" content="You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html">
+  <meta property="article:published_time" content="2026-09-28T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation">
+  <meta name="twitter:description" content="You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation", "description": "You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not…", "datePublished": "2026-09-28T12:00:00.000Z", "dateModified": "2026-09-28T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html"}, "isBasedOn": "https://dev.to/alex_aslam/your-agents-cant-collaborate-if-they-only-speak-tool-calls-the-a2a-protocol-that-fixes-peer-4o0d", "wordCount": 1720}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-28</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation</h1>
+        <p class="lede">You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not fetch a value, not execute a command, but reason through policy and arrive at a judgment—that was never an MCP-shaped problem. And horizontal problems need a different protocol.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I spent three weeks trying to make a billing agent ask a refund agent a question. That was the day I stopped treating agents like functions. It needs to decide the request is out of scope and say no.</p>
+        <p>But your architecture treats it as a passive function, so every one of those behaviors looks like a failure—a timeout, a malformed response, an unhandled edge case. I had confused the vertical with the horizontal. Before it, connecting five agents to ten tools meant up to fifty bespoke integrations, each one a maintenance liability.</p>
+        <p>By mid-2025, the community had built thousands of active MCP servers, and OpenAI, Microsoft, and Google DeepMind all adopted it. But MCP has no concept of a peer agent with its own goals, its own model, and its own authority to act. An MCP server that wraps kubectl does not think, negotiate, or push back.</p>
+        <p>The agent stays in charge; the things it touches are passive. And horizontal problems need a different protocol. The Agent2Agent (A2A) protocol is an open standard launched by Google in April 2025 and now governed by the Linux Foundation&#x27;s Agentic AI Foundation.</p>
+        <p>Where MCP is the vertical integration layer connecting agents to internal tools and databases, A2A acts as the horizontal protocol enabling peer-to-peer collaboration. The A2A specification puts the distinction in one sentence: MCP standardizes how an agent uses a tool or resource; A2A standardizes how one agent delegates work to another . Just as HTTP enables any web browser to communicate with any web server regardless of their underlying technologies, A2A enables a LangGraph agent to delegate work to a CrewAI agent, which can…</p>
+        <p>The architectural shift matters because it changes what the calling agent expects. When you call an API, it simply returns data or fails. The receiving agent can understand intent, refine the plan, push back on incomplete requests, and ask clarifying questions if something is off.</p>
+        <p>Under the Hood: Agent Cards and Task Lifecycle A2A standardizes four objects: an Agent Card, a Task, a Message, and an Artifact. The Agent Card is a JSON manifest served at a well-known URI, describing who an agent is, what it can do, where to reach it, and how to authenticate. It queries the registry, reads the card, and decides whether to delegate.</p>
+        <p>The Task is the unit of work, with an ID, a context ID, a state, a history, and artifacts. Tasks are stateful and progress through a defined lifecycle: submitted, working, input-required, completed, failed, canceled, rejected. The input-required state is the one that matters most in practice—it&#x27;s the protocol&#x27;s way of letting a receiving agent ask a clarifying question without collapsing the whole interaction.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>The billing agent needed to know whether a refund was appropriate, and the refund agent needed to reason about policy, check account history, and possibly refuse. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Where MCP is the vertical integration layer connecting agents to internal tools and databases, A2A acts as the horizontal protocol enabling peer-to-peer collaboration.</li>
+          <li>The receiving agent can understand intent, refine the plan, push back on incomplete requests, and ask clarifying questions if something is off.</li>
+          <li>That&#x27;s not a tool call.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/alex_aslam/your-agents-cant-collaborate-if-they-only-speak-tool-calls-the-a2a-protocol-that-fixes-peer-4o0d" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

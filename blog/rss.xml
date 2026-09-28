@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 28 Sep 2026 11:42:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 22:34:14 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not fetch a value, not execute a command, but reason through policy and arrive at a judgment—that was never an MCP-shaped problem. And horizontal problems need a different protocol.</description>
+    </item>
     <item>
       <title>I built a sales agent that still remembers the deal after I close the tab</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>When a physical security operator begins a shift supporting Microsoft’s global datacenter operations, they depend on a collection of applications and systems that help monitor access activity, review video feeds, investigate alerts, and coordinate physical security operations across a complex global environment.</description>
-    </item>
-    <item>
-      <title>Elevating security, control, and accessibility: Stack Internal 2026.6</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260903-elevating-security-control-and-accessibility-stack-internal-3cae235b.html</guid>
-      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Careers</category>
-      <description>That means ensuring the underlying knowledge layer is fresh, secure, accessible, and seamlessly integrated into developer workflows. In our 2026.6 release, we are shipping updates across administrative security, programmatic API control, developer portal integrations, and platform-wide accessibility—ensuring both your engineers and your AI agents act on verified, decision-grade knowledge.</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "I built a sales agent that still remembers the deal after I close the tab",
+    "date": "2026-09-28",
+    "category": "Coding & Community",
+    "summary": "Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Agent Technical Article The app calls Hindsight Retain and stores the new deal information.",
+    "link": "auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html",
+    "source_url": "https://dev.to/satya_narasimhakumar_4a7/i-built-a-sales-agent-that-still-remembers-the-deal-after-i-close-the-tab-32pa",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9phkrd7kzkyq8cv45zb2.png"
+  },
+  {
     "title": "William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'",
     "date": "2026-09-27",
     "category": "Gaming & Industry",

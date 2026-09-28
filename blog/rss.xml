@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 27 Sep 2026 20:11:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 11:42:18 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>I built a sales agent that still remembers the deal after I close the tab</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html</guid>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Agent Technical Article The app calls Hindsight Retain and stores the new deal information.</description>
+    </item>
     <item>
       <title>William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>That means ensuring the underlying knowledge layer is fresh, secure, accessible, and seamlessly integrated into developer workflows. In our 2026.6 release, we are shipping updates across administrative security, programmatic API control, developer portal integrations, and platform-wide accessibility—ensuring both your engineers and your AI agents act on verified, decision-grade knowledge.</description>
-    </item>
-    <item>
-      <title>The Economics of Agent Optimization: Context engineering for enterprise AI agents</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260902-the-economics-of-agent-optimization-context-engineering-for-c7b41545.html</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>But what an agent knows, can access, and remembers, grows as it runs—making it the key to improving performance while lowering cost over time. What context engineering means in practice That is what context engineering does: it decides what enters the context window on each turn, so the agent gets what this request needs rather than everything it might ever need.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "I built a sales agent that still remembers the deal after I close the tab",
+      "link": "auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html",
+      "date": "2026-09-28",
+      "summary": "Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Ag",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'",
       "link": "auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html",
       "date": "2026-09-27",
@@ -86,14 +94,6 @@
       "date": "2026-09-22",
       "summary": "As part of our continued investment, we are now bringing the foundational agentic experience into JetBrains IDEs, giving professional developers an environment where they can work effectively with agents while understand",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Five AI safety sessions every founder should have on their TechCrunch Disrupt 2026 agenda",
-      "link": "auto/20260922-five-ai-safety-sessions-every-founder-should-have-on-their-t-0c0fc63e.html",
-      "date": "2026-09-22",
-      "summary": "As AI moves out of demos and into businesses, vehicles, robots, and autonomous agents, safety and security become part of the product. Secure your pass to Disrupt and add these five AI safety sessions to your agenda. For",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>I built a sales agent that still remembers the deal after I close the tab | TarsOnlineCafe</title>
+  <meta name="description" content="Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context.…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="I built a sales agent that still remembers the deal after I close the tab">
+  <meta property="og:description" content="Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context.…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html">
+  <meta property="article:published_time" content="2026-09-28T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I built a sales agent that still remembers the deal after I close the tab">
+  <meta name="twitter:description" content="Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context.…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9phkrd7kzkyq8cv45zb2.png">
+  <meta property="og:image:alt" content="I built a sales agent that still remembers the deal after I close the tab">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9phkrd7kzkyq8cv45zb2.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "I built a sales agent that still remembers the deal after I close the tab", "description": "Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context.…", "datePublished": "2026-09-28T12:00:00.000Z", "dateModified": "2026-09-28T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9phkrd7kzkyq8cv45zb2.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html"}, "isBasedOn": "https://dev.to/satya_narasimhakumar_4a7/i-built-a-sales-agent-that-still-remembers-the-deal-after-i-close-the-tab-32pa", "wordCount": 1000}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-09-28</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>I built a sales agent that still remembers the deal after I close the tab</h1>
+        <p class="lede">Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Agent Technical Article The app calls Hindsight Retain and stores the new deal information.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I built a sales agent that still remembers the deal after I close the tab A Streamlit sales assistant that uses Hindsight for persistent deal memory and Groq for answers. It is weeks of meetings, emails, objections, pricing talks, and changing stakeholders. The details that matter most—who the CFO is, why price is a blocker, which competitor just entered the shortlist—are easy to lose between sessions.</p>
+        <p>I built a conversational deal agent for that problem. It uses Hindsight as persistent memory and Groq to generate answers, so it can recall deal context across interactions instead of starting from zero every time. The problem Sales representatives often reopen CRM notes, meeting transcripts, Slack threads, and personal notebooks just to reconstruct an active deal.</p>
+        <p>Simple questions such as “What did we already say about pricing?” require hunting rather than asking. A chatbot that only remembers the current session is not enough. The useful agent is the one that still knows the deal after the app is restarted.</p>
+        <p>This project gives the agent that capability. The design goal is simple: the agent should get more useful the longer it is used. What I built The Deal Intelligence Agent is a Streamlit chat application.</p>
+        <p>A sales rep talks to it in natural language. Before each reply, the app asks Hindsight for memories related to the latest message. Those memories are added to the model context.</p>
+        <p>That loop—recall, generate, retain—is the product. It is a memory-first conversation layer on top of deal knowledge: fast to query, persistent across sessions, and designed around how reps actually talk about deals. Architecture The flow is linear: A sales rep sends a message in the Streamlit chat UI.</p>
+        <p>Recalled context is combined with the user message and sent to a Groq LLM (openai/gpt-oss-20b via an OpenAI-compatible API). Memory sits in the critical path of every turn, not off to the side. How memory works Hindsight is used in two places.</p>
+        <p>Before generation, the application requests memories related to the latest user message: memories = recall(prompt) Those memories are injected into the system context so the model answers with deal history, not just the current sentence. After the response is produced, the user’s deal information is stored: remember(prompt) Later questions can retrieve that information even if the Streamlit process was restarted. That is the difference between session chat history and durable deal memory.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9phkrd7kzkyq8cv45zb2.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2ojx8cgnb3s5meoyx9si.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxxzsjyr7wuv4my6boy89.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>I built a sales agent that still remembers the deal after I close the tab A Streamlit sales assistant that uses Hindsight for persistent deal memory and Groq for answers. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Before each reply, the app asks Hindsight for memories related to the latest message.</li>
+          <li>It is a memory-first conversation layer on top of deal knowledge: fast to query, persistent across sessions, and designed around how reps actually talk about deals.</li>
+          <li>Inventory dependent integrations and add regression checks before you widen rollout.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/satya_narasimhakumar_4a7/i-built-a-sales-agent-that-still-remembers-the-deal-after-i-close-the-tab-32pa" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

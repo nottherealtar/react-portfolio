@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Why model versioning is not enough for production AI | TarsOnlineCafe</title>
+  <meta name="description" content="For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Why model versioning is not enough for production AI">
+  <meta property="og:description" content="For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html">
+  <meta property="article:published_time" content="2026-09-28T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Careers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why model versioning is not enough for production AI">
+  <meta name="twitter:description" content="For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real…">
+  <meta property="og:image" content="https://cdn.stackoverflow.co/images/jo7n4k8s/production/c0f0339ba240d8108ee02216536bf095dcb182b7-2045x672.jpg?auto=format">
+  <meta property="og:image:alt" content="Why model versioning is not enough for production AI">
+  <meta name="twitter:image" content="https://cdn.stackoverflow.co/images/jo7n4k8s/production/c0f0339ba240d8108ee02216536bf095dcb182b7-2045x672.jpg?auto=format">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Why model versioning is not enough for production AI", "description": "For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real…", "datePublished": "2026-09-28T12:00:00.000Z", "dateModified": "2026-09-28T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/c0f0339ba240d8108ee02216536bf095dcb182b7-2045x672.jpg?auto=format", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html"}, "isBasedOn": "https://stackoverflow.blog/2026/09/28/why-model-versioning-is-not-enough-for-production-ai/", "wordCount": 1768}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Careers</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-09-28</span>
+          <span>Stack Overflow Blog</span>
+        </div>
+        <h1>Why model versioning is not enough for production AI</h1>
+        <p class="lede">For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real traffic, and replacing it safely. Each reference should resolve to retained, inspectable configuration or artifacts.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Imagine a documentation assistant that starts timing out after a routine retrieval change. But the retriever now sends more context, generation takes longer, and requests pile up behind a busy inference server. Reverting the application container does not help because the retrieval configuration lives elsewhere.</p>
+        <p>This is a hypothetical incident, but it exposes a useful design question: what, exactly, did the team deploy? Inputs, preprocessing, prompts, retrieval, tool contracts, and serving settings can change behavior independently. Reliable AI infrastructure needs a release boundary around the components that must work together.</p>
+        <p>The practical starting point is not a bigger platform. It is a versioned release manifest, a meaningful evaluation gate, and a rollback path that has actually been tested. Traditional ML systems already have this problem: a classifier trained with one feature transformation can behave incorrectly when production applies another.</p>
+        <p>Google&#x27;s MLOps guidance describes training-serving skew and the need for data and model validation within automated pipelines. Generative applications extend the set of dependencies; they do not remove the need to manage them. [1] For a retrieval-augmented generation application, I would begin with a small manifest like this.</p>
+        <p>The values below are illustrative identifiers, not a runnable platform specification. The runtime revision should cover settings that affect execution, such as token limits, batching, timeouts, and resource placement. If the application calls tools, version the schemas and adapters too.</p>
+        <p>Store references to secrets, never secret values, in the manifest. External services change; generation can remain nondeterministic; a provider may not offer immutable model snapshots. Record those limits instead of disguising a floating alias as a fixed version.</p>
+        <p>Where data changes continuously, record the ingestion watermark and index configuration so an incident can be investigated even when replay is imperfect. This does not require copying the entire environment for every release. It requires knowing which combination was tested, and resolving that combination consistently when a request begins.</p>
+        <p>Updating four configuration stores one after another is not an atomic release. A service can return HTTP 200 and still fail the user. For a documentation assistant, a useful answer might need to cite an accessible source, reflect the correct product version, and decline to invent instructions when evidence is missing.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/c0f0339ba240d8108ee02216536bf095dcb182b7-2045x672.jpg?auto=format" alt="Workflow diagram showing a versioned release tested by an evaluation gate, then promoted to live traffic, with live traffic failures feeding back as new evaluation tests." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://cdn.stackoverflow.co/images/jo7n4k8s/production/37fd17b4be950be18bb8a938531047ced04027c9-2045x745.jpg?auto=format" alt="Flowchart showing requests routed from a router to Release A (stable) and Release B (canary). A note indicates rollback routes new requests to A." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Inputs, preprocessing, prompts, retrieval, tool contracts, and serving settings can change behavior independently. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Reliable AI infrastructure needs a release boundary around the components that must work together.</li>
+          <li>If the application calls tools, version the schemas and adapters too.</li>
+          <li>It requires knowing which combination was tested, and resolving that combination consistently when a request begins.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://stackoverflow.blog/2026/09/28/why-model-versioning-is-not-enough-for-production-ai/" target="_blank" rel="noopener noreferrer">Stack Overflow Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

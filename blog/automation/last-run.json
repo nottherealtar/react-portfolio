@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-28T22:32:06.849682+00:00",
+  "timestamp": "2026-09-29T11:21:18.539221+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
-      "link": "auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html",
-      "score": 126.9441,
-      "source": "DEV Community",
+      "title": "Why model versioning is not enough for production AI",
+      "link": "auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html",
+      "score": 128.1566,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

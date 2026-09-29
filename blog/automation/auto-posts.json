@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "Why model versioning is not enough for production AI",
+    "date": "2026-09-28",
+    "category": "Coding & Careers",
+    "summary": "For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real traffic, and replacing it safely. Each reference should resolve to retained, inspectable configuration or artifacts.",
+    "link": "auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html",
+    "source_url": "https://stackoverflow.blog/2026/09/28/why-model-versioning-is-not-enough-for-production-ai/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/c0f0339ba240d8108ee02216536bf095dcb182b7-2045x672.jpg?auto=format"
+  },
+  {
     "title": "I built a sales agent that still remembers the deal after I close the tab",
     "date": "2026-09-28",
     "category": "Coding & Community",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Software Quality Assurance Tools and Tips for Developers",
+      "link": "auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html",
+      "date": "2026-09-29",
+      "summary": "Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly ad",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
       "link": "auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html",
       "date": "2026-09-28",
@@ -86,14 +94,6 @@
       "date": "2026-09-24",
       "summary": "Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those functions If you just want a quick smoke test before committing to ",
       "category": "Developer Platform",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Your AI Agent Has Too Much Power",
-      "link": "auto/20260923-your-ai-agent-has-too-much-power-41a2ac46.html",
-      "date": "2026-09-23",
-      "summary": "If you've connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the AG-Men defend your runtime step by step: The Cleaner (Local PII",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

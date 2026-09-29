@@ -1,5 +1,18 @@
 [
   {
+    "title": "Software Quality Assurance Tools and Tips for Developers",
+    "date": "2026-09-29",
+    "category": "Developer Tools",
+    "summary": "Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly address several modern development pressures, including: Static analyzers, which catch bugs and security flaws before code merges.",
+    "link": "auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html",
+    "source_url": "https://blog.jetbrains.com/qodana/2026/09/software-quality-assurance-tools/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/Untitled-design-50.png"
+  },
+  {
     "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
     "date": "2026-09-28",
     "category": "Coding & Community",

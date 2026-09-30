@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-30T11:09:18.091407+00:00",
+  "timestamp": "2026-09-30T21:25:23.165367+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 608,
-  "unseen_candidates": 583,
+  "fetched_candidates": 609,
+  "unseen_candidates": 585,
   "blocked_domain_candidates": 13,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "ChronoSyntax: Vibe-Coding a Multiversal Anomaly Broadcast Network with Sanity App SDK & Autonomous Workflows",
-      "link": "auto/20260930-chronosyntax-vibe-coding-a-multiversal-anomaly-broadcast-net-6320c87f.html",
-      "score": 116.9813,
-      "source": "DEV Community",
+      "title": "The Biggest New Game Releases Of October 2026",
+      "link": "auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html",
+      "score": 139.3077,
+      "source": "GameSpot",
       "text_engine": "embedding-mmr"
     }
   ],

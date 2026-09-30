@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 30 Sep 2026 11:11:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Sep 2026 21:26:47 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>The Biggest New Game Releases Of October 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Gaming News</category>
+      <description>Between original releases, sequels, and hot indie games, the next couple of weeks are loaded with options across a wide variety of genres and ideas. The game also looks visually stunning thanks to its Unreal Engine 5 visuals, and you can expect to dive into over 200 dungeons after you're done spending a few hours in the highly detailed character creator.</description>
+    </item>
     <item>
       <title>ChronoSyntax: Vibe-Coding a Multiversal Anomaly Broadcast Network with Sanity App SDK &amp; Autonomous Workflows</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260930-chronosyntax-vibe-coding-a-multiversal-anomaly-broadcast-net-6320c87f.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request actions, and hand off to humans when needed. A read-only “what automations do we have?” assistant Scenario: Your team has dozens of n8n workflows.</description>
-    </item>
-    <item>
-      <title>Google Launches Gemini 3.8 Flash and Flash Cyber With New API Pricing and Access</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260904-google-launches-gemini-3-8-flash-and-flash-cyber-with-new-ap-4138239f.html</guid>
-      <pubDate>Fri, 04 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>The release gives developers, paid Gemini users and Gemini Enterprise customers different routes to use the general model, with a separate access program for the cybersecurity model. Google says Gemini 3.8 Flash shares a foundational intelligence with the Cyber variant and is accelerated by agentic loops.</description>
     </item>
   </channel>
 </rss>

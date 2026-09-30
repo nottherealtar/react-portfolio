@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Biggest New Game Releases Of October 2026",
+      "link": "auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html",
+      "date": "2026-09-30",
+      "summary": "Between original releases, sequels, and hot indie games, the next couple of weeks are loaded with options across a wide variety of genres and ideas. The game also looks visually stunning thanks to its Unreal Engine 5 vis",
+      "category": "Gaming News",
+      "reading_minutes": 4
+    },
+    {
       "title": "ChronoSyntax: Vibe-Coding a Multiversal Anomaly Broadcast Network with Sanity App SDK & Autonomous Workflows",
       "link": "auto/20260930-chronosyntax-vibe-coding-a-multiversal-anomaly-broadcast-net-6320c87f.html",
       "date": "2026-09-30",
@@ -87,14 +95,6 @@
       "summary": "Adobe's own architecture docs describe the Pro production environment as having \"three virtual machines (VMs) behind an Elastic Load Balancer,\" and each project \"replicated on three separate AWS or Azure Availability Zon",
       "category": "Coding & Community",
       "reading_minutes": 4
-    },
-    {
-      "title": "Ship agents faster with expanded model choice, voice agents, and continuous optimization",
-      "link": "auto/20260924-ship-agents-faster-with-expanded-model-choice-voice-agents-a-a291ddaa.html",
-      "date": "2026-09-24",
-      "summary": "Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business.",
-      "category": "Cloud Automation",
-      "reading_minutes": 3
     }
   ]
 }

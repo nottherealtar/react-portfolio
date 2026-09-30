@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "ChronoSyntax: Vibe-Coding a Multiversal Anomaly Broadcast Network with Sanity App SDK & Autonomous Workflows",
+      "link": "auto/20260930-chronosyntax-vibe-coding-a-multiversal-anomaly-broadcast-net-6320c87f.html",
+      "date": "2026-09-30",
+      "summary": "Documents advance through a 6-stage pipeline (Raw Intercept → AI Agent Enrichment → Polyglot Reality QC → Lead Chronicler Human Review → Director Sealed → Live Broadcast). Vibe-coding an app of this scope quickly reveals",
+      "category": "Coding & Community",
+      "reading_minutes": 4
+    },
+    {
       "title": "Software Quality Assurance Tools and Tips for Developers",
       "link": "auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html",
       "date": "2026-09-29",
@@ -86,14 +94,6 @@
       "date": "2026-09-24",
       "summary": "Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business.",
       "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-      "link": "auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html",
-      "date": "2026-09-24",
-      "summary": "Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those functions If you just want a quick smoke test before committing to ",
-      "category": "Developer Platform",
       "reading_minutes": 3
     }
   ]

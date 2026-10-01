@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 01 Oct 2026 11:38:16 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 21:50:12 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and challenges that will define the next wave of intelligent automation. AI agents now see a screenshot, hear a voice command, and read a PDF—all without a separate preprocessing pipeline.</description>
+    </item>
+    <item>
+      <title>A look back before we look forward: A Developer Survey retrospective</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community. We started asking about AI agents in the 2025 Developer Survey , with 31% of respondents indicating they were using them and most using ChatGPT (82%) and GitHub Copilot (68%).</description>
     </item>
     <item>
       <title>The Biggest New Game Releases Of October 2026</title>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>For example, consider an automation system where a user action eventually triggers an external API call: User Action --&gt; Webhook --&gt; Event Queue --&gt; Worker --&gt; External API If the worker crashes after the external API accepts the request but before our database records the result, we have an ambiguous state. Therefore, every queue consumer that performs an external side effect should be safe to retry.</description>
-    </item>
-    <item>
-      <title>OpenAI Launches GPT-6 Astra With Computer Use Tools and Broad Platform Rollout</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260905-openai-launches-gpt-6-astra-with-computer-use-tools-and-broa-75851364.html</guid>
-      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>OpenAI’s official GPT-6 Astra announcement establishes the substantive news: a staged, multi-platform deployment with defined API pricing, large context capacity and capabilities aimed at completing more complex digital tasks. For businesses, the important question is less whether Astra is unusual and more whether its computer-use functions can reliably reduce manual work in existing processes.</description>
     </item>
   </channel>
 </rss>

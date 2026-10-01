@@ -12,6 +12,18 @@
     "reading_minutes": 4
   },
   {
+    "title": "A look back before we look forward: A Developer Survey retrospective",
+    "date": "2026-10-01",
+    "category": "Coding & Careers",
+    "summary": "This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community. We started asking about AI agents in the 2025 Developer Survey , with 31% of respondents indicating they were using them and most using ChatGPT (82%) and GitHub Copilot (68%).",
+    "link": "auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html",
+    "source_url": "https://stackoverflow.blog/2026/10/01/a-look-back-before-we-look-forward-a-developer-survey-retrospective/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Biggest New Game Releases Of October 2026",
     "date": "2026-09-30",
     "category": "Gaming News",

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-09-30T21:25:23.165367+00:00",
+  "timestamp": "2026-10-01T11:36:00.714128+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
   "unseen_candidates": 585,
-  "blocked_domain_candidates": 13,
+  "blocked_domain_candidates": 14,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Biggest New Game Releases Of October 2026",
-      "link": "auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html",
-      "score": 139.3077,
-      "source": "GameSpot",
+      "title": "The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next",
+      "link": "auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html",
+      "score": 139.926,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

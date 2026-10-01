@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next",
+      "link": "auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html",
+      "date": "2026-10-01",
+      "summary": "In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and cha",
+      "category": "Coding & Community",
+      "reading_minutes": 4
+    },
+    {
       "title": "The Biggest New Game Releases Of October 2026",
       "link": "auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html",
       "date": "2026-09-30",
@@ -86,14 +94,6 @@
       "date": "2026-09-25",
       "summary": "Some of Wings of Theve's best moments were when pursuers boxed me into a dense pocket of cloud cover, forcing me to blindly hammer the throttle and commit to a mach-three, nose-down drag race.",
       "category": "Gaming & Industry",
-      "reading_minutes": 4
-    },
-    {
-      "title": "You Don't Need Adobe Commerce Cloud to Survive Black Friday",
-      "link": "auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html",
-      "date": "2026-09-24",
-      "summary": "Adobe's own architecture docs describe the Pro production environment as having \"three virtual machines (VMs) behind an Elastic Load Balancer,\" and each project \"replicated on three separate AWS or Azure Availability Zon",
-      "category": "Coding & Community",
       "reading_minutes": 4
     }
   ]

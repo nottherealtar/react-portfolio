@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 30 Sep 2026 21:26:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 11:38:16 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html</guid>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and challenges that will define the next wave of intelligent automation. AI agents now see a screenshot, hear a voice command, and read a PDF—all without a separate preprocessing pipeline.</description>
+    </item>
     <item>
       <title>The Biggest New Game Releases Of October 2026</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>OpenAI’s official GPT-6 Astra announcement establishes the substantive news: a staged, multi-platform deployment with defined API pricing, large context capacity and capabilities aimed at completing more complex digital tasks. For businesses, the important question is less whether Astra is unusual and more whether its computer-use functions can reliably reduce manual work in existing processes.</description>
-    </item>
-    <item>
-      <title>10 Practical Things You Can Build With n8n and MCP</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260905-10-practical-things-you-can-build-with-n8n-and-mcp-5bdd592e.html</guid>
-      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>MCP gives AI clients a structured way to discover and invoke capabilities. The practical version is narrower and more valuable: the AI can list approved workflows, call approved webhooks, inspect safe outputs, request actions, and hand off to humans when needed. A read-only “what automations do we have?” assistant Scenario: Your team has dozens of n8n workflows.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer | TarsOnlineCafe</title>
+  <meta name="description" content="My agents didn&#x27;t have a memory problem. They had a shared-context problem . I&#x27;d built a system where each agent accumulated its own context.">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer">
+  <meta property="og:description" content="My agents didn&#x27;t have a memory problem. They had a shared-context problem . I&#x27;d built a system where each agent accumulated its own context.">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html">
+  <meta property="article:published_time" content="2026-10-02T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer">
+  <meta name="twitter:description" content="My agents didn&#x27;t have a memory problem. They had a shared-context problem . I&#x27;d built a system where each agent accumulated its own context.">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer", "description": "My agents didn't have a memory problem. They had a shared-context problem . I'd built a system where each agent accumulated its own context.", "datePublished": "2026-10-02T12:00:00.000Z", "dateModified": "2026-10-02T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html"}, "isBasedOn": "https://dev.to/alex_aslam/your-multi-agent-system-doesnt-have-a-memory-problem-it-has-a-shared-context-problem-shared-4ih4", "wordCount": 1769}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-02</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer</h1>
+        <p class="lede">My agents didn&#x27;t have a memory problem. They had a shared-context problem . I&#x27;d built a system where each agent accumulated its own context.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Then a knowledge graph, because the research said graphs were the future. Each addition bought me a week of calm and then the same failures crept back: agents contradicting each other, repeating work, and confidently citing facts that no one had actually established. The turning point came when I stopped asking &quot;how do I give my agents better memory?&quot; and started asking &quot;why are they each building their own version of reality?&quot; That&#x27;s when I saw it.</p>
+        <p>The researcher remembered sources it had read. The analyst remembered conclusions it had drawn. The writer remembered the draft it had produced.</p>
+        <p>Each agent&#x27;s context was internally consistent and completely isolated from every other agent&#x27;s. The first time I noticed the cost, a support agent told a customer that a refund was &quot;being processed&quot; while the billing agent had already flagged the request as ineligible. They were operating on different pictures of the same situation, and no one had told them to compare notes.</p>
+        <p>The research had already quantified what I was feeling. In large-scale deployments of multi-agent frameworks, the task failure rate can climb to 40–80% without coordination through shared memory. Roughly 36.9% of those failures are attributed to misalignment issues—inconsistent states or goal deviations between agents.</p>
+        <p>The paper&#x27;s conclusion was blunt: operating independently without a common memory repository, different agents develop conflicting understandings of the environment, leading to contradictory decisions that undermine the stability of the overall system. Vector stores and knowledge graphs help a single agent remember more. They do nothing for the failure mode where two agents disagree because they&#x27;re reasoning over different fragments of the truth.</p>
+        <p>The discipline that replaced my patchwork approach has a name now: context engineering . Google&#x27;s ADK team describes it as treating context as a first-class system with its own architecture, lifecycle, and constraints. The core thesis is that context should be a compiled view over a richer stateful system—not a mutable string buffer that each agent accumulates independently.</p>
+        <p>In a single-agent system, you ask: &quot;What context does this agent need to answer well?&quot; In a multi-agent system, you have to ask a harder question: &quot;How do several agents share the same business understanding while each agent sees only the context its role requires?&quot; That second question is what I had never asked. I hadn&#x27;t designed the shared substrate that makes those agents&#x27; retrievals compatible. Each one solves a specific failure mode I&#x27;d been papering over with prompt engineering.</p>
+        <p>First, a shared context repository that agents read from and write to. A persistent, versioned store of facts, decisions, and artifacts that every agent can query. The Atlan guide calls this the &quot;single trusted source&quot; layer—every agent uses the same approved definitions, metrics, and policies.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Then a knowledge graph, because the research said graphs were the future. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Each agent&#x27;s context was internally consistent and completely isolated from every other agent&#x27;s.</li>
+          <li>Vector stores and knowledge graphs help a single agent remember more.</li>
+          <li>First, a shared context repository that agents read from and write to.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/alex_aslam/your-multi-agent-system-doesnt-have-a-memory-problem-it-has-a-shared-context-problem-shared-4ih4" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

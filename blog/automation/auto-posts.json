@@ -1,5 +1,17 @@
 [
   {
+    "title": "Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer",
+    "date": "2026-10-02",
+    "category": "Coding & Community",
+    "summary": "My agents didn't have a memory problem. They had a shared-context problem . I'd built a system where each agent accumulated its own context.",
+    "link": "auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html",
+    "source_url": "https://dev.to/alex_aslam/your-multi-agent-system-doesnt-have-a-memory-problem-it-has-a-shared-context-problem-shared-4ih4",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next",
     "date": "2026-10-01",
     "category": "Coding & Community",

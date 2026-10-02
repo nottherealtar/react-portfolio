@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 02 Oct 2026 11:07:07 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 21:21:09 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>My agents didn't have a memory problem. They had a shared-context problem . I'd built a system where each agent accumulated its own context.</description>
+    </item>
+    <item>
+      <title>TechCrunch Disrupt 2026: Clay’s Kareem Amin on the rise of the GTM engineer</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261002-techcrunch-disrupt-2026-clay-s-kareem-amin-on-the-rise-of-th-57b183de.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261002-techcrunch-disrupt-2026-clay-s-kareem-amin-on-the-rise-of-th-57b183de.html</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>At TechCrunch Disrupt 2026 , Clay co-founder and CEO Kareem Amin will take the AI Stage for “ The GTM Engineer: How AI Created Tech’s Next Big Job Category .” He’ll trace how AI has changed the traditional go-to-market stack and helped create a new discipline in its place, giving attendees a look at what AI-native GTM looks like in practice and how it’s changing company growth.</description>
     </item>
     <item>
       <title>The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next</title>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>The agent decides which tools to invoke based on user intent, then coordinates state across tool calls. This decouples the LLM from API churn. Semantic search indexes data from connected apps.</description>
-    </item>
-    <item>
-      <title>Building Automation LLMs: What 66 Studies Reveal About Deploying Agents in HVAC Systems</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260907-building-automation-llms-what-66-studies-reveal-about-deploy-8fe9db81.html</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>A new systematic review of 66 peer-reviewed studies on LLMs for HVAC operations exposes the plumbing challenges when agents must parse heterogeneous sensor streams, normalize metadata, and make decisions in physical systems where failure modes include frozen pipes and carbon monoxide buildup. It does not predict sensor values.</description>
     </item>
   </channel>
 </rss>

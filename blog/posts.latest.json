@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "TechCrunch Disrupt 2026: Clay’s Kareem Amin on the rise of the GTM engineer",
+      "link": "auto/20261002-techcrunch-disrupt-2026-clay-s-kareem-amin-on-the-rise-of-th-57b183de.html",
+      "date": "2026-10-02",
+      "summary": "At TechCrunch Disrupt 2026 , Clay co-founder and CEO Kareem Amin will take the AI Stage for “ The GTM Engineer: How AI Created Tech’s Next Big Job Category .” He’ll trace how AI has changed the traditional go-to-market s",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next",
       "link": "auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html",
       "date": "2026-10-01",
@@ -87,14 +95,6 @@
       "summary": "Static Application Security Testing (SAST) is the practice of analyzing source code — or bytecode, or compiled binaries — for security vulnerabilities without executing the program. Taint analysis is how serious SQL inje",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Startup Logistics Transactional Email API vs SMTP — Owning Password Reset Templates",
-      "link": "auto/20260926-startup-logistics-transactional-email-api-vs-smtp-owning-pas-9cfc6e90.html",
-      "date": "2026-09-26",
-      "summary": "A logistics startup choosing a transactional email API for welcome emails and password resets should decide who owns each template before comparing an API with SMTP relay providers. That puts review, tests, and deploymen",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

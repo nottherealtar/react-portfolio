@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing) | TarsOnlineCafe</title>
+  <meta name="description" content="I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing)">
+  <meta property="og:description" content="I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html">
+  <meta property="article:published_time" content="2026-10-03T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing)">
+  <meta name="twitter:description" content="I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kgo68qtrpf7kevcwi9c.png">
+  <meta property="og:image:alt" content="SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing)">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kgo68qtrpf7kevcwi9c.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)", "description": "I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest…", "datePublished": "2026-10-03T12:00:00.000Z", "dateModified": "2026-10-03T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kgo68qtrpf7kevcwi9c.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html"}, "isBasedOn": "https://dev.to/amanmaurya92/safeplate-building-an-ai-allergy-histamine-recipe-agent-with-sentry-agent-tracing-5a8i", "wordCount": 882}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-10-03</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing)</h1>
+        <p class="lede">I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallergenic substitutions, and tracks its entire execution tree with Sentry Agent Tracing . Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>This article is an entry for the Hacktoberfest Weekend Challenge: Build for a Friend in the **Best Use of Sentry Agent Tracing * prize category.* 🍽️ The Inspiration: Building for Elena Food should bring joy, but for my close friend Elena , preparing dinner is an exhausting clinical puzzle. Elena was diagnosed with Celiac Disease , severe Histamine Intolerance (HIT) , and dairy protein sensitivity . Unlike standard food allergies where you simply avoid peanuts or shellfish, Histamine Intolerance is insidious: &quot;Healthy&quot; superfoods…</p>
+        <p>Standard protein staples like slow-cooked bone broths or leftover cooked meats accumulate biogenic amines that cause migraines, flushing, and digestive distress. Commercial gluten-free foods frequently sneak in high-histamine yeast extracts or cross-contaminated grains. When Elena asked popular closed-source chatbots for recipe swaps, the results were consistently hazardous: they would blithely recommend parmesan alternatives with nutritional yeast (extremely high in histamine) or bone-broth reductions .</p>
+        <p>Elena&#x27;s reaction when I handed it over: &quot;This is the first time an AI tool didn&#x27;t try to poison me with spinach or bone broth. Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.&quot; The full open-source codebase, clinical database, and Sentry observability benchmark scripts are available on GitHub: 👉 github.com/amanmaurya92/safeplate For SafePlate, open-source AI wasn&#x27;t an afterthought—it was a non-negotiable architectural requirement: Medical Data Privacy: Elena&#x27;s health diagnoses,…</p>
+        <p>Deterministic Guardrails: Closed commercial APIs change their prompt behaviors and moderation filters unpredictably. Building an open agent harness with deterministic clinical tools ensures medical safety rules are never hallucinated away. 🏗️ How the Agent Works: Architecture &amp; Tracing SafePlate operates as a multi-step agent pipeline that maps cleanly into Sentry&#x27;s hierarchical OpenTelemetry data model: ai.pipeline : The root transaction representing the end-to-end user request.</p>
+        <p>ai.tool_call : Child spans tracking clinical database queries ( audit_ingredient , get_safe_substitute ). ai.chat_completions.create : Child spans capturing model inference, prompt/completion token consumption, and cost telemetry. In Python, we enabled the ai_monitoring experiment and enabled PII capture so that prompt contexts and tool arguments are visible in Sentry&#x27;s Explore &gt; Agents dashboard: Every time the agent verifies an ingredient or fetches a substitute, we wrap the execution in a dedicated ai.tool_call span: 🔍 The Sentry…</p>
+        <p>The Mystery of the 30 Spans (The Redundant Audit Loop) What Sentry Showed: When testing a standard Classic Chicken Parmesan with Tomato Sauce &amp; Spinach recipe (containing 5 unsafe ingredients), Sentry&#x27;s flame graph revealed 28 individual tool calls and 30 total spans! The agent was repeatedly re-evaluating replacement candidates in an unmemoized recursive loop. The Root Cause: When checking parmesan substitutes, the engine evaluated nutritional yeast, which itself triggered a histamine check, re-triggering an audit loop.</p>
+        <p>The Fix: Implemented memoized ingredient validation in the agent loop. Result: Spans dropped from 30 down to 15, eliminating redundant database operations. Prompt Token Bloat (Caught by gen_ai.usage.prompt_tokens ) What Sentry Showed: Sentry&#x27;s token analytics graph flagged that the synthesis step was consuming 2,930 tokens per recipe .</p>
+        <p>Inspection of the span payload showed that our early system prompt was dumping the entire raw SIGHI food list into the LLM context. The Fix: We stripped the static dictionary dump from the system prompt and relied solely on the structured outputs from the ai.tool_call spans. Result: Token consumption dropped by 61.4% (down to 1,130 tokens), resulting in snappier local inference.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kgo68qtrpf7kevcwi9c.png" alt="The Benchmark Comparison" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4eof3vv11l8z1e0qsbbd.png" alt="The Working Agent CLI &amp; Recipe Remix" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>📊 Performance &amp; Observability Benchmark Here are the side-by-side telemetry metrics captured before and after Sentry optimization: When Elena feeds in a high-risk recipe, SafePlate produces a clinically verified, delicious dinner: Special thanks to the DEV community and Sentry team for sharing insights on agent tracing: Tracing AI Agent Tool Calls With OpenTelemetry by Outwork Tech for patterns on what metadata to capture. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.&quot; Elena&#x27;s reaction when I handed it over: &quot;This is the first time an AI…</li>
+          <li>ai.tool_call : Child spans tracking clinical database queries ( audit_ingredient , get_safe_substitute ).</li>
+          <li>⚙️ Sentry Agent Tracing: Setup &amp; Implementation Instrumenting SafePlate with Sentry&#x27;s AI Monitoring was straightforward.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/amanmaurya92/safeplate-building-an-ai-allergy-histamine-recipe-agent-with-sentry-agent-tracing-5a8i" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

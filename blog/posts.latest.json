@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
+      "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
+      "date": "2026-10-03",
+      "summary": "I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallerge",
+      "category": "Coding & Community",
+      "reading_minutes": 4
+    },
+    {
       "title": "Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer",
       "link": "auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html",
       "date": "2026-10-02",
@@ -86,14 +94,6 @@
       "date": "2026-09-28",
       "summary": "Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Ag",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'",
-      "link": "auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html",
-      "date": "2026-09-27",
-      "summary": "Come back every weekend to read a new interview, digging into the important questions, like \"How tidy is your desktop?\" and \"What game will you never uninstall?\" William Pugh grew up on a diet of shareware Mac titles lik",
-      "category": "Gaming & Industry",
       "reading_minutes": 3
     }
   ]

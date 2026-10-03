@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-03T10:23:44.126607+00:00",
+  "timestamp": "2026-10-03T19:50:05.506005+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 609,
-  "unseen_candidates": 585,
+  "unseen_candidates": 583,
   "blocked_domain_candidates": 14,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
-      "link": "auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html",
-      "score": 122.4584,
-      "source": "Microsoft Azure Blog",
+      "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
+      "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
+      "score": 133.9201,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

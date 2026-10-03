@@ -1,5 +1,18 @@
 [
   {
+    "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
+    "date": "2026-10-03",
+    "category": "Coding & Community",
+    "summary": "I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallergenic substitutions, and tracks its entire execution tree with Sentry Agent Tracing . Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.",
+    "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
+    "source_url": "https://dev.to/amanmaurya92/safeplate-building-an-ai-allergy-histamine-recipe-agent-with-sentry-agent-tracing-5a8i",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0kgo68qtrpf7kevcwi9c.png"
+  },
+  {
     "title": "Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer",
     "date": "2026-10-02",
     "category": "Coding & Community",

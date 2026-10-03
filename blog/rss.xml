@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 03 Oct 2026 10:25:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 19:51:40 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>SafePlate: Building an AI Allergy &amp; Histamine Recipe Agent (with Sentry Agent Tracing)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html</guid>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallergenic substitutions, and tracks its entire execution tree with Sentry Agent Tracing . Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.</description>
+    </item>
     <item>
       <title>Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Every new project starts the same way. Backend: NestJS 11 + Fastify + PostgreSQL 16 + Drizzle + Redis + BullMQ Web: TanStack Start (SSR) + TanStack Query + Zustand + Tailwind 4 + shadcn Mobile: Expo 57 + expo-router + NativeWind (mirrors the web features) Contracts: Zod 4 schemas shared end-to-end — the compiler catches API drift Already wired: fine-grained authorization (RBAC + ReBAC + ABAC), multi-tenancy, GDPR…</description>
-    </item>
-    <item>
-      <title>I ran 22 directory submissions with Playwright in one day. Here is what actually blocked me.</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260908-i-ran-22-directory-submissions-with-playwright-in-one-day-he-12f27feb.html</guid>
-      <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel="dofollow" , visible in the server-rendered HTML that Googlebot receives. The marketing copy and the actual markup did not agree.</description>
     </item>
   </channel>
 </rss>

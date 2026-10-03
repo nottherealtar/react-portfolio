@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 02 Oct 2026 21:21:09 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2026 10:25:45 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -63,6 +63,14 @@
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly address several modern development pressures, including: Static analyzers, which catch bugs and security flaws before code merges.</description>
+    </item>
+    <item>
+      <title>FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html</guid>
+      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>Today, we’re announcing new innovations across Microsoft Fabric and our database portfolio designed to help organizations power their Frontier Transformation, including deep integrations with the new Microsoft Copilot, agentic app development in Microsoft Power BI , end-to-end observability in Fabric, the database hub, and more.</description>
     </item>
     <item>
       <title>Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation</title>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 08 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>I checked an existing listing on that same site with two different user agents: a normal browser and a Googlebot UA fetched via page.request.get : The outbound links on live listings came back as bare URLs with rel="dofollow" , visible in the server-rendered HTML that Googlebot receives. The marketing copy and the actual markup did not agree.</description>
-    </item>
-    <item>
-      <title>Slashy's Cross-App Agent Architecture: Memory, Semantic Search, and Custom Tools</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260907-slashy-s-cross-app-agent-architecture-memory-semantic-search-39901f47.html</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>The agent decides which tools to invoke based on user intent, then coordinates state across tool calls. This decouples the LLM from API churn. Semantic search indexes data from connected apps.</description>
     </item>
   </channel>
 </rss>

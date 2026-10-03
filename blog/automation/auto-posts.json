@@ -87,6 +87,18 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/09/Untitled-design-50.png"
   },
   {
+    "title": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
+    "date": "2026-09-29",
+    "category": "Cloud Automation",
+    "summary": "Today, we’re announcing new innovations across Microsoft Fabric and our database portfolio designed to help organizations power their Frontier Transformation, including deep integrations with the new Microsoft Copilot, agentic app development in Microsoft Power BI , end-to-end observability in Fabric, the database hub, and more.",
+    "link": "auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-in-barcelona-building-the-data-foundation-for-microsoft-copilot-and-agents/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
     "date": "2026-09-28",
     "category": "Coding & Community",

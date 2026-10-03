@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-02T21:19:22.492406+00:00",
+  "timestamp": "2026-10-03T10:23:44.126607+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "TechCrunch Disrupt 2026: Clay’s Kareem Amin on the rise of the GTM engineer",
-      "link": "auto/20261002-techcrunch-disrupt-2026-clay-s-kareem-amin-on-the-rise-of-th-57b183de.html",
-      "score": 129.0506,
-      "source": "TechCrunch",
+      "title": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
+      "link": "auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html",
+      "score": 122.4584,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "CloudPal AI: Building a Free Cloud & DevOps Learning Assistant for Hacktoberfest 2026",
+    "date": "2026-10-04",
+    "category": "Coding & Community",
+    "summary": "I created this project with learners in mind who often struggle to find a simple and interactive way to understand technical concepts and prepare for interviews. The project is designed as a starting point for an educational AI assistant.",
+    "link": "auto/20261004-cloudpal-ai-building-a-free-cloud-devops-learning-assistant-91b898dd.html",
+    "source_url": "https://dev.to/abhimanyu_sharma_ae57cd4e/cloudpal-ai-building-a-free-cloud-devops-learning-assistant-for-hacktoberfest-2026-46e",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fv6s1kg0yx40jaor0318t.png"
+  },
+  {
     "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
     "date": "2026-10-03",
     "category": "Coding & Community",

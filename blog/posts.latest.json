@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "CloudPal AI: Building a Free Cloud & DevOps Learning Assistant for Hacktoberfest 2026",
+      "link": "auto/20261004-cloudpal-ai-building-a-free-cloud-devops-learning-assistant-91b898dd.html",
+      "date": "2026-10-04",
+      "summary": "I created this project with learners in mind who often struggle to find a simple and interactive way to understand technical concepts and prepare for interviews. The project is designed as a starting point for an educati",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
       "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
       "date": "2026-10-03",
@@ -87,14 +95,6 @@
       "summary": "You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not fetch a value, not execute a command, but reason through policy and",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Why model versioning is not enough for production AI",
-      "link": "auto/20260928-why-model-versioning-is-not-enough-for-production-ai-37704081.html",
-      "date": "2026-09-28",
-      "summary": "For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real traffic, and replacing it safely. Each reference should resolve to reta",
-      "category": "Coding & Careers",
-      "reading_minutes": 2
     }
   ]
 }

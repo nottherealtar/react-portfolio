@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-03T19:50:05.506005+00:00",
+  "timestamp": "2026-10-04T11:06:04.482510+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
-      "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
-      "score": 133.9201,
+      "title": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool",
+      "link": "auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html",
+      "score": 131.9774,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

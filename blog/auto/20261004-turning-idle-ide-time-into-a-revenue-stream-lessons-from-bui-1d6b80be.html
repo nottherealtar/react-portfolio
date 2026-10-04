@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool | TarsOnlineCafe</title>
+  <meta name="description" content="I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool">
+  <meta property="og:description" content="I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html">
+  <meta property="article:published_time" content="2026-10-04T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool">
+  <meta name="twitter:description" content="I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool", "description": "I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew…", "datePublished": "2026-10-04T12:00:00.000Z", "dateModified": "2026-10-04T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html"}, "isBasedOn": "https://dev.to/ntty/turning-idle-ide-time-into-a-revenue-stream-lessons-from-building-a-saas-tool-4blm", "wordCount": 881}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-04</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool</h1>
+        <p class="lede">I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started to choke during peak compilation periods. Content marketing (blog posts, short videos) demonstrated how the tip system could shave seconds off a compile loop.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Why Wait‑States Matter for Developers When a compiler is busy, a linter is running, or an AI assistant is thinking, developers often stare at a frozen screen. That idle time feels like wasted productivity, but it also represents an opportunity. If you can turn that waiting period into something useful, like a quick tip, a code snippet, or a tiny visualisation, you can improve the developer experience and, if packaged right, generate recurring revenue.</p>
+        <p>The First Prototype: A Simple Chrome Extension My first attempt was a Chrome extension that displayed a random &quot;Did you know?&quot; fact about the language you were editing while the IDE was busy. The extension was tiny (under 5 KB) and required no backend. What worked: The extension was easy to install, and the fact that it never sent data to a server made privacy‑concerned users comfortable.</p>
+        <p>I logged a few thousand impressions in the first week. What failed: Without a backend I couldn&#x27;t track how many users actually found the fact useful enough to click for more information. Also, the extension had no way to monetize, so the project stalled after the initial curiosity spike.</p>
+        <p>Adding a Backend: From Free to Freemium To learn whether developers would pay for a richer experience, I built a minimal Node.js API that served curated tips based on the file type and the current wait‑state. The API was hosted on a cheap VPS and required an API key for each user. Free tier: 10 tips per day, limited to generic content.</p>
+        <p>Pro tier: Unlimited tips, custom branding, and the ability to add company‑specific snippets. I priced the Pro tier at $5 per month, reasoning that a developer would spend at least $1‑2 per day on coffee, so $5 felt like a tiny extra cost for a small productivity boost. Learning from the First 30 Customers The first paying users came from my personal network.</p>
+        <p>Their feedback was brutally honest and helped shape the product roadmap: Tip relevance matters more than tip frequency. Users complained when the same tip appeared repeatedly. I added a simple cache that remembered the last 20 tips per user.</p>
+        <p>Developers wanted the tip to appear inside their IDE, not just in a browser notification. I built a small VS Code extension that called the same API. The initial checkout flow required a separate account creation step, which caused many users to abandon the purchase.</p>
+        <p>I switched to a one‑click checkout using Stripe&#x27;s Checkout session, and conversion doubled. I learned three key lessons about scaling a low‑traffic SaaS: Cache aggressively. A Redis instance holding the most recent tips per language reduced database hits by 80%.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Pro tier: Unlimited tips, custom branding, and the ability to add company‑specific snippets. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>If you can turn that waiting period into something useful, like a quick tip, a code snippet, or a tiny visualisation, you can improve the developer experience and, if packaged…</li>
+          <li>I learned three key lessons about scaling a low‑traffic SaaS: Cache aggressively.</li>
+          <li>Pricing Experiments: What Worked and What Didn&#x27;t After the initial $5 price point, I tried a $10 tier that promised &quot;priority support&quot; and early access to new tip categories.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/ntty/turning-idle-ide-time-into-a-revenue-stream-lessons-from-building-a-saas-tool-4blm" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

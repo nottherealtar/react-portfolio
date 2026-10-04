@@ -1,5 +1,17 @@
 [
   {
+    "title": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool",
+    "date": "2026-10-04",
+    "category": "Coding & Community",
+    "summary": "I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started to choke during peak compilation periods. Content marketing (blog posts, short videos) demonstrated how the tip system could shave seconds off a compile loop.",
+    "link": "auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html",
+    "source_url": "https://dev.to/ntty/turning-idle-ide-time-into-a-revenue-stream-lessons-from-building-a-saas-tool-4blm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
     "date": "2026-10-03",
     "category": "Coding & Community",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool",
+      "link": "auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html",
+      "date": "2026-10-04",
+      "summary": "I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started t",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
       "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
       "date": "2026-10-03",
@@ -87,14 +95,6 @@
       "summary": "For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real traffic, and replacing it safely. Each reference should resolve to reta",
       "category": "Coding & Careers",
       "reading_minutes": 2
-    },
-    {
-      "title": "I built a sales agent that still remembers the deal after I close the tab",
-      "link": "auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html",
-      "date": "2026-09-28",
-      "summary": "Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Ag",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

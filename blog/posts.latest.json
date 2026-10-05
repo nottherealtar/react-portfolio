@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "ERPNext vs Odoo: Which One Manages Different Business Operations Better?",
+      "link": "auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html",
+      "date": "2026-10-05",
+      "summary": "It provides a range of business tools in one system. Key Differences Between ERPNext and Odoo ERPNext and Odoo cover many of the same business areas. Sales: ERPNext supports sales pipelines, quotations, purchase orders, ",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool",
       "link": "auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html",
       "date": "2026-10-04",
@@ -86,14 +94,6 @@
       "date": "2026-09-29",
       "summary": "Today, we’re announcing new innovations across Microsoft Fabric and our database portfolio designed to help organizations power their Frontier Transformation, including deep integrations with the new Microsoft Copilot, a",
       "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Your agents can’t collaborate if they only speak tool calls — the A2A protocol that fixes peer handoffs — A2A Under the Linux Foundation",
-      "link": "auto/20260928-your-agents-can-t-collaborate-if-they-only-speak-tool-calls-70364249.html",
-      "date": "2026-09-28",
-      "summary": "You build your first agents, you wire them together with tool calls, and it works. When my billing agent needed the refund agent to decide something—not fetch a value, not execute a command, but reason through policy and",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

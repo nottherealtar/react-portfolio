@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 04 Oct 2026 20:11:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 12:17:11 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>ERPNext vs Odoo: Which One Manages Different Business Operations Better?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>It provides a range of business tools in one system. Key Differences Between ERPNext and Odoo ERPNext and Odoo cover many of the same business areas. Sales: ERPNext supports sales pipelines, quotations, purchase orders, and supplier management.</description>
+    </item>
     <item>
       <title>Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Google made its Kotlin agent framework production-ready. GPT-6 Astra raises the ceiling and the bill OpenAI introduced GPT-6 Astra as its highest-capability model for complex reasoning, coding, computer use, research, and document creation.</description>
-    </item>
-    <item>
-      <title>The Evolution of WSL Support in JetBrains IDEs</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260909-the-evolution-of-wsl-support-in-jetbrains-ides-e1e45cee.html</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Developer Tools</category>
-      <description>We will then cover Remote Development and WSLg before examining Native mode – the currently preferred mode for how IDEs work with WSL. While this architecture enables the IDE to operate against WSL, it introduces significant trade-offs in both file access and process execution. In a WSLg setup, the IDE may run on the native Wayland path, where JetBrains Runtime uses WLToolkit against WSLg’s Wayland compositor.</description>
     </item>
   </channel>
 </rss>

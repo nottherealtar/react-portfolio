@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale",
+      "link": "auto/20261005-i-got-my-start-writing-for-a-playstation-2-magazine-these-ar-9b64aa84.html",
+      "date": "2026-10-05",
+      "summary": "The defining 20 or so games on the platform—God of War, Gran Turismo 3, Final Fantasy 10 and so forth—are very well known, and maybe Millennial players can recall a weirdo game or two like Mr Mosquito or Global Defence F",
+      "category": "Gaming & Industry",
+      "reading_minutes": 4
+    },
+    {
       "title": "ERPNext vs Odoo: Which One Manages Different Business Operations Better?",
       "link": "auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html",
       "date": "2026-10-05",
@@ -86,14 +94,6 @@
       "date": "2026-09-29",
       "summary": "Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly ad",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents",
-      "link": "auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html",
-      "date": "2026-09-29",
-      "summary": "Today, we’re announcing new innovations across Microsoft Fabric and our database portfolio designed to help organizations power their Frontier Transformation, including deep integrations with the new Microsoft Copilot, a",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

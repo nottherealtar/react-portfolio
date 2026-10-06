@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 05 Oct 2026 23:12:04 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 12:03:14 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>When Does an Ecommerce Application Need Custom Software?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existing ecommerce application while building custom services around it.</description>
+    </item>
     <item>
       <title>I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261005-i-got-my-start-writing-for-a-playstation-2-magazine-these-ar-9b64aa84.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Manager ..</description>
-    </item>
-    <item>
-      <title>GitHub availability report: August 2026</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260910-github-availability-report-august-2026-a105b3ce.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260910-github-availability-report-august-2026-a105b3ce.html</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Developer Platform</category>
-      <description>As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. GitHub Actions gained additional capacity while longer-term isolation work continues.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "When Does an Ecommerce Application Need Custom Software?",
+      "link": "auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html",
+      "date": "2026-10-06",
+      "summary": "Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existi",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale",
       "link": "auto/20261005-i-got-my-start-writing-for-a-playstation-2-magazine-these-ar-9b64aa84.html",
       "date": "2026-10-05",
@@ -87,14 +95,6 @@
       "summary": "Documents advance through a 6-stage pipeline (Raw Intercept → AI Agent Enrichment → Polyglot Reality QC → Lead Chronicler Human Review → Director Sealed → Live Broadcast). Vibe-coding an app of this scope quickly reveals",
       "category": "Coding & Community",
       "reading_minutes": 4
-    },
-    {
-      "title": "Software Quality Assurance Tools and Tips for Developers",
-      "link": "auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html",
-      "date": "2026-09-29",
-      "summary": "Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly ad",
-      "category": "Developer Tools",
-      "reading_minutes": 3
     }
   ]
 }

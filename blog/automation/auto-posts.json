@@ -12,6 +12,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "Building Git infrastructure for agent-scale development",
+    "date": "2026-10-06",
+    "category": "Developer Platform",
+    "summary": "We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. Thousands of agents working on their own branches in one repository produce a sustained write rate that converges on a single point in our architecture.",
+    "link": "auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html",
+    "source_url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale",
     "date": "2026-10-05",
     "category": "Gaming & Industry",

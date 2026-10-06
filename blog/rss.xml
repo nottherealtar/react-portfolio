@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 06 Oct 2026 12:03:14 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 21:39:08 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existing ecommerce application while building custom services around it.</description>
+    </item>
+    <item>
+      <title>Building Git infrastructure for agent-scale development</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html</guid>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. Thousands of agents working on their own branches in one repository produce a sustained write rate that converges on a single point in our architecture.</description>
     </item>
     <item>
       <title>I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale</title>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>For IT leaders, that creates a broader operating question: how do you govern a agentic system that can grow and act faster than traditional applications? Cost management capabilities in Foundry brings that context closer to the systems creating it. Teams can see estimated costs across projects, inspect cost and token usage for individual agents, and monitor model costs.</description>
-    </item>
-    <item>
-      <title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Container Management</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260910-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-6542ac34.html</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>AI has reshaped the requirements for container management. This vision underpins Microsoft’s container portfolio, spanning Azure Kubernetes Service (AKS) , Azure Container Apps , Azure Arc , and Azure Kubernetes Fleet Manager ..</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Building Git infrastructure for agent-scale development | TarsOnlineCafe</title>
+  <meta name="description" content="We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Building Git infrastructure for agent-scale development">
+  <meta property="og:description" content="We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html">
+  <meta property="article:published_time" content="2026-10-06T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building Git infrastructure for agent-scale development">
+  <meta name="twitter:description" content="We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Building Git infrastructure for agent-scale development">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Building Git infrastructure for agent-scale development", "description": "We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and…", "datePublished": "2026-10-06T12:00:00.000Z", "dateModified": "2026-10-06T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html"}, "isBasedOn": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/", "wordCount": 1837}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-06</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Building Git infrastructure for agent-scale development</h1>
+        <p class="lede">We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. Thousands of agents working on their own branches in one repository produce a sustained write rate that converges on a single point in our architecture.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Every day on GitHub, millions of developers build the products their customers rely on, contribute to open source, and pursue personal projects. GitHub’s architecture has changed steadily over the years to support that work and the growing demands of the developers and organizations who depend on it. Agentic software development is driving the next architectural shift.</p>
+        <p>This post explores the demands shaping that work and the design principles behind it. The gap between a typical repository and the busiest ones is wider than most people expect. Here’s a rough picture of the monthly repository activity distribution on GitHub from August 2026: Repository activity climbs sharply at the far end of the distribution.</p>
+        <p>The busiest repository on GitHub saw roughly a billion requests in August. Beyond these highest-volume workloads, total Git activity on GitHub is also growing rapidly: between September 2025 and August 2026, it increased to more than 2x its previous level, from 218.2 billion events per month to 473.3 billion. In September alone, developers and agents made 7.38 billion commits on GitHub, more than five times as many as a year earlier.</p>
+        <p>The repositories at the top of this curve show what agentic development looks like at its leading edge: large engineering teams running busy CI pipelines alongside growing fleets of agents. Building for this scale means addressing several architectural challenges: Commit turnaround becomes a bottleneck per agent. An agent in a tight loop commits or checkpoints after nearly every action.</p>
+        <p>Its speed is bounded by how fast a single push completes, so latency that a human would never notice becomes the limiting factor. Write throughput demand is increasing by orders of magnitude. Pushes grew 4.9x year over year, from 0.69 billion to 3.35 billion per month.</p>
+        <p>Trunk-based development, release trains, and merge queues funnel all that work onto a single ref that has to absorb every merge. Pull request merges on GitHub grew to nearly 4x their volume a year ago. Each push multiplies into thousands of reads.</p>
+        <p>For example, CI and code scanning clone or fetch the same branch tip thousands of times per minute, and that fan-out has to be cheap. GitHub Actions alone ran 3.26 billion times in September, more than 4x as many as a year ago. To keep them fast, we continually compact repository data and clean up objects that are no longer needed.</p>
+        <p>Every new write adds to that work, and the cost compounds as volume climbs. This is why fast clones only solve part of the problem. Reads are relatively easy to scale: add caches, add replicas, and serve the same bytes to more clients.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>With developers and agents working concurrently in repositories that receive millions of commits a day, these workloads demand a different Git architecture. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The busiest repository on GitHub saw roughly a billion requests in August.</li>
+          <li>We’re investing deeply in Git infrastructure to meet the demands of agentic software development and give teams a foundation built for their most ambitious workloads.</li>
+          <li>Building for this scale means addressing several architectural challenges: Commit turnaround becomes a bottleneck per agent.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

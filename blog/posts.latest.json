@@ -9,6 +9,14 @@
       "reading_minutes": 2
     },
     {
+      "title": "Building Git infrastructure for agent-scale development",
+      "link": "auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html",
+      "date": "2026-10-06",
+      "summary": "We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. Thousands of agen",
+      "category": "Developer Platform",
+      "reading_minutes": 3
+    },
+    {
       "title": "I got my start writing for a PlayStation 2 magazine: These are my 12 PS2-pilled recommendations from the Steam Autumn Sale",
       "link": "auto/20261005-i-got-my-start-writing-for-a-playstation-2-magazine-these-ar-9b64aa84.html",
       "date": "2026-10-05",
@@ -86,14 +94,6 @@
       "date": "2026-09-30",
       "summary": "Between original releases, sequels, and hot indie games, the next couple of weeks are loaded with options across a wide variety of genres and ideas. The game also looks visually stunning thanks to its Unreal Engine 5 vis",
       "category": "Gaming News",
-      "reading_minutes": 4
-    },
-    {
-      "title": "ChronoSyntax: Vibe-Coding a Multiversal Anomaly Broadcast Network with Sanity App SDK & Autonomous Workflows",
-      "link": "auto/20260930-chronosyntax-vibe-coding-a-multiversal-anomaly-broadcast-net-6320c87f.html",
-      "date": "2026-09-30",
-      "summary": "Documents advance through a 6-stage pipeline (Raw Intercept → AI Agent Enrichment → Polyglot Reality QC → Lead Chronicler Human Review → Director Sealed → Live Broadcast). Vibe-coding an app of this scope quickly reveals",
-      "category": "Coding & Community",
       "reading_minutes": 4
     }
   ]

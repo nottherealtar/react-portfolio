@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-06T21:37:13.018369+00:00",
+  "timestamp": "2026-10-07T11:46:14.082143+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 609,
+  "fetched_candidates": 610,
   "unseen_candidates": 591,
-  "blocked_domain_candidates": 8,
+  "blocked_domain_candidates": 9,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Building Git infrastructure for agent-scale development",
-      "link": "auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html",
-      "score": 158.8129,
-      "source": "GitHub Blog",
+      "title": "Co-dev case study: How Blackbird Interactive and Secret Mode helped Escape the Backrooms ride the Backrooms hype wave",
+      "link": "auto/20261006-co-dev-case-study-how-blackbird-interactive-and-secret-mode-2b1a4e86.html",
+      "score": 133.0963,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],

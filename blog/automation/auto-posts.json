@@ -1,5 +1,17 @@
 [
   {
+    "title": "The 20 most popular MCP servers, scanned: what's actually in their tool descriptions",
+    "date": "2026-10-07",
+    "category": "Coding & Community",
+    "summary": "Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).",
+    "link": "auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html",
+    "source_url": "https://dev.to/pennyforgehq/the-20-most-popular-mcp-servers-scanned-whats-actually-in-their-tool-descriptions-14cj",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "When Does an Ecommerce Application Need Custom Software?",
     "date": "2026-10-06",
     "category": "Coding & Community",

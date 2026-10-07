@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The 20 most popular MCP servers, scanned: what's actually in their tool descriptions",
+      "link": "auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html",
+      "date": "2026-10-07",
+      "summary": "Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "When Does an Ecommerce Application Need Custom Software?",
       "link": "auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html",
       "date": "2026-10-06",
@@ -87,14 +95,6 @@
       "summary": "In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and cha",
       "category": "Coding & Community",
       "reading_minutes": 4
-    },
-    {
-      "title": "A look back before we look forward: A Developer Survey retrospective",
-      "link": "auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html",
-      "date": "2026-10-01",
-      "summary": "This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community. We started asking about AI agents in the 2025 Developer ",
-      "category": "Coding & Careers",
-      "reading_minutes": 3
     }
   ]
 }

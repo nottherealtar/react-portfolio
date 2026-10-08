@@ -25,6 +25,14 @@
       "reading_minutes": 2
     },
     {
+      "title": "Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms",
+      "link": "auto/20261006-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-8d03f19e.html",
+      "date": "2026-10-06",
+      "summary": "Success now depends on turning operational knowledge into scalable intelligence that improves throughput, quality, resilience, safety, and sustainability. Physical AI helps organizations act, whether through autonomous o",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "Co-dev case study: How Blackbird Interactive and Secret Mode helped Escape the Backrooms ride the Backrooms hype wave",
       "link": "auto/20261006-co-dev-case-study-how-blackbird-interactive-and-secret-mode-2b1a4e86.html",
       "date": "2026-10-06",
@@ -86,14 +94,6 @@
       "date": "2026-10-02",
       "summary": "My agents didn't have a memory problem. They had a shared-context problem . I'd built a system where each agent accumulated its own context.",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "TechCrunch Disrupt 2026: Clay’s Kareem Amin on the rise of the GTM engineer",
-      "link": "auto/20261002-techcrunch-disrupt-2026-clay-s-kareem-amin-on-the-rise-of-th-57b183de.html",
-      "date": "2026-10-02",
-      "summary": "At TechCrunch Disrupt 2026 , Clay co-founder and CEO Kareem Amin will take the AI Stage for “ The GTM Engineer: How AI Created Tech’s Next Big Job Category .” He’ll trace how AI has changed the traditional go-to-market s",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

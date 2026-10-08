@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Cloudflare free plan WAF rules I kept after 7 days of scanner logs",
+      "link": "auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html",
+      "date": "2026-10-08",
+      "summary": "These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every \"attack path\" against your own routes. I don't run WordPress anywhere, so nothing legitima",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The 20 most popular MCP servers, scanned: what's actually in their tool descriptions",
       "link": "auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html",
       "date": "2026-10-07",
@@ -87,14 +95,6 @@
       "summary": "At TechCrunch Disrupt 2026 , Clay co-founder and CEO Kareem Amin will take the AI Stage for “ The GTM Engineer: How AI Created Tech’s Next Big Job Category .” He’ll trace how AI has changed the traditional go-to-market s",
       "category": "Tech & Startups",
       "reading_minutes": 3
-    },
-    {
-      "title": "The Rise of AI Agents in 2026: Trends, Use‑Cases, and What’s Next",
-      "link": "auto/20261001-the-rise-of-ai-agents-in-2026-trends-use-cases-and-what-s-ne-34c816fd.html",
-      "date": "2026-10-01",
-      "summary": "In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and cha",
-      "category": "Coding & Community",
-      "reading_minutes": 4
     }
   ]
 }

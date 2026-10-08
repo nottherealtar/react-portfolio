@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cloudflare free plan WAF rules I kept after 7 days of scanner logs | TarsOnlineCafe</title>
+  <meta name="description" content="These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every &quot;attack path&quot; against your…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Cloudflare free plan WAF rules I kept after 7 days of scanner logs">
+  <meta property="og:description" content="These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every &quot;attack path&quot; against your…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html">
+  <meta property="article:published_time" content="2026-10-08T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cloudflare free plan WAF rules I kept after 7 days of scanner logs">
+  <meta name="twitter:description" content="These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every &quot;attack path&quot; against your…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F40s0yyuqf8qk7tv6qnlq.webp">
+  <meta property="og:image:alt" content="Cloudflare free plan WAF rules I kept after 7 days of scanner logs">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F40s0yyuqf8qk7tv6qnlq.webp">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cloudflare free plan WAF rules I kept after 7 days of scanner logs", "description": "These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every \"attack path\" against your…", "datePublished": "2026-10-08T12:00:00.000Z", "dateModified": "2026-10-08T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F40s0yyuqf8qk7tv6qnlq.webp", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html"}, "isBasedOn": "https://dev.to/howardzlh/cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanner-logs-4pa6", "wordCount": 969}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-08</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Cloudflare free plan WAF rules I kept after 7 days of scanner logs</h1>
+        <p class="lede">These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every &quot;attack path&quot; against your own routes. I don&#x27;t run WordPress anywhere, so nothing legitimate matches: The secret-file one is longer.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>I keep the original updated, so this copy may lag. I got there by reading a week of firewall events, and by undoing one change that blocked my own images. The short version: path rules do most of the work.</p>
+        <p>What 7 days of Cloudflare security events looked like Between September 17 and 24, the zone saw about 34,000 requests. The events sample I pulled had 5,208 rows from 920 IPs. It was the same background noise every public hostname gets: .env files, .git/config , WordPress logins, a React RCE probe for CVE-2025-55182, empty user agents, Go-http-client .</p>
+        <p>My busiest Worker peaked at 786 requests in a day, against a free allowance of 100,000. To see your own, the GraphQL Analytics API has a firewall events dataset. Look at three things: the paths (secret files and CMS logins you don&#x27;t have), the source network (cloud and VPS ranges, not home ISPs), and the timing (dozens of paths from one IP inside a second).</p>
+        <p>If all three match, it&#x27;s an automated scanner, and blocking it at the edge is enough. The first analysis I got, written by an AI assistant from the same API data, listed /estimate as an unknown endpoint probe. It also counted /zh-Hant/ and /sitemap.xml .</p>
+        <p>The core of it: contains &quot;/.env&quot; already catches .env.production and /api/.env . A rate limit only kicks in after the threshold, so a slow scanner walks under it forever. That&#x27;s all four rules on my zone as of 2026-09-28, with the dashboard&#x27;s event count next to each.</p>
+        <p>IPs are replaced with documentation addresses. The user agent rule: block tool clients, and pay for it The other custom rule blocks two known IPs plus any user agent containing curl , Go-http-client , python , scrapy or fasthttp . My own ops notes said Python and Go clients were allowed.</p>
+        <p>The live rule blocked both, and a bare curl https://guushu.com/ returns 403 today. When I check my own site now, I send a browser user agent. Before copying this rule, list what calls your zone: webhooks, uptime checks, your own scripts.</p>
+        <p>If any of them use a default library user agent, they&#x27;re gone. This is the rule most likely to cause a quiet outage. The one free rate limiting rule, and how it 429&#x27;d my own images Free gets one rate limiting rule , counted per IP, with a fixed 10-second window and a fixed 10-second block.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F40s0yyuqf8qk7tv6qnlq.webp" alt="Security rules page on the zone: three active custom rules for WordPress paths, scanner IPs and curl user agents, and sensitive file paths, plus one active rate limiting rule, each with its event count" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>I got there by reading a week of firewall events, and by undoing one change that blocked my own images. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Background scanning, in my case.</li>
+          <li>It also counted /zh-Hant/ and /sitemap.xml .</li>
+          <li>The live rule blocked both, and a bare curl https://guushu.com/ returns 403 today.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/howardzlh/cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanner-logs-4pa6" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

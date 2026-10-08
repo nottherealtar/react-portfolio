@@ -1,5 +1,18 @@
 [
   {
+    "title": "Cloudflare free plan WAF rules I kept after 7 days of scanner logs",
+    "date": "2026-10-08",
+    "category": "Coding & Community",
+    "summary": "These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every \"attack path\" against your own routes. I don't run WordPress anywhere, so nothing legitimate matches: The secret-file one is longer.",
+    "link": "auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html",
+    "source_url": "https://dev.to/howardzlh/cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanner-logs-4pa6",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F40s0yyuqf8qk7tv6qnlq.webp"
+  },
+  {
     "title": "The 20 most popular MCP servers, scanned: what's actually in their tool descriptions",
     "date": "2026-10-07",
     "category": "Coding & Community",

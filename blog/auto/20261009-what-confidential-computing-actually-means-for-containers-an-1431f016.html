@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>What &quot;Confidential Computing&quot; Actually Means for Containers (and Who Needs It) | TarsOnlineCafe</title>
+  <meta name="description" content="Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="What &quot;Confidential Computing&quot; Actually Means for Containers (and Who Needs It)">
+  <meta property="og:description" content="Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html">
+  <meta property="article:published_time" content="2026-10-09T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What &quot;Confidential Computing&quot; Actually Means for Containers (and Who Needs It)">
+  <meta name="twitter:description" content="Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="What &quot;Confidential Computing&quot; Actually Means for Containers (and Who Needs It)">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)", "description": "Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed…", "datePublished": "2026-10-09T12:00:00.000Z", "dateModified": "2026-10-09T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html"}, "isBasedOn": "https://dev.to/bascoibm/what-confidential-computing-actually-means-for-containers-and-who-needs-it-oh4", "wordCount": 1165}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-09</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>What &quot;Confidential Computing&quot; Actually Means for Containers (and Who Needs It)</h1>
+        <p class="lede">Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but their hypervisor, host OS, and staff are cryptographically excluded from reading working memory. Let&#x27;s be completely frank: most everyday container workloads do not need confidential computing.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>If you have spent any time around cloud infrastructure recently, you have likely heard the term &quot;confidential computing&quot; thrown into executive pitches, keynote slides, and vendor whitepapers. Usually, it comes wrapped in dense jargon like TEEs, enclaves, and attestation. Strip away the buzzwords, though, and the underlying question is simple: When your cloud provider runs your container, can their engineers or automated tools inspect your data while it is actively processing?</p>
+        <p>For standard cloud deployments, the answer is yes. That is not because cloud providers are malicious; it is simply how cloud virtualization was engineered. I lead product management for Confidential Containers on IBM Cloud, so I think about this problem daily.</p>
+        <p>But rather than pitching hardware features, let us look at the structural security gap in standard containers, what hardware-level protection actually solves, and whether your organization genuinely needs it. The Security Blind Spot Nobody Liked to Mention Most enterprise teams assume their cloud workloads are fully encrypted. And they are, across two distinct states: Data at rest: Stored on encrypted disks or in object stores.</p>
+        <p>Data in transit: Moving across networks via encrypted transport protocols. The vulnerability lives in the third state: data in use . To execute an application, a CPU must load unencrypted plaintext into system memory (RAM).</p>
+        <p>In a conventional shared-host environment, any process with privileged host access (a hypervisor exploit, a misconfigured host agent, or a rogue administrator) can potentially read or alter that working memory. For a decade, enterprises accepted a contractual promise: the cloud vendor guarantees via legal terms and SOC 2 audits that their operators will not peek. For web applications or standard internal tools, that contract is usually fine.</p>
+        <p>For regulated data, proprietary AI models, and intellectual property, however, compliance auditors and risk officers are increasingly saying that contractual promises are no longer enough. Over the past several years, the cloud ecosystem invested heavily in microVM and user-space sandboxing technologies like Kata Containers, Firecracker, and gVisor. Platforms use these engines to protect the host infrastructure from untrusted application code —such as isolating multi-tenant workloads or running autonomous AI agent scripts.</p>
+        <p>Confidential computing flips that trust boundary completely. The bank staff guards the perimeter, manages the facility, and keeps the power running. But only you hold the physical key to your box; the bank manager cannot inspect its contents.</p>
+        <p>Using hardware-level Trusted Execution Environments (TEEs) from AMD, Intel, and IBM, the processor encrypts the container&#x27;s memory space using keys managed directly by the silicon. Crucially, the industry is converging on open standards rather than proprietary SDKs. While proprietary enclaves often require rewriting applications against vendor-specific APIs, the open CNCF Confidential Containers (CoCo) standard —co-founded by IBM, Red Hat, and Intel, and adopted across ecosystems including Red Hat OpenShift and Microsoft…</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Deploying workloads on platforms like Red Hat OpenShift on IBM Cloud equipped with IBM Cloud Confidential Containers allows compliance teams to present cryptographic attestation to auditors rather than relying solely on policy documents. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>If you have spent any time around cloud infrastructure recently, you have likely heard the term &quot;confidential computing&quot; thrown into executive pitches, keynote slides, and…</li>
+          <li>I lead product management for Confidential Containers on IBM Cloud, so I think about this problem daily.</li>
+          <li>Using hardware-level Trusted Execution Environments (TEEs) from AMD, Intel, and IBM, the processor encrypts the container&#x27;s memory space using keys managed directly by the…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/bascoibm/what-confidential-computing-actually-means-for-containers-and-who-needs-it-oh4" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

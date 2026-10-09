@@ -1,5 +1,17 @@
 [
   {
+    "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
+    "date": "2026-10-09",
+    "category": "Coding & Community",
+    "summary": "Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but their hypervisor, host OS, and staff are cryptographically excluded from reading working memory. Let's be completely frank: most everyday container workloads do not need confidential computing.",
+    "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
+    "source_url": "https://dev.to/bascoibm/what-confidential-computing-actually-means-for-containers-and-who-needs-it-oh4",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Triple-I Initiative October 2026: Everything Announced At The Showcase",
     "date": "2026-10-08",
     "category": "Gaming News",

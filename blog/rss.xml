@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 09 Oct 2026 11:54:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 21:42:34 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>What "Confidential Computing" Actually Means for Containers (and Who Needs It)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but their hypervisor, host OS, and staff are cryptographically excluded from reading working memory. Let's be completely frank: most everyday container workloads do not need confidential computing.</description>
+    </item>
     <item>
       <title>Triple-I Initiative October 2026: Everything Announced At The Showcase</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <category>Tech &amp; Startups</category>
       <description>Increasingly, founders aren’t just competing with other startups — they’re competing with the platforms powering the AI ecosystem itself. The reality founders increasingly need to prepare for is, “Can we build something customers will still value after the next model release?</description>
-    </item>
-    <item>
-      <title>Background Agents: Four-Layer Fault Tolerance for Long-Running Code Sessions</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260914-background-agents-four-layer-fault-tolerance-for-long-runnin-6fb1bf8e.html</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns parallel sub-tasks in separate sandboxes. Partial commits are tagged with a failure marker so the system can resume from the last known good state.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
+      "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
+      "date": "2026-10-09",
+      "summary": "Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but thei",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Triple-I Initiative October 2026: Everything Announced At The Showcase",
       "link": "auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html",
       "date": "2026-10-08",
@@ -87,14 +95,6 @@
       "summary": "I created this project with learners in mind who often struggle to find a simple and interactive way to understand technical concepts and prepare for interviews. The project is designed as a starting point for an educati",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "SafePlate: Building an AI Allergy & Histamine Recipe Agent (with Sentry Agent Tracing)",
-      "link": "auto/20261003-safeplate-building-an-ai-allergy-histamine-recipe-agent-with-5b291470.html",
-      "date": "2026-10-03",
-      "summary": "I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallerge",
-      "category": "Coding & Community",
-      "reading_minutes": 4
     }
   ]
 }

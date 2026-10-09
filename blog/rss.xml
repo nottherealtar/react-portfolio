@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 08 Oct 2026 22:04:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 11:54:22 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Triple-I Initiative October 2026: Everything Announced At The Showcase</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Gaming News</category>
+      <description>The second broadcast of the year from organizers Evil Empire, the Triple-I Initiative was a focused blast of curated trailers and game updates, all rolling out across an almost-hour-long livestream. New skins are also coming later this month, and if you haven't tried it yet, Escape the Backrooms is a co-op game that builds on the idea of analog horror.</description>
+    </item>
     <item>
       <title>Cloudflare free plan WAF rules I kept after 7 days of scanner logs</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Every task execution flows through a cascade that decides when to retry, when to hand off to a fallback model, when to shadow-validate with an evaluator, and when to rerun with human feedback. Background Agents spawns parallel sub-tasks in separate sandboxes. Partial commits are tagged with a failure marker so the system can resume from the last known good state.</description>
-    </item>
-    <item>
-      <title>I Catalogued 1,000+ Open-Source Claude Agent Skills. Here's What the Ecosystem Actually Looks Like.</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260913-i-catalogued-1-000-open-source-claude-agent-skills-here-s-wh-f95a9d4f.html</guid>
-      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Cluster the skills by what they actually do and the vast majority fall into five buckets: Document manipulation. The description field is doing the heavy lifting This was the most consequential thing I learned, and it has nothing to do with the skill's content. Most of the skills I indexed get this wrong in one of two directions.</description>
     </item>
   </channel>
 </rss>

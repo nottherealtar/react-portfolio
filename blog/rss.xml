@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 10 Oct 2026 11:11:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2026 20:36:11 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matchers. Its key features: Standard-conformant – checked in every build Treetrail passes all 706 cases of the Compliance Test Suite, on Java 17, 21 and 25 and with every supported JSON model.</description>
+    </item>
+    <item>
+      <title>The Atomic Answer Rule: Engineering Content for RAG Chunking and AI Search</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html</guid>
+      <pubDate>Sat, 10 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The Atomic Answer Rule states that every H2 section of a document must answer its query as an independent, self-contained micro-document, without relying on the text above or below it. This guide explains the information retrieval mechanics behind passage chunking, provides a concrete diagnostic test for your existing content, and demonstrates a side-by-side refactoring workflow.</description>
     </item>
     <item>
       <title>What "Confidential Computing" Actually Means for Containers (and Who Needs It)</title>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
       <category>Tech &amp; Startups</category>
       <description>Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. We also can’t forget its video-sharing platform, Sora , which struggled with high operating costs and user-retention challenges and shut down in March 2026.</description>
-    </item>
-    <item>
-      <title>How to Block Cloud-Hosted Signups Without Blocking Real Users</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260915-how-to-block-cloud-hosted-signups-without-blocking-real-user-de25064c.html</guid>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>TL;DR A cloud/datacenter IP at signup is a strong automation-risk signal, but it does not prove the request is non-human. The lookup returns a set of boolean flags for an IP; the logic decides which flags mean "a server is pretending to be a user" and which mean "a real user is behind a shared address." Get that split right and you can substantially reduce the false positives of a blunt cloud-IP block.</description>
     </item>
   </channel>
 </rss>

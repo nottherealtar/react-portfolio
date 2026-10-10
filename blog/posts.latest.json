@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "The Atomic Answer Rule: Engineering Content for RAG Chunking and AI Search",
+      "link": "auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html",
+      "date": "2026-10-10",
+      "summary": "The Atomic Answer Rule states that every H2 section of a document must answer its query as an independent, self-contained micro-document, without relying on the text above or below it. This guide explains the information",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
       "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
       "date": "2026-10-09",
@@ -87,14 +95,6 @@
       "summary": "It provides a range of business tools in one system. Key Differences Between ERPNext and Odoo ERPNext and Odoo cover many of the same business areas. Sales: ERPNext supports sales pipelines, quotations, purchase orders, ",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Turning Idle IDE Time into a Revenue Stream: Lessons from Building a SaaS Tool",
-      "link": "auto/20261004-turning-idle-ide-time-into-a-revenue-stream-lessons-from-bui-1d6b80be.html",
-      "date": "2026-10-04",
-      "summary": "I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started t",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

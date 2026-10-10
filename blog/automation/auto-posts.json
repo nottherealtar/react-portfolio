@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "The Atomic Answer Rule: Engineering Content for RAG Chunking and AI Search",
+    "date": "2026-10-10",
+    "category": "Coding & Community",
+    "summary": "The Atomic Answer Rule states that every H2 section of a document must answer its query as an independent, self-contained micro-document, without relying on the text above or below it. This guide explains the information retrieval mechanics behind passage chunking, provides a concrete diagnostic test for your existing content, and demonstrates a side-by-side refactoring workflow.",
+    "link": "auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html",
+    "source_url": "https://dev.to/tarikmostafa/the-atomic-answer-rule-engineering-content-for-rag-chunking-and-ai-search-203e",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
     "date": "2026-10-09",
     "category": "Coding & Community",

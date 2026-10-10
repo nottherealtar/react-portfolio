@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-09T21:40:14.837188+00:00",
+  "timestamp": "2026-10-10T11:09:33.460907+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
-      "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
-      "score": 134.9892,
+      "title": "Treetrail: Why I wrote a JSONPath library for Java",
+      "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
+      "score": 129.9362,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

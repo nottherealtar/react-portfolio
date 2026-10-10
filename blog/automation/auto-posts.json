@@ -1,5 +1,17 @@
 [
   {
+    "title": "Treetrail: Why I wrote a JSONPath library for Java",
+    "date": "2026-10-10",
+    "category": "Coding & Community",
+    "summary": "For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matchers. Its key features: Standard-conformant – checked in every build Treetrail passes all 706 cases of the Compliance Test Suite, on Java 17, 21 and 25 and with every supported JSON model.",
+    "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
+    "source_url": "https://dev.to/christophsens/treetrail-why-i-wrote-a-jsonpath-library-for-java-1g0n",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
     "date": "2026-10-09",
     "category": "Coding & Community",

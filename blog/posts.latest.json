@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Treetrail: Why I wrote a JSONPath library for Java",
+      "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
+      "date": "2026-10-10",
+      "summary": "For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matc",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
       "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
       "date": "2026-10-09",
@@ -87,14 +95,6 @@
       "summary": "I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started t",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "CloudPal AI: Building a Free Cloud & DevOps Learning Assistant for Hacktoberfest 2026",
-      "link": "auto/20261004-cloudpal-ai-building-a-free-cloud-devops-learning-assistant-91b898dd.html",
-      "date": "2026-10-04",
-      "summary": "I created this project with learners in mind who often struggle to find a simple and interactive way to understand technical concepts and prepare for interviews. The project is designed as a starting point for an educati",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Treetrail: Why I wrote a JSONPath library for Java | TarsOnlineCafe</title>
+  <meta name="description" content="For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Treetrail: Why I wrote a JSONPath library for Java">
+  <meta property="og:description" content="For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html">
+  <meta property="article:published_time" content="2026-10-10T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Treetrail: Why I wrote a JSONPath library for Java">
+  <meta name="twitter:description" content="For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Treetrail: Why I wrote a JSONPath library for Java">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Treetrail: Why I wrote a JSONPath library for Java", "description": "For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem…", "datePublished": "2026-10-10T12:00:00.000Z", "dateModified": "2026-10-10T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html"}, "isBasedOn": "https://dev.to/christophsens/treetrail-why-i-wrote-a-jsonpath-library-for-java-1g0n", "wordCount": 1600}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-10</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Treetrail: Why I wrote a JSONPath library for Java</h1>
+        <p class="lede">For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matchers. Its key features: Standard-conformant – checked in every build Treetrail passes all 706 cases of the Compliance Test Suite, on Java 17, 21 and 25 and with every supported JSON model.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Originally published on christoph-sens.com . If you work with JSON in Java, you use JSONPath – often without noticing. In Spring tests it sits behind jsonPath(&quot;$.items[0].name&quot;) , in API gateways and integration platforms it picks fields out of webhooks, and in configuration files it describes which value goes where.</p>
+        <p>Surprisingly, JSONPath had no specification for some 17 years after Stefan Goessner&#x27;s article of 2007. Every library decided for itself what $..book[-1:] or $[?(@.price &lt; 10)] should return. Conformant implementations soon appeared for Python, Rust and .NET.</p>
+        <p>This post explains why the library exists, what it can do today and how it compares with the alternatives. It started with a simple observation: the same JSONPath query returns different results depending on the library. On the array [0, 1, …, 9] , for example: As long as an expression lives in a single Java service, this hardly shows.</p>
+        <p>But once the same query is evaluated in the backend, in a Python script for data analysis and in a TypeScript frontend, it gets tricky: three components, three interpretations, and the bug only shows up in production. Jayway JsonPath: a great service, but older than the standard By far the most widely used JSONPath library in Java is Jayway JsonPath . But it was created long before there was a standard – and so, through no fault of its own, it does not conform to it.</p>
+        <p>Measured against the Compliance Test Suite, Jayway 3.0.0 returns the same result as the standard for 86 of the 459 valid queries; with filters put in parentheses, as Jayway requires, it is 176. Conversely, Jayway accepts 132 of the 247 queries that the standard considers invalid. A library this widely used cannot simply change its behavior without breaking thousands of projects.</p>
+        <p>More and more often, JSONPath expressions don&#x27;t come from your own code but from tenants, users or third-party configuration. Then a query must not be able to take the service down. Regular expressions with backtracking are the best-known weak spot: the pattern ((a+)+)+b against 24 a s and a !</p>
+        <p>keeps java.util.regex busy for about 0.4 seconds on JDK 25 – and every further a doubles the time. To me, open source is the most honest way to show how I work: every decision, every test and every bug is public. Treetrail is written in Java on purpose, not in Kotlin – a dependency on the Kotlin standard library would make adoption by projects such as Spring, Apache Camel or Apache NiFi needlessly harder.</p>
+        <p>Version 0.2.0 has been on Maven Central since 8 October 2026. Where the standard leaves room or the test suite deviates from the RFC text, the decision is documented in docs/conformance.md . Every query returns a list of nodes, whether it selects one value or many.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>If you work with JSON in Java, you use JSONPath – often without noticing. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>That changed in February 2024, when the IETF published RFC 9535 , a standard for JSONPath, together with a Compliance Test Suite of 706 test cases.</li>
+          <li>A library this widely used cannot simply change its behavior without breaking thousands of projects.</li>
+          <li>It works on plain Java maps and lists, or parses JSON text itself with a small, strict parser.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/christophsens/treetrail-why-i-wrote-a-jsonpath-library-for-java-1g0n" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

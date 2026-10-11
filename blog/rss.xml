@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 11 Oct 2026 11:25:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 21:00:44 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Learning to use local AI is exciting, overwhelming, and frustrating</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261011-learning-to-use-local-ai-is-exciting-overwhelming-and-frustr-ea95eacb.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261011-learning-to-use-local-ai-is-exciting-overwhelming-and-frustr-ea95eacb.html</guid>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <category>AI &amp; Industry</category>
+      <description>A big part of Apple’s pitch for its new Mac desktops is how good they are for local AI, and there’s an entire line of new RTX Spark Windows machines landing imminently with up to 128GB of RAM aimed at using agentic AI. And since we don’t have to worry about paying for tokens when running a model locally, I figured I’d go big to start.</description>
+    </item>
     <item>
       <title>Building Multi-Agent AI Systems: A Developer's Primer</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261011-building-multi-agent-ai-systems-a-developer-s-primer-2a21652b.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Enterprise AI observability platforms provide distributed tracing, automated evaluation, and governance for non-deterministic LLM applications and agentic workflows. Platforms such as Maxim AI provide the necessary instrumentation, session replay, and automated scoring to ensure AI systems remain reliable, compliant, and cost-effective.</description>
-    </item>
-    <item>
-      <title>Anatomy of a Magento Card Skimmer: How Injected JavaScript Steals Cards — and Why Uptime Checks Miss It</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260916-anatomy-of-a-magento-card-skimmer-how-injected-javascript-st-636df8d3.html</guid>
-      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>It's one of the most common and most damaging things that happens to a Magento store, and it's built from the ground up to be invisible. How a card skimmer gets into a Magento store The attacker's goal is simple: get their JavaScript to execute on your checkout page. The payload is usually obfuscated so it doesn't read as "skimmer" to a casual glance.</description>
     </item>
   </channel>
 </rss>

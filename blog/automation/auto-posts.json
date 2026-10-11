@@ -1,5 +1,18 @@
 [
   {
+    "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
+    "date": "2026-10-11",
+    "category": "AI & Industry",
+    "summary": "A big part of Apple’s pitch for its new Mac desktops is how good they are for local AI, and there’s an entire line of new RTX Spark Windows machines landing imminently with up to 128GB of RAM aimed at using agentic AI. And since we don’t have to worry about paying for tokens when running a model locally, I figured I’d go big to start.",
+    "link": "auto/20261011-learning-to-use-local-ai-is-exciting-overwhelming-and-frustr-ea95eacb.html",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/1008484/learning-local-ai-hermes-qwen-model-mac-studio-testing-diary-progress",
+    "source_name": "The Verge AI",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/100926_Asus_TUF_A14_Hermes_local_AI_ADiBenedetto_0001.jpg?quality=90&strip=all&crop=0,0,100,100"
+  },
+  {
     "title": "Building Multi-Agent AI Systems: A Developer's Primer",
     "date": "2026-10-11",
     "category": "Coding & Community",

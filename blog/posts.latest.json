@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Building Multi-Agent AI Systems: A Developer's Primer",
+      "link": "auto/20261011-building-multi-agent-ai-systems-a-developer-s-primer-2a21652b.html",
+      "date": "2026-10-11",
+      "summary": "That's why more developers now build multi-agent systems . Instead of one agent doing everything, you split the work across several smaller agents, each with a single, clear job. State and Context Handoff Between Agents ",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Treetrail: Why I wrote a JSONPath library for Java",
       "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
       "date": "2026-10-10",
@@ -87,14 +95,6 @@
       "summary": "The defining 20 or so games on the platform—God of War, Gran Turismo 3, Final Fantasy 10 and so forth—are very well known, and maybe Millennial players can recall a weirdo game or two like Mr Mosquito or Global Defence F",
       "category": "Gaming & Industry",
       "reading_minutes": 4
-    },
-    {
-      "title": "ERPNext vs Odoo: Which One Manages Different Business Operations Better?",
-      "link": "auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html",
-      "date": "2026-10-05",
-      "summary": "It provides a range of business tools in one system. Key Differences Between ERPNext and Odoo ERPNext and Odoo cover many of the same business areas. Sales: ERPNext supports sales pipelines, quotations, purchase orders, ",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

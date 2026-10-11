@@ -1,5 +1,18 @@
 [
   {
+    "title": "Building Multi-Agent AI Systems: A Developer's Primer",
+    "date": "2026-10-11",
+    "category": "Coding & Community",
+    "summary": "That's why more developers now build multi-agent systems . Instead of one agent doing everything, you split the work across several smaller agents, each with a single, clear job. State and Context Handoff Between Agents This is where most multi-agent prototypes quietly fail.",
+    "link": "auto/20261011-building-multi-agent-ai-systems-a-developer-s-primer-2a21652b.html",
+    "source_url": "https://dev.to/reenapatel_bee67f84a86280/building-multi-agent-ai-systems-a-developers-primer-5fmg",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ft06b57rw8im8o1g798mq.png"
+  },
+  {
     "title": "Treetrail: Why I wrote a JSONPath library for Java",
     "date": "2026-10-10",
     "category": "Coding & Community",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Claude Code vs Codex CLI vs Gemini CLI: Terminal Agents 2026",
+      "link": "auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html",
+      "date": "2026-10-12",
+      "summary": "Claude Code vs Codex CLI vs Gemini CLI 2026: Best AI Coding Agent for Terminal Compared The terminal is the new IDE. It reads your entire project structure, understands your coding patterns, and makes changes that are co",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Learning to use local AI is exciting, overwhelming, and frustrating",
       "link": "auto/20261011-learning-to-use-local-ai-is-exciting-overwhelming-and-frustr-ea95eacb.html",
       "date": "2026-10-11",
@@ -87,14 +95,6 @@
       "summary": "A co-dev partnership helped Fancy's hit game Escape The Backrooms reach over 4 million players. But none of these projects have managed to eclipse the popularity of one game in particular: Escape the Backrooms .",
       "category": "Game Development",
       "reading_minutes": 4
-    },
-    {
-      "title": "Building Git infrastructure for agent-scale development",
-      "link": "auto/20261006-building-git-infrastructure-for-agent-scale-development-caa94378.html",
-      "date": "2026-10-06",
-      "summary": "We’re rebuilding GitHub’s Git infrastructure to support them. Supporting these teams means building Git infrastructure for sustained, concurrent reads and writes at a scale few repositories reach today. Thousands of agen",
-      "category": "Developer Platform",
-      "reading_minutes": 3
     }
   ]
 }

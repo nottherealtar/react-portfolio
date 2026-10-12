@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 11 Oct 2026 21:00:44 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 13:09:39 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Claude Code vs Codex CLI vs Gemini CLI: Terminal Agents 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Claude Code vs Codex CLI vs Gemini CLI 2026: Best AI Coding Agent for Terminal Compared The terminal is the new IDE. It reads your entire project structure, understands your coding patterns, and makes changes that are consistent with existing code. Gemini CLI can read and write files, run commands, search codebases, and perform multi-step coding tasks.</description>
+    </item>
     <item>
       <title>Learning to use local AI is exciting, overwhelming, and frustrating</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261011-learning-to-use-local-ai-is-exciting-overwhelming-and-frustr-ea95eacb.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Platform</category>
       <description>It was originally written in TypeScript on Node.js and the V8 JavaScript engine for what is now the GitHub Copilot cloud agent (CCA), and the runtime stayed on that stack as the runtime and its capabilities grew rapidly. The architecture of the CLI and its runtime also contributed to challenges here. And it meant forced out-of-process communication just to make function calls.</description>
-    </item>
-    <item>
-      <title>Enterprise AI Observability Platforms: Architecture, Key Capabilities, and Evaluation Guide</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260917-enterprise-ai-observability-platforms-architecture-key-capab-5d30505a.html</guid>
-      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Enterprise AI observability platforms provide distributed tracing, automated evaluation, and governance for non-deterministic LLM applications and agentic workflows. Platforms such as Maxim AI provide the necessary instrumentation, session replay, and automated scoring to ensure AI systems remain reliable, compliant, and cost-effective.</description>
     </item>
   </channel>
 </rss>

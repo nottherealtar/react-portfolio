@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Day 62: Secrets and Tags",
+      "link": "auto/20261012-day-62-secrets-and-tags-53409e0d.html",
+      "date": "2026-10-12",
+      "summary": "Kubernetes named the file inside my Secret after the file on disk, and Azure's tag commands disagree among themselves about what setting a tag means. The documentation does not settle this for Secrets in either direction",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Claude Code vs Codex CLI vs Gemini CLI: Terminal Agents 2026",
       "link": "auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html",
       "date": "2026-10-12",
@@ -87,14 +95,6 @@
       "summary": "Success now depends on turning operational knowledge into scalable intelligence that improves throughput, quality, resilience, safety, and sustainability. Physical AI helps organizations act, whether through autonomous o",
       "category": "Cloud Automation",
       "reading_minutes": 3
-    },
-    {
-      "title": "Co-dev case study: How Blackbird Interactive and Secret Mode helped Escape the Backrooms ride the Backrooms hype wave",
-      "link": "auto/20261006-co-dev-case-study-how-blackbird-interactive-and-secret-mode-2b1a4e86.html",
-      "date": "2026-10-06",
-      "summary": "A co-dev partnership helped Fancy's hit game Escape The Backrooms reach over 4 million players. But none of these projects have managed to eclipse the popularity of one game in particular: Escape the Backrooms .",
-      "category": "Game Development",
-      "reading_minutes": 4
     }
   ]
 }

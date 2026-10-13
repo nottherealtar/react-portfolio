@@ -12,6 +12,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "CI/CD Pipeline Observability Tools: How to Choose the Right Setup",
+    "date": "2026-10-13",
+    "category": "Developer Tools",
+    "summary": "This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by project, branch, pipeline stage, agent pool, environment, and failure type.",
+    "link": "auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/10/cicd-pipeline-observability-tools/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/10/what-are-the-top-3-challenges-when-working-with-cloud-infra.png"
+  },
+  {
     "title": "Day 62: Secrets and Tags",
     "date": "2026-10-12",
     "category": "Coding & Community",

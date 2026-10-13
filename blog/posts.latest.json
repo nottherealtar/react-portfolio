@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "CI/CD Pipeline Observability Tools: How to Choose the Right Setup",
+      "link": "auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html",
+      "date": "2026-10-13",
+      "summary": "This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Day 62: Secrets and Tags",
       "link": "auto/20261012-day-62-secrets-and-tags-53409e0d.html",
       "date": "2026-10-12",
@@ -87,14 +95,6 @@
       "summary": "Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "When Does an Ecommerce Application Need Custom Software?",
-      "link": "auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html",
-      "date": "2026-10-06",
-      "summary": "Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existi",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

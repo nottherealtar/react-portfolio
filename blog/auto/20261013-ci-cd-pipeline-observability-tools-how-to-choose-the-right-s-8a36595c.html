@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CI/CD Pipeline Observability Tools: How to Choose the Right Setup | TarsOnlineCafe</title>
+  <meta name="description" content="This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="CI/CD Pipeline Observability Tools: How to Choose the Right Setup">
+  <meta property="og:description" content="This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html">
+  <meta property="article:published_time" content="2026-10-13T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CI/CD Pipeline Observability Tools: How to Choose the Right Setup">
+  <meta name="twitter:description" content="This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To…">
+  <meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/10/what-are-the-top-3-challenges-when-working-with-cloud-infra.png">
+  <meta property="og:image:alt" content="CI/CD Pipeline Observability Tools: How to Choose the Right Setup">
+  <meta name="twitter:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/10/what-are-the-top-3-challenges-when-working-with-cloud-infra.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "CI/CD Pipeline Observability Tools: How to Choose the Right Setup", "description": "This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To…", "datePublished": "2026-10-13T12:00:00.000Z", "dateModified": "2026-10-13T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://blog.jetbrains.com/wp-content/uploads/2026/10/what-are-the-top-3-challenges-when-working-with-cloud-infra.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html"}, "isBasedOn": "https://blog.jetbrains.com/teamcity/2026/10/cicd-pipeline-observability-tools/", "wordCount": 1898}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-13</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>CI/CD Pipeline Observability Tools: How to Choose the Right Setup</h1>
+        <p class="lede">This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by project, branch, pipeline stage, agent pool, environment, and failure type.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>When a CI/CD pipeline fails, its dashboard can usually show you what went wrong. Pipeline observability tools should help you understand why, whether the cause is a flaky test, an overloaded build agent, or a problem elsewhere in the delivery process. This becomes harder as pipelines grow more complex.</p>
+        <p>A pipeline touches a lot of separate systems: version control, build agents, containers, test frameworks, artifact repositories, security scanners, and deployment tools. Each one generates its own data, and pulling all of it together during an investigation isn’t easy. The JetBrains Developer Ecosystem Survey 2026 shows how common these challenges are.</p>
+        <p>When we asked 20,416 respondents about their top three challenges when working with cloud infrastructure, 44% selected debugging and troubleshooting issues in cloud environments. Security and access control was selected by 36%, as was cost visibility and optimization. Observability was named by 16%, while 12% pointed to having too many separate tools, consoles, or dashboards.</p>
+        <p>It also provides a framework for choosing the right CI/CD observability tools for your team. CI/CD pipeline observability is the ability to understand the state and behavior of a delivery pipeline from the data it produces, including build results, metrics, logs, events, and traces. In practical terms, an observable pipeline should help you answer questions such as: Why are builds taking longer than they did last month?</p>
+        <p>Why does one agent pool fail more frequently than another? Which pipeline stage introduced a regression? Did a code change cause the failure, or did something in the build environment change?</p>
+        <p>Monitoring and observability are closely related, but they are not identical. Pipeline monitoring tracks known conditions. You define a metric or event, display it on a dashboard, and perhaps create an alert when it crosses a threshold.</p>
+        <p>Observability helps when the cause of a problem is not immediately clear. It gives you enough connected data to investigate unexpected failures without first adding new tracking and waiting for the issue to occur again. For example, monitoring can show that build duration has suddenly increased.</p>
+        <p>Observability helps you trace that increase to a particular pipeline, stage, build agent, commit, test, or infrastructure issue. Pipeline observability covers both the work performed by the pipeline and the platform running it. At the pipeline level, these metrics fall into two groups: In the first, we’ve got queue time, total duration, and stage duration, which tell you where developers are kept waiting.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/what-are-the-top-3-challenges-when-working-with-cloud-infra.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/teamcity-perfmon.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/tc-observability-graphs.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/which-tool-do-you-use-for-cicd-pipeline-ibservability.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/Screenshot-2026-10-09-at-10.45.42.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/10/image4.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>CI/CD pipeline observability is the ability to understand the state and behavior of a delivery pipeline from the data it produces, including build results, metrics, logs, events, and traces. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>What is CI/CD pipeline observability?</li>
+          <li>In the other group, there are success rates, retries, flaky tests, and cache performance, which tell you where the pipeline itself is becoming less reliable.</li>
+          <li>For example, TeamCity statistic charts connect build duration, queue time, success rates, tests, artifacts, and other statistics to the underlying build configuration.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/teamcity/2026/10/cicd-pipeline-observability-tools/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

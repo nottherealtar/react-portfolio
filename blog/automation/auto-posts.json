@@ -1,5 +1,17 @@
 [
   {
+    "title": "Python vs Go: A Practical Comparison for Developers",
+    "date": "2026-10-13",
+    "category": "Developer Tools",
+    "summary": "Two things are true about Python: It’s the most popular programming language in the world, and it’s the most common companion language for Go developers. But we also know a lot more about the developers who use these two languages – both from quantitative data from different surveys, as well as qualitative data from our interviews with professionals who switched from Python to Go.",
+    "link": "auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html",
+    "source_url": "https://blog.jetbrains.com/go/2026/10/13/python-vs-go/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Day 62: Secrets and Tags",
     "date": "2026-10-12",
     "category": "Coding & Community",

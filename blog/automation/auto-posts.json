@@ -1,5 +1,17 @@
 [
   {
+    "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
+    "date": "2026-10-14",
+    "category": "Coding & Community",
+    "summary": "That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher Desktop runs through QEMU or container isolation.",
+    "link": "auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html",
+    "source_url": "https://dev.to/mihailtd/do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-cachyos-setup-298a",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Python vs Go: A Practical Comparison for Developers",
     "date": "2026-10-13",
     "category": "Developer Tools",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
+      "link": "auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html",
+      "date": "2026-10-14",
+      "summary": "That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher De",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Python vs Go: A Practical Comparison for Developers",
       "link": "auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html",
       "date": "2026-10-13",
@@ -85,14 +93,6 @@
       "link": "auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html",
       "date": "2026-10-08",
       "summary": "These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every \"attack path\" against your own routes. I don't run WordPress anywhere, so nothing legitima",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The 20 most popular MCP servers, scanned: what's actually in their tool descriptions",
-      "link": "auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html",
-      "date": "2026-10-07",
-      "summary": "Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-13T21:50:13.937508+00:00",
+  "timestamp": "2026-10-14T10:09:45.658403+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 610,
-  "unseen_candidates": 598,
+  "unseen_candidates": 597,
   "blocked_domain_candidates": 3,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "CI/CD Pipeline Observability Tools: How to Choose the Right Setup",
-      "link": "auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html",
-      "score": 125.0409,
-      "source": "JetBrains Blog",
+      "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
+      "link": "auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html",
+      "score": 146.9468,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

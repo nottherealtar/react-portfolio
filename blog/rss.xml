@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 13 Oct 2026 21:53:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 10:12:06 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html</guid>
+      <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher Desktop runs through QEMU or container isolation.</description>
+    </item>
     <item>
       <title>Python vs Go: A Practical Comparison for Developers</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; PC</category>
       <description>Resonant’s reality-bending trip across a kaleidoscopic Manhattan is as rich in stark views, eerie atmosphere, and creative quests as Control ’s Oldest House ever was, driven along by strong character-first storytelling and Remedy’s best action in ages.</description>
-    </item>
-    <item>
-      <title>Control Resonant review</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260918-control-resonant-review-837d6761.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260918-control-resonant-review-837d6761.html</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Gaming &amp; Industry</category>
-      <description>Melee action in an open world being ripped apart by interdimensional forces. Resonant's handful of boss fights are more engaging threats to navigate (though the sheer heft of their health bars still feels like a slog).</description>
     </item>
   </channel>
 </rss>

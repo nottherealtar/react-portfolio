@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
+      "link": "auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html",
+      "date": "2026-10-14",
+      "summary": "Pro tip: Treat tests as production code. Component tests (sometimes called “service tests”) verify a small, cohesive piece of the system, often with a few dependencies mocked. The goal is to maximize fast, reliable tests",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
       "link": "auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html",
       "date": "2026-10-14",
@@ -86,14 +94,6 @@
       "date": "2026-10-08",
       "summary": "The second broadcast of the year from organizers Evil Empire, the Triple-I Initiative was a focused blast of curated trailers and game updates, all rolling out across an almost-hour-long livestream. New skins are also co",
       "category": "Gaming News",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Cloudflare free plan WAF rules I kept after 7 days of scanner logs",
-      "link": "auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html",
-      "date": "2026-10-08",
-      "summary": "These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every \"attack path\" against your own routes. I don't run WordPress anywhere, so nothing legitima",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

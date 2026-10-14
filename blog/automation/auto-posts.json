@@ -1,5 +1,17 @@
 [
   {
+    "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
+    "date": "2026-10-14",
+    "category": "Coding & Community",
+    "summary": "Pro tip: Treat tests as production code. Component tests (sometimes called “service tests”) verify a small, cohesive piece of the system, often with a few dependencies mocked. The goal is to maximize fast, reliable tests (unit/component) while keeping a thin, purposeful set of slower integration/E2E checks.",
+    "link": "auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html",
+    "source_url": "https://dev.to/ukasha_mahir_84eeb71db239/testing-like-a-pro-from-unit-nuggets-to-full-scale-integration-2l7e",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
     "date": "2026-10-14",
     "category": "Coding & Community",

@@ -1,5 +1,18 @@
 [
   {
+    "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
+    "date": "2026-10-15",
+    "category": "Coding & Community",
+    "summary": "I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back to the request. Gemma identifies the website, gallery, and contact form, then proposes questions, assumptions, and exclusions.",
+    "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
+    "source_url": "https://dev.to/kushaalk/scopekit-turn-a-messy-client-brief-into-a-quote-with-local-gemma-3fj0",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzcgndbfkdtzxnnh7fmnk.png"
+  },
+  {
     "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
     "date": "2026-10-15",
     "category": "Coding & Community",

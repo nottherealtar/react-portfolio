@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 15 Oct 2026 09:53:47 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 20:21:37 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back to the request. Gemma identifies the website, gallery, and contact form, then proposes questions, assumptions, and exclusions.</description>
+    </item>
     <item>
       <title>MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>It's been a busy week for prodigious game publisher Hard Shark Games: on September 15 it released an astonishing 29 games on Steam across a huge variety of genres. Using the popular Boxleiter Method (via impress.games ), which uses a game's public Steam review count to estimate sales, Supermarket Life Simulator—to use just one example—could have made as much as $885 as a high estimate, or $295 on the lower end.</description>
-    </item>
-    <item>
-      <title>Uber Burned Its Entire 2026 AI Budget by April. Is Your Turn Coming?</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260920-uber-burned-its-entire-2026-ai-budget-by-april-is-your-turn-506c4edb.html</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>By April 2026, the full year's AI budget had been consumed [1]. And yet enterprise AI bills keep climbing. Reasoning-optimized models went from negligible to over 50% of all enterprise tokens by late 2025 [6].</description>
     </item>
   </channel>
 </rss>

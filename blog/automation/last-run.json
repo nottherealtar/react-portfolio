@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-15T09:52:05.017377+00:00",
+  "timestamp": "2026-10-15T20:19:49.934839+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 611,
-  "unseen_candidates": 599,
+  "fetched_candidates": 612,
+  "unseen_candidates": 600,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
-      "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
-      "score": 143.9452,
+      "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
+      "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
+      "score": 137.9744,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

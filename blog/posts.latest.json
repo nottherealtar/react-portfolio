@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
+      "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
+      "date": "2026-10-15",
+      "summary": "I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back t",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
       "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
       "date": "2026-10-15",
@@ -85,14 +93,6 @@
       "link": "auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html",
       "date": "2026-10-10",
       "summary": "The Atomic Answer Rule states that every H2 section of a document must answer its query as an independent, self-contained micro-document, without relying on the text above or below it. This guide explains the information",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "What \"Confidential Computing\" Actually Means for Containers (and Who Needs It)",
-      "link": "auto/20261009-what-confidential-computing-actually-means-for-containers-an-1431f016.html",
-      "date": "2026-10-09",
-      "summary": "Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but thei",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

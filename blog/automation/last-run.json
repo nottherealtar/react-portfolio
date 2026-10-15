@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-14T20:40:49.939364+00:00",
+  "timestamp": "2026-10-15T09:52:05.017377+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 611,
-  "unseen_candidates": 598,
-  "blocked_domain_candidates": 3,
+  "unseen_candidates": 599,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
-      "link": "auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html",
-      "score": 141.9871,
+      "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
+      "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
+      "score": 143.9452,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

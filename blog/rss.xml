@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 14 Oct 2026 20:42:49 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 09:53:47 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html</guid>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Each integration introduces its own authentication requirements, data formats, error-handling logic, and security considerations. The Model Context Protocol (MCP) offers a standardized way for AI applications to discover and interact with supported tools and resources.</description>
+    </item>
     <item>
       <title>Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>By April 2026, the full year's AI budget had been consumed [1]. And yet enterprise AI bills keep climbing. Reasoning-optimized models went from negligible to over 50% of all enterprise tokens by late 2025 [6].</description>
-    </item>
-    <item>
-      <title>Even mid-sprint to a secret flight, the Navy’s tech chief has a pitch for investors</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260919-even-mid-sprint-to-a-secret-flight-the-navy-s-tech-chief-has-5bcedb98.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260919-even-mid-sprint-to-a-secret-flight-the-navy-s-tech-chief-has-5bcedb98.html</guid>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Tech &amp; Startups</category>
-      <description>Justin Fanelli, the Department of Navy’s chief technology officer, has spent the last three and a half years trying to make the U.S. When the Navy first published its longer-term technology priorities, investors told him it changed how they thought about the Navy’s buying plans, which is part of why he’s doing it again — sharing a fresh list of what the Navy wants to buy in the next several years, this time vetted…</description>
     </item>
   </channel>
 </rss>

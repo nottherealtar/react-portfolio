@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
+      "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
+      "date": "2026-10-15",
+      "summary": "Each integration introduces its own authentication requirements, data formats, error-handling logic, and security considerations. The Model Context Protocol (MCP) offers a standardized way for AI applications to discover",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
       "link": "auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html",
       "date": "2026-10-14",
@@ -86,14 +94,6 @@
       "date": "2026-10-09",
       "summary": "Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but thei",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Triple-I Initiative October 2026: Everything Announced At The Showcase",
-      "link": "auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html",
-      "date": "2026-10-08",
-      "summary": "The second broadcast of the year from organizers Evil Empire, the Triple-I Initiative was a focused blast of curated trailers and game updates, all rolling out across an almost-hour-long livestream. New skins are also co",
-      "category": "Gaming News",
       "reading_minutes": 3
     }
   ]

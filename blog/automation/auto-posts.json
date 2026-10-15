@@ -1,5 +1,17 @@
 [
   {
+    "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
+    "date": "2026-10-15",
+    "category": "Coding & Community",
+    "summary": "Each integration introduces its own authentication requirements, data formats, error-handling logic, and security considerations. The Model Context Protocol (MCP) offers a standardized way for AI applications to discover and interact with supported tools and resources.",
+    "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
+    "source_url": "https://dev.to/lily7858757/mcp-in-production-a-practical-guide-to-connecting-ai-agents-with-real-world-tools-4f9",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
     "date": "2026-10-14",
     "category": "Coding & Community",

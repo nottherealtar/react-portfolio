@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "11 games and announcements that got us excited in the latest Galaxies Showcase",
+      "link": "auto/20261016-11-games-and-announcements-that-got-us-excited-in-the-latest-dc55187d.html",
+      "date": "2026-10-16",
+      "summary": "Yes, autumn is here, meaning we're teetering on the cavernous hole of near-nothingness as the entire games industry gives GTA 6 the widest berth imaginable. And the latest edition of the Galaxies Showcase has chucked a f",
+      "category": "Gaming News",
+      "reading_minutes": 4
+    },
+    {
       "title": "Why your platform team shouldn't build an AI context layer (even though they probably could)",
       "link": "auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html",
       "date": "2026-10-15",
@@ -87,14 +95,6 @@
       "summary": "That's why more developers now build multi-agent systems . Instead of one agent doing everything, you split the work across several smaller agents, each with a single, clear job. State and Context Handoff Between Agents ",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Treetrail: Why I wrote a JSONPath library for Java",
-      "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
-      "date": "2026-10-10",
-      "summary": "For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matc",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Why your platform team shouldn't build an AI context layer (even though they probably could)",
+    "date": "2026-10-15",
+    "category": "Coding & Careers",
+    "summary": "Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the right spaces instead of pooling into one undifferentiated room that everyone has to wade through.",
+    "link": "auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html",
+    "source_url": "https://stackoverflow.blog/2026/10/15/your-team-shouldnt-build-an-ai-context-layer/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/ed8a11d851762476264bcbb64e7297cde7a34a98-2400x686.png?auto=format"
+  },
+  {
     "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
     "date": "2026-10-15",
     "category": "Coding & Community",

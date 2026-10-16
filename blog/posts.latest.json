@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Why your platform team shouldn't build an AI context layer (even though they probably could)",
+      "link": "auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html",
+      "date": "2026-10-15",
+      "summary": "Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the ",
+      "category": "Coding & Careers",
+      "reading_minutes": 3
+    },
+    {
       "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
       "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
       "date": "2026-10-15",
@@ -85,14 +93,6 @@
       "link": "auto/20261010-treetrail-why-i-wrote-a-jsonpath-library-for-java-22cdde5a.html",
       "date": "2026-10-10",
       "summary": "For Java – the platform that probably runs more JSONPath expressions than any other – a mature answer was missing. It has served the Java ecosystem extremely well since 2011, and Spring uses it for its jsonPath(...) matc",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The Atomic Answer Rule: Engineering Content for RAG Chunking and AI Search",
-      "link": "auto/20261010-the-atomic-answer-rule-engineering-content-for-rag-chunking-7b3176e4.html",
-      "date": "2026-10-10",
-      "summary": "The Atomic Answer Rule states that every H2 section of a document must answer its query as an independent, self-contained micro-document, without relying on the text above or below it. This guide explains the information",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

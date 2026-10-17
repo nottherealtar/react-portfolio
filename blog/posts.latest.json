@@ -17,6 +17,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+      "link": "auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html",
+      "date": "2026-10-15",
+      "summary": "To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access r",
+      "category": "Developer Platform",
+      "reading_minutes": 3
+    },
+    {
       "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
       "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
       "date": "2026-10-15",
@@ -87,14 +95,6 @@
       "summary": "A big part of Apple’s pitch for its new Mac desktops is how good they are for local AI, and there’s an entire line of new RTX Spark Windows machines landing imminently with up to 128GB of RAM aimed at using agentic AI. A",
       "category": "AI & Industry",
       "reading_minutes": 4
-    },
-    {
-      "title": "Building Multi-Agent AI Systems: A Developer's Primer",
-      "link": "auto/20261011-building-multi-agent-ai-systems-a-developer-s-primer-2a21652b.html",
-      "date": "2026-10-11",
-      "summary": "That's why more developers now build multi-agent systems . Instead of one agent doing everything, you split the work across several smaller agents, each with a single, clear job. State and Context Handoff Between Agents ",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

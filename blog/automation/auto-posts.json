@@ -26,6 +26,19 @@
     "hero_image": "https://cdn.stackoverflow.co/images/jo7n4k8s/production/ed8a11d851762476264bcbb64e7297cde7a34a98-2400x686.png?auto=format"
   },
   {
+    "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+    "date": "2026-10-15",
+    "category": "Developer Platform",
+    "summary": "To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access reviews. Otherwise, look at recent issue and commit authors and cc the ones who are on the access review team, i.e., the Hubbers actually working in that repo.",
+    "link": "auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html",
+    "source_url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?resize=528%2C221"
+  },
+  {
     "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
     "date": "2026-10-15",
     "category": "Coding & Community",

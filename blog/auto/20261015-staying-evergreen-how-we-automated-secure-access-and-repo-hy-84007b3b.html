@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Staying Evergreen: How we automated secure access and repo hygiene in a shared org | TarsOnlineCafe</title>
+  <meta name="description" content="To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Staying Evergreen: How we automated secure access and repo hygiene in a shared org">
+  <meta property="og:description" content="To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html">
+  <meta property="article:published_time" content="2026-10-15T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Staying Evergreen: How we automated secure access and repo hygiene in a shared org">
+  <meta name="twitter:description" content="To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates…">
+  <meta property="og:image" content="https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?resize=528%2C221">
+  <meta property="og:image:alt" content="Staying Evergreen: How we automated secure access and repo hygiene in a shared org">
+  <meta name="twitter:image" content="https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?resize=528%2C221">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org", "description": "To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates…", "datePublished": "2026-10-15T12:00:00.000Z", "dateModified": "2026-10-15T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?resize=528%2C221", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html"}, "isBasedOn": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/", "wordCount": 1449}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-15</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>Staying Evergreen: How we automated secure access and repo hygiene in a shared org</h1>
+        <p class="lede">To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access reviews. Otherwise, look at recent issue and commit authors and cc the ones who are on the access review team, i.e., the Hubbers actually working in that repo.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>You need to confirm who still needs access, change permissions as projects evolve, and archive repositories once they’ve served their purpose. As a project grows, that manual housekeeping becomes harder to keep up with and easier to defer. We faced this problem in a shared organization where GitHub employees (“Hubbers”) collaborate with customers and partners on product trials and professional services engagements.</p>
+        <p>Our answer was Evergreen , a GitHub App built with native GitHub features. The workflows below exhibit a pattern you can adapt for your own organization. Repos with no human activity past a threshold get flagged, warned, and (if still untouched) archived.</p>
+        <p>Two design principles shaped everything: Fail secure. If nobody responds to an access review, we don’t leave access in place and hope for the best. Evergreen will never delete a repository or its contents.</p>
+        <p>Archived repos are recoverable, and every access change is written into the repo’s tracking issue, so reverting a mistake is as easy as a copy-paste to Copilot. Under the hood, Evergreen is a small Go webhook server running in a container. But the interesting part is the choreography .</p>
+        <p>Every moving piece is a stock GitHub feature: a GitHub App, scheduled actions, webhooks, issues, custom properties, and plain files in a repo. A dedicated controller repo acts as Evergreen’s clock and its memory. Four scheduled GitHub Actions workflows fire repository_dispatch events on a quarterly cadence, and the app wakes up and does the work: Reviews open two weeks before their cleanup runs, and there’s a hard grace period baked in so a stray manual run can never fast‑forward the guillotine.</p>
+        <p>Each workflow also supports workflow_dispatch , so we can trigger any step by hand as needed. Evergreen tracks every repo’s status as a JSON file (one per repository) committed to the controller repo under state/repos/&lt;repo_id&gt;.json . The snapshot of who had access, when the review opened, the deadline, who decided, and what happened all lives there.</p>
+        <p>Here’s a completed review where a Hubber kept Alice’s access and let Bob’s lapse: The best part: because state is just files in git, the commit history is the audit trail. Want to know why someone lost access last spring? There’s no separate database or bespoke audit pipeline to track.</p>
+        <p>When an access review kicks off, every repo gets a checklist issue: The interaction model is delightfully simple: check the boxes for who stays, then close the issue. When the issue closes, Evergreen listens for the issues.closed webhook event, reads the checkboxes, retains the checked collaborators, and revokes the rest, then posts a receipt comment listing exactly what it kept and what it removed. Only the right humans can pull the lever Closing an access review issue is a privileged action, so Evergreen guards it.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?resize=528%2C221" alt="Screenshot of an access review issue titled “[ACTION REQUIRED] Access Review – 2026-04-13.” Outside collaborators Alice Example, with admin access, and Bob Example, with write access, have unchecked boxes. Instructions s" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/10/674986199-ee305d10-3419-4270-a829-41ed3da29fae.png?w=528" alt="Screenshot of an access review issue titled “[ACTION REQUIRED] Access Review – 2026-04-13.” Outside collaborators Alice Example, with admin access, and Bob Example, with write access, have unchecked boxes. Instructions s" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/10/674985578-53474bf2-cd36-4345-96ef-24c79268a858.png?resize=2000%2C417" alt="Quarterly outside-collaborator access review flowchart. A dispatch snapshots outside collaborators and opens a checklist issue in each repository. If a team member closes the issue, checked collaborators retain access an" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/10/674985578-53474bf2-cd36-4345-96ef-24c79268a858.png?w=2000" alt="Quarterly outside-collaborator access review flowchart. A dispatch snapshots outside collaborators and opens a checklist issue in each repository. If a team member closes the issue, checked collaborators retain access an" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Evergreen does its talking through issues inside each repository. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Working with outside collaborators can add more work for a repository owner.</li>
+          <li>Repos with no human activity past a threshold get flagged, warned, and (if still untouched) archived.</li>
+          <li>When the issue closes, Evergreen listens for the issues.closed webhook event, reads the checkboxes, retains the checked collaborators, and revokes the rest, then posts a…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

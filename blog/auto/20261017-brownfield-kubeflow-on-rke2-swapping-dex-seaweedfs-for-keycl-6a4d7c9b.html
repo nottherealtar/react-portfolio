@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW | TarsOnlineCafe</title>
+  <meta name="description" content="The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW">
+  <meta property="og:description" content="The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html">
+  <meta property="article:published_time" content="2026-10-17T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW">
+  <meta name="twitter:description" content="The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ndqqwgu3xhta6nxbpzr.png">
+  <meta property="og:image:alt" content="Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ndqqwgu3xhta6nxbpzr.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Brownfield Kubeflow on RKE2: Swapping Dex & SeaweedFS for Keycloak & Ceph RGW", "description": "The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object…", "datePublished": "2026-10-17T12:00:00.000Z", "dateModified": "2026-10-17T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ndqqwgu3xhta6nxbpzr.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html"}, "isBasedOn": "https://dev.to/ezejioforog/brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycloak-ceph-rgw-4bdl", "wordCount": 2001}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-17</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW</h1>
+        <p class="lede">The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object storage, MySQL for state, and a mesh-wide trust model that doesn&#x27;t match any real cluster I know of. Kubeflow is a nine-component platform, and almost everything people compare it to replaces exactly one of those components.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>My homelab already had better versions of most of those. This is the **brownfield * deploy on an HA RKE2 cluster: every reference component I ripped out (and the one I haven&#x27;t yet), what I wired in its place, and the auth chain that ate most of the debugging time.* The Kubeflow Central Dashboard, logged in through Keycloak SSO (not Dex), with the whole platform iframed into one tab. When the platform assumes it&#x27;s the only thing in the cluster Kubeflow was designed as if it would have the cluster to itself, and it still shows.</p>
+        <p>Point the reference installer at an empty cluster and it works well: nine controllers, four web UIs, two workflow engines, an inference layer and a per-user namespace system, all iframed into one dashboard and running in twenty minutes. Point it at a cluster that already has an identity provider, an object store, a database fleet, a service mesh and an SSO layer guarding ten other apps, and you&#x27;re in for a fight. Greenfield, you accept whatever the platform brings.</p>
+        <p>Mine already had Keycloak issuing every realm, Rook-Ceph serving S3 to half the stack, CloudNativePG holding everyone&#x27;s relational state, and oauth2-proxy in front of ten apps. I could run two of every backend, or rewrite Kubeflow&#x27;s integration layer to talk to what was already in the building. It cost roughly six weekends and a kustomize overlay per component, and the platform now fits the cluster it runs on.</p>
+        <p>Here&#x27;s the full list: every reference component upstream Kubeflow ships, what I put in its place, and why the stock one didn&#x27;t fit. The rest of this piece walks through those swaps, the &quot;huge CRD&quot; trap that breaks client-side apply, the per-Profile governance Kyverno generates, and the Auth Chain Saga, where RBAC: access denied turned up at five different layers over several days before login finally worked. I pinned to v1.11.0 of the kubeflow/manifests repo, the most recent immutable release tag when I started.</p>
+        <p>Don&#x27;t be fooled by releases/release-1.11/ on master: it&#x27;s a release-process tracker (a README about dates and the team). The real installer entry point is example/kustomization.yaml , and that differs between master HEAD (a moving target) and v1.11.0 (immutable). I wanted a build I could reproduce, so I took the tag.</p>
+        <p>Most of that time went on the auth chain (the Auth Chain Saga and the notebook routing pivot below). The heavy KFP overlay and the Model Registry integration were the runners-up. The honest head-to-head: Kubeflow vs SageMaker/Vertex, Flyte, Metaflow, Ray, and MLflow People ask me &quot;should I use Kubeflow or MLflow?&quot; a lot, and the question doesn&#x27;t quite work.</p>
+        <p>It&#x27;s like asking whether to buy a kitchen or a knife. To compare fairly you have to sort the field by the layer each tool occupies: Whole self-hosted platform (notebooks + pipelines + training + HPO + serving + registry + multi-tenant portal): Kubeflow , plus the open all-in-ones MLRun and Determined AI . Managed cloud platform (all of the above, on someone else&#x27;s hardware): AWS SageMaker, GCP Vertex AI, Azure ML .</p>
+        <p>Pipeline / orchestration only : Flyte, Metaflow, Airflow, Prefect, Dagster . Experiment tracking + registry only : MLflow, Weights &amp; Biases, ClearML . Serving only : KServe (which is part of Kubeflow), Seldon, BentoML, Triton .</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ndqqwgu3xhta6nxbpzr.png" alt="kt" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fh55emmv6hfyeumquaf1a.png" alt="kf" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fyc7gdx7vcn0yr257i84n.png" alt="kf" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fuvcoaub66pu49kq1sld8.png" alt="kf" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Frqne9qcbxt8im3hctg3p.png" alt="kf" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffc401c4l2xkp85r6fpe5.png" alt="kf" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>A component, not a platform (I run MLflow inside this Kubeflow). It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>This is the **brownfield * deploy on an HA RKE2 cluster: every reference component I ripped out (and the one I haven&#x27;t yet), what I wired in its place, and the auth chain that…</li>
+          <li>The honest head-to-head: Kubeflow vs SageMaker/Vertex, Flyte, Metaflow, Ray, and MLflow People ask me &quot;should I use Kubeflow or MLflow?&quot; a lot, and the question doesn&#x27;t quite…</li>
+          <li>Distributed compute only : Ray (KubeRay), which runs alongside Kubeflow rather than replacing it.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/ezejioforog/brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycloak-ceph-rgw-4bdl" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

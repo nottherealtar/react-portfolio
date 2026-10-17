@@ -1,5 +1,18 @@
 [
   {
+    "title": "Brownfield Kubeflow on RKE2: Swapping Dex & SeaweedFS for Keycloak & Ceph RGW",
+    "date": "2026-10-17",
+    "category": "Coding & Community",
+    "summary": "The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object storage, MySQL for state, and a mesh-wide trust model that doesn't match any real cluster I know of. Kubeflow is a nine-component platform, and almost everything people compare it to replaces exactly one of those components.",
+    "link": "auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html",
+    "source_url": "https://dev.to/ezejioforog/brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycloak-ceph-rgw-4bdl",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1ndqqwgu3xhta6nxbpzr.png"
+  },
+  {
     "title": "11 games and announcements that got us excited in the latest Galaxies Showcase",
     "date": "2026-10-16",
     "category": "Gaming News",

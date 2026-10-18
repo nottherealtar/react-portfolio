@@ -1,5 +1,17 @@
 [
   {
+    "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
+    "date": "2026-10-18",
+    "category": "Coding & Community",
+    "summary": "On the morning of October 17, a subset of OpenCode Console users opened an email with the subject line \"Action Required: Potential provider key breach.\" The key sentence inside: \"Third party provider keys (for example OpenAI, Anthropic) saved in your workspace may have been exposed.",
+    "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
+    "source_url": "https://dev.to/jamilxt/your-coding-agent-is-a-key-vault-you-never-audited-the-opencode-breach-proves-it-4bhi",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Shopkeepers won't retype their udhaar khata. KhataLens reads it with Gemma 4, locally",
     "date": "2026-10-18",
     "category": "Coding & Community",

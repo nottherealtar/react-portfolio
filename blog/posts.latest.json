@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
+      "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
+      "date": "2026-10-18",
+      "summary": "On the morning of October 17, a subset of OpenCode Console users opened an email with the subject line \"Action Required: Potential provider key breach.\" The key sentence inside: \"Third party provider keys (for example Op",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Shopkeepers won't retype their udhaar khata. KhataLens reads it with Gemma 4, locally",
       "link": "auto/20261018-shopkeepers-won-t-retype-their-udhaar-khata-khatalens-reads-bbae9447.html",
       "date": "2026-10-18",
@@ -86,14 +94,6 @@
       "date": "2026-10-13",
       "summary": "This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Day 62: Secrets and Tags",
-      "link": "auto/20261012-day-62-secrets-and-tags-53409e0d.html",
-      "date": "2026-10-12",
-      "summary": "Kubernetes named the file inside my Secret after the file on disk, and Azure's tag commands disagree among themselves about what setting a tag means. The documentation does not settle this for Secrets in either direction",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

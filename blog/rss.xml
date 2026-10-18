@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 17 Oct 2026 19:23:29 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 09:35:12 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Shopkeepers won't retype their udhaar khata. KhataLens reads it with Gemma 4, locally</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261018-shopkeepers-won-t-retype-their-udhaar-khata-khatalens-reads-bbae9447.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261018-shopkeepers-won-t-retype-their-udhaar-khata-khatalens-reads-bbae9447.html</guid>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Free ledger apps like Khatabook and OkCredit exist, but they ask the shopkeeper to type every entry into a phone, on top of the notebook he already keeps. He'd be paying to not change his habit: he keeps writing in the notebook, and once a week he photographs the new pages and gets every balance plus a ready-to-send reminder for each customer.</description>
+    </item>
     <item>
       <title>Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>If you've connected an LLM to tool calling, APIs, or database queries recently, you know the feeling: agents are terrifyingly unpredictable. Here is how the AG-Men defend your runtime step by step: The Cleaner (Local PII Sanitizer): Before a single byte leaves server memory, The Cleaner scrubs emails and credit cards on the fly.</description>
-    </item>
-    <item>
-      <title>Apache Iceberg Governance: Access Control, Policies, and Audit for Open Lakehouses</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260923-apache-iceberg-governance-access-control-policies-and-audit-0c0c0063.html</guid>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>This guide covers the governance tools, patterns, and architectural layers that production Iceberg lakehouses need — from catalog-level RBAC and credential vending to the new Read Restrictions spec, policy engines, compliance patterns, and the operational governance layer that most teams overlook.</description>
     </item>
   </channel>
 </rss>

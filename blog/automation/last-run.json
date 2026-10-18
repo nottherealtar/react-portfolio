@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-17T19:21:55.430679+00:00",
+  "timestamp": "2026-10-18T09:33:27.784356+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Brownfield Kubeflow on RKE2: Swapping Dex & SeaweedFS for Keycloak & Ceph RGW",
-      "link": "auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html",
-      "score": 145.9752,
+      "title": "Shopkeepers won't retype their udhaar khata. KhataLens reads it with Gemma 4, locally",
+      "link": "auto/20261018-shopkeepers-won-t-retype-their-udhaar-khata-khatalens-reads-bbae9447.html",
+      "score": 123.9506,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

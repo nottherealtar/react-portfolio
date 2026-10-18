@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Shopkeepers won't retype their udhaar khata. KhataLens reads it with Gemma 4, locally",
+      "link": "auto/20261018-shopkeepers-won-t-retype-their-udhaar-khata-khatalens-reads-bbae9447.html",
+      "date": "2026-10-18",
+      "summary": "Free ledger apps like Khatabook and OkCredit exist, but they ask the shopkeeper to type every entry into a phone, on top of the notebook he already keeps. He'd be paying to not change his habit: he keeps writing in the n",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Brownfield Kubeflow on RKE2: Swapping Dex & SeaweedFS for Keycloak & Ceph RGW",
       "link": "auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html",
       "date": "2026-10-17",
@@ -85,14 +93,6 @@
       "link": "auto/20261012-day-62-secrets-and-tags-53409e0d.html",
       "date": "2026-10-12",
       "summary": "Kubernetes named the file inside my Secret after the file on disk, and Azure's tag commands disagree among themselves about what setting a tag means. The documentation does not settle this for Secrets in either direction",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Claude Code vs Codex CLI vs Gemini CLI: Terminal Agents 2026",
-      "link": "auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html",
-      "date": "2026-10-12",
-      "summary": "Claude Code vs Codex CLI vs Gemini CLI 2026: Best AI Coding Agent for Terminal Compared The terminal is the new IDE. It reads your entire project structure, understands your coding patterns, and makes changes that are co",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

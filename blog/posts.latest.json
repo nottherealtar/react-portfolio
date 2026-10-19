@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove",
+      "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
+      "date": "2026-10-19",
+      "summary": "So we moved the explanation into the package and then checked whether an agent that has never seen the framework source can work from it. Each project got a fresh agent (Sonnet) with a prompt that contained the environme",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
       "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
       "date": "2026-10-18",
@@ -86,14 +94,6 @@
       "date": "2026-10-14",
       "summary": "That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher De",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Python vs Go: A Practical Comparison for Developers",
-      "link": "auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html",
-      "date": "2026-10-13",
-      "summary": "Two things are true about Python: It’s the most popular programming language in the world, and it’s the most common companion language for Go developers. But we also know a lot more about the developers who use these two",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

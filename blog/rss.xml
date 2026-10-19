@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 19 Oct 2026 10:45:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 21:34:06 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as development progressed, we began exploring the underlying architecture required to make local coding agents more effective.</description>
+    </item>
+    <item>
+      <title>A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>So we moved the explanation into the package and then checked whether an agent that has never seen the framework source can work from it. Each project got a fresh agent (Sonnet) with a prompt that contained the environment, the task text and the rules: work only in the project, read only the project and its node_modules , no skills, no memory, no web search.</description>
     </item>
     <item>
       <title>Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It</title>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Adobe's own architecture docs describe the Pro production environment as having "three virtual machines (VMs) behind an Elastic Load Balancer," and each project "replicated on three separate AWS or Azure Availability Zones." Once you've seen that, the Black Friday question changes shape completely. They explicitly contrast this with "a traditional active-passive master or master-slave setup.</description>
-    </item>
-    <item>
-      <title>Ship agents faster with expanded model choice, voice agents, and continuous optimization</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260924-ship-agents-faster-with-expanded-model-choice-voice-agents-a-a291ddaa.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260924-ship-agents-faster-with-expanded-model-choice-voice-agents-a-a291ddaa.html</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business.</description>
     </item>
   </channel>
 </rss>

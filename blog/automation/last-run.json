@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-19T10:43:35.188559+00:00",
+  "timestamp": "2026-10-19T21:31:23.432437+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 612,
-  "unseen_candidates": 602,
+  "unseen_candidates": 603,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
-      "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
-      "score": 138.9647,
+      "title": "A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove",
+      "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
+      "score": 119.898,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove",
+    "date": "2026-10-19",
+    "category": "Coding & Community",
+    "summary": "So we moved the explanation into the package and then checked whether an agent that has never seen the framework source can work from it. Each project got a fresh agent (Sonnet) with a prompt that contained the environment, the task text and the rules: work only in the project, read only the project and its node_modules , no skills, no memory, no web search.",
+    "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
+    "source_url": "https://dev.to/marc_kumiko/a-fresh-coding-agent-passed-all-four-tasks-against-our-framework-docs-heres-what-that-result-4l58",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
     "date": "2026-10-18",
     "category": "Coding & Community",

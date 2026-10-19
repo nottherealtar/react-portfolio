@@ -1,5 +1,17 @@
 [
   {
+    "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
+    "date": "2026-10-19",
+    "category": "Coding & Community",
+    "summary": "When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as development progressed, we began exploring the underlying architecture required to make local coding agents more effective.",
+    "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
+    "source_url": "https://dev.to/bandojay/building-locdex-exploring-local-ai-models-and-the-architecture-of-coding-agents-4fi2",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
     "date": "2026-10-18",
     "category": "Coding & Community",

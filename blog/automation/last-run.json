@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-18T19:25:18.125877+00:00",
+  "timestamp": "2026-10-19T10:43:35.188559+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
-      "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
-      "score": 131.9816,
+      "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
+      "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
+      "score": 138.9647,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

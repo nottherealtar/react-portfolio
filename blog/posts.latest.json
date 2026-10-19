@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
+      "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
+      "date": "2026-10-19",
+      "summary": "When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
       "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
       "date": "2026-10-18",
@@ -85,14 +93,6 @@
       "link": "auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html",
       "date": "2026-10-13",
       "summary": "Two things are true about Python: It’s the most popular programming language in the world, and it’s the most common companion language for Go developers. But we also know a lot more about the developers who use these two",
-      "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "CI/CD Pipeline Observability Tools: How to Choose the Right Setup",
-      "link": "auto/20261013-ci-cd-pipeline-observability-tools-how-to-choose-the-right-s-8a36595c.html",
-      "date": "2026-10-13",
-      "summary": "This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by",
       "category": "Developer Tools",
       "reading_minutes": 3
     }

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 18 Oct 2026 19:26:45 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2026 10:45:24 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html</guid>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as development progressed, we began exploring the underlying architecture required to make local coding agents more effective.</description>
+    </item>
     <item>
       <title>Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>Teams can adopt better models as they emerge while preserving their investments in the enterprise systems, knowledge, tools, and controls that make agents useful to their business.</description>
-    </item>
-    <item>
-      <title>AI-powered fuzzing with the GitHub Security Lab Taskflow Agent</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260924-ai-powered-fuzzing-with-the-github-security-lab-taskflow-age-5d810621.html</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Developer Platform</category>
-      <description>Then, the agent, takes care of all the preliminary steps on its own: Identifying the most relevant functions in the code Creating fuzz targets for those functions If you just want a quick smoke test before committing to a long campaign, point it at something small: A word of warning before you run it: this taskflow runs afl-fuzz , clang , and arbitrary build commands chosen by the LLM directly on the host, with no…</description>
     </item>
   </channel>
 </rss>

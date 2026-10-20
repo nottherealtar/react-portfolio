@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "RepoSage: Local-First GitHub Audits with Open-Weight Gemma 4 & Anti-Hallucination Gates",
+      "link": "auto/20261020-reposage-local-first-github-audits-with-open-weight-gemma-4-d6fc5c0a.html",
+      "date": "2026-10-20",
+      "summary": "It connects natively to your machine's authenticated GitHub CLI ( gh ) session with zero token pasting, computes an instant deterministic 0–100 Health Score across 6 dimensions before calling any AI, cross-verifies every",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
       "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
       "date": "2026-10-20",
@@ -87,14 +95,6 @@
       "summary": "Each integration introduces its own authentication requirements, data formats, error-handling logic, and security considerations. The Model Context Protocol (MCP) offers a standardized way for AI applications to discover",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Testing Like a Pro: From Unit Nuggets to Full‑Scale Integration",
-      "link": "auto/20261014-testing-like-a-pro-from-unit-nuggets-to-full-scale-integrati-ba922c0a.html",
-      "date": "2026-10-14",
-      "summary": "Pro tip: Treat tests as production code. Component tests (sometimes called “service tests”) verify a small, cohesive piece of the system, often with a few dependencies mocked. The goal is to maximize fast, reliable tests",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

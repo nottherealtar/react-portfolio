@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-20T10:00:48.228717+00:00",
+  "timestamp": "2026-10-20T20:34:07.835478+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 612,
-  "unseen_candidates": 604,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 605,
+  "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
-      "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
-      "score": 144.987,
+      "title": "RepoSage: Local-First GitHub Audits with Open-Weight Gemma 4 & Anti-Hallucination Gates",
+      "link": "auto/20261020-reposage-local-first-github-audits-with-open-weight-gemma-4-d6fc5c0a.html",
+      "score": 138.9609,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

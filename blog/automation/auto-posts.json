@@ -1,5 +1,18 @@
 [
   {
+    "title": "RepoSage: Local-First GitHub Audits with Open-Weight Gemma 4 & Anti-Hallucination Gates",
+    "date": "2026-10-20",
+    "category": "Coding & Community",
+    "summary": "It connects natively to your machine's authenticated GitHub CLI ( gh ) session with zero token pasting, computes an instant deterministic 0–100 Health Score across 6 dimensions before calling any AI, cross-verifies every AI claim against your actual Git tree to quarantine hallucinations, and converts verified findings into real GitHub Issues or turnkey AI fix prompts in a single click.",
+    "link": "auto/20261020-reposage-local-first-github-audits-with-open-weight-gemma-4-d6fc5c0a.html",
+    "source_url": "https://dev.to/ahmmikun/reposage-local-first-github-audits-with-open-weight-gemma-4-anti-hallucination-gates-25fk",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://assets.dev.to/assets/github-logo-5a155e1f9a670af7944dd5e12375bc76ed542ea80224905ecaf878b9157cdefc.svg"
+  },
+  {
     "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
     "date": "2026-10-20",
     "category": "Coding & Community",

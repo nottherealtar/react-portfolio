@@ -1,5 +1,17 @@
 [
   {
+    "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
+    "date": "2026-10-20",
+    "category": "Coding & Community",
+    "summary": "For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a universal verdict Google reports 77.9% on DeepSWE v1.1, describing Argon as state of the art on this long-horizon software engineering evaluation.",
+    "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
+    "source_url": "https://dev.to/sushant_babbar/gemini-4-argon-vs-gpt-61-sol-which-is-better-for-coding-bfm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
     "date": "2026-10-19",
     "category": "Coding & Community",

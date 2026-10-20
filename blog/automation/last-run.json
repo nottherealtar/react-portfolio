@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-19T21:31:23.432437+00:00",
+  "timestamp": "2026-10-20T10:00:48.228717+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 612,
-  "unseen_candidates": 603,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove",
-      "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
-      "score": 119.898,
+      "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
+      "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
+      "score": 144.987,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

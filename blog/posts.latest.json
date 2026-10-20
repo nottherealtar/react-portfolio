@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?",
+      "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
+      "date": "2026-10-20",
+      "summary": "For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a univer",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
       "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
       "date": "2026-10-19",
@@ -87,14 +95,6 @@
       "summary": "Pro tip: Treat tests as production code. Component tests (sometimes called “service tests”) verify a small, cohesive piece of the system, often with a few dependencies mocked. The goal is to maximize fast, reliable tests",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Do You Need Rancher Desktop (or Docker Desktop) on Linux? My CachyOS Setup",
-      "link": "auto/20261014-do-you-need-rancher-desktop-or-docker-desktop-on-linux-my-ca-b20264b2.html",
-      "date": "2026-10-14",
-      "summary": "That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher De",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

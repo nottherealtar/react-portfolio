@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 19 Oct 2026 21:34:06 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 10:02:12 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html</guid>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a universal verdict Google reports 77.9% on DeepSWE v1.1, describing Argon as state of the art on this long-horizon software engineering evaluation.</description>
+    </item>
     <item>
       <title>Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>Some of Wings of Theve's best moments were when pursuers boxed me into a dense pocket of cloud cover, forcing me to blindly hammer the throttle and commit to a mach-three, nose-down drag race.</description>
-    </item>
-    <item>
-      <title>You Don't Need Adobe Commerce Cloud to Survive Black Friday</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260924-you-don-t-need-adobe-commerce-cloud-to-survive-black-friday-75c9cc92.html</guid>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Adobe's own architecture docs describe the Pro production environment as having "three virtual machines (VMs) behind an Elastic Load Balancer," and each project "replicated on three separate AWS or Azure Availability Zones." Once you've seen that, the Black Friday question changes shape completely. They explicitly contrast this with "a traditional active-passive master or master-slave setup.</description>
     </item>
   </channel>
 </rss>

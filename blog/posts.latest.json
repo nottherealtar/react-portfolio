@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Worried AI Will Replace You? Don't Make This Mistake.",
+      "link": "auto/20261021-worried-ai-will-replace-you-don-t-make-this-mistake-798b0da4.html",
+      "date": "2026-10-21",
+      "summary": "AI is changing software work, and some tasks will become cheaper or require fewer people. Every attractive field has competition, automation, difficult entry requirements, and its own uncertain future. The biggest mistak",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "RepoSage: Local-First GitHub Audits with Open-Weight Gemma 4 & Anti-Hallucination Gates",
       "link": "auto/20261020-reposage-local-first-github-audits-with-open-weight-gemma-4-d6fc5c0a.html",
       "date": "2026-10-20",
@@ -87,14 +95,6 @@
       "summary": "I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back t",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "MCP in Production: A Practical Guide to Connecting AI Agents With Real-World Tools",
-      "link": "auto/20261015-mcp-in-production-a-practical-guide-to-connecting-ai-agents-722ffce2.html",
-      "date": "2026-10-15",
-      "summary": "Each integration introduces its own authentication requirements, data formats, error-handling logic, and security considerations. The Model Context Protocol (MCP) offers a standardized way for AI applications to discover",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

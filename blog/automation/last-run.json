@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-21T10:05:40.508322+00:00",
+  "timestamp": "2026-10-21T20:36:57.099582+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 613,
-  "unseen_candidates": 605,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 606,
+  "blocked_domain_candidates": 0,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Worried AI Will Replace You? Don't Make This Mistake.",
-      "link": "auto/20261021-worried-ai-will-replace-you-don-t-make-this-mistake-798b0da4.html",
-      "score": 149.9519,
+      "title": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?",
+      "link": "auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html",
+      "score": 136.9748,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

@@ -9,6 +9,14 @@
       "reading_minutes": 2
     },
     {
+      "title": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?",
+      "link": "auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html",
+      "date": "2026-10-21",
+      "summary": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)? A software engineer may analyze the university's requirements, design the system, create the database, write the c",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "RepoSage: Local-First GitHub Audits with Open-Weight Gemma 4 & Anti-Hallucination Gates",
       "link": "auto/20261020-reposage-local-first-github-audits-with-open-weight-gemma-4-d6fc5c0a.html",
       "date": "2026-10-20",
@@ -87,14 +95,6 @@
       "summary": "To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access r",
       "category": "Developer Platform",
       "reading_minutes": 3
-    },
-    {
-      "title": "ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma",
-      "link": "auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html",
-      "date": "2026-10-15",
-      "summary": "I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back t",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 22 Oct 2026 10:10:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 20:36:06 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -23,6 +23,14 @@
       <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>AI is changing software work, and some tasks will become cheaper or require fewer people. Every attractive field has competition, automation, difficult entry requirements, and its own uncertain future. The biggest mistake is not staying in software development.</description>
+    </item>
+    <item>
+      <title>Survey Says: You'll swap the model, but everything you build around it is staying put</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html</guid>
+      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>Fifty-three percent of respondents named "integrations to internal systems or MCP servers" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these leaders agree that frontier labs and hyperscalers make it hard to move between vendors.</description>
     </item>
     <item>
       <title>Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?</title>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Agent Technical Article The app calls Hindsight Retain and stores the new deal information.</description>
-    </item>
-    <item>
-      <title>William Pugh, co-designer of The Stanley Parable, has over 1,600 hours in Dota 2: 'It's not a game made of love. It's a game fuelled by hate and a desire to conquer'</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260927-william-pugh-co-designer-of-the-stanley-parable-has-over-1-6-26ecd7c0.html</guid>
-      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Gaming &amp; Industry</category>
-      <description>Come back every weekend to read a new interview, digging into the important questions, like "How tidy is your desktop?" and "What game will you never uninstall?" William Pugh grew up on a diet of shareware Mac titles like 1993's Scruffy versus the Invaders from Mars , but his earliest PC gaming memory is engaging in annelid antics in Worms 4: Mayhem—his first encounter with online multiplayer: "I remember playing…</description>
     </item>
   </channel>
 </rss>

@@ -24,6 +24,18 @@
     "reading_minutes": 2
   },
   {
+    "title": "Survey Says: You'll swap the model, but everything you build around it is staying put",
+    "date": "2026-10-21",
+    "category": "Coding & Careers",
+    "summary": "Fifty-three percent of respondents named \"integrations to internal systems or MCP servers\" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these leaders agree that frontier labs and hyperscalers make it hard to move between vendors.",
+    "link": "auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html",
+    "source_url": "https://stackoverflow.blog/2026/10/21/survey-says-you-ll-swap-the-model-but-everything-you-build-around-it-is-staying-put/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?",
     "date": "2026-10-21",
     "category": "Coding & Community",

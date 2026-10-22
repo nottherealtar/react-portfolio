@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-22T10:08:26.233131+00:00",
+  "timestamp": "2026-10-22T20:33:32.809510+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Why Do You Still Need a Builder When You Have All the Tools?",
-      "link": "auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html",
-      "score": 134.9722,
-      "source": "DEV Community",
+      "title": "Survey Says: You'll swap the model, but everything you build around it is staying put",
+      "link": "auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html",
+      "score": 128.2688,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

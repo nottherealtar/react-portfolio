@@ -17,6 +17,14 @@
       "reading_minutes": 2
     },
     {
+      "title": "Survey Says: You'll swap the model, but everything you build around it is staying put",
+      "link": "auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html",
+      "date": "2026-10-21",
+      "summary": "Fifty-three percent of respondents named \"integrations to internal systems or MCP servers\" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these lead",
+      "category": "Coding & Careers",
+      "reading_minutes": 3
+    },
+    {
       "title": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?",
       "link": "auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html",
       "date": "2026-10-21",
@@ -87,14 +95,6 @@
       "summary": "Yes, autumn is here, meaning we're teetering on the cavernous hole of near-nothingness as the entire games industry gives GTA 6 the widest berth imaginable. And the latest edition of the Galaxies Showcase has chucked a f",
       "category": "Gaming News",
       "reading_minutes": 4
-    },
-    {
-      "title": "Why your platform team shouldn't build an AI context layer (even though they probably could)",
-      "link": "auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html",
-      "date": "2026-10-15",
-      "summary": "Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the ",
-      "category": "Coding & Careers",
-      "reading_minutes": 3
     }
   ]
 }

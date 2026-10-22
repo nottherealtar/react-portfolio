@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 21 Oct 2026 20:38:24 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 10:10:14 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Why Do You Still Need a Builder When You Have All the Tools?</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html</guid>
+      <pubDate>Thu, 22 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>But buying the software is not the same thing as making your systems work together in real life. But because the integration between the sales software and the warehouse only updated once every night at midnight, nobody realized those units had already been sold online two days earlier.</description>
+    </item>
     <item>
       <title>Worried AI Will Replace You? Don't Make This Mistake.</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261021-worried-ai-will-replace-you-don-t-make-this-mistake-798b0da4.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>Come back every weekend to read a new interview, digging into the important questions, like "How tidy is your desktop?" and "What game will you never uninstall?" William Pugh grew up on a diet of shareware Mac titles like 1993's Scruffy versus the Invaders from Mars , but his earliest PC gaming memory is engaging in annelid antics in Worms 4: Mayhem—his first encounter with online multiplayer: "I remember playing…</description>
-    </item>
-    <item>
-      <title>What is SAST? A developer's guide to static application security testing</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260927-what-is-sast-a-developer-s-guide-to-static-application-secur-63757e9f.html</guid>
-      <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Static Application Security Testing (SAST) is the practice of analyzing source code — or bytecode, or compiled binaries — for security vulnerabilities without executing the program. Taint analysis is how serious SQL injection, XSS, and command injection detections work.</description>
     </item>
   </channel>
 </rss>

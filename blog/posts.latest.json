@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Why Do You Still Need a Builder When You Have All the Tools?",
+      "link": "auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html",
+      "date": "2026-10-22",
+      "summary": "But buying the software is not the same thing as making your systems work together in real life. But because the integration between the sales software and the warehouse only updated once every night at midnight, nobody ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Worried AI Will Replace You? Don't Make This Mistake.",
       "link": "auto/20261021-worried-ai-will-replace-you-don-t-make-this-mistake-798b0da4.html",
       "date": "2026-10-21",
@@ -86,14 +94,6 @@
       "date": "2026-10-15",
       "summary": "Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the ",
       "category": "Coding & Careers",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
-      "link": "auto/20261015-staying-evergreen-how-we-automated-secure-access-and-repo-hy-84007b3b.html",
-      "date": "2026-10-15",
-      "summary": "To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access r",
-      "category": "Developer Platform",
       "reading_minutes": 3
     }
   ]

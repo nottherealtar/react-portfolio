@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "JetBrains GameDev Day 2026: Watch the Recordings",
+    "date": "2026-10-23",
+    "category": "Developer Tools",
+    "summary": "Pick your engine or role: Unreal Engine: Death by a Thousand Ticks and Agentic Development in Unreal Engine with JetBrains Rider Unity: Fix Your CI Without Leaving the IDE and How We Automated Figma-to-Unity UI Integration With AI Agents Engine and backend programmers: Evolving a Live Game Engine and Debugging Across Two Runtimes and Two Different Languages Build, pipelines, and infrastructure: Splitting the…",
+    "link": "auto/20261023-jetbrains-gamedev-day-2026-watch-the-recordings-c0fdefc7.html",
+    "source_url": "https://blog.jetbrains.com/dotnet/2026/10/23/jetbrains-gamedev-day-2026-watch-the-recordings/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Why Do You Still Need a Builder When You Have All the Tools?",
     "date": "2026-10-22",
     "category": "Coding & Community",

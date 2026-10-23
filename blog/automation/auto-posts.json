@@ -1,5 +1,17 @@
 [
   {
+    "title": "brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System",
+    "date": "2026-10-23",
+    "category": "Coding & Community",
+    "summary": "Let me describe what the project claims to be, then what the translation actually changes for a Chinese-speaking developer. Brigade is a self-hosted personal AI agent system. Everything past it — isolated agents with separate workspaces and credentials, persistent memory, a skills system, a cron scheduler, sub-agent fan-out, org hierarchy — the README gestures at but the excerpt I'm working from doesn't detail.",
+    "link": "auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html",
+    "source_url": "https://dev.to/sun_young_517829fc09d0c05/brigade-a-chinese-translation-that-lowers-the-entry-cost-for-a-self-hosted-agent-system-52ac",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Why Do You Still Need a Builder When You Have All the Tools?",
     "date": "2026-10-22",
     "category": "Coding & Community",

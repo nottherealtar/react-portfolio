@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 22 Oct 2026 20:36:06 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 10:03:10 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html</guid>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Let me describe what the project claims to be, then what the translation actually changes for a Chinese-speaking developer. Brigade is a self-hosted personal AI agent system. Everything past it — isolated agents with separate workspaces and credentials, persistent memory, a skills system, a cron scheduler, sub-agent fan-out, org hierarchy — the README gestures at but the excerpt I'm working from doesn't detail.</description>
+    </item>
     <item>
       <title>Why Do You Still Need a Builder When You Have All the Tools?</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>For an AI application, a model version is only part of the answer. MLOps then becomes the workflow for testing that release, observing it under real traffic, and replacing it safely. Each reference should resolve to retained, inspectable configuration or artifacts.</description>
-    </item>
-    <item>
-      <title>I built a sales agent that still remembers the deal after I close the tab</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260928-i-built-a-sales-agent-that-still-remembers-the-deal-after-i-8e899084.html</guid>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Over time it can recall customer and stakeholder details, objections, competitors, pricing discussions, deal status, and previous interaction context. Persistent memory for sales conversations Page 1 Deal Intelligence Agent Technical Article The app calls Hindsight Retain and stores the new deal information.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System",
+      "link": "auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html",
+      "date": "2026-10-23",
+      "summary": "Let me describe what the project claims to be, then what the translation actually changes for a Chinese-speaking developer. Brigade is a self-hosted personal AI agent system. Everything past it — isolated agents with sep",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Why Do You Still Need a Builder When You Have All the Tools?",
       "link": "auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html",
       "date": "2026-10-22",
@@ -87,14 +95,6 @@
       "summary": "The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object storage, MySQL for state, and a mesh-wide trust model that doesn't matc",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "11 games and announcements that got us excited in the latest Galaxies Showcase",
-      "link": "auto/20261016-11-games-and-announcements-that-got-us-excited-in-the-latest-dc55187d.html",
-      "date": "2026-10-16",
-      "summary": "Yes, autumn is here, meaning we're teetering on the cavernous hole of near-nothingness as the entire games industry gives GTA 6 the widest berth imaginable. And the latest edition of the Galaxies Showcase has chucked a f",
-      "category": "Gaming News",
-      "reading_minutes": 4
     }
   ]
 }

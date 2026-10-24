@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "link": "auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html",
+      "date": "2026-10-24",
+      "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT in",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "ReviewRadar: the request, a possible reply, and a calmer review session",
       "link": "auto/20261024-reviewradar-the-request-a-possible-reply-and-a-calmer-review-35200e9e.html",
       "date": "2026-10-24",
@@ -85,14 +93,6 @@
       "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
       "date": "2026-10-19",
       "summary": "So we moved the explanation into the package and then checked whether an agent that has never seen the framework source can work from it. Each project got a fresh agent (Sonnet) with a prompt that contained the environme",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Your Coding Agent Is a Key Vault You Never Audited. The OpenCode Breach Proves It",
-      "link": "auto/20261018-your-coding-agent-is-a-key-vault-you-never-audited-the-openc-6d53d4d4.html",
-      "date": "2026-10-18",
-      "summary": "On the morning of October 17, a subset of OpenCode Console users opened an email with the subject line \"Action Required: Potential provider key breach.\" The key sentence inside: \"Third party provider keys (for example Op",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

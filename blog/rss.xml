@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 24 Oct 2026 09:32:03 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 19:30:22 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html</guid>
+      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT into a broader “ super app .</description>
+    </item>
     <item>
       <title>ReviewRadar: the request, a possible reply, and a calmer review session</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261024-reviewradar-the-request-a-possible-reply-and-a-calmer-review-35200e9e.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly address several modern development pressures, including: Static analyzers, which catch bugs and security flaws before code merges.</description>
-    </item>
-    <item>
-      <title>FabCon and SQLCon 2026 in Barcelona: Building the data foundation for Microsoft Copilot and agents</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260929-fabcon-and-sqlcon-2026-in-barcelona-building-the-data-founda-6cf86665.html</guid>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>Today, we’re announcing new innovations across Microsoft Fabric and our database portfolio designed to help organizations power their Frontier Transformation, including deep integrations with the new Microsoft Copilot, agentic app development in Microsoft Power BI , end-to-end observability in Fabric, the database hub, and more.</description>
     </item>
   </channel>
 </rss>

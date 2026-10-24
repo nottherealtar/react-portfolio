@@ -1,5 +1,17 @@
 [
   {
+    "title": "ReviewRadar: the request, a possible reply, and a calmer review session",
+    "date": "2026-10-24",
+    "category": "Coding & Community",
+    "summary": "For example, an Eventyay review requested screenshots or a video . The replay has a persistent capture date and incomplete-coverage warning: it deliberately includes only six selected source bodies, with links to the complete discussions. Read the reviewer’s exact words beside the author’s later report.",
+    "link": "auto/20261024-reviewradar-the-request-a-possible-reply-and-a-calmer-review-35200e9e.html",
+    "source_url": "https://dev.to/yashanand69/reviewradar-the-request-a-possible-reply-and-a-calmer-review-session-486",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System",
     "date": "2026-10-23",
     "category": "Coding & Community",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "SlothDesk AI: The Anti-Burnout Desktop Operating Suite That Rewards Laziness (Powered by Google Gemma 2)",
+      "link": "auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html",
+      "date": "2026-10-25",
+      "summary": "I built SlothDesk AI , a 100% local-first, anti-burnout desktop operating suite powered by Google Gemma 2 open weights . Gemma 2 drafts polite, guilt-free responses that convert 45-minute synchronous meetings into 2-bull",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
       "link": "auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html",
       "date": "2026-10-24",
@@ -85,14 +93,6 @@
       "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
       "date": "2026-10-19",
       "summary": "When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "A fresh coding agent passed all four tasks against our framework docs. Here's what that result doesn't prove",
-      "link": "auto/20261019-a-fresh-coding-agent-passed-all-four-tasks-against-our-frame-1b55182c.html",
-      "date": "2026-10-19",
-      "summary": "So we moved the explanation into the package and then checked whether an agent that has never seen the framework source can work from it. Each project got a fresh agent (Sonnet) with a prompt that contained the environme",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

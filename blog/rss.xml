@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 24 Oct 2026 19:30:22 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 09:49:04 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>SlothDesk AI: The Anti-Burnout Desktop Operating Suite That Rewards Laziness (Powered by Google Gemma 2)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html</guid>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>I built SlothDesk AI , a 100% local-first, anti-burnout desktop operating suite powered by Google Gemma 2 open weights . Gemma 2 drafts polite, guilt-free responses that convert 45-minute synchronous meetings into 2-bullet async updates, backed by an explanatory Sloth Principle .</description>
+    </item>
     <item>
       <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Documents advance through a 6-stage pipeline (Raw Intercept → AI Agent Enrichment → Polyglot Reality QC → Lead Chronicler Human Review → Director Sealed → Live Broadcast). Vibe-coding an app of this scope quickly reveals the dividing line between shallow prompting and real software architecture: Where the AI excelled: Complex State Modeling: Prompting the state transition rules for workflow.</description>
-    </item>
-    <item>
-      <title>Software Quality Assurance Tools and Tips for Developers</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260929-software-quality-assurance-tools-and-tips-for-developers-8e892851.html</guid>
-      <pubDate>Tue, 29 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Developer Tools</category>
-      <description>Software quality assurance (SQA) is an ongoing process of checks that ensures operational requirements and standards are met throughout the SDLC. SQA alleviating modern development pressures Various SQA tools directly address several modern development pressures, including: Static analyzers, which catch bugs and security flaws before code merges.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-25T09:47:21.453193+00:00",
+  "timestamp": "2026-10-25T19:35:16.101021+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "SlothDesk AI: The Anti-Burnout Desktop Operating Suite That Rewards Laziness (Powered by Google Gemma 2)",
-      "link": "auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html",
-      "score": 127.9769,
-      "source": "DEV Community",
+      "title": "GameMaker's GMRT runtime will soon be free for all developers",
+      "link": "auto/20261023-gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-developer-c44e1f4f.html",
+      "score": 115.7903,
+      "source": "Game Developer",
       "text_engine": "embedding-mmr"
     }
   ],

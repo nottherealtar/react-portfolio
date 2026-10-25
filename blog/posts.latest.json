@@ -33,6 +33,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "GameMaker's GMRT runtime will soon be free for all developers",
+      "link": "auto/20261023-gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-developer-c44e1f4f.html",
+      "date": "2026-10-23",
+      "summary": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027. In a statement announcing the news, a company spokesperson said this change is part of the company's strategy to make indie game developme",
+      "category": "Game Development",
+      "reading_minutes": 3
+    },
+    {
       "title": "brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System",
       "link": "auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html",
       "date": "2026-10-23",
@@ -85,14 +93,6 @@
       "link": "auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html",
       "date": "2026-10-20",
       "summary": "For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a univer",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents",
-      "link": "auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html",
-      "date": "2026-10-19",
-      "summary": "When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

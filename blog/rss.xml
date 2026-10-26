@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 26 Oct 2026 11:04:41 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 21:39:33 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>AI on Your Terms: How We See AI in YouTrack</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>With YouTrack, you choose whether and how to use AI, while we also make it easier to work with the tools you already trust. Coming soon: Ask YouTrack, an agentic AI chat that understands your work. Delegating task management to coding agents is becoming a common practice, and for such teams, YouTrack evolves from automating individual processes to serving as a shared “agentic database” for agent and human-led tasks.</description>
+    </item>
     <item>
       <title>10 Common SaaS Development Mistakes and How to Avoid Them</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261026-10-common-saas-development-mistakes-and-how-to-avoid-them-9ff607cf.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>In this article we’ll explore the most significant trends shaping the AI‑agent landscape this year, dive into real‑world use‑cases that are already delivering measurable value, and look ahead to the opportunities and challenges that will define the next wave of intelligent automation. AI agents now see a screenshot, hear a voice command, and read a PDF—all without a separate preprocessing pipeline.</description>
-    </item>
-    <item>
-      <title>A look back before we look forward: A Developer Survey retrospective</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261001-a-look-back-before-we-look-forward-a-developer-survey-retros-507fa344.html</guid>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Careers</category>
-      <description>This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community. We started asking about AI agents in the 2025 Developer Survey , with 31% of respondents indicating they were using them and most using ChatGPT (82%) and GitHub Copilot (68%).</description>
     </item>
   </channel>
 </rss>

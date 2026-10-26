@@ -1,5 +1,18 @@
 [
   {
+    "title": "AI on Your Terms: How We See AI in YouTrack",
+    "date": "2026-10-26",
+    "category": "Developer Tools",
+    "summary": "With YouTrack, you choose whether and how to use AI, while we also make it easier to work with the tools you already trust. Coming soon: Ask YouTrack, an agentic AI chat that understands your work. Delegating task management to coding agents is becoming a common practice, and for such teams, YouTrack evolves from automating individual processes to serving as a shared “agentic database” for agent and human-led tasks.",
+    "link": "auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html",
+    "source_url": "https://blog.jetbrains.com/youtrack/2026/10/ai-on-your-terms-how-we-see-ai-in-youtrack/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/10/YT-social-BlogFeatured-1280x720-1.png"
+  },
+  {
     "title": "10 Common SaaS Development Mistakes and How to Avoid Them",
     "date": "2026-10-26",
     "category": "Coding & Community",

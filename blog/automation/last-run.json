@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-25T19:35:16.101021+00:00",
+  "timestamp": "2026-10-26T11:02:58.487520+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 613,
-  "unseen_candidates": 602,
+  "unseen_candidates": 601,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "GameMaker's GMRT runtime will soon be free for all developers",
-      "link": "auto/20261023-gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-developer-c44e1f4f.html",
-      "score": 115.7903,
-      "source": "Game Developer",
+      "title": "10 Common SaaS Development Mistakes and How to Avoid Them",
+      "link": "auto/20261026-10-common-saas-development-mistakes-and-how-to-avoid-them-9ff607cf.html",
+      "score": 141.9832,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

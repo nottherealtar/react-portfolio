@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 25 Oct 2026 19:36:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 11:04:41 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>10 Common SaaS Development Mistakes and How to Avoid Them</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261026-10-common-saas-development-mistakes-and-how-to-avoid-them-9ff607cf.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261026-10-common-saas-development-mistakes-and-how-to-avoid-them-9ff607cf.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Here are ten SaaS development mistakes to avoid and practical ways to build a more reliable, scalable, and sustainable product. Example: A startup planning to build a comprehensive project management platform might discover that its target customers primarily struggle with client approvals and document tracking.</description>
+    </item>
     <item>
       <title>SlothDesk AI: The Anti-Burnout Desktop Operating Suite That Rewards Laziness (Powered by Google Gemma 2)</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>This analysis compares the 2024 and 2025 Developer Survey data across three connected stories: the evolution of AI, humans at work, and demographics and community. We started asking about AI agents in the 2025 Developer Survey , with 31% of respondents indicating they were using them and most using ChatGPT (82%) and GitHub Copilot (68%).</description>
-    </item>
-    <item>
-      <title>The Biggest New Game Releases Of October 2026</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20260930-the-biggest-new-game-releases-of-october-2026-eb20cf94.html</guid>
-      <pubDate>Wed, 30 Sep 2026 00:00:00 +0000</pubDate>
-      <category>Gaming News</category>
-      <description>Between original releases, sequels, and hot indie games, the next couple of weeks are loaded with options across a wide variety of genres and ideas. The game also looks visually stunning thanks to its Unreal Engine 5 visuals, and you can expect to dive into over 200 dungeons after you're done spending a few hours in the highly detailed character creator.</description>
     </item>
   </channel>
 </rss>

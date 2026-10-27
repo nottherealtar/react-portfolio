@@ -1,5 +1,18 @@
 [
   {
+    "title": "Scale reservoir uncertainty analysis with agile reservoir modeling",
+    "date": "2026-10-26",
+    "category": "Cloud Automation",
+    "summary": "Agile reservoir modeling is the ensemble workflow engine. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager for Energy.",
+    "link": "auto/20261026-scale-reservoir-uncertainty-analysis-with-agile-reservoir-mo-fb8756d3.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/scale-reservoir-uncertainty-analysis-with-agile-reservoir-modeling/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/10/Screenshot-2026-10-22-170942.webp"
+  },
+  {
     "title": "AI on Your Terms: How We See AI in YouTrack",
     "date": "2026-10-26",
     "category": "Developer Tools",

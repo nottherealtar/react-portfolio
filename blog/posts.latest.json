@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Scale reservoir uncertainty analysis with agile reservoir modeling",
+      "link": "auto/20261026-scale-reservoir-uncertainty-analysis-with-agile-reservoir-mo-fb8756d3.html",
+      "date": "2026-10-26",
+      "summary": "Agile reservoir modeling is the ensemble workflow engine. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager ",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "AI on Your Terms: How We See AI in YouTrack",
       "link": "auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html",
       "date": "2026-10-26",
@@ -87,14 +95,6 @@
       "summary": "Fifty-three percent of respondents named \"integrations to internal systems or MCP servers\" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these lead",
       "category": "Coding & Careers",
       "reading_minutes": 3
-    },
-    {
-      "title": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?",
-      "link": "auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html",
-      "date": "2026-10-21",
-      "summary": "Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)? A software engineer may analyze the university's requirements, design the system, create the database, write the c",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

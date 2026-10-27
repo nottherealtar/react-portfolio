@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
+      "link": "auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html",
+      "date": "2026-10-27",
+      "summary": "Patel designed Ndoc to be more than just another AI tool layered onto an existing workflow. His desire to open-source this project was partly why he left Meta and decided to go it alone. “Companies are basically attachin",
+      "category": "Tech & Startups",
+      "reading_minutes": 4
+    },
+    {
       "title": "Scale reservoir uncertainty analysis with agile reservoir modeling",
       "link": "auto/20261026-scale-reservoir-uncertainty-analysis-with-agile-reservoir-mo-fb8756d3.html",
       "date": "2026-10-26",
@@ -87,14 +95,6 @@
       "summary": "AI is changing software work, and some tasks will become cheaper or require fewer people. Every attractive field has competition, automation, difficult entry requirements, and its own uncertain future. The biggest mistak",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Survey Says: You'll swap the model, but everything you build around it is staying put",
-      "link": "auto/20261021-survey-says-you-ll-swap-the-model-but-everything-you-build-a-c48553de.html",
-      "date": "2026-10-21",
-      "summary": "Fifty-three percent of respondents named \"integrations to internal systems or MCP servers\" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these lead",
-      "category": "Coding & Careers",
-      "reading_minutes": 3
     }
   ]
 }

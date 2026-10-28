@@ -1,5 +1,17 @@
 [
   {
+    "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
+    "date": "2026-10-28",
+    "category": "Coding & Community",
+    "summary": "Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. GitLab: two review features, two add-on paths GitLab runs one of two code review features depending on your add-on and group settings.",
+    "link": "auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html",
+    "source_url": "https://dev.to/emilreiter/cutting-pull-request-review-time-with-ai-gitlab-azure-repos-bitbucket-5b0b",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
     "date": "2026-10-27",
     "category": "Tech & Startups",

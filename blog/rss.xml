@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 27 Oct 2026 21:19:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 11:20:51 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. GitLab: two review features, two add-on paths GitLab runs one of two code review features depending on your add-on and group settings.</description>
+    </item>
     <item>
       <title>Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>I built SafePlate to solve this for her: an open-source AI culinary agent that deterministically audits recipes against the medical SIGHI (Swiss Interest Group Histamine Intolerance) scale, executes certified hypoallergenic substitutions, and tracks its entire execution tree with Sentry Agent Tracing . Seeing the exact reason why each ingredient was replaced gives me the confidence to actually cook again.</description>
-    </item>
-    <item>
-      <title>Your multi-agent system doesn’t have a memory problem — it has a shared-context problem — Shared Context Layer</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261002-your-multi-agent-system-doesn-t-have-a-memory-problem-it-has-79b5cdf5.html</guid>
-      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>My agents didn't have a memory problem. They had a shared-context problem . I'd built a system where each agent accumulated its own context.</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket | TarsOnlineCafe</title>
+  <meta name="description" content="Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket">
+  <meta property="og:description" content="Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html">
+  <meta property="article:published_time" content="2026-10-28T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket">
+  <meta name="twitter:description" content="Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket", "description": "Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer…", "datePublished": "2026-10-28T12:00:00.000Z", "dateModified": "2026-10-28T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html"}, "isBasedOn": "https://dev.to/emilreiter/cutting-pull-request-review-time-with-ai-gitlab-azure-repos-bitbucket-5b0b", "wordCount": 2050}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-10-28</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket</h1>
+        <p class="lede">Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. GitLab: two review features, two add-on paths GitLab runs one of two code review features depending on your add-on and group settings.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>It is about six configuration decisions, and each of the three forges on this beat implements them differently. On GitLab both code review features run on GitLab.com, Self-Managed and Dedicated, but they are gated by different add-ons. On Azure Repos Copilot code review runs on Services only, in limited preview, and requires Azure Pipelines.</p>
+        <p>When the review starts, which files it reads, whether it runs on a draft, whether a finding actually blocks the merge, whether a new push triggers a new review, and how much effort each review is allowed to spend. Below is what each forge documents for those six, and where the defaults work against you. The six levers that set review latency An AI reviewer adds a step to a workflow that already has a human bottleneck, so the useful question is whether it removes more waiting than it adds.</p>
+        <p>That depends on these: Trigger : on every push, on PR creation, or only when someone asks. Scope : which files get reviewed and which are skipped, including how large diffs are handled. Draft behavior : whether a review runs, or a gate silently disappears, before the PR is marked ready.</p>
+        <p>Blocking : whether a finding stops the merge or is only a comment. Re-review : whether new commits get a fresh review and whether the bot remembers what it already said. Effort and cost : how much the reviewer is allowed to think, and who pays for it.</p>
+        <p>Those six are also where most &quot;we turned on AI review and nothing got faster&quot; reports come from. A review that runs but does not block anything is a comment feed. A gate that disappears on drafts is not a gate.</p>
+        <p>If that user holds a Duo Enterprise seat, GitLab runs the non-agentic feature by default, because it does not consume GitLab Credits. Both features can run in the same project, which is worth knowing before you assume everyone on the team gets the same reviewer. The self-managed detail that decides whether any of this is usable: Code Review Flow runs as a CI/CD job and needs a runner with the gitlab--duo tag and an executor that supports Docker images, or GitLab hosted runners enabled for the project.</p>
+        <p>On an air-gapped instance with no such runner, the flow has nowhere to execute. The non-agentic feature does not have that requirement, but it does depend on the AI Gateway request timeout, and reviews that do not finish in that window surface as a generic error. For triggering, automatic reviews are a project setting since 18.0.</p>
+        <p>Group and instance level automatic reviews arrived in 18.4 behind the cascading_auto_duo_code_review_settings flag, which was removed in 18.7. Code Review Flow also has a Start a new review on push option, and its follow-up reviews use earlier Duo threads and replies to judge the new changes. A user&#x27;s request for changes blocks a merge on Premium and Ultimate, and a bot can bypass it.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>On GitLab both code review features run on GitLab.com, Self-Managed and Dedicated, but they are gated by different add-ons. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Code Review Flow also has a Start a new review on push option, and its follow-up reviews use earlier Duo threads and replies to judge the new changes.</li>
+          <li>If you want an AI reviewer to hold a merge, the reliable path is a required external status check with Status checks must succeed turned on, which is a separate setting from…</li>
+          <li>For teams on self-managed GitLab with their own rules, that combination is the one worth testing: a required status check for the gate, plus review instructions scoped to the…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/emilreiter/cutting-pull-request-review-time-with-ai-gitlab-azure-repos-bitbucket-5b0b" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

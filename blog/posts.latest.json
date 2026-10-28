@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
+      "link": "auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html",
+      "date": "2026-10-28",
+      "summary": "Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. G",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
       "link": "auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html",
       "date": "2026-10-27",
@@ -87,14 +95,6 @@
       "summary": "But buying the software is not the same thing as making your systems work together in real life. But because the integration between the sales software and the warehouse only updated once every night at midnight, nobody ",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Worried AI Will Replace You? Don't Make This Mistake.",
-      "link": "auto/20261021-worried-ai-will-replace-you-don-t-make-this-mistake-798b0da4.html",
-      "date": "2026-10-21",
-      "summary": "AI is changing software work, and some tasks will become cheaper or require fewer people. Every attractive field has competition, automation, difficult entry requirements, and its own uncertain future. The biggest mistak",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

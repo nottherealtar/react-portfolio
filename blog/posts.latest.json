@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Reconstructing Silent Customer-Support Imports with Structured Error API Capture",
+      "link": "auto/20261028-reconstructing-silent-customer-support-imports-with-structur-0e981c75.html",
+      "date": "2026-10-28",
+      "summary": "Short answer: Use Node.js to capture the exception at the scheduled-import boundary, post its message, stack, environment, and context to /v1/errors/capture , and preserve a stable run identifier. That gives the next eng",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
       "link": "auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html",
       "date": "2026-10-28",
@@ -85,14 +93,6 @@
       "link": "auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html",
       "date": "2026-10-23",
       "summary": "Let me describe what the project claims to be, then what the translation actually changes for a Chinese-speaking developer. Brigade is a self-hosted personal AI agent system. Everything past it — isolated agents with sep",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Why Do You Still Need a Builder When You Have All the Tools?",
-      "link": "auto/20261022-why-do-you-still-need-a-builder-when-you-have-all-the-tools-145cb776.html",
-      "date": "2026-10-22",
-      "summary": "But buying the software is not the same thing as making your systems work together in real life. But because the integration between the sales software and the warehouse only updated once every night at midnight, nobody ",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

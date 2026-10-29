@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-29T11:30:07.199093+00:00",
+  "timestamp": "2026-10-29T21:47:27.134925+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 605,
-  "blocked_domain_candidates": 1,
+  "unseen_candidates": 603,
+  "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Delivering controlled and concentrated context",
-      "link": "auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html",
-      "score": 134.1185,
-      "source": "Stack Overflow Blog",
+      "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
+      "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
+      "score": 128.4852,
+      "source": "JetBrains Blog",
       "text_engine": "embedding-mmr"
     }
   ],

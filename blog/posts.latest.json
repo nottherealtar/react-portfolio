@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
+      "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
+      "date": "2026-10-29",
+      "summary": "“CLion brings SEGGER’s J-Link, Ozone, and SystemView workflows closer to the development environment while giving agents access to real debugger context. CLion’s new agentic capabilities also show how AI can go beyond co",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Reconstructing Silent Customer-Support Imports with Structured Error API Capture",
       "link": "auto/20261028-reconstructing-silent-customer-support-imports-with-structur-0e981c75.html",
       "date": "2026-10-28",
@@ -87,14 +95,6 @@
       "summary": "Pick your engine or role: Unreal Engine: Death by a Thousand Ticks and Agentic Development in Unreal Engine with JetBrains Rider Unity: Fix Your CI Without Leaving the IDE and How We Automated Figma-to-Unity UI Integrati",
       "category": "Developer Tools",
       "reading_minutes": 4
-    },
-    {
-      "title": "GameMaker's GMRT runtime will soon be free for all developers",
-      "link": "auto/20261023-gamemaker-s-gmrt-runtime-will-soon-be-free-for-all-developer-c44e1f4f.html",
-      "date": "2026-10-23",
-      "summary": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027. In a statement announcing the news, a company spokesperson said this change is part of the company's strategy to make indie game developme",
-      "category": "Game Development",
-      "reading_minutes": 3
     }
   ]
 }

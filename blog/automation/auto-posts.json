@@ -1,5 +1,17 @@
 [
   {
+    "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
+    "date": "2026-10-29",
+    "category": "Developer Tools",
+    "summary": "“CLion brings SEGGER’s J-Link, Ozone, and SystemView workflows closer to the development environment while giving agents access to real debugger context. CLion’s new agentic capabilities also show how AI can go beyond code generation and help developers investigate problems directly on real hardware.",
+    "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
+    "source_url": "https://blog.jetbrains.com/clion/2026/10/segger-tools-gain-deeper-integration-in-clion-with-ai-assisted-debugging/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Reconstructing Silent Customer-Support Imports with Structured Error API Capture",
     "date": "2026-10-28",
     "category": "Coding & Community",

@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Delivering controlled and concentrated context",
+      "link": "auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html",
+      "date": "2026-10-28",
+      "summary": "Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the",
+      "category": "Coding & Careers",
+      "reading_minutes": 4
+    },
+    {
       "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
       "link": "auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html",
       "date": "2026-10-28",
@@ -86,14 +94,6 @@
       "date": "2026-10-23",
       "summary": "GameMaker's GMRT runtime will be free to use for all developers starting in 2027. In a statement announcing the news, a company spokesperson said this change is part of the company's strategy to make indie game developme",
       "category": "Game Development",
-      "reading_minutes": 3
-    },
-    {
-      "title": "brigade: A Chinese Translation That Lowers the Entry Cost for a Self-Hosted Agent System",
-      "link": "auto/20261023-brigade-a-chinese-translation-that-lowers-the-entry-cost-for-26e956df.html",
-      "date": "2026-10-23",
-      "summary": "Let me describe what the project claims to be, then what the translation actually changes for a Chinese-speaking developer. Brigade is a self-hosted personal AI agent system. Everything past it — isolated agents with sep",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

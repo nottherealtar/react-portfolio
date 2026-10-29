@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-28T21:38:44.686562+00:00",
+  "timestamp": "2026-10-29T11:30:07.199093+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Reconstructing Silent Customer-Support Imports with Structured Error API Capture",
-      "link": "auto/20261028-reconstructing-silent-customer-support-imports-with-structur-0e981c75.html",
-      "score": 138.9202,
-      "source": "DEV Community",
+      "title": "Delivering controlled and concentrated context",
+      "link": "auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html",
+      "score": 134.1185,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

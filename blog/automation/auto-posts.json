@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Delivering controlled and concentrated context",
+    "date": "2026-10-28",
+    "category": "Coding & Careers",
+    "summary": "Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the-box GitHub connector, and other features like a validation API with Stack Internal Community’s strengthened governance and attribution controls, this launch delivers controlled, concentrated…",
+    "link": "auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html",
+    "source_url": "https://stackoverflow.blog/2026/10/28/delivering-controlled-and-concentrated-context/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
     "date": "2026-10-28",
     "category": "Coding & Community",

@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 28 Oct 2026 21:40:13 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 11:31:52 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Short answer: Use Node.js to capture the exception at the scheduled-import boundary, post its message, stack, environment, and context to /v1/errors/capture , and preserve a stable run identifier. That gives the next engineer evidence to reconstruct the failed import instead of a bare “job stopped” signal.</description>
+    </item>
+    <item>
+      <title>Delivering controlled and concentrated context</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the-box GitHub connector, and other features like a validation API with Stack Internal Community’s strengthened governance and attribution controls, this launch delivers controlled, concentrated…</description>
     </item>
     <item>
       <title>Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket</title>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>I released it for free on the Chrome Web Store to gather real usage data. Scaling Challenges: From a Single Server to a SaaS Model When the user base grew to a few hundred active developers, the single‑node API started to choke during peak compilation periods. Content marketing (blog posts, short videos) demonstrated how the tip system could shave seconds off a compile loop.</description>
-    </item>
-    <item>
-      <title>CloudPal AI: Building a Free Cloud &amp; DevOps Learning Assistant for Hacktoberfest 2026</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261004-cloudpal-ai-building-a-free-cloud-devops-learning-assistant-91b898dd.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261004-cloudpal-ai-building-a-free-cloud-devops-learning-assistant-91b898dd.html</guid>
-      <pubDate>Sun, 04 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>I created this project with learners in mind who often struggle to find a simple and interactive way to understand technical concepts and prepare for interviews. The project is designed as a starting point for an educational AI assistant.</description>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
+      "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
+      "date": "2026-10-30",
+      "summary": "When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
       "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
       "date": "2026-10-29",
@@ -87,14 +95,6 @@
       "summary": "For example, an Eventyay review requested screenshots or a video . The replay has a persistent capture date and incomplete-coverage warning: it deliberately includes only six selected source bodies, with links to the com",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "JetBrains GameDev Day 2026: Watch the Recordings",
-      "link": "auto/20261023-jetbrains-gamedev-day-2026-watch-the-recordings-c0fdefc7.html",
-      "date": "2026-10-23",
-      "summary": "Pick your engine or role: Unreal Engine: Death by a Thousand Ticks and Agentic Development in Unreal Engine with JetBrains Rider Unity: Fix Your CI Without Leaving the IDE and How We Automated Figma-to-Unity UI Integrati",
-      "category": "Developer Tools",
-      "reading_minutes": 4
     }
   ]
 }

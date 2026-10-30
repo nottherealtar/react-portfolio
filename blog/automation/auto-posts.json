@@ -1,5 +1,18 @@
 [
   {
+    "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
+    "date": "2026-10-30",
+    "category": "Coding & Community",
+    "summary": "When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.",
+    "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
+    "source_url": "https://dev.to/nabbisen/waf-is-useful-but-it-does-not-provide-complete-protection-what-executives-and-managers-need-to-49lm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fms6xrtoa3s0c908eoheh.png"
+  },
+  {
     "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
     "date": "2026-10-29",
     "category": "Developer Tools",

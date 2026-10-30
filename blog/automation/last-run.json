@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-29T21:47:27.134925+00:00",
+  "timestamp": "2026-10-30T11:22:49.514786+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 603,
+  "unseen_candidates": 602,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
-      "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
-      "score": 128.4852,
-      "source": "JetBrains Blog",
+      "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
+      "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
+      "score": 127.954,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

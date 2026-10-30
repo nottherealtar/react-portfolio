@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 29 Oct 2026 21:49:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 11:24:16 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.</description>
+    </item>
     <item>
       <title>SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>The defining 20 or so games on the platform—God of War, Gran Turismo 3, Final Fantasy 10 and so forth—are very well known, and maybe Millennial players can recall a weirdo game or two like Mr Mosquito or Global Defence Force. "6 and 7 out of 10 PS2 games are what I live for," director Oli Clarke Smith told RPG Site . It captures the flavour of the PS2 era without being exactly like any single game.</description>
-    </item>
-    <item>
-      <title>ERPNext vs Odoo: Which One Manages Different Business Operations Better?</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261005-erpnext-vs-odoo-which-one-manages-different-business-operati-5d7448ba.html</guid>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>It provides a range of business tools in one system. Key Differences Between ERPNext and Odoo ERPNext and Odoo cover many of the same business areas. Sales: ERPNext supports sales pipelines, quotations, purchase orders, and supplier management.</description>
     </item>
   </channel>
 </rss>

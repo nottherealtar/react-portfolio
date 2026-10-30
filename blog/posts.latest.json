@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Nodemailer Alternative: Sending Email OTPs Through a 6-Stage 2FA Signup Contract",
+      "link": "auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html",
+      "date": "2026-10-30",
+      "summary": "Short answer: use a provider-neutral delivery adapter for email OTPs, and choose a Nodemailer alternative only when its delivery contract fits your media signup flow; the application must still hash, expire, and consume ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
       "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
       "date": "2026-10-29",
@@ -87,14 +95,6 @@
       "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT in",
       "category": "Tech & Startups",
       "reading_minutes": 3
-    },
-    {
-      "title": "ReviewRadar: the request, a possible reply, and a calmer review session",
-      "link": "auto/20261024-reviewradar-the-request-a-possible-reply-and-a-calmer-review-35200e9e.html",
-      "date": "2026-10-24",
-      "summary": "For example, an Eventyay review requested screenshots or a video . The replay has a persistent capture date and incomplete-coverage warning: it deliberately includes only six selected source bodies, with links to the com",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

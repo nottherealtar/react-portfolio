@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fms6xrtoa3s0c908eoheh.png"
   },
   {
+    "title": "Nodemailer Alternative: Sending Email OTPs Through a 6-Stage 2FA Signup Contract",
+    "date": "2026-10-30",
+    "category": "Coding & Community",
+    "summary": "Short answer: use a provider-neutral delivery adapter for email OTPs, and choose a Nodemailer alternative only when its delivery contract fits your media signup flow; the application must still hash, expire, and consume the challenge itself.",
+    "link": "auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html",
+    "source_url": "https://dev.to/silhouette72591483/nodemailer-alternative-sending-email-otps-through-a-6-stage-2fa-signup-contract-55bk",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
     "date": "2026-10-29",
     "category": "Developer Tools",

@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-10-30T11:22:49.514786+00:00",
+  "timestamp": "2026-10-30T21:29:02.731056+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 616,
-  "unseen_candidates": 602,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 2,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
-      "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
-      "score": 127.954,
+      "title": "Nodemailer Alternative: Sending Email OTPs Through a 6-Stage 2FA Signup Contract",
+      "link": "auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html",
+      "score": 124.9656,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

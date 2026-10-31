@@ -1,5 +1,18 @@
 [
   {
+    "title": "Your coding agent's sandbox is off. Here's how to turn it on without breaking everything.",
+    "date": "2026-10-31",
+    "category": "Coding & Community",
+    "summary": "After an hour you either turn the sandbox off or add broad rules (\"allow all of ~\") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git metadata. That is the important lesson for anyone configuring a sandbox: the dangerous permission isn't \"write anywhere\", it's \"write to a file something else will execute later\".",
+    "link": "auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html",
+    "source_url": "https://dev.to/hardikverma22/your-coding-agents-sandbox-is-off-heres-how-to-turn-it-on-without-breaking-everything-54mg",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy6b7lmh5bckz5dy8xy7h.gif"
+  },
+  {
     "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
     "date": "2026-10-30",
     "category": "Coding & Community",

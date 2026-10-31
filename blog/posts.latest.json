@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your coding agent's sandbox is off. Here's how to turn it on without breaking everything.",
+      "link": "auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html",
+      "date": "2026-10-31",
+      "summary": "After an hour you either turn the sandbox off or add broad rules (\"allow all of ~\") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git me",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
       "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
       "date": "2026-10-30",
@@ -86,14 +94,6 @@
       "date": "2026-10-25",
       "summary": "I built SlothDesk AI , a 100% local-first, anti-burnout desktop operating suite powered by Google Gemma 2 open weights . Gemma 2 drafts polite, guilt-free responses that convert 45-minute synchronous meetings into 2-bull",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "link": "auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html",
-      "date": "2026-10-24",
-      "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT in",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

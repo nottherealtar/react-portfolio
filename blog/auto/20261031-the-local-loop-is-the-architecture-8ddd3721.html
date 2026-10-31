@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Local Loop Is the Architecture | TarsOnlineCafe</title>
+  <meta name="description" content="An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="The Local Loop Is the Architecture">
+  <meta property="og:description" content="An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html">
+  <meta property="article:published_time" content="2026-10-31T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Local Loop Is the Architecture">
+  <meta name="twitter:description" content="An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="The Local Loop Is the Architecture">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Local Loop Is the Architecture", "description": "An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the…", "datePublished": "2026-10-31T12:00:00.000Z", "dateModified": "2026-10-31T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html"}, "isBasedOn": "https://dev.to/flisk/the-local-loop-is-the-architecture-16f", "wordCount": 1344}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-10-31</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>The Local Loop Is the Architecture</h1>
+        <p class="lede">An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes where a human can still watch a retry happen.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>We spent a decade teaching systems to cross a network. We are about to spend the next one teaching them not to. Put two of those runtimes in different languages — a legal graph in Python, a commercial node in TypeScript — and the interesting design problem is no longer which model you picked.</p>
+        <p>It is which process is allowed to touch the ledger, and how the other processes are prevented from growing their own path to it. That boundary will not appear in production. By then each team will have a client, a secret, and a story about retries.</p>
+        <p>It has to appear on the laptop, while both agents are still being rewritten every afternoon. For this class of system, it is the architecture. Compose files, port maps, a README that lied about the order of docker compose up .</p>
+        <p>Painful, and solvable, because the processes were passive. A worker did not invent a new call while you were looking at a trace. The Python node and the TypeScript node can both &quot;check the budget&quot; and mean different things: one reads a view, one posts a reservation, one retries the post because its HTTP client timed out after the database had already committed.</p>
+        <p>Two arrows into the ledger is already a distributed system. The model vendors will not design it for you. Neither will a framework that only knows one language.</p>
+        <p>Mastra does not owe LangGraph a session model. LangGraph does not owe your Next.js app a type. The gateway is the only component that can turn a tool call into a query, and the only component that is allowed to remember that a given attempt already happened.</p>
+        <p>A schema that says departmentId: string does not stop a second write. What stops the second write is a process that refuses to be a tunnel: closed arguments, named operations, an attempt id stored beside the row. The frontier move is not &quot;expose the ERP over MCP.&quot; That is how you launder a database into every agent.</p>
+        <p>The move is to publish capabilities , and to make the capability smaller than the fear. check_department_budget can be backed by a view, a procedure, or a fixture. The agent cannot tell, and should not be able to.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>It is a runtime that can decide, retry, and call a tool whose effect outlives the call. It matters for compliance and go-to-market planning when the rules of the road for tech are still unsettled.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The local loop is not a staging copy of the architecture.</li>
+          <li>Two arrows into the ledger is already a distributed system.</li>
+          <li>Three properties fall out of putting the tool in a process that is not an agent.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/flisk/the-local-loop-is-the-architecture-16f" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "The Local Loop Is the Architecture",
+      "link": "auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html",
+      "date": "2026-10-31",
+      "summary": "An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes wher",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
       "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
       "date": "2026-10-30",
@@ -85,14 +93,6 @@
       "link": "auto/20261026-10-common-saas-development-mistakes-and-how-to-avoid-them-9ff607cf.html",
       "date": "2026-10-26",
       "summary": "Here are ten SaaS development mistakes to avoid and practical ways to build a more reliable, scalable, and sustainable product. Example: A startup planning to build a comprehensive project management platform might disco",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "SlothDesk AI: The Anti-Burnout Desktop Operating Suite That Rewards Laziness (Powered by Google Gemma 2)",
-      "link": "auto/20261025-slothdesk-ai-the-anti-burnout-desktop-operating-suite-that-r-c08c065d.html",
-      "date": "2026-10-25",
-      "summary": "I built SlothDesk AI , a 100% local-first, anti-burnout desktop operating suite powered by Google Gemma 2 open weights . Gemma 2 drafts polite, guilt-free responses that convert 45-minute synchronous meetings into 2-bull",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy6b7lmh5bckz5dy8xy7h.gif"
   },
   {
+    "title": "The Local Loop Is the Architecture",
+    "date": "2026-10-31",
+    "category": "Coding & Community",
+    "summary": "An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes where a human can still watch a retry happen.",
+    "link": "auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html",
+    "source_url": "https://dev.to/flisk/the-local-loop-is-the-architecture-16f",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
     "date": "2026-10-30",
     "category": "Coding & Community",

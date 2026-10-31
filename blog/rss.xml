@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 31 Oct 2026 10:55:47 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 20:28:43 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>After an hour you either turn the sandbox off or add broad rules ("allow all of ~") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git metadata. That is the important lesson for anyone configuring a sandbox: the dangerous permission isn't "write anywhere", it's "write to a file something else will execute later".</description>
+    </item>
+    <item>
+      <title>The Local Loop Is the Architecture</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes where a human can still watch a retry happen.</description>
     </item>
     <item>
       <title>WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs</title>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>Success now depends on turning operational knowledge into scalable intelligence that improves throughput, quality, resilience, safety, and sustainability. Physical AI helps organizations act, whether through autonomous operation or human-in-the-loop workflows.</description>
-    </item>
-    <item>
-      <title>Co-dev case study: How Blackbird Interactive and Secret Mode helped Escape the Backrooms ride the Backrooms hype wave</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261006-co-dev-case-study-how-blackbird-interactive-and-secret-mode-2b1a4e86.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261006-co-dev-case-study-how-blackbird-interactive-and-secret-mode-2b1a4e86.html</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Game Development</category>
-      <description>A co-dev partnership helped Fancy's hit game Escape The Backrooms reach over 4 million players. But none of these projects have managed to eclipse the popularity of one game in particular: Escape the Backrooms .</description>
     </item>
   </channel>
 </rss>

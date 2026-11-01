@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 31 Oct 2026 20:28:43 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 11:49:51 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Di-Hydro Shows How AI and Digital Twins Can Improve Hydropower Operations</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The EU-funded Di-Hydro project is testing how AI, digital twins, forecasting and sensor networks can help hydropower operators make better operational decisions. From fragmented operational data to decision support At the center of the project is the Decision Making Platform (DMP) .</description>
+    </item>
     <item>
       <title>Your coding agent's sandbox is off. Here's how to turn it on without breaking everything.</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existing ecommerce application while building custom services around it.</description>
-    </item>
-    <item>
-      <title>Microsoft named a Leader in the 2026 Gartner® Magic Quadrant™ for Global Industrial AIoT Platforms</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261006-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-8d03f19e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261006-microsoft-named-a-leader-in-the-2026-gartner-magic-quadrant-8d03f19e.html</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Cloud Automation</category>
-      <description>Success now depends on turning operational knowledge into scalable intelligence that improves throughput, quality, resilience, safety, and sustainability. Physical AI helps organizations act, whether through autonomous operation or human-in-the-loop workflows.</description>
     </item>
   </channel>
 </rss>

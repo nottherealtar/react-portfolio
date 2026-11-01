@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 01 Nov 2026 11:49:51 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 21:12:14 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>How do AI agents authenticate? (The problem nobody has solved yet)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not "some agent using the shared service token.</description>
+    </item>
     <item>
       <title>Di-Hydro Shows How AI and Digital Twins Can Improve Hydropower Operations</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).</description>
-    </item>
-    <item>
-      <title>When Does an Ecommerce Application Need Custom Software?</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261006-when-does-an-ecommerce-application-need-custom-software-c7abd2e3.html</guid>
-      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Complex pricing rules, multiple inventory locations, legacy systems, custom workflows, and large product catalogs can introduce requirements that standard features don't always handle well. A business can keep its existing ecommerce application while building custom services around it.</description>
     </item>
   </channel>
 </rss>

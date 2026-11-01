@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
+      "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
+      "date": "2026-11-01",
+      "summary": "There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not \"some ag",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Di-Hydro Shows How AI and Digital Twins Can Improve Hydropower Operations",
       "link": "auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html",
       "date": "2026-11-01",
@@ -86,14 +94,6 @@
       "date": "2026-10-26",
       "summary": "Agile reservoir modeling is the ensemble workflow engine. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager ",
       "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "AI on Your Terms: How We See AI in YouTrack",
-      "link": "auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html",
-      "date": "2026-10-26",
-      "summary": "With YouTrack, you choose whether and how to use AI, while we also make it easier to work with the tools you already trust. Coming soon: Ask YouTrack, an agentic AI chat that understands your work. Delegating task manage",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

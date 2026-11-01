@@ -1,5 +1,17 @@
 [
   {
+    "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
+    "date": "2026-11-01",
+    "category": "Coding & Community",
+    "summary": "There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not \"some agent using the shared service token.",
+    "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
+    "source_url": "https://dev.to/zachbenson/how-do-ai-agents-authenticate-the-problem-nobody-has-solved-yet-3cbe",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Di-Hydro Shows How AI and Digital Twins Can Improve Hydropower Operations",
     "date": "2026-11-01",
     "category": "Coding & Community",

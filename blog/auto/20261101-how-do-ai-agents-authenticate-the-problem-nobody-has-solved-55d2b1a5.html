@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>How do AI agents authenticate? (The problem nobody has solved yet) | TarsOnlineCafe</title>
+  <meta name="description" content="There&#x27;s no reason agent authentication shouldn&#x27;t. For agents that need a stable identity across runs, generate once and store the private key. When it calls…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="How do AI agents authenticate? (The problem nobody has solved yet)">
+  <meta property="og:description" content="There&#x27;s no reason agent authentication shouldn&#x27;t. For agents that need a stable identity across runs, generate once and store the private key. When it calls…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html">
+  <meta property="article:published_time" content="2026-11-01T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How do AI agents authenticate? (The problem nobody has solved yet)">
+  <meta name="twitter:description" content="There&#x27;s no reason agent authentication shouldn&#x27;t. For agents that need a stable identity across runs, generate once and store the private key. When it calls…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="How do AI agents authenticate? (The problem nobody has solved yet)">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How do AI agents authenticate? (The problem nobody has solved yet)", "description": "There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls…", "datePublished": "2026-11-01T12:00:00.000Z", "dateModified": "2026-11-01T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html"}, "isBasedOn": "https://dev.to/zachbenson/how-do-ai-agents-authenticate-the-problem-nobody-has-solved-yet-3cbe", "wordCount": 653}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-11-01</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>How do AI agents authenticate? (The problem nobody has solved yet)</h1>
+        <p class="lede">There&#x27;s no reason agent authentication shouldn&#x27;t. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not &quot;some agent using the shared service token.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>If you&#x27;ve built an MCP server or an API that agents call, you&#x27;ve run into this problem. So you do what everyone does: generate an API key, paste it in an env var, and move on. Or someone leaves and you realize you have no idea which credentials they had.</p>
+        <p>Or you&#x27;re running 50 agents and managing 50 sets of credentials per tool. Think about what authentication is supposed to do: prove that the entity making a request is who they say they are. For humans, passwords work (barely) because you can reset them, remember them, and tie them to a person.</p>
+        <p>For machines, a static shared secret is just a liability — it has to exist somewhere, which means it can leak from somewhere. What agents need is proof of identity without a credential that can be stolen. No credential ever travels over the wire — only a signature that proves the client holds the key.</p>
+        <p>Arken is an open-source implementation of this for HTTP APIs and MCP servers. It&#x27;s deterministic from the private key, portable across every Arken-protected endpoint, and requires no registration with any central authority. Server side — one line of Express middleware: An unsigned request gets a 401 with a one-time nonce: The client signs the nonce and retries with an Authorization: Signature header.</p>
+        <p>The server verifies the ECDSA signature in Rust, consumes the nonce, and sets req.user.did . Agent side — a drop-in fetch wrapper: If no key is provided, one is generated. Every agent in your fleet has a unique did:key .</p>
+        <p>There&#x27;s no credential database to breach Fleet identity management — each agent in a 100-agent fleet has its own cryptographic identity, issued at creation time, with no manual key management By default nonces are stored in memory. For multi-instance deployments, pass a Redis client: Pre-1.0 — the API may change before the stable release. Agents proliferating without per-agent identity is going to cause problems.</p>
+        <p>Most enterprises don&#x27;t know which agents exist inside their infrastructure, what they&#x27;re authorized to do, or what they&#x27;ve accessed. A did:key per agent is the primitive that makes visibility possible — not just for security, but for billing, auditing, and access control. If you&#x27;re building MCP servers, agent backends, or APIs that agents call — especially if you&#x27;ve hit the credentials problem in production — I&#x27;d like to hear about your setup.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>What agents need is proof of identity without a credential that can be stolen. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The client signs it with a private key.</li>
+          <li>Agent side — a drop-in fetch wrapper: If no key is provided, one is generated.</li>
+          <li>Agents proliferating without per-agent identity is going to cause problems.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/zachbenson/how-do-ai-agents-authenticate-the-problem-nobody-has-solved-yet-3cbe" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

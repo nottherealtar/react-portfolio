@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 02 Nov 2026 13:29:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 23:54:26 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on story progression. However, I don't think the issue in Dawntrail was its over-emphasis on worldbuilding, it was a lack of interest in how that worldbuilding connected to character.</description>
+    </item>
+    <item>
+      <title>Empowering AI Agents with agent-desktop</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents to read and operate applications without pixel matching, which is often unreliable.</description>
     </item>
     <item>
       <title>How do AI agents authenticate? (The problem nobody has solved yet)</title>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
       <category>Gaming News</category>
       <description>The second broadcast of the year from organizers Evil Empire, the Triple-I Initiative was a focused blast of curated trailers and game updates, all rolling out across an almost-hour-long livestream. New skins are also coming later this month, and if you haven't tried it yet, Escape the Backrooms is a co-op game that builds on the idea of analog horror.</description>
-    </item>
-    <item>
-      <title>Cloudflare free plan WAF rules I kept after 7 days of scanner logs</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261008-cloudflare-free-plan-waf-rules-i-kept-after-7-days-of-scanne-eb55b47e.html</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every "attack path" against your own routes. I don't run WordPress anywhere, so nothing legitimate matches: The secret-file one is longer.</description>
     </item>
   </channel>
 </rss>

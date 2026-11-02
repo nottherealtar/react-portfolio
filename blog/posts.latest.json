@@ -9,6 +9,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "Empowering AI Agents with agent-desktop",
+      "link": "auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html",
+      "date": "2026-11-02",
+      "summary": "The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents t",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
       "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
       "date": "2026-11-01",
@@ -87,14 +95,6 @@
       "summary": "Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. G",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace",
-      "link": "auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html",
-      "date": "2026-10-27",
-      "summary": "Patel designed Ndoc to be more than just another AI tool layered onto an existing workflow. His desire to open-source this project was partly why he left Meta and decided to go it alone. “Companies are basically attachin",
-      "category": "Tech & Startups",
-      "reading_minutes": 4
     }
   ]
 }

@@ -13,6 +13,18 @@
     "hero_image": "https://cdn.mos.cms.futurecdn.net/UjCJY9gjRfatHZjCuGMrhR-1920-80.jpg"
   },
   {
+    "title": "Empowering AI Agents with agent-desktop",
+    "date": "2026-11-02",
+    "category": "Coding & Community",
+    "summary": "The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents to read and operate applications without pixel matching, which is often unreliable.",
+    "link": "auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html",
+    "source_url": "https://dev.to/gittrending/empowering-ai-agents-with-agent-desktop-161p",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
     "date": "2026-11-01",
     "category": "Coding & Community",

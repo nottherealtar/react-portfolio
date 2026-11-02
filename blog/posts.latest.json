@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail",
+      "link": "auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html",
+      "date": "2026-11-02",
+      "summary": "\"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on sto",
+      "category": "Gaming & Industry",
+      "reading_minutes": 4
+    },
+    {
       "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
       "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
       "date": "2026-11-01",
@@ -87,14 +95,6 @@
       "summary": "Patel designed Ndoc to be more than just another AI tool layered onto an existing workflow. His desire to open-source this project was partly why he left Meta and decided to go it alone. “Companies are basically attachin",
       "category": "Tech & Startups",
       "reading_minutes": 4
-    },
-    {
-      "title": "Scale reservoir uncertainty analysis with agile reservoir modeling",
-      "link": "auto/20261026-scale-reservoir-uncertainty-analysis-with-agile-reservoir-mo-fb8756d3.html",
-      "date": "2026-10-26",
-      "summary": "Agile reservoir modeling is the ensemble workflow engine. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager ",
-      "category": "Cloud Automation",
-      "reading_minutes": 3
     }
   ]
 }

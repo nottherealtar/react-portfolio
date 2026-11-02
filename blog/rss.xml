@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sun, 01 Nov 2026 21:12:14 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 13:29:18 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Gaming &amp; Industry</category>
+      <description>"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on story progression. However, I don't think the issue in Dawntrail was its over-emphasis on worldbuilding, it was a lack of interest in how that worldbuilding connected to character.</description>
+    </item>
     <item>
       <title>How do AI agents authenticate? (The problem nobody has solved yet)</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>These are the Cloudflare free plan WAF rules running on my zone today: three custom rules and one rate limiting rule. Check every "attack path" against your own routes. I don't run WordPress anywhere, so nothing legitimate matches: The secret-file one is longer.</description>
-    </item>
-    <item>
-      <title>The 20 most popular MCP servers, scanned: what's actually in their tool descriptions</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261007-the-20-most-popular-mcp-servers-scanned-what-s-actually-in-t-c322db83.html</guid>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Here is a dated, method-transparent look at what the most popular MCP servers actually say and ship. the breaking 2026-07-28 revision (stateless _meta version/capability exchange, server/discover ).</description>
     </item>
   </channel>
 </rss>

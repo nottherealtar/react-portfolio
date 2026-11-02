@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-01T21:10:13.358981+00:00",
+  "timestamp": "2026-11-02T13:27:32.028688+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
-      "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
-      "score": 117.9637,
-      "source": "DEV Community",
+      "title": "Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail",
+      "link": "auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html",
+      "score": 127.5539,
+      "source": "PC Gamer",
       "text_engine": "embedding-mmr"
     }
   ],

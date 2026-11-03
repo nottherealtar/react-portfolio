@@ -1,5 +1,17 @@
 [
   {
+    "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
+    "date": "2026-11-03",
+    "category": "Developer Tools",
+    "summary": "Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation steps. JetBrains patches TeamCity Cloud, but certificates uploaded to the service still require review. Update your TeamCity agents and review trusted certificates Update Java on every build agent.",
+    "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/11/emudhra-certificate-authority-compromise-what-it-means-for-teamcity/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "DataGrip and Database Tools User Experience Survey #3 Results",
     "date": "2026-11-03",
     "category": "Developer Tools",

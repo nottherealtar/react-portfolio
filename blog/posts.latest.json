@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
+      "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
+      "date": "2026-11-03",
+      "summary": "Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation steps. JetBrains patches TeamCity Cloud, but certificates uploa",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "DataGrip and Database Tools User Experience Survey #3 Results",
       "link": "auto/20261103-datagrip-and-database-tools-user-experience-survey-3-results-fbd36001.html",
       "date": "2026-11-03",
@@ -87,14 +95,6 @@
       "summary": "Short answer: Use Node.js to capture the exception at the scheduled-import boundary, post its message, stack, environment, and context to /v1/errors/capture , and preserve a stable run identifier. That gives the next eng",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Delivering controlled and concentrated context",
-      "link": "auto/20261028-delivering-controlled-and-concentrated-context-a0bb6857.html",
-      "date": "2026-10-28",
-      "summary": "Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the",
-      "category": "Coding & Careers",
-      "reading_minutes": 4
     }
   ]
 }

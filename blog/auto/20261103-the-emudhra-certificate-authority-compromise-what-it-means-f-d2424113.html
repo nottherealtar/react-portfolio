@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The eMudhra Certificate Authority Compromise: What It Means for TeamCity | TarsOnlineCafe</title>
+  <meta name="description" content="Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="The eMudhra Certificate Authority Compromise: What It Means for TeamCity">
+  <meta property="og:description" content="Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html">
+  <meta property="article:published_time" content="2026-11-03T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The eMudhra Certificate Authority Compromise: What It Means for TeamCity">
+  <meta name="twitter:description" content="Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="The eMudhra Certificate Authority Compromise: What It Means for TeamCity">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity", "description": "Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation…", "datePublished": "2026-11-03T12:00:00.000Z", "dateModified": "2026-11-03T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html"}, "isBasedOn": "https://blog.jetbrains.com/teamcity/2026/11/emudhra-certificate-authority-compromise-what-it-means-for-teamcity/", "wordCount": 1477}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-03</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>The eMudhra Certificate Authority Compromise: What It Means for TeamCity</h1>
+        <p class="lede">Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation steps. JetBrains patches TeamCity Cloud, but certificates uploaded to the service still require review. Update your TeamCity agents and review trusted certificates Update Java on every build agent.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>In October 2026, the private keys of eight intermediate certificate authorities operated by eMudhra were found to be weak and recoverable from public data. According to eMudhra’s official statement , none of the affected intermediate CAs had issued end-entity (leaf) certificates , and eMudhra is not aware of evidence that the weak keys were recovered or exploited before the issue was disclosed. The issue is not a vulnerability in TeamCity itself.</p>
+        <p>However, the trust stores maintained by other software components (primarily the Java runtime) that TeamCity relies on may continue to trust the compromised certificates. Upgrade to v2026.2.2 or v2026.1.6 for an updated Java runtime for the Windows agent installer, updated Docker images, and the health report, or follow the instructions below to apply the same fixes to the current installation. TeamCity Cloud: TeamCity Cloud has already been updated.</p>
+        <p>Certificates uploaded to TeamCity must be reviewed as described in Certificates uploaded to TeamCity below. Self-hosted build agents must also be reviewed according to the instructions below. On October 17, 2026, the private keys of eight eMudhra intermediate CAs, six for TLS and two for code signing, were reported as compromised.</p>
+        <p>This is an industry-wide certificate authority incident, not an issue specific to TeamCity. Certificates issued with these keys would look valid to any software that still trusts them. Browser and OS vendors have released updates that block the compromised certificates, and systems are protected once they install them.</p>
+        <p>Software with its own trust store, such as a Java runtime, keeps trusting the compromised certificates until that trust store is updated. TeamCity downloads are not signed by an eMudhra CA and are not affected. Identify the Java runtime used by each server node and agent, including any custom trust store set with javax.net.ssl.trustStore .</p>
+        <p>Check the Java vendor’s release notes for CVE-2026-91403 and CVE-2026-114820 . For Amazon Corretto 21, the fixed build is 21.0.13.0.11 or later. Update affected runtimes and restart each server node or agent.</p>
+        <p>Optional trust-store verification can identify affected certificates still present in a trust store. If upgrading is not feasible, follow the manual mitigation commands in the same section. Removing AAA Certificate Services can disrupt unaffected services; test dependent connections before removing that root.</p>
+        <p>Existing agents require an independent review. Use the health report or the certificate inspection commands below and then remove affected certificates through the Root project’s SSL / HTTPS Certificates page . Updating Java does not remove uploaded certificates.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>However, the trust stores maintained by other software components (primarily the Java runtime) that TeamCity relies on may continue to trust the compromised certificates. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>According to eMudhra’s official statement , none of the affected intermediate CAs had issued end-entity (leaf) certificates , and eMudhra is not aware of evidence that the weak…</li>
+          <li>TeamCity’s server and build agents use the trust store of their Java runtime.</li>
+          <li>Update your TeamCity server and review uploaded certificates The following server maintenance recommendations apply to TeamCity On-Premises installations.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/teamcity/2026/11/emudhra-certificate-authority-compromise-what-it-means-for-teamcity/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

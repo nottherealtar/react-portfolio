@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 02 Nov 2026 23:54:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:47:09 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>DataGrip and Database Tools User Experience Survey #3 Results</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261103-datagrip-and-database-tools-user-experience-survey-3-results-fbd36001.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261103-datagrip-and-database-tools-user-experience-survey-3-results-fbd36001.html</guid>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>We’re back with the results of our third DataGrip and Database Tools User Experience Survey. The first part of the survey focused on who you are, which tools you use, and what your daily database work looks like. This year, 84.7% of respondents were satisfied or very satisfied with DataGrip and the built-in database tools.</description>
+    </item>
     <item>
       <title>Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Confidential Computing: Inverting the Trust Boundary To understand where confidential containers fit, it helps to distinguish them from standard sandboxed containers. The cloud provider hosts the infrastructure, but their hypervisor, host OS, and staff are cryptographically excluded from reading working memory. Let's be completely frank: most everyday container workloads do not need confidential computing.</description>
-    </item>
-    <item>
-      <title>Triple-I Initiative October 2026: Everything Announced At The Showcase</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261008-triple-i-initiative-october-2026-everything-announced-at-the-19573421.html</guid>
-      <pubDate>Thu, 08 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Gaming News</category>
-      <description>The second broadcast of the year from organizers Evil Empire, the Triple-I Initiative was a focused blast of curated trailers and game updates, all rolling out across an almost-hour-long livestream. New skins are also coming later this month, and if you haven't tried it yet, Escape the Backrooms is a co-op game that builds on the idea of analog horror.</description>
     </item>
   </channel>
 </rss>

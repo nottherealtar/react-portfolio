@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "DataGrip and Database Tools User Experience Survey #3 Results",
+      "link": "auto/20261103-datagrip-and-database-tools-user-experience-survey-3-results-fbd36001.html",
+      "date": "2026-11-03",
+      "summary": "We’re back with the results of our third DataGrip and Database Tools User Experience Survey. The first part of the survey focused on who you are, which tools you use, and what your daily database work looks like. This ye",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail",
       "link": "auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html",
       "date": "2026-11-02",
@@ -87,14 +95,6 @@
       "summary": "Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the",
       "category": "Coding & Careers",
       "reading_minutes": 4
-    },
-    {
-      "title": "Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket",
-      "link": "auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html",
-      "date": "2026-10-28",
-      "summary": "Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. G",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

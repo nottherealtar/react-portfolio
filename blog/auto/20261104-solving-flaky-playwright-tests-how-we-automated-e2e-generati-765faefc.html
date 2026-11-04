@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP | TarsOnlineCafe</title>
+  <meta name="description" content="Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP">
+  <meta property="og:description" content="Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html">
+  <meta property="article:published_time" content="2026-11-04T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP">
+  <meta name="twitter:description" content="Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP", "description": "Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors…", "datePublished": "2026-11-04T12:00:00.000Z", "dateModified": "2026-11-04T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html"}, "isBasedOn": "https://dev.to/pluswithai/solving-flaky-playwright-tests-how-we-automated-e2e-generation-with-an-ai-agent-and-mcp-1dho", "wordCount": 804}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-04</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP</h1>
+        <p class="lede">Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors feels like an endless chore. In this post, I want to break down an architectural approach to solving this: using an autonomous AI agent that explores web apps, infers user journeys, and generates standard Playwright code with MCP support.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Every developer knows the dread of seeing a green CI pipeline turn red because of an end-to-end test failure after a harmless frontend update. You change a Tailwind class, reorder a flexbox container, or update an icon, and suddenly three Playwright specs break. The underlying logic works perfectly, but the tests were coupled to brittle DOM structures or arbitrary class names.</p>
+        <p>The Three Core Bottlenecks of Modern E2E Testing Brittle Locators: Tests relying on CSS classes (.btn-primary-v2) or deep XPath selectors break constantly. Modern frontends with utility CSS or CSS modules make this even worse. Brittle Locators: Tests relying on CSS classes (.btn-primary-v2) or deep XPath selectors break constantly.</p>
+        <p>Modern frontends with utility CSS or CSS modules make this even worse. Scaffolding Friction: Writing boilerplate for auth flows, form validations, and navigation paths takes valuable engineering hours. Scaffolding Friction: Writing boilerplate for auth flows, form validations, and navigation paths takes valuable engineering hours.</p>
+        <p>The Vendor Lock-in Trap: Many modern AI testing tools hide your tests inside proprietary black-box runners or cloud dashboards. If you cancel your subscription, you lose your entire test suite. The Vendor Lock-in Trap: Many modern AI testing tools hide your tests inside proprietary black-box runners or cloud dashboards.</p>
+        <p>If you cancel your subscription, you lose your entire test suite. The Agentic Approach: Exploration Over Recording Traditional test recorders simply watch where you click and record raw coordinates or selectors. Instead, an agentic model interacts with the web application like a human QA engineer: Rather than scraping raw CSS selectors, the agent analyzes the page&#x27;s Accessibility Tree and semantic structure.</p>
+        <p>It identifies interactive elements by their functional roles (role=&quot;button&quot;, accessible labels, and ARIA attributes), matching how actual users perceive the UI. The agent crawls the application dynamically, discovering actionable paths: signup flows, navigation states, filter updates, and checkout steps. Emitting Standard Playwright Code The most important design decision: no proprietary formats.</p>
+        <p>The output must be idiomatic Playwright TypeScript code using standard practices like page.getByRole() and page.getByLabel(): Because it outputs standard files, you can commit them directly to your Git repository, run them locally, or plug them into your existing GitHub Actions pipeline. Integrating with Developer Workflows: CLI &amp; MCP Developers don&#x27;t want to live inside another isolated web dashboard. To bridge this gap, we built support for two developer interfaces: A CLI tool ( @pluswithai /cli): Run explorations and trigger…</p>
+        <p>A CLI tool ( @pluswithai /cli): Run explorations and trigger isolated cloud test executions straight from your terminal. Model Context Protocol (MCP) Server: By providing an MCP server, environments like Cursor, Claude Desktop, or agent-enabled IDEs can directly interface with the test engine. You can ask your agentic IDE to &quot;explore my staging app and generate a Playwright suite for the checkout flow&quot;, and the tool will execute the exploration and return the code to your editor.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Building autonomous testing agents is an ongoing engineering challenge. It helps prioritize where automation budgets and vendor reviews should focus next quarter.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Instead, an agentic model interacts with the web application like a human QA engineer: Rather than scraping raw CSS selectors, the agent analyzes the page&#x27;s Accessibility Tree…</li>
+          <li>Model Context Protocol (MCP) Server: By providing an MCP server, environments like Cursor, Claude Desktop, or agent-enabled IDEs can directly interface with the test engine.</li>
+          <li>We&#x27;re currently running an open trial (no credit card required, no waitlist) so developers can test it on their own web apps and see how it handles their flows: 👉 Visit…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/pluswithai/solving-flaky-playwright-tests-how-we-automated-e2e-generation-with-an-ai-agent-and-mcp-1dho" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

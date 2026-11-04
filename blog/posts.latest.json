@@ -9,6 +9,14 @@
       "reading_minutes": 4
     },
     {
+      "title": "Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP",
+      "link": "auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html",
+      "date": "2026-11-04",
+      "summary": "Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors feels like an endless chore. In this post, I want to break down an",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
       "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
       "date": "2026-11-03",
@@ -86,14 +94,6 @@
       "date": "2026-10-30",
       "summary": "Short answer: use a provider-neutral delivery adapter for email OTPs, and choose a Nodemailer alternative only when its delivery contract fits your media signup flow; the application must still hash, expire, and consume ",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "SEGGER Tools Gain Deeper Integration in CLion with AI-assisted Debugging",
-      "link": "auto/20261029-segger-tools-gain-deeper-integration-in-clion-with-ai-assist-9b7df6a3.html",
-      "date": "2026-10-29",
-      "summary": "“CLion brings SEGGER’s J-Link, Ozone, and SystemView workflows closer to the development environment while giving agents access to real debugger context. CLion’s new agentic capabilities also show how AI can go beyond co",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

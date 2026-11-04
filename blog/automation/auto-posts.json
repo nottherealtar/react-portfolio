@@ -13,6 +13,18 @@
     "hero_image": "https://cdn.mos.cms.futurecdn.net/UjCJY9gjRfatHZjCuGMrhR-1920-80.jpg"
   },
   {
+    "title": "Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP",
+    "date": "2026-11-04",
+    "category": "Coding & Community",
+    "summary": "Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors feels like an endless chore. In this post, I want to break down an architectural approach to solving this: using an autonomous AI agent that explores web apps, infers user journeys, and generates standard Playwright code with MCP support.",
+    "link": "auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html",
+    "source_url": "https://dev.to/pluswithai/solving-flaky-playwright-tests-how-we-automated-e2e-generation-with-an-ai-agent-and-mcp-1dho",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
     "date": "2026-11-03",
     "category": "Developer Tools",

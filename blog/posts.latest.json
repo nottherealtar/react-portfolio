@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
+      "link": "auto/20261104-wow-forever-s-massive-pre-launch-balance-patch-breaks-from-t-f4ab0697.html",
+      "date": "2026-11-04",
+      "summary": "\"Over the course of Beta, we came to the realization that trying to hold ourselves roughly to Classic power budgets for each class meant that every new element we added needed to come at the expense of something else. \"O",
+      "category": "Gaming & Industry",
+      "reading_minutes": 4
+    },
+    {
       "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
       "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
       "date": "2026-11-03",
@@ -86,14 +94,6 @@
       "date": "2026-10-29",
       "summary": "“CLion brings SEGGER’s J-Link, Ozone, and SystemView workflows closer to the development environment while giving agents access to real debugger context. CLion’s new agentic capabilities also show how AI can go beyond co",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Reconstructing Silent Customer-Support Imports with Structured Error API Capture",
-      "link": "auto/20261028-reconstructing-silent-customer-support-imports-with-structur-0e981c75.html",
-      "date": "2026-10-28",
-      "summary": "Short answer: Use Node.js to capture the exception at the scheduled-import boundary, post its message, stack, environment, and context to /v1/errors/capture , and preserve a stable run identifier. That gives the next eng",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

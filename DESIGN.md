@@ -61,7 +61,7 @@ The Ember homepage (`mockup/src/variants/ember/`, promoted to root `index.html`)
 
 | Region | Treatment |
 | --- | --- |
-| Nav | Cream bar, 1px bottom rule once scrolled, square menu button. No backdrop blur. |
+| Nav | Cream bar, 1px bottom rule once scrolled, square menu button. No backdrop blur. Lockup is the cream-ground mark (bean, graphite brackets, steam; no charcoal plate) plus an Inter wordmark: Tars at weight 600, OnlineCafe at 400. |
 | Hero | Cream page. The Three.js brew field and brand mark sit inside a square hairline frame on Packaging Ground. Copy sits beside it (below it on small screens) at the quiet type scale. |
 | Marquee | Hairline band, Ash labels, a small amber square as the separator. |
 | Proof, services, process, contact | Oat Section bands. |
@@ -80,6 +80,7 @@ The legacy `globe/index.js` sphere is not mounted on the current homepage. The l
 - Set display type at 31px or smaller, weight 500, Inter.
 - Leave generous space between sections (about 100px).
 - Frame the Three.js scene in a square packaging panel.
+- Use the cream-ground lockup on the homepage (`mockup/public/brand/tars-mark-cream.png`): bean, graphite brackets, steam, transparent ground. Keep `tars-mark-charcoal.jpg` for dark surfaces such as Discord. Do not put that charcoal plate back on the cream canvas.
 - Preserve homepage copy, links, the contact form, and keyboard focus. Focus rings are 1px amber, offset from the control.
 - Respect `prefers-reduced-motion`: the scene falls back to the static packaging field, and decorative motion stops.
 

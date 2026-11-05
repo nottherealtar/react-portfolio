@@ -24,6 +24,16 @@ import {
 const EmberField = lazy(() => import('./EmberField'))
 
 const easeOut = [0.22, 1, 0.36, 1]
+const creamMark = `${import.meta.env.BASE_URL}brand/tars-mark-cream.png`
+
+function BrandWord({ className = 'brand-word' }) {
+  return (
+    <span className={className}>
+      <span className="brand-word__tars">Tars</span>
+      <span className="brand-word__cafe">OnlineCafe</span>
+    </span>
+  )
+}
 
 function Icon({ name }) {
   const common = {
@@ -287,8 +297,8 @@ function Nav() {
         aria-label="Main navigation"
       >
         <a className="nav-brand" href="#hero" onClick={close}>
-          <img src={site.logo} alt={`${site.brand} logo`} width={32} height={32} />
-          <span>{site.brand}</span>
+          <img src={creamMark} alt="" width={33} height={40} />
+          <BrandWord />
         </a>
         <ul className="nav-links">
           {nav.map((item) => (
@@ -332,7 +342,7 @@ function BrandOrb() {
         </text>
       </svg>
       <div className="brand-orb__core">
-        <img src={site.logo} alt="" />
+        <img src={creamMark} alt="" width={528} height={640} />
       </div>
     </div>
   )
@@ -361,7 +371,10 @@ function Hero({ scrollProgress }) {
 
       {/* Hero copy uses CSS entrance so prerendered HTML paints without opacity:0 */}
       <div className="hero__content">
-        <KineticText className="hero__brand hero-rise" text={site.brand} delay={0.05} />
+        <p className="hero__brand hero-rise">
+          <KineticText className="brand-word__tars" text="Tars" as="span" delay={0.05} />
+          <KineticText className="brand-word__cafe" text="OnlineCafe" as="span" delay={0.14} />
+        </p>
         <p className="hero__est-pill hero-rise hero-rise--d1">{site.est}</p>
         <h1 className="hero__headline hero-rise hero-rise--d2">{hero.headline}</h1>
         <p className="hero__body hero-rise hero-rise--d3">{hero.body}</p>
@@ -910,7 +923,9 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="section-shell footer-inner">
-        <div className="footer-brand">{site.brand}</div>
+        <div className="footer-brand">
+          <BrandWord />
+        </div>
         <div className="footer-links">
           <a href={site.social.github} target="_blank" rel="noopener noreferrer">
             GitHub

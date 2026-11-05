@@ -37,6 +37,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads",
+    "date": "2026-11-04",
+    "category": "Cloud Automation",
+    "summary": "Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a workload, not after. SAP workloads offer a compelling example of AFPD’s value, illustrating why preventing interruptions matters for mission-critical services.",
+    "link": "auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/predicting-and-detecting-failures-how-azure-strengthens-reliability-for-mission-critical-workloads/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
     "date": "2026-11-03",
     "category": "Developer Tools",

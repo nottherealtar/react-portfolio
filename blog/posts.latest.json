@@ -25,6 +25,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads",
+      "link": "auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html",
+      "date": "2026-11-04",
+      "summary": "Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a workload, not after. SAP workloads offer a compelling example of A",
+      "category": "Cloud Automation",
+      "reading_minutes": 4
+    },
+    {
       "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
       "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
       "date": "2026-11-03",
@@ -87,14 +95,6 @@
       "summary": "An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes wher",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs",
-      "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
-      "date": "2026-10-30",
-      "summary": "When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

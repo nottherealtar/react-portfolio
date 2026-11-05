@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads | TarsOnlineCafe</title>
+  <meta name="description" content="Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads">
+  <meta property="og:description" content="Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html">
+  <meta property="article:published_time" content="2026-11-04T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Cloud Automation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads">
+  <meta name="twitter:description" content="Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads", "description": "Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a…", "datePublished": "2026-11-04T12:00:00.000Z", "dateModified": "2026-11-04T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/predicting-and-detecting-failures-how-azure-strengthens-reliability-for-mission-critical-workloads/", "wordCount": 1467}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-11-04</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads</h1>
+        <p class="lede">Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a workload, not after. SAP workloads offer a compelling example of AFPD’s value, illustrating why preventing interruptions matters for mission-critical services.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Across the Azure fleet, AFPD has improved the prevention of hardware-related VM interruptions by 36% . But AFPD isn’t specific to SAP: it operates across General Purpose, Specialized Compute, HPC/AI, and select Storage workloads, making SAP’s experience a window into Azure’s broader approach to reliability for mission-critical third-party services. To learn more, watch our companion video to learn how AFPD helps reduce the risk of failures disrupting your critical workloads.</p>
+        <p>Reliability engineered into the platform Most conversations about cloud reliability focus on what you build: zone-redundant architectures, failover patterns, and backup strategies. Less visible, but just as consequential, is what the platform does on your behalf; before a failure ever becomes an incident you need to respond to. That’s the premise behind AFPD, which became fully operational in 2024.</p>
+        <p>For a deep dive discussion into this capability, see the companion post here . Historically, hardware failures on any cloud platform follow a familiar pattern: a component degrades, your workload is interrupted, an engineer investigates, and a reboot or hardware replacement follows. This is the old model Azure has spent years moving away from, one built around mission-critical escalations, supply chain constraints, and manual recovery.</p>
+        <p>AFPD replaces that pattern with three coordinated phases: Predict and detect : Machine learning models and detection rules continuously monitor telemetry across the Azure fleet, node behavior, component signals, and hardware-specific indicators like Solid State Drive (SSD) health, to catch patterns that indicate an active or likely future failure. Mitigate : Once a node is flagged, the mitigation service marks it not allocatable for new workloads and, where eligible, live-migrates existing customer workloads to a healthy node with…</p>
+        <p>Where live migration isn’t possible, a notification with a redeploy deadline and recommended action is posted to the VMs Resource Health and Scheduled Events. Remediate : The affected node is pulled from production, tagged with diagnostic detail so technicians can skip redundant troubleshooting, repaired using proactively staged spare parts, and returned to the fleet. In practice, this coordinated approach has delivered measurable gains: AFPD has increased the monthly node repair rate by 80% .</p>
+        <p>The result is a system that doesn’t just react faster; in many cases, it prevents the interruption from reaching you. This approach has reduced the overall number of hardware reboots by more than 36% , and the underlying system won the Best Paper Award at the 2025 IEEE Cloud Summit for its approach to predicting, mitigating, and remediating node interruptions at scale. What SAP’s result means for other workloads Every customer benefits from fewer interruptions, but SAP workloads make the case for AFPD unusually clear.</p>
+        <p>SAP systems are highly sensitive to downtime; they are often the system of record for finance, supply chain, and operations, and even brief interruptions carry outsized business impact. A platform that has the ability to predict or detect hardware issues and reduce their impact before you experience an interruption isn’t a convenience for SAP customers; it’s foundational to running SAP on Azure with confidence. That sensitivity also exposed a real gap the team was candid about: many SAP customers aren’t yet aware of the notification…</p>
+        <p>AFPD surfaces its findings through four consistent, customer-facing channels: Resource Health , for viewing detailed health events and recommended actions on individual VMs, including live migration eligibility and redeployment deadlines. Resource Graph Explorer , for querying health status across your fleet, including large SAP landscapes that require programmatic visibility. Event Grid , for wiring AFPD events directly into your own monitoring and automation, with Azure Functions , webhooks, or REST APIs.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>But AFPD isn’t specific to SAP: it operates across General Purpose, Specialized Compute, HPC/AI, and select Storage workloads, making SAP’s experience a window into Azure’s broader approach to reliability for mission-critical third-party services. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>AFPD is an end-to-end system that uses machine learning and telemetry to predict, mitigate, and remediate hardware failures in the Azure fleet before they interrupt your…</li>
+          <li>This approach has reduced the overall number of hardware reboots by more than 36% , and the underlying system won the Best Paper Award at the 2025 IEEE Cloud Summit for its…</li>
+          <li>For SAP customers running at scale, that consistency is what makes automated, hands-off resiliency actually practical.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/predicting-and-detecting-failures-how-azure-strengthens-reliability-for-mission-critical-workloads/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

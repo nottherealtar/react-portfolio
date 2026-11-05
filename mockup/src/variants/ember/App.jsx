@@ -876,7 +876,7 @@ function Contact() {
                 <div
                   className="h-captcha"
                   data-captcha="true"
-                  data-theme="dark"
+                  data-theme="light"
                   data-size="normal"
                   role="group"
                   aria-labelledby="ember-captcha-label"

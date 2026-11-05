@@ -176,39 +176,39 @@ function BrewField({ mouse, intensity, count, railCount }) {
       {/* Hearth glow — roast bed */}
       <mesh position={[0, -3.55, -0.2]} rotation={[-Math.PI / 2, 0, 0]}>
         <circleGeometry args={[3.4, 48]} />
-        <meshBasicMaterial color="#c8884a" transparent opacity={0.05} />
+        <meshBasicMaterial color="#945c26" transparent opacity={0.08} />
       </mesh>
       <mesh position={[0, -3.2, 0]}>
         <sphereGeometry args={[2.4, 24, 16, 0, Math.PI * 2, 0, Math.PI * 0.45]} />
-        <meshBasicMaterial color="#d4894a" transparent opacity={0.055} side={THREE.DoubleSide} />
+        <meshBasicMaterial color="#945c26" transparent opacity={0.06} side={THREE.DoubleSide} />
       </mesh>
 
       <points ref={roastRef} geometry={roastGeo}>
         <pointsMaterial
-          size={0.036}
-          color="#e8a054"
+          size={0.042}
+          color="#945c26"
           transparent
-          opacity={0.75}
+          opacity={0.85}
           depthWrite={false}
           sizeAttenuation
-          blending={THREE.AdditiveBlending}
+          blending={THREE.NormalBlending}
         />
       </points>
 
       <points ref={nodesRef} geometry={nodeGeo}>
         <pointsMaterial
-          size={0.055}
-          color="#f0c48a"
+          size={0.05}
+          color="#333333"
           transparent
-          opacity={0.7}
+          opacity={0.8}
           depthWrite={false}
           sizeAttenuation
-          blending={THREE.AdditiveBlending}
+          blending={THREE.NormalBlending}
         />
       </points>
 
       <lineSegments ref={railsRef} geometry={railGeo}>
-        <lineBasicMaterial color="#c8884a" transparent opacity={0.14} blending={THREE.AdditiveBlending} />
+        <lineBasicMaterial color="#945c26" transparent opacity={0.45} blending={THREE.NormalBlending} />
       </lineSegments>
     </group>
   )
@@ -272,7 +272,7 @@ export default function EmberField({ scrollProgress }) {
           style={{ pointerEvents: 'none' }}
         >
           <Suspense fallback={null}>
-            <fog attach="fog" args={['#070605', 8, 16]} />
+            <fog attach="fog" args={['#e7e1d4', 11, 18]} />
             <BrewField mouse={mouse} intensity={intensity} count={count} railCount={railCount} />
           </Suspense>
         </Canvas>

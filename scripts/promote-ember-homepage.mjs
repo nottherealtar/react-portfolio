@@ -64,6 +64,11 @@ for (const f of ['logo.png', 'favicon.svg', 'icons.svg']) {
   if (existsSync(join(src, f))) steps.push({ action: 'copy', from: f, to: f })
 }
 
+const brandDir = join(src, 'brand')
+if (existsSync(brandDir)) {
+  steps.push({ action: 'cp', from: 'brand', to: 'brand', note: 'homepage lockup + charcoal still' })
+}
+
 console.log(dry ? 'DRY RUN — would:' : 'Promoting:')
 for (const s of steps) {
   console.log(`- ${s.action}: ${s.to}${s.note ? ` (${s.note})` : ''}`)

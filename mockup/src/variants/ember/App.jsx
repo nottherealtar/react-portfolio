@@ -297,7 +297,7 @@ function Nav() {
         aria-label="Main navigation"
       >
         <a className="nav-brand" href="#hero" onClick={close}>
-          <img src={creamMark} alt="" width={33} height={40} />
+          <img src={creamMark} alt="" width={31} height={38} />
           <BrandWord />
         </a>
         <ul className="nav-links">
@@ -342,7 +342,7 @@ function BrandOrb() {
         </text>
       </svg>
       <div className="brand-orb__core">
-        <img src={creamMark} alt="" width={528} height={640} />
+        <img src={creamMark} alt="" width={620} height={760} />
       </div>
     </div>
   )

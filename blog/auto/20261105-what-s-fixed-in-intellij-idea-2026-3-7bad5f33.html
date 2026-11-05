@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>What’s fixed in IntelliJ IDEA 2026.3 | TarsOnlineCafe</title>
+  <meta name="description" content="IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="What’s fixed in IntelliJ IDEA 2026.3">
+  <meta property="og:description" content="IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html">
+  <meta property="article:published_time" content="2026-11-05T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What’s fixed in IntelliJ IDEA 2026.3">
+  <meta name="twitter:description" content="IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="What’s fixed in IntelliJ IDEA 2026.3">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What’s fixed in IntelliJ IDEA 2026.3", "description": "IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA…", "datePublished": "2026-11-05T12:00:00.000Z", "dateModified": "2026-11-05T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html"}, "isBasedOn": "https://blog.jetbrains.com/idea/2026/11/whats-fixed-in-intellij-idea-2026-3/", "wordCount": 1721}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-05</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>What’s fixed in IntelliJ IDEA 2026.3</h1>
+        <p class="lede">IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive index updates when a second project closes during indexing and made the workspace model copy files lazily .</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Welcome to an overview of the most important fixes and usability improvements in IntelliJ IDEA 2026.3. We focused on performance, Java and Kotlin code intelligence, and the core workflows that matter for both classic and agentic development. User reports and data shared through automatic submission drive most of this work.</p>
+        <p>Below is a recap of the most impactful updates. Freezes, CPU usage, and memory were the focus of this release. Many of these fixes came from freeze reports and profiling of real projects, and others came from your tickets.</p>
+        <p>We removed UI freezes in the places where they were reported most often. Tomcat, WildFly, and JBoss no longer read configuration files on the UI thread . The same goes for the debugger’s variable building , the Git Commit and Changes trees , Optimize Imports , and Java SDK setup.</p>
+        <p>Launching the IDE no longer starts WSL when you do not need it. A code lens preview no longer keeps HiDPI images alive on the heap , and the JPA model no longer creates a new cache key on every lookup . Several leaks that kept closed projects in memory are fixed.</p>
+        <p>Importing large Maven and Gradle projects got optimization fixes. A deadlock during import on a remote development host is gone. A five-minute import of the Kotlin repository with Gradle 9.7 no longer spends most of its time processing errors after Gradle has finished.</p>
+        <p>Automatic error and freeze reporting To find the problems that interrupt your work and fix them in order of impact, IntelliJ IDEA 2026.3 sends error and UI freeze reports to JetBrains automatically. File paths, URLs, and usernames are removed before anything leaves your machine. You can turn reporting off in Settings | Appearance &amp; Behavior | System Settings | Data Sharing .</p>
+        <p>JaCoCo is now the default coverage runner for new Java run configurations. It is the runner Gradle, Maven, CI systems, and SonarQube already use, so coverage numbers in the IDE match the ones in your pipeline. The Unused declaration inspection now reports methods that are used only from test sources .</p>
+        <p>Quick fixes for the “might be null” inspection work on complex expressions, Rename stops suggesting the current name , and generic stream-to-list conversions no longer show a false compilation error. A new inspection warns when CancellationException is caught in suspending code and not rethrown , and offers a quick fix. Blocking calls are highlighted in suspend lambdas , and converting Java to Kotlin now turns @lombok.Data classes into data classes .</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Welcome to an overview of the most important fixes and usability improvements in IntelliJ IDEA 2026.3. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The same goes for the debugger’s variable building , the Git Commit and Changes trees , Optimize Imports , and Java SDK setup.</li>
+          <li>Automatic error and freeze reporting To find the problems that interrupt your work and fix them in order of impact, IntelliJ IDEA 2026.3 sends error and UI freeze reports to…</li>
+          <li>There are hundreds of fixes for different aspects of Spring Framework support: Profiles: Profile switching moved from an editor banner to a status bar widget, and the IDE finds…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/idea/2026/11/whats-fixed-in-intellij-idea-2026-3/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

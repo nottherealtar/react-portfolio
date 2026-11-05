@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "What’s fixed in IntelliJ IDEA 2026.3",
+      "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
+      "date": "2026-11-05",
+      "summary": "IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive in",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
       "link": "auto/20261104-wow-forever-s-massive-pre-launch-balance-patch-breaks-from-t-f4ab0697.html",
       "date": "2026-11-04",
@@ -85,14 +93,6 @@
       "link": "auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html",
       "date": "2026-10-30",
       "summary": "When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Nodemailer Alternative: Sending Email OTPs Through a 6-Stage 2FA Signup Contract",
-      "link": "auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html",
-      "date": "2026-10-30",
-      "summary": "Short answer: use a provider-neutral delivery adapter for email OTPs, and choose a Nodemailer alternative only when its delivery contract fits your media signup flow; the application must still hash, expire, and consume ",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

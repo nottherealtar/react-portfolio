@@ -1,5 +1,17 @@
 [
   {
+    "title": "What’s fixed in IntelliJ IDEA 2026.3",
+    "date": "2026-11-05",
+    "category": "Developer Tools",
+    "summary": "IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive index updates when a second project closes during indexing and made the workspace model copy files lazily .",
+    "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
+    "source_url": "https://blog.jetbrains.com/idea/2026/11/whats-fixed-in-intellij-idea-2026-3/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
     "date": "2026-11-04",
     "category": "Gaming & Industry",

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Thu, 05 Nov 2026 22:42:13 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 12:57:01 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Java Annotated Monthly – November 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>October kept the Java world busy, with JDK news, fresh tutorials, Kotlin updates, AI experiments, and plenty more from across the wider ecosystem. I believe VOs will change the way we think about and work with data in Java. I could go on and on about the exciting stuff in recent and upcoming Java releases.</description>
+    </item>
     <item>
       <title>What’s fixed in IntelliJ IDEA 2026.3</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Kubernetes named the file inside my Secret after the file on disk, and Azure's tag commands disagree among themselves about what setting a tag means. The documentation does not settle this for Secrets in either direction. This is to discourage creation of very large Secrets that could exhaust the API server and kubelet memory." And watch out for the update that is not an update.</description>
-    </item>
-    <item>
-      <title>Claude Code vs Codex CLI vs Gemini CLI: Terminal Agents 2026</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261012-claude-code-vs-codex-cli-vs-gemini-cli-terminal-agents-2026-110c2698.html</guid>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Claude Code vs Codex CLI vs Gemini CLI 2026: Best AI Coding Agent for Terminal Compared The terminal is the new IDE. It reads your entire project structure, understands your coding patterns, and makes changes that are consistent with existing code. Gemini CLI can read and write files, run commands, search codebases, and perform multi-step coding tasks.</description>
     </item>
   </channel>
 </rss>

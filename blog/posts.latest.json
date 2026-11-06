@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Java Annotated Monthly – November 2026",
+      "link": "auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html",
+      "date": "2026-11-06",
+      "summary": "October kept the Java world busy, with JDK news, fresh tutorials, Kotlin updates, AI experiments, and plenty more from across the wider ecosystem. I believe VOs will change the way we think about and work with data in Ja",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "What’s fixed in IntelliJ IDEA 2026.3",
       "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
       "date": "2026-11-05",
@@ -87,14 +95,6 @@
       "summary": "After an hour you either turn the sandbox off or add broad rules (\"allow all of ~\") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git me",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "The Local Loop Is the Architecture",
-      "link": "auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html",
-      "date": "2026-10-31",
-      "summary": "An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes wher",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Java Annotated Monthly – November 2026",
+    "date": "2026-11-06",
+    "category": "Developer Tools",
+    "summary": "October kept the Java world busy, with JDK news, fresh tutorials, Kotlin updates, AI experiments, and plenty more from across the wider ecosystem. I believe VOs will change the way we think about and work with data in Java. I could go on and on about the exciting stuff in recent and upcoming Java releases.",
+    "link": "auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html",
+    "source_url": "https://blog.jetbrains.com/idea/2026/11/java-annotated-monthly-november-2026/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/image1.jpg"
+  },
+  {
     "title": "What’s fixed in IntelliJ IDEA 2026.3",
     "date": "2026-11-05",
     "category": "Developer Tools",

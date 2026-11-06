@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 06 Nov 2026 12:57:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 22:07:40 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Vietnam AI &amp; LLM Daily Briefing (Nov 07, 2026)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html</guid>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A curated synthesis of breaking artificial intelligence developments, localized Vietnamese AI voice assistants on smart displays, regional applied AI centers of excellence, and critical frontier model safety analyses directly shaping Vietnam's tech ecosystem over the past 24 hours (November 07, 2026): 1.</description>
+    </item>
     <item>
       <title>Java Annotated Monthly – November 2026</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>This article explains what CI/CD pipeline observability means, which metrics are worth tracking, and how the most common observability tools compare. To find these patterns, teams need to be able to break metrics down by project, branch, pipeline stage, agent pool, environment, and failure type.</description>
-    </item>
-    <item>
-      <title>Day 62: Secrets and Tags</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261012-day-62-secrets-and-tags-53409e0d.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261012-day-62-secrets-and-tags-53409e0d.html</guid>
-      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Kubernetes named the file inside my Secret after the file on disk, and Azure's tag commands disagree among themselves about what setting a tag means. The documentation does not settle this for Secrets in either direction. This is to discourage creation of very large Secrets that could exhaust the API server and kubelet memory." And watch out for the update that is not an update.</description>
     </item>
   </channel>
 </rss>

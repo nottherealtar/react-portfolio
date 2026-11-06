@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Vietnam AI & LLM Daily Briefing (Nov 07, 2026)",
+      "link": "auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html",
+      "date": "2026-11-06",
+      "summary": "A curated synthesis of breaking artificial intelligence developments, localized Vietnamese AI voice assistants on smart displays, regional applied AI centers of excellence, and critical frontier model safety analyses dir",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Java Annotated Monthly – November 2026",
       "link": "auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html",
       "date": "2026-11-06",
@@ -85,14 +93,6 @@
       "link": "auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html",
       "date": "2026-11-01",
       "summary": "The EU-funded Di-Hydro project is testing how AI, digital twins, forecasting and sensor networks can help hydropower operators make better operational decisions. From fragmented operational data to decision support At th",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Your coding agent's sandbox is off. Here's how to turn it on without breaking everything.",
-      "link": "auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html",
-      "date": "2026-10-31",
-      "summary": "After an hour you either turn the sandbox off or add broad rules (\"allow all of ~\") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git me",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

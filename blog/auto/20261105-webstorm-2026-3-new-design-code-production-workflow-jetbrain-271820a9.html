@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More | TarsOnlineCafe</title>
+  <meta name="description" content="Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More">
+  <meta property="og:description" content="Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html">
+  <meta property="article:published_time" content="2026-11-05T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More">
+  <meta name="twitter:description" content="Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The…">
+  <meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png">
+  <meta property="og:image:alt" content="WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More">
+  <meta name="twitter:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More", "description": "Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The…", "datePublished": "2026-11-05T12:00:00.000Z", "dateModified": "2026-11-05T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html"}, "isBasedOn": "https://blog.jetbrains.com/webstorm/2026/11/webstorm-2026-3/", "wordCount": 1792}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-05</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More</h1>
+        <p class="lede">Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm is bringing agentic development directly into your IDE, with your choice of coding agents, support for parallel workflows, and IDE-native review and verification.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Building a UI feature with an AI agent often involves more switching between tools than actual coding. You copy values out of Figma, hunt for the right story in Storybook, write the prompt, wait for the agent, and then check the result in the browser and find yourself starting the loop over again. Run multiple sessions with JetBrains and third-party agents in parallel, so you can keep working while each agent finishes its own tasks.</p>
+        <p>You can also pick the right agent for each task without changing how your team works. Figma Connect with the Inspect panel – Get exact CSS values, colors, and design tokens from Figma and hand them to your agent, without having to copy them manually. Storybook Connect – Find, open, and create stories without leaving the IDE, and let AI write the ones you’re missing.</p>
+        <p>Chrome DevTools Connect – Let your agent check and fix its own work in a real browser, so you start your review with a result that has already been tested. Benefit from Stable TypeScript 7 support for React and Angular without migration, plus fixes for WebStorm’s Angular, Sass, CSS, Vitest, Mocha, and Tailwind CSS support. This release also includes many fixes and quality-of-life improvements, which you can learn about below.</p>
+        <p>You can update to WebStorm 2026.3 via the Toolbox App or download it directly from our website . Work with the coding agents of your choice, and run, track, and verify multi-agent workflows inside your IDE, where code intelligence helps agents make fewer wrong turns and gives you the tools to review every change before it ships. Your agents, your models, your subscriptions Air works with Claude Agent, Codex, Gemini, GitHub Copilot, Junie, OpenCode, and other ACP-compatible agents .</p>
+        <p>It detects the agents already installed on your machine so you can connect them in a click, and you can add more from the agent registry. Your existing setup carries over, too: provider subscriptions, API keys, and even a custom base URL all work, with no JetBrains AI subscription required. Run Claude Agent on your Claude subscription in the terminal or in a full-screen IDE tab, use other agent subscriptions in the chat or terminal, and switch between subscriptions at any moment, even mid-session.</p>
+        <p>A central workspace to review changes and guide the agent Review an agent’s changes with the surrounding code and your project tools in view, and send feedback straight back to the agent. Anchor a note to a specific line in the diff, or comment directly from the code, so the agent gets concrete context about the change you want. Free AI agent with Junie Lite Air includes free AI with the Junie Lite configuration, so you can use an agent without a subscription.</p>
+        <p>A notification will offer you a trial of Air. Moving to Air hides AI Assistant, if you wish to return to AI Assistant follow the steps outlined here. Air automatically migrates your IDE skills, MCP configuration, agents installed through ACP, authentication, and chat history.</p>
+        <p>Design to production end-to-end workflow Figma Connect: Inspect designs without leaving WebStorm Implementing a design shouldn’t mean switching between Figma and your editor, pasting links, and copying spacing and color values manually. Add screenshots, URLs, and design values to the context without switching back and forth. Send design context to any agent, such as Claude Code, Codex, or Cursor.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/figmaConnect.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/chromeConnect.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/storybookConnect.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/Sound_settings_with_SSR-1.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/Data-Sharing.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Building a UI feature with an AI agent often involves more switching between tools than actual coding. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>To connect these steps, JetBrains Air is now available directly in WebStorm.</li>
+          <li>Browse and navigate Figma layers from the IDE.</li>
+          <li>Send design context to any agent, such as Claude Code, Codex, or Cursor.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/webstorm/2026/11/webstorm-2026-3/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 07 Nov 2026 11:42:59 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 20:53:36 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -39,6 +39,14 @@
       <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive index updates when a second project closes during indexing and made the workspace model copy files lazily .</description>
+    </item>
+    <item>
+      <title>WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm is bringing agentic development directly into your IDE, with your choice of coding agents, support for parallel workflows, and IDE-native review and verification.</description>
     </item>
     <item>
       <title>WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'</title>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 14 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>That speed brings up a fundamental question for daily container workflows: Do you actually need Rancher Desktop—or Docker Desktop—on Linux? Neither operating system can run Linux containers natively. On Linux, Rancher Desktop runs through QEMU or container isolation.</description>
-    </item>
-    <item>
-      <title>Python vs Go: A Practical Comparison for Developers</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261013-python-vs-go-a-practical-comparison-for-developers-243304af.html</guid>
-      <pubDate>Tue, 13 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Developer Tools</category>
-      <description>Two things are true about Python: It’s the most popular programming language in the world, and it’s the most common companion language for Go developers. But we also know a lot more about the developers who use these two languages – both from quantitative data from different surveys, as well as qualitative data from our interviews with professionals who switched from Python to Go.</description>
     </item>
   </channel>
 </rss>

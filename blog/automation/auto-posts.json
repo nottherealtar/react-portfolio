@@ -49,6 +49,19 @@
     "reading_minutes": 3
   },
   {
+    "title": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More",
+    "date": "2026-11-05",
+    "category": "Developer Tools",
+    "summary": "Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm is bringing agentic development directly into your IDE, with your choice of coding agents, support for parallel workflows, and IDE-native review and verification.",
+    "link": "auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html",
+    "source_url": "https://blog.jetbrains.com/webstorm/2026/11/webstorm-2026-3/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png"
+  },
+  {
     "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
     "date": "2026-11-04",
     "category": "Gaming & Industry",

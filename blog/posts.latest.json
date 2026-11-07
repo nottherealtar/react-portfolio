@@ -33,6 +33,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More",
+      "link": "auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html",
+      "date": "2026-11-05",
+      "summary": "Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm i",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
       "link": "auto/20261104-wow-forever-s-massive-pre-launch-balance-patch-breaks-from-t-f4ab0697.html",
       "date": "2026-11-04",
@@ -87,14 +95,6 @@
       "summary": "The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents t",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "How do AI agents authenticate? (The problem nobody has solved yet)",
-      "link": "auto/20261101-how-do-ai-agents-authenticate-the-problem-nobody-has-solved-55d2b1a5.html",
-      "date": "2026-11-01",
-      "summary": "There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not \"some ag",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

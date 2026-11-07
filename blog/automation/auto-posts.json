@@ -25,6 +25,18 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/image1.jpg"
   },
   {
+    "title": "Beyond code generation: A developer’s guide to agentic engineering",
+    "date": "2026-11-06",
+    "category": "Developer Platform",
+    "summary": "Agents can help you work more efficiently across all of these stages: Plan, Build, Verify, and Observe. You can use Copilot to pull that scattered context into one place, work through the tradeoffs, and turn the decisions into an implementation plan. Build: Move more than one task forward at a time You’re ready to turn that plan into code.",
+    "link": "auto/20261106-beyond-code-generation-a-developer-s-guide-to-agentic-engine-5ab88d15.html",
+    "source_url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "What’s fixed in IntelliJ IDEA 2026.3",
     "date": "2026-11-05",
     "category": "Developer Tools",

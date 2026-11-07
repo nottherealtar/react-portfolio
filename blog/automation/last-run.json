@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-06T22:05:44.554212+00:00",
+  "timestamp": "2026-11-07T11:42:06.350439+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 604,
+  "unseen_candidates": 605,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Vietnam AI & LLM Daily Briefing (Nov 07, 2026)",
-      "link": "auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html",
-      "score": 137.9663,
-      "source": "DEV Community",
+      "title": "Beyond code generation: A developer’s guide to agentic engineering",
+      "link": "auto/20261106-beyond-code-generation-a-developer-s-guide-to-agentic-engine-5ab88d15.html",
+      "score": 133.1613,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -17,6 +17,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Beyond code generation: A developer’s guide to agentic engineering",
+      "link": "auto/20261106-beyond-code-generation-a-developer-s-guide-to-agentic-engine-5ab88d15.html",
+      "date": "2026-11-06",
+      "summary": "Agents can help you work more efficiently across all of these stages: Plan, Build, Verify, and Observe. You can use Copilot to pull that scattered context into one place, work through the tradeoffs, and turn the decision",
+      "category": "Developer Platform",
+      "reading_minutes": 3
+    },
+    {
       "title": "What’s fixed in IntelliJ IDEA 2026.3",
       "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
       "date": "2026-11-05",
@@ -87,14 +95,6 @@
       "summary": "There's no reason agent authentication shouldn't. For agents that need a stable identity across runs, generate once and store the private key. When it calls a tool, the server logs exactly which DID called — not \"some ag",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Di-Hydro Shows How AI and Digital Twins Can Improve Hydropower Operations",
-      "link": "auto/20261101-di-hydro-shows-how-ai-and-digital-twins-can-improve-hydropow-6669d503.html",
-      "date": "2026-11-01",
-      "summary": "The EU-funded Di-Hydro project is testing how AI, digital twins, forecasting and sensor networks can help hydropower operators make better operational decisions. From fragmented operational data to decision support At th",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

@@ -41,6 +41,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200",
+      "link": "auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html",
+      "date": "2026-11-05",
+      "summary": "In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
       "link": "auto/20261104-wow-forever-s-massive-pre-launch-balance-patch-breaks-from-t-f4ab0697.html",
       "date": "2026-11-04",
@@ -87,14 +95,6 @@
       "summary": "\"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on sto",
       "category": "Gaming & Industry",
       "reading_minutes": 4
-    },
-    {
-      "title": "Empowering AI Agents with agent-desktop",
-      "link": "auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html",
-      "date": "2026-11-02",
-      "summary": "The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents t",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

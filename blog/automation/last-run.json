@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-07T20:52:12.300675+00:00",
+  "timestamp": "2026-11-08T11:54:37.042211+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 617,
-  "unseen_candidates": 604,
+  "unseen_candidates": 603,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More",
-      "link": "auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html",
-      "score": 121.1701,
-      "source": "JetBrains Blog",
+      "title": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200",
+      "link": "auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html",
+      "score": 120.5971,
+      "source": "Microsoft Azure Blog",
       "text_engine": "embedding-mmr"
     }
   ],

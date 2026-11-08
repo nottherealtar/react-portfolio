@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200 | TarsOnlineCafe</title>
+  <meta name="description" content="In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200">
+  <meta property="og:description" content="In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html">
+  <meta property="article:published_time" content="2026-11-05T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Cloud Automation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200">
+  <meta name="twitter:description" content="In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing…">
+  <meta property="og:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg">
+  <meta property="og:image:alt" content="Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200">
+  <meta name="twitter:image" content="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200", "description": "In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing…", "datePublished": "2026-11-05T12:00:00.000Z", "dateModified": "2026-11-05T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html"}, "isBasedOn": "https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/", "wordCount": 1741}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Cloud Automation</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-05</span>
+          <span>Microsoft Azure Blog</span>
+        </div>
+        <h1>Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200</h1>
+        <p class="lede">In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Every Azure chip Microsoft has built started as electronic design automation (EDA) jobs used to design, test, and validate silicon before it is manufactured. This includes simulation sweeps that run for days, verification regressions that fan out across thousands of cores overnight, and physical signoff runs that use hundreds of gigabytes of memory for a single block. Together, these workloads account for hundreds of millions of compute jobs each year.</p>
+        <p>Today we’re sharing early results from our next step in that evolution: running EDA workloads on Azure Cobalt 200 , Azure’s custom compute infrastructure built on the Arm Neoverse CSS V3. Traditionally, EDA workloads ran on fixed, on-premise x86 server capacity, sized for peak demand with periods of underutilization. The shift to cloud-based EDA on Microsoft Azure offered a new level of flexibility, scale, and reliability on compute-intensive silicon design workloads.</p>
+        <p>Using Azure Cobalt-based virtual machine (VM) instances, silicon engineering teams at Microsoft are experiencing significant performance and efficiency improvements on EDA workloads that Azure customers are seeing across many workloads—optimizing the performance and speed of designing increasingly sophisticated silicon for increasingly complex cloud systems. In this blog, we highlight results from Cadence Xcelium and Cadence Spectre, Synopsys PrimeTime and Synopsys VCS, and Siemens Calibre tools. EDA spans workloads with very…</p>
+        <p>Functional and formal verification — throughput-driven, with large numbers of independent jobs running concurrently. Implementation and signoff — memory-intensive and bandwidth-sensitive, with long-running jobs. For computer-aided design (CAD) managers, predictable per-core performance is essential to planning overnight regressions.</p>
+        <p>Per-core performance measured on a lightly loaded VM does not necessarily hold as concurrency increases. Verification farms need predictable throughput when VMs are heavily loaded. Cobalt 200 combines physical cores without the overhead of hyperthreading, dedicated 3MB L2 cache per core, and high provisioned memory bandwidth to support concurrent workloads.</p>
+        <p>These core and memory architecture characteristics support strong per-core performance at high utilization. We tested Cobalt 200 with workloads from several stages of Microsoft’s silicon development flow, including RTL and gate-level simulation, static timing, physical verification, and analog simulation, comparing job completion time with Cobalt 100 and selected x86 Azure VMs. All tested VMs were configured with the maximum number of cores possible for high throughput 5 , multiple jobs were concurrently executed on the VM to…</p>
+        <p>For the Cobalt 100, Cobalt 200, and hx176rs configurations, logical cores are also physical cores. Cadence Xcelium and Synopsys VCS are tools used to simulate and verify digital designs. RTL simulation is central to functional verification and can consume significant compute capacity as teams run large regression suites.</p>
+        <p>When testing RTL workloads using both simulators, optimally loaded Cobalt 200 systems delivered significantly greater peak throughput than the previous generation. For the workload tested on Xcelium and VCS, Cobalt 200 delivered more than 40% higher throughput per logical core than any other system we tested . Throughput is normalized per logical core to account for the VMs’ different core counts.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg" alt="Bar chart comparing Cadence Xcelium RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 4.15x throughput, compared with 2.89x for x86-A and 1.67x for x86-B, delivering at least 40% higher" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-VCS-RTL-Simulation-Throughput-1024x602.jpg" alt="Bar chart comparing Synopsys VCS RTL simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.58x throughput, compared with 1.84x for x86-A and 1.32x for x86-B, delivering at least 40% higher th" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Spectre-Analog-Simulation-Throughput-1-1024x570.jpg" alt="Bar chart comparing Cadence Spectre analog simulation throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.38x throughput, compared with 1.24x for x86-A and 0.91x for x86-B, delivering the highest thro" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/261102_Cobalt-EDA_Blog-1024x576.webp" alt="Bar chart comparing Siemens Calibre DRC performance using 16 cores, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 1.30x performance, compared with 0.86x for x86-A and 1.08x for x86-B, delivering the highest p" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Synopsys-PrimeTime-Static-Timing-Throughput-1024x570.jpg" alt="Bar chart comparing Synopsys PrimeTime static timing throughput, normalized to Azure Cobalt 100. Azure Cobalt 200 achieves 2.03x throughput, compared with 1.45x for x86-A and 1.21x for x86-B, delivering the highest throu" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Infrastructure-Dark-scaled.jpg" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>For the PrimeTime workload tested with 16 cores per job, Cobalt 200 delivered 2x the peak throughput per logical core of Cobalt 100 and exceeded the selected x86 Azure VMs. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Using Azure Cobalt-based virtual machine (VM) instances, silicon engineering teams at Microsoft are experiencing significant performance and efficiency improvements on EDA…</li>
+          <li>Cobalt 200 was optimized for EDA workloads through increased cache size and improved memory bandwidth per core.</li>
+          <li>We tested Cadence Spectre on Cobalt 200 and observed 38% higher throughput per logical core generation over generation, and delivered 11-52% higher throughput per logical core…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/" target="_blank" rel="noopener noreferrer">Microsoft Azure Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

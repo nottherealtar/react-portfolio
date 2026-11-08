@@ -62,6 +62,19 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/jetbrains_air_one_place_to_run_agents.png"
   },
   {
+    "title": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200",
+    "date": "2026-11-05",
+    "category": "Cloud Automation",
+    "summary": "In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.",
+    "link": "auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/designing-azure-silicon-on-azure-silicon-eda-workloads-on-cobalt-200/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Cadence-Xcelium-RTLSimulation-Throughput-1-1024x575.jpg"
+  },
+  {
     "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
     "date": "2026-11-04",
     "category": "Gaming & Industry",

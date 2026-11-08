@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Memory and Knowledge Systems — Ch.05: Hybrid LLM Systems [EN]",
+      "link": "auto/20261108-memory-and-knowledge-systems-ch-05-hybrid-llm-systems-en-70fcc1cd.html",
+      "date": "2026-11-08",
+      "summary": "Memory and Knowledge Systems Hybrid Large Language Model (LLM) systems represent an architectural approach that combines the generative and reasoning capabilities of language models with external knowledge, retrieval mec",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Vietnam AI & LLM Daily Briefing (Nov 07, 2026)",
       "link": "auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html",
       "date": "2026-11-06",
@@ -87,14 +95,6 @@
       "summary": "We’re back with the results of our third DataGrip and Database Tools User Experience Survey. The first part of the survey focused on who you are, which tools you use, and what your daily database work looks like. This ye",
       "category": "Developer Tools",
       "reading_minutes": 3
-    },
-    {
-      "title": "Final Fantasy 14: Evercold's story will have a faster tempo, with worldbuilding in side quests, says Yoshi-P—but I'm not sure that was the problem with Dawntrail",
-      "link": "auto/20261102-final-fantasy-14-evercold-s-story-will-have-a-faster-tempo-w-ff552717.html",
-      "date": "2026-11-02",
-      "summary": "\"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on sto",
-      "category": "Gaming & Industry",
-      "reading_minutes": 4
     }
   ]
 }

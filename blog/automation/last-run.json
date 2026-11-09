@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-08T21:07:18.807128+00:00",
+  "timestamp": "2026-11-09T13:51:22.131610+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Memory and Knowledge Systems — Ch.05: Hybrid LLM Systems [EN]",
-      "link": "auto/20261108-memory-and-knowledge-systems-ch-05-hybrid-llm-systems-en-70fcc1cd.html",
-      "score": 123.9756,
+      "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
+      "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
+      "score": 129.9415,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

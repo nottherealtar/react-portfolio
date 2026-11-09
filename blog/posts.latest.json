@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
+      "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
+      "date": "2026-11-09",
+      "summary": "It is building a music workflow that behaves like the rest of your production system. What does it cost to keep this feature available through both busy and idle periods, including failed attempts, retries, storage, and ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Memory and Knowledge Systems — Ch.05: Hybrid LLM Systems [EN]",
       "link": "auto/20261108-memory-and-knowledge-systems-ch-05-hybrid-llm-systems-en-70fcc1cd.html",
       "date": "2026-11-08",
@@ -85,14 +93,6 @@
       "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
       "date": "2026-11-03",
       "summary": "Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation steps. JetBrains patches TeamCity Cloud, but certificates uploa",
-      "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "DataGrip and Database Tools User Experience Survey #3 Results",
-      "link": "auto/20261103-datagrip-and-database-tools-user-experience-survey-3-results-fbd36001.html",
-      "date": "2026-11-03",
-      "summary": "We’re back with the results of our third DataGrip and Database Tools User Experience Survey. The first part of the survey focused on who you are, which tools you use, and what your daily database work looks like. This ye",
       "category": "Developer Tools",
       "reading_minutes": 3
     }

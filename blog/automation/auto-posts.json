@@ -1,5 +1,17 @@
 [
   {
+    "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
+    "date": "2026-11-09",
+    "category": "Coding & Community",
+    "summary": "It is building a music workflow that behaves like the rest of your production system. What does it cost to keep this feature available through both busy and idle periods, including failed attempts, retries, storage, and engineering time? Treat generation as a job, not an HTTP response Audio generation is long-running work.",
+    "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
+    "source_url": "https://dev.to/germey/the-hard-part-of-ai-music-isnt-generation-its-everything-around-it-3j76",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Memory and Knowledge Systems — Ch.05: Hybrid LLM Systems [EN]",
     "date": "2026-11-08",
     "category": "Coding & Community",

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Front End Observability: Why Your window.onerror Reports Say &quot;Script error.&quot; (and How to Fix Them) | TarsOnlineCafe</title>
+  <meta name="description" content="A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Front End Observability: Why Your window.onerror Reports Say &quot;Script error.&quot; (and How to Fix Them)">
+  <meta property="og:description" content="A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html">
+  <meta property="article:published_time" content="2026-11-10T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Front End Observability: Why Your window.onerror Reports Say &quot;Script error.&quot; (and How to Fix Them)">
+  <meta name="twitter:description" content="A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Front End Observability: Why Your window.onerror Reports Say &quot;Script error.&quot; (and How to Fix Them)">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Front End Observability: Why Your window.onerror Reports Say \"Script error.\" (and How to Fix Them)", "description": "A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error…", "datePublished": "2026-11-10T12:00:00.000Z", "dateModified": "2026-11-10T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html"}, "isBasedOn": "https://dev.to/codewithrajat/front-end-observability-why-your-windowonerror-reports-say-script-error-and-how-to-fix-them-43a2", "wordCount": 2063}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-11-10</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Front End Observability: Why Your window.onerror Reports Say &quot;Script error.&quot; (and How to Fix Them)</h1>
+        <p class="lede">A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error reports that die when the tab closes. MDN also notes that it only fires for script errors thrown synchronously, such as during initial load or inside event handlers. Assigning window.onerror replaces whatever was there.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Support forwards a screenshot: a customer&#x27;s checkout page is blank. You open your error dashboard, and there it is, forty times since lunch: No file, no stack, no line. If you want more write-ups on browser error monitoring and front end observability, follow me here on Medium.</p>
+        <p>I publish practical, copy-pasteable pieces like this one every week. By the end of this article you will know exactly what window.onerror hands you and what it hides. You will build a small, tested error monitor in TypeScript that catches runtime errors, failed resources, and rejected promises, and delivers them reliably.</p>
+        <p>And you will find out why that dashboard shows line 0. Before touching code, let&#x27;s set up the problem. Browsers expose three separate failure channels, and most tutorials only cover one.</p>
+        <p>A rejected promise with no handler fires a different event, unhandledrejection . If you only set window.onerror , you cover the first row and nothing else. Before we get into the examples, a quick note: The code snippets provided here are meant purely for understanding the concept.</p>
+        <p>Some syntax shown may reflect patterns from earlier Angular/React versions. Always refer to the official documentation for the most current API and syntax. Before we get into the examples, a quick note: The code snippets provided here are meant purely for understanding the concept.</p>
+        <p>Some syntax shown may reflect patterns from earlier Angular/React versions. Always refer to the official documentation for the most current API and syntax. Next up: the version of this that almost every project starts with, and why it quietly fails.</p>
+        <p>What does a basic window.onerror handler actually receive? Here is the classic setup: In Chrome, your endpoint receives something like this: Message text varies by browser, and so does the exact line and column in bundled code. Assigning window.onerror replaces whatever was there.</p>
+        <p>If a third-party widget or another monitoring script installed a handler first, you just deleted it. If one installs after you, it deletes yours. You sent the first four arguments and dropped error , which usually holds the Error object and its stack .</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>What does a basic window.onerror handler actually receive? It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Why does window.onerror give you so little?</li>
+          <li>Browsers expose three separate failure channels, and most tutorials only cover one.</li>
+          <li>Errors that happen as the user leaves are exactly the ones you lose.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/codewithrajat/front-end-observability-why-your-windowonerror-reports-say-script-error-and-how-to-fix-them-43a2" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

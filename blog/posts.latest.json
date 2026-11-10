@@ -17,6 +17,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Front End Observability: Why Your window.onerror Reports Say \"Script error.\" (and How to Fix Them)",
+      "link": "auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html",
+      "date": "2026-11-10",
+      "summary": "A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error reports that die when the tab closes. MDN also notes that it only fi",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
       "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
       "date": "2026-11-09",
@@ -87,14 +95,6 @@
       "summary": "\"Over the course of Beta, we came to the realization that trying to hold ourselves roughly to Classic power budgets for each class meant that every new element we added needed to come at the expense of something else. \"O",
       "category": "Gaming & Industry",
       "reading_minutes": 4
-    },
-    {
-      "title": "Solving Flaky Playwright Tests: How We Automated E2E Generation with an AI Agent and MCP",
-      "link": "auto/20261104-solving-flaky-playwright-tests-how-we-automated-e2e-generati-765faefc.html",
-      "date": "2026-11-04",
-      "summary": "Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors feels like an endless chore. In this post, I want to break down an",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

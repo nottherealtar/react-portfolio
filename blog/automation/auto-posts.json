@@ -24,6 +24,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "Front End Observability: Why Your window.onerror Reports Say \"Script error.\" (and How to Fix Them)",
+    "date": "2026-11-10",
+    "category": "Coding & Community",
+    "summary": "A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error reports that die when the tab closes. MDN also notes that it only fires for script errors thrown synchronously, such as during initial load or inside event handlers. Assigning window.onerror replaces whatever was there.",
+    "link": "auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html",
+    "source_url": "https://dev.to/codewithrajat/front-end-observability-why-your-windowonerror-reports-say-script-error-and-how-to-fix-them-43a2",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
     "date": "2026-11-09",
     "category": "Coding & Community",

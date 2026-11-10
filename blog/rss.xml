@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 10 Nov 2026 13:28:11 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 22:22:22 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -23,6 +23,14 @@
       <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Quick answer: Connect GoHighLevel to n8n with the HighLevel node (contacts, opportunities, tasks, calendar) using an OAuth2 Marketplace app, trigger n8n from GoHighLevel with a workflow Webhook action, and use the HTTP Request node for other endpoints. On Zapier, GoHighLevel is the official LeadConnector app.</description>
+    </item>
+    <item>
+      <title>Front End Observability: Why Your window.onerror Reports Say "Script error." (and How to Fix Them)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error reports that die when the tab closes. MDN also notes that it only fires for script errors thrown synchronously, such as during initial load or inside event handlers. Assigning window.onerror replaces whatever was there.</description>
     </item>
     <item>
       <title>The Hard Part of AI Music Isn't Generation—It's Everything Around It</title>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
       <category>Gaming News</category>
       <description>Yes, autumn is here, meaning we're teetering on the cavernous hole of near-nothingness as the entire games industry gives GTA 6 the widest berth imaginable. And the latest edition of the Galaxies Showcase has chucked a few more things onto the 'ooooh intriguing!' pile.</description>
-    </item>
-    <item>
-      <title>Why your platform team shouldn't build an AI context layer (even though they probably could)</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261015-why-your-platform-team-shouldn-t-build-an-ai-context-layer-e-57b47a46.html</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Careers</category>
-      <description>Treating all captured content as equally trustworthy is the single biggest mistake in enterprise AI context layers. This organization is auto-populated rather than manually filed, so knowledge naturally settles into the right spaces instead of pooling into one undifferentiated room that everyone has to wade through.</description>
     </item>
   </channel>
 </rss>

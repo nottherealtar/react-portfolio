@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "GoHighLevel n8n and Zapier Integration: How to Connect GHL, With Real Workflows (2026)",
+    "date": "2026-11-10",
+    "category": "Coding & Community",
+    "summary": "Quick answer: Connect GoHighLevel to n8n with the HighLevel node (contacts, opportunities, tasks, calendar) using an OAuth2 Marketplace app, trigger n8n from GoHighLevel with a workflow Webhook action, and use the HTTP Request node for other endpoints. On Zapier, GoHighLevel is the official LeadConnector app.",
+    "link": "auto/20261110-gohighlevel-n8n-and-zapier-integration-how-to-connect-ghl-wi-398da56f.html",
+    "source_url": "https://dev.to/arslanautomates/gohighlevel-n8n-and-zapier-integration-how-to-connect-ghl-with-real-workflows-2026-1oe3",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
     "date": "2026-11-09",
     "category": "Coding & Community",

@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "GoHighLevel n8n and Zapier Integration: How to Connect GHL, With Real Workflows (2026)",
+      "link": "auto/20261110-gohighlevel-n8n-and-zapier-integration-how-to-connect-ghl-wi-398da56f.html",
+      "date": "2026-11-10",
+      "summary": "Quick answer: Connect GoHighLevel to n8n with the HighLevel node (contacts, opportunities, tasks, calendar) using an OAuth2 Marketplace app, trigger n8n from GoHighLevel with a workflow Webhook action, and use the HTTP R",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
       "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
       "date": "2026-11-09",
@@ -87,14 +95,6 @@
       "summary": "Maintaining E2E test suites is one of those engineering tasks we know is critical, but teams often push aside because scaffolding and debugging selectors feels like an endless chore. In this post, I want to break down an",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Predicting and detecting failures: How Azure strengthens reliability for mission-critical workloads",
-      "link": "auto/20261104-predicting-and-detecting-failures-how-azure-strengthens-reli-63bf2ec4.html",
-      "date": "2026-11-04",
-      "summary": "Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a workload, not after. SAP workloads offer a compelling example of A",
-      "category": "Cloud Automation",
-      "reading_minutes": 4
     }
   ]
 }

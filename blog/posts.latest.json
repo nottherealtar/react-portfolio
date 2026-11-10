@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
+      "link": "auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html",
+      "date": "2026-11-10",
+      "summary": "miHoYo's 2020 action RPG — released September 28, 2020 for Android, iOS, PlayStation 4 and Windows, then PlayStation 5 on April 28, 2021 and Xbox Series X/S on November 20, 2024 — lists Unity as its engine in its infobox",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The Hard Part of AI Music Isn't Generation—It's Everything Around It",
       "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
       "date": "2026-11-09",
@@ -87,14 +95,6 @@
       "summary": "Takeaway : Azure Failure Prediction and Detection (AFPD) is Microsoft Azure’s end-to-end system aiming to catch hardware failures before they interrupt a workload, not after. SAP workloads offer a compelling example of A",
       "category": "Cloud Automation",
       "reading_minutes": 4
-    },
-    {
-      "title": "The eMudhra Certificate Authority Compromise: What It Means for TeamCity",
-      "link": "auto/20261103-the-emudhra-certificate-authority-compromise-what-it-means-f-d2424113.html",
-      "date": "2026-11-03",
-      "summary": "Starting with versions 2026.2.2 and 2026.1.6 , TeamCity shows a health report if the installation still trusts affected certificates, along with remediation steps. JetBrains patches TeamCity Cloud, but certificates uploa",
-      "category": "Developer Tools",
-      "reading_minutes": 3
     }
   ]
 }

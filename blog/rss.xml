@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Mon, 09 Nov 2026 13:52:58 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 00:42:05 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html</guid>
+      <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>miHoYo's 2020 action RPG — released September 28, 2020 for Android, iOS, PlayStation 4 and Windows, then PlayStation 5 on April 28, 2021 and Xbox Series X/S on November 20, 2024 — lists Unity as its engine in its infobox, and it still does after reaching $6.3 billion in total revenue by its fourth anniversary in 2024. Genshin Impact Wikipedia Most explainers stop at "anime + BOTW + gacha = money.</description>
+    </item>
     <item>
       <title>The Hard Part of AI Music Isn't Generation—It's Everything Around It</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
       <category>Developer Platform</category>
       <description>To keep up, repository owners need to track collaborators, deadlines, and follow-ups for each repository. Evergreen is a GitHub App that automates organization hygiene through two workflows: Outside collaborator access reviews. Otherwise, look at recent issue and commit authors and cc the ones who are on the access review team, i.e., the Hubbers actually working in that repo.</description>
-    </item>
-    <item>
-      <title>ScopeKit: Turn a Messy Client Brief into a Quote with Local Gemma</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261015-scopekit-turn-a-messy-client-brief-into-a-quote-with-local-g-def02df7.html</guid>
-      <pubDate>Thu, 15 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>I built ScopeKit , a small local AI workbench for freelancers who need to turn those informal messages into something they can review and quote. Source passages sit beside the suggested tasks so you can trace them back to the request. Gemma identifies the website, gallery, and contact form, then proposes questions, assumptions, and exclusions.</description>
     </item>
   </channel>
 </rss>

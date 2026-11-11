@@ -13,6 +13,18 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png"
   },
   {
+    "title": "Node.js Document Upload and Signed Download from Private Object Storage for Logistics",
+    "date": "2026-11-11",
+    "category": "Coding & Community",
+    "summary": "An object key can make operational boundaries obvious: The snapshot ID matters more than the filename. A logistics customer can upload several documents named delivery-note.pdf , and a replacement should not silently change the bytes that an earlier audit refers to. It keeps the authorization decision testable and prevents a storage SDK from becoming the place where tenant policy is hidden.",
+    "link": "auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html",
+    "source_url": "https://dev.to/jerichorhodes5847/nodejs-document-upload-and-signed-download-from-private-object-storage-for-logistics-1369",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
     "date": "2026-11-10",
     "category": "Coding & Community",

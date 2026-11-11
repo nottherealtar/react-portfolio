@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 11 Nov 2026 12:43:31 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 23:28:38 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
       <category>Developer Tools</category>
       <description>This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a lighter, Verse-focused setup, open the generated .code-workspace file.</description>
+    </item>
+    <item>
+      <title>Node.js Document Upload and Signed Download from Private Object Storage for Logistics</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>An object key can make operational boundaries obvious: The snapshot ID matters more than the filename. A logistics customer can upload several documents named delivery-note.pdf , and a replacement should not silently change the bytes that an earlier audit refers to. It keeps the authorization decision testable and prevents a storage SDK from becoming the place where tenant policy is hidden.</description>
     </item>
     <item>
       <title>Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World</title>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Free ledger apps like Khatabook and OkCredit exist, but they ask the shopkeeper to type every entry into a phone, on top of the notebook he already keeps. He'd be paying to not change his habit: he keeps writing in the notebook, and once a week he photographs the new pages and gets every balance plus a ready-to-send reminder for each customer.</description>
-    </item>
-    <item>
-      <title>Brownfield Kubeflow on RKE2: Swapping Dex &amp; SeaweedFS for Keycloak &amp; Ceph RGW</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261017-brownfield-kubeflow-on-rke2-swapping-dex-seaweedfs-for-keycl-6a4d7c9b.html</guid>
-      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object storage, MySQL for state, and a mesh-wide trust model that doesn't match any real cluster I know of. Kubeflow is a nine-component platform, and almost everything people compare it to replaces exactly one of those components.</description>
     </item>
   </channel>
 </rss>

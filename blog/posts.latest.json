@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Node.js Document Upload and Signed Download from Private Object Storage for Logistics",
+      "link": "auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html",
+      "date": "2026-11-11",
+      "summary": "An object key can make operational boundaries obvious: The snapshot ID matters more than the filename. A logistics customer can upload several documents named delivery-note.pdf , and a replacement should not silently cha",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
       "link": "auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html",
       "date": "2026-11-10",
@@ -86,14 +94,6 @@
       "date": "2026-11-05",
       "summary": "Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm i",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Designing Azure silicon on Azure silicon: EDA workloads on Cobalt 200",
-      "link": "auto/20261105-designing-azure-silicon-on-azure-silicon-eda-workloads-on-co-7f137960.html",
-      "date": "2026-11-05",
-      "summary": "In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

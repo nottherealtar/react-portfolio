@@ -1,5 +1,18 @@
 [
   {
+    "title": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration",
+    "date": "2026-11-11",
+    "category": "Developer Tools",
+    "summary": "This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a lighter, Verse-focused setup, open the generated .code-workspace file.",
+    "link": "auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html",
+    "source_url": "https://blog.jetbrains.com/dotnet/2026/11/11/rider-2026-3-for-gamedev/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png"
+  },
+  {
     "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
     "date": "2026-11-10",
     "category": "Coding & Community",

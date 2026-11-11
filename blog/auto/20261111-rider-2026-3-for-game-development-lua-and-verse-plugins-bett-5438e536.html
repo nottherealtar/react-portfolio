@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration | TarsOnlineCafe</title>
+  <meta name="description" content="This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration">
+  <meta property="og:description" content="This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html">
+  <meta property="article:published_time" content="2026-11-11T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Tools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration">
+  <meta name="twitter:description" content="This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR…">
+  <meta property="og:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png">
+  <meta property="og:image:alt" content="Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration">
+  <meta name="twitter:image" content="https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration", "description": "This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR…", "datePublished": "2026-11-11T12:00:00.000Z", "dateModified": "2026-11-11T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html"}, "isBasedOn": "https://blog.jetbrains.com/dotnet/2026/11/11/rider-2026-3-for-gamedev/", "wordCount": 1352}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Tools</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-11</span>
+          <span>JetBrains Blog</span>
+        </div>
+        <h1>Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration</h1>
+        <p class="lede">This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a lighter, Verse-focused setup, open the generated .code-workspace file.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Rider 2026.3 brings improvements to the workflows you rely on to write, run, and debug games. The plugin supports Lua 5.1–5.4, LuaJIT, and Luau, with: Code completion, documentation, parameter information, and inlay hints. Navigation, Find Usages , call hierarchy, and require path resolution.</p>
+        <p>Refactorings such as Rename , Extract Function , Inline , and Change Signature . It also understands existing EmmyLua, LuaLS, and LDoc comments, as well as Luau type annotations, so you can keep the annotations your project already uses. The new Verse Language plugin uses Rider’s own language engine to offer Verse support without requiring an external language server.</p>
+        <p>It provides syntax highlighting, error detection, code completion, navigation, Find Usages , and Quick Documentation . These capabilities are also available to AI agents through Rider’s MCP server. The plugin is available in Beta through JetBrains Marketplace.</p>
+        <p>Cross-language navigation between C++ and Verse is not yet supported. Command-line argument presets: Keep your launch scenarios ready With different maps, log levels, and test flags, you often have to run the same game with different arguments. Rider’s built-in command-line argument presets replace the EzArgs plugin .</p>
+        <p>Create a shared list of arguments, organize them into presets, and choose a preset from the main toolbar before running or debugging. Presets are independent of run configurations, so you can reuse the same arguments across Debug and Release builds. Arguments support types and validation, and you can toggle individual arguments or entire folders.</p>
+        <p>Already have a command line saved in EzArgs or elsewhere? Paste it into Import Args from Command Line to split it into arguments and detect their types automatically. You can share presets through version control or move them between projects using XML import and export.</p>
+        <p>Godot: Bring your editor, code, and scene together Rider and the Godot Editor now have a live connection, making it easier to switch between your code and the scene you’re building. You can debug the current scene in C# or GDScript. If you use C#, the scene launches through the Godot Editor with Rider’s debugger attached from the first frame.</p>
+        <p>You can use Godot’s embedded game window to pause execution or adjust game speed while Rider handles your breakpoints. You can also right-click a file in either application to open it in the other. To enable the connection, install and enable the JetBrains Rider Integration add-on from the Godot Asset Store.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/lua-2.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/verse-1.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/cmd-args-presets.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/godot-debug-completion.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/natvis-2.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://blog.jetbrains.com/wp-content/uploads/2026/11/databreakpoints-1-new-design.png" alt="Illustration from the linked source article" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>Rider 2026.3 brings Godot-aware debugging to both C# and GDScript. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Rider 2026.3 brings improvements to the workflows you rely on to write, run, and debug games.</li>
+          <li>Lua and Verse: New language plugins in Beta Lua: Work with scripts alongside your C++ or C# code If your project combines C++ or C# with Lua scripts, this release will…</li>
+          <li>If you use C#, the scene launches through the Godot Editor with Rider’s debugger attached from the first frame.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://blog.jetbrains.com/dotnet/2026/11/11/rider-2026-3-for-gamedev/" target="_blank" rel="noopener noreferrer">JetBrains Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration",
+      "link": "auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html",
+      "date": "2026-11-11",
+      "summary": "This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
       "link": "auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html",
       "date": "2026-11-10",
@@ -87,14 +95,6 @@
       "summary": "In our silicon design environment, the evaluated EDA workloads ran with 1.30x to 4.15x more performance than on Cobalt 100 across a range of testing scenarios, from simulation to verification to static timing analysis.",
       "category": "Cloud Automation",
       "reading_minutes": 3
-    },
-    {
-      "title": "WoW: Forever's massive pre-launch balance patch breaks from the chains Classic power, increasing 'the health of higher level creatures to compensate'",
-      "link": "auto/20261104-wow-forever-s-massive-pre-launch-balance-patch-breaks-from-t-f4ab0697.html",
-      "date": "2026-11-04",
-      "summary": "\"Over the course of Beta, we came to the realization that trying to hold ourselves roughly to Classic power budgets for each class meant that every new element we added needed to come at the expense of something else. \"O",
-      "category": "Gaming & Industry",
-      "reading_minutes": 4
     }
   ]
 }

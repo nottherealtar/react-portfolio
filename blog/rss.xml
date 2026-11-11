@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 10 Nov 2026 22:22:22 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 12:43:31 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html</guid>
+      <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a lighter, Verse-focused setup, open the generated .code-workspace file.</description>
+    </item>
     <item>
       <title>Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>The v1.11 multi-user install brings Dex for identity (behind its own oauth2-proxy, wired into Istio as an external authorizer), SeaweedFS for object storage, MySQL for state, and a mesh-wide trust model that doesn't match any real cluster I know of. Kubeflow is a nine-component platform, and almost everything people compare it to replaces exactly one of those components.</description>
-    </item>
-    <item>
-      <title>11 games and announcements that got us excited in the latest Galaxies Showcase</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261016-11-games-and-announcements-that-got-us-excited-in-the-latest-dc55187d.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261016-11-games-and-announcements-that-got-us-excited-in-the-latest-dc55187d.html</guid>
-      <pubDate>Fri, 16 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Gaming News</category>
-      <description>Yes, autumn is here, meaning we're teetering on the cavernous hole of near-nothingness as the entire games industry gives GTA 6 the widest berth imaginable. And the latest edition of the Galaxies Showcase has chucked a few more things onto the 'ooooh intriguing!' pile.</description>
     </item>
   </channel>
 </rss>

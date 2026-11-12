@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
+      "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
+      "date": "2026-11-12",
+      "summary": "Applications, Helm charts, operators, admission controllers, networking components, storage drivers, monitoring agents, and automation tools must all support the target version. Let's build a practical roadmap that helps",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration",
       "link": "auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html",
       "date": "2026-11-11",
@@ -85,14 +93,6 @@
       "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
       "date": "2026-11-05",
       "summary": "IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive in",
-      "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "WebStorm 2026.3: New Design-Code-Production Workflow, JetBrains Air in WebStorm, and More",
-      "link": "auto/20261105-webstorm-2026-3-new-design-code-production-workflow-jetbrain-271820a9.html",
-      "date": "2026-11-05",
-      "summary": "Figma Connect, now with the Inspect panel, puts design details right in the chat. Storybook Connect shows you and your agents which components to reuse. The highlights of this release include: JetBrains Air in WebStorm i",
       "category": "Developer Tools",
       "reading_minutes": 3
     }

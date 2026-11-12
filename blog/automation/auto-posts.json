@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
+    "date": "2026-11-12",
+    "category": "Coding & Community",
+    "summary": "Applications, Helm charts, operators, admission controllers, networking components, storage drivers, monitoring agents, and automation tools must all support the target version. Let's build a practical roadmap that helps teams stop postponing Kubernetes upgrades and start treating them as regular platform maintenance. For example, a workload might still use an API that Kubernetes deprecated several releases ago.",
+    "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
+    "source_url": "https://dev.to/varunvarde/the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-deprecated-apis-broken-add-ons-and-3kfa",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fadtrm8eieg8deizpqutf.png"
+  },
+  {
     "title": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration",
     "date": "2026-11-11",
     "category": "Developer Tools",

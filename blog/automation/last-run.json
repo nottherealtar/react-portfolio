@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-11T23:27:34.678236+00:00",
+  "timestamp": "2026-11-12T13:44:08.892592+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Node.js Document Upload and Signed Download from Private Object Storage for Logistics",
-      "link": "auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html",
-      "score": 132.9779,
+      "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
+      "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
+      "score": 145.9505,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

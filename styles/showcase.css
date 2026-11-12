@@ -339,7 +339,7 @@
 }
 
 .work-subtitle {
-  margin-bottom: 0;
+  margin: 0 auto;
   max-width: 520px;
 }
 
@@ -424,6 +424,24 @@
   background: rgba(18, 12, 8, 0.75);
   margin-bottom: 1rem;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.featured-browser-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.3s ease;
+}
+
+.featured-browser-link:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 169, 110, 0.28);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.34);
+}
+
+.featured-browser-link:focus-visible {
+  outline: 2px solid var(--crema, #c9a96e);
+  outline-offset: 3px;
 }
 
 .featured-browser-chrome {
@@ -724,9 +742,11 @@
 .signature-spotlight-footnote {
   text-align: center;
   font-size: 0.78rem;
+  line-height: 1.55;
   color: rgba(161, 134, 111, 0.85);
-  margin: 0 auto 2.5rem;
-  max-width: 36rem;
+  margin: clamp(1.75rem, 3vw, 2.25rem) auto 0;
+  max-width: 34rem;
+  padding: 0 0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {

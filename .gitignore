@@ -23,3 +23,8 @@ emb_flag.txt
 claimed-mercury-*.log
 
 .tmp-ember-qa-vercel/
+
+# Secrets
+.env
+.env.*
+!.env.example

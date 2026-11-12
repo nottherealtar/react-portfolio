@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-12T13:44:08.892592+00:00",
+  "timestamp": "2026-11-12T22:43:09.772942+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 618,
-  "unseen_candidates": 604,
+  "unseen_candidates": 605,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
-      "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
-      "score": 145.9505,
+      "title": "Two small models ship in my Markdown editor. Three more didn't.",
+      "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
+      "score": 123.9626,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

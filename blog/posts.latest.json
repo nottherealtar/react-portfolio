@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Two small models ship in my Markdown editor. Three more didn't.",
+      "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
+      "date": "2026-11-12",
+      "summary": "Each model picks one answer from a fixed list, like which language a code block is in. It got 391 suggestions right at 93.8% precision, against 380 at 93.1% for the model already in the app. Marksage is a Markdown editor",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
       "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
       "date": "2026-11-12",
@@ -86,14 +94,6 @@
       "date": "2026-11-06",
       "summary": "Agents can help you work more efficiently across all of these stages: Plan, Build, Verify, and Observe. You can use Copilot to pull that scattered context into one place, work through the tradeoffs, and turn the decision",
       "category": "Developer Platform",
-      "reading_minutes": 3
-    },
-    {
-      "title": "What’s fixed in IntelliJ IDEA 2026.3",
-      "link": "auto/20261105-what-s-fixed-in-intellij-idea-2026-3-7bad5f33.html",
-      "date": "2026-11-05",
-      "summary": "IntelliJ IDEA 2026.3 ships over 1,000 bug fixes and over 300 performance fixes . Among others, Spring Boot inlay hints , property highlighting , and JPA entity analysis no longer stall the editor. We removed excessive in",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

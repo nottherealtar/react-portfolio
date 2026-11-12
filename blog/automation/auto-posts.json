@@ -1,5 +1,18 @@
 [
   {
+    "title": "Two small models ship in my Markdown editor. Three more didn't.",
+    "date": "2026-11-12",
+    "category": "Coding & Community",
+    "summary": "Each model picks one answer from a fixed list, like which language a code block is in. It got 391 suggestions right at 93.8% precision, against 380 at 93.1% for the model already in the app. Marksage is a Markdown editor I built.",
+    "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
+    "source_url": "https://dev.to/pablofelps/two-small-models-ship-in-my-markdown-editor-three-more-didnt-a7h",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0riflcwpk3isjk84qxk0.png"
+  },
+  {
     "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
     "date": "2026-11-12",
     "category": "Coding & Community",

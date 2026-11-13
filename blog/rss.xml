@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 13 Nov 2026 13:04:25 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 22:36:19 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html</guid>
+      <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-permissive infrastructure, and no record of who changed what.</description>
+    </item>
     <item>
       <title>GitHub availability report: October 2026</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261113-github-availability-report-october-2026-126f7948.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a universal verdict Google reports 77.9% on DeepSWE v1.1, describing Argon as state of the art on this long-horizon software engineering evaluation.</description>
-    </item>
-    <item>
-      <title>Building Locdex: Exploring Local AI Models and the Architecture of Coding Agents</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261019-building-locdex-exploring-local-ai-models-and-the-architectu-1b292433.html</guid>
-      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>When my cofounder and I began developing Locdex, our initial objective was to create an open-source AI coding assistant that could operate locally without requiring paid cloud inference for every development task, but as development progressed, we began exploring the underlying architecture required to make local coding agents more effective.</description>
     </item>
   </channel>
 </rss>

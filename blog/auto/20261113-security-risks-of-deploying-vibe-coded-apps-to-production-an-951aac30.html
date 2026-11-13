@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One | TarsOnlineCafe</title>
+  <meta name="description" content="The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization,…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One">
+  <meta property="og:description" content="The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization,…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html">
+  <meta property="article:published_time" content="2026-11-13T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One">
+  <meta name="twitter:description" content="The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization,…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One", "description": "The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization,…", "datePublished": "2026-11-13T12:00:00.000Z", "dateModified": "2026-11-13T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html"}, "isBasedOn": "https://dev.to/noahcontrolplane/security-risks-of-deploying-vibe-coded-apps-to-production-and-who-fixes-each-one-3pg5", "wordCount": 1899}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-11-13</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One</h1>
+        <p class="lede">The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-permissive infrastructure, and no record of who changed what.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Fix the code-level risks with human review and automated scanning before release, and close the infrastructure risks by deploying to a platform with private networking, managed secrets, least-privilege workload identity, and an audit trail by default. Disclosure: Control Plane publishes this guide. Code flaws (injection, XSS, insecure defaults).</p>
+        <p>AI tools often reproduce insecure patterns from training data. Fix with human code review and static analysis in CI. Broken authorization and missing tenant checks.</p>
+        <p>Generated code often skips per-record access checks. Fix with server-side authorization logic reviewed by a human and tested with two accounts. AI may suggest packages that do not exist, which attackers can register, or versions with known CVEs.</p>
+        <p>Fix with a human check on every new dependency, a committed lockfile, and software composition analysis in CI. API keys and database URLs end up in source code and frontend bundles. Fix by rotating every exposed key, moving calls that need a key to the server, and injecting server-side secrets at runtime through the platform.</p>
+        <p>Databases reachable from the internet, no outbound restrictions, long-lived admin keys. Fix with platform-level private networking, allowlist firewalls, and short-lived workload identity scoped by a reviewed IAM role. Sensitive data shares a database user, credentials, and network path with the rest of the app.</p>
+        <p>Fix with separate workloads, database users, and credentials for sensitive data. Shadow deployments and missing logs make incident response slow and uncertain. Fix with a tamper-proof audit trail of platform changes, plus application logs that record sign-ins, permission changes, and data exports.</p>
+        <p>Prompt injection, data leakage through prompts, exposed provider keys, and unbounded spend. Reduce the risk with server-side API calls, least-privilege tool access, human approval for high-risk actions, per-user limits, and output sanitization. No current technique fully prevents prompt injection.</p>
+        <p>Control Plane closes the infrastructure layer: private networking by default, external and internal firewalls, runtime secrets with policy-based access, Control Plane’s Universal Cloud Identity for short-lived cloud credentials, workload isolation, mTLS between services, and a tamper-proof audit trail. It does not scan your source code or fix your authorization logic. Vibe-coded applications can ship faster than anyone reviews them.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Fix the code-level risks with human review and automated scanning before release, and close the infrastructure risks by deploying to a platform with private networking, managed secrets, least-privilege workload identity, and an audit trail by default. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Fix with a tamper-proof audit trail of platform changes, plus application logs that record sign-ins, permission changes, and data exports.</li>
+          <li>Prompt injection, data leakage through prompts, exposed provider keys, and unbounded spend.</li>
+          <li>Code that runs can still be insecure.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/noahcontrolplane/security-risks-of-deploying-vibe-coded-apps-to-production-and-who-fixes-each-one-3pg5" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

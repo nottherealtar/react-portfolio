@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
+      "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
+      "date": "2026-11-13",
+      "summary": "The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-pe",
+      "category": "Coding & Community",
+      "reading_minutes": 2
+    },
+    {
       "title": "GitHub availability report: October 2026",
       "link": "auto/20261113-github-availability-report-october-2026-126f7948.html",
       "date": "2026-11-13",
@@ -86,14 +94,6 @@
       "date": "2026-11-06",
       "summary": "A curated synthesis of breaking artificial intelligence developments, localized Vietnamese AI voice assistants on smart displays, regional applied AI centers of excellence, and critical frontier model safety analyses dir",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Java Annotated Monthly – November 2026",
-      "link": "auto/20261106-java-annotated-monthly-november-2026-9ea1a8f7.html",
-      "date": "2026-11-06",
-      "summary": "October kept the Java world busy, with JDK news, fresh tutorials, Kotlin updates, AI experiments, and plenty more from across the wider ecosystem. I believe VOs will change the way we think about and work with data in Ja",
-      "category": "Developer Tools",
       "reading_minutes": 3
     }
   ]

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-13T13:03:25.438429+00:00",
+  "timestamp": "2026-11-13T22:35:04.810821+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 618,
-  "unseen_candidates": 605,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "GitHub availability report: October 2026",
-      "link": "auto/20261113-github-availability-report-october-2026-126f7948.html",
-      "score": 133.3659,
-      "source": "GitHub Blog",
+      "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
+      "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
+      "score": 136.9514,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
+    "date": "2026-11-13",
+    "category": "Coding & Community",
+    "summary": "The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-permissive infrastructure, and no record of who changed what.",
+    "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
+    "source_url": "https://dev.to/noahcontrolplane/security-risks-of-deploying-vibe-coded-apps-to-production-and-who-fixes-each-one-3pg5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "GitHub availability report: October 2026",
     "date": "2026-11-13",
     "category": "Developer Platform",

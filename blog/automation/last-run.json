@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-12T22:43:09.772942+00:00",
+  "timestamp": "2026-11-13T13:03:25.438429+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Two small models ship in my Markdown editor. Three more didn't.",
-      "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
-      "score": 123.9626,
-      "source": "DEV Community",
+      "title": "GitHub availability report: October 2026",
+      "link": "auto/20261113-github-availability-report-october-2026-126f7948.html",
+      "score": 133.3659,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

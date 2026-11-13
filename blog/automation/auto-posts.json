@@ -1,5 +1,18 @@
 [
   {
+    "title": "GitHub availability report: October 2026",
+    "date": "2026-11-13",
+    "category": "Developer Platform",
+    "summary": "The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs stayed queued or failed to start because the service that assigns jobs to GitHub-hosted runners stopped working reliably. We traced the failures to the networking issue.",
+    "link": "auto/20261113-github-availability-report-october-2026-126f7948.html",
+    "source_url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+    "source_name": "GitHub Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?resize=1024%2C466"
+  },
+  {
     "title": "Two small models ship in my Markdown editor. Three more didn't.",
     "date": "2026-11-12",
     "category": "Coding & Community",

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GitHub availability report: October 2026 | TarsOnlineCafe</title>
+  <meta name="description" content="The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261113-github-availability-report-october-2026-126f7948.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="GitHub availability report: October 2026">
+  <meta property="og:description" content="The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261113-github-availability-report-october-2026-126f7948.html">
+  <meta property="article:published_time" content="2026-11-13T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitHub availability report: October 2026">
+  <meta name="twitter:description" content="The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs…">
+  <meta property="og:image" content="https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?resize=1024%2C466">
+  <meta property="og:image:alt" content="GitHub availability report: October 2026">
+  <meta name="twitter:image" content="https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?resize=1024%2C466">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "GitHub availability report: October 2026", "description": "The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs…", "datePublished": "2026-11-13T12:00:00.000Z", "dateModified": "2026-11-13T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?resize=1024%2C466", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261113-github-availability-report-october-2026-126f7948.html"}, "isBasedOn": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/", "wordCount": 1913}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-13</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>GitHub availability report: October 2026</h1>
+        <p class="lede">The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs stayed queued or failed to start because the service that assigns jobs to GitHub-hosted runners stopped working reliably. We traced the failures to the networking issue.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>We continue to share monthly updates on the work behind GitHub’s availability and reliability. However, write outages, monitoring gaps during data migrations, and a regional network disruption reinforced the need for capacity growth to be paired with safer operations, stronger isolation, and validated regional recovery. As of November 9, 140 of 151 production services and 32 of 50 MySQL primaries were running in Azure Central US.</p>
+        <p>Azure served 63% of migrated-service reads, 66% of monolith reads, and 52% of Git reads. We also completed a compute expansion across all nine Central US Kubernetes clusters, more than doubling capacity. That capacity is already carrying real growth.</p>
+        <p>Migrated-service traffic has increased 82% since March, with Central US absorbing the growth beyond the highest weekly-average load previously served from our existing datacenter. This gives GitHub more room to grow without pushing the original environment beyond its prior operating range. We also made several targeted reliability improvements.</p>
+        <p>Actions changes increased capacity for critical Azure control-plane requests. A separate NAT-gateway mitigation reduced usage by 85%; four production jobs failed during the change, compared with approximately 800 expected without the mitigation. Connection limits and other client improvements now also reduce the chance that a dependency interruption becomes a broader reconnect storm.</p>
+        <p>We removed concentrated sources of database load as well. A high-traffic GitHub Actions endpoint handling more than 250 million requests per day moved to a more efficient service path, reducing peak database reads by 85%. Requiring at least three characters before searching repository topics reduced slow or terminated queries for that pattern by approximately 98%.</p>
+        <p>Reliability was still not where it needed to be. The October 7 write outages exposed an unsafe interaction between database orchestration and production routing. An October 29 Azure network disruption affected all three Central US availability zones and at least 34,128 signed-in users.</p>
+        <p>More details on these and other incidents follow. The East US 3 buildout is about one week behind plan. The next phase starts with its first validated traffic ramp in the first week of December, while we continue hardening migration safety, dependency isolation, and regional recovery.</p>
+        <p>The principle remains the same: availability, then capacity, then features. October 05 19:11 UTC (lasting 3 hours and 38 minutes) Duration: approximately 3 hours and 45 minutes. During the worst stretch, which lasted about 90 minutes, most jobs on GitHub-hosted runners did not start within five minutes.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?resize=1024%2C466" alt="Line chart of jobs not starting within five minutes from about 18:20 to 23:20 UTC. During the shaded impact period, the rate rises from near 2% to repeated peaks of roughly 75%, then drops sharply around 21:35 and stays " loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct5-actions-jobs-starting-late.png?w=1636" alt="Line chart of jobs not starting within five minutes from about 18:20 to 23:20 UTC. During the shaded impact period, the rate rises from near 2% to repeated peaks of roughly 75%, then drops sharply around 21:35 and stays " loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct6-requests-failing.png?resize=1024%2C460" alt="Line chart of failing requests from 19:30 to 20:05 UTC. The rate spikes during the shaded impact period, peaking at about 1.3% near 19:48, then quickly returns to near zero. A note says enterprise migrations remained pau" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct6-requests-failing.png?w=1658" alt="Line chart of failing requests from 19:30 to 20:05 UTC. The rate spikes during the shaded impact period, peaking at about 1.3% near 19:48, then quickly returns to near zero. A note says enterprise migrations remained pau" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct19-actions-jobs-starting-late.png?resize=1024%2C473" alt="Line chart of late-starting jobs from about 14:55 to 17:20 UTC. The rate is mostly around 1.5–2% before rising during the shaded impact period to a peak of about 5.3% near 16:16, then returning to roughly 1.5% by 16:45." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://github.blog/wp-content/uploads/2026/11/oct19-actions-jobs-starting-late.png?w=1610" alt="Line chart of late-starting jobs from about 14:55 to 17:20 UTC. The rate is mostly around 1.5–2% before rising during the shaded impact period to a peak of about 5.3% near 16:16, then returning to roughly 1.5% by 16:45." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>We failed over the affected databases and storage to healthy regions, one service at a time, and added capacity. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>However, write outages, monitoring gaps during data migrations, and a regional network disruption reinforced the need for capacity growth to be paired with safer operations,…</li>
+          <li>We removed concentrated sources of database load as well.</li>
+          <li>Customers may have seen GitHub Actions jobs on GitHub-hosted runners stay queued much longer than usual, and some workflow runs failed to start.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/news-insights/company-news/github-availability-report-october-2026/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

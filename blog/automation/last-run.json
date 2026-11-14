@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-13T22:35:04.810821+00:00",
+  "timestamp": "2026-11-14T12:08:05.462866+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
-      "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
-      "score": 136.9514,
+      "title": "KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City",
+      "link": "auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html",
+      "score": 130.9625,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

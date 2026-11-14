@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City",
+      "link": "auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html",
+      "date": "2026-11-14",
+      "summary": "The identity crisis of agents, the integration of MCP into platforms like OpenShift, and the packaged management of agent skills are not fringe topics but the central construction sites for 2027. The coming months will s",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
       "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
       "date": "2026-11-13",
@@ -85,14 +93,6 @@
       "link": "auto/20261108-memory-and-knowledge-systems-ch-05-hybrid-llm-systems-en-70fcc1cd.html",
       "date": "2026-11-08",
       "summary": "Memory and Knowledge Systems Hybrid Large Language Model (LLM) systems represent an architectural approach that combines the generative and reasoning capabilities of language models with external knowledge, retrieval mec",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Vietnam AI & LLM Daily Briefing (Nov 07, 2026)",
-      "link": "auto/20261106-vietnam-ai-llm-daily-briefing-nov-07-2026-e3d4d297.html",
-      "date": "2026-11-06",
-      "summary": "A curated synthesis of breaking artificial intelligence developments, localized Vietnamese AI voice assistants on smart displays, regional applied AI centers of excellence, and critical frontier model safety analyses dir",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

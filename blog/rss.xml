@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 13 Nov 2026 22:36:19 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 12:09:01 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The identity crisis of agents, the integration of MCP into platforms like OpenShift, and the packaged management of agent skills are not fringe topics but the central construction sites for 2027. The coming months will show whether the outlined solution approaches — per-instance identities, versioned skills, and platform-agnostic AI gateways — prove themselves in practice.</description>
+    </item>
     <item>
       <title>Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>It connects natively to your machine's authenticated GitHub CLI ( gh ) session with zero token pasting, computes an instant deterministic 0–100 Health Score across 6 dimensions before calling any AI, cross-verifies every AI claim against your actual Git tree to quarantine hallucinations, and converts verified findings into real GitHub Issues or turnkey AI fix prompts in a single click.</description>
-    </item>
-    <item>
-      <title>Gemini 4 Argon vs GPT-6.1 Sol: Which is better for coding?</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261020-gemini-4-argon-vs-gpt-6-1-sol-which-is-better-for-coding-011aafd7.html</guid>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>For production, developers should set explicit budgets, stream partial results, checkpoint agent state, and require tests or human review before applying code changes. Coding performance: a promising result, not a universal verdict Google reports 77.9% on DeepSWE v1.1, describing Argon as state of the art on this long-horizon software engineering evaluation.</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,17 @@
 [
   {
+    "title": "KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City",
+    "date": "2026-11-14",
+    "category": "Coding & Community",
+    "summary": "The identity crisis of agents, the integration of MCP into platforms like OpenShift, and the packaged management of agent skills are not fringe topics but the central construction sites for 2027. The coming months will show whether the outlined solution approaches — per-instance identities, versioned skills, and platform-agnostic AI gateways — prove themselves in practice.",
+    "link": "auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html",
+    "source_url": "https://dev.to/saaro_net/kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-the-first-announcements-from-salt-lake-2fdg",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
     "date": "2026-11-13",
     "category": "Coding & Community",

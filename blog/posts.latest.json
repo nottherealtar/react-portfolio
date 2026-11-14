@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else",
+      "link": "auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html",
+      "date": "2026-11-14",
+      "summary": "Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one unrepeatable response per failure, so training on it clones what tired hu",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City",
       "link": "auto/20261114-kubecon-na-2026-live-the-identity-crisis-of-ai-agents-and-th-b5ef433d.html",
       "date": "2026-11-14",
@@ -85,14 +93,6 @@
       "link": "auto/20261109-the-hard-part-of-ai-music-isn-t-generation-it-s-everything-a-4fc78ed5.html",
       "date": "2026-11-09",
       "summary": "It is building a music workflow that behaves like the rest of your production system. What does it cost to keep this feature available through both busy and idle periods, including failed attempts, retries, storage, and ",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Memory and Knowledge Systems — Ch.05: Hybrid LLM Systems [EN]",
-      "link": "auto/20261108-memory-and-knowledge-systems-ch-05-hybrid-llm-systems-en-70fcc1cd.html",
-      "date": "2026-11-08",
-      "summary": "Memory and Knowledge Systems Hybrid Large Language Model (LLM) systems represent an architectural approach that combines the generative and reasoning capabilities of language models with external knowledge, retrieval mec",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else | TarsOnlineCafe</title>
+  <meta name="description" content="Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else">
+  <meta property="og:description" content="Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html">
+  <meta property="article:published_time" content="2026-11-14T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else">
+  <meta name="twitter:description" content="Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one…">
+  <meta property="og:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjzz73xeu5rx7zyfviv79.webp">
+  <meta property="og:image:alt" content="The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else">
+  <meta name="twitter:image" content="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjzz73xeu5rx7zyfviv79.webp">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else", "description": "Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one…", "datePublished": "2026-11-14T12:00:00.000Z", "dateModified": "2026-11-14T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjzz73xeu5rx7zyfviv79.webp", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html"}, "isBasedOn": "https://dev.to/natishalom/the-simulator-not-the-archive-your-ai-sre-learns-somewhere-else-2ib", "wordCount": 2007}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-14</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else</h1>
+        <p class="lede">Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one unrepeatable response per failure, so training on it clones what tired humans did. The simulator, not the archive: the follow-up to the harness argument.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>An autonomous SRE should learn the other way: by replaying engineered faults in a sandbox and grading every fix against a known answer. An agent that acts on production learns the way pilots learn: by replaying failure in a controlled environment, against an answer key. In June, a post-KubeCon autopsy on r/sre cut through the noise with a single, organizing insight: features are noise; trust is the signal.</p>
+        <p>The consensus from the engineers on that thread was blunt and uniform. But write access to production remains a hard border. And the vendors&#x27; standard answer to them is wrong.</p>
+        <p>The standard answer is: the agent will earn your trust by learning from your history. Feed it your incidents, your postmortems, your telemetry archive, and it will get better over time. It sounds reasonable, because that is roughly how we imagine human seniority works.</p>
+        <p>In an earlier post I argued that an autonomous SRE needs an agent-native harness, where observability is one sense among several. This post goes one level deeper, into the part of the harness that learns. The claim: an agent learns to fix production by replaying failure in a controlled environment, not by mining what already happened.</p>
+        <p>Consider what your incident history actually is. It is one non-repeatable path through your system&#x27;s life, recorded from the outside. For every incident, exactly one response was tried, by whoever was on call, at 3 a.m., under pressure.</p>
+        <p>There is no reset button and no counterfactual: you cannot know whether the restart fixed it, or the cache expiring fixed it, or the traffic dropping fixed it, because you only got to live that minute once. A logged recovery that follows an action is a correlation, not a verdict. Train an agent on that record and you get an imitation of the past.</p>
+        <p>It is behavioral cloning wearing the vocabulary of learning: the agent reproduces what tired humans did, including their shortcuts and their lucky guesses, with no way to test whether any of it was actually the cure. And the incidents that matter most, the rare, compounding, high-consequence failures, are precisely the ones your archive has almost no examples of. The training data is thinnest exactly where the stakes are highest.</p>
+        <p>They are written by humans, for humans, after the fact, with the inconsistency you would expect from a document produced during recovery week. Ask the engineers: in SRE community threads, postmortems show up as a pain point, not a proud asset. Nobody hands a new hire the postmortem archive and says: read this, then take the pager.</p>
+
+        <h2>Images from the source</h2>
+        <p class="img-disclaimer">HTTPS thumbnails linked for context; rights remain with the original publisher.</p>
+        <div class="figure-grid" role="group" aria-label="Images from the source article">
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjzz73xeu5rx7zyfviv79.webp" alt="Diagram comparing an incident archive&#x27;s single non-repeatable path with a simulator&#x27;s branching replayed attempts" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbcho9c5wcy962gq3wymh.webp" alt="Replay loop: production incidents feed a fault catalog, the agent rehearses in a sandbox, verdicts fill a per-fault-class ledger" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fmy8frchqe829546hxod3.webp" alt="Illustrative ledger table: rehearsals, shadowed incidents, verified success rate and autonomy level per fault class" loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+          <figure class="src-fig"><img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fxk94c3r5froutnbd9grl.webp" alt="Quote card: The archive is a syllabus. The simulator is the school." loading="lazy" decoding="async" referrerpolicy="no-referrer" /></figure>
+        </div>
+
+        <h2>Why this matters</h2>
+        <p>An agent that acts on production learns the way pilots learn: by replaying failure in a controlled environment, against an answer key. It is a useful datapoint for how AI-assisted engineering and operations are converging in production. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The archive tells you what to rehearse.</li>
+          <li>Ask the engineers: in SRE community threads, postmortems show up as a pain point, not a proud asset.</li>
+          <li>Inventory dependent integrations and add regression checks before you widen rollout.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/natishalom/the-simulator-not-the-archive-your-ai-sre-learns-somewhere-else-2ib" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "My Cron Job Returns 200 When Every Fetch Fails",
+      "link": "auto/20261115-my-cron-job-returns-200-when-every-fetch-fails-236637f8.html",
+      "date": "2026-11-15",
+      "summary": "Layer one: an error reporter. Something pings it every 15 minutes, it fetches new jobs per category, scores them against each user's profile with Claude, and emails the good ones. The post calls this a wrong-but-working ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else",
       "link": "auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html",
       "date": "2026-11-14",
@@ -87,14 +95,6 @@
       "summary": "Quick answer: Connect GoHighLevel to n8n with the HighLevel node (contacts, opportunities, tasks, calendar) using an OAuth2 Marketplace app, trigger n8n from GoHighLevel with a workflow Webhook action, and use the HTTP R",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Front End Observability: Why Your window.onerror Reports Say \"Script error.\" (and How to Fix Them)",
-      "link": "auto/20261110-front-end-observability-why-your-window-onerror-reports-say-81466add.html",
-      "date": "2026-11-10",
-      "summary": "A practical guide to browser error monitoring with window.onerror, covering the cross-origin blind spot, resource failures that never bubble, and error reports that die when the tab closes. MDN also notes that it only fi",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -1,5 +1,17 @@
 [
   {
+    "title": "My Cron Job Returns 200 When Every Fetch Fails",
+    "date": "2026-11-15",
+    "category": "Coding & Community",
+    "summary": "Layer one: an error reporter. Something pings it every 15 minutes, it fetches new jobs per category, scores them against each user's profile with Claude, and emails the good ones. The post calls this a wrong-but-working failure.",
+    "link": "auto/20261115-my-cron-job-returns-200-when-every-fetch-fails-236637f8.html",
+    "source_url": "https://dev.to/nabeelbaghoor/my-cron-job-returns-200-when-every-fetch-fails-13k5",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else",
     "date": "2026-11-14",
     "category": "Coding & Community",

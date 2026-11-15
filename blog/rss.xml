@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 14 Nov 2026 21:27:52 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 12:43:46 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one unrepeatable response per failure, so training on it clones what tired humans did. The simulator, not the archive: the follow-up to the harness argument.</description>
+    </item>
+    <item>
+      <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261114-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-7134e7e1.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261114-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-7134e7e1.html</guid>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Tech &amp; Startups</category>
+      <description>Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT into a broader “ super app .</description>
     </item>
     <item>
       <title>KubeCon NA 2026 Live: The Identity Crisis of AI Agents and the First Announcements from Salt Lake City</title>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>Fifty-three percent of respondents named "integrations to internal systems or MCP servers" as one of their two hardest elements to migrate. Lock-in is a concern, but not a buying criteria Eighty-one percent of these leaders agree that frontier labs and hyperscalers make it hard to move between vendors.</description>
-    </item>
-    <item>
-      <title>Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)?</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261021-software-engineering-who-is-a-software-engineer-and-what-is-fddebc7b.html</guid>
-      <pubDate>Wed, 21 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Software Engineering: Who Is a Software Engineer, and What Is the Software Development Life Cycle (SDLC)? A software engineer may analyze the university's requirements, design the system, create the database, write the code, test the application, deploy it, and maintain it.</description>
     </item>
   </channel>
 </rss>

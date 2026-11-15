@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-14T21:26:56.380385+00:00",
+  "timestamp": "2026-11-15T12:42:36.125765+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else",
-      "link": "auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html",
-      "score": 138.9828,
-      "source": "DEV Community",
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "link": "auto/20261114-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-7134e7e1.html",
+      "score": 131.5114,
+      "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }
   ],

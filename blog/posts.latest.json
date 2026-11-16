@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
+      "link": "auto/20261116-freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-wit-8cd345b9.html",
+      "date": "2026-11-16",
+      "summary": "Dreamteam co-founder and CEO Anand Venkatraman (pictured above, right) told TechCrunch that he had repeatedly encountered problems with traditional CRM platforms over more than 25 years in enterprise software, including ",
+      "category": "Tech & Startups",
+      "reading_minutes": 4
+    },
+    {
       "title": "My Cron Job Returns 200 When Every Fetch Fails",
       "link": "auto/20261115-my-cron-job-returns-200-when-every-fetch-fails-236637f8.html",
       "date": "2026-11-15",
@@ -85,14 +93,6 @@
       "link": "auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html",
       "date": "2026-11-10",
       "summary": "miHoYo's 2020 action RPG — released September 28, 2020 for Android, iOS, PlayStation 4 and Windows, then PlayStation 5 on April 28, 2021 and Xbox Series X/S on November 20, 2024 — lists Unity as its engine in its infobox",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "GoHighLevel n8n and Zapier Integration: How to Connect GHL, With Real Workflows (2026)",
-      "link": "auto/20261110-gohighlevel-n8n-and-zapier-integration-how-to-connect-ghl-wi-398da56f.html",
-      "date": "2026-11-10",
-      "summary": "Quick answer: Connect GoHighLevel to n8n with the HighLevel node (contacts, opportunities, tasks, calendar) using an OAuth2 Marketplace app, trigger n8n from GoHighLevel with a workflow Webhook action, and use the HTTP R",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

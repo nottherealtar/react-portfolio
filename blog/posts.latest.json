@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
+      "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
+      "date": "2026-11-16",
+      "summary": "It’s easy to argue the market is already saturated with AI voice startups and technologies, and Tone comes with added risk: Belfort’s co-founder in the business is longtime investor Shervin Pishevar, who has a controvers",
+      "category": "Tech & Startups",
+      "reading_minutes": 4
+    },
+    {
       "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
       "link": "auto/20261116-freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-wit-8cd345b9.html",
       "date": "2026-11-16",
@@ -85,14 +93,6 @@
       "link": "auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html",
       "date": "2026-11-11",
       "summary": "An object key can make operational boundaries obvious: The snapshot ID matters more than the filename. A logistics customer can upload several documents named delivery-note.pdf , and a replacement should not silently cha",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Why Genshin Impact Bet on Unity: The Boring Phone Engine Behind a $6.3B Anime Open World",
-      "link": "auto/20261110-why-genshin-impact-bet-on-unity-the-boring-phone-engine-behi-d6ed1d4d.html",
-      "date": "2026-11-10",
-      "summary": "miHoYo's 2020 action RPG — released September 28, 2020 for Android, iOS, PlayStation 4 and Windows, then PlayStation 5 on April 28, 2021 and Xbox Series X/S on November 20, 2024 — lists Unity as its engine in its infobox",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

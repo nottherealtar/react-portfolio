@@ -1,19 +1,19 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-16T13:36:13.231155+00:00",
+  "timestamp": "2026-11-17T00:46:27.764360+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 618,
-  "unseen_candidates": 604,
+  "unseen_candidates": 605,
   "blocked_domain_candidates": 4,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
-      "link": "auto/20261116-freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-wit-8cd345b9.html",
-      "score": 133.6847,
+      "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
+      "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
+      "score": 110.8264,
       "source": "TechCrunch",
       "text_engine": "embedding-mmr"
     }

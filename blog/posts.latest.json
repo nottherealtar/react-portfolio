@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Maintainers don’t need more AI bug reports. They need fixes.",
+      "link": "auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html",
+      "date": "2026-11-17",
+      "summary": "Anyone pointing a new model at a project should ask its maintainers first and come with fixes, not just findings. Reports and fixes stayed on GitHub, where maintainers already work. The result: Codename MDASH, using Micr",
+      "category": "Developer Platform",
+      "reading_minutes": 2
+    },
+    {
       "title": "Genesis AI raises $500 million to deploy glove-wearing robots",
       "link": "auto/20261117-genesis-ai-raises-500-million-to-deploy-glove-wearing-robots-04d3ec1b.html",
       "date": "2026-11-17",
@@ -87,14 +95,6 @@
       "summary": "Applications, Helm charts, operators, admission controllers, networking components, storage drivers, monitoring agents, and automation tools must all support the target version. Let's build a practical roadmap that helps",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Rider 2026.3 for Game Development: Lua and Verse Plugins, Better C++ Debugging, and Closer Godot Integration",
-      "link": "auto/20261111-rider-2026-3-for-game-development-lua-and-verse-plugins-bett-5438e536.html",
-      "date": "2026-11-11",
-      "summary": "This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a",
-      "category": "Developer Tools",
-      "reading_minutes": 3
     }
   ]
 }

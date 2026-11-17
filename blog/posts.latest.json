@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Genesis AI raises $500 million to deploy glove-wearing robots",
+      "link": "auto/20261117-genesis-ai-raises-500-million-to-deploy-glove-wearing-robots-04d3ec1b.html",
+      "date": "2026-11-17",
+      "summary": "To make his case, Xian hosted TechCrunch at Genesis AI’s Silicon Valley facility, where its physical AI model operated a pair of off-the-shelf robotic arms. The startup’s focus on dexterity — the robot’s ability to do st",
+      "category": "Tech & Startups",
+      "reading_minutes": 3
+    },
+    {
       "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
       "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
       "date": "2026-11-16",
@@ -86,14 +94,6 @@
       "date": "2026-11-11",
       "summary": "This release connects Rider more closely with the Godot Editor, improves debugging for Unreal Engine and custom C++ engines, adds support for Unity CoreCLR Players, and introduces new Lua and Verse plugins in Beta. For a",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Node.js Document Upload and Signed Download from Private Object Storage for Logistics",
-      "link": "auto/20261111-node-js-document-upload-and-signed-download-from-private-obj-1aaf3036.html",
-      "date": "2026-11-11",
-      "summary": "An object key can make operational boundaries obvious: The snapshot ID matters more than the filename. A logistics customer can upload several documents named delivery-note.pdf , and a replacement should not silently cha",
-      "category": "Coding & Community",
       "reading_minutes": 3
     }
   ]

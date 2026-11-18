@@ -25,6 +25,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Continuous improvement comes to Microsoft Foundry",
+      "link": "auto/20261117-continuous-improvement-comes-to-microsoft-foundry-6e8f62d2.html",
+      "date": "2026-11-17",
+      "summary": "Agents on Foundry get better the more you use them. That means you get the right model for the job, while balancing performance, latency, and cost. Foundry: Running and continuously improving agents at scale Once you’ve ",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
       "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
       "date": "2026-11-16",
@@ -87,14 +95,6 @@
       "summary": "The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs stayed queued or failed to start because the service that assig",
       "category": "Developer Platform",
       "reading_minutes": 3
-    },
-    {
-      "title": "Two small models ship in my Markdown editor. Three more didn't.",
-      "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
-      "date": "2026-11-12",
-      "summary": "Each model picks one answer from a fixed list, like which language a code block is in. It got 391 suggestions right at 93.8% precision, against 380 at 93.1% for the model already in the app. Marksage is a Markdown editor",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

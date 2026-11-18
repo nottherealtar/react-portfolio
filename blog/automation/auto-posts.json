@@ -39,6 +39,19 @@
     "hero_image": "https://techcrunch.com/wp-content/uploads/2026/11/IMG_1827-rotated-e1794873583815.jpg?w=680"
   },
   {
+    "title": "Continuous improvement comes to Microsoft Foundry",
+    "date": "2026-11-17",
+    "category": "Cloud Automation",
+    "summary": "Agents on Foundry get better the more you use them. That means you get the right model for the job, while balancing performance, latency, and cost. Foundry: Running and continuously improving agents at scale Once you’ve built your agent, you need a place to run it, govern it, and improve it for all your teams, in every region, alongside hundreds or thousands of other agents.",
+    "link": "auto/20261117-continuous-improvement-comes-to-microsoft-foundry-6e8f62d2.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/continuous-improvement-comes-to-microsoft-foundry/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Continuous_improvement_visual_simplified-1024x696.webp"
+  },
+  {
     "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
     "date": "2026-11-16",
     "category": "Tech & Startups",

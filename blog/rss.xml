@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 17 Nov 2026 23:51:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 13:56:04 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
       <category>Developer Platform</category>
       <description>Anyone pointing a new model at a project should ask its maintainers first and come with fixes, not just findings. Reports and fixes stayed on GitHub, where maintainers already work. The result: Codename MDASH, using Microsoft’s MAI Cyber model, flagged thousands of possible issues across the six projects.</description>
+    </item>
+    <item>
+      <title>Introducing Azure Catalyst agentic modernization and new AI infrastructure innovations</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261117-introducing-azure-catalyst-agentic-modernization-and-new-ai-a64734f2.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261117-introducing-azure-catalyst-agentic-modernization-and-new-ai-a64734f2.html</guid>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Cloud Automation</category>
+      <description>This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-led solution to modernize the apps, data, and infrastructure that already run the business.</description>
     </item>
     <item>
       <title>Genesis AI raises $500 million to deploy glove-wearing robots</title>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>For example, an Eventyay review requested screenshots or a video . The replay has a persistent capture date and incomplete-coverage warning: it deliberately includes only six selected source bodies, with links to the complete discussions. Read the reviewer’s exact words beside the author’s later report.</description>
-    </item>
-    <item>
-      <title>JetBrains GameDev Day 2026: Watch the Recordings</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261023-jetbrains-gamedev-day-2026-watch-the-recordings-c0fdefc7.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261023-jetbrains-gamedev-day-2026-watch-the-recordings-c0fdefc7.html</guid>
-      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Developer Tools</category>
-      <description>Pick your engine or role: Unreal Engine: Death by a Thousand Ticks and Agentic Development in Unreal Engine with JetBrains Rider Unity: Fix Your CI Without Leaving the IDE and How We Automated Figma-to-Unity UI Integration With AI Agents Engine and backend programmers: Evolving a Live Game Engine and Debugging Across Two Runtimes and Two Different Languages Build, pipelines, and infrastructure: Splitting the…</description>
     </item>
   </channel>
 </rss>

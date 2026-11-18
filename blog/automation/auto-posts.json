@@ -13,6 +13,19 @@
     "hero_image": "https://github.blog/wp-content/uploads/2026/11/01-participating-projects.png?resize=1024%2C576"
   },
   {
+    "title": "Introducing Azure Catalyst agentic modernization and new AI infrastructure innovations",
+    "date": "2026-11-17",
+    "category": "Cloud Automation",
+    "summary": "This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-led solution to modernize the apps, data, and infrastructure that already run the business.",
+    "link": "auto/20261117-introducing-azure-catalyst-agentic-modernization-and-new-ai-a64734f2.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/introducing-azure-catalyst-agentic-modernization-and-new-ai-infrastructure-innovations/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-2_CTA-block.jpg"
+  },
+  {
     "title": "Genesis AI raises $500 million to deploy glove-wearing robots",
     "date": "2026-11-17",
     "category": "Tech & Startups",

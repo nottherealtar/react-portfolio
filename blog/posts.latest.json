@@ -9,6 +9,14 @@
       "reading_minutes": 2
     },
     {
+      "title": "Introducing Azure Catalyst agentic modernization and new AI infrastructure innovations",
+      "link": "auto/20261117-introducing-azure-catalyst-agentic-modernization-and-new-ai-a64734f2.html",
+      "date": "2026-11-17",
+      "summary": "This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-l",
+      "category": "Cloud Automation",
+      "reading_minutes": 4
+    },
+    {
       "title": "Genesis AI raises $500 million to deploy glove-wearing robots",
       "link": "auto/20261117-genesis-ai-raises-500-million-to-deploy-glove-wearing-robots-04d3ec1b.html",
       "date": "2026-11-17",
@@ -85,14 +93,6 @@
       "link": "auto/20261112-two-small-models-ship-in-my-markdown-editor-three-more-didn-22b64f77.html",
       "date": "2026-11-12",
       "summary": "Each model picks one answer from a fixed list, like which language a code block is in. It got 391 suggestions right at 93.8% precision, against 380 at 93.1% for the model already in the app. Marksage is a Markdown editor",
-      "category": "Coding & Community",
-      "reading_minutes": 2
-    },
-    {
-      "title": "The Kubernetes Upgrade Trap: A Practical Roadmap to Escape Deprecated APIs, Broken Add-ons, and Endless Delays",
-      "link": "auto/20261112-the-kubernetes-upgrade-trap-a-practical-roadmap-to-escape-de-b02ca669.html",
-      "date": "2026-11-12",
-      "summary": "Applications, Helm charts, operators, admission controllers, networking components, storage drivers, monitoring agents, and automation tools must all support the target version. Let's build a practical roadmap that helps",
       "category": "Coding & Community",
       "reading_minutes": 2
     }

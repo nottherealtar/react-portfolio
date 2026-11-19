@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Microsoft Ignite 2026: What’s new in Azure, the platform purpose-built for AI",
+      "link": "auto/20261117-microsoft-ignite-2026-what-s-new-in-azure-the-platform-purpo-a35ccb41.html",
+      "date": "2026-11-17",
+      "summary": "Azure AI core : AI on infrastructure you control. It also gives your teams a path on Azure to build, run, and continuously improve those agents. Ignite session: AI infrastructure from cloud to Edge Azure sets up and tune",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "Maintainers don’t need more AI bug reports. They need fixes.",
       "link": "auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html",
       "date": "2026-11-17",
@@ -87,14 +95,6 @@
       "summary": "The identity crisis of agents, the integration of MCP into platforms like OpenShift, and the packaged management of agent skills are not fringe topics but the central construction sites for 2027. The coming months will s",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "Security Risks of Deploying Vibe-Coded Apps to Production, and Who Fixes Each One",
-      "link": "auto/20261113-security-risks-of-deploying-vibe-coded-apps-to-production-an-951aac30.html",
-      "date": "2026-11-13",
-      "summary": "The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-pe",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

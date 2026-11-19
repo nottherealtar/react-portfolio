@@ -13,6 +13,19 @@
     "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/best-vcs-2026-social.png"
   },
   {
+    "title": "Microsoft Ignite 2026: What’s new in Azure, the platform purpose-built for AI",
+    "date": "2026-11-17",
+    "category": "Cloud Automation",
+    "summary": "Azure AI core : AI on infrastructure you control. It also gives your teams a path on Azure to build, run, and continuously improve those agents. Ignite session: AI infrastructure from cloud to Edge Azure sets up and tunes the infrastructure for you, so your teams spend less time on configuration and more time moving models and agents into production.",
+    "link": "auto/20261117-microsoft-ignite-2026-what-s-new-in-azure-the-platform-purpo-a35ccb41.html",
+    "source_url": "https://azure.microsoft.com/en-us/blog/microsoft-ignite-2026-whats-new-in-azure-the-platform-purpose-built-for-ai/",
+    "source_name": "Microsoft Azure Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://azure.microsoft.com/en-us/blog/wp-content/uploads/2026/11/Azure-Failure-Prediction-Detection-1.jpg"
+  },
+  {
     "title": "Maintainers don’t need more AI bug reports. They need fixes.",
     "date": "2026-11-17",
     "category": "Developer Platform",

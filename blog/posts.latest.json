@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Top Version Control Tools: What the Data Shows",
+      "link": "auto/20261119-top-version-control-tools-what-the-data-shows-6a9f1dee.html",
+      "date": "2026-11-19",
+      "summary": "GitLab ranks second in both groups, but the gap is much smaller among those hosting professional projects there. Share of developers, weighted survey results Source: JetBrains Developer Ecosystem Survey 2026. For a publi",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Maintainers don’t need more AI bug reports. They need fixes.",
       "link": "auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html",
       "date": "2026-11-17",
@@ -87,14 +95,6 @@
       "summary": "The main security concerns with deploying vibe-coded apps to production are code-level flaws the builder never reviewed (injection, broken authorization, insecure defaults), risky dependencies, hardcoded secrets, over-pe",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "GitHub availability report: October 2026",
-      "link": "auto/20261113-github-availability-report-october-2026-126f7948.html",
-      "date": "2026-11-13",
-      "summary": "The short version of October: we added substantial independently scalable Azure capacity and removed several ways that failures could escalate. Actions jobs stayed queued or failed to start because the service that assig",
-      "category": "Developer Platform",
-      "reading_minutes": 3
     }
   ]
 }

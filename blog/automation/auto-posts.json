@@ -1,5 +1,18 @@
 [
   {
+    "title": "Top Version Control Tools: What the Data Shows",
+    "date": "2026-11-19",
+    "category": "Developer Tools",
+    "summary": "GitLab ranks second in both groups, but the gap is much smaller among those hosting professional projects there. Share of developers, weighted survey results Source: JetBrains Developer Ecosystem Survey 2026. For a public project, GitHub’s familiarity can be an advantage.",
+    "link": "auto/20261119-top-version-control-tools-what-the-data-shows-6a9f1dee.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/11/top-version-control-tools/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://blog.jetbrains.com/wp-content/uploads/2026/11/best-vcs-2026-social.png"
+  },
+  {
     "title": "Maintainers don’t need more AI bug reports. They need fixes.",
     "date": "2026-11-17",
     "category": "Developer Platform",

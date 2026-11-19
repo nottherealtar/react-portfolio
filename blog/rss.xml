@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 18 Nov 2026 23:24:22 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 14:24:49 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Top Version Control Tools: What the Data Shows</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261119-top-version-control-tools-what-the-data-shows-6a9f1dee.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261119-top-version-control-tools-what-the-data-shows-6a9f1dee.html</guid>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Tools</category>
+      <description>GitLab ranks second in both groups, but the gap is much smaller among those hosting professional projects there. Share of developers, weighted survey results Source: JetBrains Developer Ecosystem Survey 2026. For a public project, GitHub’s familiarity can be an advantage.</description>
+    </item>
     <item>
       <title>Maintainers don’t need more AI bug reports. They need fixes.</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>I built SlothDesk AI , a 100% local-first, anti-burnout desktop operating suite powered by Google Gemma 2 open weights . Gemma 2 drafts polite, guilt-free responses that convert 45-minute synchronous meetings into 2-bullet async updates, backed by an explanatory Sloth Principle .</description>
-    </item>
-    <item>
-      <title>The AI graveyard: a running list of projects and startups that didn’t make it</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261024-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-b0af889a.html</guid>
-      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Tech &amp; Startups</category>
-      <description>Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT into a broader “ super app .</description>
     </item>
   </channel>
 </rss>

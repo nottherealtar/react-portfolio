@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages | TarsOnlineCafe</title>
+  <meta name="description" content="Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages">
+  <meta property="og:description" content="Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html">
+  <meta property="article:published_time" content="2026-11-20T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages">
+  <meta name="twitter:description" content="Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages", "description": "Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location…", "datePublished": "2026-11-20T12:00:00.000Z", "dateModified": "2026-11-20T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html"}, "isBasedOn": "https://dev.to/noahcontrolplane/how-to-run-long-running-ai-agents-in-production-2026-runtime-limits-durable-state-and-ahp", "wordCount": 1967}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-20</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages</h1>
+        <p class="lede">Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop them after a few minutes, a state layer that survives process death, and enough redundancy to stay up through infrastructure failures.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Long-running AI agents need three things that serverless request handlers do not give them: a process with no short execution cap, state checkpointed outside the process so a restart resumes from the last step, and presence in more than one location so a provider outage does not stop the agent. Most teams find these gaps after a prototype works in development. In production it dies mid-run when a function times out at 15 minutes, a deploy kills the container, or a zone goes offline.</p>
+        <p>Disclosure: Control Plane publishes this guide. Long-running AI agents fail in production when the infrastructure treats them like short-lived request handlers. Common serverless functions cap a single invocation or request at 5 to 60 minutes, which ends agents mid-task.</p>
+        <p>Checkpoint every meaningful step to a durable store outside the process so a crash resumes from the last completed step. Make every tool call and side effect idempotent with stable operation keys. Give each run a single owner through an expiring lease, and check a fencing token on every checkpoint write so a replica that lost its lease cannot commit progress.</p>
+        <p>Handle SIGTERM by finishing or checkpointing the current step within the termination grace period. Control Plane runs agents as long-running standard or stateful workloads across AWS, GCP, Azure, and Oracle Cloud Infrastructure locations and routes traffic to healthy replicas when one location fails. How do you run long-running AI agents in production?</p>
+        <p>Serverless functions such as AWS Lambda (15-minute cap) or Azure Functions on the Consumption plan (10-minute maximum) terminate an agent mid-run. Use a long-running container process, a job runtime that allows hours or days, or a durable execution engine that manages the lifecycle. Persist state per step to a durable store, with one owner per run.</p>
+        <p>After each meaningful unit of work, write the agent’s progress, tool outputs, and context to a database in one transaction. Each run is owned by one replica through a lease that expires and is renewed while the replica works. Every checkpoint write carries the lease’s fencing token, and the store rejects writes with an older token.</p>
+        <p>If the process dies, the lease expires and another process claims the run, loads the last checkpoint, and continues. Make tool calls idempotent with stable keys. If a crash happens after sending an email but before recording success, the agent must not send the email again on recovery.</p>
+        <p>Side effects run at least once, so give each one an idempotency key the downstream API honors, or record the key before the call and check the provider for a prior send before retrying. Handle SIGTERM and finish or checkpoint within the grace period. Deploys, scale-in events, and node drains send SIGTERM.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Long-running AI agents fail in production when the infrastructure treats them like short-lived request handlers. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Checkpoint every meaningful step to a durable store outside the process so a crash resumes from the last completed step.</li>
+          <li>Serverless functions such as AWS Lambda (15-minute cap) or Azure Functions on the Consumption plan (10-minute maximum) terminate an agent mid-run.</li>
+          <li>Use a long-running container process, a job runtime that allows hours or days, or a durable execution engine that manages the lifecycle.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/noahcontrolplane/how-to-run-long-running-ai-agents-in-production-2026-runtime-limits-durable-state-and-ahp" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

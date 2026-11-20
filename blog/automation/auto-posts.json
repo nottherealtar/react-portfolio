@@ -1,5 +1,17 @@
 [
   {
+    "title": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages",
+    "date": "2026-11-20",
+    "category": "Coding & Community",
+    "summary": "Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop them after a few minutes, a state layer that survives process death, and enough redundancy to stay up through infrastructure failures.",
+    "link": "auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html",
+    "source_url": "https://dev.to/noahcontrolplane/how-to-run-long-running-ai-agents-in-production-2026-runtime-limits-durable-state-and-ahp",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices",
     "date": "2026-11-20",
     "category": "Coding & Community",

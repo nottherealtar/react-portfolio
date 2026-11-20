@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 20 Nov 2026 13:59:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 23:05:21 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop them after a few minutes, a state layer that survives process death, and enough redundancy to stay up through infrastructure failures.</description>
+    </item>
     <item>
       <title>API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261120-api-integration-testing-a-practical-guide-to-testing-apis-da-340db125.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <category>Cloud Automation</category>
       <description>Agile reservoir modeling is the ensemble workflow engine. The workflow tightly connects the tools reservoir teams already use with Azure-scale infrastructure and the governed data services provided by Azure Data Manager for Energy.</description>
-    </item>
-    <item>
-      <title>AI on Your Terms: How We See AI in YouTrack</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261026-ai-on-your-terms-how-we-see-ai-in-youtrack-2087f33d.html</guid>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Developer Tools</category>
-      <description>With YouTrack, you choose whether and how to use AI, while we also make it easier to work with the tools you already trust. Coming soon: Ask YouTrack, an agentic AI chat that understands your work. Delegating task management to coding agents is becoming a common practice, and for such teams, YouTrack evolves from automating individual processes to serving as a shared “agentic database” for agent and human-led tasks.</description>
     </item>
   </channel>
 </rss>

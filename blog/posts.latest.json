@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages",
+      "link": "auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html",
+      "date": "2026-11-20",
+      "summary": "Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop th",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices",
       "link": "auto/20261120-api-integration-testing-a-practical-guide-to-testing-apis-da-340db125.html",
       "date": "2026-11-20",
@@ -86,14 +94,6 @@
       "date": "2026-11-14",
       "summary": "Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one unrepeatable response per failure, so training on it clones what tired hu",
       "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "link": "auto/20261114-the-ai-graveyard-a-running-list-of-projects-and-startups-tha-7134e7e1.html",
-      "date": "2026-11-14",
-      "summary": "Below is a look at some of the most notable AI products, startups, launches, and bets that have shut down, pivoted, or significantly missed expectations. One of the more recent examples was its attempt to turn ChatGPT in",
-      "category": "Tech & Startups",
       "reading_minutes": 3
     }
   ]

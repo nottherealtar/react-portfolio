@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-19T23:33:39.448340+00:00",
+  "timestamp": "2026-11-20T13:58:48.416446+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 607,
+  "unseen_candidates": 606,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Microsoft Ignite 2026: What’s new in Azure, the platform purpose-built for AI",
-      "link": "auto/20261117-microsoft-ignite-2026-what-s-new-in-azure-the-platform-purpo-a35ccb41.html",
-      "score": 142.8635,
-      "source": "Microsoft Azure Blog",
+      "title": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices",
+      "link": "auto/20261120-api-integration-testing-a-practical-guide-to-testing-apis-da-340db125.html",
+      "score": 130.9785,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

@@ -1,5 +1,17 @@
 [
   {
+    "title": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices",
+    "date": "2026-11-20",
+    "category": "Coding & Community",
+    "summary": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices Modern applications rarely work as standalone systems. Sending the same request and verifying the database record, payment service interaction, and failure handling is API integration testing. Integration testing helps validate how an API behaves when a dependency returns an error, times out, or sends an unexpected response.",
+    "link": "auto/20261120-api-integration-testing-a-practical-guide-to-testing-apis-da-340db125.html",
+    "source_url": "https://dev.to/bhoomika/api-integration-testing-a-practical-guide-to-testing-apis-databases-and-microservices-1m7p",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 2
+  },
+  {
     "title": "Top Version Control Tools: What the Data Shows",
     "date": "2026-11-19",
     "category": "Developer Tools",

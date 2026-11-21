@@ -33,6 +33,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Microsoft and Oracle bring agentic AI into flow of enterprise work",
+      "link": "auto/20261117-microsoft-and-oracle-bring-agentic-ai-into-flow-of-enterpris-adc72adc.html",
+      "date": "2026-11-17",
+      "summary": "Our new integrations let AI agents reason across Oracle’s business-critical data—from finance and supply chain to HR and customer operations—and the work context Microsoft Work IQ understands across meetings, email, docu",
+      "category": "Cloud Automation",
+      "reading_minutes": 3
+    },
+    {
       "title": "Maintainers don’t need more AI bug reports. They need fixes.",
       "link": "auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html",
       "date": "2026-11-17",
@@ -85,14 +93,6 @@
       "link": "auto/20261115-my-cron-job-returns-200-when-every-fetch-fails-236637f8.html",
       "date": "2026-11-15",
       "summary": "Layer one: an error reporter. Something pings it every 15 minutes, it fetches new jobs per category, scores them against each user's profile with Claude, and emails the good ones. The post calls this a wrong-but-working ",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "The Simulator, Not the Archive: Your AI SRE Learns Somewhere Else",
-      "link": "auto/20261114-the-simulator-not-the-archive-your-ai-sre-learns-somewhere-e-2e19e375.html",
-      "date": "2026-11-14",
-      "summary": "Machine learning changes incident remediation only when the agent learns from verified outcomes, not from history. An incident archive records one unrepeatable response per failure, so training on it clones what tired hu",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

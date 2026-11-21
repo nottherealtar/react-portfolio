@@ -1,5 +1,17 @@
 [
   {
+    "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
+    "date": "2026-11-21",
+    "category": "Coding & Community",
+    "summary": "The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload was retried. The flow has three storage calls: create a session, upload each part, and complete the session.",
+    "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
+    "source_url": "https://dev.to/pernilsson3147/training-artifact-retention-nodejs-multipart-uploads-explained-gjb",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages",
     "date": "2026-11-20",
     "category": "Coding & Community",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
+      "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
+      "date": "2026-11-21",
+      "summary": "The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload wa",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages",
       "link": "auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html",
       "date": "2026-11-20",
@@ -87,14 +95,6 @@
       "summary": "Dreamteam co-founder and CEO Anand Venkatraman (pictured above, right) told TechCrunch that he had repeatedly encountered problems with traditional CRM platforms over more than 25 years in enterprise software, including ",
       "category": "Tech & Startups",
       "reading_minutes": 4
-    },
-    {
-      "title": "My Cron Job Returns 200 When Every Fetch Fails",
-      "link": "auto/20261115-my-cron-job-returns-200-when-every-fetch-fails-236637f8.html",
-      "date": "2026-11-15",
-      "summary": "Layer one: an error reporter. Something pings it every 15 minutes, it fetches new jobs per category, scores them against each user's profile with Claude, and emails the good ones. The post calls this a wrong-but-working ",
-      "category": "Coding & Community",
-      "reading_minutes": 3
     }
   ]
 }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Training Artifact Retention: Node.js Multipart Uploads Explained | TarsOnlineCafe</title>
+  <meta name="description" content="The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Training Artifact Retention: Node.js Multipart Uploads Explained">
+  <meta property="og:description" content="The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html">
+  <meta property="article:published_time" content="2026-11-21T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Training Artifact Retention: Node.js Multipart Uploads Explained">
+  <meta name="twitter:description" content="The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Training Artifact Retention: Node.js Multipart Uploads Explained">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Training Artifact Retention: Node.js Multipart Uploads Explained", "description": "The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit…", "datePublished": "2026-11-21T12:00:00.000Z", "dateModified": "2026-11-21T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html"}, "isBasedOn": "https://dev.to/pernilsson3147/training-artifact-retention-nodejs-multipart-uploads-explained-gjb", "wordCount": 1367}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-21</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Training Artifact Retention: Node.js Multipart Uploads Explained</h1>
+        <p class="lede">The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload was retried. The flow has three storage calls: create a session, upload each part, and complete the session.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>For AI-generated images, use a Node.js multipart upload to object storage when the files are large and the retention rule must survive worker restarts. Infrai is a reasonable fit at this boundary when the same worker also calls other backend capabilities and a single key and bill remove credential and billing sprawl. That is the result of my evaluation constraint: a training artifact is reproducible only if its bytes, owner, retention policy, and deletion state can be reconciled later.</p>
+        <p>A plain one-shot upload is easy to write, but a failed transfer can leave an ambiguous run. Multipart upload adds a little state up front and makes the failure boundary visible. Why does retention change the upload design?</p>
+        <p>An AI image or model-training bundle has two lifetimes. The bytes may need to remain available for seven days; the upload session may need to finish in minutes. Those are different policies, and mixing them produces cleanup bugs.</p>
+        <p>I keep these values beside the artifact record: The simple approach is to upload the whole file, then write a database row. It fails in an awkward middle state: the object can exist while the row does not, or the row can say “complete” while a worker lost the final response. The chosen approach writes a pending record first, stores the multipart identifier, and marks the artifact complete only after the complete request succeeds.</p>
+        <p>How do I upload AI-generated images with multipart object storage in Node.js? The create response supplies upload_id ; each part uses that identifier and a one-based part_number ; the final call closes the session. Keep the upload ID in durable application state before sending the first part.</p>
+        <p>The following focused example uses the native fetch available in Node.js 22. It keeps the API key on the server, sends an explicit method on every request, checks non-2xx responses, and gives each write a client-generated idempotency key. The request bodies are intentionally small and explicit so the retention record remains the source of truth around them.</p>
+        <p>The sample shows the protocol boundary, not a complete retention database. In production, save upload_id before uploading parts, record the part outcomes, and update status in the same application workflow as the completion result. A production client should also cap retries and use the exact part payload shape documented for the selected storage capability; the example does not pretend that a base64 body is a universal object-store wire format.</p>
+        <p>The storage caveats do not provide a self-service CORS configuration path, so I would keep this flow in a trusted Node.js worker or API. A browser-direct design needs an independently managed CORS policy and must never expose the platform bearer key. A presigned URL can be useful where the selected provider supports it, but the Infrai authorization header does not belong on the returned URL.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Why does retention change the upload design? It highlights where brittle integrations become operational debt as vendors iterate quickly. It matters for compliance and go-to-market planning when the rules of the road for tech are still unsettled.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Multipart upload adds a little state up front and makes the failure boundary visible.</li>
+          <li>The storage caveats do not provide a self-service CORS configuration path, so I would keep this flow in a trusted Node.js worker or API.</li>
+          <li>It does not turn object storage into a database, and it does not remove the need for an application-owned retention record.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/pernilsson3147/training-artifact-retention-nodejs-multipart-uploads-explained-gjb" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

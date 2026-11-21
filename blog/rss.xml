@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 21 Nov 2026 13:27:11 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 22:11:37 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Training Artifact Retention: Node.js Multipart Uploads Explained</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload was retried. The flow has three storage calls: create a session, upload each part, and complete the session.</description>
+    </item>
     <item>
       <title>How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. GitLab: two review features, two add-on paths GitLab runs one of two code review features depending on your add-on and group settings.</description>
-    </item>
-    <item>
-      <title>Meta AI director Rohit Patel leaves to take on Microsoft Office and Google Workspace</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261027-meta-ai-director-rohit-patel-leaves-to-take-on-microsoft-off-122f4e22.html</guid>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Tech &amp; Startups</category>
-      <description>Patel designed Ndoc to be more than just another AI tool layered onto an existing workflow. His desire to open-source this project was partly why he left Meta and decided to go it alone. “Companies are basically attaching AI to spreadsheets and it fills your cells for you,” he said.</description>
     </item>
   </channel>
 </rss>

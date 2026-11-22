@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage",
+      "link": "auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html",
+      "date": "2026-11-22",
+      "summary": "A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing up many tenants, the effective-cost choice is the one that keeps ",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
       "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
       "date": "2026-11-21",
@@ -87,14 +95,6 @@
       "summary": "Agents on Foundry get better the more you use them. That means you get the right model for the job, while balancing performance, latency, and cost. Foundry: Running and continuously improving agents at scale Once you’ve ",
       "category": "Cloud Automation",
       "reading_minutes": 3
-    },
-    {
-      "title": "Jordan Belfort’s new AI voice startup, Tone, wants to sell like the ‘Wolf of Wall Street’",
-      "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
-      "date": "2026-11-16",
-      "summary": "It’s easy to argue the market is already saturated with AI voice startups and technologies, and Tone comes with added risk: Belfort’s co-founder in the business is longtime investor Shervin Pishevar, who has a controvers",
-      "category": "Tech & Startups",
-      "reading_minutes": 4
     }
   ]
 }

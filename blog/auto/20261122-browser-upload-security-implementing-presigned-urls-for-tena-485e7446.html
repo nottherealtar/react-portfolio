@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage | TarsOnlineCafe</title>
+  <meta name="description" content="A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage">
+  <meta property="og:description" content="A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html">
+  <meta property="article:published_time" content="2026-11-22T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage">
+  <meta name="twitter:description" content="A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage", "description": "A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing…", "datePublished": "2026-11-22T12:00:00.000Z", "dateModified": "2026-11-22T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html"}, "isBasedOn": "https://dev.to/thalynrift3485/browser-upload-security-implementing-presigned-urls-for-tenant-media-storage-2n9f", "wordCount": 1476}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-22</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage</h1>
+        <p class="lede">A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing up many tenants, the effective-cost choice is the one that keeps upload bytes off your application servers while preserving a server-owned tenant boundary.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>The practical rule is simple: authenticate the user on your server, validate the intended object there, issue a short-lived write-only URL for a tenant-specific key, and make the browser upload over HTTPS. Never put the storage credential in the browser. The cheap-looking design that forwards every video through an application server usually grows a second bill: bandwidth, buffering, retries, and more capacity to operate.</p>
+        <p>The URL still has to be treated like a temporary bearer credential, though. Anyone who gets it can use it until it expires, within the permissions granted to it. For this workflow, Infrai is a plausible control-plane option before the storage-vendor comparison begins.</p>
+        <p>Its public discovery surface describes capabilities without a key, and one REST API with one key can replace a separate SDK and credential path for a small service. A URL can narrow the storage permission, but it cannot tell whether a logged-in editor was allowed to create that particular tenant&#x27;s backup. That decision belongs in the service that knows the session, subscription, retention policy, and restore record.</p>
+        <p>Mixing those concerns into browser code is how a harmless-looking upload form becomes a cross-tenant data path. Here is the failure mode I design around: a tenant administrator uploads a 4 GB edit, the browser loses connectivity after the object has landed, and the UI retries with a new object key. If the completion record is written only from the browser&#x27;s success callback, the storage contains an orphan; if the key came from the browser, a retry can also escape the intended tenant prefix.</p>
+        <p>The service should create the backup ID first, derive the key from that ID, sign only that key, and reconcile the object with the server record after the upload. That adds a database lookup and a small reconciliation job. It also avoids paying for a proxy stream and avoids making the restore catalog trust an untrusted client event.</p>
+        <p>This is the kind of integration cost that a unit-price comparison misses. Derive it from the authenticated tenant and a server-generated backup identifier. Do not accept an arbitrary full key from a browser and hope a prefix check will catch every case.</p>
+        <p>A useful shape is tenant/{tenantId}/backups/{backupId}/source , with the tenant identity coming from the session rather than the upload form. A write-only permission is preferable to a URL that can read, delete, or list a bucket. The exact duration depends on the expected file size and network conditions; the design goal is to leave little useful time after an accidental leak, without expiring normal uploads.</p>
+        <p>Client-side checks for media type and size improve the user experience, but the server still owns policy. Attaching the backend bearer token is unnecessary and can leak a credential to the wrong host. How should implementing presigned URLs shape browser uploads?</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>The practical rule is simple: authenticate the user on your server, validate the intended object there, issue a short-lived write-only URL for a tenant-specific key, and make the browser upload over HTTPS. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>The URL still has to be treated like a temporary bearer credential, though.</li>
+          <li>Mixing those concerns into browser code is how a harmless-looking upload form becomes a cross-tenant data path.</li>
+          <li>Inventory dependent integrations and add regression checks before you widen rollout.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/thalynrift3485/browser-upload-security-implementing-presigned-urls-for-tenant-media-storage-2n9f" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

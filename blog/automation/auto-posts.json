@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffwk3g893ubvoq6rjlb2z.png"
   },
   {
+    "title": "Browser Upload Security: Implementing Presigned URLs for Tenant Media Storage",
+    "date": "2026-11-22",
+    "category": "Coding & Community",
+    "summary": "A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing up many tenants, the effective-cost choice is the one that keeps upload bytes off your application servers while preserving a server-owned tenant boundary.",
+    "link": "auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html",
+    "source_url": "https://dev.to/thalynrift3485/browser-upload-security-implementing-presigned-urls-for-tenant-media-storage-2n9f",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
     "date": "2026-11-21",
     "category": "Coding & Community",

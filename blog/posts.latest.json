@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026",
+      "link": "auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html",
+      "date": "2026-11-22",
+      "summary": "AWS renamed it on October 12, 2026, and you probably haven't even heard about it. A Lambda function is now three things AWS says it plainly in an AWS Compute Blog post from November 19, 2026 : Lambda now has three form f",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
       "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
       "date": "2026-11-21",
@@ -85,14 +93,6 @@
       "link": "auto/20261116-jordan-belfort-s-new-ai-voice-startup-tone-wants-to-sell-lik-98a6b939.html",
       "date": "2026-11-16",
       "summary": "It’s easy to argue the market is already saturated with AI voice startups and technologies, and Tone comes with added risk: Belfort’s co-founder in the business is longtime investor Shervin Pishevar, who has a controvers",
-      "category": "Tech & Startups",
-      "reading_minutes": 4
-    },
-    {
-      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
-      "link": "auto/20261116-freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-wit-8cd345b9.html",
-      "date": "2026-11-16",
-      "summary": "Dreamteam co-founder and CEO Anand Venkatraman (pictured above, right) told TechCrunch that he had repeatedly encountered problems with traditional CRM platforms over more than 25 years in enterprise software, including ",
       "category": "Tech & Startups",
       "reading_minutes": 4
     }

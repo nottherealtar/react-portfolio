@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-21T22:10:30.061478+00:00",
+  "timestamp": "2026-11-22T13:18:07.895057+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,9 +11,9 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
-      "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
-      "score": 131.9868,
+      "title": "Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026",
+      "link": "auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html",
+      "score": 141.9756,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }

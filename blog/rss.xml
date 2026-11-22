@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Sat, 21 Nov 2026 22:11:37 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 13:19:15 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html</guid>
+      <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>AWS renamed it on October 12, 2026, and you probably haven't even heard about it. A Lambda function is now three things AWS says it plainly in an AWS Compute Blog post from November 19, 2026 : Lambda now has three form factors: Event Functions, Web Functions and MicroVMs. It's simply a way to run Event Functions on managed EC2 instances in your account, through a so-called capacity provider.</description>
+    </item>
     <item>
       <title>Training Artifact Retention: Node.js Multipart Uploads Explained</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Careers</category>
       <description>Across organizations, enterprise knowledge is too often scattered across repositories and buried in chat threads, creating a clear context gap in developer workflows. By uniting Stack Internal’s new Scopes, an out-of-the-box GitHub connector, and other features like a validation API with Stack Internal Community’s strengthened governance and attribution controls, this launch delivers controlled, concentrated…</description>
-    </item>
-    <item>
-      <title>Cutting pull request review time with AI: GitLab, Azure Repos, Bitbucket</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261028-cutting-pull-request-review-time-with-ai-gitlab-azure-repos-0f1000f5.html</guid>
-      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Bitbucket Data Center has no native AI reviewer at all, so review time is set by merge checks and whatever bot you wire in through the REST API. A reviewer with no scoping reviews lock files and generated code forever. GitLab: two review features, two add-on paths GitLab runs one of two code review features depending on your add-on and group settings.</description>
     </item>
   </channel>
 </rss>

@@ -1,5 +1,18 @@
 [
   {
+    "title": "Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026",
+    "date": "2026-11-22",
+    "category": "Coding & Community",
+    "summary": "AWS renamed it on October 12, 2026, and you probably haven't even heard about it. A Lambda function is now three things AWS says it plainly in an AWS Compute Blog post from November 19, 2026 : Lambda now has three form factors: Event Functions, Web Functions and MicroVMs. It's simply a way to run Event Functions on managed EC2 instances in your account, through a so-called capacity provider.",
+    "link": "auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html",
+    "source_url": "https://dev.to/aws-heroes/lambda-is-no-longer-just-one-function-10-aws-changes-before-reinvent-2026-226b",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ffwk3g893ubvoq6rjlb2z.png"
+  },
+  {
     "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
     "date": "2026-11-21",
     "category": "Coding & Community",

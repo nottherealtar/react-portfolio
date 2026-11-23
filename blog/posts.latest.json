@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
+      "link": "auto/20261123-best-github-actions-alternatives-in-2026-what-838-organizati-6e643611.html",
+      "date": "2026-11-23",
+      "summary": "We also counted every Actions incident in GitHub’s availability reports for 2026 and followed what developers say about Actions in public discussions. And the most common choice isn’t a replacement at all: 63% of organiz",
+      "category": "Developer Tools",
+      "reading_minutes": 3
+    },
+    {
       "title": "Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026",
       "link": "auto/20261122-lambda-is-no-longer-just-one-function-10-aws-changes-before-7ac07158.html",
       "date": "2026-11-22",
@@ -86,14 +94,6 @@
       "date": "2026-11-17",
       "summary": "To make his case, Xian hosted TechCrunch at Genesis AI’s Silicon Valley facility, where its physical AI model operated a pair of off-the-shelf robotic arms. The startup’s focus on dexterity — the robot’s ability to do st",
       "category": "Tech & Startups",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Continuous improvement comes to Microsoft Foundry",
-      "link": "auto/20261117-continuous-improvement-comes-to-microsoft-foundry-6e8f62d2.html",
-      "date": "2026-11-17",
-      "summary": "Agents on Foundry get better the more you use them. That means you get the right model for the job, while balancing performance, latency, and cost. Foundry: Running and continuously improving agents at scale Once you’ve ",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

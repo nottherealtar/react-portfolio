@@ -1,5 +1,17 @@
 [
   {
+    "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
+    "date": "2026-11-23",
+    "category": "Developer Tools",
+    "summary": "We also counted every Actions incident in GitHub’s availability reports for 2026 and followed what developers say about Actions in public discussions. And the most common choice isn’t a replacement at all: 63% of organizations that use GitHub Actions already run a second CI/CD tool next to it. Organizations using GitHub Actions · open answers Why teams keep a second tool next to Actions",
+    "link": "auto/20261123-best-github-actions-alternatives-in-2026-what-838-organizati-6e643611.html",
+    "source_url": "https://blog.jetbrains.com/teamcity/2026/11/github-actions-alternatives/",
+    "source_name": "JetBrains Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Lambda Is No Longer Just One Function: 10 AWS Changes Before re:Invent 2026",
     "date": "2026-11-22",
     "category": "Coding & Community",

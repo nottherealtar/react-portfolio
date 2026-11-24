@@ -1,5 +1,17 @@
 [
   {
+    "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
+    "date": "2026-11-24",
+    "category": "Coding & Community",
+    "summary": "The alpha post also asks directly: \"If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The alpha post is direct about security: \"A new browser gets hacked, over and over, and that's part of the process, so we make no promises about security today.\" The project's SECURITY.md adds a known limitation.",
+    "link": "auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html",
+    "source_url": "https://dev.to/jamilxt/ladybird-alpha-how-to-test-your-website-in-a-brand-new-browser-engine-1hjm",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
     "date": "2026-11-23",
     "category": "Developer Tools",

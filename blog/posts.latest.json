@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
+      "link": "auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html",
+      "date": "2026-11-24",
+      "summary": "The alpha post also asks directly: \"If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The alpha post is direct about security: \"A new browser gets hacked, ov",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
       "link": "auto/20261123-best-github-actions-alternatives-in-2026-what-838-organizati-6e643611.html",
       "date": "2026-11-23",
@@ -87,14 +95,6 @@
       "summary": "This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-l",
       "category": "Cloud Automation",
       "reading_minutes": 4
-    },
-    {
-      "title": "Genesis AI raises $500 million to deploy glove-wearing robots",
-      "link": "auto/20261117-genesis-ai-raises-500-million-to-deploy-glove-wearing-robots-04d3ec1b.html",
-      "date": "2026-11-17",
-      "summary": "To make his case, Xian hosted TechCrunch at Genesis AI’s Silicon Valley facility, where its physical AI model operated a pair of off-the-shelf robotic arms. The startup’s focus on dexterity — the robot’s ability to do st",
-      "category": "Tech & Startups",
-      "reading_minutes": 3
     }
   ]
 }

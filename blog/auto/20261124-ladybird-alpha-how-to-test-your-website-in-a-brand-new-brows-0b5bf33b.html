@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine | TarsOnlineCafe</title>
+  <meta name="description" content="The alpha post also asks directly: &quot;If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine">
+  <meta property="og:description" content="The alpha post also asks directly: &quot;If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html">
+  <meta property="article:published_time" content="2026-11-24T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine">
+  <meta name="twitter:description" content="The alpha post also asks directly: &quot;If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine", "description": "The alpha post also asks directly: \"If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The…", "datePublished": "2026-11-24T12:00:00.000Z", "dateModified": "2026-11-24T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html"}, "isBasedOn": "https://dev.to/jamilxt/ladybird-alpha-how-to-test-your-website-in-a-brand-new-browser-engine-1hjm", "wordCount": 2048}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-24</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine</h1>
+        <p class="lede">The alpha post also asks directly: &quot;If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The alpha post is direct about security: &quot;A new browser gets hacked, over and over, and that&#x27;s part of the process, so we make no promises about security today.&quot; The project&#x27;s SECURITY.md adds a known limitation.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>On November 23, 2026, the Ladybird team published Ladybird is now in alpha . The first public build, version 2026.47.7, is out for macOS and Linux. The engine is our own, built from the ground up, and not a fork.&quot; That last part matters for web developers.</p>
+        <p>Almost every browser you test today runs on Blink (Chrome, Edge, Brave, Opera), WebKit (Safari) or Gecko (Firefox). The GitHub release notes say Ladybird &quot;isn&#x27;t a fork or a wrapper around Chromium, WebKit or Gecko. HTML, CSS, the DOM, layout, JavaScript and WebAssembly are all implemented from scratch.&quot; So when your site breaks in Ladybird, it is breaking in an engine your site has probably never been tested against.</p>
+        <p>It supports WebDriver for automated testing, as well as the Firefox DevTools protocol.&quot; This guide covers four steps: install it safely, inspect your pages, automate a check, and send a useful report. It is built from the project&#x27;s release notes, docs and source code, not from hands-on testing. Version: Alpha 2026.47.7, dated November 23, 2026.</p>
+        <p>macOS: needs macOS 14.4 or later on Apple silicon. Flatpak (a Linux app format that works across distributions) is the recommended install. There are also APT packages for Ubuntu 24.04 and 26.04+, an RPM repo for Fedora 44 and 45, and a standalone archive.</p>
+        <p>Updates: the alpha is &quot;a rolling channel, and we&#x27;ll be pushing out automatic updates regularly.&quot; Rolling means new builds keep arriving, instead of a few big versions a year. The standalone archive is the exception; the page says it &quot;doesn&#x27;t update automatically.&quot; The Hacker News thread on the launch passed 1,500 points and 340 comments in its first 11 hours. One commenter posted the user agent string the macOS build sends, which matters in Step 5.</p>
+        <p>Ladybird&#x27;s process isolation &quot;is still being hardened: The browser process and the other helper processes don&#x27;t yet treat every request from the WebContent process as untrusted.&quot; WebContent is the sandboxed process that runs web pages. For a testing machine, that leads to three simple rules: Do not log in to real accounts. Use test accounts on staging, not your production admin login.</p>
+        <p>Do not browse to internal dashboards that hold API keys or customer data. Prefer a separate machine, VM or user account if you plan to use it for more than a quick look. The download page gives a verification step for every package.</p>
+        <p>For the macOS disk image, it lists three checks: The third check verifies a Sigstore build attestation (a signed record of how the file was built) with cosign . For Linux, the page publishes the expected GPG key fingerprint for each repository, so you can compare the key before running apt update or dnf install . On Linux, the Flatpak install is one line, copied from the download page: Step 2: Do a manual pass and report what breaks Open your site and click through the flows that matter: sign up, log in with a test account, search,…</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>The GitHub release notes say Ladybird &quot;isn&#x27;t a fork or a wrapper around Chromium, WebKit or Gecko. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>It is built from the project&#x27;s release notes, docs and source code, not from hands-on testing.</li>
+          <li>Another, building a canvas-heavy web game , said it &quot;seems to work pretty bad but thats understandable for alpha version.&quot; When something breaks, report it from inside the…</li>
+          <li>Every report includes the page URL, user agent, viewport size, device pixel ratio, zoom level, and the Ladybird version, platform and git commit.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/jamilxt/ladybird-alpha-how-to-test-your-website-in-a-brand-new-browser-engine-1hjm" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

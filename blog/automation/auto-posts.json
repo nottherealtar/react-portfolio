@@ -12,6 +12,18 @@
     "reading_minutes": 3
   },
   {
+    "title": "A Developer's Due-Diligence Checklist Before You Hire a Web Agency in India (2026)",
+    "date": "2026-11-24",
+    "category": "Coding & Community",
+    "summary": "Ask the agency for one of these: A sanitized sample repository from a past project A 30-minute screen-share walkthrough of a codebase Their internal coding standards or linting config Consistent structure â€” components, routes, services and config separated logically. You want deploys to be boring and reproducible. Test their live portfolio sites yourself, on mobile settings.",
+    "link": "auto/20261124-a-developer-s-due-diligence-checklist-before-you-hire-a-web-b203a03f.html",
+    "source_url": "https://dev.to/nexprosoftwares/a-developers-due-diligence-checklist-before-you-hire-a-web-agency-in-india-2026-15oh",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
     "date": "2026-11-23",
     "category": "Developer Tools",

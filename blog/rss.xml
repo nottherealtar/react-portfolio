@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 24 Nov 2026 03:20:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 15:51:41 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>The alpha post also asks directly: "If you build websites, try yours in Ladybird and tell us what breaks. Step 1: Install it like untrusted software The alpha post is direct about security: "A new browser gets hacked, over and over, and that's part of the process, so we make no promises about security today." The project's SECURITY.md adds a known limitation.</description>
+    </item>
+    <item>
+      <title>A Developer's Due-Diligence Checklist Before You Hire a Web Agency in India (2026)</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261124-a-developer-s-due-diligence-checklist-before-you-hire-a-web-b203a03f.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261124-a-developer-s-due-diligence-checklist-before-you-hire-a-web-b203a03f.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>Ask the agency for one of these: A sanitized sample repository from a past project A 30-minute screen-share walkthrough of a codebase Their internal coding standards or linting config Consistent structure â€” components, routes, services and config separated logically. You want deploys to be boring and reproducible. Test their live portfolio sites yourself, on mobile settings.</description>
     </item>
     <item>
       <title>Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use</title>
@@ -399,14 +407,6 @@
       <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.</description>
-    </item>
-    <item>
-      <title>Nodemailer Alternative: Sending Email OTPs Through a 6-Stage 2FA Signup Contract</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261030-nodemailer-alternative-sending-email-otps-through-a-6-stage-e8e44448.html</guid>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>Short answer: use a provider-neutral delivery adapter for email OTPs, and choose a Nodemailer alternative only when its delivery contract fits your media signup flow; the application must still hash, expire, and consume the challenge itself.</description>
     </item>
   </channel>
 </rss>

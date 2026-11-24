@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "A Developer's Due-Diligence Checklist Before You Hire a Web Agency in India (2026)",
+      "link": "auto/20261124-a-developer-s-due-diligence-checklist-before-you-hire-a-web-b203a03f.html",
+      "date": "2026-11-24",
+      "summary": "Ask the agency for one of these: A sanitized sample repository from a past project A 30-minute screen-share walkthrough of a codebase Their internal coding standards or linting config Consistent structure â€” components,",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Best GitHub Actions Alternatives in 2026: What 838 Organizations Actually Use",
       "link": "auto/20261123-best-github-actions-alternatives-in-2026-what-838-organizati-6e643611.html",
       "date": "2026-11-23",
@@ -87,14 +95,6 @@
       "summary": "Anyone pointing a new model at a project should ask its maintainers first and come with fixes, not just findings. Reports and fixes stayed on GitHub, where maintainers already work. The result: Codename MDASH, using Micr",
       "category": "Developer Platform",
       "reading_minutes": 2
-    },
-    {
-      "title": "Introducing Azure Catalyst agentic modernization and new AI infrastructure innovations",
-      "link": "auto/20261117-introducing-azure-catalyst-agentic-modernization-and-new-ai-a64734f2.html",
-      "date": "2026-11-17",
-      "summary": "This week, we’re introducing innovations across Microsoft Azure that set a new standard for how the cloud powers AI: expanded AI core capabilities in Azure to build what’s next, and Azure Catalyst, an intelligent agent-l",
-      "category": "Cloud Automation",
-      "reading_minutes": 4
     }
   ]
 }

@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-25T01:25:19.093824+00:00",
+  "timestamp": "2026-11-25T15:33:05.045669+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 604,
+  "unseen_candidates": 605,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count",
-      "link": "auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html",
-      "score": 150.9747,
-      "source": "DEV Community",
+      "title": "Prompt Injection Fixes Need Regression Tests",
+      "link": "auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html",
+      "score": 125.3886,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

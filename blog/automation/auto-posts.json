@@ -13,6 +13,18 @@
     "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsf0yf0tmbfr9n9rzd0nx.png"
   },
   {
+    "title": "Prompt Injection Fixes Need Regression Tests",
+    "date": "2026-11-24",
+    "category": "Coding & Careers",
+    "summary": "A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a way that keeps security apart from delivery and doesn’t take into account the stakeholders who ship changes every week, where specialists run an adversarial review once or twice a year, patch whatever that review finds and move on.",
+    "link": "auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html",
+    "source_url": "https://stackoverflow.blog/2026/11/24/prompt-injection-fixes-need-regression-tests/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
     "date": "2026-11-24",
     "category": "Coding & Community",

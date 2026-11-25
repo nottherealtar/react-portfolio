@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Prompt Injection Fixes Need Regression Tests | TarsOnlineCafe</title>
+  <meta name="description" content="A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Prompt Injection Fixes Need Regression Tests">
+  <meta property="og:description" content="A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html">
+  <meta property="article:published_time" content="2026-11-24T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Careers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prompt Injection Fixes Need Regression Tests">
+  <meta name="twitter:description" content="A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Prompt Injection Fixes Need Regression Tests">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Prompt Injection Fixes Need Regression Tests", "description": "A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a…", "datePublished": "2026-11-24T12:00:00.000Z", "dateModified": "2026-11-24T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html"}, "isBasedOn": "https://stackoverflow.blog/2026/11/24/prompt-injection-fixes-need-regression-tests/", "wordCount": 1494}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Careers</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-11-24</span>
+          <span>Stack Overflow Blog</span>
+        </div>
+        <h1>Prompt Injection Fixes Need Regression Tests</h1>
+        <p class="lede">A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a way that keeps security apart from delivery and doesn’t take into account the stakeholders who ship changes every week, where specialists run an adversarial review once or twice a year, patch whatever that review finds and move on.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>Most engineering teams would without hesitation size up prompt injection as a security issue. That kind of cadence made some sense when it was extended from legacy systems, where code changed through planned releases and a closed hole would usually stay closed between releases. But agentic systems have changed the pace, since an agent’s behavior can now shift between two reviews without anyone touching the reviewed code.</p>
+        <p>This matters because, unlike the slow-moving threats that review cadence was built for, an agent stack keeps shifting under the patch, and a model upgrade, a prompt edit or a new data connector can reopen a gap that was closed months earlier. And so an injection that circles back after it was patched is but a regression , and catching regressions is the job test suites already do. But then there’s also a timing gap, because a scheduled review checks the system at one moment, while a regression suite can run every time any part of…</p>
+        <p>Agent Handoffs Were Never Built to Be Suspicious Part of the reason these holes reopen is how agentic systems are wired. The output of one model becomes the input of the next. And nothing in that handoff treats what comes through with any suspicion.</p>
+        <p>Akash Agrawal , Vice President of DevOps and DevSecOps at TestMu AI , an agentic AI quality engineering platform, has worked where delivery pipelines and security controls meet, and in his current role he has spent much of his work on this failure mode. He warns that “a malicious instruction introduced into one model can propagate to others it communicates with, producing a chain reaction where compromised output becomes the next agent’s input.” The spread is hard to see from the outside, because a model can act on a poisoned…</p>
+        <p>And so problems in that traffic tend to surface in production first. In practice that means logging every message one agent passes to another and running it through the same input validation a public API endpoint would get, which gives the test suite something concrete to assert against. A Model Upgrade Could Reopen a Closed Injection Jose Lejin P J , Principal Member of Technical Staff at Salesforce, has seen fixed issues flare back from his engineering purview, going through repeated cycles of patching and retesting AI features.</p>
+        <p>And in one case, he shares, a patched injection came back through a retrieval connector that let malicious instructions ride inside a document the agent read. The instructions told the agent to disregard its guardrails along with the context from every prior step. I wrote on Techstrong.ai about RAG systems that fail upstream in the data they pull in ( https://techstrong.ai/features/rag-fails-upstream-and-most-teams-are-fixing-the-wrong-problem/ ), and an attacker who controls a single document can exploit that weakness on purpose.</p>
+        <p>Even closing the hole the first time took weeks. “This flaw was corrected by tightening the structure and processing of system prompts and inputs,” Lejin explains, “but we still observed it failing for several weeks before we finally fixed it.” The fix held until a model upgrade brought the injection straight back. “The updated version was just more compliant to the instructions found in retrieved documents, so it executed the instructions previously disregarded by the older version.</p>
+        <p>A test that replays the old attack against each new model version would have flagged it before release. For engineering teams the practical change is to treat a model version bump as a release event in its own right, logged and tested like any code change. Every Patched Jailbreak Becomes a Fixture Lejin’s team changed what a patch means.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>And so an injection that circles back after it was patched is but a regression , and catching regressions is the job test suites already do. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It highlights where brittle integrations become operational debt as vendors iterate quickly.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Most engineering teams would without hesitation size up prompt injection as a security issue.</li>
+          <li>This matters because, unlike the slow-moving threats that review cadence was built for, an agent stack keeps shifting under the patch, and a model upgrade, a prompt edit or a…</li>
+          <li>A test that replays the old attack against each new model version would have flagged it before release.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://stackoverflow.blog/2026/11/24/prompt-injection-fixes-need-regression-tests/" target="_blank" rel="noopener noreferrer">Stack Overflow Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

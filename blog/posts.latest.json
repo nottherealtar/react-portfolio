@@ -9,6 +9,14 @@
       "reading_minutes": 3
     },
     {
+      "title": "Prompt Injection Fixes Need Regression Tests",
+      "link": "auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html",
+      "date": "2026-11-24",
+      "summary": "A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a way that keeps security apart from delivery and doesn’t take into ",
+      "category": "Coding & Careers",
+      "reading_minutes": 4
+    },
+    {
       "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
       "link": "auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html",
       "date": "2026-11-24",
@@ -85,14 +93,6 @@
       "link": "auto/20261117-microsoft-ignite-2026-what-s-new-in-azure-the-platform-purpo-a35ccb41.html",
       "date": "2026-11-17",
       "summary": "Azure AI core : AI on infrastructure you control. It also gives your teams a path on Azure to build, run, and continuously improve those agents. Ignite session: AI infrastructure from cloud to Edge Azure sets up and tune",
-      "category": "Cloud Automation",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Microsoft and Oracle bring agentic AI into flow of enterprise work",
-      "link": "auto/20261117-microsoft-and-oracle-bring-agentic-ai-into-flow-of-enterpris-adc72adc.html",
-      "date": "2026-11-17",
-      "summary": "Our new integrations let AI agents reason across Oracle’s business-critical data—from finance and supply chain to HR and customer operations—and the work context Microsoft Work IQ understands across meetings, email, docu",
       "category": "Cloud Automation",
       "reading_minutes": 3
     }

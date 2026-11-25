@@ -5,7 +5,7 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:26:54 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 15:34:04 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
     <item>
@@ -15,6 +15,14 @@
       <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>As of November 16, 2026, webatla counts 104,967 websites running Odoo, 0.032% of the 325.8 million websites it tracks. What follows is that count read by someone who builds, hosts or inherits Odoo sites. PostgreSQL and Less: two rows that most likely track Odoo Anyone who filters technology data by database or stylesheet tooling should look at this before trusting the result.</description>
+    </item>
+    <item>
+      <title>Prompt Injection Fixes Need Regression Tests</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html</guid>
+      <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>A patched injection could come back after, say, a model upgrade with no change to the prompt. That’s because companies build their security programs in a way that keeps security apart from delivery and doesn’t take into account the stakeholders who ship changes every week, where specialists run an adversarial review once or twice a year, patch whatever that review finds and move on.</description>
     </item>
     <item>
       <title>Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine</title>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>After an hour you either turn the sandbox off or add broad rules ("allow all of ~") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git metadata. That is the important lesson for anyone configuring a sandbox: the dangerous permission isn't "write anywhere", it's "write to a file something else will execute later".</description>
-    </item>
-    <item>
-      <title>The Local Loop Is the Architecture</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261031-the-local-loop-is-the-architecture-8ddd3721.html</guid>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes where a human can still watch a retry happen.</description>
     </item>
   </channel>
 </rss>

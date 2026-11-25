@@ -1,5 +1,18 @@
 [
   {
+    "title": "How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count",
+    "date": "2026-11-25",
+    "category": "Coding & Community",
+    "summary": "As of November 16, 2026, webatla counts 104,967 websites running Odoo, 0.032% of the 325.8 million websites it tracks. What follows is that count read by someone who builds, hosts or inherits Odoo sites. PostgreSQL and Less: two rows that most likely track Odoo Anyone who filters technology data by database or stylesheet tooling should look at this before trusting the result.",
+    "link": "auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html",
+    "source_url": "https://dev.to/webatla/how-many-websites-use-odoo-104967-and-why-postgresql-shows-almost-the-same-count-2i15",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3,
+    "hero_image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsf0yf0tmbfr9n9rzd0nx.png"
+  },
+  {
     "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
     "date": "2026-11-24",
     "category": "Coding & Community",

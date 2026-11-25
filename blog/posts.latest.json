@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count",
+      "link": "auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html",
+      "date": "2026-11-25",
+      "summary": "As of November 16, 2026, webatla counts 104,967 websites running Odoo, 0.032% of the 325.8 million websites it tracks. What follows is that count read by someone who builds, hosts or inherits Odoo sites. PostgreSQL and L",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine",
       "link": "auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html",
       "date": "2026-11-24",
@@ -87,14 +95,6 @@
       "summary": "Our new integrations let AI agents reason across Oracle’s business-critical data—from finance and supply chain to HR and customer operations—and the work context Microsoft Work IQ understands across meetings, email, docu",
       "category": "Cloud Automation",
       "reading_minutes": 3
-    },
-    {
-      "title": "Maintainers don’t need more AI bug reports. They need fixes.",
-      "link": "auto/20261117-maintainers-don-t-need-more-ai-bug-reports-they-need-fixes-aa9ce3de.html",
-      "date": "2026-11-17",
-      "summary": "Anyone pointing a new model at a project should ask its maintainers first and come with fixes, not just findings. Reports and fixes stayed on GitHub, where maintainers already work. The result: Codename MDASH, using Micr",
-      "category": "Developer Platform",
-      "reading_minutes": 2
     }
   ]
 }

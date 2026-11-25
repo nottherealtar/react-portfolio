@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Tue, 24 Nov 2026 15:51:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 01:26:54 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Community</category>
+      <description>As of November 16, 2026, webatla counts 104,967 websites running Odoo, 0.032% of the 325.8 million websites it tracks. What follows is that count read by someone who builds, hosts or inherits Odoo sites. PostgreSQL and Less: two rows that most likely track Odoo Anyone who filters technology data by database or stylesheet tooling should look at this before trusting the result.</description>
+    </item>
     <item>
       <title>Ladybird Alpha: How to Test Your Website in a Brand New Browser Engine</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261124-ladybird-alpha-how-to-test-your-website-in-a-brand-new-brows-0b5bf33b.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>An agent is not a service with a prompt bolted on. That boundary will not appear in production. The thing they can share is a protocol at the edge of the privileged resource, and a loop that runs all three processes where a human can still watch a retry happen.</description>
-    </item>
-    <item>
-      <title>WAF is useful, but it does not provide complete protection: What Executives and Managers Need to Understand to Protect Websites and APIs</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261030-waf-is-useful-but-it-does-not-provide-complete-protection-wh-91a39033.html</guid>
-      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>When a WAF can identify characteristics of HTTP requests that exploit a particular vulnerability, a rule may block those requests and buy time until the underlying software can be fixed.</description>
     </item>
   </channel>
 </rss>

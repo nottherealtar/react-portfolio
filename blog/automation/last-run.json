@@ -1,29 +1,25 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-24T15:49:45.713235+00:00",
+  "timestamp": "2026-11-25T01:25:19.093824+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
-  "fetched_candidates": 569,
-  "unseen_candidates": 554,
+  "fetched_candidates": 619,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "A Developer's Due-Diligence Checklist Before You Hire a Web Agency in India (2026)",
-      "link": "auto/20261124-a-developer-s-due-diligence-checklist-before-you-hire-a-web-b203a03f.html",
-      "score": 138.9473,
+      "title": "How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count",
+      "link": "auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html",
+      "score": 150.9747,
       "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],
   "skipped": [],
   "source_failures": [
-    {
-      "source": "PC Gamer",
-      "error": "Request failed for https://www.pcgamer.com/rss/: HTTP Error 404: Not Found"
-    },
     {
       "source": "Unreal Engine",
       "error": "Request failed for https://www.unrealengine.com/en-US/blog/rss: HTTP Error 403: Forbidden"

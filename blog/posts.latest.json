@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How to choose the next safe step in application modernization",
+      "link": "auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html",
+      "date": "2026-11-25",
+      "summary": "Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for installing, building, testing, packaging, and running Runtime pins in c",
+      "category": "Developer Platform",
+      "reading_minutes": 2
+    },
+    {
       "title": "How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count",
       "link": "auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html",
       "date": "2026-11-25",
@@ -86,14 +94,6 @@
       "date": "2026-11-19",
       "summary": "GitLab ranks second in both groups, but the gap is much smaller among those hosting professional projects there. Share of developers, weighted survey results Source: JetBrains Developer Ecosystem Survey 2026. For a publi",
       "category": "Developer Tools",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Microsoft Ignite 2026: What’s new in Azure, the platform purpose-built for AI",
-      "link": "auto/20261117-microsoft-ignite-2026-what-s-new-in-azure-the-platform-purpo-a35ccb41.html",
-      "date": "2026-11-17",
-      "summary": "Azure AI core : AI on infrastructure you control. It also gives your teams a path on Azure to build, run, and continuously improve those agents. Ignite session: AI infrastructure from cloud to Edge Azure sets up and tune",
-      "category": "Cloud Automation",
       "reading_minutes": 3
     }
   ]

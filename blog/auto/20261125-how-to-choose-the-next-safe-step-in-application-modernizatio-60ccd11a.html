@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>How to choose the next safe step in application modernization | TarsOnlineCafe</title>
+  <meta name="description" content="Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="How to choose the next safe step in application modernization">
+  <meta property="og:description" content="Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html">
+  <meta property="article:published_time" content="2026-11-25T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Developer Platform">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to choose the next safe step in application modernization">
+  <meta name="twitter:description" content="Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="How to choose the next safe step in application modernization">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How to choose the next safe step in application modernization", "description": "Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for…", "datePublished": "2026-11-25T12:00:00.000Z", "dateModified": "2026-11-25T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html"}, "isBasedOn": "https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/", "wordCount": 1813}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Developer Platform</span>
+          <span class="pill">~2 min read</span>
+          <span>2026-11-25</span>
+          <span>GitHub Blog</span>
+        </div>
+        <h1>How to choose the next safe step in application modernization</h1>
+        <p class="lede">Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for installing, building, testing, packaging, and running Runtime pins in containers, CI workflows, deployment files, and developer tooling External contracts such as APIs, database behavior, file formats, and user workflows End-of-life frameworks and dependencies, with…</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>A request to modernize an application often starts with a technology question: Which framework should replace the old one? Before you choose, find out what still works. Then collect evidence that can act as a regression net for that behavior and show where modernization is necessary.</p>
+        <p>I used an evidence-first method on four public applications, from a small Node.js game to a large Java enterprise resource planning (ERP) application. Each needed a different treatment, but the way I collected evidence, chose the next experiment, and decided on possible proof points was repeatable. This post walks through that process so you can apply it to one application of your own.</p>
+        <p>It also shows how to encode the procedure in a GitHub Copilot agent skill while keeping architectural judgment with the people responsible for the system. Build evidence before choosing a target The label on an application rarely tells you enough. “Java microservices” doesn’t tell you which Java Development Kit (JDK) runs in production, where that version is pinned, whether the tests execute, or which interfaces other systems depend on.</p>
+        <p>“Legacy monolith” doesn’t tell you whether the business core is broken or whether one retired platform dependency prevents the application from starting. I use three simple labels: documented, inferred, and unverified. If two files disagree about the Java version, resolve the contradiction.</p>
+        <p>If you can’t determine whether a CI check blocks merges, say so. Record the unknown rather than treating a guess as a finding. That inventory gives you something concrete to review with the people who own the application before you propose changes.</p>
+        <p>Choose the least disruptive treatment that works Once you understand the application, make the decision per component. A single system can contain code that should stay, dependencies that should be swapped, and one subsystem that genuinely needs a rewrite. First, check whether a capability is still needed.</p>
+        <p>Remove it only after verifying that it is unused or superseded and confirming that decision with its owner. Removal is a separate decision, and it’s not necessarily the most disruptive one. For a capability you still need, start with the option that changes the least: Keep it.</p>
+        <p>Supported code that still fits the job doesn’t need a modernization story. Move to a supported major version and fix the breaking changes. Replace an abandoned dependency while preserving the existing design.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Supported code that still fits the job doesn’t need a modernization story. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It is a useful datapoint for how AI-assisted engineering and operations are converging in production.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Build evidence before choosing a target The label on an application rarely tells you enough.</li>
+          <li>For a capability you still need, start with the option that changes the least: Keep it.</li>
+          <li>Replace an abandoned dependency while preserving the existing design.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/" target="_blank" rel="noopener noreferrer">GitHub Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

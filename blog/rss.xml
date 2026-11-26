@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Wed, 25 Nov 2026 15:34:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 01:01:52 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>How to choose the next safe step in application modernization</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html</guid>
+      <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Developer Platform</category>
+      <description>Before you recommend a change, build a small evidence inventory: Manifests, lockfiles, entry points, and deployable components Verified commands for installing, building, testing, packaging, and running Runtime pins in containers, CI workflows, deployment files, and developer tooling External contracts such as APIs, database behavior, file formats, and user workflows End-of-life frameworks and dependencies, with…</description>
+    </item>
     <item>
       <title>How Many Websites Use Odoo? 104,967, and Why PostgreSQL Shows Almost the Same Count</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261125-how-many-websites-use-odoo-104-967-and-why-postgresql-shows-e10c6442.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
       <category>Coding &amp; Community</category>
       <description>The EU-funded Di-Hydro project is testing how AI, digital twins, forecasting and sensor networks can help hydropower operators make better operational decisions. From fragmented operational data to decision support At the center of the project is the Decision Making Platform (DMP) .</description>
-    </item>
-    <item>
-      <title>Your coding agent's sandbox is off. Here's how to turn it on without breaking everything.</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261031-your-coding-agent-s-sandbox-is-off-here-s-how-to-turn-it-on-1f767fbb.html</guid>
-      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>After an hour you either turn the sandbox off or add broad rules ("allow all of ~") that quietly undo it. The agent wrote files that a trusted tool outside the sandbox later acted on: hook configs, IDE task files, git metadata. That is the important lesson for anyone configuring a sandbox: the dangerous permission isn't "write anywhere", it's "write to a file something else will execute later".</description>
     </item>
   </channel>
 </rss>

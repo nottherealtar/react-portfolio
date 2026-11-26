@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-25T15:33:05.045669+00:00",
+  "timestamp": "2026-11-26T00:59:26.230049+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
@@ -11,10 +11,10 @@
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Prompt Injection Fixes Need Regression Tests",
-      "link": "auto/20261124-prompt-injection-fixes-need-regression-tests-c684a800.html",
-      "score": 125.3886,
-      "source": "Stack Overflow Blog",
+      "title": "How to choose the next safe step in application modernization",
+      "link": "auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html",
+      "score": 135.1455,
+      "source": "GitHub Blog",
       "text_engine": "embedding-mmr"
     }
   ],

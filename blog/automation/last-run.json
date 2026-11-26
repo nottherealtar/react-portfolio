@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-26T00:59:26.230049+00:00",
+  "timestamp": "2026-11-26T15:08:06.723695+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 605,
+  "unseen_candidates": 604,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "How to choose the next safe step in application modernization",
-      "link": "auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html",
-      "score": 135.1455,
-      "source": "GitHub Blog",
+      "title": "When AI Writes the Code, What Counts as Evidence?",
+      "link": "auto/20261125-when-ai-writes-the-code-what-counts-as-evidence-48929741.html",
+      "score": 130.3884,
+      "source": "Stack Overflow Blog",
       "text_engine": "embedding-mmr"
     }
   ],

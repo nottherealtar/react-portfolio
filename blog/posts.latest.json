@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "When AI Writes the Code, What Counts as Evidence?",
+      "link": "auto/20261125-when-ai-writes-the-code-what-counts-as-evidence-48929741.html",
+      "date": "2026-11-25",
+      "summary": "The developer receives changed files and a reassuring summary; the investigation often disappears. When an engineer eventually supplies a verified answer, the system could link that answer to future occurrences of the sa",
+      "category": "Coding & Careers",
+      "reading_minutes": 3
+    },
+    {
       "title": "How to choose the next safe step in application modernization",
       "link": "auto/20261125-how-to-choose-the-next-safe-step-in-application-modernizatio-60ccd11a.html",
       "date": "2026-11-25",
@@ -87,14 +95,6 @@
       "summary": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices Modern applications rarely work as standalone systems. Sending the same request and verifying the database record, payment service ",
       "category": "Coding & Community",
       "reading_minutes": 2
-    },
-    {
-      "title": "Top Version Control Tools: What the Data Shows",
-      "link": "auto/20261119-top-version-control-tools-what-the-data-shows-6a9f1dee.html",
-      "date": "2026-11-19",
-      "summary": "GitLab ranks second in both groups, but the gap is much smaller among those hosting professional projects there. Share of developers, weighted survey results Source: JetBrains Developer Ecosystem Survey 2026. For a publi",
-      "category": "Developer Tools",
-      "reading_minutes": 3
     }
   ]
 }

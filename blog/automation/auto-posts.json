@@ -1,5 +1,17 @@
 [
   {
+    "title": "When AI Writes the Code, What Counts as Evidence?",
+    "date": "2026-11-25",
+    "category": "Coding & Careers",
+    "summary": "The developer receives changed files and a reassuring summary; the investigation often disappears. When an engineer eventually supplies a verified answer, the system could link that answer to future occurrences of the same kind of failure. When a new question is appropriate, the agent's session can provide a better draft than a bare exception string.",
+    "link": "auto/20261125-when-ai-writes-the-code-what-counts-as-evidence-48929741.html",
+    "source_url": "https://stackoverflow.blog/2026/11/25/when-ai-writes-the-code-what-counts-as-evidence/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "How to choose the next safe step in application modernization",
     "date": "2026-11-25",
     "category": "Developer Platform",

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How I Stopped Building Workflows and Started Building Systems",
+      "link": "auto/20261127-how-i-stopped-building-workflows-and-started-building-system-a7e08a0d.html",
+      "date": "2026-11-27",
+      "summary": "The voice provider changes, the CRM changes, the workflow stays. Notice what is not in that list: there is no step that says \"the AI handles it.\" Every step has a rule, a record, and a next step when it fails. I build fo",
+      "category": "Coding & Community",
+      "reading_minutes": 3
+    },
+    {
       "title": "When AI Writes the Code, What Counts as Evidence?",
       "link": "auto/20261125-when-ai-writes-the-code-what-counts-as-evidence-48929741.html",
       "date": "2026-11-25",
@@ -87,14 +95,6 @@
       "summary": "Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop th",
       "category": "Coding & Community",
       "reading_minutes": 3
-    },
-    {
-      "title": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices",
-      "link": "auto/20261120-api-integration-testing-a-practical-guide-to-testing-apis-da-340db125.html",
-      "date": "2026-11-20",
-      "summary": "API Integration Testing: A Practical Guide to Testing APIs, Databases, and Microservices Modern applications rarely work as standalone systems. Sending the same request and verifying the database record, payment service ",
-      "category": "Coding & Community",
-      "reading_minutes": 2
     }
   ]
 }

@@ -5,9 +5,17 @@
     <link>https://www.tarsonlinecafe.work/blog/blog.html</link>
     <description>Automation, integration, and AI implementation briefs from Joshua Coetzer / TarsOnlineCafe.</description>
     <language>en-za</language>
-    <lastBuildDate>Fri, 27 Nov 2026 01:01:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 15:01:15 +0000</lastBuildDate>
     <atom:link href="https://www.tarsonlinecafe.work/blog/rss.xml" rel="self" type="application/rss+xml" />
     <image><url>https://www.tarsonlinecafe.work/og-share.png</url><title>TarsOnlineCafe Blog</title><link>https://www.tarsonlinecafe.work/blog/blog.html</link></image>
+    <item>
+      <title>Sandboxes, secure inference, and keeping agents from going rogue</title>
+      <link>https://www.tarsonlinecafe.work/blog/auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html</link>
+      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+      <category>Coding &amp; Careers</category>
+      <description>First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both alarming and entirely predictable, and why performance—not security—is what most enterprises are actually buying. What does this mean for the sandboxed methodology of protecting agents from doing whatever they want? Ivan Burazin: It's essentially a VM.</description>
+    </item>
     <item>
       <title>How I Stopped Building Workflows and Started Building Systems</title>
       <link>https://www.tarsonlinecafe.work/blog/auto/20261127-how-i-stopped-building-workflows-and-started-building-system-a7e08a0d.html</link>
@@ -399,14 +407,6 @@
       <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
       <category>Gaming &amp; Industry</category>
       <description>"This time we are putting in serious consideration on the sense of tempo, back at Dawntrail we were being really careful in depicting new lands, new cultures, new encounters and this greatly slowed down the pacing on story progression. However, I don't think the issue in Dawntrail was its over-emphasis on worldbuilding, it was a lack of interest in how that worldbuilding connected to character.</description>
-    </item>
-    <item>
-      <title>Empowering AI Agents with agent-desktop</title>
-      <link>https://www.tarsonlinecafe.work/blog/auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html</link>
-      <guid isPermaLink="true">https://www.tarsonlinecafe.work/blog/auto/20261102-empowering-ai-agents-with-agent-desktop-8564d872.html</guid>
-      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-      <category>Coding &amp; Community</category>
-      <description>The agent-desktop repository addresses the challenge of enabling AI agents to effectively interact with desktop applications across different operating systems. By leveraging the OS accessibility tree, it allows agents to read and operate applications without pixel matching, which is often unreliable.</description>
     </item>
   </channel>
 </rss>

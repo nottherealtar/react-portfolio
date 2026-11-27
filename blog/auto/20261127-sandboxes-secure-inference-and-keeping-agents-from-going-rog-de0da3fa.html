@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sandboxes, secure inference, and keeping agents from going rogue | TarsOnlineCafe</title>
+  <meta name="description" content="First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="Sandboxes, secure inference, and keeping agents from going rogue">
+  <meta property="og:description" content="First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html">
+  <meta property="article:published_time" content="2026-11-27T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Careers">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sandboxes, secure inference, and keeping agents from going rogue">
+  <meta name="twitter:description" content="First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="Sandboxes, secure inference, and keeping agents from going rogue">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Sandboxes, secure inference, and keeping agents from going rogue", "description": "First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both…", "datePublished": "2026-11-27T12:00:00.000Z", "dateModified": "2026-11-27T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html"}, "isBasedOn": "https://stackoverflow.blog/2026/11/27/sandboxes-secure-inference-and-rogue-agents/", "wordCount": 2187}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Careers</span>
+          <span class="pill">~3 min read</span>
+          <span>2026-11-27</span>
+          <span>Stack Overflow Blog</span>
+        </div>
+        <h1>Sandboxes, secure inference, and keeping agents from going rogue</h1>
+        <p class="lede">First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both alarming and entirely predictable, and why performance—not security—is what most enterprises are actually buying. What does this mean for the sandboxed methodology of protecting agents from doing whatever they want? Ivan Burazin: It&#x27;s essentially a VM.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>In this episode, you’ll hear two conversations recorded live at We Are Developers. Then, Richard Risk, CTO and co-founder of Blackbox AI, makes the case for end-to-end encrypted inference: why zero data retention isn&#x27;t the same thing as zero data visibility, how encryption doesn&#x27;t have to cost you speed, and why he thinks American inference companies should take a harder line on where their tokens flow. Blackbox AI offers end-to-end encrypted inference optimized for enterprise and government workloads.</p>
+        <p>Connect with Ivan on LinkedIn , or find the company at daytona.io . Connect with Richard at blackbox.ai or on X at @blackbox_ai . Ryan Donovan: Hello, everyone, and welcome to the Stack Overflow podcast, a place to talk all things software and technology.</p>
+        <p>This episode is a two-parter — conversations recorded at the We Are Developers Conference. And after that, a conversation with Richard Risk of Blackbox AI about secure inference. Today we are talking about all those pesky rogue agents breaking out of their sandboxes, and what we can do to keep them from going rogue.</p>
+        <p>Ivan Burazin: Thank you so much for having me. Ryan Donovan: So this breaking-out-of-the-sandbox idea has been very much in the news with the Hugging Face attack. So I mean, it was all over the news, and rightfully so that people are interested in this.</p>
+        <p>Just one step before I get to that — the sense of the term &quot;sandbox.&quot; We at Daytona are a sandbox vendor, as are many other companies. That being said, sandboxes are both what we like to say &quot;computers for agents&quot; — an actual tool for agents to get things done — but also at the same time, a place where you sort of lock down the agent from other things, hence the name sandbox. I mean, it could be a container, it could be a VM, it could be a bare metal machine.</p>
+        <p>The vast majority are virtual machines, or micro-VMs to be more specific. Others, like us, the purpose is to give the agent tools and be as performant as possible. Of course, security is table stakes, but there are different levels to security.</p>
+        <p>One: if you have an agent that has the capability to escape and has no guardrails, it would make sense that you would first put the same model and/or agent with guardrails to test it out. I understood it to be deliberately lowered security. They were doing an exploit benchmark test and they gave it an impossible task.</p>
+        <p>And then, in that case, it should be no surprise that they did it, right? It should be like, oh, it actually did it — great, fine, done. Maybe they could have picked somewhere else, I mean, this was benign, even the break-in of Hugging Face, but they could have picked a random place that they had set up themselves so they didn&#x27;t go to third parties.</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>Some vendors are security-first sandboxes, so their purpose is to secure the agent. It reframes risk for teams that automate sensitive workflows and rely on third-party data flows. It shows how competitive moves and partnerships can reshuffle roadmaps for finance, fraud, and platform teams.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>First up is a conversation with Ivan Burazin of Daytona, all about sandboxes and portable compute.</li>
+          <li>And after that, a conversation with Richard Risk of Blackbox AI about secure inference.</li>
+          <li>Today we are talking about all those pesky rogue agents breaking out of their sandboxes, and what we can do to keep them from going rogue.</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://stackoverflow.blog/2026/11/27/sandboxes-secure-inference-and-rogue-agents/" target="_blank" rel="noopener noreferrer">Stack Overflow Blog — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>

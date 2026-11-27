@@ -1,5 +1,17 @@
 [
   {
+    "title": "Sandboxes, secure inference, and keeping agents from going rogue",
+    "date": "2026-11-27",
+    "category": "Coding & Careers",
+    "summary": "First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both alarming and entirely predictable, and why performance—not security—is what most enterprises are actually buying. What does this mean for the sandboxed methodology of protecting agents from doing whatever they want? Ivan Burazin: It's essentially a VM.",
+    "link": "auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html",
+    "source_url": "https://stackoverflow.blog/2026/11/27/sandboxes-secure-inference-and-rogue-agents/",
+    "source_name": "Stack Overflow Blog",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 3
+  },
+  {
     "title": "How I Stopped Building Workflows and Started Building Systems",
     "date": "2026-11-27",
     "category": "Coding & Community",

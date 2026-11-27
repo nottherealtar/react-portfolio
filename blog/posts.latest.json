@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Sandboxes, secure inference, and keeping agents from going rogue",
+      "link": "auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html",
+      "date": "2026-11-27",
+      "summary": "First, Ryan sits down with Ivan Burazin, CEO and co-founder of Daytona, to talk about what sandboxes actually are, why the Hugging Face breakout was both alarming and entirely predictable, and why performance—not securit",
+      "category": "Coding & Careers",
+      "reading_minutes": 3
+    },
+    {
       "title": "How I Stopped Building Workflows and Started Building Systems",
       "link": "auto/20261127-how-i-stopped-building-workflows-and-started-building-system-a7e08a0d.html",
       "date": "2026-11-27",
@@ -85,14 +93,6 @@
       "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
       "date": "2026-11-21",
       "summary": "The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload wa",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "How to Run Long-Running AI Agents in Production (2026): Runtime Limits, Durable State, and Surviving Restarts and Outages",
-      "link": "auto/20261120-how-to-run-long-running-ai-agents-in-production-2026-runtime-ddf6bab3.html",
-      "date": "2026-11-20",
-      "summary": "Run agent replicas in two or more locations, across providers if a provider outage must not stop the agent, and keep checkpoints in a store every location can reach. Production agents need a runtime that does not stop th",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

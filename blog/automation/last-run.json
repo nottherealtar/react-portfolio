@@ -1,20 +1,20 @@
 {
   "status": "ok",
-  "timestamp": "2026-11-27T15:00:06.924033+00:00",
+  "timestamp": "2026-11-28T00:31:19.308607+00:00",
   "extractive_engine": {
     "enabled": true,
     "embedding_model_configured": true
   },
   "fetched_candidates": 619,
-  "unseen_candidates": 603,
+  "unseen_candidates": 602,
   "blocked_domain_candidates": 1,
   "selected_candidates": 1,
   "generated_posts": [
     {
-      "title": "Sandboxes, secure inference, and keeping agents from going rogue",
-      "link": "auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html",
-      "score": 126.1899,
-      "source": "Stack Overflow Blog",
+      "title": "How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)",
+      "link": "auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html",
+      "score": 122.9498,
+      "source": "DEV Community",
       "text_engine": "embedding-mmr"
     }
   ],

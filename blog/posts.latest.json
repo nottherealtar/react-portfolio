@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)",
+      "link": "auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html",
+      "date": "2026-11-28",
+      "summary": "Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding IDEs: Unbounded file reads: Asking an agent to inspect one functio",
+      "category": "Coding & Community",
+      "reading_minutes": 4
+    },
+    {
       "title": "Sandboxes, secure inference, and keeping agents from going rogue",
       "link": "auto/20261127-sandboxes-secure-inference-and-keeping-agents-from-going-rog-de0da3fa.html",
       "date": "2026-11-27",
@@ -85,14 +93,6 @@
       "link": "auto/20261122-browser-upload-security-implementing-presigned-urls-for-tena-485e7446.html",
       "date": "2026-11-22",
       "summary": "A presigned URL is the right primitive for browser-to-object-storage uploads, but it is not an authorization system by itself. For a media service backing up many tenants, the effective-cost choice is the one that keeps ",
-      "category": "Coding & Community",
-      "reading_minutes": 3
-    },
-    {
-      "title": "Training Artifact Retention: Node.js Multipart Uploads Explained",
-      "link": "auto/20261121-training-artifact-retention-node-js-multipart-uploads-explai-4f3d4b74.html",
-      "date": "2026-11-21",
-      "summary": "The important design decision is not “which object store has the nicest upload API?” It is whether every artifact has a stable identity, an explicit deletion date, and a record of what happened when deletion or upload wa",
       "category": "Coding & Community",
       "reading_minutes": 3
     }

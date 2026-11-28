@@ -1,5 +1,17 @@
 [
   {
+    "title": "How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)",
+    "date": "2026-11-28",
+    "category": "Coding & Community",
+    "summary": "Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding IDEs: Unbounded file reads: Asking an agent to inspect one function in a 1,400-line file frequently dumps 800 lines into active context, then re-bills those tokens on every subsequent turn.",
+    "link": "auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html",
+    "source_url": "https://dev.to/argoness-prime/how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-python-ed25519-cloudflare-workers-kv--1nmo",
+    "source_name": "DEV Community",
+    "automated": true,
+    "language": "en",
+    "reading_minutes": 4
+  },
+  {
     "title": "Sandboxes, secure inference, and keeping agents from going rogue",
     "date": "2026-11-27",
     "category": "Coding & Careers",

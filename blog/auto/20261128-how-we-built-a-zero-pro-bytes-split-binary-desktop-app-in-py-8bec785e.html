@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd) | TarsOnlineCafe</title>
+  <meta name="description" content="Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding…">
+  <link rel="canonical" href="https://www.tarsonlinecafe.work/blog/auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html">
+  <link rel="alternate" type="application/rss+xml" title="TarsOnlineCafe Blog RSS" href="https://www.tarsonlinecafe.work/blog/rss.xml">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Joshua Coetzer">
+  <meta name="theme-color" content="#050403">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TarsOnlineCafe">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)">
+  <meta property="og:description" content="Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding…">
+  <meta property="og:url" content="https://www.tarsonlinecafe.work/blog/auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html">
+  <meta property="article:published_time" content="2026-11-28T12:00:00.000Z">
+  <meta property="article:author" content="Joshua Coetzer">
+  <meta property="article:section" content="Coding &amp; Community">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)">
+  <meta name="twitter:description" content="Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding…">
+  <meta property="og:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:alt" content="How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)">
+  <meta name="twitter:image" content="https://www.tarsonlinecafe.work/og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)", "description": "Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding…", "datePublished": "2026-11-28T12:00:00.000Z", "dateModified": "2026-11-28T12:00:00.000Z", "inLanguage": "en", "author": {"@type": "Person", "name": "Joshua Coetzer", "url": "https://www.tarsonlinecafe.work/"}, "publisher": {"@type": "Organization", "name": "TarsOnlineCafe", "logo": {"@type": "ImageObject", "url": "https://www.tarsonlinecafe.work/logo.png"}}, "image": "https://www.tarsonlinecafe.work/og-share.png", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.tarsonlinecafe.work/blog/auto/20261128-how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-py-8bec785e.html"}, "isBasedOn": "https://dev.to/argoness-prime/how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-python-ed25519-cloudflare-workers-kv--1nmo", "wordCount": 725}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/styles/themes.css">
+  <link rel="stylesheet" href="/styles/site-atmosphere.css">
+  <link rel="stylesheet" href="/styles/nav.css">
+  <link rel="stylesheet" href="/styles/ember-blog.css">
+  <style>
+    /* Article body rhythm — visual chrome is ember-blog.css */
+    .section-intro {
+      font-size: 0.92rem;
+      color: rgba(245, 238, 229, 0.72);
+      margin: -0.35rem 0 1.1rem;
+      line-height: 1.55;
+    }
+    .img-disclaimer {
+      font-size: 0.82rem;
+      color: rgba(245, 238, 229, 0.65);
+      margin: -0.25rem 0 0.85rem;
+    }
+    .figure-grid {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="site-atmosphere" aria-hidden="true">
+    <div class="site-atmosphere__glow site-atmosphere__glow--1"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--2"></div>
+    <div class="site-atmosphere__glow site-atmosphere__glow--3"></div>
+    <div class="site-atmosphere__grain"></div>
+  </div>
+  <div id="canvas-container"></div>
+  <nav class="site-nav scrolled" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="TarsOnlineCafe home">
+      <img class="nav-logo-mark" src="/67793100.png" alt="" width="28" height="28" decoding="async" />
+      <span>TarsOnlineCafe</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="/#contact" class="nav-cta">Let's Talk →</a>
+    <button type="button" class="nav-hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="nav-mobile-overlay" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="/">Portfolio</a>
+    <a href="/blog/blog.html">Blog</a>
+    <a href="/#contact" class="nav-mobile-cta">Let's Talk →</a>
+  </div>
+
+  <div class="page-bg">
+    <main class="wrap">
+      <article class="article-shell">
+        <div class="eyebrow">Automation brief</div>
+        <div class="meta">
+          <span class="pill">Coding &amp; Community</span>
+          <span class="pill">~4 min read</span>
+          <span>2026-11-28</span>
+          <span>DEV Community</span>
+        </div>
+        <h1>How We Built a Zero-Pro-Bytes Split-Binary Desktop App in Python (Ed25519 + Cloudflare Workers KV + Native Cython .pyd)</h1>
+        <p class="lede">Why Context-Window Hygiene Matters First Before touching packaging, the core engineering problem we were solving was runaway token burn in agentic coding IDEs: Unbounded file reads: Asking an agent to inspect one function in a 1,400-line file frequently dumps 800 lines into active context, then re-bills those tokens on every subsequent turn.</p>
+
+        <h2>Key details from the source</h2>
+        <p class="section-intro">Editorial digest: additional context drawn from the original reporting. Open the primary source for quotes, figures, and updates.</p>
+        <p>When you ship a commercial Python desktop developer tool, standard single-file packaging ( PyInstaller / Nuitka / cx_Freeze ) has a well-known problem: anyone can unpack your installer in thirty seconds with pyinstxtractor and read every if is_pro: check in plain bytecode. While building Token Czar v2.0 (our local PreToolUse context-window and prompt-cache hygiene guard for Claude Code, Cursor, and Antigravity), we wanted two things that usually fight each other: A 100% free, clean, zero-telemetry Lite desktop app any developer can…</p>
+        <p>Here is the exact split-binary architecture we ended up shipping, and the real production edge cases we hit along the way. Full-file overwrites: Emitting an entire 600-line file via write_file(Overwrite=true) instead of a surgical diff hunk wastes output tokens and inflates history. Cold prompt-cache cliffs: Letting a long thread cross a 5-minute TTL boundary or accumulate &gt;165K tokens triggers expensive cache misses on the very next tool call.</p>
+        <p>Our &lt;5 ms local PreToolUse hook intercepts unwindowed reads over 350 lines and returns a compact Python AST symbol map ( Lstart-Lend ) (or 80-line [CHUNK] anchors for JSON/shaders/configs) plus a 50-line header, so the agent jumps straight to the exact function window on its first read. Note: Token Czar is a local context-hygiene tool, not a provider billing cap—always configure hard monthly spend limits directly in your model provider dashboard. Context-reduction percentages vary by repo and workflow.</p>
+        <p>Note: Token Czar is a local context-hygiene tool, not a provider billing cap—always configure hard monthly spend limits directly in your model provider dashboard. Context-reduction percentages vary by repo and workflow. The Zero-Pro-Bytes Split-Binary Architecture Instead of hiding paid features behind a boolean flag, the Free Lite build ( TokenCzar-Setup-v2.0.0.exe ) ships only : The Lite GUI/CLI host ( WebView2 + local hook installer) A 32-byte Ed25519 public verification key ( VERISTRUX_ED25519_PUB_B64 ) Zero Pro modules, zero…</p>
+        <p>When a user activates a paid Pro license key, the app performs a single HTTPS handshake (~400 ms end-to-end): Canonical Ed25519 Verification on Both Sides One subtle pitfall when signing JSON in Cloudflare Workers (JavaScript) and verifying in Python ( cryptography ) is key-order drift. Both sides must serialize identical canonical bytes: Because JSON.stringify in V8 uses no whitespace and json.dumps(..., sort_keys=True, separators=(&quot;,&quot;, &quot;:&quot;)) matches it byte-for-byte for flat ASCII payloads, signature verification succeeds…</p>
+        <p>eula: &quot;&quot; when a client omits an optional field) returns a 422 RequestValidationError array of Pydantic error objects. Always strip empty keys before forwarding metadata, and explicitly format array detail payloads instead of coercing them with String(detail) (which produces &quot;[object Object]&quot; ). R2 for Sub-1 MiB Native Payloads: For a 143 KB gzipped .pyd artifact, Cloudflare Workers KV handles up to 25 MiB per value, serves globally at the edge, requires no separate object-storage billing setup, and supports native expirationTtl on…</p>
+        <p>Try the Free Lite Build or Inspect the Stack Download Token Czar v2.0 Free Lite (Windows x64 .exe , 0 Pro bytes, verified SHA-256): GitHub Releases ( tokenczar-v2.0.0 ) Full Specs, Optional Pro Tier &amp; Legal/Privacy Docs: https://veristrux.com/ MIT Open-Core Prompt-Injection Sanitizer ( iron-veil ): https://github.com/argoness-prime/iron-veil If you&#x27;re building local developer tools or MCP hooks in Python, happy to answer questions about Cython .pyd hot-loading, WebCrypto Ed25519 PKCS#8 wrapping, or PreToolUse AST windowing in the…</p>
+
+
+
+        <h2>Why this matters</h2>
+        <p>The Zero-Pro-Bytes Split-Binary Architecture Instead of hiding paid features behind a boolean flag, the Free Lite build ( TokenCzar-Setup-v2.0.0.exe ) ships only : The Lite GUI/CLI host ( WebView2 + local hook installer) A 32-byte Ed25519 public verification key ( VERISTRUX_ED25519_PUB_B64 ) Zero Pro modules, zero Pro strings, zero Pro symbols—enforced by an automated zlib-decompression audit stage during build. It helps prioritize where automation budgets and vendor reviews should focus next quarter.</p>
+
+        <h2>Operational takeaways</h2>
+        <ul>
+          <li>Literally zero Pro code bytes inside the free binary—so there is nothing to crack, patch, or decompile out of the free download.</li>
+          <li>Our &lt;5 ms local PreToolUse hook intercepts unwindowed reads over 350 lines and returns a compact Python AST symbol map ( Lstart-Lend ) (or 80-line [CHUNK] anchors for…</li>
+          <li>R2 for Sub-1 MiB Native Payloads: For a 143 KB gzipped .pyd artifact, Cloudflare Workers KV handles up to 25 MiB per value, serves globally at the edge, requires no separate…</li>
+        </ul>
+
+        <div class="source-row">
+          <strong style="color: var(--copper, #d4894a); font-weight: 600;">Primary source</strong><br />
+          <a href="https://dev.to/argoness-prime/how-we-built-a-zero-pro-bytes-split-binary-desktop-app-in-python-ed25519-cloudflare-workers-kv--1nmo" target="_blank" rel="noopener noreferrer">DEV Community — original article</a>
+        </div>
+
+        <a class="back" href="/blog/blog.html">← Back to journal</a>
+      </article>
+    </main>
+  </div>
+  <script defer src="/scripts/site-atmosphere.js"></script>
+  <script defer src="/scripts/nav.js"></script>
+</body>
+</html>
